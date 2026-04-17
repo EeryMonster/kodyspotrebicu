@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 60" fill="none">
+  <rect width="160" height="60" rx="6" fill="white"/>
+  <!-- LG circle logo -->
+  <circle cx="30" cy="30" r="22" fill="#A50034"/>
+  <!-- LG face: L (vertical + horizontal) -->
+  <rect x="17" y="17" width="3.5" height="16" fill="white"/>
+  <rect x="17" y="30" width="9" height="3.5" fill="white"/>
+  <!-- G (arc + arm) -->
+  <path d="M40 22 A10 10 0 1 0 40 38 L40 31 L34 31 L34 34.5 L36.5 34.5 L36.5 35" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Brand text -->
+  <text x="108" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="900" fill="#A50034" text-anchor="middle" letter-spacing="2">LG</text>
+</svg>

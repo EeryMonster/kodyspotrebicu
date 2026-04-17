@@ -1,0 +1,68 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model ErrorCode {
+  id          Int      @id @default(autoincrement())
+  brand       String
+  applianceType String
+  code        String
+  altCodes    String[] @default([])
+  title       String
+  slug        String   @unique
+  shortMeaning String
+  severityLevel Int    @default(2)
+  canUserTrySafeChecks Boolean @default(false)
+  safeChecks  String[] @default([])
+  likelyCauses String[] @default([])
+  whenToStopAndCallService String[] @default([])
+  relatedSymptoms String[] @default([])
+  relatedCodes String[] @default([])
+  possibleParts String[] @default([])
+  faq         Json[]   @default([])
+  subtype     String?
+  sourceType  String   @default("manual")
+  sourceUrl   String?
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  comments    Comment[]
+
+  @@index([brand])
+  @@index([applianceType])
+  @@index([code])
+  @@index([brand, applianceType])
+}
+
+model Symptom {
+  id          Int      @id @default(autoincrement())
+  slug        String   @unique
+  title       String
+  description String
+  intro       String?
+  sections    Json[]   @default([])
+  relatedCodes String[] @default([])
+  applianceTypes String[] @default([])
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Comment {
+  id          Int      @id @default(autoincrement())
+  authorName  String
+  content     String
+  isApproved  Boolean  @default(true)
+  errorCodeId Int
+  errorCode   ErrorCode @relation(fields: [errorCodeId], references: [id], onDelete: Cascade)
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([errorCodeId])
+}
