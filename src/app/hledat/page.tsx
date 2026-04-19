@@ -85,10 +85,10 @@ export default async function SearchPage({ searchParams }: Props) {
             <div className="text-center py-16">
               <div className="text-5xl mb-4">🔍</div>
               <h2 className="text-xl font-semibold text-gray-900 mb-2">
-                Nic nenalezeno pro „{q}"
+                Nic nenalezeno pro &bdquo;{q}&ldquo;
               </h2>
               <p className="text-gray-500 mb-6 max-w-md mx-auto">
-                Zkuste zadat jen samotný kód chyby (např. <strong>E15</strong> místo „E15 Bosch pračka"),
+                Zkuste zadat jen samotný kód chyby (např. <strong>E15</strong> místo &bdquo;E15 Bosch pračka&ldquo;),
                 nebo zkontrolujte pravopis.
               </p>
               <div className="flex flex-wrap justify-center gap-3">
