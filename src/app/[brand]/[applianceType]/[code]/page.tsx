@@ -6,6 +6,9 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { SEVERITY_LABELS, SEVERITY_COLORS, APPLIANCE_LABELS, SUBTYPE_LABELS } from '@/lib/utils'
 import CommentsSection from '@/components/CommentsSection'
+import CopyCodeButton from '@/components/CopyCodeButton'
+import ShareButtons from '@/components/ShareButtons'
+import HelpfulRating from '@/components/HelpfulRating'
 
 interface Props {
   params: { brand: string; applianceType: string; code: string }
@@ -105,6 +108,7 @@ export default async function ErrorCodePage({ params }: Props) {
           <span className="font-mono text-2xl font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-lg">
             {entry.code}
           </span>
+          <CopyCodeButton code={entry.code} />
           {entry.altCodes.map((alt) => (
             <span key={alt} className="font-mono text-sm text-gray-600 bg-gray-100 px-2 py-1 rounded">
               {alt}
@@ -133,6 +137,10 @@ export default async function ErrorCodePage({ params }: Props) {
               </a>
             </>
           )}
+        </div>
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
+          <HelpfulRating errorCodeId={entry.id} />
+          <ShareButtons code={entry.code} title={entry.title} />
         </div>
       </div>
 
@@ -240,10 +248,12 @@ export default async function ErrorCodePage({ params }: Props) {
           <div className="bg-blue-50 border border-blue-100 rounded-xl p-4 text-center">
             <p className="text-sm font-medium text-gray-900 mb-2">Potřebujete technika?</p>
             <a
-              href="#"
+              href="https://www.firmy.cz/?q=servis+dom%C3%A1c%C3%ADch+spot%C5%99ebi%C4%8D%C5%AF"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block w-full py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
             >
-              Najít servis v okolí
+              Najít servis v okolí →
             </a>
           </div>
         </div>
