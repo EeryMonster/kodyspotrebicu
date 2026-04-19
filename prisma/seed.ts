@@ -1666,7 +1666,7 @@ async function main() {
 
   const symptoms: SymptomDef[] = [
     {
-      slug: 'pracka-zapáchá',
+      slug: 'pracka-zapacha',
       title: 'Pračka zapáchá',
       description: 'Z pračky nebo z prádla vychází nepříjemný zápach.',
       intro: 'Nepříjemný zápach z pračky je jedním z nejčastějších problémů domácích spotřebičů. Většinou ho způsobuje plíseň nebo bakterie uvnitř bubnu a těsnění dvířek – a ve většině případů ho zvládnete odstranit sami.',
@@ -1878,7 +1878,7 @@ async function main() {
       applianceTypes: ['pracka'],
     },
     {
-      slug: 'myčka-nevypousti',
+      slug: 'mycka-nevypousti',
       title: 'Myčka nevypouští vodu',
       description: 'Po mytí zůstane voda v myčce.',
       sections: [
@@ -1898,7 +1898,7 @@ async function main() {
       applianceTypes: ['mycka'],
     },
     {
-      slug: 'voda-pod-myčkou',
+      slug: 'voda-pod-myckou',
       title: 'Voda pod myčkou',
       description: 'Pod myčkou se hromadí voda – příznak úniku.',
       sections: [
@@ -1916,7 +1916,7 @@ async function main() {
       applianceTypes: ['mycka'],
     },
     {
-      slug: 'myčka-neumývá',
+      slug: 'mycka-neumyva',
       title: 'Myčka neumývá nádobí',
       description: 'Nádobí vychází z myčky špinavé nebo nezasychá správně.',
       sections: [
@@ -1939,7 +1939,7 @@ async function main() {
       applianceTypes: ['mycka'],
     },
     {
-      slug: 'myčka-zapáchá',
+      slug: 'mycka-zapacha',
       title: 'Myčka zapáchá',
       description: 'Z myčky nebo z nádobí vychází nepříjemný zápach.',
       sections: [
@@ -1980,7 +1980,7 @@ async function main() {
       applianceTypes: ['susicka'],
     },
     {
-      slug: 'susicka-nesuší',
+      slug: 'susicka-nesusi',
       title: 'Sušička nesuší prádlo',
       description: 'Prádlo zůstává mokré i po ukončení cyklu sušičky.',
       sections: [
