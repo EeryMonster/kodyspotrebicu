@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin', 'latin-ext'] })
 export const metadata: Metadata = {
   title: {
     default: 'Chybové kódy spotřebičů – databáze chyb praček, myček a sušiček',
-    template: '%s | KodyChyb.cz',
+    template: '%s | KódySpotřebičů.cz',
   },
   description:
     'Databáze chybových kódů praček, myček a sušiček. Najděte příčinu chyby, zjistěte závažnost a naučte se, co dělat dál.',
