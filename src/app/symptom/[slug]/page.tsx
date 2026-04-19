@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const symptom = await prisma.symptom.findUnique({
       where: { slug: decodeURIComponent(params.slug) },
-      select: { title: true, description: true },
+      select: { title: true, description: true, slug: true },
     })
     if (!symptom) return { title: 'Symptom nenalezen' }
     return {
