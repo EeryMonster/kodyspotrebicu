@@ -150,7 +150,7 @@ export default async function HomePage() {
           Pokud si s opravou nevíte rady, pomůže vám certifikovaný servisní partner ve vašem okolí.
         </p>
         <a
-          href="https://www.firmy.cz/Remeslnici-a-sluzby/Opravny/Opravny-spotrebicu"
+          href="https://www.firmy.cz/?q=servis+dom%C3%A1c%C3%ADch+spot%C5%99ebi%C4%8D%C5%AF"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-6 py-2.5 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
