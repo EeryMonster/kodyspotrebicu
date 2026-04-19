@@ -150,7 +150,7 @@ export default async function HomePage() {
           Pokud si s opravou nevíte rady, pomůže vám certifikovaný servisní partner ve vašem okolí.
         </p>
         <a
-          href="https://www.heureka.cz/sluzby/opravny-a-servisy/spotrebice/"
+          href="https://www.firmy.cz/Remeslnici-a-sluzby/Opravny/Opravny-spotrebicu"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-6 py-2.5 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
