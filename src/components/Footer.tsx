@@ -34,6 +34,8 @@ export default function Footer() {
             <ul className="space-y-1 text-sm">
               <li><Link href="/hledat" className="text-gray-600 hover:text-blue-600">Vyhledávání</Link></li>
               <li><Link href="/sitemap.xml" className="text-gray-600 hover:text-blue-600">Sitemap</Link></li>
+              <li><Link href="/o-nas" className="text-gray-600 hover:text-blue-600">O webu</Link></li>
+              <li><Link href="/o-nas#zasady" className="text-gray-600 hover:text-blue-600">Ochrana osobních údajů</Link></li>
             </ul>
           </div>
         </div>

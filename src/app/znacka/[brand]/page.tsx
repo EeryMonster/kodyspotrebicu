@@ -23,9 +23,16 @@ const APPLIANCE_PATHS: Record<string, string> = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const brandName = params.brand.charAt(0).toUpperCase() + params.brand.slice(1)
+  let count = 0
+  try {
+    count = await prisma.errorCode.count({
+      where: { brand: { equals: params.brand, mode: 'insensitive' } },
+    })
+  } catch { /* ignore */ }
+  const countText = count > 0 ? `Databáze ${count} chybových kódů spotřebičů ${brandName}.` : `Databáze chybových kódů spotřebičů ${brandName}.`
   return {
     title: `Chybové kódy ${brandName}`,
-    description: `Databáze chybových kódů spotřebičů ${brandName}. Pračky, myčky, sušičky – zjistěte příčinu chyby a jak postupovat.`,
+    description: `${countText} Pračky, myčky, sušičky – zjistěte příčinu chyby a jak postupovat.`,
     alternates: { canonical: `https://kodyspotrebicu.cz/znacka/${params.brand.toLowerCase()}` },
   }
 }
@@ -108,8 +115,8 @@ export default async function BrandPage({ params }: Props) {
 
       {codes.length === 0 && (
         <div className="text-center py-16 text-gray-500">
-          <p className="text-lg mb-2">Zatím žádné kódy pro tuto značku.</p>
-          <p className="text-sm">Spusťte seed skript pro naplnění databáze.</p>
+          <p className="text-lg mb-2">Pro tuto značku zatím nemáme kódy v databázi.</p>
+          <p className="text-sm">Zkuste vyhledat konkrétní kód nebo procházejte jiné značky.</p>
         </div>
       )}
     </div>

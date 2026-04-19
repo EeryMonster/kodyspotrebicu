@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import ErrorCodeCard from '@/components/ErrorCodeCard'
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { SEVERITY_LABELS, SEVERITY_COLORS, APPLIANCE_LABELS, SUBTYPE_LABELS } from '@/lib/utils'
+import { SEVERITY_LABELS, SEVERITY_COLORS, SEVERITY_DESCRIPTIONS, APPLIANCE_LABELS, SUBTYPE_LABELS } from '@/lib/utils'
 import CommentsSection from '@/components/CommentsSection'
 import CopyCodeButton from '@/components/CopyCodeButton'
 import ShareButtons from '@/components/ShareButtons'
@@ -77,6 +77,19 @@ export default async function ErrorCodePage({ params }: Props) {
 
   const faqItems = (entry.faq || []) as { q: string; a: string }[]
 
+  const howToSchema = entry.canUserTrySafeChecks && entry.safeChecks.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: `Jak doma zkontrolovat a opravit chybu ${entry.code} – ${entry.title}`,
+    description: entry.shortMeaning,
+    step: entry.safeChecks.map((check, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: `Krok ${i + 1}`,
+      text: check,
+    })),
+  } : null
+
   const faqSchema = faqItems.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -89,6 +102,12 @@ export default async function ErrorCodePage({ params }: Props) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
+      {howToSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+        />
+      )}
       {faqSchema && (
         <script
           type="application/ld+json"
@@ -114,7 +133,10 @@ export default async function ErrorCodePage({ params }: Props) {
               {alt}
             </span>
           ))}
-          <span className={`text-sm px-3 py-1 rounded-full font-medium ${SEVERITY_COLORS[entry.severityLevel] || SEVERITY_COLORS[2]}`}>
+          <span
+            className={`text-sm px-3 py-1 rounded-full font-medium cursor-help ${SEVERITY_COLORS[entry.severityLevel] || SEVERITY_COLORS[2]}`}
+            title={SEVERITY_DESCRIPTIONS[entry.severityLevel] || 'Střední závažnost – doporučujeme prověřit co nejdříve'}
+          >
             Závažnost: {SEVERITY_LABELS[entry.severityLevel] || 'Střední'}
           </span>
           {entry.subtype && (
@@ -160,6 +182,19 @@ export default async function ErrorCodePage({ params }: Props) {
               </ul>
             </section>
           )}
+
+          {/* Mobile-only CTA – sidebar není na mobilu viditelný */}
+          <div className="md:hidden bg-blue-50 border border-blue-100 rounded-xl p-4 flex items-center justify-between gap-4">
+            <p className="text-sm font-medium text-gray-900">Potřebujete technika?</p>
+            <a
+              href="https://www.firmy.cz/?q=servis+dom%C3%A1c%C3%ADch+spot%C5%99ebi%C4%8D%C5%AF"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+            >
+              Najít servis →
+            </a>
+          </div>
 
           {/* Possible parts */}
           {entry.possibleParts.length > 0 && (

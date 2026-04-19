@@ -60,50 +60,59 @@ export default function CommentsSection({ errorCodeId, initialComments }: Commen
     <div className="mt-10 bg-white rounded-xl border border-gray-200 p-6 md:p-8">
       <h2 className="text-xl font-bold text-gray-900 mb-6">Komentáře a zkušenosti uživatelů</h2>
 
-      <form onSubmit={handleSubmit} className="mb-8 bg-gray-50 p-5 rounded-lg border border-gray-100">
-        <h3 className="text-sm font-semibold text-gray-800 mb-4">Přidat vlastní zkušenost s tímto kódem</h3>
-        
-        {message && (
-          <div className={`p-3 rounded-lg text-sm mb-4 ${message.type === 'success' ? 'bg-green-50 text-green-800 border border-green-200' : 'bg-red-50 text-red-800 border border-red-200'}`}>
-            {message.text}
+      <details className="mb-8 group">
+        <summary className="cursor-pointer list-none">
+          <div className="inline-flex items-center gap-2 px-4 py-2 border border-blue-200 bg-blue-50 text-blue-700 rounded-lg text-sm font-medium hover:bg-blue-100 transition-colors select-none">
+            <svg className="w-4 h-4 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+            </svg>
+            Přidat vlastní zkušenost
           </div>
-        )}
+        </summary>
 
-        <div className="grid gap-4">
-          <div>
-            <label htmlFor="authorName" className="block text-sm font-medium text-gray-700 mb-1">Vaše jméno</label>
-            <input
-              id="authorName"
-              type="text"
-              value={authorName}
-              onChange={(e) => setAuthorName(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
-              placeholder="Jan Novák"
-              required
-              maxLength={50}
-            />
+        <form onSubmit={handleSubmit} className="mt-4 bg-gray-50 p-5 rounded-lg border border-gray-100">
+          {message && (
+            <div className={`p-3 rounded-lg text-sm mb-4 ${message.type === 'success' ? 'bg-green-50 text-green-800 border border-green-200' : 'bg-red-50 text-red-800 border border-red-200'}`}>
+              {message.text}
+            </div>
+          )}
+
+          <div className="grid gap-4">
+            <div>
+              <label htmlFor="authorName" className="block text-sm font-medium text-gray-700 mb-1">Vaše jméno</label>
+              <input
+                id="authorName"
+                type="text"
+                value={authorName}
+                onChange={(e) => setAuthorName(e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                placeholder="Jan Novák"
+                required
+                maxLength={50}
+              />
+            </div>
+            <div>
+              <label htmlFor="content" className="block text-sm font-medium text-gray-700 mb-1">Jak jste závadu vyřešili?</label>
+              <textarea
+                id="content"
+                value={content}
+                onChange={(e) => setContent(e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none h-28 resize-y"
+                placeholder="Měl jsem stejnou chybu a stačilo vyčistit filtr..."
+                required
+                maxLength={1000}
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full md:w-auto px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
+            >
+              {isSubmitting ? 'Odesílám...' : 'Odeslat komentář'}
+            </button>
           </div>
-          <div>
-            <label htmlFor="content" className="block text-sm font-medium text-gray-700 mb-1">Vaše zkušenost (jak jste závadu vyřešili?)</label>
-            <textarea
-              id="content"
-              value={content}
-              onChange={(e) => setContent(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none h-24 resize-y"
-              placeholder="Měl jsem stejnou chybu a stačilo vyčistit filtr..."
-              required
-              maxLength={1000}
-            />
-          </div>
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full md:w-auto px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
-          >
-            {isSubmitting ? 'Odesílám...' : 'Odeslat komentář'}
-          </button>
-        </div>
-      </form>
+        </form>
+      </details>
 
       <div className="space-y-6">
         {comments.length === 0 ? (

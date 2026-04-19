@@ -11,16 +11,20 @@ const APPLIANCE_PATH: Record<string, string> = {
 
 export async function GET() {
   type SitemapPage = { url: string; changefreq: string; priority: string; lastmod?: string }
+  const SITE_UPDATED = '2026-04-19'
   const staticPages: SitemapPage[] = [
-    { url: BASE_URL, changefreq: 'weekly', priority: '1.0' },
-    { url: `${BASE_URL}/pracky`, changefreq: 'daily', priority: '0.9' },
-    { url: `${BASE_URL}/mycky`, changefreq: 'daily', priority: '0.9' },
-    { url: `${BASE_URL}/susicky`, changefreq: 'daily', priority: '0.9' },
-    { url: `${BASE_URL}/problemy`, changefreq: 'weekly', priority: '0.8' },
+    { url: BASE_URL, changefreq: 'weekly', priority: '1.0', lastmod: SITE_UPDATED },
+    { url: `${BASE_URL}/pracky`, changefreq: 'daily', priority: '0.9', lastmod: SITE_UPDATED },
+    { url: `${BASE_URL}/mycky`, changefreq: 'daily', priority: '0.9', lastmod: SITE_UPDATED },
+    { url: `${BASE_URL}/susicky`, changefreq: 'daily', priority: '0.9', lastmod: SITE_UPDATED },
+    { url: `${BASE_URL}/problemy`, changefreq: 'weekly', priority: '0.8', lastmod: SITE_UPDATED },
+    { url: `${BASE_URL}/hledat`, changefreq: 'monthly', priority: '0.5', lastmod: SITE_UPDATED },
+    { url: `${BASE_URL}/o-nas`, changefreq: 'monthly', priority: '0.4', lastmod: SITE_UPDATED },
     ...['bosch', 'siemens', 'aeg', 'electrolux', 'samsung', 'beko', 'whirlpool', 'lg'].map((b) => ({
       url: `${BASE_URL}/znacka/${b}`,
       changefreq: 'weekly',
       priority: '0.8',
+      lastmod: SITE_UPDATED,
     })),
   ]
 

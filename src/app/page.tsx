@@ -2,9 +2,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
+import SearchBox from '@/components/SearchBox'
 
 export const metadata: Metadata = {
-  title: 'Chybové kódy spotřebičů – databáze chyb praček, myček a sušiček | KódySpotřebičů.cz',
+  title: { absolute: 'Chybové kódy spotřebičů – databáze chyb praček, myček a sušiček | KódySpotřebičů.cz' },
   description: 'Kompletní databáze chybových kódů praček, myček nádobí a sušiček. Bosch, Siemens, AEG, Electrolux, Samsung, Beko. Zjistěte příčinu chyby a jak postupovat.',
 }
 
@@ -26,18 +27,18 @@ const brands = [
 ]
 
 const commonProblems = [
-  { slug: 'pracka-zapáchá',    icon: '🤢', label: 'Pračka zapáchá',           desc: 'Nepříjemný zápach z pračky nebo prádla' },
-  { slug: 'pracka-nevypousti', icon: '💧', label: 'Pračka nevypouští vodu',   desc: 'Po praní zůstane voda v bubnu' },
-  { slug: 'pracka-se-neplni',  icon: '🚿', label: 'Pračka se neplní',         desc: 'Pračka nezačne nabírat vodu' },
-  { slug: 'pracka-trese',      icon: '📳', label: 'Pračka se třese a hlučí',  desc: 'Silné vibrace nebo hluk při odstřeďování' },
-  { slug: 'pracka-tece',       icon: '🌊', label: 'Voda vytéká z pračky',     desc: 'Voda pod pračkou nebo kolem ní' },
-  { slug: 'buben-se-neotaci',  icon: '🔄', label: 'Buben se neotáčí',         desc: 'Buben stojí nebo se otáčí nepravidelně' },
-  { slug: 'myčka-neumývá',     icon: '🍽️', label: 'Myčka neumývá nádobí',    desc: 'Nádobí vychází špinavé nebo mokré' },
-  { slug: 'myčka-nevypousti',  icon: '🪣', label: 'Myčka nevypouští vodu',   desc: 'Po mytí zůstane voda na dně myčky' },
-  { slug: 'myčka-zapáchá',     icon: '😷', label: 'Myčka zapáchá',            desc: 'Zápach z myčky nebo z nádobí' },
-  { slug: 'voda-pod-myčkou',   icon: '💦', label: 'Voda pod myčkou',          desc: 'Únik vody pod nebo za myčkou' },
-  { slug: 'susicka-nesuší',    icon: '👕', label: 'Sušička nesuší',           desc: 'Prádlo zůstává mokré po celém cyklu' },
-  { slug: 'susicka-se-prehriva', icon: '🌡️', label: 'Sušička se přehřívá',  desc: 'Sušička se vypíná nebo vydává zápach' },
+  { slug: 'pracka-zapacha', icon: '🤢', label: 'Pračka zapáchá', desc: 'Nepříjemný zápach z pračky nebo prádla' },
+  { slug: 'pracka-nevypousti', icon: '💧', label: 'Pračka nevypouští vodu', desc: 'Po praní zůstane voda v bubnu' },
+  { slug: 'pracka-se-neplni', icon: '🚿', label: 'Pračka se neplní', desc: 'Pračka nezačne nabírat vodu' },
+  { slug: 'pracka-trese', icon: '📳', label: 'Pračka se třese a hlučí', desc: 'Silné vibrace nebo hluk při odstřeďování' },
+  { slug: 'pracka-tece', icon: '🌊', label: 'Voda vytéká z pračky', desc: 'Voda pod pračkou nebo kolem ní' },
+  { slug: 'buben-se-neotaci', icon: '🔄', label: 'Buben se neotáčí', desc: 'Buben stojí nebo se otáčí nepravidelně' },
+  { slug: 'mycka-neumyva', icon: '🍽️', label: 'Myčka neumývá nádobí', desc: 'Nádobí vychází špinavé nebo mokré' },
+  { slug: 'mycka-nevypousti', icon: '🪣', label: 'Myčka nevypouští vodu', desc: 'Po mytí zůstane voda na dně myčky' },
+  { slug: 'mycka-zapacha', icon: '😷', label: 'Myčka zapáchá', desc: 'Zápach z myčky nebo z nádobí' },
+  { slug: 'voda-pod-myckou', icon: '💦', label: 'Voda pod myčkou', desc: 'Únik vody pod nebo za myčkou' },
+  { slug: 'susicka-nesusi', icon: '👕', label: 'Sušička nesuší', desc: 'Prádlo zůstává mokré po celém cyklu' },
+  { slug: 'susicka-se-prehriva', icon: '🌡️', label: 'Sušička se přehřívá', desc: 'Sušička se vypíná nebo vydává zápach' },
 ]
 
 export default async function HomePage() {
@@ -62,29 +63,50 @@ export default async function HomePage() {
     },
   }
 
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'KódySpotřebičů.cz',
+    url: 'https://kodyspotrebicu.cz',
+    description: 'Databáze chybových kódů domácích spotřebičů – pračky, myčky, sušičky.',
+  }
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       {/* Hero */}
       <section className="text-center mb-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
           Databáze chybových kódů spotřebičů
         </h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
-          Náš spotřebič hlásí chybu? Najděte příčinu, zjistěte závažnost a naučte se, co dělat dál.
-          {totalCount > 0 && (
-            <> Databáze obsahuje přes <strong>{totalCount}+ kódů</strong> pro nejoblíbenější značky.</>
-          )}
+        <p className="text-gray-600 max-w-xl mx-auto mb-6">
+          Spotřebič hlásí chybu? Zadejte kód níže — zjistěte příčinu, závažnost a co dělat dál.
         </p>
-        <div className="grid grid-cols-4 md:grid-cols-8 gap-3 mt-6">
+
+        {/* Hero search */}
+        <div className="max-w-xl mx-auto mb-4">
+          <SearchBox />
+        </div>
+        {totalCount > 0 && (
+          <p className="text-sm text-gray-400 mb-8">
+            Databáze obsahuje <strong className="text-gray-600">{totalCount}+</strong> kódů pro nejoblíbenější značky
+          </p>
+        )}
+
+        <div className="grid grid-cols-4 md:grid-cols-8 gap-3">
           {brands.map((b) => (
             <Link
               key={b.slug}
               href={`/znacka/${b.slug}`}
-              className="flex flex-col items-center bg-white border border-gray-200 rounded-xl p-3 hover:border-blue-300 hover:shadow-md transition-all"
+              aria-label={`Chybové kódy ${b.name}`}
+              className="flex flex-col items-center gap-1 bg-white border border-gray-200 rounded-xl p-3 hover:border-blue-300 hover:shadow-md transition-all"
             >
               <Image
                 src={`/brands/${b.slug}.svg`}
@@ -93,6 +115,7 @@ export default async function HomePage() {
                 height={45}
                 className="object-contain"
               />
+              <span className="text-xs text-gray-500 font-medium">{b.name}</span>
             </Link>
           ))}
         </div>

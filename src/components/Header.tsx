@@ -2,10 +2,13 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 import SearchBox from './SearchBox'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const isHome = pathname === '/'
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-200">
@@ -15,9 +18,11 @@ export default function Header() {
             KódySpotřebičů.cz
           </Link>
 
-          <div className="hidden md:flex flex-1 max-w-lg">
-            <SearchBox />
-          </div>
+          {!isHome && (
+            <div className="hidden md:flex flex-1 max-w-lg">
+              <SearchBox />
+            </div>
+          )}
 
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700 shrink-0">
             <Link href="/pracky" className="hover:text-blue-600">Pračky</Link>
@@ -39,7 +44,7 @@ export default function Header() {
 
         {menuOpen && (
           <div className="md:hidden mt-3 pb-2 border-t border-gray-100 pt-3 space-y-3">
-            <SearchBox />
+            {!isHome && <SearchBox />}
             <nav className="flex flex-col gap-2 text-sm font-medium text-gray-700">
               <Link href="/pracky" className="hover:text-blue-600" onClick={() => setMenuOpen(false)}>Pračky</Link>
               <Link href="/mycky" className="hover:text-blue-600" onClick={() => setMenuOpen(false)}>Myčky</Link>

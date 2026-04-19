@@ -56,6 +56,13 @@ export const SUBTYPE_LABELS: Record<string, string> = {
   'se-sf': 'Starší modely SE / SF',
 }
 
+export const SEVERITY_DESCRIPTIONS: Record<number, string> = {
+  1: 'Nízká závažnost – spotřebič funguje, ale upozorňuje na drobný problém',
+  2: 'Střední závažnost – doporučujeme prověřit co nejdříve',
+  3: 'Vysoká závažnost – spotřebič může být nebezpečný nebo hrozí poškození',
+  4: 'Kritická závažnost – okamžitě vypněte spotřebič a zavolejte servis',
+}
+
 export const SUBTYPE_SECTION_LABELS: Record<string, string> = {
   'iq': 'Modely s displejem – iQ300 / iQ500 / iQ700 (od ~2010)',
   'se-sf': 'Starší modely SE / SF – bez displeje, kódy pomocí blikání (do ~2010)',
