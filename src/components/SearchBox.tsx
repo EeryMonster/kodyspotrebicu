@@ -77,9 +77,9 @@ export default function SearchBox() {
             }
           }}
           placeholder="Hledat kód chyby, značku..."
-          className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500"
         />
-        <svg className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="absolute left-3 top-2.5 w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
         {loading && (
@@ -99,7 +99,7 @@ export default function SearchBox() {
               <span className="font-mono text-sm font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded">{r.code}</span>
               <div className="min-w-0">
                 <div className="text-sm font-medium text-gray-900 truncate">{r.title}</div>
-                <div className="text-xs text-gray-500">{r.brand} · {applianceLabel[r.applianceType] || r.applianceType}</div>
+                <div className="text-xs text-gray-600">{r.brand} · {applianceLabel[r.applianceType] || r.applianceType}</div>
               </div>
             </Link>
           ))}
