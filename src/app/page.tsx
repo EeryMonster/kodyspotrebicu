@@ -95,7 +95,7 @@ export default async function HomePage() {
           <SearchBox />
         </div>
         {totalCount > 0 && (
-          <p className="text-sm text-gray-400 mb-8">
+          <p className="text-sm text-gray-600 mb-8">
             Databáze obsahuje <strong className="text-gray-600">{totalCount}+</strong> kódů pro nejoblíbenější značky
           </p>
         )}
@@ -110,7 +110,7 @@ export default async function HomePage() {
             >
               <Image
                 src={`/brands/${b.slug}.svg`}
-                alt={b.name}
+                alt=""
                 width={120}
                 height={45}
                 className="object-contain"

@@ -75,6 +75,18 @@ export default async function ErrorCodePage({ params }: Props) {
     } catch { /* ignore */ }
   }
 
+  // Related symptoms
+  let relatedSymptomEntries: { slug: string; title: string; description: string }[] = []
+  if (entry.relatedSymptoms.length > 0) {
+    try {
+      relatedSymptomEntries = await prisma.symptom.findMany({
+        where: { slug: { in: entry.relatedSymptoms } },
+        select: { slug: true, title: true, description: true },
+        take: 6,
+      })
+    } catch { /* ignore */ }
+  }
+
   const faqItems = (entry.faq || []) as { q: string; a: string }[]
 
   const howToSchema = entry.canUserTrySafeChecks && entry.safeChecks.length > 0 ? {
@@ -230,6 +242,25 @@ export default async function ErrorCodePage({ params }: Props) {
               <div className="grid sm:grid-cols-2 gap-3">
                 {relatedEntries.map((c) => (
                   <ErrorCodeCard key={c.id} {...c} />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Related symptoms */}
+          {relatedSymptomEntries.length > 0 && (
+            <section>
+              <h2 className="text-lg font-semibold text-gray-900 mb-3">Související problémy</h2>
+              <div className="space-y-2">
+                {relatedSymptomEntries.map((s) => (
+                  <Link
+                    key={s.slug}
+                    href={`/symptom/${s.slug}`}
+                    className="flex flex-col gap-0.5 p-3 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
+                  >
+                    <span className="text-sm font-medium text-gray-900">{s.title}</span>
+                    <span className="text-xs text-gray-500 line-clamp-2">{s.description}</span>
+                  </Link>
                 ))}
               </div>
             </section>
