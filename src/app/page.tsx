@@ -27,18 +27,18 @@ const brands = [
 ]
 
 const commonProblems = [
-  { slug: 'pracka-zapacha', img: '/symptoms/pracka-zapacha.svg', label: 'Pračka zapáchá', desc: 'Nepříjemný zápach z pračky nebo prádla' },
-  { slug: 'pracka-nevypousti', img: '/symptoms/pracka-nevypousti.svg', label: 'Pračka nevypouští vodu', desc: 'Po praní zůstane voda v bubnu' },
-  { slug: 'pracka-se-neplni', img: '/symptoms/pracka-se-neplni.svg', label: 'Pračka se neplní', desc: 'Pračka nezačne nabírat vodu' },
-  { slug: 'pracka-trese', img: '/symptoms/pracka-trese.svg', label: 'Pračka se třese a hlučí', desc: 'Silné vibrace nebo hluk při odstřeďování' },
-  { slug: 'pracka-tece', img: '/symptoms/pracka-tece.svg', label: 'Voda vytéká z pračky', desc: 'Voda pod pračkou nebo kolem ní' },
-  { slug: 'buben-se-neotaci', img: '/symptoms/buben-se-neotaci.svg', label: 'Buben se neotáčí', desc: 'Buben stojí nebo se otáčí nepravidelně' },
-  { slug: 'mycka-neumyva', img: '/symptoms/mycka-neumyva.svg', label: 'Myčka neumývá nádobí', desc: 'Nádobí vychází špinavé nebo mokré' },
-  { slug: 'mycka-nevypousti', img: '/symptoms/mycka-nevypousti.svg', label: 'Myčka nevypouští vodu', desc: 'Po mytí zůstane voda na dně myčky' },
-  { slug: 'mycka-zapacha', img: '/symptoms/mycka-zapacha.svg', label: 'Myčka zapáchá', desc: 'Zápach z myčky nebo z nádobí' },
-  { slug: 'voda-pod-myckou', img: '/symptoms/voda-pod-myckou.svg', label: 'Voda pod myčkou', desc: 'Únik vody pod nebo za myčkou' },
-  { slug: 'susicka-nesusi', img: '/symptoms/susicka-nesusi.svg', label: 'Sušička nesuší', desc: 'Prádlo zůstává mokré po celém cyklu' },
-  { slug: 'susicka-se-prehriva', img: '/symptoms/susicka-se-prehriva.svg', label: 'Sušička se přehřívá', desc: 'Sušička se vypíná nebo vydává zápach' },
+  { slug: 'pracka-zapacha', img: '/symptoms/pracka-zapacha.png', label: 'Pračka zapáchá', desc: 'Nepříjemný zápach z pračky nebo prádla' },
+  { slug: 'pracka-nevypousti', img: '/symptoms/pracka-nevypousti.png', label: 'Pračka nevypouští vodu', desc: 'Po praní zůstane voda v bubnu' },
+  { slug: 'pracka-se-neplni', img: '/symptoms/pracka-se-neplni.png', label: 'Pračka se neplní', desc: 'Pračka nezačne nabírat vodu' },
+  { slug: 'pracka-trese', img: '/symptoms/pracka-trese.png', label: 'Pračka se třese a hlučí', desc: 'Silné vibrace nebo hluk při odstřeďování' },
+  { slug: 'pracka-tece', img: '/symptoms/pracka-tece.png', label: 'Voda vytéká z pračky', desc: 'Voda pod pračkou nebo kolem ní' },
+  { slug: 'buben-se-neotaci', img: '/symptoms/buben-se-neotaci.png', label: 'Buben se neotáčí', desc: 'Buben stojí nebo se otáčí nepravidelně' },
+  { slug: 'mycka-neumyva', img: '/symptoms/mycka-neumyva.png', label: 'Myčka neumývá nádobí', desc: 'Nádobí vychází špinavé nebo mokré' },
+  { slug: 'mycka-nevypousti', img: '/symptoms/mycka-nevypousti.png', label: 'Myčka nevypouští vodu', desc: 'Po mytí zůstane voda na dně myčky' },
+  { slug: 'mycka-zapacha', img: '/symptoms/mycka-zapacha.png', label: 'Myčka zapáchá', desc: 'Zápach z myčky nebo z nádobí' },
+  { slug: 'voda-pod-myckou', img: '/symptoms/voda-pod-myckou.png', label: 'Voda pod myčkou', desc: 'Únik vody pod nebo za myčkou' },
+  { slug: 'susicka-nesusi', img: '/symptoms/susicka-nesusi.png', label: 'Sušička nesuší', desc: 'Prádlo zůstává mokré po celém cyklu' },
+  { slug: 'susicka-se-prehriva', img: '/symptoms/susicka-se-prehriva.png', label: 'Sušička se přehřívá', desc: 'Sušička se vypíná nebo vydává zápach' },
 ]
 
 export default async function HomePage() {
@@ -149,7 +149,9 @@ export default async function HomePage() {
               href={`/symptom/${p.slug}`}
               className="flex items-start gap-3 bg-white border border-gray-200 rounded-xl p-4 hover:border-blue-300 hover:shadow-sm transition-all"
             >
-              <Image src={p.img} alt="" width={40} height={40} className="shrink-0" />
+              <div className="shrink-0 w-12 h-12 flex items-center justify-center">
+                <Image src={p.img} alt="" width={80} height={80} className="w-12 h-12 object-contain" />
+              </div>
               <div>
                 <div className="text-sm font-semibold text-gray-900 leading-snug">{p.label}</div>
                 <div className="text-xs text-gray-500 mt-0.5">{p.desc}</div>
