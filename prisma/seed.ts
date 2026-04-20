@@ -65,6 +65,7 @@ const codes: CodeDef[] = [
     relatedSymptoms: ['pračka-nevypouští', 'voda-v-bubnu'],
     possibleParts: ['Čerpadlo', 'Filtr čerpadla', 'Odpadní hadice'],
     faq: [
+      { q: 'Jak opravit chybu E18 na pračce Bosch?', a: '1) Vyčistěte filtr čerpadla (vpravo dole) 2) Zkontrolujte odpadní hadici, zda není zalomená 3) Zkontrolujte, zda sifon či odpad není ucpaný' },
       { q: 'Kde najdu filtr čerpadla na Bosch pračce?', a: 'Filtr čerpadla se nachází vpravo dole za malými dvířky. Před otevřením připravte ručník – vyteče voda.' },
     ],
     sourceType: 'official',
@@ -135,7 +136,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud čerpadlo vydává zvuk, ale nečerpá', 'Pokud po vyčištění filtru problém přetrvává'],
     relatedSymptoms: ['myčka-nevypouští'],
     possibleParts: ['Odčerpávací čerpadlo', 'Filtr myčky'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu E25 na myčce Bosch?', a: '1) Vyčistěte filtr v dolní části myčky 2) Zkontrolujte filtr čerpadla pod filtrem 3) Odstraňte případné zbytky jídla nebo sklo' }],
     sourceType: 'official',
   },
   {
@@ -149,6 +150,7 @@ const codes: CodeDef[] = [
     relatedSymptoms: ['špatné-mytí'],
     possibleParts: ['Filtr myčky'],
     faq: [
+      { q: 'Jak opravit chybu E22 na myčce Bosch?', a: '1) Vyjměte a umyjte filtr pod tekoucí vodou 2) Použijte kartáček k čištění jemného síta' },
       { q: 'Jak často čistit filtr myčky Bosch?', a: 'Doporučuje se čistit filtr alespoň jednou za měsíc nebo po každých 20 cyklech mytí.' },
     ],
     sourceType: 'official',
@@ -179,6 +181,7 @@ const codes: CodeDef[] = [
     relatedSymptoms: ['prádlo-mokré', 'dlouhé-sušení'],
     possibleParts: ['Filtr chlupů', 'Kondenzátor', 'Senzor vlhkosti'],
     faq: [
+      { q: 'Jak opravit chybu E:02 na sušičce Bosch?', a: '1) Vyčistěte filtr chlupů 2) Zkontrolujte a vyčistěte kondenzátor 3) Nepřeplňujte sušičku 4) Zkontrolujte odvětrání místnosti' },
       { q: 'Proč sušička Bosch suší příliš dlouho?', a: 'Nejčastěji jde o ucpaný filtr chlupů nebo kondenzátor. Oba je třeba pravidelně čistit po každém cyklu (filtr) a jednou za měsíc (kondenzátor).' },
     ],
     sourceType: 'official',
@@ -195,7 +198,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud problém přetrvává', 'Pokud ventil nefunguje'],
     relatedSymptoms: ['pračka-se-neplní'],
     possibleParts: ['Elektromagnetický ventil', 'Filtr přívodní hadice'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu F17 na pračce Siemens?', a: '1) Otevřete kohout přívodu vody naplno 2) Vyčistěte filtr přívodní hadice 3) Zkontrolujte tlak vody' }],
     sourceType: 'official',
   },
   {
@@ -208,7 +211,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud čerpadlo nevydává zvuk při pokusu o čerpání'],
     relatedSymptoms: ['pračka-nevypouští'],
     possibleParts: ['Čerpadlo', 'Filtr čerpadla'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu F18 na pračce Siemens?', a: '1) Vyčistěte filtr čerpadla 2) Zkontrolujte odpadní hadici' }],
     sourceType: 'official',
   },
   {
@@ -249,7 +252,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud se opakuje'],
     relatedSymptoms: ['voda-pod-myčkou'],
     possibleParts: ['Aqua Stop senzor', 'Těsnění', 'Přívodní hadice'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu E15 na myčce Siemens?', a: 'Nakloňte myčku dozadu na 10 minut.' }],
     sourceType: 'official',
   },
   {
@@ -290,7 +293,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud se opakuje po vyčištění'],
     relatedSymptoms: ['sušička-se-přehřívá'],
     possibleParts: ['Bezpečnostní termostat', 'Termostat ohřevu', 'Filtr chlupů'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu E:62 na sušičce Siemens?', a: '1) Vyčistěte filtr chlupů 2) Vyčistěte kondenzátor 3) Zkontrolujte větrání za sušičkou' }],
     sourceType: 'official',
   },
 
@@ -305,7 +308,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud přetrvává i po kontrole přívodu'],
     relatedSymptoms: ['pračka-se-neplní'],
     possibleParts: ['Elektromagnetický ventil', 'Filtr přívodní hadice'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu E10 na pračce AEG?', a: '1) Zkontrolujte kohout přívodu vody 2) Vyčistěte filtr přívodní hadice 3) Zkontrolujte tlak vody' }],
     sourceType: 'official',
   },
   {
@@ -318,7 +321,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud přetrvává'],
     relatedSymptoms: ['pračka-nevypouští'],
     possibleParts: ['Čerpadlo', 'Filtr čerpadla'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu E20 na pračce AEG?', a: '1) Vyčistěte filtr čerpadla 2) Zkontrolujte odpadní hadici' }],
     sourceType: 'official',
   },
   {
@@ -331,7 +334,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud zámek mechanicky nefunguje'],
     relatedSymptoms: ['pračka-nespustí'],
     possibleParts: ['Zámek dveří'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu E40 na pračce AEG?', a: '1) Pevně zavřete dveře 2) Zkontrolujte, zda zámek funguje' }],
     sourceType: 'official',
   },
   {
@@ -359,7 +362,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud přetrvává'],
     relatedSymptoms: ['myčka-se-neplní'],
     possibleParts: ['Elektromagnetický ventil', 'Přívodní hadice'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu i10 na myčce AEG?', a: '1) Zkontrolujte kohout přívodu vody 2) Vyčistěte filtr přívodní hadice' }],
     sourceType: 'official',
   },
   {
@@ -372,7 +375,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud přetrvává'],
     relatedSymptoms: ['myčka-nevypouští'],
     possibleParts: ['Odpadní čerpadlo', 'Filtr myčky'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu i20 na myčce AEG?', a: '1) Vyčistěte filtr myčky 2) Zkontrolujte odpadní hadici' }],
     sourceType: 'official',
   },
   {
@@ -385,7 +388,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud se opakuje'],
     relatedSymptoms: ['voda-pod-myčkou'],
     possibleParts: ['Aqua Control senzor', 'Těsnění', 'Přívodní hadice'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu i30 na myčce AEG?', a: 'Nakloňte myčku dozadu na 10 minut.' }],
     sourceType: 'official',
   },
 
@@ -413,7 +416,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud se opakuje po vyčištění'],
     relatedSymptoms: ['sušička-se-přehřívá'],
     possibleParts: ['Bezpečnostní termostat', 'Filtr chlupů', 'Kondenzátor'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu EHE na sušičce AEG?', a: '1) Vyčistěte filtr chlupů 2) Vyčistěte kondenzátor 3) Zajistěte dobré větrání' }],
     sourceType: 'official',
   },
 
@@ -428,7 +431,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud přetrvává'],
     relatedSymptoms: ['pračka-se-neplní'],
     possibleParts: ['Elektromagnetický ventil', 'Filtr přívodní hadice'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu E10 na pračce Electrolux?', a: '1) Zkontrolujte přívod vody 2) Vyčistěte filtr hadice' }],
     sourceType: 'official',
   },
   {
@@ -441,7 +444,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud přetrvává'],
     relatedSymptoms: ['pračka-nevypouští'],
     possibleParts: ['Čerpadlo', 'Filtr čerpadla'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu E20 na pračce Electrolux?', a: '1) Vyčistěte filtr čerpadla 2) Zkontrolujte odpadní hadici' }],
     sourceType: 'official',
   },
   {
@@ -454,7 +457,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud zámek nefunguje'],
     relatedSymptoms: ['pračka-nespustí'],
     possibleParts: ['Zámek dveří'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu E40 na pračce Electrolux?', a: '1) Pevně zavřete dveře 2) Zkontrolujte zámek' }],
     sourceType: 'official',
   },
   {
@@ -484,7 +487,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud přetrvává'],
     relatedSymptoms: ['myčka-se-neplní'],
     possibleParts: ['Elektromagnetický ventil'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu i10 na myčce Electrolux?', a: '1) Otevřete kohout 2) Vyčistěte filtr přívodní hadice' }],
     sourceType: 'official',
   },
   {
@@ -497,7 +500,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud přetrvává'],
     relatedSymptoms: ['myčka-nevypouští'],
     possibleParts: ['Odpadní čerpadlo', 'Filtr'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu i20 na myčce Electrolux?', a: '1) Vyčistěte filtr myčky 2) Zkontrolujte odpadní hadici' }],
     sourceType: 'official',
   },
 
@@ -525,7 +528,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud se opakuje'],
     relatedSymptoms: ['sušička-se-přehřívá'],
     possibleParts: ['Bezpečnostní termostat', 'Filtr chlupů'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu E52 na sušičce Electrolux?', a: '1) Vyčistěte filtr chlupů 2) Vyčistěte kondenzátor' }],
     sourceType: 'official',
   },
 
@@ -541,6 +544,7 @@ const codes: CodeDef[] = [
     relatedSymptoms: ['pračka-se-neplní'],
     possibleParts: ['Elektromagnetický ventil', 'Filtr přívodní hadice', 'Přívodní hadice'],
     faq: [
+      { q: 'Jak opravit chybu 4E na pračce Samsung?', a: '1) Zkontrolujte kohout přívodu vody 2) Zkontrolujte filtr přívodní hadice 3) Ujistěte se, že hadice není zalomená' },
       { q: 'Co znamená kód 4E na pračce Samsung?', a: '4E nebo 4C signalizuje problém s přívodem vody. Nejdříve zkontrolujte kohout přívodu vody a filtr přívodní hadice.' },
     ],
     sourceType: 'official',
@@ -555,7 +559,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud čerpadlo nefunguje'],
     relatedSymptoms: ['pračka-nevypouští'],
     possibleParts: ['Odpadní čerpadlo', 'Filtr čerpadla'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu 5E na pračce Samsung?', a: '1) Vyčistěte filtr čerpadla 2) Zkontrolujte odpadní hadici 3) Zkontrolujte sifon' }],
     sourceType: 'official',
   },
   {
@@ -568,7 +572,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud zámek mechanicky nefunguje'],
     relatedSymptoms: ['pračka-nespustí'],
     possibleParts: ['Zámek dveří'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu dE na pračce Samsung?', a: '1) Pevně zavřete dveře 2) Zkontrolujte, zda v rámu dveří nic nepřekáží' }],
     sourceType: 'official',
   },
   {
@@ -584,7 +588,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud chyba přetrvává po restartu', 'Pokud buben nejde otočit ani ručně'],
     relatedSymptoms: ['buben-se-neotáčí'],
     possibleParts: ['Motor', 'Hallový senzor', 'Uhlíkové kartáče motoru'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu 3E na pračce Samsung?', a: '1) Vypněte pračku hlavním vypínačem nebo odpojte ze zásuvky, počkejte 1 minutu a znovu zapněte. 2) Spusťte nový program – pokud se chyba neobjeví znovu, šlo o přechodnou závadu.' }],
     sourceType: 'official',
   },
   {
@@ -599,7 +603,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud hadice jsou správně zapojeny a chyba přetrvává'],
     relatedSymptoms: ['studená-voda', 'špatné-praní'],
     possibleParts: ['Topné těleso', 'NTC senzor teploty'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu HE na pračce Samsung?', a: 'Zkontrolujte, zda je přívodní hadice studené vody zapojena do studeného přívodu – ne do teplého..' }],
     sourceType: 'official',
   },
   {
@@ -613,6 +617,7 @@ const codes: CodeDef[] = [
     relatedSymptoms: ['pračka-neodsřeďuje', 'vibrace'],
     possibleParts: [],
     faq: [
+      { q: 'Jak opravit chybu UE na pračce Samsung?', a: '1) Otevřete buben a rovnoměrně přeskládejte prádlo 2) Odeberte část prádla, pokud je přeplněný' },
       { q: 'Proč Samsung pračka hlásí UE?', a: 'Kód UE znamená unbalanced – nevyváženo. Přeskládejte prádlo v bubnu rovnoměrně a spusťte znovu.' },
     ],
     sourceType: 'official',
@@ -642,7 +647,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud přetrvává'],
     relatedSymptoms: ['myčka-nevypouští'],
     possibleParts: ['Odpadní čerpadlo', 'Filtr'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu 5C na myčce Samsung?', a: '1) Vyčistěte filtr myčky 2) Zkontrolujte odpadní hadici' }],
     sourceType: 'official',
   },
 
@@ -698,7 +703,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud přetrvává'],
     relatedSymptoms: ['pračka-nevypouští'],
     possibleParts: ['Čerpadlo', 'Filtr čerpadla'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu H5 na pračce Beko?', a: '1) Vyčistěte filtr čerpadla 2) Zkontrolujte odpadní hadici' }],
     sourceType: 'official',
   },
   {
@@ -752,7 +757,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud přetrvává po kontrole přívodu vody'],
     relatedSymptoms: ['myčka-se-neplní'],
     possibleParts: ['Elektromagnetický ventil', 'Filtr přívodní hadice'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu E1 na myčce Beko?', a: '1) Zkontrolujte, zda je kohout přívodu vody otevřen 2) Vyčistěte filtr přívodní hadice 3) Zkontrolujte tlak vody v domácnosti' }],
     sourceType: 'official',
   },
   {
@@ -765,7 +770,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud čerpadlo nevydává zvuk'],
     relatedSymptoms: ['myčka-nevypouští'],
     possibleParts: ['Odpadní čerpadlo', 'Filtr myčky'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu E2 na myčce Beko?', a: '1) Vyčistěte filtr v dolní části myčky 2) Zkontrolujte odpadní hadici, zda není zalomená 3) Zkontrolujte, zda sifon není ucpaný' }],
     sourceType: 'official',
   },
   {
@@ -793,7 +798,7 @@ const codes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud se opakuje'],
     relatedSymptoms: ['sušička-se-přehřívá'],
     possibleParts: ['Bezpečnostní termostat', 'Filtr chlupů'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu H01 na sušičce Beko?', a: '1) Vyčistěte filtr chlupů 2) Vyčistěte kondenzátor' }],
     sourceType: 'official',
   },
   {
@@ -1219,7 +1224,7 @@ const additionalCodes: CodeDef[] = [
     likelyCauses: ['Poškozená EEPROM paměť na desce', 'Výpadek napájení při ukládání dat', 'Vadná hlavní deska'],
     whenToStopAndCallService: ['Pokud reset nepomůže'],
     relatedSymptoms: ['pračka-nereaguje'], possibleParts: ['Hlavní deska'],
-    faq: [], sourceType: 'official',
+    faq: [{ q: 'Jak opravit chybu F12 na pračce Whirlpool?', a: 'Odpojte pračku na 10 minut a znovu zapněte.' }], sourceType: 'official',
   },
   {
     brand: 'Whirlpool', applianceType: 'pracka', code: 'F18',
@@ -1230,7 +1235,7 @@ const additionalCodes: CodeDef[] = [
     likelyCauses: ['Ucpaný filtr čerpadla', 'Vadné odpadní čerpadlo', 'Zalomená nebo ucpaná odpadní hadice', 'Ucpaný sifon'],
     whenToStopAndCallService: ['Pokud čerpadlo nefunguje ani po vyčištění filtru'],
     relatedSymptoms: ['pracka-nevypousti'], possibleParts: ['Odpadní čerpadlo', 'Filtr čerpadla', 'Odpadní hadice'],
-    faq: [{ q: 'Kde najdu filtr čerpadla na pračce Whirlpool?', a: 'Filtr čerpadla se nachází vpravo dole za malými dvířky nebo za spodním krytem. Před otevřením připravte ručník.' }],
+    faq: [{ q: 'Kde najdu filtr čerpadla na pračce Whirlpool?', a: 'Filtr čerpadla se nachází vpravo dole za malými dvířky nebo za spodním krytem. Před otevřením připravte ručník.' }, { q: 'Jak opravit chybu F18 na pračce Whirlpool?', a: '1) Vyčistěte filtr čerpadla (vpravo dole) 2) Zkontrolujte odpadní hadici, zda není zalomená 3) Zkontrolujte sifon nebo odpad' }],
     sourceType: 'official',
   },
   {
@@ -1242,7 +1247,7 @@ const additionalCodes: CodeDef[] = [
     likelyCauses: ['Ucpaný filtr čerpadla', 'Zalomená odpadní hadice', 'Vadné čerpadlo', 'Ucpaný sifon'],
     whenToStopAndCallService: ['Pokud voda v bubnu zůstane i po vyčištění filtru'],
     relatedSymptoms: ['pracka-nevypousti'], possibleParts: ['Odpadní čerpadlo', 'Filtr čerpadla'],
-    faq: [], sourceType: 'official',
+    faq: [{ q: 'Jak opravit chybu F21 na pračce Whirlpool?', a: '1) Vyčistěte filtr čerpadla 2) Zkontrolujte odpadní hadici 3) Zkontrolujte, zda sifon není ucpaný' }], sourceType: 'official',
   },
   {
     brand: 'Whirlpool', applianceType: 'pracka', code: 'F27',
@@ -1253,7 +1258,7 @@ const additionalCodes: CodeDef[] = [
     likelyCauses: ['Vadný tlakový senzor (pressostat)', 'Ucpané tlakové vedení', 'Vadná řídicí deska'],
     whenToStopAndCallService: ['Pokud přetrvává'],
     relatedSymptoms: ['pracka-se-neplni'], possibleParts: ['Tlakový senzor (pressostat)', 'Tlakové vedení'],
-    faq: [], sourceType: 'official',
+    faq: [{ q: 'Jak opravit chybu F27 na pračce Whirlpool?', a: 'Zkontrolujte a vyčistěte hadičku tlakového senzoru od usazenin.' }], sourceType: 'official',
   },
 
   // ===== WHIRLPOOL MYČKY =====
@@ -1266,7 +1271,7 @@ const additionalCodes: CodeDef[] = [
     likelyCauses: ['Uzavřený kohout přívodu vody', 'Ucpaný filtr přívodní hadice', 'Nízký tlak vody', 'Vadný elektromagnetický ventil'],
     whenToStopAndCallService: ['Pokud přetrvává po kontrole přívodu'],
     relatedSymptoms: ['myčka-nevypousti'], possibleParts: ['Elektromagnetický ventil', 'Filtr přívodní hadice'],
-    faq: [], sourceType: 'official',
+    faq: [{ q: 'Jak opravit chybu F1 na myčce Whirlpool?', a: '1) Zkontrolujte kohout přívodu vody 2) Vyčistěte filtr přívodní hadice 3) Zkontrolujte tlak vody' }], sourceType: 'official',
   },
   {
     brand: 'Whirlpool', applianceType: 'mycka', code: 'F2',
@@ -1277,7 +1282,7 @@ const additionalCodes: CodeDef[] = [
     likelyCauses: ['Ucpaný filtr nebo sítko', 'Zalomená odpadní hadice', 'Vadné odpadní čerpadlo'],
     whenToStopAndCallService: ['Pokud čerpadlo nefunguje po vyčištění filtru'],
     relatedSymptoms: ['myčka-nevypousti'], possibleParts: ['Odpadní čerpadlo', 'Filtr myčky', 'Odpadní hadice'],
-    faq: [], sourceType: 'official',
+    faq: [{ q: 'Jak opravit chybu F2 na myčce Whirlpool?', a: '1) Vyčistěte filtr v dolní části myčky 2) Zkontrolujte odpadní hadici, zda není zalomená 3) Zkontrolujte, zda sifon není ucpaný' }], sourceType: 'official',
   },
   {
     brand: 'Whirlpool', applianceType: 'mycka', code: 'F3',
@@ -1319,7 +1324,7 @@ const additionalCodes: CodeDef[] = [
     likelyCauses: ['Vadná hlavní deska', 'Výpadek napájení', 'Přechodová chyba'],
     whenToStopAndCallService: ['Pokud reset nepomůže'],
     relatedSymptoms: ['susicka-nesuší'], possibleParts: ['Hlavní deska'],
-    faq: [], sourceType: 'official',
+    faq: [{ q: 'Jak opravit chybu F01 na sušičce Whirlpool?', a: 'Odpojte sušičku na 10 minut a znovu zapněte.' }], sourceType: 'official',
   },
   {
     brand: 'Whirlpool', applianceType: 'susicka', code: 'F02',
@@ -1329,7 +1334,7 @@ const additionalCodes: CodeDef[] = [
     likelyCauses: ['Přepálené topné těleso', 'Přepálená tepelná pojistka', 'Vadné relé ohřevu', 'Ucpané filtry způsobující přehřátí'],
     whenToStopAndCallService: ['Ihned'],
     relatedSymptoms: ['susicka-nesuší'], possibleParts: ['Topné těleso', 'Tepelná pojistka', 'Relé ohřevu'],
-    faq: [], sourceType: 'official',
+    faq: [{ q: 'Jak opravit chybu F02 na sušičce Whirlpool?', a: '1) Zkontrolujte a vyčistěte filtr chlupů 2) Zkontrolujte větrání prostoru' }], sourceType: 'official',
   },
   {
     brand: 'Whirlpool', applianceType: 'susicka', code: 'F03',
@@ -1373,7 +1378,7 @@ const additionalCodes: CodeDef[] = [
     likelyCauses: ['Uzavřený kohout přívodu vody', 'Ucpaný filtr přívodní hadice', 'Nízký tlak vody (pod 0,5 bar)', 'Vadný elektromagnetický ventil'],
     whenToStopAndCallService: ['Pokud přetrvává po kontrole přívodu vody'],
     relatedSymptoms: ['pracka-se-neplni'], possibleParts: ['Elektromagnetický ventil', 'Filtr přívodní hadice'],
-    faq: [{ q: 'Co znamená chyba IE na pračce LG?', a: 'IE (Input Error) znamená, že pračka LG nedostává dostatek vody. Zkontrolujte, zda je otevřen kohout vody, vyčistěte filtr přívodní hadice a ověřte tlak vody.' }],
+    faq: [{ q: 'Co znamená chyba IE na pračce LG?', a: 'IE (Input Error) znamená, že pračka LG nedostává dostatek vody. Zkontrolujte, zda je otevřen kohout vody, vyčistěte filtr přívodní hadice a ověřte tlak vody.' }, { q: 'Jak opravit chybu IE na pračce LG?', a: '1) Zkontrolujte, zda je kohout přívodu vody plně otevřen 2) Vyčistěte filtr přívodní hadice 3) Zkontrolujte tlak vody v domácnosti' }],
     sourceType: 'official',
   },
   {
@@ -1397,7 +1402,7 @@ const additionalCodes: CodeDef[] = [
     likelyCauses: ['Nevyvážené rozmístění prádla', 'Velký kus (přikrývka, župan) na jednom místě', 'Přeplněný nebo prázdný buben', 'Pračka nestojí na rovném povrchu'],
     whenToStopAndCallService: ['Pokud se UE opakuje i po rovnoměrném rozložení prádla'],
     relatedSymptoms: ['pracka-trese'], possibleParts: [],
-    faq: [], sourceType: 'official',
+    faq: [{ q: 'Jak opravit chybu UE na pračce LG?', a: '1) Otevřete pračku a ručně rovnoměrně rozložte prádlo v bubnu 2) Neperte jeden velký kus prádla samostatně 3) Přidejte k velké položce menší prádlo pro vyvážení' }], sourceType: 'official',
   },
   {
     brand: 'LG', applianceType: 'pracka', code: 'tE',
@@ -1428,7 +1433,7 @@ const additionalCodes: CodeDef[] = [
     likelyCauses: ['Vadný tlakový senzor', 'Ucpané tlakové vedení k senzoru', 'Porucha řídicí desky'],
     whenToStopAndCallService: ['Pokud přetrvává'],
     relatedSymptoms: ['pracka-se-neplni'], possibleParts: ['Tlakový senzor', 'Hlavní deska'],
-    faq: [], sourceType: 'official',
+    faq: [{ q: 'Jak opravit chybu PE na pračce LG?', a: 'Zkontrolujte a vyčistěte hadičku tlakového senzoru.' }], sourceType: 'official',
   },
   {
     brand: 'LG', applianceType: 'pracka', code: 'dE',
@@ -1439,7 +1444,7 @@ const additionalCodes: CodeDef[] = [
     likelyCauses: ['Dvířka nejsou řádně zavřena', 'Vadný zámek dvířek', 'Poškozená záchytka', 'Deformovaný rám'],
     whenToStopAndCallService: ['Pokud záchytka je poškozena nebo zámek nereaguje'],
     relatedSymptoms: ['buben-se-neotaci'], possibleParts: ['Zámek dvířek', 'Záchytka dvířek'],
-    faq: [], sourceType: 'official',
+    faq: [{ q: 'Jak opravit chybu dE na pračce LG?', a: '1) Pevně zavřete dvířka – musí cvaknou 2) Zkontrolujte plastovou záchytku na dvířkách 3) Zkontrolujte, zda prádlo nevystupuje z rámu dvířek' }], sourceType: 'official',
   },
   {
     brand: 'LG', applianceType: 'pracka', code: 'LE',
@@ -1450,7 +1455,7 @@ const additionalCodes: CodeDef[] = [
     likelyCauses: ['Přeplněný buben', 'Cizí předmět blokující buben', 'Vadný motor nebo ložiska', 'Vadná řídicí deska motoru'],
     whenToStopAndCallService: ['Pokud buben nelze ručně otočit', 'Pokud se LE opakuje i s prázdným bubnem'],
     relatedSymptoms: ['buben-se-neotaci'], possibleParts: ['Motor', 'Ložiska bubnu', 'Řídicí deska'],
-    faq: [], sourceType: 'official',
+    faq: [{ q: 'Jak opravit chybu LE na pračce LG?', a: '1) Snižte množství prádla v bubnu 2) Zkontrolujte, zda v bubnu není cizí předmět 3) Vypněte pračku a ručně otočte bubnem, zda se volně pohybuje' }], sourceType: 'official',
   },
 
   // ===== LG MYČKY =====
@@ -1463,7 +1468,7 @@ const additionalCodes: CodeDef[] = [
     likelyCauses: ['Uzavřený kohout', 'Ucpaný filtr hadice', 'Nízký tlak vody', 'Vadný elektromagnetický ventil'],
     whenToStopAndCallService: ['Pokud přetrvává'],
     relatedSymptoms: ['myčka-nevypousti'], possibleParts: ['Elektromagnetický ventil', 'Filtr přívodní hadice'],
-    faq: [], sourceType: 'official',
+    faq: [{ q: 'Jak opravit chybu IE na myčce LG?', a: '1) Zkontrolujte kohout přívodu vody 2) Vyčistěte filtr přívodní hadice 3) Zkontrolujte tlak vody' }], sourceType: 'official',
   },
   {
     brand: 'LG', applianceType: 'mycka', code: 'OE',
@@ -1474,7 +1479,7 @@ const additionalCodes: CodeDef[] = [
     likelyCauses: ['Ucpaný filtr', 'Zalomená odpadní hadice', 'Vadné odpadní čerpadlo'],
     whenToStopAndCallService: ['Pokud voda zůstane i po vyčištění filtru'],
     relatedSymptoms: ['myčka-nevypousti'], possibleParts: ['Odpadní čerpadlo', 'Filtr myčky'],
-    faq: [], sourceType: 'official',
+    faq: [{ q: 'Jak opravit chybu OE na myčce LG?', a: '1) Vyčistěte filtr v dolní části myčky 2) Zkontrolujte odpadní hadici 3) Zkontrolujte sifon' }], sourceType: 'official',
   },
   {
     brand: 'LG', applianceType: 'mycka', code: 'HE',
@@ -1505,7 +1510,7 @@ const additionalCodes: CodeDef[] = [
     likelyCauses: ['Únik z přívodní hadice', 'Prasklé těsnění pumpy', 'Přetečení dávkovače leštidla', 'Vadná oběhová pumpa'],
     whenToStopAndCallService: ['Ihned – hrozí zaplavení'],
     relatedSymptoms: ['voda-pod-myčkou'], possibleParts: ['Přívodní hadice', 'Těsnění pumpy', 'Oběhová pumpa'],
-    faq: [], sourceType: 'official',
+    faq: [{ q: 'Jak opravit chybu LE na myčce LG?', a: '1) Zkontrolujte hadice a těsnění myčky 2) Vypněte myčku a zkontrolujte podlahu pod ní' }], sourceType: 'official',
   },
 
   // ===== LG SUŠIČKY =====
@@ -1518,7 +1523,7 @@ const additionalCodes: CodeDef[] = [
     likelyCauses: ['Ucpaná nebo zmačkaná výfuková hadice', 'Ucpání výfukového otvoru vnějším materiálem', 'Příliš dlouhá nebo svinutá výfuková hadice'],
     whenToStopAndCallService: ['Pokud přetrvává po vyčištění hadice'],
     relatedSymptoms: ['susicka-nesuší'], possibleParts: ['Výfuková hadice'],
-    faq: [{ q: 'Co znamená D80 na sušičce LG?', a: 'D80 znamená, že výfuková hadice je ucpána přibližně z 80 %. Sušička omezuje výkon pro prevenci přehřátí. Vyčistěte výfukovou hadici a zkontrolujte, zda není zalomená nebo příliš dlouhá (max. doporučená délka je dle modelu).' }],
+    faq: [{ q: 'Co znamená D80 na sušičce LG?', a: 'D80 znamená, že výfuková hadice je ucpána přibližně z 80 %. Sušička omezuje výkon pro prevenci přehřátí. Vyčistěte výfukovou hadici a zkontrolujte, zda není zalomená nebo příliš dlouhá (max. doporučená délka je dle modelu).' }, { q: 'Jak opravit chybu D80 na sušičce LG?', a: '1) Zkontrolujte a vyčistěte výfukovou hadici 2) Zkontrolujte výfukový otvor zvenku, zda není ucpán 3) Zkontrolujte a vyčistěte filtr chlupů' }],
     sourceType: 'official',
   },
   {
@@ -1530,7 +1535,7 @@ const additionalCodes: CodeDef[] = [
     likelyCauses: ['Silně ucpaná výfuková hadice', 'Příliš mnoho ohybů nebo příliš dlouhá hadice', 'Ucpání vnějšího ventilačního otvoru'],
     whenToStopAndCallService: ['Pokud přetrvává po kompletním vyčištění výfukové cesty'],
     relatedSymptoms: ['susicka-nesuší', 'susicka-se-prehriva'], possibleParts: ['Výfuková hadice'],
-    faq: [], sourceType: 'official',
+    faq: [{ q: 'Jak opravit chybu D90 na sušičce LG?', a: '1) Ihned vyčistěte výfukovou hadici a výfukový otvor 2) Zkontrolujte délku a ohyby hadice 3) Vyčistěte filtr chlupů' }], sourceType: 'official',
   },
   {
     brand: 'LG', applianceType: 'susicka', code: 'tE',
@@ -1570,6 +1575,7 @@ const additionalCodes: CodeDef[] = [
     relatedSymptoms: ['pracka-tece', 'voda-pod-prackou'],
     possibleParts: ['Těsnění dveří', 'Přívodní hadice', 'Odpadní hadice', 'Pumpa'],
     faq: [
+      { q: 'Jak opravit chybu E30 na pračce AEG?', a: '1) Zkontrolujte přívodní hadici – přesvědčte se, zda nejsou viditelné kapky nebo vlhkost v místech napojení. 2) Nakloňte pračku dozadu o 10–15 cm, podržte 30–40 sekund, aby voda vytekla ze spodní vany, a vraťte pračku do roviny. 3) Zkontrolujte těsnění dveří – prohlédněte gumový manžon, zda není prasklý nebo poškozený. 4) Vyčistěte filtry přívodní hadice na obou koncích (u ventilu i u pračky).' },
       { q: 'Co znamená kód E30 na pračce AEG?', a: 'E30 signalizuje, že systém AquaStop detekoval vodu ve spodní vaně pračky. Nakloňte pračku dozadu, aby voda vytekla, a zkontrolujte hadice a těsnění dveří.' },
     ],
     sourceType: 'official',
@@ -1591,6 +1597,7 @@ const additionalCodes: CodeDef[] = [
     relatedSymptoms: ['pracka-nespusti'],
     possibleParts: ['Řídicí deska', 'Napájecí modul'],
     faq: [
+      { q: 'Jak opravit chybu EH0 na pračce AEG?', a: '1) Zkontrolujte, zda zástrčka pračky pevně sedí v zásuvce. 2) Zkuste zapojit pračku do jiné zásuvky. 3) Zkontrolujte pojistky v rozvaděči domácnosti. 4) Nepoužívejte prodlužovací kabel – pračka musí být zapojena přímo do zásuvky.' },
       { q: 'Co znamená EH0 na pračce AEG?', a: 'EH0 znamená chybu napájení – pračka detekovala nestabilní nebo nesprávné síťové napětí. Zkontrolujte přívodní zásuvku a pojistky.' },
     ],
     sourceType: 'official',
@@ -1610,6 +1617,7 @@ const additionalCodes: CodeDef[] = [
     relatedSymptoms: ['pracka-nepere-spravne', 'studena-voda'],
     possibleParts: ['Topné těleso', 'NTC senzor teploty', 'Řídicí deska'],
     faq: [
+      { q: 'Jak opravit chybu E60 na pračce AEG?', a: '1) Spusťte program bez ohřevu (studená voda) – pokud proběhne, potvrzuje to problém s topením. 2) Zkontrolujte, zda je přívod vody studená (teplá voda z kohoutku může způsobit chybu ohřevu).' },
       { q: 'Jaký je rozdíl mezi E60, E61 a E62 na pračce AEG?', a: 'E60 je obecná chyba ohřevu. E61 a E62 jsou podrobnější kódy – E61 signalizuje nedostatečný ohřev, E62 pak přehřátí vody.' },
     ],
     sourceType: 'official',
@@ -1633,6 +1641,7 @@ const additionalCodes: CodeDef[] = [
     relatedSymptoms: ['pracka-tece', 'voda-pod-prackou'],
     possibleParts: ['Těsnění dveří', 'Přívodní hadice', 'Odpadní hadice', 'Pumpa'],
     faq: [
+      { q: 'Jak opravit chybu E30 na pračce Electrolux?', a: '1) Zkontrolujte přívodní hadici – přesvědčte se, zda nejsou viditelné kapky nebo vlhkost v místech napojení. 2) Nakloňte pračku dozadu o 10–15 cm, podržte 30–40 sekund, aby voda vytekla ze spodní vany, a vraťte pračku do roviny. 3) Zkontrolujte těsnění dveří – prohlédněte gumový manžon, zda není prasklý nebo poškozený. 4) Vyčistěte filtry přívodní hadice na obou koncích.' },
       { q: 'Co znamená E30 na pračce Electrolux?', a: 'E30 signalizuje, že protizáplavový systém detekoval vodu ve spodní vaně. Nakloňte pračku dozadu, zkontrolujte hadice a těsnění dveří.' },
     ],
     sourceType: 'official',
@@ -1669,7 +1678,7 @@ const additionalCodes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud ostatní spotřebiče fungují a chyba přetrvává'],
     relatedSymptoms: ['pracka-nespusti'],
     possibleParts: ['Řídicí deska', 'Napájecí modul'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu EH0 na pračce Electrolux?', a: '1) Zkontrolujte zástrčku a zásuvku. 2) Zkuste jinou zásuvku. 3) Zkontrolujte pojistky v rozvaděči. 4) Nepoužívejte prodlužovací kabel.' }],
     sourceType: 'official',
     sourceUrl: 'https://support.electrolux.co.uk/support-articles/article/washing-machine-displays-an-error-code-how-to-fix-it',
   },
@@ -1707,6 +1716,7 @@ const additionalCodes: CodeDef[] = [
     relatedSymptoms: ['pracka-se-neplni'],
     possibleParts: ['Přívodní hadice', 'Senzor teploty vody'],
     faq: [
+      { q: 'Jak opravit chybu 4C2 na pračce Samsung?', a: '1) Zkontrolujte, zda jsou hadice přívodu vody správně zapojeny – studená voda do modrého a teplá do červeného ventilu. 2) Pokud pračka má pouze studený přívod, zkontrolujte, zda není omylem zapojena do teplé vody.' },
       { q: 'Co znamená 4C2 nebo 4E2 na pračce Samsung?', a: '4C2/4E2 signalizuje problém s teplotou přívodní vody. Nejčastěji jsou prohozeny hadice teplé a studené vody.' },
     ],
     sourceType: 'official',
@@ -1728,6 +1738,7 @@ const additionalCodes: CodeDef[] = [
     relatedSymptoms: ['pracka-nespusti'],
     possibleParts: ['Řídicí deska', 'Napájecí modul'],
     faq: [
+      { q: 'Jak opravit chybu 9C1 na pračce Samsung?', a: '1) Zkontrolujte, zda zástrčka pevně sedí v zásuvce. 2) Nepoužívejte prodlužovací kabel ani rozdvojku. 3) Zkontrolujte pojistky v rozvaděči. 4) Zkuste spotřebič zapojit do jiné zásuvky.' },
       { q: 'Co znamená 9C1, 9E1 nebo 9C2 na pračce Samsung?', a: 'Tyto kódy signalizují nízké nebo nestabilní napětí sítě. Zkontrolujte zásuvku a zda pračku nezapojujete přes prodlužovací kabel.' },
     ],
     sourceType: 'official',
@@ -1745,7 +1756,7 @@ const additionalCodes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud chyba přetrvává po restartu'],
     relatedSymptoms: ['buben-se-neotaci'],
     possibleParts: ['Invertor motoru', 'Řídicí deska', 'Propojovací kabel'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu AC6 na pračce Samsung?', a: 'Vypněte pračku, odpojte ze zásuvky na 5 minut a znovu spusťte..' }],
     sourceType: 'official',
     sourceUrl: 'https://www.samsung.com/uk/support/home-appliances/what-do-the-codes-on-my-washing-machine-mean/',
   },
@@ -1777,6 +1788,7 @@ const additionalCodes: CodeDef[] = [
     relatedSymptoms: [],
     possibleParts: ['Zámek přídavných dveří'],
     faq: [
+      { q: 'Jak opravit chybu DDC na pračce Samsung?', a: '1) Zavřete přídavné dveře pevně – musí zaklapnout. 2) Stiskněte tlačítko Start/Pause před otevřením přídavných dveří.' },
       { q: 'Co znamená DDC na pračce Samsung?', a: 'DDC signalizuje, že přídavné dveře (Add Door) byly otevřeny nesprávně – buď bez zastavení programu, nebo nebyly správně zavřeny.' },
     ],
     sourceType: 'official',
@@ -1798,6 +1810,7 @@ const additionalCodes: CodeDef[] = [
     relatedSymptoms: ['buben-se-neotaci'],
     possibleParts: ['Motor', 'Invertor motoru', 'Řídicí deska'],
     faq: [
+      { q: 'Jak opravit chybu CE na pračce LG?', a: '1) Snižte náplň bubnu – přetížení motoru může způsobit zkrat obvodu. 2) Vypněte pračku, odpojte ze zásuvky na 10 minut a znovu spusťte.' },
       { q: 'Co znamená CE na pračce LG?', a: 'CE signalizuje chybu proudu motoru – buď přetížení, nebo zkrat. Zkuste snížit množství prádla a restartovat.' },
     ],
     sourceType: 'official',
@@ -1815,7 +1828,7 @@ const additionalCodes: CodeDef[] = [
     whenToStopAndCallService: ['Ihned – topné těleso vyžaduje odbornou výměnu'],
     relatedSymptoms: ['pracka-nepere-spravne', 'studena-voda'],
     possibleParts: ['Topné těleso', 'NTC senzor teploty', 'Řídicí deska'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu HE na pračce LG?', a: '1) Zkontrolujte, zda je přívod studené vody správně zapojen. 2) Spusťte program bez ohřevu – pokud proběhne, potvrzuje to problém s topením.' }],
     sourceType: 'official',
   },
   {
@@ -1833,6 +1846,7 @@ const additionalCodes: CodeDef[] = [
     relatedSymptoms: [],
     possibleParts: [],
     faq: [
+      { q: 'Jak opravit chybu SUD na pračce LG?', a: '1) Počkejte – pračka automaticky přidá oplachový cyklus pro odstranění pěny. 2) Příště používejte méně pracího prostředku nebo prostředek označený HE (High Efficiency). 3) Nepoužívejte běžný prací prášek v pračkách front-load.' },
       { q: 'Co znamená SUD na pračce LG?', a: 'SUD signalizuje příliš mnoho pěny. Pračka sama přidá oplach. Příště použijte méně pracího prostředku nebo prostředek HE.' },
     ],
     sourceType: 'official',
@@ -1854,7 +1868,7 @@ const additionalCodes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud ostatní spotřebiče fungují a chyba přetrvává'],
     relatedSymptoms: ['pracka-nespusti'],
     possibleParts: ['Řídicí deska', 'Napájecí modul'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu EH0 na pračce Beko?', a: '1) Zkontrolujte zástrčku a zásuvku. 2) Zkuste jinou zásuvku. 3) Zkontrolujte pojistky v rozvaděči. 4) Nepoužívejte prodlužovací kabel.' }],
     sourceType: 'official',
   },
   {
@@ -1867,7 +1881,7 @@ const additionalCodes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud přetrvává'],
     relatedSymptoms: ['pracka-nespusti'],
     possibleParts: ['Řídicí deska'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu EH1 na pračce Beko?', a: '1) Zkuste zapojit do jiné zásuvky. 2) Zkontrolujte, zda v domácnosti nefunguje zdroj způsobující rušení sítě.' }],
     sourceType: 'official',
   },
   {
@@ -1885,6 +1899,7 @@ const additionalCodes: CodeDef[] = [
     relatedSymptoms: ['pracka-tece'],
     possibleParts: ['Těsnění dveří', 'Přívodní hadice', 'Čerpadlo'],
     faq: [
+      { q: 'Jak opravit chybu EF0 na pračce Beko?', a: '1) Pokud jde o pěnu: použijte méně pracího prostředku nebo prostředek určený pro automatické pračky. 2) Nakloňte pračku dozadu a zkontrolujte, zda není voda v základně. 3) Zkontrolujte těsnění dveří a přívodní hadice.' },
       { q: 'Co znamená EF0 na pračce Beko?', a: 'EF0 signalizuje buď nadměrnou pěnu (použijte méně detergenttu), nebo únik vody do základny stroje.' },
     ],
     sourceType: 'official',
@@ -1916,7 +1931,7 @@ const additionalCodes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud ostatní spotřebiče fungují a chyba přetrvává'],
     relatedSymptoms: ['pracka-nespusti'],
     possibleParts: ['Řídicí deska'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu Eb0 na pračce Beko?', a: '1) Zkontrolujte zástrčku a zásuvku. 2) Zkuste zapojit do jiné zásuvky. 3) Zkontrolujte pojistky v rozvaděči.' }],
     sourceType: 'official',
   },
   {
@@ -1932,7 +1947,7 @@ const additionalCodes: CodeDef[] = [
     whenToStopAndCallService: ['Pokud volič nereaguje správně ani po restartu'],
     relatedSymptoms: [],
     possibleParts: ['Volič programu (encoder)', 'Řídicí deska'],
-    faq: [],
+    faq: [{ q: 'Jak opravit chybu E80 na pračce Beko?', a: '1) Otočte volič programu do výchozí polohy (Off) a znovu vyberte program. 2) Nepřepínejte program za chodu pračky.' }],
     sourceType: 'official',
   },
   {
@@ -1950,6 +1965,7 @@ const additionalCodes: CodeDef[] = [
     relatedSymptoms: ['pracka-trese'],
     possibleParts: ['Tlumiče', 'Pružiny bubnu', 'Protiváha'],
     faq: [
+      { q: 'Jak opravit chybu C9 na pračce Beko?', a: '1) Otevřete dveře a ručně rovnoměrně rozmístěte prádlo v bubnu. 2) Neperte příliš malé množství prádla – jeden kus těžkého prádla se těžko vyvažuje. 3) Přidejte do bubnu ručník nebo podobný kus pro lepší rozložení.' },
       { q: 'Co znamená C9 nebo F9 na pračce Beko?', a: 'C9/F9 signalizuje nevyvážený buben při odstřeďování. Otevřete pračku a ručně rovnoměrně rozdistribuujte prádlo.' },
     ],
     sourceType: 'official',

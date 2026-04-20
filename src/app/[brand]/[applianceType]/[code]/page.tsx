@@ -88,6 +88,9 @@ export default async function ErrorCodePage({ params }: Props) {
   }
 
   const faqItems = (entry.faq || []) as { q: string; a: string }[]
+  const HOW_TO_RE = /jak\s+(opravit|resetovat|odstranit|vyřešit|vyčistit|vypnout|zbavit|deaktivovat)/i
+  const howToFaqItem = faqItems.find(f => HOW_TO_RE.test(f.q)) ?? null
+  const otherFaqItems = faqItems.filter(f => !HOW_TO_RE.test(f.q))
 
   const howToSchema = entry.canUserTrySafeChecks && entry.safeChecks.length > 0 ? {
     '@context': 'https://schema.org',
@@ -195,6 +198,14 @@ export default async function ErrorCodePage({ params }: Props) {
             </section>
           )}
 
+          {/* How to fix */}
+          {howToFaqItem && (
+            <section className="bg-white rounded-xl border border-gray-200 p-5">
+              <h2 className="text-lg font-semibold text-gray-900 mb-3">Jak opravit chybu {entry.code}</h2>
+              <p className="text-sm text-gray-700">{howToFaqItem.a}</p>
+            </section>
+          )}
+
           {/* Mobile-only CTA – sidebar není na mobilu viditelný */}
           <div className="md:hidden bg-blue-50 border border-blue-100 rounded-xl p-4 flex items-center justify-between gap-4">
             <p className="text-sm font-medium text-gray-900">Potřebujete technika?</p>
@@ -221,11 +232,11 @@ export default async function ErrorCodePage({ params }: Props) {
           )}
 
           {/* FAQ */}
-          {faqItems.length > 0 && (
+          {otherFaqItems.length > 0 && (
             <section className="bg-white rounded-xl border border-gray-200 p-5">
               <h2 className="text-lg font-semibold text-gray-900 mb-4">Časté dotazy</h2>
               <div className="space-y-4">
-                {faqItems.map((f, i) => (
+                {otherFaqItems.map((f, i) => (
                   <div key={i}>
                     <h3 className="font-medium text-gray-900 mb-1">{f.q}</h3>
                     <p className="text-sm text-gray-600">{f.a}</p>
