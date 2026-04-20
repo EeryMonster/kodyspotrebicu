@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- T-shirt body -->
+  <path d="M30 28 L14 42 L24 52 L24 88 L76 88 L76 52 L86 42 L70 28 L62 36 Q50 44 38 36 Z" fill="#5B9ED9"/>
+  <!-- Collar -->
+  <path d="M38 36 Q50 48 62 36" stroke="#4A8EC9" stroke-width="3" fill="none"/>
+  <!-- Sleeve shading -->
+  <path d="M30 28 L14 42 L24 52 L28 46 L22 38 L34 30 Z" fill="#4A8EC9"/>
+  <path d="M70 28 L86 42 L76 52 L72 46 L78 38 L66 30 Z" fill="#4A8EC9"/>
+  <!-- Water drop 1 -->
+  <path d="M38 60 Q34 68 38 74 Q42 68 38 60 Z" fill="#2196F3" opacity="0.9"/>
+  <!-- Water drop 2 -->
+  <path d="M52 55 Q47 65 52 72 Q57 65 52 55 Z" fill="#2196F3" opacity="0.9"/>
+  <!-- Water drop 3 -->
+  <path d="M65 62 Q61 70 65 76 Q69 70 65 62 Z" fill="#2196F3" opacity="0.7"/>
+</svg>

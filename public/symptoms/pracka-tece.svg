@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Body -->
+  <rect x="12" y="14" width="62" height="66" rx="9" fill="#5B9ED9"/>
+  <rect x="12" y="14" width="62" height="20" rx="9" fill="#4A8EC9"/>
+  <rect x="12" y="26" width="62" height="8" fill="#4A8EC9"/>
+  <!-- Knob -->
+  <circle cx="62" cy="23" r="6" fill="#2A6EA9"/>
+  <circle cx="62" cy="23" r="3" fill="#1A5E99"/>
+  <!-- Door -->
+  <circle cx="42" cy="56" r="21" fill="white" opacity="0.25"/>
+  <circle cx="42" cy="56" r="18" fill="#D6EAF8"/>
+  <circle cx="42" cy="56" r="13" fill="#AED6F1"/>
+  <circle cx="42" cy="56" r="8" fill="#85C1E9"/>
+  <!-- Water drops -->
+  <ellipse cx="28" cy="88" rx="5" ry="3.5" fill="#2196F3" opacity="0.6"/>
+  <ellipse cx="42" cy="90" rx="7" ry="4" fill="#2196F3" opacity="0.8"/>
+  <ellipse cx="58" cy="88" rx="5" ry="3.5" fill="#2196F3" opacity="0.6"/>
+  <!-- Water puddle -->
+  <ellipse cx="43" cy="93" rx="28" ry="6" fill="#90CAF9" opacity="0.7"/>
+  <!-- Drip -->
+  <ellipse cx="30" cy="82" rx="3" ry="4" fill="#2196F3" opacity="0.7"/>
+  <ellipse cx="55" cy="80" rx="2.5" ry="3.5" fill="#2196F3" opacity="0.7"/>
+</svg>

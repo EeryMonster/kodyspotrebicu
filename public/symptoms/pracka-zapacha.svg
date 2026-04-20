@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Body -->
+  <rect x="8" y="18" width="62" height="72" rx="9" fill="#5B9ED9"/>
+  <rect x="8" y="18" width="62" height="20" rx="9" fill="#4A8EC9"/>
+  <rect x="8" y="30" width="62" height="8" fill="#4A8EC9"/>
+  <!-- Knob -->
+  <circle cx="58" cy="27" r="6" fill="#2A6EA9"/>
+  <circle cx="58" cy="27" r="3" fill="#1A5E99"/>
+  <!-- Door -->
+  <circle cx="38" cy="62" r="21" fill="white" opacity="0.25"/>
+  <circle cx="38" cy="62" r="18" fill="#D6EAF8"/>
+  <circle cx="38" cy="62" r="13" fill="#AED6F1"/>
+  <circle cx="38" cy="62" r="8" fill="#85C1E9"/>
+  <!-- Leaf -->
+  <ellipse cx="83" cy="22" rx="9" ry="5" fill="#4CAF50" transform="rotate(-40 83 22)"/>
+  <line x1="83" y1="22" x2="80" y2="30" stroke="#388E3C" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Smell waves -->
+  <path d="M72 42 Q78 36 72 30" stroke="#66BB6A" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M80 47 Q86 41 80 35" stroke="#66BB6A" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M88 52 Q94 46 88 40" stroke="#66BB6A" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

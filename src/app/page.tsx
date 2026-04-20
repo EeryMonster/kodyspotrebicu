@@ -27,18 +27,18 @@ const brands = [
 ]
 
 const commonProblems = [
-  { slug: 'pracka-zapacha', icon: '🤢', label: 'Pračka zapáchá', desc: 'Nepříjemný zápach z pračky nebo prádla' },
-  { slug: 'pracka-nevypousti', icon: '💧', label: 'Pračka nevypouští vodu', desc: 'Po praní zůstane voda v bubnu' },
-  { slug: 'pracka-se-neplni', icon: '🚿', label: 'Pračka se neplní', desc: 'Pračka nezačne nabírat vodu' },
-  { slug: 'pracka-trese', icon: '📳', label: 'Pračka se třese a hlučí', desc: 'Silné vibrace nebo hluk při odstřeďování' },
-  { slug: 'pracka-tece', icon: '🌊', label: 'Voda vytéká z pračky', desc: 'Voda pod pračkou nebo kolem ní' },
-  { slug: 'buben-se-neotaci', icon: '🔄', label: 'Buben se neotáčí', desc: 'Buben stojí nebo se otáčí nepravidelně' },
-  { slug: 'mycka-neumyva', icon: '🍽️', label: 'Myčka neumývá nádobí', desc: 'Nádobí vychází špinavé nebo mokré' },
-  { slug: 'mycka-nevypousti', icon: '🪣', label: 'Myčka nevypouští vodu', desc: 'Po mytí zůstane voda na dně myčky' },
-  { slug: 'mycka-zapacha', icon: '😷', label: 'Myčka zapáchá', desc: 'Zápach z myčky nebo z nádobí' },
-  { slug: 'voda-pod-myckou', icon: '💦', label: 'Voda pod myčkou', desc: 'Únik vody pod nebo za myčkou' },
-  { slug: 'susicka-nesusi', icon: '👕', label: 'Sušička nesuší', desc: 'Prádlo zůstává mokré po celém cyklu' },
-  { slug: 'susicka-se-prehriva', icon: '🌡️', label: 'Sušička se přehřívá', desc: 'Sušička se vypíná nebo vydává zápach' },
+  { slug: 'pracka-zapacha', img: '/symptoms/pracka-zapacha.svg', label: 'Pračka zapáchá', desc: 'Nepříjemný zápach z pračky nebo prádla' },
+  { slug: 'pracka-nevypousti', img: '/symptoms/pracka-nevypousti.svg', label: 'Pračka nevypouští vodu', desc: 'Po praní zůstane voda v bubnu' },
+  { slug: 'pracka-se-neplni', img: '/symptoms/pracka-se-neplni.svg', label: 'Pračka se neplní', desc: 'Pračka nezačne nabírat vodu' },
+  { slug: 'pracka-trese', img: '/symptoms/pracka-trese.svg', label: 'Pračka se třese a hlučí', desc: 'Silné vibrace nebo hluk při odstřeďování' },
+  { slug: 'pracka-tece', img: '/symptoms/pracka-tece.svg', label: 'Voda vytéká z pračky', desc: 'Voda pod pračkou nebo kolem ní' },
+  { slug: 'buben-se-neotaci', img: '/symptoms/buben-se-neotaci.svg', label: 'Buben se neotáčí', desc: 'Buben stojí nebo se otáčí nepravidelně' },
+  { slug: 'mycka-neumyva', img: '/symptoms/mycka-neumyva.svg', label: 'Myčka neumývá nádobí', desc: 'Nádobí vychází špinavé nebo mokré' },
+  { slug: 'mycka-nevypousti', img: '/symptoms/mycka-nevypousti.svg', label: 'Myčka nevypouští vodu', desc: 'Po mytí zůstane voda na dně myčky' },
+  { slug: 'mycka-zapacha', img: '/symptoms/mycka-zapacha.svg', label: 'Myčka zapáchá', desc: 'Zápach z myčky nebo z nádobí' },
+  { slug: 'voda-pod-myckou', img: '/symptoms/voda-pod-myckou.svg', label: 'Voda pod myčkou', desc: 'Únik vody pod nebo za myčkou' },
+  { slug: 'susicka-nesusi', img: '/symptoms/susicka-nesusi.svg', label: 'Sušička nesuší', desc: 'Prádlo zůstává mokré po celém cyklu' },
+  { slug: 'susicka-se-prehriva', img: '/symptoms/susicka-se-prehriva.svg', label: 'Sušička se přehřívá', desc: 'Sušička se vypíná nebo vydává zápach' },
 ]
 
 export default async function HomePage() {
@@ -149,7 +149,7 @@ export default async function HomePage() {
               href={`/symptom/${p.slug}`}
               className="flex items-start gap-3 bg-white border border-gray-200 rounded-xl p-4 hover:border-blue-300 hover:shadow-sm transition-all"
             >
-              <span className="text-2xl shrink-0">{p.icon}</span>
+              <Image src={p.img} alt="" width={40} height={40} className="shrink-0" />
               <div>
                 <div className="text-sm font-semibold text-gray-900 leading-snug">{p.label}</div>
                 <div className="text-xs text-gray-500 mt-0.5">{p.desc}</div>

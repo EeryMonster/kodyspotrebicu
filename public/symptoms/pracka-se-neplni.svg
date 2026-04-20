@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Tap body -->
+  <rect x="30" y="15" width="40" height="14" rx="7" fill="#78909C"/>
+  <!-- Tap neck -->
+  <rect x="42" y="28" width="16" height="20" rx="4" fill="#90A4AE"/>
+  <!-- Tap spout -->
+  <rect x="30" y="44" width="32" height="12" rx="6" fill="#78909C"/>
+  <!-- Tap handle -->
+  <rect x="56" y="10" width="20" height="8" rx="4" fill="#546E7A"/>
+  <!-- Water drops (sparse = not filling) -->
+  <ellipse cx="46" cy="72" rx="4" ry="6" fill="#5B9ED9" opacity="0.7"/>
+  <ellipse cx="46" cy="85" rx="3" ry="4" fill="#5B9ED9" opacity="0.4"/>
+  <!-- Small X indicating problem -->
+  <circle cx="78" cy="70" r="13" fill="#E53935"/>
+  <line x1="71" y1="63" x2="85" y2="77" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <line x1="85" y1="63" x2="71" y2="77" stroke="white" stroke-width="4" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Body -->
+  <rect x="8" y="14" width="62" height="72" rx="9" fill="#5B9ED9"/>
+  <rect x="8" y="14" width="62" height="20" rx="9" fill="#4A8EC9"/>
+  <rect x="8" y="26" width="62" height="8" fill="#4A8EC9"/>
+  <circle cx="58" cy="23" r="6" fill="#2A6EA9"/>
+  <circle cx="58" cy="23" r="3" fill="#1A5E99"/>
+  <!-- Door -->
+  <circle cx="38" cy="58" r="21" fill="white" opacity="0.25"/>
+  <circle cx="38" cy="58" r="18" fill="#D6EAF8"/>
+  <circle cx="38" cy="58" r="13" fill="#AED6F1"/>
+  <circle cx="38" cy="58" r="8" fill="#85C1E9"/>
+  <!-- Gear -->
+  <circle cx="76" cy="70" r="18" fill="#78909C"/>
+  <circle cx="76" cy="70" r="12" fill="#90A4AE"/>
+  <circle cx="76" cy="70" r="6" fill="#607D8B"/>
+  <!-- Gear teeth -->
+  <rect x="73" y="50" width="6" height="8" rx="2" fill="#78909C"/>
+  <rect x="73" y="82" width="6" height="8" rx="2" fill="#78909C"/>
+  <rect x="56" y="67" width="8" height="6" rx="2" fill="#78909C"/>
+  <rect x="88" y="67" width="8" height="6" rx="2" fill="#78909C"/>
+  <rect x="61" y="55" width="6" height="8" rx="2" fill="#78909C" transform="rotate(45 64 59)"/>
+  <rect x="83" y="77" width="6" height="8" rx="2" fill="#78909C" transform="rotate(45 86 81)"/>
+  <rect x="61" y="77" width="6" height="8" rx="2" fill="#78909C" transform="rotate(-45 64 81)"/>
+  <rect x="83" y="55" width="6" height="8" rx="2" fill="#78909C" transform="rotate(-45 86 59)"/>
+  <!-- Pause symbol -->
+  <rect x="70" y="64" width="5" height="12" rx="2" fill="white"/>
+  <rect x="78" y="64" width="5" height="12" rx="2" fill="white"/>
+</svg>

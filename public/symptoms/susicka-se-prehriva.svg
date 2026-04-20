@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Heat rays -->
+  <path d="M4 55 Q0 48 4 41" stroke="#FF7043" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M10 62 Q5 53 10 44" stroke="#FF7043" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <!-- Body (orange = hot) -->
+  <rect x="16" y="14" width="62" height="76" rx="9" fill="#FFA726"/>
+  <rect x="16" y="14" width="62" height="20" rx="9" fill="#FB8C00"/>
+  <rect x="16" y="26" width="62" height="8" fill="#FB8C00"/>
+  <circle cx="65" cy="23" r="6" fill="#E65100"/>
+  <circle cx="65" cy="23" r="3" fill="#BF360C"/>
+  <!-- Door -->
+  <circle cx="46" cy="62" r="21" fill="white" opacity="0.25"/>
+  <circle cx="46" cy="62" r="18" fill="#FFF3E0"/>
+  <circle cx="46" cy="62" r="13" fill="#FFE0B2"/>
+  <circle cx="46" cy="62" r="8" fill="#FFCC80"/>
+  <!-- Thermometer -->
+  <rect x="82" y="28" width="10" height="44" rx="5" fill="#E0E0E0"/>
+  <rect x="85" y="30" width="4" height="36" rx="2" fill="white"/>
+  <circle cx="87" cy="74" r="8" fill="#F44336"/>
+  <rect x="85" y="46" width="4" height="28" rx="2" fill="#F44336"/>
+  <!-- Temp marks -->
+  <line x1="92" y1="40" x2="96" y2="40" stroke="#9E9E9E" stroke-width="1.5"/>
+  <line x1="92" y1="50" x2="96" y2="50" stroke="#9E9E9E" stroke-width="1.5"/>
+  <line x1="92" y1="60" x2="96" y2="60" stroke="#9E9E9E" stroke-width="1.5"/>
+</svg>

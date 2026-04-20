@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Vibration lines left -->
+  <path d="M8 50 Q4 44 8 38" stroke="#FB8C00" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M14 55 Q9 47 14 39" stroke="#FB8C00" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <!-- Body (orange = alarm) -->
+  <rect x="18" y="18" width="58" height="72" rx="9" fill="#FFA726"/>
+  <rect x="18" y="18" width="58" height="20" rx="9" fill="#FB8C00"/>
+  <rect x="18" y="30" width="58" height="8" fill="#FB8C00"/>
+  <!-- Knob -->
+  <circle cx="64" cy="27" r="6" fill="#E65100"/>
+  <circle cx="64" cy="27" r="3" fill="#BF360C"/>
+  <!-- Door -->
+  <circle cx="46" cy="62" r="21" fill="white" opacity="0.25"/>
+  <circle cx="46" cy="62" r="18" fill="#FFF3E0"/>
+  <circle cx="46" cy="62" r="13" fill="#FFE0B2"/>
+  <circle cx="46" cy="62" r="8" fill="#FFCC80"/>
+  <!-- Speaker icon top right -->
+  <polygon points="80,20 80,34 86,34 92,40 92,14 86,20" fill="#E65100"/>
+  <!-- Sound waves -->
+  <path d="M94 17 Q99 27 94 37" stroke="#E65100" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+</svg>
