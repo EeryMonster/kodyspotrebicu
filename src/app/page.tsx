@@ -38,8 +38,15 @@ const commonProblems = [
   { slug: 'mycka-nevypousti', img: '/symptoms/mycka-nevypousti.png', label: 'Myčka nevypouští vodu', desc: 'Po mytí zůstane voda na dně myčky' },
   { slug: 'mycka-zapacha', img: '/symptoms/mycka-zapacha.png', label: 'Myčka zapáchá', desc: 'Zápach z myčky nebo z nádobí' },
   { slug: 'voda-pod-myckou', img: '/symptoms/voda-pod-myckou.png', label: 'Voda pod myčkou', desc: 'Únik vody pod nebo za myčkou' },
+  { slug: 'mycka-nenabira-vodu', img: '/symptoms/mycka-nenabira-vodu.png', label: 'Myčka nenabírá vodu', desc: 'Myčka se nespustí nebo nenabere vodu' },
+  { slug: 'mycka-hluci', img: '/symptoms/mycka-hluci.png', label: 'Myčka hlučí', desc: 'Klepání, vrzání nebo hlasité zvuky při mytí' },
+  { slug: 'nadobi-zustava-mokre', img: '/symptoms/nadobi-zustava-mokre.png', label: 'Nádobí zůstává mokré', desc: 'Nádobí je mokré i po skončení programu' },
+  { slug: 'mycka-nedokonci-program', img: '/symptoms/mycka-nedokonci-program.png', label: 'Myčka nedokončí program', desc: 'Myčka se zastaví uprostřed mytí' },
   { slug: 'susicka-nesusi', img: '/symptoms/susicka-nesusi.png', label: 'Sušička nesuší', desc: 'Prádlo zůstává mokré po celém cyklu' },
   { slug: 'susicka-se-prehriva', img: '/symptoms/susicka-se-prehriva.png', label: 'Sušička se přehřívá', desc: 'Sušička se vypíná nebo vydává zápach' },
+  { slug: 'susicka-hluci', img: '/symptoms/susicka-hluci.png', label: 'Sušička hlučí', desc: 'Rány, vrzání nebo silné vibrace sušičky' },
+  { slug: 'susicka-se-nezapne', img: '/symptoms/susicka-se-nezapne.png', label: 'Sušička se nezapne', desc: 'Sušička nereaguje nebo se nespustí' },
+  { slug: 'susicka-trva-dlouho', img: '/symptoms/susicka-trva-dlouho.png', label: 'Sušení trvá příliš dlouho', desc: 'Program sušení trvá výrazně déle než obvykle' },
 ]
 
 export default async function HomePage() {

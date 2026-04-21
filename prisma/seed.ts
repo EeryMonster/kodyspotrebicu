@@ -2421,6 +2421,527 @@ async function main() {
       relatedCodes: ['bosch-susicka-e02', 'samsung-susicka-he'],
       applianceTypes: ['susicka'],
     },
+
+    // ===== NOVÉ SYMPTOMY – MYČKY =====
+    {
+      slug: 'mycka-nenabira-vodu',
+      title: 'Myčka nenabírá vodu',
+      description: 'Myčka se nespustí nebo zastaví hned na začátku programu, protože nedostává vodu.',
+      intro: 'Pokud myčka nenabírá vodu, jde ve většině případů o uzavřený přívod vody, zanesený filtr přívodní hadice nebo nedostatečný tlak vody. Většinu příčin zvládnete zkontrolovat sami za pár minut.',
+      sections: [
+        {
+          q: 'Jak zkontrolovat přívod vody k myčce?',
+          answer: 'Prvním krokem je vždy ověřit, zda je přívod vody plně otevřen. Kohout bývá pod dřezem nebo za myčkou – musí být otočen do polohy "otevřeno" (rovnoběžně s hadicí). Pokud jste myčku delší dobu nepoužívali (dovolená, rekonstrukce), kohout mohl zůstat přivřený.',
+          steps: [
+            'Zkontrolujte, zda je přívod vody plně otevřen.',
+            'Zkuste otevřít kohoutek u dřezu – pokud teče voda, tlak v domácnosti je v pořádku.',
+            'Otočte přívod vody myčky do polohy "otevřeno" (páka rovnoběžně s hadicí).',
+          ],
+          tips: [
+            'Naplnění 5litrového kbelíku by mělo trvat méně než 30 sekund – pokud trvá déle, tlak vody je příliš nízký.',
+            'Při nízkém tlaku vody kontaktujte správce budovy nebo dodavatele vody.',
+          ],
+        },
+        {
+          q: 'Jak vyčistit filtr přívodní hadice myčky?',
+          answer: 'Přívodní hadice myčky má na konci, kde se připojuje k vodovodnímu kohoutu, malý sítový filtr. Tento filtr zachytává nečistoty z vody a postupně se zanáší – omezuje průtok a myčka hlásí chybu plnění.',
+          steps: [
+            'Zavřete přívod vody.',
+            'Odšroubujte přívodní hadici od vodovodního kohoutu (mějte připravený hadr, vyteče trochu vody).',
+            'Na konci hadice uvidíte malou sítku – vyjměte ji pinzetou nebo prstem.',
+            'Propláchněte sítku pod tekoucí vodou, případně ji vyčistěte starým kartáčkem na zuby.',
+            'Vraťte sítku zpět, hadici přišroubujte a otevřete vodu.',
+          ],
+          tips: [
+            'Filtr přívodní hadice čistěte přibližně jednou ročně.',
+            'Pokud je sítka mechanicky poškozená, vyměňte ji za novou (dostupná v servisu nebo e-shopu s náhradními díly).',
+          ],
+        },
+        {
+          q: 'Kdy je nutný zásah technika?',
+          answer: 'Pokud jsou přívod vody i filtr v pořádku a myčka stále nenabírá vodu, jde pravděpodobně o vadný elektromagnetický ventil nebo poruchu řídicí desky. Tyto díly vyžadují výměnu odborníkem.',
+          tips: [
+            'Pokud je přívodní hadice viditelně poškozená nebo prasklá, okamžitě zavřete vodu a volejte servis.',
+            'AEG chybové kódy i10, i11 a AL5 přímo označují problém s přívodem vody.',
+          ],
+        },
+      ],
+      relatedCodes: ['bosch-mycka-e15', 'siemens-mycka-e15'],
+      applianceTypes: ['mycka'],
+    },
+    {
+      slug: 'mycka-hluci',
+      title: 'Myčka hlučí',
+      description: 'Myčka vydává při mytí neobvyklé zvuky – klepání, vrzání, hlasité čerpání nebo bzučení.',
+      intro: 'Určitá úroveň hluku je u myčky normální. Hlasité čerpání vody, klikání zásobníku leštidla nebo šumění při zahřívání vody jsou přirozené zvuky. Problémem jsou silné rány, kovové vrzání nebo hluk při vypnuté myčce.',
+      sections: [
+        {
+          q: 'Proč myčka klepá nebo praská?',
+          answer: 'Klepání při mytí nejčastěji způsobuje rameno ostřikovače, které naráží do nádobí nebo příboru. Rameno se otáčí a pokud mu cokoliv stojí v cestě, vydává pravidelné rány. Problém odstraníte správným uložením nádobí.',
+          steps: [
+            'Vytáhněte dolní košík a ručně otočte dolním ostřikovacím ramenem – nesmí nic blokovat jeho otáčení.',
+            'Zkontrolujte horní košík a horní rameno stejným způsobem.',
+            'Dlouhé lžíce, naběračky a pánve uložte tak, aby nepřesahovaly přes okraj košíku.',
+            'Lahve a sklenice nakloňte ústím dolů, aby rameno mohlo volně projet.',
+          ],
+          tips: [
+            'Myčku nepřeplňujte – nádobí musí mít prostor, aby se voda dostala ke každému kusu.',
+            'Plastové nádoby na horní košík pokládejte dnem nahoru, aby se do nich nehromadila voda.',
+          ],
+        },
+        {
+          q: 'Proč myčka silně hlučí při čerpání vody?',
+          answer: 'Hlasité čerpání vody na začátku nebo konci programu je obvykle normální provoz. Pokud ale čerpadlo vydává brousící nebo drhnoucí zvuk, může být v něm cizí předmět – střep skla, pecka od ovoce nebo část příboru.',
+          steps: [
+            'Vypněte myčku a odpojte ji od sítě.',
+            'Vyjměte dolní košík a ostřikovací rameno.',
+            'Vyjměte filtr na dně myčky (otočte a vytáhněte).',
+            'Do filtračního prostoru posvítěte baterkou a zkontrolujte, zda tam není cizí předmět.',
+            'Pokud vidíte střep nebo jiný předmět, opatrně ho vyjměte pinzetou.',
+          ],
+          tips: [
+            'Před každým mytím zkontrolujte, zda v myčce nezůstaly drobné předměty – párátka, víčka, kosti.',
+            'Brousící zvuk čerpadla i po vyčištění filtru znamená mechanické poškození čerpadla – volejte servis.',
+          ],
+        },
+        {
+          q: 'Kdy je hluk myčky normální?',
+          answer: 'Tyto zvuky jsou přirozené a nevyžadují zásah: klikání při uvolňování leštidla ze zásobníku, šumění a bublání při zahřívání vody, hlasitější čerpání na začátku a konci programu, tichý hukot motoru během mytí.',
+          tips: [
+            'Pokud myčka vydává zvuky i ve vypnutém stavu, okamžitě ji odpojte a volejte servis.',
+            'Pískání nebo kovové skřípání signalizuje opotřebení ložisek čerpadla – vyžaduje opravu.',
+          ],
+        },
+      ],
+      relatedCodes: ['bosch-mycka-e25'],
+      applianceTypes: ['mycka'],
+    },
+    {
+      slug: 'nadobi-zustava-mokre',
+      title: 'Nádobí zůstává mokré po mytí',
+      description: 'Po skončení programu je nádobí stále mokré nebo pokryté kapkami vody.',
+      intro: 'Mokré nádobí po mytí patří mezi nejčastější stížnosti uživatelů myček. Ve většině případů jde o chybějící leštidlo, nevhodný program nebo špatné uložení nádobí – ne o poruchu myčky.',
+      sections: [
+        {
+          q: 'Jak správně doplnit a nastavit leštidlo?',
+          answer: 'Leštidlo je klíčové pro správné sušení – způsobuje, že voda z nádobí stéká v tenkých filmech místo kapek. Bez leštidla nádobí schne velmi pomalu a zůstávají na něm stopy. Zásobník leštidla je obvykle vedle zásobníku soli v dvířkách myčky.',
+          steps: [
+            'Otevřete víčko zásobníku leštidla v dvířkách myčky.',
+            'Naplňte zásobník leštidlem po rysku (nepřeplňujte).',
+            'Zkontrolujte nastavení dávkování leštidla – pro tvrdou vodu zvyšte dávku (stupeň 4–6).',
+            'Spusťte jeden testovací program a zkontrolujte výsledek.',
+          ],
+          tips: [
+            'Kontrolka leštidla se rozsvítí, když zásobník dochází – nenechávejte ho vyprázdnit úplně.',
+            'Ekologická leštidla mají horší sušicí účinek – pokud vám záleží na suchém nádobí, použijte klasické leštidlo.',
+            'Zvyšte dávku leštidla, pokud na nádobí vidíte skvrny od vody nebo pokud je stále mokré.',
+          ],
+        },
+        {
+          q: 'Proč plastové nádobí nikdy není suché?',
+          answer: 'Plastové předměty se po mytí vždy hůře suší než sklo nebo porcelán. Plast se rychle ochlazuje a na povrchu se tvoří kondenzát – to je fyzikální vlastnost materiálu, ne porucha myčky. Pomáhá zvolit program s aktivním sušením (Intensive, Extra Dry, Sanitize).',
+          tips: [
+            'Plastové nádoby ukládejte na horní košík – jsou dále od topného tělesa a lépe se provětrají.',
+            'Po skončení programu nechejte dvířka myčky pootevřená 10–15 minut – zbývající pára se odpaří.',
+            'Bosch a Siemens používají systém PureDry – ochlazení nerezové vany přitahuje páru od nádobí na stěny, odkud stéká dolů. Po skončení programu počkejte 30 minut, než otevřete.',
+          ],
+        },
+        {
+          q: 'Jaký program zvolit pro nejlepší sušení?',
+          answer: 'Různé programy mají různé způsoby sušení. Programy Auto a Intensive používají aktivní sušení s vyšší teplotou – nádobí bývá nejsušší. Programy ECO a BIO šetří energii a používají pasivní sušení – nádobí může být mokré, je to záměrné chování.',
+          tips: [
+            'Pro důležité hostiny nebo při mytí přiboru použijte program Intensive nebo Extra Dry.',
+            'Pokud máte funkci Zeolith (Bosch, Siemens), aktivujte ji – zeolitové kamínky pohlcují vlhkost a dávají teplo zpět.',
+          ],
+        },
+      ],
+      relatedCodes: [],
+      applianceTypes: ['mycka'],
+    },
+    {
+      slug: 'mycka-nedokonci-program',
+      title: 'Myčka nedokončí program',
+      description: 'Myčka se zastaví uprostřed programu, nezačne nebo opakovaně přerušuje mytí.',
+      intro: 'Myčka, která nedokončí program, může mít různé příčiny – od nedovřených dvířek po výpadek proudu. Většinu problémů zvládnete vyřešit sami resetem nebo kontrolou základních věcí.',
+      sections: [
+        {
+          q: 'Jak správně zavřít dvířka myčky?',
+          answer: 'Myčka se nespustí nebo zastaví, pokud dvířka nejsou správně zajištěna. Zámek dvířek je bezpečnostní prvek – bez jeho aktivace myčka odmítne pracovat. Stačí slabé přidření nebo předmět uvízlý v závěsu.',
+          steps: [
+            'Zavřete dvířka pevně, dokud neuslyšíte cvaknutí zámku.',
+            'Zkontrolujte, zda nic nevyčnívá z košíků přes okraj dvířek (dlouhé pánve, příbory).',
+            'Prohlédněte zadní panel myčky – podpěra přívodní hadice nesmí tlačit do dvířek zvenčí.',
+            'Zkontrolujte zámek dvířek na opotřebení nebo viditelné poškození.',
+          ],
+          tips: [
+            'Pokud zámek dvířek klikne, ale myčka stále nereaguje, může být vadný senzor dvířek – volejte servis.',
+          ],
+        },
+        {
+          q: 'Jak resetovat myčku, která se zasekla uprostřed programu?',
+          answer: 'Pokud myčka přestala reagovat nebo zobrazuje chybu, reset obvykle pomůže. Různé značky mají různý postup.',
+          steps: [
+            'Stiskněte a podržte tlačítko Start/Reset po dobu 3–5 sekund, dokud se display nezmění nebo nezhasne.',
+            'Pokud to nepomůže, myčku úplně vypněte hlavním vypínačem.',
+            'Odpojte zástrčku ze zásuvky na 1 minutu.',
+            'Zapojte zpět a spusťte nový program.',
+          ],
+          tips: [
+            'AEG: podržte tlačítko označené "Reset" nebo "Cancel" po dobu 3 sekund.',
+            'Bosch/Siemens: některé modely resetujete podržením tlačítka Start po dobu 3 sekund.',
+            'Po resetu myčka vypustí vodu a vrátí se do výchozího stavu.',
+          ],
+        },
+        {
+          q: 'Proč myčka zastavuje kvůli problému s vodou?',
+          answer: 'Myčka sleduje průtok vody a tlak. Pokud přívod vody selže uprostřed programu (výpadek tlaku, přivřený kohout), myčka se bezpečnostně zastaví. AEG označuje tento stav chybovým kódem i10.',
+          steps: [
+            'Zkontrolujte, zda je přívod vody otevřen a zda v domácnosti teče voda.',
+            'Ověřte, že přívodní hadice není zlomená nebo přiskřípnutá.',
+            'Zkontrolujte, zda myčku nestojí v cestě ostřikovacím ramenům velký tác nebo pánev – blokování ramene může způsobit zaseknutí.',
+          ],
+          tips: [
+            'Pokud myčka zastavuje opakovaně bez zjevné příčiny, může jít o vadný přívod vody nebo řídicí desku – doporučujeme servisní prohlídku.',
+          ],
+        },
+      ],
+      relatedCodes: ['bosch-mycka-e15', 'bosch-mycka-e25'],
+      applianceTypes: ['mycka'],
+    },
+    {
+      slug: 'mycka-netopi-vodu',
+      title: 'Myčka netopí vodu',
+      description: 'Nádobí vychází studené nebo špinavé – myčka zřejmě nehřeje vodu na potřebnou teplotu.',
+      intro: 'Zahřívání vody je pro účinné mytí klíčové – odmašťovací prostředky fungují nejlépe při teplotách 55–70 °C. Pokud myčka vodu netopí, nádobí může být mastné i po celém programu. Příčiny sahají od nesprávného připojení až po vadné topné těleso.',
+      sections: [
+        {
+          q: 'Je myčka připojena ke studené vodě?',
+          answer: 'Výrobci jako Bosch a Siemens doporučují připojit myčku výhradně ke studené vodě. Myčka si vodu zahřeje sama na přesnou teplotu dle programu. Připojení k teplé vodě může paradoxně poškodit výsledek mytí – teplota teplé vody z bojleru nebývá stabilní a detergenty potřebují specifický průběh teploty.',
+          tips: [
+            'Pokud je myčka připojena k teplé vodě a mytí je špatné, zkuste přepojení na studenou.',
+            'Maximální teplota přívodní vody pro myčky Bosch/Siemens je 60 °C.',
+          ],
+        },
+        {
+          q: 'Jak poznat, že myčka skutečně netopí vodu?',
+          answer: 'Jisté určení poruchy topení vyžaduje servisní diagnostiku. Doma můžete zkontrolovat nepřímé příznaky: nádobí je po intenzivním programu studené na dotek, mastnota zůstává i na nádobí, které bylo čisté, mycí tablety se zcela nerozpustily.',
+          steps: [
+            'Spusťte program při 65 °C nebo vyšší teplotě.',
+            'Po skončení programu opatrně otevřete dvířka (pozor na páru) a zkuste se dotknout nádobí – mělo by být horké.',
+            'Zkontrolujte, zda se mycí tableta nebo prášek úplně rozpustil.',
+            'Proveďte reset: odpojte myčku na 1 minutu od sítě, pak znovu zapněte.',
+          ],
+          tips: [
+            'Electrolux zobrazuje na displeji "HD" nebo "HO" – to znamená "Heat Delay" nebo "Heater On" a je to normální stav, ne chyba.',
+          ],
+        },
+        {
+          q: 'Kdy vyžaduje nefunkční ohřev zásah technika?',
+          answer: 'Pokud reset nepomohl a nádobí zůstává studené, jde pravděpodobně o vadné topné těleso, termostat nebo řídicí desku. Tyto díly nelze opravit svépomocí.',
+          tips: [
+            'Bosch doporučuje při podezření na poruchu ohřevu zavřít přívod vody, vypnout myčku a zavolat servis.',
+            'Topné těleso se postupně opotřebovává usazeninami vodního kamene – v oblastech s tvrdou vodou ho vyměňujte preventivně každých 8–10 let.',
+            'Pravidelné používání soli do myčky prodlouží životnost topného tělesa.',
+          ],
+        },
+      ],
+      relatedCodes: ['bosch-mycka-e09'],
+      applianceTypes: ['mycka'],
+    },
+
+    // ===== NOVÉ SYMPTOMY – SUŠIČKY =====
+    {
+      slug: 'susicka-hluci',
+      title: 'Sušička hlučí nebo vibruje',
+      description: 'Sušička při provozu vydává neobvyklé zvuky – rány, kovové vrzání nebo silné vibrace.',
+      intro: 'Mírný hluk bubnu a motoru je normální. Silné rány, kovové drhnutí nebo vibrace pohybující sušičkou po podlaze jsou signálem problému, který byste neměli ignorovat.',
+      sections: [
+        {
+          q: 'Proč sušička dupe nebo vydává rány?',
+          answer: 'Rány a bouchání při sušení nejčastěji způsobují cizí předměty v bubnu – mince, spony, klíče nebo knoflíky vypadlé z kapes. Při každém otočení bubnu narazí předmět o stěnu a vydá ránu.',
+          steps: [
+            'Zastavte sušičku a vytáhněte prádlo.',
+            'Prohledejte buben baterkou – hledejte mince, knoflíky, podprsenky s kosticemi.',
+            'Zkontrolujte kapsy všeho prádla před vložením do sušičky.',
+            'Vyjměte filtr chlupů a prohlédněte prostor pod ním.',
+          ],
+          tips: [
+            'Podprsenky s kosticemi vkládejte do sušičky v síťovém sáčku – kostica může vypadnout a poškodit buben.',
+            'Gumové podložky pod sušičku výrazně snižují vibrace přenášené na podlahu.',
+          ],
+        },
+        {
+          q: 'Proč sušička silně vibruje?',
+          answer: 'Silné vibrace mají nejčastěji dvě příčiny: nerovnoměrně rozložené prádlo v bubnu nebo špatně vyrovnaná sušička. Přidejte více prádla nebo přerovnejte náplň, pokud je buben málo naplněn.',
+          steps: [
+            'Zkontrolujte, zda sušička stojí rovně – použijte vodováhu nebo zkuste sušičku rukou pokývat.',
+            'Nastavte nožičky sušičky tak, aby pevně stála na všech čtyřech.',
+            'Pokud je v bubnu jen pár kusů (např. jeden ručník), přidejte další prádlo nebo pár starých triček.',
+            'Rozložte prádlo rovnoměrně po celém bubnu, nevhazujte vše na jednu stranu.',
+          ],
+          tips: [
+            'Sušička umístěná na pračce (věžová sestava) musí být pevně spojena spojovacím rámem – volné umístění způsobuje silné vibrace.',
+          ],
+        },
+        {
+          q: 'Co znamená kovové skřípání nebo vrzání?',
+          answer: 'Kovové skřípání nebo kontinuální vrzání (i bez prádla) signalizuje opotřebení pohonného řemene nebo ložisek bubnu. Tyto díly mají omezenou životnost a po 8–12 letech provozu se opotřebují. Oprava vyžaduje technika.',
+          tips: [
+            'Skřípání ignorovat nevyplácí – přetržený pohonný řemen zastaví sušičku zcela a může poškodit motor.',
+            'Bosch doporučuje při podezření na poruchu řemene nebo ložisek objednat servisní prohlídku.',
+          ],
+        },
+      ],
+      relatedCodes: [],
+      applianceTypes: ['susicka'],
+    },
+    {
+      slug: 'susicka-se-nezapne',
+      title: 'Sušička se nezapne',
+      description: 'Sušička nereaguje na zapnutí, display je tmavý nebo se program nespustí.',
+      intro: 'Pokud sušička nereaguje, neznamená to automaticky závadu. Nejčastěji jde o nezajištěná dvířka, aktivní dětský zámek nebo výpadek jističe. Projděte kontrolní seznam před voláním servisu.',
+      sections: [
+        {
+          q: 'Proč sušička nereaguje na tlačítko Start?',
+          answer: 'Sušička má několik bezpečnostních pojistek, které zabrání spuštění. Nejčastěji jsou dvířka pootevřená nebo je aktivní dětský zámek.',
+          steps: [
+            'Pevně zavřete dvířka sušičky – musíte slyšet cvaknutí zámku.',
+            'Zkontrolujte display, zda nezobrazuje symbol zámku nebo dětský zámek (ikonka visacího zámku).',
+            'Pokud vidíte symbol zámku, podržte označené tlačítko (nebo kombinaci tlačítek) po dobu 3–5 sekund pro deaktivaci dětského zámku.',
+            'Zkontrolujte, zda není aktivní funkce "Odložený start" – v tom případě sušička čeká na nastavený čas.',
+          ],
+          tips: [
+            'AEG: dětský zámek deaktivujete podržením zvýrazněného tlačítka po dobu 3–5 sekund.',
+            'Odložený start zrušíte opakovaným stiskem tlačítka Start nebo vypnutím a zapnutím sušičky.',
+          ],
+        },
+        {
+          q: 'Co dělat, když sušička nemá vůbec napájení?',
+          answer: 'Pokud je display zcela tmavý a sušička nereaguje vůbec, problém je v napájení – vypnutý jistič, vadná zástrčka nebo přerušený přívod.',
+          steps: [
+            'Zkontrolujte pojistkovou skříňku – najděte jistič pro zásuvku, kde je sušička zapojená, a přepněte ho zpět do polohy "zapnuto".',
+            'Zkuste zapojit do stejné zásuvky jiný spotřebič – pokud nefunguje ani on, problém je v zásuvce nebo jističi.',
+            'Odpojte zástrčku sušičky na 5 minut a znovu zapojte – provede se reset elektroniky.',
+            'Zkontrolujte, zda zástrčka není povolená nebo poškozená.',
+          ],
+          tips: [
+            'Sušičky potřebují zásuvku s uzemněním (trojkolík) – nepoužívejte prodlužovací kabely ani redukce.',
+            'Opakované vybíjení jističe signalizuje elektrickou závadu sušičky – volejte servis.',
+          ],
+        },
+        {
+          q: 'Sušička se zapne, ale hned vypne – co to znamená?',
+          answer: 'Pokud sušička spustí buben a za pár vteřin se zastaví, nejčastěji jde o přehřátí z předchozího cyklu nebo o teplotní pojistku. Motor potřebuje čas na vychladnutí.',
+          steps: [
+            'Vyčkejte 30 minut a zkuste znovu.',
+            'Zkontrolujte filtr chlupů – pokud je ucpaný, sušička se přehřívá a zastaví se jako ochrana.',
+            'Zkontrolujte, zda není místnost, kde sušička stojí, příliš malá nebo špatně větraná.',
+          ],
+          tips: [
+            'Pokud se sušička takto zastavuje opakovaně i po vyčištění filtru, teplotní pojistka může být trvale poškozená – vyžaduje výměnu technikem.',
+          ],
+        },
+      ],
+      relatedCodes: [],
+      applianceTypes: ['susicka'],
+    },
+    {
+      slug: 'susicka-trva-dlouho',
+      title: 'Sušičce trvá sušení příliš dlouho',
+      description: 'Program sušení trvá výrazně déle než obvykle nebo prádlo není suché ani po dvou hodinách.',
+      intro: 'Prodloužená doba sušení je nejčastěji způsobena ucpaným filtrem chlupů nebo zanesených kondenzátorem. Tyto problémy vyřešíte sami za 10 minut. Tepelná čerpadlová sušička suší záměrně pomaleji – šetří energii.',
+      sections: [
+        {
+          q: 'Jak vyčistit filtr chlupů a proč je to tak důležité?',
+          answer: 'Filtr chlupů je nejdůležitější součást údržby sušičky. Zanesený filtr brání proudění vzduchu – sušení trvá déle, sušička se přehřívá a spotřebovává více energie. Filtr musíte čistit po každém cyklu bez výjimky.',
+          steps: [
+            'Otevřete dvířka sušičky a najděte filtr (u většiny modelů je v rámu dvířek nebo na dně bubnu).',
+            'Vytáhněte filtr a prsty odstraňte vrstvu chlupů.',
+            'Filtr prohlédněte proti světlu – měli byste vidět skrz. Pokud ne, propláchněte ho pod tekoucí vodou.',
+            'Filtr nechejte oschnout a vraťte ho zpět.',
+          ],
+          tips: [
+            'Nikdy nespouštějte sušičku bez filtru – chlupy zanášejí vnitřní části a mohou způsobit požár.',
+            'Jednou za měsíc filtr propláchněte pod vodou – samotné vybírání chlupů nestačí, jemné vlákno ucpe póry filtru.',
+          ],
+        },
+        {
+          q: 'Jak vyčistit kondenzátor u kondenzační sušičky?',
+          answer: 'Kondenzátor (výměník tepla) zachytává vlhkost z teplého vzduchu a mění ji na vodu. Postupně se zanáší chlupy a prachem – omezí průtok vzduchu a sušení se prodlouží. Čistěte ho jednou měsíčně.',
+          steps: [
+            'Vypněte sušičku a odpojte ji od sítě.',
+            'Otevřete přístupový panel kondenzátoru (obvykle ve spodní části sušičky).',
+            'Vyjměte kondenzátor a postavte ho svisle nad umyvadlem.',
+            'Propláchněte ho ruční sprchou – voda musí volně protékat celým kondenzátorem.',
+            'Nechejte kondenzátor okapat a vraťte ho zpět.',
+          ],
+          tips: [
+            'Pokud voda kondenzátorem téměř neteče, je silně zanesený – delší proplachování nebo komerční čisticí přípravek.',
+            'Tepelná čerpadlová sušička (heat pump) má kondenzátor kritičtější než klasická – zanešení výrazně prodlouží čas sušení.',
+          ],
+        },
+        {
+          q: 'Jaká je správná náplň sušičky?',
+          answer: 'Přeplněná i prázdná sušička suší déle. Optimální náplň je 1/3 až 1/2 objemu bubnu. Prádlo musí mít prostor se volně pohybovat, jinak se nevětrá.',
+          tips: [
+            'Maximální gramáž uvedená na sušičce platí pro suché prádlo – mokré prádlo váží 2–3× více.',
+            'Pro rychlé sušení malého množství přidejte do bubnu tenisový míček nebo speciální sušicí kuličky – urychlují sušení.',
+            'Tepelná čerpadlová sušička suší záměrně déle (o 30–60 minut) než kondenzační – je to záměrná vlastnost, ne závada. Kompenzuje ji nižší spotřeba energie.',
+          ],
+        },
+      ],
+      relatedCodes: ['bosch-susicka-e02'],
+      applianceTypes: ['susicka'],
+    },
+    {
+      slug: 'susicka-zastavi-program',
+      title: 'Sušička zastaví program před koncem',
+      description: 'Sušička se uprostřed sušení sama zastaví, displej zobrazí chybu nebo sušička přestane reagovat.',
+      intro: 'Sušička, která zastavuje program, má nejčastěji plný zásobník na vodu (u kondenzačních modelů) nebo se přehřála kvůli ucpanému filtru. Obojí vyřešíte za minutu.',
+      sections: [
+        {
+          q: 'Proč kondenzační sušička zastaví program?',
+          answer: 'Kondenzační sušička sbírá vodu z prádla do zásobníku. Pokud zásobník nezprázdníte včas, sušička se z bezpečnostních důvodů zastaví. Zásobník je potřeba vyprázdnit po každém nebo každém druhém cyklu.',
+          steps: [
+            'Otevřete sušičku a vytáhněte zásobník na vodu (obvykle v horním rohu).',
+            'Vylijte vodu do umyvadla.',
+            'Zásobník vraťte zpět a pevně ho zatlačte na místo.',
+            'Restartujte program.',
+          ],
+          tips: [
+            'Pokud máte možnost připojit odpadní hadici sušičky přímo do odpadu, zásobník vylévat nemusíte vůbec.',
+            'Voda z kondenzační sušičky je destilovaná – můžete ji použít do žehličky na napouštění místo destilované vody.',
+          ],
+        },
+        {
+          q: 'Co dělat, když se sušička zastaví kvůli přehřátí?',
+          answer: 'Sušička je vybavena teplotní pojistkou, která ji automaticky zastaví při příliš vysoké teplotě. Nejčastěji k tomu dochází při ucpaném filtru chlupů nebo špatném větrání místnosti.',
+          steps: [
+            'Zastavte sušičku a otevřete dvířka – nechte ji vychladnout 30 minut.',
+            'Vyčistěte filtr chlupů (viz symptom Sušičce trvá sušení příliš dlouho).',
+            'Zkontrolujte, zda místnost má dostatečné větrání – sušička potřebuje přísun čerstvého vzduchu.',
+            'Po vychladnutí restartujte program.',
+          ],
+          tips: [
+            'Pokud se sušička přehřívá opakovaně i po vyčištění filtru, teplotní pojistka může být poškozená a vyžaduje výměnu technikem.',
+            'Elektrolux doporučuje po přehřátí vyčkat 30 minut a teprve pak restartovat – motor potřebuje čas na vychladnutí.',
+          ],
+        },
+        {
+          q: 'Jak resetovat sušičku, která přestala reagovat?',
+          answer: 'Pokud sušička zobrazuje chybu nebo vůbec nereaguje, reset elektroniky często problém vyřeší.',
+          steps: [
+            'Vypněte sušičku hlavním tlačítkem.',
+            'Vytáhněte zástrčku ze zásuvky.',
+            'Vyčkejte 3–5 minut.',
+            'Zapojte zástrčku zpět a sušičku zapněte.',
+            'Spusťte nový program.',
+          ],
+          tips: [
+            'Pokud sušička po resetu znovu zastaví na stejném místě v programu, jde pravděpodobně o poruchu senzoru nebo řídicí desky – doporučujeme servisní prohlídku.',
+          ],
+        },
+      ],
+      relatedCodes: ['bosch-susicka-e02'],
+      applianceTypes: ['susicka'],
+    },
+    {
+      slug: 'zasobnik-na-vodu-se-neplni',
+      title: 'Zásobník na vodu se neplní',
+      description: 'U kondenzační sušičky zůstává zásobník na vodu prázdný i po celém cyklu sušení.',
+      intro: 'Pokud zásobník na vodu zůstává prázdný, sušička buď odvádí vodu jinak (přes hadici do odpadu), nebo je zanesen kondenzátor. Prádlo může být suché nebo mokré – závisí na příčině.',
+      sections: [
+        {
+          q: 'Je zásobník prázdný, ale prádlo je suché – co se děje?',
+          answer: 'Pokud je prádlo suché, ale zásobník prázdný, voda pravděpodobně odtéká přes připojenou odpadní hadici přímo do kanalizace. Toto je normální stav a záměrná funkce. Některé sušičky mají samočisticí funkci, která používá část kondenzátu k čištění kondenzátoru – tato voda se pak odčerpá do odpadu.',
+          tips: [
+            'Pokud máte připojenou odpadní hadici, zásobník se plnit nebude – to je správné chování.',
+            'Bosch: část vody z kondenzátoru se používá k automatickému čištění – to je normální.',
+          ],
+        },
+        {
+          q: 'Zásobník je prázdný a prádlo je stále mokré – jak to vyřešit?',
+          answer: 'Pokud je prádlo mokré a zásobník prázdný, kondenzátor je zanesený nebo je ucpaný systém odvodu kondenzátu. Voda se nemůže dostat do zásobníku.',
+          steps: [
+            'Vypněte sušičku a odpojte ji od sítě.',
+            'Vyjměte kondenzátor a propláchněte ho ruční sprchou svisle nad umyvadlem.',
+            'Vyčistěte prostor, kde kondenzátor sedí – odstraňte chlupy a nečistoty hadříkem.',
+            'Zkontrolujte, zda zásobník správně sedí na svém místě a je pevně zasunut.',
+            'Vyčistěte filtr chlupů.',
+          ],
+          tips: [
+            'AEG: pokud se ucpe čerpadlo kondenzátu, voda může vytékat na podlahu místo do zásobníku. Toto vyžaduje servisního technika.',
+            'Kondenzátor čistěte pravidelně jednou měsíčně – zabráníte zanášení.',
+          ],
+        },
+        {
+          q: 'Jak správně vyjmout a vyprázdnit zásobník na vodu?',
+          answer: 'Zásobník (také nazývaný odpadní nádoba) je většinou umístěn v horním rohu sušičky a táhne se ven jako zásuvka.',
+          steps: [
+            'Otevřete dvířka sušičky.',
+            'Zásobník na vodu najdete v horní části – vytáhněte ho za plastový výběžek nebo rukojeť.',
+            'Odstraňte plastovou přípojku pro vypuštění a vylévejte vodu do umyvadla.',
+            'Vraťte přípojku zpět, zasuňte zásobník pevně na místo.',
+          ],
+          tips: [
+            'Zásobník vyprazdňujte po každém cyklu nebo alespoň obden – plný zásobník zastaví sušičku uprostřed programu.',
+            'Voda ze zásobníku je čistá (destilovaná) – použijte ji do napárovací žehličky.',
+          ],
+        },
+      ],
+      relatedCodes: [],
+      applianceTypes: ['susicka'],
+    },
+    {
+      slug: 'susicka-pacha',
+      title: 'Sušička páchne',
+      description: 'Ze sušičky nebo z usušeného prádla vychází nepříjemný zápach – zatuchlý, spálený nebo chemický.',
+      intro: 'Zápach ze sušičky může mít různou příčinu – od zanaseného filtru chlupů po vážnou elektrickou závadu. Spálený nebo elektrický zápach je signálem bezprostředního nebezpečí a vyžaduje okamžitou reakci.',
+      sections: [
+        {
+          q: 'Co dělat, když sušička páchne spáleninou nebo elektřinou?',
+          answer: 'Spálený nebo elektrický zápach je bezpečnostní riziko. Může jít o přehřáté ložisko, hořící chlupy v blízkosti topného tělesa nebo elektrickou závadu. Okamžitě přestaňte sušičku používat.',
+          steps: [
+            'Okamžitě vypněte sušičku.',
+            'Vytáhněte zástrčku ze zásuvky.',
+            'Sušičku nepoužívejte, dokud nebude prohlédnuta technikem.',
+            'Kontaktujte autorizovaný servis.',
+          ],
+          tips: [
+            'Nikdy neignorujte spálený zápach ze sušičky – chlupy nahromaděné u topného tělesa jsou požárním nebezpečím.',
+            'Bosch a AEG explicitně doporučují při spáleném zápachu okamžitě kontaktovat servis.',
+          ],
+        },
+        {
+          q: 'Proč sušička páchne zatuchlinou nebo plísní?',
+          answer: 'Zatuchlý zápach nejčastěji přichází z prádla, které zůstalo příliš dlouho v pračce před sušením, nebo z vlhkosti uvnitř sušičky. U kombinovaných pračko-sušiček je plíseň a vlhkost časté.',
+          steps: [
+            'Vyčistěte filtr chlupů – zanesený filtr udržuje vlhkost uvnitř sušičky.',
+            'Otřete buben vlhkým hadříkem s trochou octa nebo citronové šťávy.',
+            'Po skončení každého cyklu nechejte dvířka sušičky pootevřená – vlhkost se odpaří.',
+            'Prádlo přesuňte z pračky do sušičky co nejdříve po skončení praní.',
+          ],
+          tips: [
+            'AEG doporučuje u pračko-sušiček vždy nechat dvířka i zásobník pracího prostředku pootevřené po každém praní.',
+            'Pravidelné čištění kondenzátoru zabrání hromadění vlhkosti a plísně.',
+          ],
+        },
+        {
+          q: 'Proč nová sušička páchne plastem?',
+          answer: 'Plastový nebo chemický zápach u nové sušičky je normální a dočasný. Plastové díly uvnitř sušičky se při prvních cyklech zahřívají a uvolňují zbytky výrobních procesů. Zápach by měl po 3–5 cyklech vymizet.',
+          steps: [
+            'Spusťte 2–3 cykly s vlhkými starými ručníky bez prádla.',
+            'Větrejte místnost při prvních cyklech.',
+            'Pokud zápach neustoupí po 5 cyklech, kontaktujte prodejce nebo servis.',
+          ],
+          tips: [
+            'Zápach při prvních cyklech nové sušičky neznamená závadu a není zdraví škodlivý.',
+          ],
+        },
+      ],
+      relatedCodes: ['bosch-susicka-e02'],
+      applianceTypes: ['susicka'],
+    },
   ]
 
   for (const s of symptoms) {
