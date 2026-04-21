@@ -85,7 +85,7 @@ export default function CommentsSection({ errorCodeId, initialComments }: Commen
                 type="text"
                 value={authorName}
                 onChange={(e) => setAuthorName(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm text-gray-900 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                 placeholder="Jan Novák"
                 required
                 maxLength={50}
@@ -97,7 +97,7 @@ export default function CommentsSection({ errorCodeId, initialComments }: Commen
                 id="content"
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none h-28 resize-y"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm text-gray-900 focus:ring-2 focus:ring-blue-500 focus:outline-none h-28 resize-y"
                 placeholder="Měl jsem stejnou chybu a stačilo vyčistit filtr..."
                 required
                 maxLength={1000}
