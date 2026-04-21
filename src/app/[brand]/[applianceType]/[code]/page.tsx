@@ -2,6 +2,7 @@ import { prisma } from '@/lib/prisma'
 import { notFound } from 'next/navigation'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import ErrorCodeCard from '@/components/ErrorCodeCard'
+import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { SEVERITY_LABELS, SEVERITY_COLORS, SEVERITY_DESCRIPTIONS, APPLIANCE_LABELS, SUBTYPE_LABELS } from '@/lib/utils'
@@ -42,6 +43,8 @@ export default async function ErrorCodePage({ params }: Props) {
     whenToStopAndCallService: string[]; relatedSymptoms: string[]; relatedCodes: string[];
     possibleParts: string[]; faq: unknown[]; sourceType: string; sourceUrl: string | null;
     subtype: string | null;
+    images: string[];
+    content: unknown[];
     comments?: { id: number; authorName: string; content: string; createdAt: Date }[];
   } | null = null
 
@@ -131,7 +134,7 @@ export default async function ErrorCodePage({ params }: Props) {
       )}
 
       <Breadcrumbs items={[
-        { label: entry.brand, href: `/znacka/${entry.brand.toLowerCase()}` },
+        { label: entry.brand.charAt(0).toUpperCase() + entry.brand.slice(1), href: `/znacka/${entry.brand.toLowerCase()}` },
         { label: appliancePathLabel, href: `/${appliancePath}` },
         { label: entry.code },
       ]} />
@@ -163,7 +166,7 @@ export default async function ErrorCodePage({ params }: Props) {
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">{entry.title}</h1>
         <p className="text-lg text-gray-600">{entry.shortMeaning}</p>
         <div className="mt-2 flex flex-wrap gap-2 text-sm text-gray-500">
-          <Link href={`/znacka/${entry.brand.toLowerCase()}`} className="hover:text-blue-600">{entry.brand}</Link>
+          <Link href={`/znacka/${entry.brand.toLowerCase()}`} className="hover:text-blue-600">{entry.brand.charAt(0).toUpperCase() + entry.brand.slice(1)}</Link>
           <span>·</span>
           <Link href={`/${appliancePath}`} className="hover:text-blue-600">{appliancePathLabel}</Link>
           {entry.sourceUrl && (
@@ -183,6 +186,40 @@ export default async function ErrorCodePage({ params }: Props) {
 
       <div className="grid md:grid-cols-3 gap-6">
         <div className="md:col-span-2 space-y-6">
+          {/* Ordered content blocks (text + images interleaved) */}
+          {entry.content?.length > 0 && (
+            <section className="bg-white rounded-xl border border-gray-200 p-5 space-y-3">
+              <h2 className="text-lg font-semibold text-gray-900 mb-1">Postup řešení</h2>
+              {(entry.content as { type: string; value?: string; src?: string; alt?: string; tag?: string }[]).map((block, i) => {
+                if (block.type === 'image' && block.src) {
+                  return (
+                    <a key={i} href={block.src} target="_blank" rel="noopener noreferrer" className="block">
+                      <Image
+                        src={block.src}
+                        alt={block.alt || `${entry!.title} – obrázek`}
+                        width={700}
+                        height={400}
+                        className="rounded-lg w-full object-contain max-h-72 border border-gray-100 hover:opacity-90 transition-opacity"
+                      />
+                    </a>
+                  )
+                }
+                if (block.type === 'text' && block.value) {
+                  const Tag = (['h2','h3','h4'].includes(block.tag ?? '') ? block.tag : 'p') as 'p'|'h2'|'h3'|'h4'
+                  return (
+                    <Tag key={i} className={
+                      Tag === 'p' ? 'text-sm text-gray-700' :
+                      'text-base font-semibold text-gray-800 mt-2'
+                    }>
+                      {block.value}
+                    </Tag>
+                  )
+                }
+                return null
+              })}
+            </section>
+          )}
+
           {/* Likely causes */}
           {entry.likelyCauses.length > 0 && (
             <section className="bg-white rounded-xl border border-gray-200 p-5">

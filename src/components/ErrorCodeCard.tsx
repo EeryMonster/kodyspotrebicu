@@ -31,7 +31,7 @@ export default function ErrorCodeCard({
           <span className="font-mono text-sm font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded">
             {code}
           </span>
-          <span className="text-xs text-gray-500">{brand} · {APPLIANCE_LABELS[applianceType] || applianceType}</span>
+          <span className="text-xs text-gray-500">{brand.charAt(0).toUpperCase() + brand.slice(1)} · {APPLIANCE_LABELS[applianceType] || applianceType}</span>
         </div>
         <div className="flex flex-col items-end gap-1 shrink-0">
           {subtype && (

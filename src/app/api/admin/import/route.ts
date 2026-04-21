@@ -22,6 +22,8 @@ interface ImportRow {
   faq?: { q: string; a: string }[]
   sourceType?: string
   sourceUrl?: string
+  images?: string[]
+  content?: object[]
 }
 
 export async function POST(request: NextRequest) {
@@ -82,6 +84,8 @@ export async function POST(request: NextRequest) {
         faq: (row.faq || []) as object[],
         sourceType: row.sourceType || 'manual',
         sourceUrl: row.sourceUrl || null,
+        images: row.images || [],
+        content: (row.content || []) as object[],
       }
 
       if (existing) {

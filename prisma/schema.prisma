@@ -27,6 +27,8 @@ model ErrorCode {
   subtype     String?
   sourceType  String   @default("manual")
   sourceUrl   String?
+  images      String[] @default([])
+  content     Json[]   @default([])
 
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
