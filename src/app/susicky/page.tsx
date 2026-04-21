@@ -44,7 +44,7 @@ export default async function SusickyPage({ searchParams }: Props) {
     })
   } catch { /* DB not ready */ }
 
-  const brands = [...new Set(codes.map((c) => c.brand))].sort()
+  const brands = [...new Set(codes.map((c) => c.brand))].sort((a, b) => a.localeCompare(b, 'cs', { sensitivity: 'base' }))
 
   function buildUrl(typ: string | null, znacka: string | null) {
     const params = new URLSearchParams()

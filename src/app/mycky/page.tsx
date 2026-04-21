@@ -48,7 +48,7 @@ export default async function MyckyPage({ searchParams }: Props) {
       distinct: ['brand'],
       orderBy: { brand: 'asc' },
     })
-    allBrands = all.map((c) => c.brand)
+    allBrands = all.map((c) => c.brand).sort((a, b) => a.localeCompare(b, 'cs', { sensitivity: 'base' }))
   } catch { /* DB not ready */ }
 
   function buildUrl(znacka: string | null) {

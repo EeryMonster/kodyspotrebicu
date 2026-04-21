@@ -41,7 +41,7 @@ export default async function PrackyPage({ searchParams }: Props) {
     })
   } catch { /* DB not ready */ }
 
-  const brands = [...new Set(codes.map((c) => c.brand))].sort()
+  const brands = [...new Set(codes.map((c) => c.brand))].sort((a, b) => a.localeCompare(b, 'cs', { sensitivity: 'base' }))
 
   function buildUrl(znacka: string | null) {
     const params = new URLSearchParams()
