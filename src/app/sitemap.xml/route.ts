@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 
-const BASE_URL = 'https://kodyspotrebicu.cz'
+const BASE_URL = 'https://www.kodyspotrebicu.cz'
 
 const APPLIANCE_PATH: Record<string, string> = {
   pracka: 'pracky',

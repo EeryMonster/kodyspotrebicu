@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   description:
     'Databáze chybových kódů praček, myček a sušiček. Najděte příčinu chyby, zjistěte závažnost a naučte se, co dělat dál.',
-  metadataBase: new URL('https://kodyspotrebicu.cz'),
+  metadataBase: new URL('https://www.kodyspotrebicu.cz'),
   openGraph: {
     siteName: 'KódySpotřebičů.cz',
     type: 'website',
