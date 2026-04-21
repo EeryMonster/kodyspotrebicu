@@ -2,8 +2,6 @@ import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 const BAD_WORDS = ['kurva', 'píča', 'kokot', 'debil', 'kretén', 'hovno', 'prdel', 'zmrd', 'idiot']
 
 export async function POST(request: Request) {
@@ -44,6 +42,7 @@ export async function POST(request: Request) {
     })
 
     if (process.env.RESEND_API_KEY && process.env.NOTIFY_EMAIL) {
+      const resend = new Resend(process.env.RESEND_API_KEY)
       const status = isApproved ? '✅ schválený' : '⏳ čeká na schválení'
       await resend.emails.send({
         from: 'Komentáře <notifikace@kodyspotrebicu.cz>',
