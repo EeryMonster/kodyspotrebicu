@@ -4,7 +4,12 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
-const inter = Inter({ subsets: ['latin', 'latin-ext'] })
+const inter = Inter({
+  subsets: ['latin', 'latin-ext'],
+  display: 'optional',
+  adjustFontFallback: true,
+  preload: true,
+})
 
 export const metadata: Metadata = {
   title: {
@@ -31,6 +36,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="cs">
+      <head>
+        <link rel="preconnect" href="https://kodyspotrebicu.cz" />
+      </head>
       <body className={`${inter.className} min-h-screen flex flex-col bg-gray-50`}>
         <Header />
         <main className="flex-1">{children}</main>
