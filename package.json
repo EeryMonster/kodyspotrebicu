@@ -25,13 +25,6 @@
     "react": "^18",
     "react-dom": "^18"
   },
-  "browserslist": [
-    "chrome >= 93",
-    "firefox >= 90",
-    "safari >= 15",
-    "edge >= 93",
-    "not dead"
-  ],
   "devDependencies": {
     "@types/node": "^20",
     "@types/pg": "^8.20.0",
