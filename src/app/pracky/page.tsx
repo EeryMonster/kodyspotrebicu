@@ -8,7 +8,7 @@ import Image from 'next/image'
 export const metadata: Metadata = {
   title: 'Chybové kódy praček',
   description: 'Databáze chybových kódů praček. Bosch, Siemens, AEG, Electrolux, Samsung, Beko.',
-  alternates: { canonical: 'https://kodyspotrebicu.cz/pracky' },
+  alternates: { canonical: 'https://www.kodyspotrebicu.cz/pracky' },
 }
 
 interface Props {

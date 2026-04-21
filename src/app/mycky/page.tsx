@@ -9,7 +9,7 @@ import { SUBTYPE_SECTION_LABELS } from '@/lib/utils'
 export const metadata: Metadata = {
   title: 'Chybové kódy myček nádobí',
   description: 'Databáze chybových kódů myček nádobí. Bosch, Siemens, AEG, Electrolux, Samsung, Beko. Zjistěte příčinu chyby myčky a jak postupovat.',
-  alternates: { canonical: 'https://kodyspotrebicu.cz/mycky' },
+  alternates: { canonical: 'https://www.kodyspotrebicu.cz/mycky' },
 }
 
 interface Props {

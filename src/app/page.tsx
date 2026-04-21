@@ -55,10 +55,10 @@ export default async function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'KódySpotřebičů.cz',
-    url: 'https://kodyspotrebicu.cz',
+    url: 'https://www.kodyspotrebicu.cz',
     potentialAction: {
       '@type': 'SearchAction',
-      target: { '@type': 'EntryPoint', urlTemplate: 'https://kodyspotrebicu.cz/hledat?q={search_term_string}' },
+      target: { '@type': 'EntryPoint', urlTemplate: 'https://www.kodyspotrebicu.cz/hledat?q={search_term_string}' },
       'query-input': 'required name=search_term_string',
     },
   }
@@ -67,7 +67,7 @@ export default async function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'KódySpotřebičů.cz',
-    url: 'https://kodyspotrebicu.cz',
+    url: 'https://www.kodyspotrebicu.cz',
     description: 'Databáze chybových kódů domácích spotřebičů – pračky, myčky, sušičky.',
   }
 

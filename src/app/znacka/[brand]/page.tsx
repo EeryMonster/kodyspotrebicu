@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `Chybové kódy ${brandName}`,
     description: `${countText} Pračky, myčky, sušičky – zjistěte příčinu chyby a jak postupovat.`,
-    alternates: { canonical: `https://kodyspotrebicu.cz/znacka/${params.brand.toLowerCase()}` },
+    alternates: { canonical: `https://www.kodyspotrebicu.cz/znacka/${params.brand.toLowerCase()}` },
   }
 }
 

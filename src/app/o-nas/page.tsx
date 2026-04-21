@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'O webu',
   description: 'KódySpotřebičů.cz je bezplatná informační databáze chybových kódů domácích spotřebičů. Zjistěte, kdo za webem stojí a jak data využívat.',
-  alternates: { canonical: 'https://kodyspotrebicu.cz/o-nas' },
+  alternates: { canonical: 'https://www.kodyspotrebicu.cz/o-nas' },
 }
 
 export default function OWasPage() {

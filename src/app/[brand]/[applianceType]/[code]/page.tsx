@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     })
     if (!entry) return { title: 'Kód nenalezen' }
     const appliancePath = { pracka: 'pracky', mycka: 'mycky', susicka: 'susicky' }[entry.applianceType] || entry.applianceType
-    const canonical = `https://kodyspotrebicu.cz/${entry.brand.toLowerCase()}/${appliancePath}/${params.code}`
+    const canonical = `https://www.kodyspotrebicu.cz/${entry.brand.toLowerCase()}/${appliancePath}/${params.code}`
     return {
       title: `${entry.code} – ${entry.title} (${entry.brand})`,
       description: entry.shortMeaning,

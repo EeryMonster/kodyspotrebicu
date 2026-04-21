@@ -14,12 +14,12 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Domů', item: 'https://kodyspotrebicu.cz' },
+      { '@type': 'ListItem', position: 1, name: 'Domů', item: 'https://www.kodyspotrebicu.cz' },
       ...items.map((item, i) => ({
         '@type': 'ListItem',
         position: i + 2,
         name: item.label,
-        ...(item.href ? { item: `https://kodyspotrebicu.cz${item.href}` } : {}),
+        ...(item.href ? { item: `https://www.kodyspotrebicu.cz${item.href}` } : {}),
       })),
     ],
   }

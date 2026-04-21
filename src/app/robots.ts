@@ -3,6 +3,6 @@ import type { MetadataRoute } from 'next'
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: '*', allow: '/' },
-    sitemap: 'https://kodyspotrebicu.cz/sitemap.xml',
+    sitemap: 'https://www.kodyspotrebicu.cz/sitemap.xml',
   }
 }

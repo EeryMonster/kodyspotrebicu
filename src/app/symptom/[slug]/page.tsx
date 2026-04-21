@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title: symptom.title,
       description: symptom.description,
-      alternates: { canonical: `https://kodyspotrebicu.cz/symptom/${symptom.slug}` },
+      alternates: { canonical: `https://www.kodyspotrebicu.cz/symptom/${symptom.slug}` },
     }
   } catch {
     return { title: 'Symptom' }

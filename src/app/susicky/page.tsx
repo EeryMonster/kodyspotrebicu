@@ -9,7 +9,7 @@ import { SUSICKA_SUBTYPES } from '@/lib/utils'
 export const metadata: Metadata = {
   title: 'Chybové kódy sušiček',
   description: 'Databáze chybových kódů sušiček – odtahová, kondenzační, tepelné čerpadlo. Bosch, Siemens, AEG, Electrolux, Samsung, Beko.',
-  alternates: { canonical: 'https://kodyspotrebicu.cz/susicky' },
+  alternates: { canonical: 'https://www.kodyspotrebicu.cz/susicky' },
 }
 
 interface Props {
