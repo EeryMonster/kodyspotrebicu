@@ -45,11 +45,13 @@ export default async function ErrorCodePage({ params }: Props) {
     subtype: string | null;
     images: string[];
     content: unknown[];
+    helpfulYes: number;
+    helpfulNo: number;
     comments?: { id: number; authorName: string; content: string; createdAt: Date }[];
   } | null = null
 
   try {
-    entry = await prisma.errorCode.findUnique({ 
+    entry = await prisma.errorCode.findUnique({
       where: { slug: params.code },
       include: {
         comments: {
@@ -59,6 +61,7 @@ export default async function ErrorCodePage({ params }: Props) {
         }
       }
     })
+
   } catch { /* DB not ready */ }
 
   if (!entry) notFound()
@@ -179,7 +182,7 @@ export default async function ErrorCodePage({ params }: Props) {
           )}
         </div>
         <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
-          <HelpfulRating errorCodeId={entry.id} />
+          <HelpfulRating errorCodeId={entry.id} initialYes={entry.helpfulYes ?? 0} initialNo={entry.helpfulNo ?? 0} />
           <ShareButtons code={entry.code} title={entry.title} />
         </div>
       </div>
