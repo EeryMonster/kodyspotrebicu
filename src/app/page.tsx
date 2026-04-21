@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
 import SearchBox from '@/components/SearchBox'
+import ProblemsGrid from '@/components/ProblemsGrid'
 
 export const metadata: Metadata = {
   title: { absolute: 'Chybové kódy spotřebičů – databáze chyb praček, myček a sušiček | KódySpotřebičů.cz' },
@@ -156,28 +157,7 @@ export default async function HomePage() {
       {/* Nejčastější problémy */}
       <section className="mb-12">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Nejčastější problémy</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-          {commonProblems.map((p) => (
-            <Link
-              key={p.slug}
-              href={`/symptom/${p.slug}`}
-              className="flex items-start gap-3 bg-white border border-gray-200 rounded-xl p-4 hover:border-blue-300 hover:shadow-sm transition-all"
-            >
-              <div className="shrink-0 w-12 h-12 flex items-center justify-center">
-                <Image src={p.img} alt={p.label} width={80} height={80} className="w-12 h-12 object-contain" />
-              </div>
-              <div>
-                <div className="text-sm font-semibold text-gray-900 leading-snug">{p.label}</div>
-                <div className="text-xs text-gray-500 mt-0.5">{p.desc}</div>
-              </div>
-            </Link>
-          ))}
-        </div>
-        <div className="mt-4 text-right">
-          <Link href="/problemy" className="text-sm text-blue-600 hover:underline">
-            Zobrazit všechny problémy →
-          </Link>
-        </div>
+        <ProblemsGrid problems={commonProblems} />
       </section>
 
       {/* CTA affiliate/leadgen */}
