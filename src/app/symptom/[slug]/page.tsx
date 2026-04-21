@@ -69,8 +69,25 @@ export default async function SymptomPage({ params }: Props) {
     } catch { /* ignore */ }
   }
 
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: symptom.title,
+    description: symptom.description,
+    url: `https://www.kodyspotrebicu.cz/symptom/${symptom.slug}`,
+    publisher: {
+      '@type': 'Organization',
+      name: 'KódySpotřebičů.cz',
+      url: 'https://www.kodyspotrebicu.cz',
+    },
+  }
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Breadcrumbs items={[{ label: 'Problémy', href: '/problemy' }, { label: symptom.title }]} />
       <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">{symptom.title}</h1>
 
