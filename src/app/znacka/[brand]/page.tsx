@@ -62,7 +62,8 @@ export default async function BrandPage({ params }: Props) {
     if (count === 0) notFound()
   }
 
-  const brandName = codes[0]?.brand || (brandSlug.charAt(0).toUpperCase() + brandSlug.slice(1))
+  const rawBrand = codes[0]?.brand || brandSlug
+  const brandName = rawBrand.charAt(0).toUpperCase() + rawBrand.slice(1)
   const applianceTypes = [...new Set(codes.map((c) => c.applianceType))].sort()
 
   return (

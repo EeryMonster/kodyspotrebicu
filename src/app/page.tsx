@@ -16,14 +16,15 @@ const applianceCards = [
 ]
 
 const brands = [
-  { name: 'Bosch', slug: 'bosch' },
-  { name: 'Siemens', slug: 'siemens' },
   { name: 'AEG', slug: 'aeg' },
-  { name: 'Electrolux', slug: 'electrolux' },
-  { name: 'Samsung', slug: 'samsung' },
   { name: 'Beko', slug: 'beko' },
-  { name: 'Whirlpool', slug: 'whirlpool' },
+  { name: 'Bosch', slug: 'bosch' },
+  { name: 'Electrolux', slug: 'electrolux' },
   { name: 'LG', slug: 'lg' },
+  { name: 'Miele', slug: 'miele' },
+  { name: 'Samsung', slug: 'samsung' },
+  { name: 'Siemens', slug: 'siemens' },
+  { name: 'Whirlpool', slug: 'whirlpool' },
 ]
 
 const commonProblems = [
@@ -99,22 +100,28 @@ export default async function HomePage() {
             Databáze obsahuje <strong className="text-gray-600">{totalCount}+</strong> kódů pro nejoblíbenější značky
           </p>
         )}
+      </section>
 
-        <div className="grid grid-cols-4 md:grid-cols-8 gap-3">
+      {/* Brands */}
+      <section className="mb-12">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Vyberte značku</h2>
+        <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-3">
           {brands.map((b) => (
             <Link
               key={b.slug}
               href={`/znacka/${b.slug}`}
               aria-label={`Chybové kódy ${b.name}`}
-              className="flex flex-col items-center gap-1 bg-white border border-gray-200 rounded-xl p-3 hover:border-blue-300 hover:shadow-md transition-all"
+              className="flex flex-col items-center gap-2 bg-white border border-gray-200 rounded-xl p-4 hover:border-blue-300 hover:shadow-md transition-all"
             >
-              <Image
-                src={`/brands/${b.slug}.svg`}
-                alt=""
-                width={120}
-                height={45}
-                className="object-contain"
-              />
+              <div className="h-10 flex items-center justify-center">
+                <Image
+                  src={`/brands/${b.slug}.svg`}
+                  alt={b.name}
+                  width={80}
+                  height={32}
+                  className="object-contain max-h-8"
+                />
+              </div>
               <span className="text-xs text-gray-500 font-medium">{b.name}</span>
             </Link>
           ))}
