@@ -11,7 +11,7 @@ const APPLIANCE_PATH: Record<string, string> = {
 
 export async function GET() {
   type SitemapPage = { url: string; changefreq: string; priority: string; lastmod?: string }
-  const SITE_UPDATED = '2026-04-20'
+  const SITE_UPDATED = new Date().toISOString().split('T')[0]
   const staticPages: SitemapPage[] = [
     { url: BASE_URL, changefreq: 'weekly', priority: '1.0', lastmod: SITE_UPDATED },
     { url: `${BASE_URL}/pracky`, changefreq: 'daily', priority: '0.9', lastmod: SITE_UPDATED },
