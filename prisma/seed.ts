@@ -6031,7 +6031,7 @@ async function main() {
           tips: ['Čištění opakujte přibližně jednou za 3 měsíce.'],
         },
       ],
-      relatedCodes: ['bosch-pracka-e18', 'beko-pracka-ef'],
+      relatedCodes: ['bosch-pracka-e18', 'beko-pracka-ef0'],
       applianceTypes: ['pracka'],
     },
     {
@@ -6069,7 +6069,7 @@ async function main() {
           ],
         },
       ],
-      relatedCodes: ['samsung-pracka-ub', 'bosch-pracka-e27'],
+      relatedCodes: ['samsung-pracka-ue', 'bosch-pracka-e27'],
       applianceTypes: ['pracka'],
     },
     {
@@ -6107,7 +6107,7 @@ async function main() {
           ],
         },
       ],
-      relatedCodes: ['bosch-pracka-e23', 'electrolux-pracka-ef0', 'beko-pracka-ef'],
+      relatedCodes: ['bosch-pracka-e23', 'electrolux-pracka-ef0', 'beko-pracka-ef0'],
       applianceTypes: ['pracka'],
     },
     {
@@ -6461,7 +6461,7 @@ async function main() {
           ],
         },
       ],
-      relatedCodes: [],
+      relatedCodes: ['bosch-mycka-e09'],
       applianceTypes: ['mycka'],
     },
     {
@@ -6598,7 +6598,7 @@ async function main() {
           ],
         },
       ],
-      relatedCodes: [],
+      relatedCodes: ['samsung-susicka-df', 'lg-susicka-de', 'lg-susicka-ps'],
       applianceTypes: ['susicka'],
     },
     {
@@ -6648,7 +6648,7 @@ async function main() {
           ],
         },
       ],
-      relatedCodes: [],
+      relatedCodes: ['lg-susicka-be', 'lg-susicka-le1', 'lg-susicka-fe'],
       applianceTypes: ['susicka'],
     },
     {
@@ -6795,7 +6795,7 @@ async function main() {
           ],
         },
       ],
-      relatedCodes: [],
+      relatedCodes: ['lg-susicka-oe', 'lg-susicka-d80', 'lg-susicka-add'],
       applianceTypes: ['susicka'],
     },
     {
