@@ -48,6 +48,9 @@ const commonProblems = [
   { slug: 'susicka-hluci', img: '/symptoms/susicka-hluci.png', label: 'Sušička hlučí', desc: 'Rány, vrzání nebo silné vibrace sušičky' },
   { slug: 'susicka-se-nezapne', img: '/symptoms/susicka-se-nezapne.png', label: 'Sušička se nezapne', desc: 'Sušička nereaguje nebo se nespustí' },
   { slug: 'susicka-trva-dlouho', img: '/symptoms/susicka-trva-dlouho.png', label: 'Sušení trvá příliš dlouho', desc: 'Program sušení trvá výrazně déle než obvykle' },
+  { slug: 'pracka-nouzove-otevreni', img: '/symptoms/pracka-nouzove-otevreni.svg', label: 'Nouzové otevření pračky', desc: 'Dveře se zasekly nebo nejdou otevřít po praní' },
+  { slug: 'pracka-zamek-dveri', img: '/symptoms/pracka-zamek-dveri.svg', label: 'Jak vypnout zámek pračky', desc: 'Zámek dveří nebo dětská pojistka nejde deaktivovat' },
+  { slug: 'pracka-vypusteni-pred-stehovani', img: '/symptoms/pracka-vypusteni-pred-stehovani.svg', label: 'Vypuštění pračky před stěhováním', desc: 'Jak bezpečně vypustit vodu a odpojit pračku' },
 ]
 
 export default async function HomePage() {
@@ -121,13 +124,12 @@ export default async function HomePage() {
               aria-label={`Chybové kódy ${b.name}`}
               className="flex flex-col items-center gap-2 bg-white border border-gray-200 rounded-xl p-4 hover:border-blue-300 hover:shadow-md transition-all"
             >
-              <div className="h-10 flex items-center justify-center">
+              <div className="relative w-20 h-8">
                 <Image
                   src={`/brands/${b.slug}.svg`}
                   alt={b.name}
-                  width={80}
-                  height={32}
-                  className="object-contain max-h-8"
+                  fill
+                  className="object-contain"
                 />
               </div>
               <span className="text-xs text-gray-500 font-medium">{b.name}</span>
