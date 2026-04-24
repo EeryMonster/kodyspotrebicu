@@ -153,7 +153,12 @@ export default async function ErrorCodePage({ params }: Props) {
           <span className="font-mono text-2xl font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-lg">
             {entry.code}
           </span>
-          <CopyCodeButton code={entry.code} />
+          <CopyCodeButton
+            code={entry.code}
+            brand={entry.brand.charAt(0).toUpperCase() + entry.brand.slice(1)}
+            applianceLabel={appliancePathLabel}
+            url={`https://www.kodyspotrebicu.cz/${entry.brand.toLowerCase()}/${appliancePath}/${params.code}`}
+          />
           {entry.altCodes.map((alt) => (
             <span key={alt} className="font-mono text-sm text-gray-600 bg-gray-100 px-2 py-1 rounded">
               {alt}

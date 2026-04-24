@@ -2,12 +2,20 @@
 
 import { useState } from 'react'
 
-export default function CopyCodeButton({ code }: { code: string }) {
+interface Props {
+  code: string
+  brand: string
+  applianceLabel: string
+  url: string
+}
+
+export default function CopyCodeButton({ code, brand, applianceLabel, url }: Props) {
   const [copied, setCopied] = useState(false)
 
   const handleCopy = async () => {
+    const text = `${brand} ${applianceLabel} ${code} ${url}`
     try {
-      await navigator.clipboard.writeText(code)
+      await navigator.clipboard.writeText(text)
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     } catch {
