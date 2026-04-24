@@ -44,6 +44,10 @@ const BRAND_INTROS: Record<string, { paragraphs: string[] }> = {
     'Whirlpool je americký výrobce domácích spotřebičů s evropskými výrobními závody v Polsku a Itálii. Pod skupinu Whirlpool patří i značky Indesit a Hotpoint – kódy chyb jsou proto u těchto značek velmi podobné.',
     'Chybové kódy Whirlpool praček začínají nejčastěji písmenem F (F01–F21) nebo E. Model spotřebiče najdete na štítku uvnitř dvířek – je důležitý pro přesnou identifikaci kódu, protože starší a novější modely mohou používat odlišné kódy.',
   ]},
+  miele: { paragraphs: [
+    'Miele je německá prémiová značka s více než 120 lety tradice, proslulá mimořádnou životností spotřebičů – pračky a myčky Miele jsou testovány na 20 let provozu. Spotřebiče Miele jsou vyráběny výhradně v Německu a Rakousku.',
+    'Chybové kódy Miele praček a myček mají formát F + číslo (F10, F11, F20...) nebo technické označení jako "Chyba čerpadla" přímo na displeji. Novější modely Miele jsou vybaveny systémem Miele@home umožňujícím vzdálenou diagnostiku přes aplikaci.',
+  ]},
   lg: { paragraphs: [
     'LG je jihokorejský výrobce s inovativními technologiemi v oblasti domácích spotřebičů. Pračky LG jsou proslulé technologií přímého pohonu Direct Drive – motor je přímo spojen s bubnem bez řemene, což snižuje hlučnost a zvyšuje životnost.',
     'Chybové kódy LG praček mají formát písmeno + E nebo dvoupísmenný kód (OE, IE, UE, LE, PE...). Novější modely LG jsou vybaveny funkcí ThinQ – diagnostiku lze spustit přes aplikaci LG ThinQ, která kód identifikuje a navrhne postup bez nutnosti volat servis.',
