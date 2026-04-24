@@ -42,13 +42,13 @@ export default function HelpfulRating({ errorCodeId, initialYes = 0, initialNo =
       <span className="text-sm text-gray-600">Pomohl vám tento článek?</span>
       <button
         onClick={() => handleVote(true)}
-        className="inline-flex items-center gap-1.5 text-sm text-gray-600 hover:text-green-600 border border-gray-200 hover:border-green-300 rounded-lg px-3 py-1.5 transition-all bg-white hover:bg-green-50"
+        className="btn-outline hover:text-green-700 hover:border-green-300 hover:bg-green-50"
       >
         👍 Ano {initialYes > 0 && <span className="text-xs text-gray-400">({initialYes})</span>}
       </button>
       <button
         onClick={() => handleVote(false)}
-        className="inline-flex items-center gap-1.5 text-sm text-gray-600 hover:text-red-600 border border-gray-200 hover:border-red-300 rounded-lg px-3 py-1.5 transition-all bg-white hover:bg-red-50"
+        className="btn-outline hover:text-red-700 hover:border-red-300 hover:bg-red-50"
       >
         👎 Ne {initialNo > 0 && <span className="text-xs text-gray-400">({initialNo})</span>}
       </button>

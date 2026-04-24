@@ -35,10 +35,10 @@ export const SEVERITY_LABELS: Record<number, string> = {
 }
 
 export const SEVERITY_COLORS: Record<number, string> = {
-  1: 'bg-green-100 text-green-800',
-  2: 'bg-yellow-100 text-yellow-800',
-  3: 'bg-orange-200 text-gray-900',
-  4: 'bg-red-100 text-red-800',
+  1: 'bg-green-100 text-green-800 border border-green-300',
+  2: 'bg-yellow-100 text-yellow-900 border border-yellow-300',
+  3: 'bg-orange-100 text-orange-900 border border-orange-300',
+  4: 'bg-red-100 text-red-800 border border-red-300',
 }
 
 export const BRANDS = ['Bosch', 'Siemens', 'AEG', 'Electrolux', 'Samsung', 'Beko', 'Whirlpool', 'LG', 'Miele']

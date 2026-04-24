@@ -24,13 +24,11 @@ export default function ErrorCodeCard({
   return (
     <Link
       href={`/${brand.toLowerCase()}/${appliancePath[applianceType] || applianceType}/${slug}`}
-      className="block bg-white rounded-lg border border-gray-200 p-4 hover:border-blue-300 hover:shadow-sm transition-all"
+      className="card block p-4 hover:border-blue-300 hover:shadow-sm"
     >
       <div className="flex items-start justify-between gap-2 mb-2">
         <div className="flex items-center gap-2">
-          <span className="font-mono text-sm font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded">
-            {code}
-          </span>
+          <span className="code-badge">{code}</span>
           <span className="text-xs text-gray-500">{brand.charAt(0).toUpperCase() + brand.slice(1)} · {APPLIANCE_LABELS[applianceType] || applianceType}</span>
         </div>
         <div className="flex flex-col items-end gap-1 shrink-0">
