@@ -41,7 +41,7 @@ export const SEVERITY_COLORS: Record<number, string> = {
   4: 'bg-red-100 text-red-800',
 }
 
-export const BRANDS = ['Bosch', 'Siemens', 'AEG', 'Electrolux', 'Samsung', 'Beko', 'Whirlpool', 'LG']
+export const BRANDS = ['Bosch', 'Siemens', 'AEG', 'Electrolux', 'Samsung', 'Beko', 'Whirlpool', 'LG', 'Miele']
 
 export const SUBTYPE_LABELS: Record<string, string> = {
   // Sušičky
