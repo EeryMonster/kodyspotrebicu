@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { SEVERITY_LABELS, SEVERITY_COLORS, APPLIANCE_LABELS, SUBTYPE_LABELS } from '@/lib/utils'
+import { APPLIANCE_LABELS, SUBTYPE_LABELS } from '@/lib/utils'
+import SeverityBadge from '@/components/SeverityBadge'
 
 interface ErrorCodeCardProps {
   code: string
@@ -37,9 +38,7 @@ export default function ErrorCodeCard({
               {SUBTYPE_LABELS[subtype] || subtype}
             </span>
           )}
-          <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${SEVERITY_COLORS[severityLevel] || SEVERITY_COLORS[2]}`}>
-            {SEVERITY_LABELS[severityLevel] || 'Střední'}
-          </span>
+          <SeverityBadge level={severityLevel} size="sm" />
         </div>
       </div>
       <h3 className="text-sm font-semibold text-gray-900 mb-1">{title}</h3>

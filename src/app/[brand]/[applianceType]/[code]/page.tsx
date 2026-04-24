@@ -5,7 +5,8 @@ import ErrorCodeCard from '@/components/ErrorCodeCard'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { SEVERITY_LABELS, SEVERITY_COLORS, SEVERITY_DESCRIPTIONS, APPLIANCE_LABELS, SUBTYPE_LABELS } from '@/lib/utils'
+import { APPLIANCE_LABELS, SUBTYPE_LABELS } from '@/lib/utils'
+import SeverityBadge from '@/components/SeverityBadge'
 import CommentsSection from '@/components/CommentsSection'
 import CopyCodeButton from '@/components/CopyCodeButton'
 import ShareButtons from '@/components/ShareButtons'
@@ -164,12 +165,7 @@ export default async function ErrorCodePage({ params }: Props) {
               {alt}
             </span>
           ))}
-          <span
-            className={`text-sm px-3 py-1 rounded-full font-medium cursor-help ${SEVERITY_COLORS[entry.severityLevel] || SEVERITY_COLORS[2]}`}
-            title={SEVERITY_DESCRIPTIONS[entry.severityLevel] || 'Střední závažnost – doporučujeme prověřit co nejdříve'}
-          >
-            Závažnost: {SEVERITY_LABELS[entry.severityLevel] || 'Střední'}
-          </span>
+          <SeverityBadge level={entry.severityLevel} size="md" />
           {entry.subtype && (
             <span className="text-sm px-3 py-1 rounded-full font-medium bg-purple-50 text-purple-700 border border-purple-100">
               {SUBTYPE_LABELS[entry.subtype] || entry.subtype}
