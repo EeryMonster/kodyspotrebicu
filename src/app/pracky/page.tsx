@@ -54,9 +54,14 @@ export default async function PrackyPage({ searchParams }: Props) {
     <div className="max-w-6xl mx-auto px-4 py-8">
       <Breadcrumbs items={[{ label: 'Pračky', href: '/pracky' }]} />
       <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Chybové kódy praček</h1>
-      <p className="text-gray-600 mb-6">
+      <p className="text-gray-600 mb-3">
         Přehled {codes.length} chybových kódů praček. Filtrujte podle značky.
       </p>
+      <div className="bg-white border border-gray-200 rounded-xl p-5 mb-6 space-y-2 text-sm text-gray-700 leading-relaxed">
+        <p>Pračky zobrazují chybové kódy na displeji nebo blikáním kontrolky. Každý kód signalizuje konkrétní problém – od ucpaného filtru přes závadu čerpadla až po poruchu elektroniky. Správná interpretace kódu vám ušetří zbytečný výjezd technika.</p>
+        <p>Nejčastější příčiny chyb praček jsou: <strong>ucpaný filtr nebo čerpací soustava</strong>, <strong>porucha snímače teploty nebo hladiny vody</strong>, <strong>závada na dveřním zámku</strong> nebo <strong>problém s přívodem či odpadem vody</strong>. Část chyb lze bezpečně vyřešit doma, jiné vyžadují odborný servis.</p>
+        <p>V databázi najdete kódy praček <strong>Bosch, Siemens, AEG, Electrolux, Samsung, Beko, Whirlpool a LG</strong>. Kliknutím na konkrétní kód zobrazíte popis závady, závažnost, doporučený postup a kdy volat servis.</p>
+      </div>
 
       {/* Filtr – značka */}
       {brands.length > 0 && (

@@ -15,6 +15,48 @@ const APPLIANCE_LABELS: Record<string, string> = {
   susicka: 'Sušičky',
 }
 
+const BRAND_INTROS: Record<string, { paragraphs: string[] }> = {
+  bosch: { paragraphs: [
+    'Bosch je německá značka s dlouhou tradicí ve výrobě domácích spotřebičů. Pračky, myčky a sušičky Bosch patří v Česku k nejrozšířenějším – díky husté servisní síti a dobré dostupnosti náhradních dílů jsou oblíbeny i u techniků.',
+    'Chybové kódy Bosch začínají nejčastěji písmenem E nebo F. Kódy jsou z velké části totožné se spotřebiči Siemens, protože obě značky patří do skupiny BSH a sdílí konstrukční platformy. Pokud váš spotřebič zobrazí kód, zkontrolujte nejprve filtr, přívod a odpad vody.',
+  ]},
+  siemens: { paragraphs: [
+    'Siemens je prémiová německá značka patřící do skupiny BSH (Bosch-Siemens Hausgeräte). Spotřebiče Siemens sdílí konstrukční základ s Bosch – chybové kódy jsou proto u obou značek totožné nebo velmi podobné.',
+    'Starší myčky Siemens řady SE a SF (do roku 2010) nemají displej a chyby hlásí blikáním kontrolky. Novější modely řady iQ300, iQ500 a iQ700 zobrazují kódy přímo na displeji ve formátu E + číslo.',
+    'Nejčastější závady praček Siemens jsou shodné s Bosch: ucpaný filtr, závada čerpadla nebo problém s dveřním zámkem. U myček je typická chyba E15 (Aquastop) způsobená malým množstvím vody v základně, často po úniku z hadice nebo těsnění.',
+  ]},
+  aeg: { paragraphs: [
+    'AEG je prémiová značka skupiny Electrolux se silnou tradicí v Německu a Skandinávii. Pračky a sušičky AEG jsou známé kvalitním zpracováním a inovativními funkcemi jako ProSteam nebo AbsoluteCare.',
+    'Chybové kódy AEG praček používají formát E + číslo (E10, E20, E30, E40...). Kódy jsou z velké části shodné se spotřebiči Electrolux, protože obě značky sdílí technické platformy. Sušičky AEG používají podobný systém s kódy E5x a E6x.',
+    'Nejčastější závady praček AEG: E10 (problém s přívodem vody – zkontrolujte kohoutek a filtr přívodní hadice), E20 (problém s odpadem – ucpaný filtr nebo hadice), E40 (závada dveřního zámku). Část závad lze vyřešit resetem – vypněte spotřebič, počkejte minutu a znovu zapněte.',
+  ]},
+  electrolux: { paragraphs: [
+    'Electrolux je švédský nadnárodní výrobce domácích spotřebičů s více než 100 lety tradice. Pod skupinu Electrolux patří i značky AEG, Zanussi a Frigidaire – chybové kódy jsou proto u těchto značek velmi podobné nebo totožné.',
+    'Pračky Electrolux používají kódy ve formátu E + číslo, shodné s AEG. Myčky signalizují chyby kódy i01, i20, i30 apod. Sušičky Electrolux sdílí platformu se sušičkami AEG a používají kódy řady E5x a E6x.',
+    'Nejčastější závady spotřebičů Electrolux: ucpaný filtr nebo čerpací soustava, závada na snímači teploty nebo hladiny vody, problém s dveřním zámkem. Před voláním servisu vždy zkontrolujte filtr a přívod i odpad vody – odstraní to většinu běžných chyb.',
+  ]},
+  samsung: { paragraphs: [
+    'Samsung patří mezi největší světové výrobce elektroniky a domácích spotřebičů. Pračky, myčky a sušičky Samsung jsou vybaveny digitálním displejem, který zobrazuje chybové kódy přímo – bez nutnosti počítat bliknutí kontrolky.',
+    'Kódy Samsung mají formát písmeno + číslo (4E, 5E, E2, OE...) nebo číslice + písmeno. Novější modely jsou vybaveny funkcí Smart Control a diagnostikou přes aplikaci Samsung SmartThings – ta umí chybový kód identifikovat a navrhnout řešení automaticky.',
+    'Nejčastější závady praček Samsung: 4E nebo 4C (problém s přívodem vody – kohoutek, filtr sítka), 5E nebo 5C (problém s odpadem – ucpaný filtr nebo hadice), E3 nebo DC (nevyvážená náplň). U myček Samsung jsou časté kódy OC (přeplnění vodou) a HC (přehřátí vody).',
+  ]},
+  beko: { paragraphs: [
+    'Beko je turecká značka patřící do skupiny Arçelik, která je jedním z největších evropských výrobců domácích spotřebičů. Spotřebiče Beko jsou oblíbeny pro příznivý poměr ceny a výkonu a dobrou dostupnost náhradních dílů.',
+    'Chybové kódy Beko praček mají formát E + číslo nebo F + číslo. Kódy jsou podobné ostatním evropským výrobcům – E02 signalizuje problém s odpadem vody, E03 závadu čerpadla, E04 přetečení. Myčky Beko používají kódy E01–E08 pro různé podsystémy.',
+    'Nejčastější závady praček Beko: ucpaný filtr (způsobuje E02/E03), závada dveřního zámku (E01), problém s přívodem vody nebo přehřátí (E08). Beko pračky lze u většiny chyb resetovat vypnutím ze zásuvky na 5 minut.',
+  ]},
+  whirlpool: { paragraphs: [
+    'Whirlpool je americký výrobce domácích spotřebičů s evropskými výrobními závody v Polsku a Itálii. Pod skupinu Whirlpool patří i značky Indesit a Hotpoint – kódy chyb jsou proto u těchto značek velmi podobné.',
+    'Chybové kódy Whirlpool praček začínají nejčastěji písmenem F (F01–F21) nebo E. Model spotřebiče najdete na štítku uvnitř dvířek – je důležitý pro přesnou identifikaci kódu, protože starší a novější modely mohou používat odlišné kódy.',
+    'Nejčastější závady praček Whirlpool: F05 nebo F21 (problém s odpadem vody – ucpaný filtr nebo čerpadlo), F06 (závada elektromotoru), F08 (závada ohřívače). U myček Whirlpool jsou časté kódy F6 (přívod vody) a F7 (odpad vody). Zkontrolujte vždy filtr jako první krok.',
+  ]},
+  lg: { paragraphs: [
+    'LG je jihokorejský výrobce s inovativními technologiemi v oblasti domácích spotřebičů. Pračky LG jsou proslulé technologií přímého pohonu Direct Drive – motor je přímo spojen s bubnem bez řemene, což snižuje hlučnost a zvyšuje životnost.',
+    'Chybové kódy LG praček mají formát písmeno + E nebo dvoupísmenný kód (OE, IE, UE, LE, PE...). Novější modely LG jsou vybaveny funkcí ThinQ – diagnostiku lze spustit přes aplikaci LG ThinQ, která kód identifikuje a navrhne postup bez nutnosti volat servis.',
+    'Nejčastější závady praček LG: OE (problém s odpadem – ucpaný filtr nebo hadice), IE (problém s přívodem vody), UE (nevyvážená náplň – přeskládejte prádlo), LE (přetížení motoru). U sušiček LG jsou časté kódy D80–D90 signalizující ucpaný odtahový kanál nebo filtr.',
+  ]},
+}
+
 const APPLIANCE_PATHS: Record<string, string> = {
   pracka: 'pracky',
   mycka: 'mycky',
@@ -78,9 +120,16 @@ export default async function BrandPage({ params }: Props) {
       <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
         Chybové kódy {brandName}
       </h1>
-      <p className="text-gray-600 mb-6">
+      <p className="text-gray-600 mb-3">
         Přehled {codes.length} chybových kódů spotřebičů {brandName}.
       </p>
+      {BRAND_INTROS[brandSlug.toLowerCase()] && (
+        <div className="bg-white border border-gray-200 rounded-xl p-5 mb-6 space-y-2 text-sm text-gray-700 leading-relaxed">
+          {BRAND_INTROS[brandSlug.toLowerCase()].paragraphs.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
+        </div>
+      )}
 
       {applianceTypes.length > 1 && (
         <div className="flex flex-wrap gap-2 mb-6">

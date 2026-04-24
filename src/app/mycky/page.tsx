@@ -73,9 +73,14 @@ export default async function MyckyPage({ searchParams }: Props) {
     <div className="max-w-6xl mx-auto px-4 py-8">
       <Breadcrumbs items={[{ label: 'Myčky', href: '/mycky' }]} />
       <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Chybové kódy myček nádobí</h1>
-      <p className="text-gray-600 mb-6">
+      <p className="text-gray-600 mb-3">
         Přehled {codes.length} chybových kódů myček nádobí. Filtrujte podle značky.
       </p>
+      <div className="bg-white border border-gray-200 rounded-xl p-5 mb-6 space-y-2 text-sm text-gray-700 leading-relaxed">
+        <p>Myčky nádobí zobrazují chybové kódy na displeji nebo blikáním kontrolky. Každý kód odkazuje na konkrétní podsystém – přívod vody, odčerpávání, ohřev nebo dávkovač prostředků. Rychlá identifikace kódu vám pomůže rozhodnout, zda závadu zvládnete sami nebo potřebujete technika.</p>
+        <p>Nejčastější příčiny chyb myček jsou: <strong>ucpaný filtr nebo odpadní hadice</strong>, <strong>závada na průtokovém ohřívači (bojleru)</strong>, <strong>problém s dávkovačem soli nebo leštidla</strong> a <strong>porucha snímače hladiny vody</strong>. Mnoho chyb způsobuje jen zanedbaná pravidelná údržba.</p>
+        <p>V databázi jsou kódy myček <strong>Bosch, Siemens, AEG, Electrolux, Samsung a Beko</strong>. Starší modely Siemens (řada SE/SF) hlásí chyby blikáním – i ty jsou v databázi popsány.</p>
+      </div>
 
       {allBrands.length > 0 && (
         <div className="mb-8">
