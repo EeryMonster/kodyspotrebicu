@@ -1,9 +1,10 @@
 import { prisma } from '@/lib/prisma'
-import { notFound } from 'next/navigation'
+import { notFound, permanentRedirect } from 'next/navigation'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import ErrorCodeCard from '@/components/ErrorCodeCard'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { slugify } from '@/lib/utils'
 
 const APPLIANCE_LINKS: Record<string, { href: string; label: string }> = {
   pracka: { href: '/pracky', label: 'Chybové kódy praček' },
@@ -24,12 +25,13 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
-    const symptom = await prisma.symptom.findUnique({
-      where: { slug: decodeURIComponent(params.slug) },
+    const decoded = decodeURIComponent(params.slug)
+    const symptom = await prisma.symptom.findFirst({
+      where: { OR: [{ slug: decoded }, { slug: slugify(decoded) }] },
       select: { title: true, description: true, slug: true },
     })
     if (!symptom) return { title: 'Symptom nenalezen' }
-    const canonical = `https://www.kodyspotrebicu.cz/symptom/${symptom.slug}`
+    const canonical = `https://www.kodyspotrebicu.cz/symptom/${slugify(symptom.slug)}`
     return {
       title: symptom.title,
       description: symptom.description,
@@ -53,10 +55,17 @@ export default async function SymptomPage({ params }: Props) {
   } | null = null
 
   try {
-    const slug = decodeURIComponent(params.slug)
-    const raw = await prisma.symptom.findUnique({ where: { slug } })
+    const decoded = decodeURIComponent(params.slug)
+    const cleanSlug = slugify(decoded)
+    if (decoded !== cleanSlug) permanentRedirect(`/symptom/${cleanSlug}`)
+
+    const raw = await prisma.symptom.findFirst({
+      where: { OR: [{ slug: decoded }, { slug: cleanSlug }] },
+    })
     if (raw) {
       symptom = { ...raw, sections: (raw.sections as unknown as Section[]) ?? [] }
+      // Redirect if DB slug differs from clean slug
+      if (slugify(raw.slug) !== decoded) permanentRedirect(`/symptom/${slugify(raw.slug)}`)
     }
   } catch { /* ignore */ }
 
@@ -80,7 +89,7 @@ export default async function SymptomPage({ params }: Props) {
     '@type': 'Article',
     headline: symptom.title,
     description: symptom.description,
-    url: `https://www.kodyspotrebicu.cz/symptom/${symptom.slug}`,
+    url: `https://www.kodyspotrebicu.cz/symptom/${slugify(symptom.slug)}`,
     publisher: {
       '@type': 'Organization',
       name: 'KódySpotřebičů.cz',

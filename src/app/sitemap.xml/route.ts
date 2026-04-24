@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { slugify } from '@/lib/utils'
 
 const BASE_URL = 'https://www.kodyspotrebicu.cz'
 
@@ -47,7 +48,7 @@ export async function GET() {
   }))
 
   const symptomPages = symptoms.map((s) => ({
-    url: `${BASE_URL}/symptom/${s.slug}`,
+    url: `${BASE_URL}/symptom/${slugify(s.slug)}`,
     changefreq: 'monthly',
     priority: '0.6',
     lastmod: s.updatedAt.toISOString().split('T')[0],
