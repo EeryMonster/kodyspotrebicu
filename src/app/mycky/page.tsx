@@ -57,7 +57,7 @@ export default async function MyckyPage({ searchParams }: Props) {
   }
 
   // Sekce podle subtypu jen pokud je vybraná konkrétní značka A má více subtypů
-  const subtypes = [...new Set(codes.map((c) => c.subtype).filter(Boolean))] as string[]
+  const subtypes = Array.from(new Set(codes.map((c) => c.subtype).filter(Boolean))) as string[]
   const useSubtypeSections = !!activeBrand && subtypes.length > 1
 
   // Skupiny: pokud se mají zobrazovat sekce, seskup podle subtypu; jinak jeden celek

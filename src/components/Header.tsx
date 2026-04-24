@@ -24,7 +24,7 @@ export default function Header() {
             </div>
           )}
 
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700 shrink-0">
+          <nav aria-label="Hlavní navigace" className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700 shrink-0">
             <Link href="/pracky" className="hover:text-blue-600">Pračky</Link>
             <Link href="/mycky" className="hover:text-blue-600">Myčky</Link>
             <Link href="/susicky" className="hover:text-blue-600">Sušičky</Link>
@@ -50,7 +50,7 @@ export default function Header() {
 
         {menuOpen && (
           <div className="md:hidden mt-3 pb-2 border-t border-gray-100 pt-3 space-y-3">
-            <nav className="flex flex-col gap-2 text-sm font-medium text-gray-700">
+            <nav aria-label="Mobilní navigace" className="flex flex-col gap-2 text-sm font-medium text-gray-700">
               <Link href="/pracky" className="hover:text-blue-600" onClick={() => setMenuOpen(false)}>Pračky</Link>
               <Link href="/mycky" className="hover:text-blue-600" onClick={() => setMenuOpen(false)}>Myčky</Link>
               <Link href="/susicky" className="hover:text-blue-600" onClick={() => setMenuOpen(false)}>Sušičky</Link>

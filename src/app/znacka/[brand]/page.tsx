@@ -109,7 +109,7 @@ export default async function BrandPage({ params }: Props) {
 
   const rawBrand = codes[0]?.brand || brandSlug
   const brandName = rawBrand.charAt(0).toUpperCase() + rawBrand.slice(1)
-  const applianceTypes = [...new Set(codes.map((c) => c.applianceType))].sort()
+  const applianceTypes = Array.from(new Set(codes.map((c) => c.applianceType))).sort()
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
