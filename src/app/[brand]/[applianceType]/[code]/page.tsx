@@ -117,6 +117,14 @@ export default async function ErrorCodePage({ params }: Props) {
     })),
   } : null
 
+  const CARD_SEVERITY_STYLE: Record<number, string> = {
+    1: 'border-l-green-400 bg-green-50',
+    2: 'border-l-yellow-400 bg-yellow-50',
+    3: 'border-l-orange-400 bg-orange-50',
+    4: 'border-l-red-400 bg-red-50',
+  }
+  const cardSeverityStyle = CARD_SEVERITY_STYLE[entry.severityLevel] ?? 'border-l-gray-300 bg-gray-50'
+
   const faqSchema = faqItems.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -148,12 +156,13 @@ export default async function ErrorCodePage({ params }: Props) {
         { label: entry.code },
       ]} />
 
-      {/* Header */}
-      <div className="mb-6">
+      {/* Diagnostická karta */}
+      <div className={`mb-6 rounded-xl border-l-4 p-5 md:p-6 ${cardSeverityStyle}`}>
         <div className="flex flex-wrap items-center gap-3 mb-3">
-          <span className="font-mono text-2xl font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-lg">
+          <span className="font-mono text-3xl font-bold text-blue-700 bg-white px-3 py-1.5 rounded-lg border border-blue-100 shadow-sm">
             {entry.code}
           </span>
+          <SeverityBadge level={entry.severityLevel} size="md" />
           <CopyCodeButton
             code={entry.code}
             brand={entry.brand.charAt(0).toUpperCase() + entry.brand.slice(1)}
@@ -161,21 +170,24 @@ export default async function ErrorCodePage({ params }: Props) {
             url={`https://www.kodyspotrebicu.cz/${entry.brand.toLowerCase()}/${appliancePath}/${params.code}`}
           />
           {entry.altCodes.map((alt) => (
-            <span key={alt} className="font-mono text-sm text-gray-600 bg-gray-100 px-2 py-1 rounded">
+            <span key={alt} className="font-mono text-sm text-gray-600 bg-white px-2 py-1 rounded border border-gray-200">
               {alt}
             </span>
           ))}
-          <SeverityBadge level={entry.severityLevel} size="md" />
           {entry.subtype && (
             <span className="text-sm px-3 py-1 rounded-full font-medium bg-purple-50 text-purple-700 border border-purple-100">
               {SUBTYPE_LABELS[entry.subtype] || entry.subtype}
             </span>
           )}
         </div>
+
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">{entry.title}</h1>
-        <p className="text-lg text-gray-600">{entry.shortMeaning}</p>
-        <div className="mt-2 flex flex-wrap gap-2 text-sm text-gray-500">
-          <Link href={`/znacka/${entry.brand.toLowerCase()}`} className="hover:text-blue-600">{entry.brand.charAt(0).toUpperCase() + entry.brand.slice(1)}</Link>
+        <p className="text-base text-gray-700 mb-3">{entry.shortMeaning}</p>
+
+        <div className="flex flex-wrap gap-2 text-sm text-gray-500 mb-4">
+          <Link href={`/znacka/${entry.brand.toLowerCase()}`} className="hover:text-blue-600">
+            {entry.brand.charAt(0).toUpperCase() + entry.brand.slice(1)}
+          </Link>
           <span>·</span>
           <Link href={`/${appliancePath}`} className="hover:text-blue-600">{appliancePathLabel}</Link>
           {entry.sourceUrl && (
@@ -187,7 +199,24 @@ export default async function ErrorCodePage({ params }: Props) {
             </>
           )}
         </div>
-        <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
+
+        <div className="flex flex-wrap gap-3 mb-5">
+          {entry.canUserTrySafeChecks && entry.safeChecks.length > 0 && (
+            <a href="#safe-checks" className="btn-primary">
+              ✅ Zkusit bezpečně doma
+            </a>
+          )}
+          <a
+            href="https://www.firmy.cz/?q=servis+dom%C3%A1c%C3%ADch+spot%C5%99ebi%C4%8D%C5%AF"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline"
+          >
+            🔧 Najít servis
+          </a>
+        </div>
+
+        <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-black/10">
           <HelpfulRating errorCodeId={entry.id} initialYes={entry.helpfulYes ?? 0} initialNo={entry.helpfulNo ?? 0} />
           <ShareButtons code={entry.code} title={entry.title} />
         </div>
@@ -328,7 +357,7 @@ export default async function ErrorCodePage({ params }: Props) {
         <div className="space-y-4">
           {/* Safe checks box */}
           {entry.canUserTrySafeChecks && entry.safeChecks.length > 0 && (
-            <div className="bg-green-50 border border-green-200 rounded-xl p-4">
+            <div id="safe-checks" className="bg-green-50 border border-green-200 rounded-xl p-4">
               <h2 className="font-semibold text-green-900 mb-2 flex items-center gap-2">
                 <span>✅</span> Lze bezpečně zkusit doma
               </h2>
