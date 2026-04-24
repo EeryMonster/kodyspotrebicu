@@ -21,7 +21,7 @@ export async function GET() {
     { url: `${BASE_URL}/problemy`, changefreq: 'weekly', priority: '0.8', lastmod: SITE_UPDATED },
     { url: `${BASE_URL}/hledat`, changefreq: 'monthly', priority: '0.5', lastmod: SITE_UPDATED },
     { url: `${BASE_URL}/o-nas`, changefreq: 'monthly', priority: '0.4', lastmod: SITE_UPDATED },
-    ...['bosch', 'siemens', 'aeg', 'electrolux', 'samsung', 'beko', 'whirlpool', 'lg'].map((b) => ({
+    ...['bosch', 'siemens', 'aeg', 'electrolux', 'samsung', 'beko', 'whirlpool', 'lg', 'miele'].map((b) => ({
       url: `${BASE_URL}/znacka/${b}`,
       changefreq: 'weekly',
       priority: '0.8',
