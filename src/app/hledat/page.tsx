@@ -9,10 +9,18 @@ interface Props {
 
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
   const q = (searchParams.q || '').trim()
-  if (!q) return { title: 'Vyhledávání chybových kódů' }
+  if (!q) {
+    return {
+      title: 'Vyhledávání chybových kódů',
+      alternates: { canonical: 'https://www.kodyspotrebicu.cz/hledat' },
+      robots: { index: false },
+    }
+  }
   return {
     title: `Výsledky vyhledávání pro „${q}"`,
     description: `Chybové kódy spotřebičů odpovídající hledanému výrazu „${q}". Databáze praček, myček a sušiček.`,
+    alternates: { canonical: 'https://www.kodyspotrebicu.cz/hledat' },
+    robots: { index: false },
   }
 }
 

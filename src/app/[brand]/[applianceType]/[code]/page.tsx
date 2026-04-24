@@ -29,6 +29,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${entry.code} – ${entry.title} (${entry.brand})`,
       description: entry.shortMeaning,
       alternates: { canonical },
+      openGraph: {
+        title: `${entry.code} – ${entry.title} (${entry.brand})`,
+        description: entry.shortMeaning,
+        url: canonical,
+      },
     }
   } catch {
     return { title: 'Kód chyby' }

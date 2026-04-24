@@ -29,10 +29,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       select: { title: true, description: true, slug: true },
     })
     if (!symptom) return { title: 'Symptom nenalezen' }
+    const canonical = `https://www.kodyspotrebicu.cz/symptom/${symptom.slug}`
     return {
       title: symptom.title,
       description: symptom.description,
-      alternates: { canonical: `https://www.kodyspotrebicu.cz/symptom/${symptom.slug}` },
+      alternates: { canonical },
+      openGraph: {
+        title: symptom.title,
+        description: symptom.description,
+        url: canonical,
+      },
     }
   } catch {
     return { title: 'Symptom' }

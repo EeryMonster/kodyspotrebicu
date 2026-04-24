@@ -30,10 +30,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     })
   } catch { /* ignore */ }
   const countText = count > 0 ? `Databáze ${count} chybových kódů spotřebičů ${brandName}.` : `Databáze chybových kódů spotřebičů ${brandName}.`
+  const canonical = `https://www.kodyspotrebicu.cz/znacka/${params.brand.toLowerCase()}`
   return {
     title: `Chybové kódy ${brandName}`,
     description: `${countText} Pračky, myčky, sušičky – zjistěte příčinu chyby a jak postupovat.`,
-    alternates: { canonical: `https://www.kodyspotrebicu.cz/znacka/${params.brand.toLowerCase()}` },
+    alternates: { canonical },
+    openGraph: {
+      title: `Chybové kódy ${brandName}`,
+      description: `${countText} Pračky, myčky, sušičky – zjistěte příčinu chyby a jak postupovat.`,
+      url: canonical,
+    },
   }
 }
 

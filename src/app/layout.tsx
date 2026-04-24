@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     locale: 'cs_CZ',
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
   },
   other: {
     'google-adsense-account': 'ca-pub-1027768572288829',

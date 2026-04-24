@@ -6,6 +6,12 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Nejčastější problémy spotřebičů',
   description: 'Průvodci nejčastějšími problémy praček, myček a sušiček. Zjistěte příčinu a jak postupovat.',
+  alternates: { canonical: 'https://www.kodyspotrebicu.cz/problemy' },
+  openGraph: {
+    title: 'Nejčastější problémy spotřebičů',
+    description: 'Průvodci nejčastějšími problémy praček, myček a sušiček. Zjistěte příčinu a jak postupovat.',
+    url: 'https://www.kodyspotrebicu.cz/problemy',
+  },
 }
 
 const SECTIONS = [
