@@ -1,5 +1,5 @@
 import { prisma } from '@/lib/prisma'
-import { notFound, redirect } from 'next/navigation'
+import { notFound, permanentRedirect } from 'next/navigation'
 
 interface Props {
   params: { code: string }
@@ -24,5 +24,5 @@ export default async function KodPage({ params }: Props) {
   if (!entry) notFound()
 
   const appliancePath = { pracka: 'pracky', mycka: 'mycky', susicka: 'susicky' }[entry.applianceType] || entry.applianceType
-  redirect(`/${entry.brand.toLowerCase()}/${appliancePath}/${entry.slug}`)
+  permanentRedirect(`/${entry.brand.toLowerCase()}/${appliancePath}/${entry.slug}`)
 }
