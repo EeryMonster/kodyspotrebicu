@@ -202,7 +202,7 @@ export default async function ErrorCodePage({ params }: Props) {
 
         <div className="flex flex-wrap gap-3 mb-5">
           {entry.canUserTrySafeChecks && entry.safeChecks.length > 0 && (
-            <a href="#safe-checks" className="btn-primary">
+            <a href="#bezpecne-kroky" className="btn-primary">
               ✅ Zkusit bezpečně doma
             </a>
           )}
@@ -216,208 +216,197 @@ export default async function ErrorCodePage({ params }: Props) {
           </a>
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-black/10">
-          <HelpfulRating errorCodeId={entry.id} initialYes={entry.helpfulYes ?? 0} initialNo={entry.helpfulNo ?? 0} />
-          <ShareButtons code={entry.code} title={entry.title} />
+      </div>
+
+      {/* 3+4: Bezpečné kroky + servisní CTA */}
+      <div id="bezpecne-kroky" className="space-y-4 mb-6">
+        {entry.canUserTrySafeChecks && entry.safeChecks.length > 0 ? (
+          <section className="bg-green-50 border border-green-200 rounded-xl p-5">
+            <h2 className="font-semibold text-green-900 mb-3 flex items-center gap-2">
+              <span>✅</span> Lze bezpečně zkusit doma
+            </h2>
+            {entry.severityLevel === 4 && (
+              <p className="text-sm text-orange-800 bg-orange-50 border border-orange-200 rounded-lg p-3 mb-4">
+                ⚠️ Jde o kritickou závadu — postupujte opatrně a při jakékoliv pochybnosti ihned volejte servis.
+              </p>
+            )}
+            <ol className="space-y-3">
+              {entry.safeChecks.map((check, i) => (
+                <li key={i} className="flex items-start gap-3 text-sm text-green-900">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-green-200 text-green-900 text-xs font-bold flex items-center justify-center mt-0.5">
+                    {i + 1}
+                  </span>
+                  {check}
+                </li>
+              ))}
+            </ol>
+          </section>
+        ) : (
+          <section className="bg-yellow-50 border border-yellow-200 rounded-xl p-5">
+            <h2 className="font-semibold text-yellow-900 mb-1">⚠️ Nedoporučuje se domácí oprava</h2>
+            <p className="text-sm text-yellow-800">Tento typ závady vyžaduje zásah odborného technika.</p>
+          </section>
+        )}
+
+        {entry.whenToStopAndCallService.length > 0 && (
+          <section className="bg-red-50 border border-red-200 rounded-xl p-5">
+            <h2 className="font-semibold text-red-900 mb-2 flex items-center gap-2">
+              <span>🔴</span> Kdy okamžitě volat servis
+            </h2>
+            <ul className="space-y-1.5">
+              {entry.whenToStopAndCallService.map((w, i) => (
+                <li key={i} className="text-sm text-red-800 flex items-start gap-2">
+                  <span className="mt-0.5 shrink-0 font-bold">!</span>
+                  {w}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <div className="bg-white border border-brand-border rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <p className="font-medium text-gray-900 text-sm">Potřebujete servisního technika?</p>
+            <p className="text-xs text-gray-500 mt-0.5">Najděte ověřený servis ve vašem okolí</p>
+          </div>
+          <a
+            href="https://www.firmy.cz/?q=servis+dom%C3%A1c%C3%ADch+spot%C5%99ebi%C4%8D%C5%AF"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary shrink-0"
+          >
+            🔧 Najít servis v okolí
+          </a>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6">
-        <div className="md:col-span-2 space-y-6">
-          {/* Ordered content blocks (text + images interleaved) */}
-          {entry.content?.length > 0 && (
-            <section className="bg-white rounded-xl border border-gray-200 p-5 space-y-3">
-              <h2 className="text-lg font-semibold text-gray-900 mb-1">Postup řešení</h2>
-              {(entry.content as { type: string; value?: string; src?: string; alt?: string; tag?: string }[]).map((block, i) => {
-                if (block.type === 'image' && block.src) {
-                  return (
-                    <a key={i} href={block.src} target="_blank" rel="noopener noreferrer" className="block">
-                      <Image
-                        src={block.src}
-                        alt={block.alt || `${entry!.title} – obrázek`}
-                        width={700}
-                        height={400}
-                        className="rounded-lg w-full object-contain max-h-72 border border-gray-100 hover:opacity-90 transition-opacity"
-                      />
-                    </a>
-                  )
-                }
-                if (block.type === 'text' && block.value) {
-                  const Tag = (['h2','h3','h4'].includes(block.tag ?? '') ? block.tag : 'p') as 'p'|'h2'|'h3'|'h4'
-                  return (
-                    <Tag key={i} className={
-                      Tag === 'p' ? 'text-sm text-gray-700' :
-                      'text-base font-semibold text-gray-800 mt-2'
-                    }>
-                      {block.value}
-                    </Tag>
-                  )
-                }
-                return null
-              })}
-            </section>
-          )}
+      {/* 5: Detailní vysvětlení */}
+      <div className="space-y-6 mb-6">
+        {entry.content?.length > 0 && (
+          <section className="bg-white rounded-xl border border-gray-200 p-5 space-y-3">
+            <h2 className="text-lg font-semibold text-gray-900 mb-1">Postup řešení</h2>
+            {(entry.content as { type: string; value?: string; src?: string; alt?: string; tag?: string }[]).map((block, i) => {
+              if (block.type === 'image' && block.src) {
+                return (
+                  <a key={i} href={block.src} target="_blank" rel="noopener noreferrer" className="block">
+                    <Image
+                      src={block.src}
+                      alt={block.alt || `${entry!.title} – obrázek`}
+                      width={700}
+                      height={400}
+                      className="rounded-lg w-full object-contain max-h-72 border border-gray-100 hover:opacity-90 transition-opacity"
+                    />
+                  </a>
+                )
+              }
+              if (block.type === 'text' && block.value) {
+                const Tag = (['h2','h3','h4'].includes(block.tag ?? '') ? block.tag : 'p') as 'p'|'h2'|'h3'|'h4'
+                return (
+                  <Tag key={i} className={Tag === 'p' ? 'text-sm text-gray-700' : 'text-base font-semibold text-gray-800 mt-2'}>
+                    {block.value}
+                  </Tag>
+                )
+              }
+              return null
+            })}
+          </section>
+        )}
 
-          {/* Likely causes */}
-          {entry.likelyCauses.length > 0 && (
-            <section className="bg-white rounded-xl border border-gray-200 p-5">
-              <h2 className="text-lg font-semibold text-gray-900 mb-3">Pravděpodobné příčiny</h2>
-              <ul className="space-y-2">
-                {entry.likelyCauses.map((cause, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
-                    <span className="text-blue-500 mt-0.5">•</span>
-                    {cause}
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
+        {/* 6: Příčiny */}
+        {entry.likelyCauses.length > 0 && (
+          <section className="bg-white rounded-xl border border-gray-200 p-5">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">Pravděpodobné příčiny</h2>
+            <ul className="space-y-2">
+              {entry.likelyCauses.map((cause, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                  <span className="text-blue-500 mt-0.5">•</span>
+                  {cause}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
-          {/* How to fix – skryj pokud safeChecks už postup obsahuje */}
-          {howToFaqItem && !(entry.canUserTrySafeChecks && entry.safeChecks.length > 0) && (
-            <section className="bg-white rounded-xl border border-gray-200 p-5">
-              <h2 className="text-lg font-semibold text-gray-900 mb-3">Jak opravit chybu {entry.code}</h2>
-              <p className="text-sm text-gray-700">{howToFaqItem.a}</p>
-            </section>
-          )}
+        {howToFaqItem && !(entry.canUserTrySafeChecks && entry.safeChecks.length > 0) && (
+          <section className="bg-white rounded-xl border border-gray-200 p-5">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">Jak opravit chybu {entry.code}</h2>
+            <p className="text-sm text-gray-700">{howToFaqItem.a}</p>
+          </section>
+        )}
 
-          {/* Mobile-only CTA – sidebar není na mobilu viditelný */}
-          <div className="md:hidden bg-blue-50 border border-blue-100 rounded-xl p-4 flex items-center justify-between gap-4">
-            <p className="text-sm font-medium text-gray-900">Potřebujete technika?</p>
-            <a
-              href="https://www.firmy.cz/?q=servis+dom%C3%A1c%C3%ADch+spot%C5%99ebi%C4%8D%C5%AF"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0 px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
-            >
-              Najít servis →
-            </a>
-          </div>
-
-          {/* Possible parts */}
-          {entry.possibleParts.length > 0 && (
-            <section className="bg-white rounded-xl border border-gray-200 p-5">
-              <h2 className="text-lg font-semibold text-gray-900 mb-3">Možné vadné součástky</h2>
-              <div className="flex flex-wrap gap-2">
-                {entry.possibleParts.map((part, i) => (
-                  <span key={i} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">{part}</span>
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* FAQ */}
-          {otherFaqItems.length > 0 && (
-            <section className="bg-white rounded-xl border border-gray-200 p-5">
-              <h2 className="text-lg font-semibold text-gray-900 mb-4">Časté dotazy</h2>
-              <div className="space-y-4">
-                {otherFaqItems.map((f, i) => (
-                  <div key={i}>
-                    <h3 className="font-medium text-gray-900 mb-1">{f.q}</h3>
-                    <p className="text-sm text-gray-600">{f.a}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* Related codes */}
-          {relatedEntries.length > 0 && (
-            <section>
-              <h2 className="text-lg font-semibold text-gray-900 mb-3">Podobné chybové kódy</h2>
-              <div className="grid sm:grid-cols-2 gap-3">
-                {relatedEntries.map((c) => (
-                  <ErrorCodeCard key={c.id} {...c} />
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* Related symptoms */}
-          {relatedSymptomEntries.length > 0 && (
-            <section>
-              <h2 className="text-lg font-semibold text-gray-900 mb-3">Související problémy</h2>
-              <div className="space-y-2">
-                {relatedSymptomEntries.map((s) => (
-                  <Link
-                    key={s.slug}
-                    href={`/symptom/${s.slug}`}
-                    className="flex flex-col gap-0.5 p-3 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
-                  >
-                    <span className="text-sm font-medium text-gray-900">{s.title}</span>
-                    <span className="text-xs text-gray-500 line-clamp-2">{s.description}</span>
-                  </Link>
-                ))}
-              </div>
-            </section>
-          )}
-        </div>
-
-        {/* Sidebar */}
-        <div className="space-y-4">
-          {/* Safe checks box */}
-          {entry.canUserTrySafeChecks && entry.safeChecks.length > 0 && (
-            <div id="safe-checks" className="bg-green-50 border border-green-200 rounded-xl p-4">
-              <h2 className="font-semibold text-green-900 mb-2 flex items-center gap-2">
-                <span>✅</span> Lze bezpečně zkusit doma
-              </h2>
-              <ul className="space-y-1.5">
-                {entry.safeChecks.map((check, i) => (
-                  <li key={i} className="text-sm text-green-800 flex items-start gap-1.5">
-                    <span className="mt-0.5 shrink-0">→</span>
-                    {check}
-                  </li>
-                ))}
-              </ul>
+        {/* 7: Možné součástky */}
+        {entry.possibleParts.length > 0 && (
+          <section className="bg-white rounded-xl border border-gray-200 p-5">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">Možné vadné součástky</h2>
+            <div className="flex flex-wrap gap-2">
+              {entry.possibleParts.map((part, i) => (
+                <span key={i} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">{part}</span>
+              ))}
             </div>
-          )}
+          </section>
+        )}
 
-          {!entry.canUserTrySafeChecks && (
-            <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4">
-              <h2 className="font-semibold text-yellow-900 mb-1">⚠️ Nedoporučuje se domácí oprava</h2>
-              <p className="text-sm text-yellow-800">Tento typ závady vyžaduje zásah odborného technika.</p>
+        {/* 8: Podobné kódy */}
+        {relatedEntries.length > 0 && (
+          <section>
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">Podobné chybové kódy</h2>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {relatedEntries.map((c) => (
+                <ErrorCodeCard key={c.id} {...c} />
+              ))}
             </div>
-          )}
+          </section>
+        )}
 
-          {/* When to call service */}
-          {entry.whenToStopAndCallService.length > 0 && (
-            <div className="bg-red-50 border border-red-200 rounded-xl p-4">
-              <h2 className="font-semibold text-red-900 mb-2 flex items-center gap-2">
-                <span>🔴</span> Kdy okamžitě volat servis
-              </h2>
-              <ul className="space-y-1.5">
-                {entry.whenToStopAndCallService.map((w, i) => (
-                  <li key={i} className="text-sm text-red-800 flex items-start gap-1.5">
-                    <span className="mt-0.5 shrink-0">!</span>
-                    {w}
-                  </li>
-                ))}
-              </ul>
+        {/* 9: Související problémy */}
+        {relatedSymptomEntries.length > 0 && (
+          <section>
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">Související problémy</h2>
+            <div className="space-y-2">
+              {relatedSymptomEntries.map((s) => (
+                <Link
+                  key={s.slug}
+                  href={`/symptom/${s.slug}`}
+                  className="flex flex-col gap-0.5 p-3 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
+                >
+                  <span className="text-sm font-medium text-gray-900">{s.title}</span>
+                  <span className="text-xs text-gray-500 line-clamp-2">{s.description}</span>
+                </Link>
+              ))}
             </div>
-          )}
+          </section>
+        )}
 
-          {/* CTA */}
-          <div className="bg-blue-50 border border-blue-100 rounded-xl p-4 text-center">
-            <p className="text-sm font-medium text-gray-900 mb-2">Potřebujete technika?</p>
-            <a
-              href="https://www.firmy.cz/?q=servis+dom%C3%A1c%C3%ADch+spot%C5%99ebi%C4%8D%C5%AF"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
-            >
-              Najít servis v okolí →
-            </a>
-          </div>
-        </div>
+        {/* 10: FAQ */}
+        {otherFaqItems.length > 0 && (
+          <section className="bg-white rounded-xl border border-gray-200 p-5">
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">Časté dotazy</h2>
+            <div className="space-y-4">
+              {otherFaqItems.map((f, i) => (
+                <div key={i}>
+                  <h3 className="font-medium text-gray-900 mb-1">{f.q}</h3>
+                  <p className="text-sm text-gray-600">{f.a}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
 
+      {/* 11+12: Hodnocení + sdílení */}
+      <div className="flex flex-wrap items-center justify-between gap-4 py-4 border-t border-gray-200 mb-6">
+        <HelpfulRating errorCodeId={entry.id} initialYes={entry.helpfulYes ?? 0} initialNo={entry.helpfulNo ?? 0} />
+        <ShareButtons code={entry.code} title={entry.title} />
+      </div>
+
+      {/* 13: Komentáře */}
       {entry && (
-        <CommentsSection 
-          errorCodeId={entry.id} 
+        <CommentsSection
+          errorCodeId={entry.id}
           initialComments={(entry.comments || []).map(c => ({
             ...c,
             createdAt: c.createdAt.toISOString()
-          }))} 
+          }))}
         />
       )}
     </div>
