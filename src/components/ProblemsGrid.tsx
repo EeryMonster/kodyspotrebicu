@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -11,18 +10,11 @@ interface Problem {
   desc: string
 }
 
-const VISIBLE_COUNT = 12
-
 export default function ProblemsGrid({ problems }: { problems: Problem[] }) {
-  const [showAll, setShowAll] = useState(false)
-
-  const visible = showAll ? problems : problems.slice(0, VISIBLE_COUNT)
-  const hasMore = problems.length > VISIBLE_COUNT
-
   return (
     <>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-        {visible.map((p) => (
+        {problems.slice(0, 12).map((p) => (
           <Link
             key={p.slug}
             href={`/symptom/${p.slug}`}
@@ -38,17 +30,9 @@ export default function ProblemsGrid({ problems }: { problems: Problem[] }) {
           </Link>
         ))}
       </div>
-      <div className="mt-4 flex items-center justify-between">
-        {hasMore && (
-          <button
-            onClick={() => setShowAll(!showAll)}
-            className="text-sm text-blue-600 hover:underline"
-          >
-            {showAll ? 'Zobrazit méně ↑' : `Všechny problémy (${problems.length}) →`}
-          </button>
-        )}
-        <Link href="/problemy" className="text-sm text-blue-600 hover:underline ml-auto">
-          Přejít na všechny problémy →
+      <div className="mt-4 flex justify-end">
+        <Link href="/problemy" className="text-sm text-blue-600 hover:underline">
+          Přejít na všechny problémy ({problems.length}) →
         </Link>
       </div>
     </>
