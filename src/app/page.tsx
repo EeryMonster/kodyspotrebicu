@@ -17,6 +17,14 @@ const applianceCards = [
   { slug: 'susicky', label: 'Sušičky', icon: '♨️', desc: 'Chybové kódy sušiček všech značek' },
 ]
 
+const quickCodes = [
+  { label: 'Bosch E15', q: 'Bosch E15' },
+  { label: 'AEG E10', q: 'AEG E10' },
+  { label: 'Bosch E24', q: 'Bosch E24' },
+  { label: 'Samsung 4C', q: 'Samsung 4C' },
+  { label: 'Whirlpool F05', q: 'Whirlpool F05' },
+]
+
 const brands = [
   { name: 'AEG', slug: 'aeg' },
   { name: 'Beko', slug: 'beko' },
@@ -95,21 +103,43 @@ export default async function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       {/* Hero */}
-      <section className="text-center mb-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-          Databáze chybových kódů spotřebičů
+      <section className="flex flex-col items-center justify-center min-h-[40vh] md:min-h-[50vh] text-center mb-12">
+        <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-3 text-balance max-w-2xl">
+          Zjistěte, co znamená chybový kód vašeho spotřebiče
         </h1>
-        <p className="text-gray-600 max-w-xl mx-auto mb-6">
-          Spotřebič hlásí chybu? Zadejte kód níže — zjistěte příčinu, závažnost a co dělat dál.
+        <p className="text-gray-500 max-w-xl mx-auto mb-6 text-sm md:text-base">
+          Zadejte kód z displeje pračky, myčky nebo sušičky a zjistěte příčinu, závažnost a další postup.
         </p>
 
-        {/* Hero search */}
-        <div className="max-w-xl mx-auto mb-4">
-          <SearchBox />
+        <div className="w-full max-w-[860px] mx-auto mb-4">
+          <SearchBox variant="hero" />
         </div>
+
+        {/* Quick code chips */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+          <span className="text-xs text-gray-400 shrink-0">Oblíbené:</span>
+          {quickCodes.map((chip) => (
+            <Link
+              key={chip.label}
+              href={`/hledat?q=${encodeURIComponent(chip.q)}`}
+              className="text-xs px-3 py-1 rounded-full border border-brand-border bg-white text-gray-600 hover:border-blue-300 hover:text-blue-700 hover:bg-blue-50 transition-colors"
+            >
+              {chip.label}
+            </Link>
+          ))}
+        </div>
+
+        {/* Quick category links */}
+        <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+          <span>Procházet:</span>
+          <Link href="/pracky" className="text-blue-600 hover:underline font-medium">Pračky</Link>
+          <Link href="/mycky" className="text-blue-600 hover:underline font-medium">Myčky</Link>
+          <Link href="/susicky" className="text-blue-600 hover:underline font-medium">Sušičky</Link>
+        </div>
+
         {totalCount > 0 && (
-          <p className="text-sm text-gray-600 mb-8">
-            Databáze obsahuje <strong className="text-gray-600">{totalCount}+</strong> kódů pro nejoblíbenější značky
+          <p className="text-xs text-gray-400">
+            Databáze obsahuje <strong className="text-gray-500">{totalCount}+</strong> chybových kódů pro nejoblíbenější značky
           </p>
         )}
       </section>

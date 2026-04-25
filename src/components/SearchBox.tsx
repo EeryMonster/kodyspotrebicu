@@ -13,7 +13,11 @@ interface SearchResult {
   slug: string
 }
 
-export default function SearchBox() {
+interface SearchBoxProps {
+  variant?: 'compact' | 'hero'
+}
+
+export default function SearchBox({ variant = 'compact' }: SearchBoxProps) {
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<SearchResult[]>([])
   const [loading, setLoading] = useState(false)
@@ -63,27 +67,54 @@ export default function SearchBox() {
     susicka: 'susicky',
   }
 
+  function handleSubmit() {
+    if (query.trim()) {
+      setOpen(false)
+      router.push(`/hledat?q=${encodeURIComponent(query.trim())}`)
+    }
+  }
+
+  const isHero = variant === 'hero'
+
   return (
     <div ref={ref} className="relative w-full">
-      <div className="relative">
-        <input
-          type="search"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' && query.trim()) {
-              setOpen(false)
-              router.push(`/hledat?q=${encodeURIComponent(query.trim())}`)
+      <div className={isHero ? 'flex flex-col sm:flex-row gap-2' : 'relative'}>
+        <div className="relative flex-1">
+          <label htmlFor={isHero ? 'hero-search-input' : 'search-input'} className="sr-only">
+            Vyhledat chybový kód spotřebiče
+          </label>
+          <input
+            id={isHero ? 'hero-search-input' : 'search-input'}
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && query.trim()) handleSubmit()
+            }}
+            placeholder={isHero ? 'Zadejte kód, např. E15, E10, F11…' : 'Hledat kód chyby, značku...'}
+            className={isHero
+              ? 'w-full px-4 py-3.5 pl-12 border border-brand-border rounded-lg text-base text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-primary placeholder:text-gray-400 shadow-sm'
+              : 'w-full px-4 py-2 pl-10 border border-brand-border rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-primary placeholder:text-gray-500'
             }
-          }}
-          placeholder="Hledat kód chyby, značku..."
-          className="w-full px-4 py-2 pl-10 border border-brand-border rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-primary placeholder:text-gray-500"
-        />
-        <svg className="absolute left-3 top-2.5 w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-        </svg>
-        {loading && (
-          <div className="absolute right-3 top-2.5 w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+          />
+          <svg
+            className={isHero ? 'absolute left-4 top-[1.05rem] w-5 h-5 text-gray-400 pointer-events-none' : 'absolute left-3 top-2.5 w-4 h-4 text-gray-500 pointer-events-none'}
+            fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          {loading && (
+            <div className={isHero ? 'absolute right-4 top-[1.05rem] w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin' : 'absolute right-3 top-2.5 w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin'} />
+          )}
+        </div>
+        {isHero && (
+          <button
+            type="button"
+            onClick={handleSubmit}
+            className="inline-flex items-center justify-center gap-2 bg-brand-primary text-white rounded-lg px-6 py-3.5 text-base font-medium hover:bg-brand-primary-dark transition-colors w-full sm:w-auto shrink-0"
+          >
+            Vyhledat kód
+          </button>
         )}
       </div>
 
