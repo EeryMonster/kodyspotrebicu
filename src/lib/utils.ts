@@ -1,3 +1,27 @@
+/**
+ * Strips leading numbered/bulleted prefixes from stored list content.
+ * Prevents double-numbering when component already renders the number (e.g. safeChecks).
+ * "1. Zkontroluj..." → "Zkontroluj..."
+ * "• text" → "text"
+ */
+export function normalizeListItem(text: string): string {
+  return text
+    .replace(/^\s*\d+[\.\)]\s+/, '')
+    .replace(/^\s*[-•*]\s+/, '')
+    .trim()
+}
+
+/**
+ * Fixes common inline spacing issues in stored content text.
+ * "1.Jak" → "1. Jak"
+ * "✓Po" → "✓ Po"
+ */
+export function normalizeBodyText(text: string): string {
+  return text
+    .replace(/(\d+\.)([^\s\d])/g, '$1 $2')
+    .replace(/([✓✗✔])([^\s])/g, '$1 $2')
+}
+
 export function slugify(text: string): string {
   return text
     .toLowerCase()

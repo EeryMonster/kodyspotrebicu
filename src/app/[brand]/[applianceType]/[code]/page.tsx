@@ -5,7 +5,7 @@ import ErrorCodeCard from '@/components/ErrorCodeCard'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { APPLIANCE_LABELS, SUBTYPE_LABELS } from '@/lib/utils'
+import { APPLIANCE_LABELS, SUBTYPE_LABELS, normalizeListItem, normalizeBodyText } from '@/lib/utils'
 import SeverityBadge from '@/components/SeverityBadge'
 import CommentsSection from '@/components/CommentsSection'
 import CopyCodeButton from '@/components/CopyCodeButton'
@@ -233,11 +233,11 @@ export default async function ErrorCodePage({ params }: Props) {
             )}
             <ol className="space-y-3">
               {entry.safeChecks.map((check, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm text-green-900">
+                <li key={i} className="flex items-start gap-3 text-sm leading-relaxed text-green-900">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-green-200 text-green-900 text-xs font-bold flex items-center justify-center mt-0.5">
                     {i + 1}
                   </span>
-                  {check}
+                  {normalizeListItem(check)}
                 </li>
               ))}
             </ol>
@@ -256,9 +256,9 @@ export default async function ErrorCodePage({ params }: Props) {
             </h2>
             <ul className="space-y-1.5">
               {entry.whenToStopAndCallService.map((w, i) => (
-                <li key={i} className="text-sm text-red-800 flex items-start gap-2">
+                <li key={i} className="text-sm leading-relaxed text-red-800 flex items-start gap-2">
                   <span className="mt-0.5 shrink-0 font-bold">!</span>
-                  {w}
+                  {normalizeListItem(w)}
                 </li>
               ))}
             </ul>
@@ -290,8 +290,8 @@ export default async function ErrorCodePage({ params }: Props) {
               if (block.type === 'text' && block.value) {
                 const Tag = (['h2','h3','h4'].includes(block.tag ?? '') ? block.tag : 'p') as 'p'|'h2'|'h3'|'h4'
                 return (
-                  <Tag key={i} className={Tag === 'p' ? 'text-sm text-gray-700' : 'text-base font-semibold text-gray-800 mt-2'}>
-                    {block.value}
+                  <Tag key={i} className={Tag === 'p' ? 'text-sm leading-relaxed text-gray-700' : 'text-base font-semibold text-gray-800 mt-2 mb-1'}>
+                    {Tag === 'p' ? normalizeBodyText(block.value) : block.value}
                   </Tag>
                 )
               }
@@ -306,9 +306,9 @@ export default async function ErrorCodePage({ params }: Props) {
             <h2 className="text-lg font-semibold text-gray-900 mb-3">Pravděpodobné příčiny</h2>
             <ul className="space-y-2">
               {entry.likelyCauses.map((cause, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
-                  <span className="text-blue-500 mt-0.5">•</span>
-                  {cause}
+                <li key={i} className="flex items-start gap-2 text-sm leading-relaxed text-gray-700">
+                  <span className="text-blue-500 mt-1 shrink-0">•</span>
+                  {normalizeListItem(cause)}
                 </li>
               ))}
             </ul>
@@ -372,8 +372,8 @@ export default async function ErrorCodePage({ params }: Props) {
             <div className="space-y-4">
               {otherFaqItems.map((f, i) => (
                 <div key={i}>
-                  <h3 className="font-medium text-gray-900 mb-1">{f.q}</h3>
-                  <p className="text-sm text-gray-600">{f.a}</p>
+                  <h3 className="font-medium text-gray-900 mb-1">{normalizeBodyText(f.q)}</h3>
+                  <p className="text-sm leading-relaxed text-gray-600">{normalizeBodyText(f.a)}</p>
                 </div>
               ))}
             </div>

@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import ErrorCodeCard from '@/components/ErrorCodeCard'
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { slugify } from '@/lib/utils'
+import { slugify, normalizeListItem } from '@/lib/utils'
 
 const APPLIANCE_LINKS: Record<string, { href: string; label: string }> = {
   pracka: { href: '/pracky', label: 'Chybové kódy praček' },
@@ -116,7 +116,7 @@ export default async function SymptomPage({ params }: Props) {
           {symptom.sections.map((s, i) => (
             <div key={i} className="bg-white border border-gray-200 rounded-xl p-6">
               <h2 className="text-lg font-semibold text-gray-900 mb-3">
-                <span className="text-blue-600 mr-2">{i + 1}.</span>{s.q}
+                <span className="text-blue-600 mr-2">{i + 1}.{' '}</span>{s.q}
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4">{s.answer}</p>
 
@@ -127,7 +127,7 @@ export default async function SymptomPage({ params }: Props) {
                       <span className="shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-700 text-xs font-bold flex items-center justify-center mt-0.5">
                         {si + 1}
                       </span>
-                      <span className="text-gray-700 text-sm">{step}</span>
+                      <span className="text-gray-700 text-sm leading-relaxed">{normalizeListItem(step)}</span>
                     </li>
                   ))}
                 </ol>
@@ -136,9 +136,9 @@ export default async function SymptomPage({ params }: Props) {
               {s.tips && s.tips.length > 0 && (
                 <ul className="space-y-1.5">
                   {s.tips.map((tip, ti) => (
-                    <li key={ti} className="flex gap-2 text-sm text-gray-600">
+                    <li key={ti} className="flex gap-2 text-sm leading-relaxed text-gray-600">
                       <span className="text-green-500 shrink-0 mt-0.5">✓</span>
-                      <span>{tip}</span>
+                      <span>{normalizeListItem(tip).replace(/^[✓✔]\s*/, '')}</span>
                     </li>
                   ))}
                 </ul>

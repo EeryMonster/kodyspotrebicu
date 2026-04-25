@@ -92,7 +92,7 @@ export default function CategoryFilteredGrid({ codes, subtypeOptions }: Category
             <button
               type="button"
               onClick={() => setActiveSubtype(null)}
-              className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors ${
+              className={`px-3 py-2 rounded-full text-sm font-medium border transition-colors ${
                 activeSubtype === null
                   ? 'bg-blue-600 text-white border-blue-600'
                   : 'bg-white text-gray-700 border-brand-border hover:border-blue-400'
@@ -106,7 +106,7 @@ export default function CategoryFilteredGrid({ codes, subtypeOptions }: Category
                 type="button"
                 onClick={() => setActiveSubtype(activeSubtype === s.value ? null : s.value)}
                 title={s.desc}
-                className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors ${
+                className={`px-3 py-2 rounded-full text-sm font-medium border transition-colors ${
                   activeSubtype === s.value
                     ? 'bg-blue-600 text-white border-blue-600'
                     : 'bg-white text-gray-700 border-brand-border hover:border-blue-400'
@@ -127,7 +127,7 @@ export default function CategoryFilteredGrid({ codes, subtypeOptions }: Category
             <button
               type="button"
               onClick={() => setActiveBrand(null)}
-              className={`px-3 py-1.5 rounded-xl text-sm font-medium border transition-colors ${
+              className={`px-3 py-2 rounded-xl text-sm font-medium border transition-colors ${
                 activeBrand === null
                   ? 'bg-gray-800 text-white border-gray-800'
                   : 'bg-white text-gray-700 border-brand-border hover:border-gray-400'
@@ -163,7 +163,7 @@ export default function CategoryFilteredGrid({ codes, subtypeOptions }: Category
               key={opt.label}
               type="button"
               onClick={() => setActiveSeverity(opt.value)}
-              className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors ${
+              className={`px-3 py-2 rounded-full text-sm font-medium border transition-colors ${
                 activeSeverity === opt.value
                   ? 'bg-blue-600 text-white border-blue-600'
                   : 'bg-white text-gray-700 border-brand-border hover:border-blue-400'
