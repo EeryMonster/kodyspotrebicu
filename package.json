@@ -11,7 +11,8 @@
     "db:seed": "ts-node --compiler-options '{\"module\":\"CommonJS\"}' prisma/seed.ts",
     "db:migrate": "prisma migrate dev",
     "db:reset": "prisma migrate reset --force && npm run db:seed",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "audit:ui": "node scripts/audit-ui.mjs"
   },
   "prisma": {
     "seed": "ts-node --compiler-options '{\"module\":\"CommonJS\"}' prisma/seed.ts"

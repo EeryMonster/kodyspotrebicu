@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 }
 
 const applianceCards = [
-  { slug: 'pracky', label: 'Pračky', icon: '🫧', desc: 'Chybové kódy praček všech značek' },
-  { slug: 'mycky', label: 'Myčky nádobí', icon: '🍽️', desc: 'Chybové kódy myček všech značek' },
-  { slug: 'susicky', label: 'Sušičky', icon: '♨️', desc: 'Chybové kódy sušiček všech značek' },
+  { slug: 'pracky', label: 'Pračky', img: '/categories/pracka.png', desc: 'Voda, dveře, motor, ohřev a čerpadlo' },
+  { slug: 'mycky', label: 'Myčky nádobí', img: '/categories/mycka.png', desc: 'Přívod vody, odpad, ohřev a senzory' },
+  { slug: 'susicky', label: 'Sušičky', img: '/categories/susicka.png', desc: 'Filtry, přehřátí, kondenzát a sušení' },
 ]
 
 const quickCodes = [
@@ -93,7 +93,7 @@ export default async function HomePage() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <div className="bg-gray-50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
@@ -102,60 +102,79 @@ export default async function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
-      {/* Hero */}
-      <section className="flex flex-col items-center justify-center min-h-[40vh] md:min-h-[50vh] text-center mb-12">
-        <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-3 text-balance max-w-2xl">
-          Zjistěte, co znamená chybový kód vašeho spotřebiče
-        </h1>
-        <p className="text-gray-500 max-w-xl mx-auto mb-6 text-sm md:text-base">
-          Zadejte kód z displeje pračky, myčky nebo sušičky a zjistěte příčinu, závažnost a další postup.
-        </p>
 
-        <div className="w-full max-w-[860px] mx-auto mb-4">
-          <SearchBox variant="hero" />
+      <section className="border-b border-brand-border bg-white">
+        <div className="container-app py-10 md:py-14">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-center">
+            <div className="max-w-3xl">
+              <p className="mb-3 text-sm font-semibold text-blue-700">Diagnostika chybových kódů</p>
+              <h1 className="text-3xl md:text-[2.35rem] font-bold leading-[1.08] text-gray-950 text-balance">
+                Zjistěte příčinu závady a bezpečný další krok
+              </h1>
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-600">
+                Zadejte kód z displeje pračky, myčky nebo sušičky. Okamžitě uvidíte význam chyby,
+                závažnost, bezpečné kontroly a situace, kdy raději volat servis.
+              </p>
+
+              <div className="mt-6 max-w-3xl">
+                <SearchBox variant="hero" />
+              </div>
+
+              <div className="mt-4 flex flex-wrap items-center gap-2">
+                <span className="text-sm text-gray-500">Často hledané</span>
+                {quickCodes.map((chip) => (
+                  <Link
+                    key={chip.label}
+                    href={`/hledat?q=${encodeURIComponent(chip.q)}`}
+                    className="rounded-full border border-brand-border bg-white px-3 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
+                  >
+                    {chip.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border border-t-4 border-t-blue-600 bg-brand-surface p-5">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-blue-700">Diagnostický výstup</p>
+              <h2 className="text-base font-semibold text-gray-950">Co získáte u každého kódu</h2>
+              <div className="mt-4 space-y-3">
+                {[
+                  ['Závažnost', 'Nízká, střední, vysoká nebo kritická'],
+                  ['Bezpečné kroky', 'Kontroly, které lze zkusit doma'],
+                  ['Servisní hranice', 'Kdy spotřebič vypnout a volat technika'],
+                ].map(([label, value]) => (
+                  <div key={label} className="border-t border-slate-200 pt-3 first:border-t-0 first:pt-0">
+                    <p className="text-sm font-medium text-gray-900">{label}</p>
+                    <p className="text-sm leading-relaxed text-gray-600">{value}</p>
+                  </div>
+                ))}
+              </div>
+              {totalCount > 0 && (
+                <p className="mt-5 border-t border-slate-200 pt-4 text-sm text-gray-600">
+                  <strong className="text-gray-950">{totalCount}+</strong> chybových kódů pro nejběžnější značky
+                </p>
+              )}
+            </aside>
+          </div>
         </div>
-
-        {/* Quick code chips */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
-          <span className="text-xs text-gray-400 shrink-0">Oblíbené:</span>
-          {quickCodes.map((chip) => (
-            <Link
-              key={chip.label}
-              href={`/hledat?q=${encodeURIComponent(chip.q)}`}
-              className="text-xs px-3 py-1 rounded-full border border-brand-border bg-white text-gray-600 hover:border-blue-300 hover:text-blue-700 hover:bg-blue-50 transition-colors"
-            >
-              {chip.label}
-            </Link>
-          ))}
-        </div>
-
-        {/* Quick category links */}
-        <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-          <span>Procházet:</span>
-          <Link href="/pracky" className="text-blue-600 hover:underline font-medium">Pračky</Link>
-          <Link href="/mycky" className="text-blue-600 hover:underline font-medium">Myčky</Link>
-          <Link href="/susicky" className="text-blue-600 hover:underline font-medium">Sušičky</Link>
-        </div>
-
-        {totalCount > 0 && (
-          <p className="text-xs text-gray-400">
-            Databáze obsahuje <strong className="text-gray-500">{totalCount}+</strong> chybových kódů pro nejoblíbenější značky
-          </p>
-        )}
       </section>
 
-      {/* Brands */}
-      <section className="mb-12">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Vyberte značku</h2>
-        <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-3">
+      <section className="container-app py-8">
+        <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h2 className="text-xl font-semibold text-gray-950">Vyberte značku</h2>
+            <p className="text-sm text-gray-600">Rychlý přehled kódů podle výrobce spotřebiče.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-3 gap-3 sm:grid-cols-5 lg:grid-cols-9">
           {brands.map((b) => (
             <Link
               key={b.slug}
               href={`/znacka/${b.slug}`}
               aria-label={`Chybové kódy ${b.name}`}
-              className="flex flex-col items-center gap-2 bg-white border border-gray-200 rounded-xl p-4 hover:border-blue-300 hover:shadow-md transition-all"
+              className="flex min-h-[74px] flex-col items-center justify-center gap-2 rounded-lg border border-brand-border bg-white p-3 transition-all hover:border-blue-300 hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
-              <div className="relative w-20 h-8">
+              <div className="relative h-8 w-20">
                 <Image
                   src={`/brands/${b.slug}.svg`}
                   alt={b.name}
@@ -169,32 +188,48 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Appliance categories */}
-      <section className="mb-12">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Kategorie spotřebičů</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <section className="container-app pb-8">
+        <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h2 className="text-xl font-semibold text-gray-950">Kategorie spotřebičů</h2>
+            <p className="text-sm text-gray-600">Začněte podle typu zařízení, pokud kód ještě neznáte.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           {applianceCards.map((a) => (
             <Link
               key={a.slug}
               href={`/${a.slug}`}
-              className="bg-white rounded-xl border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all text-center"
+              className="flex items-center gap-4 rounded-lg border border-brand-border bg-white p-5 transition-all hover:border-blue-300 hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
-              <div className="text-4xl mb-3">{a.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-1">{a.label}</h3>
-              <p className="text-sm text-gray-600">{a.desc}</p>
+              <div className="relative h-14 w-14 shrink-0">
+                <Image src={a.img} alt="" fill className="object-contain" sizes="56px" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-950">{a.label}</h3>
+                <p className="mt-1 text-sm leading-relaxed text-gray-600">{a.desc}</p>
+              </div>
             </Link>
           ))}
         </div>
       </section>
 
-      {/* Nejčastější problémy */}
-      <section className="mb-12">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Nejčastější problémy</h2>
+      <section className="container-app pb-10">
+        <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h2 className="text-xl font-semibold text-gray-950">Nejčastější problémy</h2>
+            <p className="text-sm text-gray-600">Praktické průvodce pro závady, které se často nehlásí kódem.</p>
+          </div>
+          <Link href="/problemy" className="text-sm font-medium text-blue-600 hover:underline">
+            Všechny problémy ({commonProblems.length}) →
+          </Link>
+        </div>
         <ProblemsGrid problems={commonProblems} />
       </section>
 
-      {/* CTA affiliate/leadgen */}
-      <ServiceCtaBox context="homepage" />
+      <section className="container-app pb-12">
+        <ServiceCtaBox context="homepage" />
+      </section>
     </div>
   )
 }
