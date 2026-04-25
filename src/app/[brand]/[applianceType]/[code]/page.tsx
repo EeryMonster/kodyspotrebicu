@@ -11,6 +11,7 @@ import CommentsSection from '@/components/CommentsSection'
 import CopyCodeButton from '@/components/CopyCodeButton'
 import ShareButtons from '@/components/ShareButtons'
 import HelpfulRating from '@/components/HelpfulRating'
+import ServiceCtaBox from '@/components/ServiceCtaBox'
 
 interface Props {
   params: { brand: string; applianceType: string; code: string }
@@ -264,20 +265,7 @@ export default async function ErrorCodePage({ params }: Props) {
           </section>
         )}
 
-        <div className="bg-white border border-brand-border rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-          <div>
-            <p className="font-medium text-gray-900 text-sm">Potřebujete servisního technika?</p>
-            <p className="text-xs text-gray-500 mt-0.5">Najděte ověřený servis ve vašem okolí</p>
-          </div>
-          <a
-            href="https://www.firmy.cz/?q=servis+dom%C3%A1c%C3%ADch+spot%C5%99ebi%C4%8D%C5%AF"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary shrink-0"
-          >
-            🔧 Najít servis v okolí
-          </a>
-        </div>
+        <ServiceCtaBox severity={entry.severityLevel} context="error-detail" />
       </div>
 
       {/* 5: Detailní vysvětlení */}

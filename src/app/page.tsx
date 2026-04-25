@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
 import SearchBox from '@/components/SearchBox'
 import ProblemsGrid from '@/components/ProblemsGrid'
+import ServiceCtaBox from '@/components/ServiceCtaBox'
 
 export const metadata: Metadata = {
   title: { absolute: 'Chybové kódy spotřebičů – databáze chyb praček, myček a sušiček | KódySpotřebičů.cz' },
@@ -163,22 +164,7 @@ export default async function HomePage() {
       </section>
 
       {/* CTA affiliate/leadgen */}
-      <section className="bg-blue-50 border border-blue-100 rounded-xl p-6 text-center">
-        <h2 className="text-lg font-semibold text-gray-900 mb-2">
-          Potřebujete servisního technika?
-        </h2>
-        <p className="text-gray-600 text-sm mb-4">
-          Pokud si s opravou nevíte rady, pomůže vám certifikovaný servisní partner ve vašem okolí.
-        </p>
-        <a
-          href="https://www.firmy.cz/?q=servis+dom%C3%A1c%C3%ADch+spot%C5%99ebi%C4%8D%C5%AF"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block px-6 py-2.5 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
-        >
-          Najít servis v okolí →
-        </a>
-      </section>
+      <ServiceCtaBox context="homepage" />
     </div>
   )
 }
