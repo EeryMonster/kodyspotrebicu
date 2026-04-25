@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   title: 'Chybové kódy sušiček',
   description: 'Databáze chybových kódů sušiček – odtahová, kondenzační, tepelné čerpadlo. Bosch, Siemens, AEG, Electrolux, Samsung, Beko.',
   alternates: { canonical: 'https://www.kodyspotrebicu.cz/susicky' },
+  openGraph: {
+    title: 'Chybové kódy sušiček | KódySpotřebičů.cz',
+    description: 'Databáze chybových kódů sušiček – odtahová, kondenzační, tepelné čerpadlo. Bosch, Siemens, AEG, Electrolux, Samsung, Beko.',
+    url: 'https://www.kodyspotrebicu.cz/susicky',
+  },
 }
 
 export default async function SusickyPage() {

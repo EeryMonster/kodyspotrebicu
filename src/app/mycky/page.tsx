@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: 'Chybové kódy myček nádobí',
   description: 'Databáze chybových kódů myček nádobí. Bosch, Siemens, AEG, Electrolux, Samsung, Beko. Zjistěte příčinu chyby myčky a jak postupovat.',
   alternates: { canonical: 'https://www.kodyspotrebicu.cz/mycky' },
+  openGraph: {
+    title: 'Chybové kódy myček nádobí | KódySpotřebičů.cz',
+    description: 'Databáze chybových kódů myček nádobí. Bosch, Siemens, AEG, Electrolux, Samsung, Beko. Zjistěte příčinu chyby myčky a jak postupovat.',
+    url: 'https://www.kodyspotrebicu.cz/mycky',
+  },
 }
 
 export default async function MyckyPage() {

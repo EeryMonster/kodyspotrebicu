@@ -203,7 +203,7 @@ export default async function HomePage() {
               className="flex items-center gap-4 rounded-lg border border-brand-border bg-white p-5 transition-all hover:border-blue-300 hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
               <div className="relative h-14 w-14 shrink-0">
-                <Image src={a.img} alt="" fill className="object-contain" sizes="56px" />
+                <Image src={a.img} alt={a.label} fill className="object-contain" sizes="56px" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-950">{a.label}</h3>

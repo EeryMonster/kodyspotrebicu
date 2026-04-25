@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: 'Chybové kódy praček',
   description: 'Databáze chybových kódů praček. Bosch, Siemens, AEG, Electrolux, Samsung, Beko.',
   alternates: { canonical: 'https://www.kodyspotrebicu.cz/pracky' },
+  openGraph: {
+    title: 'Chybové kódy praček | KódySpotřebičů.cz',
+    description: 'Databáze chybových kódů praček. Bosch, Siemens, AEG, Electrolux, Samsung, Beko.',
+    url: 'https://www.kodyspotrebicu.cz/pracky',
+  },
 }
 
 export default async function PrackyPage() {
