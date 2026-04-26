@@ -1,25 +1,42 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import SearchBox from './SearchBox'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolledPastHero, setScrolledPastHero] = useState(false)
   const pathname = usePathname()
   const isHome = pathname === '/'
 
+  useEffect(() => {
+    if (!isHome) return
+    const onScroll = () => setScrolledPastHero(window.scrollY > 400)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [isHome])
+
+  useEffect(() => {
+    setMenuOpen(false)
+  }, [pathname])
+
+  const showSearch = !isHome || scrolledPastHero
+
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
+    <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-gray-200">
       <div className="max-w-6xl mx-auto px-4 py-3">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="text-xl font-bold text-blue-700 shrink-0 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+          <Link href="/" className="flex items-center gap-2 text-xl font-bold text-blue-700 shrink-0 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+            <Image src="/logo.png" alt="KódySpotřebičů.cz logo" width={32} height={32} priority sizes="32px" className="rounded-full" />
             KódySpotřebičů.cz
           </Link>
 
-          {!isHome && (
-            <div className="hidden md:flex flex-1 max-w-lg">
+          {showSearch && (
+            <div className="hidden md:flex flex-1 max-w-lg transition-opacity duration-200">
               <SearchBox />
             </div>
           )}
@@ -30,8 +47,8 @@ export default function Header() {
             <Link href="/susicky" className="hover:text-blue-600 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Sušičky</Link>
           </nav>
 
-          {!isHome && (
-            <div className="md:hidden flex flex-1 max-w-xs">
+          {showSearch && (
+            <div className="md:hidden flex flex-1 max-w-xs transition-opacity duration-200">
               <SearchBox />
             </div>
           )}

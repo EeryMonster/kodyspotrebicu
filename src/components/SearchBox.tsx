@@ -91,7 +91,7 @@ export default function SearchBox({ variant = 'compact' }: SearchBoxProps) {
             onKeyDown={(e) => {
               if (e.key === 'Enter' && query.trim()) handleSubmit()
             }}
-            placeholder={isHero ? 'Zadejte kód, např. E15, E10, F11…' : 'Hledat kód chyby, značku...'}
+            placeholder={isHero ? 'Zadejte značku a kód, např. Bosch E15' : 'Hledat kód chyby, značku...'}
             className={isHero
               ? 'w-full px-4 py-3.5 pl-12 border border-brand-border rounded-lg text-base text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-primary placeholder:text-gray-400 shadow-sm'
               : 'w-full px-4 py-2 pl-10 border border-brand-border rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-primary placeholder:text-gray-500'
@@ -111,7 +111,7 @@ export default function SearchBox({ variant = 'compact' }: SearchBoxProps) {
           <button
             type="button"
             onClick={handleSubmit}
-            className="inline-flex items-center justify-center gap-2 bg-brand-primary text-white rounded-lg px-6 py-3.5 text-base font-medium hover:bg-brand-primary-dark transition-colors w-full sm:w-auto shrink-0"
+            className="btn-primary-lg w-full sm:w-auto shrink-0"
           >
             Vyhledat kód
           </button>

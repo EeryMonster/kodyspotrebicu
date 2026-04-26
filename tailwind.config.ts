@@ -10,13 +10,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
         brand: {
-          primary: "#2563eb",
-          "primary-dark": "#1d4ed8",
-          surface: "#f8fafc",
-          border: "#e2e8f0",
+          primary: "#2563eb",        // blue-600 — hlavní CTA
+          "primary-dark": "#1d4ed8", // blue-700 — hover / aktivní stav i modré texty
+          soft: "#eff6ff",           // blue-50 — světlá modrá pozadí (badge, hover)
+          "soft-border": "#bfdbfe",  // blue-200 — jemné modré okraje
+          surface: "#f8fafc",        // slate-50 — neutrální podklad
+          border: "#e2e8f0",         // slate-200 — neutrální okraje
         },
       },
     },

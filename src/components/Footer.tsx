@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -6,7 +7,10 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div>
-            <h3 className="font-bold text-gray-900 mb-3">KódySpotřebičů.cz</h3>
+            <Link href="/" className="inline-flex items-center gap-2 mb-3 font-bold text-gray-900">
+              <Image src="/logo.png" alt="" width={28} height={28} className="rounded-full" />
+              KódySpotřebičů.cz
+            </Link>
             <p className="text-sm text-gray-600">
               Databáze chybových kódů domácích spotřebičů. Zjistěte příčinu, závažnost a postup opravy.
             </p>

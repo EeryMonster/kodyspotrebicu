@@ -70,7 +70,7 @@ export default function CommentsSection({ errorCodeId, initialComments }: Commen
           </div>
         </summary>
 
-        <form onSubmit={handleSubmit} className="mt-4 bg-gray-50 p-5 rounded-lg border border-gray-100">
+        <form onSubmit={handleSubmit} className="mt-4 bg-gray-50 p-5 rounded-xl border border-gray-100">
           {message && (
             <div className={`p-3 rounded-lg text-sm mb-4 ${message.type === 'success' ? 'bg-green-50 text-green-800 border border-green-200' : 'bg-red-50 text-red-800 border border-red-200'}`}>
               {message.text}
@@ -106,7 +106,7 @@ export default function CommentsSection({ errorCodeId, initialComments }: Commen
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full md:w-auto px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
+              className="btn-primary w-full md:w-auto disabled:opacity-50"
             >
               {isSubmitting ? 'Odesílám...' : 'Odeslat komentář'}
             </button>

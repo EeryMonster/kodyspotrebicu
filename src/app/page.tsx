@@ -134,7 +134,7 @@ export default async function HomePage() {
               </div>
             </div>
 
-            <aside className="rounded-lg border border-brand-border border-t-4 border-t-blue-600 bg-brand-surface p-5">
+            <aside className="rounded-xl border border-brand-border border-t-4 border-t-blue-600 bg-brand-surface p-5">
               <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-blue-700">Diagnostický výstup</p>
               <h2 className="text-base font-semibold text-gray-950">Co získáte u každého kódu</h2>
               <div className="mt-4 space-y-3">
@@ -172,7 +172,7 @@ export default async function HomePage() {
               key={b.slug}
               href={`/znacka/${b.slug}`}
               aria-label={`Chybové kódy ${b.name}`}
-              className="flex min-h-[74px] flex-col items-center justify-center gap-2 rounded-lg border border-brand-border bg-white p-3 transition-all hover:border-blue-300 hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+              className="flex min-h-[74px] flex-col items-center justify-center gap-2 rounded-xl border border-brand-border bg-white p-3 transition-all duration-200 hover:border-blue-300 hover:shadow-md hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
               <div className="relative h-8 w-20">
                 <Image
@@ -200,7 +200,7 @@ export default async function HomePage() {
             <Link
               key={a.slug}
               href={`/${a.slug}`}
-              className="flex items-center gap-4 rounded-lg border border-brand-border bg-white p-5 transition-all hover:border-blue-300 hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+              className="flex items-center gap-4 rounded-xl border border-brand-border bg-white p-5 transition-all duration-200 hover:border-blue-300 hover:shadow-md hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
               <div className="relative h-14 w-14 shrink-0">
                 <Image src={a.img} alt={a.label} fill className="object-contain" sizes="56px" />

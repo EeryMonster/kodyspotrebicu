@@ -69,10 +69,7 @@ export default async function SearchPage({ searchParams }: Props) {
               className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-          <button
-            type="submit"
-            className="px-5 py-2.5 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
-          >
+          <button type="submit" className="btn-primary">
             Hledat
           </button>
         </form>

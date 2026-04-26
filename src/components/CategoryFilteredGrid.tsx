@@ -1,7 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
-import Image from 'next/image'
+import { useMemo, useState } from 'react'
 import ErrorCodeCard from '@/components/ErrorCodeCard'
 
 interface CodeRow {
@@ -34,6 +33,32 @@ const SEVERITY_OPTIONS: { label: string; value: number | null }[] = [
   { label: 'Vysoká', value: 3 },
   { label: 'Kritická', value: 4 },
 ]
+
+const filterButtonBase = 'min-h-[34px] rounded-full border px-3 py-1.5 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600'
+const filterButtonActive = 'border-blue-600 bg-blue-600 text-white shadow-sm'
+const filterButtonDefaultActive = 'border-brand-border bg-gray-50 text-gray-900'
+const filterButtonInactive = 'border-transparent bg-transparent text-gray-600 hover:bg-gray-100 hover:text-gray-950'
+
+const BRAND_LABELS: Record<string, string> = {
+  aeg: 'AEG',
+  beko: 'Beko',
+  bosch: 'Bosch',
+  electrolux: 'Electrolux',
+  lg: 'LG',
+  miele: 'Miele',
+  samsung: 'Samsung',
+  siemens: 'Siemens',
+  whirlpool: 'Whirlpool',
+}
+
+function filterButtonClass(isActive: boolean, isDefault = false) {
+  if (!isActive) return `${filterButtonBase} ${filterButtonInactive}`
+  return `${filterButtonBase} ${isDefault ? filterButtonDefaultActive : filterButtonActive}`
+}
+
+function brandLabel(brand: string) {
+  return BRAND_LABELS[brand.toLowerCase()] ?? brand
+}
 
 export default function CategoryFilteredGrid({ codes, subtypeOptions }: CategoryFilteredGridProps) {
   const [search, setSearch] = useState('')
@@ -68,135 +93,139 @@ export default function CategoryFilteredGrid({ codes, subtypeOptions }: Category
 
   return (
     <div>
-      {/* Search within category */}
-      <div className="relative mb-4">
-        <label htmlFor="category-search" className="sr-only">Hledat v kategorii</label>
-        <input
-          id="category-search"
-          type="search"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Hledat kód nebo název závady…"
-          className="w-full px-4 py-2.5 pl-10 border border-brand-border rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-primary placeholder:text-gray-400"
-        />
-        <svg className="absolute left-3 top-3 w-4 h-4 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-        </svg>
-      </div>
+      <section className="mb-5 rounded-xl border border-brand-border bg-white px-4 py-4 shadow-sm" aria-label="Filtry chybových kódů">
+        <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
+          <div className="relative min-w-0 flex-1">
+            <label htmlFor="category-search" className="sr-only">
+              Hledat v kategorii
+            </label>
+            <input
+              id="category-search"
+              type="search"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Hledat kód nebo název závady..."
+              className="w-full rounded-lg border border-brand-border bg-white px-4 py-2.5 pl-10 text-sm text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-primary"
+            />
+            <svg className="pointer-events-none absolute left-3.5 top-3 h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
 
-      {/* Subtype filter */}
-      {subtypeOptions && subtypeOptions.length > 0 && (
-        <div className="mb-4">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Typ</p>
-          <div className="flex flex-wrap gap-2">
-            <button
-              type="button"
-              onClick={() => setActiveSubtype(null)}
-              className={`px-3 py-2 rounded-full text-sm font-medium border transition-colors ${
-                activeSubtype === null
-                  ? 'bg-blue-600 text-white border-blue-600'
-                  : 'bg-white text-gray-700 border-brand-border hover:border-blue-400'
-              }`}
-            >
-              Všechny typy
-            </button>
-            {subtypeOptions.map((s) => (
-              <button
-                key={s.value}
-                type="button"
-                onClick={() => setActiveSubtype(activeSubtype === s.value ? null : s.value)}
-                title={s.desc}
-                className={`px-3 py-2 rounded-full text-sm font-medium border transition-colors ${
-                  activeSubtype === s.value
-                    ? 'bg-blue-600 text-white border-blue-600'
-                    : 'bg-white text-gray-700 border-brand-border hover:border-blue-400'
-                }`}
-              >
-                {s.label}
+          <div className="flex items-center justify-between gap-3 lg:min-w-max">
+            <p className="text-sm text-gray-500">
+              <strong className="text-gray-900">{filtered.length}</strong> z {codes.length} kódů
+            </p>
+            {hasActiveFilter && (
+              <button type="button" onClick={reset} className="text-sm font-medium text-blue-700 hover:text-blue-800">
+                Zrušit filtry
               </button>
-            ))}
+            )}
           </div>
         </div>
-      )}
 
-      {/* Brand filter */}
-      {allBrands.length > 0 && (
-        <div className="mb-4">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Značka</p>
-          <div className="flex flex-wrap gap-2">
-            <button
-              type="button"
-              onClick={() => setActiveBrand(null)}
-              className={`px-3 py-2 rounded-xl text-sm font-medium border transition-colors ${
-                activeBrand === null
-                  ? 'bg-gray-800 text-white border-gray-800'
-                  : 'bg-white text-gray-700 border-brand-border hover:border-gray-400'
-              }`}
-            >
-              Všechny značky
-            </button>
-            {allBrands.map((b) => (
-              <button
-                key={b}
-                type="button"
-                onClick={() => setActiveBrand(activeBrand === b ? null : b)}
-                aria-label={b}
-                className={`flex items-center justify-center bg-white border rounded-xl px-2 py-1 transition-all ${
-                  activeBrand === b
-                    ? 'border-blue-500 ring-2 ring-blue-200'
-                    : 'border-brand-border hover:border-blue-300 hover:shadow-sm'
-                }`}
-              >
-                <Image src={`/brands/${b.toLowerCase()}.svg`} alt={b} width={80} height={30} className="object-contain block" />
-              </button>
-            ))}
+        <div className="mt-4 space-y-3 border-t border-gray-100 pt-4">
+          {subtypeOptions && subtypeOptions.length > 0 && (
+            <div className="grid gap-2 sm:grid-cols-[88px_minmax(0,1fr)] sm:items-center">
+              <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">Typ</p>
+              <div className="flex flex-wrap gap-1.5">
+                <button
+                  type="button"
+                  onClick={() => setActiveSubtype(null)}
+                  aria-pressed={activeSubtype === null}
+                  className={filterButtonClass(activeSubtype === null, true)}
+                >
+                  Všechny
+                </button>
+                {subtypeOptions.map((s) => (
+                  <button
+                    key={s.value}
+                    type="button"
+                    onClick={() => setActiveSubtype(activeSubtype === s.value ? null : s.value)}
+                    aria-pressed={activeSubtype === s.value}
+                    title={s.desc}
+                    className={filterButtonClass(activeSubtype === s.value)}
+                  >
+                    {s.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {allBrands.length > 0 && (
+            <div className="grid gap-2 sm:grid-cols-[88px_minmax(0,1fr)] sm:items-center">
+              <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">Značka</p>
+              <div className="flex flex-wrap gap-1.5">
+                <button
+                  type="button"
+                  onClick={() => setActiveBrand(null)}
+                  aria-pressed={activeBrand === null}
+                  className={filterButtonClass(activeBrand === null, true)}
+                >
+                  Všechny
+                </button>
+                {allBrands.map((b) => (
+                  <button
+                    key={b}
+                    type="button"
+                    onClick={() => setActiveBrand(activeBrand === b ? null : b)}
+                    aria-pressed={activeBrand === b}
+                    className={filterButtonClass(activeBrand === b)}
+                  >
+                    {brandLabel(b)}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <div className="grid gap-2 sm:grid-cols-[88px_minmax(0,1fr)] sm:items-center">
+            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">Závažnost</p>
+            <div className="flex flex-wrap gap-1.5">
+              {SEVERITY_OPTIONS.map((opt) => (
+                <button
+                  key={opt.label}
+                  type="button"
+                  onClick={() => setActiveSeverity(opt.value)}
+                  aria-pressed={activeSeverity === opt.value}
+                  className={filterButtonClass(activeSeverity === opt.value, opt.value === null)}
+                >
+                  {opt.label}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
-      )}
 
-      {/* Severity filter */}
-      <div className="mb-6">
-        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Závažnost</p>
-        <div className="flex flex-wrap gap-2">
-          {SEVERITY_OPTIONS.map((opt) => (
-            <button
-              key={opt.label}
-              type="button"
-              onClick={() => setActiveSeverity(opt.value)}
-              className={`px-3 py-2 rounded-full text-sm font-medium border transition-colors ${
-                activeSeverity === opt.value
-                  ? 'bg-blue-600 text-white border-blue-600'
-                  : 'bg-white text-gray-700 border-brand-border hover:border-blue-400'
-              }`}
-            >
-              {opt.label}
-            </button>
-          ))}
-        </div>
-      </div>
+        {hasActiveFilter && (
+          <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-gray-500">
+            <span>Aktivní filtr</span>
+            {search.trim() && <span className="rounded-full bg-gray-100 px-2 py-1 text-gray-700">{search.trim()}</span>}
+            {activeSubtype && (
+              <span className="rounded-full bg-gray-100 px-2 py-1 text-gray-700">
+                {subtypeOptions?.find((s) => s.value === activeSubtype)?.label}
+              </span>
+            )}
+            {activeBrand && <span className="rounded-full bg-gray-100 px-2 py-1 text-gray-700">{brandLabel(activeBrand)}</span>}
+            {activeSeverity !== null && (
+              <span className="rounded-full bg-gray-100 px-2 py-1 text-gray-700">
+                {SEVERITY_OPTIONS.find((s) => s.value === activeSeverity)?.label}
+              </span>
+            )}
+          </div>
+        )}
+      </section>
 
-      {/* Active filter bar */}
-      {hasActiveFilter && (
-        <div className="flex items-center justify-between mb-4">
-          <p className="text-sm text-gray-500">
-            Nalezeno <strong className="text-gray-700">{filtered.length}</strong> kódů
-          </p>
-          <button type="button" onClick={reset} className="text-sm text-blue-600 hover:text-blue-800 font-medium">
-            Zrušit filtry
-          </button>
-        </div>
-      )}
-
-      {/* Grid or empty state */}
       {filtered.length === 0 ? (
-        <div className="text-center py-16 border border-brand-border rounded-xl bg-brand-surface">
-          <p className="text-gray-600 mb-3">Nenašli jsme žádný kód pro zvolený filtr.</p>
-          <button type="button" onClick={reset} className="text-sm text-blue-600 hover:underline font-medium">
+        <div className="rounded-xl border border-brand-border bg-brand-surface py-16 text-center">
+          <p className="mb-3 text-gray-600">Nenašli jsme žádný kód pro zvolený filtr.</p>
+          <button type="button" onClick={reset} className="text-sm font-medium text-blue-600 hover:underline">
             Zrušit filtry a zobrazit vše
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {filtered.map((c) => (
             <ErrorCodeCard key={c.id} {...c} />
           ))}

@@ -25,7 +25,7 @@ export default function ErrorCodeCard({
   return (
     <Link
       href={`/${brand.toLowerCase()}/${appliancePath[applianceType] || applianceType}/${slug}`}
-      className="card group flex flex-col p-4 hover:border-blue-300 hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+      className="card group flex flex-col p-4 duration-200 hover:border-blue-300 hover:shadow-md hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
     >
       <div className="flex items-center justify-between gap-2 mb-2">
         <span className="code-badge">{code}</span>
