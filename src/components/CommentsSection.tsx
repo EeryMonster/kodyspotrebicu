@@ -116,13 +116,13 @@ export default function CommentsSection({ errorCodeId, initialComments }: Commen
 
       <div className="space-y-6">
         {comments.length === 0 ? (
-          <p className="text-sm text-gray-500 text-center py-4">Zatím tu nejsou žádné komentáře. Buďte první!</p>
+          <p className="text-sm text-gray-600 text-center py-4">Zatím tu nejsou žádné komentáře. Buďte první!</p>
         ) : (
           comments.map((comment) => (
             <div key={comment.id} className="border-b border-gray-100 pb-5 last:border-0 last:pb-0">
               <div className="flex items-baseline justify-between mb-2">
                 <span className="font-semibold text-gray-900">{comment.authorName}</span>
-                <span className="text-xs text-gray-500">
+                <span className="text-xs text-gray-600">
                   {new Date(comment.createdAt).toLocaleDateString('cs-CZ', {
                     day: 'numeric',
                     month: 'long',

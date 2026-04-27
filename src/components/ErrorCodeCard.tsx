@@ -32,7 +32,7 @@ export default function ErrorCodeCard({
         <SeverityBadge level={severityLevel} size="sm" />
       </div>
 
-      <p className="text-xs text-gray-500 mb-1.5">
+      <p className="text-xs text-gray-600 mb-1.5">
         {brand.charAt(0).toUpperCase() + brand.slice(1)} · {APPLIANCE_LABELS[applianceType] || applianceType}
         {subtype && <> · <span className="text-purple-600">{SUBTYPE_LABELS[subtype] || subtype}</span></>}
       </p>

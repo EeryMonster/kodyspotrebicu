@@ -29,7 +29,7 @@ export default function HelpfulRating({ errorCodeId, initialYes = 0, initialNo =
 
   if (voted) {
     return (
-      <div className="flex items-center gap-3 text-sm text-gray-500">
+      <div className="flex items-center gap-3 text-sm text-gray-600">
         <span>{voted === 'yes' ? '😊' : '🙏'}</span>
         <span>{voted === 'yes' ? 'Díky za zpětnou vazbu!' : 'Díky! Budeme obsah zlepšovat.'}</span>
         <span className="text-xs text-gray-400">👍 {counts.yes} · 👎 {counts.no}</span>

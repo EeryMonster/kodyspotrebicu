@@ -43,7 +43,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-8 pt-4 border-t border-gray-100 text-sm text-gray-500 text-center">
+        <div className="mt-8 pt-4 border-t border-gray-100 text-sm text-gray-600 text-center">
           © {new Date().getFullYear()} KódySpotřebičů.cz – Informativní databáze chybových kódů spotřebičů
         </div>
       </div>

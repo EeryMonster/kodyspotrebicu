@@ -5,6 +5,14 @@ import type { Metadata } from 'next'
 import SearchBox from '@/components/SearchBox'
 import ProblemsGrid from '@/components/ProblemsGrid'
 import ServiceCtaBox from '@/components/ServiceCtaBox'
+import { WashingMachine, UtensilsCrossed, Shirt } from 'lucide-react'
+
+type ApplianceIcon = 'pracka' | 'mycka' | 'susicka'
+const APPLIANCE_ICON: Record<ApplianceIcon, React.ComponentType<{ className?: string }>> = {
+  pracka: WashingMachine,
+  mycka: UtensilsCrossed,
+  susicka: Shirt,
+}
 
 export const metadata: Metadata = {
   title: { absolute: 'Chybové kódy spotřebičů – databáze chyb praček, myček a sušiček | KódySpotřebičů.cz' },
@@ -17,12 +25,12 @@ const applianceCards = [
   { slug: 'susicky', label: 'Sušičky', img: '/categories/susicka.png', desc: 'Filtry, přehřátí, kondenzát a sušení' },
 ]
 
-const quickCodes = [
-  { label: 'Bosch E15', q: 'Bosch E15' },
-  { label: 'AEG E10', q: 'AEG E10' },
-  { label: 'Bosch E24', q: 'Bosch E24' },
-  { label: 'Samsung 4C', q: 'Samsung 4C' },
-  { label: 'Whirlpool F05', q: 'Whirlpool F05' },
+const quickCodes: { label: string; q: string; appliance: ApplianceIcon }[] = [
+  { label: 'Bosch E15', q: 'Bosch E15', appliance: 'mycka' },
+  { label: 'AEG E10', q: 'AEG E10', appliance: 'pracka' },
+  { label: 'Bosch E24', q: 'Bosch E24', appliance: 'mycka' },
+  { label: 'Samsung 4C', q: 'Samsung 4C', appliance: 'mycka' },
+  { label: 'Whirlpool F05', q: 'Whirlpool F05', appliance: 'susicka' },
 ]
 
 const brands = [
@@ -121,16 +129,20 @@ export default async function HomePage() {
               </div>
 
               <div className="mt-4 flex flex-wrap items-center gap-2">
-                <span className="text-sm text-gray-500">Často hledané</span>
-                {quickCodes.map((chip) => (
-                  <Link
-                    key={chip.label}
-                    href={`/hledat?q=${encodeURIComponent(chip.q)}`}
-                    className="rounded-full border border-brand-border bg-white px-3 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
-                  >
-                    {chip.label}
-                  </Link>
-                ))}
+                <span className="text-sm text-gray-600">Často hledané</span>
+                {quickCodes.map((chip) => {
+                  const Icon = APPLIANCE_ICON[chip.appliance]
+                  return (
+                    <Link
+                      key={chip.label}
+                      href={`/hledat?q=${encodeURIComponent(chip.q)}`}
+                      className="inline-flex items-center gap-1.5 rounded-full border border-brand-border bg-white px-3 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
+                    >
+                      <Icon className="w-3.5 h-3.5 text-gray-400" />
+                      {chip.label}
+                    </Link>
+                  )
+                })}
               </div>
             </div>
 
@@ -182,7 +194,7 @@ export default async function HomePage() {
                   className="object-contain"
                 />
               </div>
-              <span className="text-xs text-gray-500 font-medium">{b.name}</span>
+              <span className="text-xs text-gray-600 font-medium">{b.name}</span>
             </Link>
           ))}
         </div>

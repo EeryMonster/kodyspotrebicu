@@ -30,7 +30,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <nav aria-label="Breadcrumb" className="text-sm text-gray-500 mb-4">
+      <nav aria-label="Breadcrumb" className="text-sm text-gray-600 mb-4">
         <ol className="flex flex-wrap items-center gap-1">
           <li>
             <Link href="/" className="hover:text-blue-600">Domů</Link>

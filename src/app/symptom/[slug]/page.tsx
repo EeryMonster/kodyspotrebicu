@@ -163,7 +163,7 @@ export default async function SymptomPage({ params }: Props) {
       {/* Odkazy na kategorie */}
       {symptom.applianceTypes.length > 0 && (
         <section className="border-t border-gray-200 pt-6">
-          <p className="text-sm text-gray-500 mb-3">Databáze kódů pro tento spotřebič:</p>
+          <p className="text-sm text-gray-600 mb-3">Databáze kódů pro tento spotřebič:</p>
           <div className="flex flex-wrap gap-2">
             {symptom.applianceTypes.map((type) => {
               const link = APPLIANCE_LINKS[type]

@@ -27,7 +27,7 @@ export default function CopyCodeButton({ code, brand, applianceLabel, url }: Pro
     <button
       onClick={handleCopy}
       title="Kopírovat kód"
-      className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-blue-600 border border-gray-200 hover:border-blue-300 rounded-lg px-2.5 py-1 transition-all bg-white"
+      className="inline-flex items-center gap-1.5 text-xs text-gray-600 hover:text-blue-600 border border-gray-200 hover:border-blue-300 rounded-lg px-2.5 py-1 transition-all bg-white"
     >
       {copied ? (
         <>

@@ -157,7 +157,7 @@ export default async function ErrorCodePage({ params }: Props) {
             <p className="text-lg text-gray-600 leading-relaxed">
               {entry.shortMeaning}
             </p>
-            <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 font-medium mt-2">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 font-medium mt-2">
               <CopyCodeButton
                 code={entry.code}
                 brand={entry.brand.charAt(0).toUpperCase() + entry.brand.slice(1)}
@@ -176,7 +176,7 @@ export default async function ErrorCodePage({ params }: Props) {
           </div>
           
           <div className="flex gap-3 flex-wrap md:flex-col lg:flex-row shrink-0 mt-2 md:mt-0 items-start">
-             <SeverityBadge level={entry.severityLevel} size="md" className="shadow-sm" />
+             <SeverityBadge level={entry.severityLevel} size="lg" className="shadow-sm" />
              {entry.subtype && (
                <div className="bg-white text-gray-700 border border-gray-200/60 px-4 py-2 rounded-lg flex items-center gap-2 font-semibold text-sm shadow-sm">
                  <Settings className="w-4 h-4 text-gray-400" />
@@ -196,7 +196,7 @@ export default async function ErrorCodePage({ params }: Props) {
               <div className="bg-green-800 text-white p-2 rounded-lg flex items-center justify-center">
                 <Wrench className="w-5 h-5" />
               </div>
-              <h3 className="text-xl font-bold text-green-800 tracking-tight">Lze bezpečně zkusit doma</h3>
+              <h2 className="text-xl font-bold text-green-800 tracking-tight">Lze bezpečně zkusit doma</h2>
             </div>
             <ul className="flex flex-col gap-4 text-gray-700">
               {entry.safeChecks.map((check, i) => (
@@ -215,7 +215,7 @@ export default async function ErrorCodePage({ params }: Props) {
               <div className="bg-yellow-600 text-white p-2 rounded-lg flex items-center justify-center">
                 <AlertTriangle className="w-5 h-5" />
               </div>
-              <h3 className="text-xl font-bold text-yellow-800 tracking-tight">Nedoporučujeme domácí opravu</h3>
+              <h2 className="text-xl font-bold text-yellow-800 tracking-tight">Nedoporučujeme domácí opravu</h2>
             </div>
             <p className="text-gray-700 leading-relaxed">Tento typ závady vyžaduje zásah odborného technika. Je lepší neriskovat další poškození nebo úraz elektrickým proudem.</p>
           </div>
@@ -228,7 +228,7 @@ export default async function ErrorCodePage({ params }: Props) {
               <div className="bg-red-600 text-white p-2 rounded-lg flex items-center justify-center">
                 <AlertTriangle className="w-5 h-5" />
               </div>
-              <h3 className="text-xl font-bold text-red-600 tracking-tight">Kdy okamžitě volat servis</h3>
+              <h2 className="text-xl font-bold text-red-600 tracking-tight">Kdy okamžitě volat servis</h2>
             </div>
             <ul className="flex flex-col gap-4 text-gray-700">
               {entry.whenToStopAndCallService.map((w, i) => (
@@ -267,7 +267,7 @@ export default async function ErrorCodePage({ params }: Props) {
                         height={500}
                         className="w-full object-contain max-h-96"
                       />
-                      {block.alt && <p className="text-sm text-gray-500 mt-4 text-center">{block.alt}</p>}
+                      {block.alt && <p className="text-sm text-gray-600 mt-4 text-center">{block.alt}</p>}
                     </div>
                   )
                 }
@@ -293,9 +293,9 @@ export default async function ErrorCodePage({ params }: Props) {
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
               {entry.likelyCauses.length > 0 ? (
                 <>
-                  <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2 tracking-tight">
+                  <h2 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2 tracking-tight">
                     <LayoutList className="w-5 h-5 text-gray-500" /> Pravděpodobné příčiny
-                  </h3>
+                  </h2>
                   <ul className="flex flex-col gap-3">
                     {entry.likelyCauses.map((cause, i) => (
                       <li key={i} className="flex items-start gap-3">
@@ -307,7 +307,7 @@ export default async function ErrorCodePage({ params }: Props) {
                 </>
               ) : howToFaqItem && (
                 <>
-                   <h3 className="text-lg font-bold text-gray-900 mb-4 tracking-tight">Jak opravit chybu {entry.code}</h3>
+                   <h2 className="text-lg font-bold text-gray-900 mb-4 tracking-tight">Jak opravit chybu {entry.code}</h2>
                    <p className="text-sm leading-relaxed text-gray-700 bg-gray-50 p-4 rounded-lg border border-gray-100">{howToFaqItem.a}</p>
                 </>
               )}
@@ -316,9 +316,9 @@ export default async function ErrorCodePage({ params }: Props) {
           
           {entry.possibleParts.length > 0 && (
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-              <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2 tracking-tight">
+              <h2 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2 tracking-tight">
                 <Settings className="w-5 h-5 text-gray-500" /> Možné vadné díly
-              </h3>
+              </h2>
               <div className="flex flex-wrap gap-2">
                 {entry.possibleParts.map((part, i) => (
                   <span key={i} className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium border border-gray-200/60">{part}</span>
