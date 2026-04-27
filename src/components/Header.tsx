@@ -27,10 +27,10 @@ export default function Header() {
   const showSearch = !isHome || scrolledPastHero
 
   return (
-    <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-gray-200">
+    <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-brand-border">
       <div className="max-w-6xl mx-auto px-4 py-3">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-2 text-xl font-bold text-blue-700 shrink-0 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+          <Link href="/" className="flex items-center gap-2 text-xl font-bold text-brand-primary-dark shrink-0 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
             <Image src="/logo.png" alt="KódySpotřebičů.cz logo" width={32} height={32} priority sizes="32px" className="rounded-full" />
             KódySpotřebičů.cz
           </Link>
@@ -42,9 +42,9 @@ export default function Header() {
           )}
 
           <nav aria-label="Hlavní navigace" className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700 shrink-0">
-            <Link href="/pracky" className="hover:text-blue-600 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Pračky</Link>
-            <Link href="/mycky" className="hover:text-blue-600 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Myčky</Link>
-            <Link href="/susicky" className="hover:text-blue-600 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Sušičky</Link>
+            <Link href="/pracky" className="hover:text-brand-primary rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Pračky</Link>
+            <Link href="/mycky" className="hover:text-brand-primary rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Myčky</Link>
+            <Link href="/susicky" className="hover:text-brand-primary rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Sušičky</Link>
           </nav>
 
           {showSearch && (
@@ -68,9 +68,9 @@ export default function Header() {
         {menuOpen && (
           <div className="md:hidden mt-3 pb-2 border-t border-gray-100 pt-3 space-y-3">
             <nav aria-label="Mobilní navigace" className="flex flex-col gap-2 text-sm font-medium text-gray-700">
-              <Link href="/pracky" className="hover:text-blue-600 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600" onClick={() => setMenuOpen(false)}>Pračky</Link>
-              <Link href="/mycky" className="hover:text-blue-600 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600" onClick={() => setMenuOpen(false)}>Myčky</Link>
-              <Link href="/susicky" className="hover:text-blue-600 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600" onClick={() => setMenuOpen(false)}>Sušičky</Link>
+              <Link href="/pracky" className="hover:text-brand-primary rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600" onClick={() => setMenuOpen(false)}>Pračky</Link>
+              <Link href="/mycky" className="hover:text-brand-primary rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600" onClick={() => setMenuOpen(false)}>Myčky</Link>
+              <Link href="/susicky" className="hover:text-brand-primary rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600" onClick={() => setMenuOpen(false)}>Sušičky</Link>
             </nav>
           </div>
         )}

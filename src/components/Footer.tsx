@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer role="contentinfo" className="bg-white border-t border-gray-200 mt-12">
+    <footer role="contentinfo" className="bg-white border-t border-brand-border mt-12">
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div>
@@ -18,9 +18,9 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-gray-800 mb-3">Spotřebiče</h3>
             <ul className="space-y-1 text-sm">
-              <li><Link href="/pracky" className="text-gray-600 hover:text-blue-600">Pračky</Link></li>
-              <li><Link href="/mycky" className="text-gray-600 hover:text-blue-600">Myčky nádobí</Link></li>
-              <li><Link href="/susicky" className="text-gray-600 hover:text-blue-600">Sušičky</Link></li>
+              <li><Link href="/pracky" className="text-gray-600 hover:text-brand-primary">Pračky</Link></li>
+              <li><Link href="/mycky" className="text-gray-600 hover:text-brand-primary">Myčky nádobí</Link></li>
+              <li><Link href="/susicky" className="text-gray-600 hover:text-brand-primary">Sušičky</Link></li>
             </ul>
           </div>
           <div>
@@ -28,7 +28,7 @@ export default function Footer() {
             <ul className="space-y-1 text-sm">
               {['Bosch', 'Siemens', 'AEG', 'Electrolux', 'Samsung', 'Beko'].map((b) => (
                 <li key={b}>
-                  <Link href={`/znacka/${b.toLowerCase()}`} className="text-gray-600 hover:text-blue-600">{b}</Link>
+                  <Link href={`/znacka/${b.toLowerCase()}`} className="text-gray-600 hover:text-brand-primary">{b}</Link>
                 </li>
               ))}
             </ul>
@@ -36,14 +36,14 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-gray-800 mb-3">Nástroje</h3>
             <ul className="space-y-1 text-sm">
-              <li><Link href="/hledat" className="text-gray-600 hover:text-blue-600">Vyhledávání</Link></li>
-              <li><Link href="/sitemap.xml" className="text-gray-600 hover:text-blue-600">Sitemap</Link></li>
-              <li><Link href="/o-nas" className="text-gray-600 hover:text-blue-600">O webu</Link></li>
-              <li><Link href="/o-nas#zasady" className="text-gray-600 hover:text-blue-600">Ochrana osobních údajů</Link></li>
+              <li><Link href="/hledat" className="text-gray-600 hover:text-brand-primary">Vyhledávání</Link></li>
+              <li><Link href="/sitemap.xml" className="text-gray-600 hover:text-brand-primary">Sitemap</Link></li>
+              <li><Link href="/o-nas" className="text-gray-600 hover:text-brand-primary">O webu</Link></li>
+              <li><Link href="/o-nas#zasady" className="text-gray-600 hover:text-brand-primary">Ochrana osobních údajů</Link></li>
             </ul>
           </div>
         </div>
-        <div className="mt-8 pt-4 border-t border-gray-100 text-sm text-gray-600 text-center">
+        <div className="mt-8 pt-4 border-t border-brand-border text-sm text-gray-600 text-center">
           © {new Date().getFullYear()} KódySpotřebičů.cz – Informativní databáze chybových kódů spotřebičů
         </div>
       </div>

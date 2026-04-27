@@ -20,9 +20,9 @@ export default function ProblemsGrid({ problems }: { problems: Problem[] }) {
           className="flex min-h-[96px] items-start gap-3 rounded-xl border border-brand-border bg-white p-4 transition-all duration-200 hover:border-blue-300 hover:shadow-md hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
         >
           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-brand-surface">
-            <Image src={p.img} alt={p.label} width={72} height={72} className="h-10 w-10 object-contain" />
+            <Image src={p.img} alt="" width={72} height={72} className="h-10 w-10 object-contain" />
           </div>
-          <div>
+          <div className="min-w-0 flex-1">
             <h3 className="text-sm font-semibold leading-snug text-gray-950">{p.label}</h3>
             <p className="mt-1 text-xs leading-snug text-gray-600">{p.desc}</p>
           </div>

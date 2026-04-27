@@ -31,12 +31,12 @@ body {
 @layer components {
   /* Primární tlačítko — modrá CTA */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 bg-brand-primary text-white rounded-lg px-4 py-2.5 text-sm font-medium hover:bg-brand-primary-dark transition-colors min-h-[44px];
+    @apply inline-flex items-center justify-center gap-2 bg-brand-primary text-white rounded-lg px-4 py-2.5 text-sm font-medium hover:bg-brand-primary-dark transition-colors border border-transparent min-h-[44px];
   }
 
   /* Primární tlačítko — větší (hero / hlavní CTA) */
   .btn-primary-lg {
-    @apply inline-flex items-center justify-center gap-2 bg-brand-primary text-white rounded-lg px-6 py-3.5 text-base font-medium hover:bg-brand-primary-dark transition-colors min-h-[48px];
+    @apply inline-flex items-center justify-center gap-2 bg-brand-primary text-white rounded-lg px-6 py-3.5 text-base font-medium hover:bg-brand-primary-dark transition-colors border border-transparent min-h-[52px];
   }
 
   /* Sekundární tlačítko — outline */

@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 import SearchBox from '@/components/SearchBox'
 import ProblemsGrid from '@/components/ProblemsGrid'
 import ServiceCtaBox from '@/components/ServiceCtaBox'
-import { WashingMachine, UtensilsCrossed, Shirt } from 'lucide-react'
+import { WashingMachine, UtensilsCrossed, Shirt, Gauge, Wrench, PhoneCall } from 'lucide-react'
 
 type ApplianceIcon = 'pracka' | 'mycka' | 'susicka'
 const APPLIANCE_ICON: Record<ApplianceIcon, React.ComponentType<{ className?: string }>> = {
@@ -113,10 +113,10 @@ export default async function HomePage() {
 
       <section className="border-b border-brand-border bg-white">
         <div className="container-app py-10 md:py-14">
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-center">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
             <div className="max-w-3xl">
-              <p className="mb-3 text-sm font-semibold text-blue-700">Diagnostika chybových kódů</p>
-              <h1 className="text-3xl md:text-[2.35rem] font-bold leading-[1.08] text-gray-950 text-balance">
+              <p className="mb-3 text-sm font-semibold text-brand-primary-dark">Diagnostika chybových kódů</p>
+              <h1 className="text-3xl md:text-4xl font-bold leading-tight tracking-tight text-gray-950 text-balance">
                 Zjistěte příčinu závady a bezpečný další krok
               </h1>
               <p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-600">
@@ -146,26 +146,33 @@ export default async function HomePage() {
               </div>
             </div>
 
-            <aside className="rounded-xl border border-brand-border border-t-4 border-t-blue-600 bg-brand-surface p-5">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-blue-700">Diagnostický výstup</p>
-              <h2 className="text-base font-semibold text-gray-950">Co získáte u každého kódu</h2>
-              <div className="mt-4 space-y-3">
-                {[
-                  ['Závažnost', 'Nízká, střední, vysoká nebo kritická'],
-                  ['Bezpečné kroky', 'Kontroly, které lze zkusit doma'],
-                  ['Servisní hranice', 'Kdy spotřebič vypnout a volat technika'],
-                ].map(([label, value]) => (
-                  <div key={label} className="border-t border-slate-200 pt-3 first:border-t-0 first:pt-0">
-                    <p className="text-sm font-medium text-gray-900">{label}</p>
-                    <p className="text-sm leading-relaxed text-gray-600">{value}</p>
-                  </div>
-                ))}
-              </div>
+            <aside className="rounded-xl border border-brand-border bg-brand-surface p-5">
               {totalCount > 0 && (
-                <p className="mt-5 border-t border-slate-200 pt-4 text-sm text-gray-600">
-                  <strong className="text-gray-950">{totalCount}+</strong> chybových kódů pro nejběžnější značky
-                </p>
+                <div className="pb-4 mb-4 border-b border-brand-border">
+                  <p className="text-2xl font-bold text-gray-950 leading-none">
+                    {totalCount}<span className="text-brand-primary-dark">+</span>
+                    <span className="ml-1.5 text-base font-semibold text-gray-700">kódů v databázi</span>
+                  </p>
+                  <p className="text-sm text-gray-600 mt-2">Pračky, myčky, sušičky {brands.length} značek.</p>
+                </div>
               )}
+              <ul className="space-y-3">
+                {[
+                  { Icon: Gauge, label: 'Závažnost', value: 'Nízká, střední, vysoká nebo kritická' },
+                  { Icon: Wrench, label: 'Bezpečné kroky', value: 'Kontroly, které lze zkusit doma' },
+                  { Icon: PhoneCall, label: 'Servisní hranice', value: 'Kdy zavolat technika' },
+                ].map(({ Icon, label, value }) => (
+                  <li key={label} className="flex items-start gap-3">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand-primary-dark">
+                      <Icon className="w-4 h-4" aria-hidden="true" />
+                    </span>
+                    <div className="min-w-0">
+                      <p className="text-sm font-semibold text-gray-900 leading-tight">{label}</p>
+                      <p className="text-sm leading-snug text-gray-600 mt-0.5">{value}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </aside>
           </div>
         </div>
@@ -184,14 +191,14 @@ export default async function HomePage() {
               key={b.slug}
               href={`/znacka/${b.slug}`}
               aria-label={`Chybové kódy ${b.name}`}
-              className="flex min-h-[74px] flex-col items-center justify-center gap-2 rounded-xl border border-brand-border bg-white p-3 transition-all duration-200 hover:border-blue-300 hover:shadow-md hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+              className="group flex min-h-[74px] flex-col items-center justify-center gap-2 rounded-xl border border-brand-border bg-white p-3 transition-all duration-200 hover:border-blue-300 hover:shadow-md hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
               <div className="relative h-8 w-20">
                 <Image
                   src={`/brands/${b.slug}.svg`}
                   alt={b.name}
                   fill
-                  className="object-contain"
+                  className="object-contain grayscale opacity-70 transition-all duration-200 group-hover:grayscale-0 group-hover:opacity-100"
                 />
               </div>
               <span className="text-xs text-gray-600 font-medium">{b.name}</span>
@@ -214,8 +221,8 @@ export default async function HomePage() {
               href={`/${a.slug}`}
               className="flex items-center gap-4 rounded-xl border border-brand-border bg-white p-5 transition-all duration-200 hover:border-blue-300 hover:shadow-md hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
-              <div className="relative h-14 w-14 shrink-0">
-                <Image src={a.img} alt={a.label} fill className="object-contain" sizes="56px" />
+              <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-brand-surface">
+                <Image src={a.img} alt={a.label} width={56} height={56} className="h-12 w-12 object-contain" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-950">{a.label}</h3>
@@ -226,7 +233,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="container-app pb-10">
+      <section className="container-app pb-8">
         <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h2 className="text-xl font-semibold text-gray-950">Nejčastější problémy</h2>
