@@ -61,8 +61,15 @@ export const SEVERITY_LABELS: Record<number, string> = {
 export const SEVERITY_COLORS: Record<number, string> = {
   1: 'bg-green-100 text-green-800 border border-green-300',
   2: 'bg-yellow-100 text-yellow-900 border border-yellow-300',
-  3: 'bg-orange-200 text-orange-900 border border-orange-400',
+  3: 'bg-orange-100 text-orange-900 border border-orange-300',
   4: 'bg-red-100 text-red-800 border border-red-300',
+}
+
+export const SEVERITY_CARD_STYLES: Record<number, string> = {
+  1: 'border-l-green-400 bg-green-50',
+  2: 'border-l-yellow-400 bg-yellow-50',
+  3: 'border-l-orange-400 bg-orange-50',
+  4: 'border-l-red-400 bg-red-50',
 }
 
 export const BRANDS = ['Bosch', 'Siemens', 'AEG', 'Electrolux', 'Samsung', 'Beko', 'Whirlpool', 'LG', 'Miele']
@@ -86,6 +93,8 @@ export const SEVERITY_DESCRIPTIONS: Record<number, string> = {
   3: 'Vysoká závažnost – spotřebič může být nebezpečný nebo hrozí poškození',
   4: 'Kritická závažnost – okamžitě vypněte spotřebič a zavolejte servis',
 }
+
+export const SERVICE_CTA_URL = 'https://www.firmy.cz/?q=servis+dom%C3%A1c%C3%ADch+spot%C5%99ebi%C4%8D%C5%AF'
 
 export const SUBTYPE_SECTION_LABELS: Record<string, string> = {
   'iq': 'Modely s displejem – iQ300 / iQ500 / iQ700 (od ~2010)',
