@@ -11,6 +11,7 @@
 
 # next.js
 /.next/
+/.next-build/
 /out/
 
 # production
@@ -35,4 +36,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-scripts/
+scripts/*
+!scripts/enrich-content.mjs
+!scripts/audit-ui.mjs

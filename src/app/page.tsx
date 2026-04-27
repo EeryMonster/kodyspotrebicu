@@ -17,6 +17,7 @@ const APPLIANCE_ICON: Record<ApplianceIcon, React.ComponentType<{ className?: st
 export const metadata: Metadata = {
   title: { absolute: 'Chybové kódy spotřebičů – databáze chyb praček, myček a sušiček | KódySpotřebičů.cz' },
   description: 'Kompletní databáze chybových kódů praček, myček nádobí a sušiček. Bosch, Siemens, AEG, Electrolux, Samsung, Beko. Zjistěte příčinu chyby a jak postupovat.',
+  alternates: { canonical: '/' },
 }
 
 const applianceCards = [
