@@ -361,10 +361,10 @@ export default async function ErrorCodePage({ params }: Props) {
                   <Link
                     key={c.id}
                     href={`/${c.brand.toLowerCase()}/${c.applianceType === 'pracka' ? 'pracky' : c.applianceType === 'mycka' ? 'mycky' : 'susicky'}/${c.slug}`}
-                    className="group flex flex-col gap-1.5 p-3.5 bg-gray-50/50 border border-gray-200/60 rounded-xl hover:border-blue-200 hover:shadow-sm transition-all"
+                    className="group/card flex flex-col gap-1.5 p-3.5 bg-gray-50/50 border border-gray-200/60 rounded-xl hover:border-blue-200 hover:shadow-sm transition-all"
                   >
                     <div className="flex items-start justify-between gap-2">
-                       <span className="text-sm font-semibold text-gray-900 group-hover:text-blue-700 transition-colors leading-tight">{c.code.length > 8 ? c.code.charAt(0).toUpperCase() + c.code.slice(1).toLowerCase() : c.code}</span>
+                       <span className="text-sm font-semibold text-gray-900 group-hover/card:text-blue-700 transition-colors leading-tight">{c.code.length > 8 ? c.code.charAt(0).toUpperCase() + c.code.slice(1).toLowerCase() : c.code}</span>
                        <SeverityBadge level={c.severityLevel} size="sm" />
                     </div>
                     <span className="text-xs text-gray-600 line-clamp-1">{c.title}</span>

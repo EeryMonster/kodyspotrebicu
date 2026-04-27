@@ -30,7 +30,7 @@ export default function SeverityBadge({ level, size = 'sm', className }: Props) 
   if (size === 'lg') {
     return (
       <div
-        className={`group relative inline-flex items-center gap-3 rounded-xl px-4 py-2.5 font-medium cursor-help ${classes}${className ? ` ${className}` : ''}`}
+        className={`group/badge relative inline-flex items-center gap-3 rounded-xl px-4 py-2.5 font-medium cursor-help ${classes}${className ? ` ${className}` : ''}`}
         title={description}
         aria-label={`Závažnost ${level} ze 4 — ${label}. ${description}`}
         tabIndex={0}
@@ -44,7 +44,7 @@ export default function SeverityBadge({ level, size = 'sm', className }: Props) 
         </span>
         <span
           role="tooltip"
-          className="pointer-events-none absolute right-0 top-full z-30 mt-2 hidden w-64 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-normal leading-relaxed text-gray-700 shadow-lg group-hover:block group-focus:block"
+          className="pointer-events-none absolute right-0 top-full z-30 mt-2 hidden w-64 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-normal leading-relaxed text-gray-700 shadow-lg group-hover/badge:block group-focus/badge:block"
         >
           {description}
         </span>
@@ -57,7 +57,7 @@ export default function SeverityBadge({ level, size = 'sm', className }: Props) 
 
   return (
     <span
-      className={`group relative inline-flex items-center gap-1.5 rounded-lg font-medium cursor-help ${sizeClasses} ${classes}${className ? ` ${className}` : ''}`}
+      className={`group/badge relative inline-flex items-center gap-1.5 rounded-lg font-medium cursor-help ${sizeClasses} ${classes}${className ? ` ${className}` : ''}`}
       title={description}
       aria-label={`${visibleLabel}. ${description}`}
       tabIndex={0}
@@ -66,7 +66,7 @@ export default function SeverityBadge({ level, size = 'sm', className }: Props) 
       {visibleLabel}
       <span
         role="tooltip"
-        className="pointer-events-none absolute left-0 top-full z-30 mt-2 hidden w-64 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-normal leading-relaxed text-gray-700 shadow-lg group-hover:block group-focus:block"
+        className="pointer-events-none absolute left-0 top-full z-30 mt-2 hidden w-64 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-normal leading-relaxed text-gray-700 shadow-lg group-hover/badge:block group-focus/badge:block"
       >
         {description}
       </span>
