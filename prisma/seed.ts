@@ -4510,16 +4510,60 @@ const codes: CodeDef[] = [
   {
     brand: "Whirlpool", applianceType: "pracka", code: "F05",
     subtype: "predni-plneni",
-    title: "Problém se senzorem teploty nebo vypouštěním",
-    shortMeaning: "U mnoha modelů chyba teplotního čidla (NTC), u jiných problém s vypouštěním vody.",
+    title: "Chyba odtoku vody / ucpání spotřebiče",
+    shortMeaning: "Pračka Whirlpool nemůže správně vypustit vodu z bubnu kvůli zanesenému filtru nebo hadici.",
     severityLevel: 2, canUserTrySafeChecks: true,
-    safeChecks: ["Zkontrolujte a vyčistěte filtr čerpadla","Ujistěte se, že není zalomená odpadní hadice","Restartujte pračku odpojením ze sítě"],
-    likelyCauses: ["Vadné NTC čidlo teploty","Ucpaný filtr nebo hadice","Vadné odpadní čerpadlo"],
-    whenToStopAndCallService: ["Pokud vyčištění filtru nepomůže a chyba přetrvá (zřejmě vadné NTC čidlo)"],
-    relatedSymptoms: [],
+    safeChecks: [
+      "Odpojte pračku od elektrické sítě na 1–2 minuty (nebo podržte Start/Pause na 10 vteřin pro reset)",
+      "Pokud je v pračce voda, vypusťte ji odtokovou hadicí samospádem do kýble",
+      "Vyčistěte filtr a prstem zkontrolujte, zda se vrtulka čerpadla volně točí",
+      "Zkontrolujte, zda odtoková hadice není ohnutá nebo ucpaná, a ověřte její výšku (60–100 cm)",
+      "Ověřte, že jsou dvířka správně zavřená a vodní kohout je otevřený"
+    ],
+    likelyCauses: [
+      "Zanesený nebo ucpaný filtr čerpadla",
+      "Zablokovaná, zalomená nebo nesprávně umístěná odtoková hadice",
+      "Drobný předmět (mince, knoflík, nit) blokující lopatky čerpadla",
+      "Porucha samotného čerpadla nebo senzoru odtoku"
+    ],
+    whenToStopAndCallService: [
+      "Pokud se chyba F05 opakuje i po vyčištění filtru a provedení resetu",
+      "Pokud pračka vydává nezvyklé zvuky z oblasti čerpadla",
+      "Pokud je odtoková hadice nepřístupná",
+      "Když dojde k poškození elektrických částí čerpadla"
+    ],
+    relatedSymptoms: ["pracka-nevypousti"],
     relatedCodes: ["whirlpool-pracka-f08","whirlpool-pracka-f18"],
-    possibleParts: ["NTC senzor teploty","Odpadní čerpadlo"],
-    faq: [{"q":"Co znamená chyba F05 na pračce Whirlpool?","a":"Nejčastěji (hlavně u vrchem plněných a evropských modelů) signalizuje problém s NTC teplotním čidlem. Zřídka může u určitých modelů znamenat i problém s vypouštěním vody. Začněte vyčištěním odtokového filtru."}],
+    possibleParts: ["Odtokové čerpadlo", "Filtr čerpadla", "Odtoková hadice"],
+    faq: [
+      {
+        q: "Co znamená chyba F05 u pračky Whirlpool?",
+        a: "Signalizuje problém s odtokem vody. Pračka nerozpoznává správný průtok nebo je zablokován odtok, a proto zastaví prací program, aby nedošlo k přetečení nebo poškození zařízení."
+      },
+      {
+        q: "Mohu sám čistit filtr čerpadla?",
+        a: "Ano, pokud postupujete podle manuálu a dodržujete bezpečnost (pračka je vypnutá, voda je bezpečně zachycena), v opačném případě volejte servis."
+      },
+      {
+        q: "Jak resetuji pračku Whirlpool s chybou F05?",
+        a: "Jednoduše ji odpojte od elektřiny na několik minut a následně připojte zpět, nebo podržte tlačítko Start/Pause na 10 vteřin."
+      },
+      {
+        q: "Co dělat, když odtoková hadice není přístupná?",
+        a: "Pokud je hadice zabudovaná, neměňte ji sami a obraťte se na odborný servis."
+      }
+    ],
+    content: [
+      { type: "text", tag: "p", value: "Chyba F05 u praček Whirlpool je poměrně častým problémem, který vás zastaví uprostřed praní. Tento kód signalizuje potíže s odtokem vody, což znamená, že pračka nedokáže správně vypustit vodu z bubnu." },
+      { type: "text", tag: "h3", value: "Krok 1: Postup údržby a čištění filtru" },
+      { type: "text", tag: "p", value: "Nejčastější příčinou poruchy F05 je fyzické ucpání spotřebiče. Vykonejte prosím následující údržbu:" },
+      { type: "text", tag: "p", value: "Odpojte pračku ze sítě. Jestli je v pračce voda, vypusťte ji odtokovou hadicí samospádem do kýble (nebo použijte malou nouzovou hadičku u filtru). Následně vyšroubujte a vyčistěte filtr čerpadla." },
+      { type: "text", tag: "p", value: "Velmi často se stává, že u lamely vrtulky v prostoru filtru se zachytí drobný předmět (například mince, sponka, knoflík), nebo se na ni namotá nitka. Prstem opatrně zkontrolujte, jestli se vrtulka může cyklovaně a volně točit. Je velice důležité, aby byla tato údržba pravidelně vykonávána." },
+      { type: "text", tag: "h3", value: "Krok 2: Kontrola hadice a reset" },
+      { type: "text", tag: "p", value: "Zkontrolujte stav odtokové hadice. Ujistěte se, že není nikde skřípnutá nebo ohnutá, a zkontrolujte její výšku podle popisu v návodě (konec hadice musí být ve výšce 60–100 cm od země)." },
+      { type: "text", tag: "p", value: "Po vyčištění a zapojení pračky zpět do sítě proveďte reset. Je to první krok k možnému odstranění softwarové závady. Reset se provede přidržením tlačítka Start/Pause na dobu 10 vteřin, nebo krátkým odpojením od přívodu elektrického proudu." },
+      { type: "text", tag: "p", value: "Následně vyzkoušejte spustit krátký program (např. máchání nebo odčerpání) bez prádla, abyste ověřili, že voda správně odtéká." }
+    ],
     sourceType: "manual",
   },
   {
