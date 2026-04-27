@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Home } from 'lucide-react'
 
 interface BreadcrumbItem {
   label: string
@@ -33,18 +34,23 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
       <nav aria-label="Breadcrumb" className="text-sm text-gray-600 mb-4">
         <ol className="flex flex-wrap items-center gap-1">
           <li>
-            <Link href="/" className="hover:text-blue-600">Domů</Link>
+            <Link href="/" aria-label="Domů" className="inline-flex items-center hover:text-blue-600 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+              <Home className="w-4 h-4" />
+            </Link>
           </li>
-          {items.map((item, i) => (
-            <li key={i} className="flex items-center gap-1">
-              <span className="text-gray-400">/</span>
-              {item.href && i < items.length - 1 ? (
-                <Link href={item.href} className="hover:text-blue-600">{item.label}</Link>
-              ) : (
-                <span className="text-gray-700 font-medium">{item.label}</span>
-              )}
-            </li>
-          ))}
+          {items.map((item, i) => {
+            const isLast = i === items.length - 1
+            return (
+              <li key={i} className="flex items-center gap-1">
+                <span aria-hidden="true" className="text-gray-400">/</span>
+                {item.href && !isLast ? (
+                  <Link href={item.href} className="hover:text-blue-600">{item.label}</Link>
+                ) : (
+                  <span aria-current={isLast ? 'page' : undefined} className="text-gray-700 font-medium">{item.label}</span>
+                )}
+              </li>
+            )
+          })}
         </ol>
       </nav>
     </>

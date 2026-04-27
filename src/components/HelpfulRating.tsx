@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { ThumbsUp, ThumbsDown } from 'lucide-react'
 
 interface Props {
   errorCodeId: number
@@ -11,9 +12,17 @@ interface Props {
 export default function HelpfulRating({ errorCodeId, initialYes = 0, initialNo = 0 }: Props) {
   const [voted, setVoted] = useState<'yes' | 'no' | null>(null)
   const [counts, setCounts] = useState({ yes: initialYes, no: initialNo })
+  const [pending, setPending] = useState(false)
+
+  const total = counts.yes + counts.no
+  const helpfulPct = total > 0 ? Math.round((counts.yes / total) * 100) : null
 
   const handleVote = async (helpful: boolean) => {
-    setVoted(helpful ? 'yes' : 'no')
+    if (pending) return
+    const next = helpful ? 'yes' : 'no'
+    if (voted === next) return
+    setPending(true)
+    setVoted(next)
     try {
       const res = await fetch('/api/helpful', {
         method: 'POST',
@@ -24,33 +33,51 @@ export default function HelpfulRating({ errorCodeId, initialYes = 0, initialNo =
       if (data.success) {
         setCounts({ yes: data.helpfulYes, no: data.helpfulNo })
       }
-    } catch { /* ignore */ }
-  }
-
-  if (voted) {
-    return (
-      <div className="flex items-center gap-3 text-sm text-gray-600">
-        <span>{voted === 'yes' ? '😊' : '🙏'}</span>
-        <span>{voted === 'yes' ? 'Díky za zpětnou vazbu!' : 'Díky! Budeme obsah zlepšovat.'}</span>
-        <span className="text-xs text-gray-400">👍 {counts.yes} · 👎 {counts.no}</span>
-      </div>
-    )
+    } catch { /* ignore */ } finally {
+      setPending(false)
+    }
   }
 
   return (
-    <div className="flex items-center gap-3">
-      <span className="text-sm text-gray-600">Pomohl vám tento článek?</span>
+    <div className="flex flex-wrap items-center gap-3">
+      <span className="text-sm text-gray-600">
+        {voted
+          ? 'Díky za zpětnou vazbu!'
+          : helpfulPct !== null
+            ? `Pomohl tento článek ${helpfulPct} % čtenářů. A vám?`
+            : 'Pomohl vám tento článek?'}
+      </span>
+
       <button
+        type="button"
         onClick={() => handleVote(true)}
-        className="btn-outline hover:text-green-700 hover:border-green-300 hover:bg-green-50"
+        aria-pressed={voted === 'yes'}
+        disabled={pending}
+        className={`btn-outline gap-2 disabled:opacity-60 ${
+          voted === 'yes'
+            ? 'border-green-400 bg-green-50 text-green-700'
+            : 'hover:text-green-700 hover:border-green-300 hover:bg-green-50'
+        }`}
       >
-        👍 Ano {initialYes > 0 && <span className="text-xs text-gray-400">({initialYes})</span>}
+        <ThumbsUp className="w-4 h-4" />
+        Ano
+        {counts.yes > 0 && <span className="text-xs text-gray-500">({counts.yes})</span>}
       </button>
+
       <button
+        type="button"
         onClick={() => handleVote(false)}
-        className="btn-outline hover:text-red-700 hover:border-red-300 hover:bg-red-50"
+        aria-pressed={voted === 'no'}
+        disabled={pending}
+        className={`btn-outline gap-2 disabled:opacity-60 ${
+          voted === 'no'
+            ? 'border-red-400 bg-red-50 text-red-700'
+            : 'hover:text-red-700 hover:border-red-300 hover:bg-red-50'
+        }`}
       >
-        👎 Ne {initialNo > 0 && <span className="text-xs text-gray-400">({initialNo})</span>}
+        <ThumbsDown className="w-4 h-4" />
+        Ne
+        {counts.no > 0 && <span className="text-xs text-gray-500">({counts.no})</span>}
       </button>
     </div>
   )

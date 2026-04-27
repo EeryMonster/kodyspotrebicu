@@ -134,7 +134,7 @@ export default async function BrandPage({ params }: Props) {
             <Link
               key={type}
               href={`#${type}`}
-              className="px-3 py-1.5 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-blue-400 hover:text-blue-600 transition-colors"
+              className="px-3 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-blue-400 hover:text-blue-600 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200"
             >
               {APPLIANCE_LABELS[type] || type}
             </Link>

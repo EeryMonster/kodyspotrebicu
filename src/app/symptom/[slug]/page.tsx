@@ -3,6 +3,7 @@ import { notFound, permanentRedirect } from 'next/navigation'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import ErrorCodeCard from '@/components/ErrorCodeCard'
 import Link from 'next/link'
+import { Check } from 'lucide-react'
 import type { Metadata } from 'next'
 import { slugify, normalizeListItem } from '@/lib/utils'
 
@@ -115,8 +116,11 @@ export default async function SymptomPage({ params }: Props) {
         <div className="space-y-8 mb-12">
           {symptom.sections.map((s, i) => (
             <div key={i} className="bg-white border border-gray-200 rounded-xl p-6">
-              <h2 className="text-lg font-semibold text-gray-900 mb-3">
-                <span className="text-blue-600 mr-2">{i + 1}.{' '}</span>{s.q}
+              <h2 className="flex items-start gap-3 text-lg font-semibold text-gray-900 mb-3">
+                <span className="flex-shrink-0 w-7 h-7 rounded-full bg-brand-soft text-brand-primary-dark flex items-center justify-center font-bold text-sm">
+                  {i + 1}
+                </span>
+                <span className="leading-snug">{s.q}</span>
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4">{s.answer}</p>
 
@@ -137,7 +141,7 @@ export default async function SymptomPage({ params }: Props) {
                 <ul className="space-y-1.5">
                   {s.tips.map((tip, ti) => (
                     <li key={ti} className="flex gap-2 text-sm leading-relaxed text-gray-600">
-                      <span className="text-green-500 shrink-0 mt-0.5">✓</span>
+                      <Check className="w-4 h-4 text-green-600 shrink-0 mt-0.5" aria-hidden="true" />
                       <span>{normalizeListItem(tip).replace(/^[✓✔]\s*/, '')}</span>
                     </li>
                   ))}
