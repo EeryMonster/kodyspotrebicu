@@ -26,11 +26,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const appliancePath = { pracka: 'pracky', mycka: 'mycky', susicka: 'susicky' }[entry.applianceType] || entry.applianceType
     const canonical = `https://www.kodyspotrebicu.cz/${entry.brand.toLowerCase()}/${appliancePath}/${params.code}`
     return {
-      title: `${entry.code} – ${entry.title} (${entry.brand})`,
+      title: `Chyba ${entry.code} ${entry.brand}: ${entry.title} (Jak opravit)`,
       description: entry.shortMeaning,
       alternates: { canonical },
       openGraph: {
-        title: `${entry.code} – ${entry.title} (${entry.brand})`,
+        title: `Chyba ${entry.code} ${entry.brand}: ${entry.title} (Jak opravit)`,
         description: entry.shortMeaning,
         url: canonical,
       },
