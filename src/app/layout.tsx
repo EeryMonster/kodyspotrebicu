@@ -1,11 +1,16 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
-import Script from 'next/script'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
-const inter = Inter({ subsets: ['latin', 'latin-ext'] })
+const inter = Inter({ subsets: ['latin', 'latin-ext'], display: 'swap' })
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#1e3a8a',
+}
 
 export const metadata: Metadata = {
   title: {
@@ -23,9 +28,6 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
   },
-  other: {
-    'google-adsense-account': 'ca-pub-1027768572288829',
-  },
 }
 
 export default function RootLayout({
@@ -35,14 +37,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="cs">
-      <head>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1027768572288829"
-          crossOrigin="anonymous"
-          strategy="beforeInteractive"
-        />
-      </head>
       <body className={`${inter.className} min-h-screen flex flex-col bg-gray-50`}>
         <a
           href="#main-content"

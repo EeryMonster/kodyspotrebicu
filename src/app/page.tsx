@@ -21,9 +21,9 @@ export const metadata: Metadata = {
 }
 
 const applianceCards = [
-  { slug: 'pracky', label: 'Pračky', img: '/categories/pracka.png', desc: 'Voda, dveře, motor, ohřev a čerpadlo' },
-  { slug: 'mycky', label: 'Myčky nádobí', img: '/categories/mycka.png', desc: 'Přívod vody, odpad, ohřev a senzory' },
-  { slug: 'susicky', label: 'Sušičky', img: '/categories/susicka.png', desc: 'Filtry, přehřátí, kondenzát a sušení' },
+  { slug: 'pracky', label: 'Pračky', img: '/categories/pracka.webp', desc: 'Voda, dveře, motor, ohřev a čerpadlo' },
+  { slug: 'mycky', label: 'Myčky nádobí', img: '/categories/mycka.webp', desc: 'Přívod vody, odpad, ohřev a senzory' },
+  { slug: 'susicky', label: 'Sušičky', img: '/categories/susicka.webp', desc: 'Filtry, přehřátí, kondenzát a sušení' },
 ]
 
 const quickCodes: { label: string; q: string; appliance: ApplianceIcon }[] = [
@@ -223,7 +223,7 @@ export default async function HomePage() {
               className="flex min-h-[96px] items-center gap-4 rounded-xl border border-brand-border bg-white p-4 transition-all duration-200 hover:border-blue-300 hover:shadow-md hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-brand-surface">
-                <Image src={a.img} alt="" width={48} height={48} className="h-12 w-12 object-contain" />
+                <Image src={a.img} alt="" width={48} height={48} sizes="48px" className="h-12 w-12 object-contain" />
               </div>
               <div className="min-w-0 flex-1">
                 <h3 className="text-sm font-semibold leading-snug text-gray-950">{a.label}</h3>
