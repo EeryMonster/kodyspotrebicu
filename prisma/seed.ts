@@ -1520,16 +1520,48 @@ const codes: CodeDef[] = [
   },
   {
     brand: "Bosch", applianceType: "mycka", code: "E24",
-    title: "Chyba odčerpávání – myčka nevypouští vodu",
-    shortMeaning: "Myčka nedokázala vypustit vodu – ucpaný filtr, odpadní hadice nebo selhání čerpadla.",
+    title: "Chyba odčerpávání vody – myčka Bosch E24",
+    shortMeaning: "Myčka Bosch nedokázala vypustit vodu z vany – nejčastěji kvůli ucpanému filtru, zalomené odpadní hadici nebo zaneseným sítkům před čerpadlem.",
     severityLevel: 2, canUserTrySafeChecks: true,
-    safeChecks: ["Vyčistěte filtr ve spodní části myčky","Zkontrolujte odpadní hadici, zda není zalomená","Zkontrolujte, zda odpad v dřezu není ucpaný"],
-    likelyCauses: ["Ucpaný filtr nebo sítko","Zalomená nebo ucpaná odpadní hadice","Nefunkční odčerpávací čerpadlo","Ucpaný sifon"],
-    whenToStopAndCallService: ["Pokud čerpadlo nevydává zvuk","Pokud voda zůstane i po vyčištění filtru"],
+    safeChecks: [
+      "Vypněte myčku tlačítkem a otevřete dvířka – nechte vodu zchladnout.",
+      "Vyjměte spodní koš a vyšroubujte sestavu filtru ze dna vany. Opláchněte ji pod tekoucí vodou a vyčistěte kartáčkem.",
+      "Zbylou vodu ze dna vany vysajte houbou nebo hadrem, abyste se dostali až k oběžnému kolu čerpadla.",
+      "Zkontrolujte odpadní hadici v zadní části myčky – nesmí být ohnutá, skřípnutá ani zlomená.",
+      "Zkontrolujte sifon pod dřezem (zejména po prvním zapojení nebo po výměně sifonu) – nesmí být ucpaný.",
+      "Po vyčištění zavřete dvířka a podržte tlačítko Start na 3 vteřiny pro reset programu."
+    ],
+    likelyCauses: [
+      "Ucpaný hrubý nebo jemný filtr na dně vany (zbytky jídla, vápno).",
+      "Cizí předmět (sklo, pecka, kost) blokující oběžné kolo čerpadla.",
+      "Zalomená nebo zkroucená odpadní hadice.",
+      "Ucpaný sifon kuchyňského dřezu nebo zaslepený výstup hadice.",
+      "Vadné odčerpávací čerpadlo (vodní pumpa).",
+      "Zanesená záslepka v sifonu po nové instalaci."
+    ],
+    whenToStopAndCallService: [
+      "Pokud i po vyčištění filtru a hadice voda nadále zůstává ve vaně.",
+      "Pokud z prostoru čerpadla není slyšet žádný zvuk při spuštění programu odčerpání.",
+      "Pokud objevíte únik vody pod myčkou."
+    ],
     relatedSymptoms: ["myčka-nevypouští"],
     relatedCodes: ["bosch-mycka-e15","bosch-mycka-e25","bosch-mycka-e22"],
-    possibleParts: ["Odčerpávací čerpadlo","Filtr myčky","Odpadní hadice"],
-    faq: [],
+    possibleParts: ["Odčerpávací čerpadlo","Filtr myčky","Odpadní hadice","Oběžné kolo čerpadla"],
+    faq: [
+      { q: "Co znamená chyba E24 u myčky Bosch?", a: "Myčka neodčerpala vodu v daném časovém limitu. V naprosté většině případů (přes 80 %) za to může mechanická překážka v cestě vody – ucpaný filtr, ohnutá hadice nebo zanesený sifon." },
+      { q: "Jak vyčistit filtr myčky Bosch?", a: "Otočte horním plastovým válcem filtru proti směru hodinových ručiček a vytáhněte ho. Pod ním je jemné kovové sítko, které vyjměte také. Obojí opláchněte pod tekoucí vodou a vyčistěte starým zubním kartáčkem. Vraťte zpět ve správném pořadí a otočte po směru až nadoraz." },
+      { q: "Jak resetovat myčku Bosch po chybě E24?", a: "Po vyčištění filtru zavřete dvířka a podržte tlačítko Start (často popsané jako Reset nebo s ikonou ↻) přibližně 3 vteřiny, dokud nezhasne kontrolka zbytkového programu. Poté zvolte krátký program a vyzkoušejte." },
+      { q: "Jak často čistit filtr myčky Bosch?", a: "Bosch doporučuje vizuální kontrolu po každém mytí a důkladné vyčištění alespoň jednou měsíčně, případně po 20 cyklech. Při pravidelné údržbě se chybě E24 dá ve většině případů úplně předejít." }
+    ],
+    content: [
+      { type: "text", tag: "p", value: "Chyba E24 patří k nejčastějším poruchám myček Bosch a dobrá zpráva je, že ji v drtivé většině případů zvládnete vyřešit doma sami. Myčka detekovala, že po stanoveném čase ve vaně zůstala voda, a proto cyklus zastavila, aby nedošlo k poškození čerpadla nebo přetečení." },
+      { type: "text", tag: "h3", value: "Krok 1: Vyčištění filtru ve dně myčky" },
+      { type: "text", tag: "p", value: "Vypněte myčku a počkejte, až voda na dně vychladne. Vyjměte spodní koš a podívejte se na střed dna – uvidíte plastový válec s rukojetí. Otočte jím proti směru hodinových ručiček a vytáhněte. Pod ním je hrubý filtr a kovové mikrosítko. Všechny díly opláchněte pod tekoucí vodou a kartáčkem odstraňte mastnotu a zbytky jídla." },
+      { type: "text", tag: "h3", value: "Krok 2: Odstranění zbylé vody a kontrola čerpadla" },
+      { type: "text", tag: "p", value: "Houbou nebo hadrem vysajte zbytek vody ze dna vany. Opatrně si pak chráněnými prsty (rukavice) sáhněte do prostoru po vyjmutém filtru – ucítíte oběžné kolo čerpadla. Zkuste s ním pootočit. Pokud je zablokované, často v něm uvízne sklo, pecka nebo malý kus kosti. Po odstranění překážky se musí volně točit." },
+      { type: "text", tag: "h3", value: "Krok 3: Kontrola hadice, sifonu a reset" },
+      { type: "text", tag: "p", value: "Vytáhněte myčku ze skříňky a zkontrolujte odpadní hadici – nesmí být zalomená ani vedená pod ostrým úhlem. Pod dřezem zkontrolujte sifon (zejména pokud se chyba objevila po výměně dřezu nebo sifonu – často zůstane v hrdle plastová záslepka). Vraťte vše na místo, zavřete dvířka a stiskněte Start na 3 vteřiny pro reset. Pak spusťte krátký program – pokud chyba nezmizí, je nejspíš vadné samotné odčerpávací čerpadlo a je třeba zavolat servis." }
+    ],
     sourceType: "official",
     sourceUrl: "https://www.bosch-home.com/cz/servis/podpora/chyba-mycky-nadobi-e24",
   },
@@ -2214,18 +2246,49 @@ const codes: CodeDef[] = [
   {
     brand: "Electrolux", applianceType: "pracka", code: "E40",
     subtype: "predni-plneni",
-    title: "Chyba dveří",
-    shortMeaning: "Dveře pračky nejsou správně uzavřeny.",
+    title: "Chyba dveří – pračka Electrolux E40",
+    shortMeaning: "Pračka Electrolux nedokáže potvrdit, že jsou dvířka správně zavřená a uzamčená – bezpečnostní pojistka proto nedovolí spustit prací cyklus.",
     severityLevel: 1, canUserTrySafeChecks: true,
-    safeChecks: ["Pevně zavřete dveře","Zkontrolujte zámek"],
-    likelyCauses: ["Dveře nezavřeny","Vadný zámek"],
-    whenToStopAndCallService: ["Pokud zámek nefunguje"],
+    safeChecks: [
+      "Pevně zatlačte na dvířka, dokud neuslyšíte cvaknutí zámku.",
+      "Zkontrolujte, zda mezi gumovým těsněním a sklem dveří neuvízl kus prádla (ponožka, tkanička, lem trička).",
+      "Pokud jste pračku přeplnili, vyjměte část prádla a zkuste znovu.",
+      "Zkontrolujte, zda není aktivní dětská pojistka – deaktivujte ji podle návodu (často mincí v otvoru zámku).",
+      "Odpojte pračku ze zásuvky na 1–2 minuty a znovu připojte (reset elektroniky)."
+    ],
+    likelyCauses: [
+      "Dveře nejsou dotlačené – zámek nezacvakl.",
+      "Prádlo zachycené v gumovém těsnění brání úplnému uzavření.",
+      "Pračka je přeplněná a tlak prádla brání zamknutí.",
+      "Vadný nebo opotřebovaný zámek dveří.",
+      "Aktivovaná dětská pojistka.",
+      "Poškozený nebo uvolněný kabel mezi zámkem a řídicí deskou."
+    ],
+    whenToStopAndCallService: [
+      "Pokud chyba přetrvává i po důkladném zavření a vyzkoušení resetu.",
+      "Pokud zámek vydává mechanicky podivné zvuky nebo dveře nejdou doklapnout silou ruky.",
+      "Pokud jste viditelně poškodili plastovou záchytku zámku."
+    ],
     relatedSymptoms: ["pračka-nespustí"],
     relatedCodes: ["electrolux-pracka-e10","electrolux-pracka-e20","electrolux-pracka-e90"],
-    possibleParts: ["Zámek dveří"],
-    faq: [{"a":"1) Pevně zavřete dveře 2) Zkontrolujte zámek","q":"Jak opravit chybu E40 na pračce Electrolux?"}],
+    possibleParts: ["Zámek dveří","Záchytka dveří","Kabeláž zámku"],
+    faq: [
+      { q: "Co znamená chyba E40 na pračce Electrolux?", a: "E40 je signalizace, že pračka nedokáže detekovat zavřená a zamknutá dvířka. Bez tohoto potvrzení nespustí cyklus, aby nedošlo k vytopení. Nejčastěji jde o nedotlačené dveře nebo prádlo zachycené v těsnění." },
+      { q: "Jak resetovat pračku Electrolux s chybou E40?", a: "Odpojte pračku od elektrické sítě na 1–2 minuty a znovu zapojte. Pokud má pračka tlačítko Start/Pause, můžete ho podržet stisknuté přibližně 5–10 vteřin." },
+      { q: "Mohu vyměnit zámek dveří sám?", a: "U běžných modelů je výměna zámku v silách zručného uživatele (3–4 šrouby a konektor), ale vyžaduje obezřetnost při práci s elektroinstalací. Pokud nejste jistí, zavolejte servis." },
+      { q: "Proč chyba E40 přichází i po zavření dveří?", a: "Buď je opotřebovaná plastová záchytka v rámu (ohnula se a nedosedá do zámku), nebo je vadný samotný zámek (přepálená cívka, prasklý termoplast). V obou případech je řešením výměna příslušného dílu." }
+    ],
+    content: [
+      { type: "text", tag: "p", value: "Chyba E40 patří mezi nejčastější hlášení na pračkách Electrolux a v drtivé většině případů jde o snadno řešitelný problém. Pračka při startu cyklu kontroluje, zda jsou dvířka skutečně zavřená a mechanicky uzamčená – pokud signál ze zámku nepřijde, zobrazí E40 a do bubnu nepustí vodu." },
+      { type: "text", tag: "h3", value: "Krok 1: Vizuální kontrola dvířek a těsnění" },
+      { type: "text", tag: "p", value: "Otevřete pračku a obejděte prstem celý obvod gumového těsnění. Velmi často se zde uchytí ponožka, tkanička nebo cíp ručníku, který brání úplnému dosedu dvířek. Vyjměte vše, co tam nemá být, a zkuste dvířka znovu pevně zavřít – musí být slyšet zřetelné cvaknutí." },
+      { type: "text", tag: "h3", value: "Krok 2: Reset a snížení náplně" },
+      { type: "text", tag: "p", value: "Pokud je pračka přeplněná, prádlo tlačí na dveře zevnitř a zámek nemůže zacvaknout. Vyjměte přibližně třetinu náplně a zkuste znovu. Současně proveďte reset – odpojte pračku ze zásuvky na 1–2 minuty, čímž vynulujete řídicí elektroniku." },
+      { type: "text", tag: "h3", value: "Krok 3: Kontrola dětské pojistky a zámku" },
+      { type: "text", tag: "p", value: "U některých modelů je možné aktivovat dětskou pojistku přímo na vnitřní straně dvířek (otvor pro minci). Zkontrolujte, zda není zapnutá. Pokud chyba přetrvává i po všech krocích, je pravděpodobně vadný samotný zámek dveří – jde o nejčastější opotřebitelný díl pračky a jeho výměna je standardní servisní úkon." }
+    ],
     sourceType: "official",
-    sourceUrl: "https://support.electrolux.co.uk/support-articles/article/washing-machine-displays-an-error-code-how-to-fix-it",
+    sourceUrl: "https://support.electrolux.co.uk/support-articles/article/washing-machine-displays-error-code-e40",
   },
   {
     brand: "Electrolux", applianceType: "pracka", code: "E41",
@@ -2397,6 +2460,54 @@ const codes: CodeDef[] = [
     faq: [],
     sourceType: "manual",
     sourceUrl: "https://ruzne.pkomarek.cz/aeg-e60/chyby2.pdf",
+  },
+  {
+    brand: "Electrolux", applianceType: "susicka", code: "E60",
+    title: "Sušička Electrolux nehřeje – chyba E60",
+    shortMeaning: "Sušička Electrolux nedokáže ohřát vzduch – po skončení cyklu zůstává prádlo mokré nebo vlhké. Nejčastější příčinou je nedostatečné větrání nebo vadný topný okruh.",
+    severityLevel: 3, canUserTrySafeChecks: true,
+    safeChecks: [
+      "Po každém cyklu vyčistěte filtr na vlákna ve dvířkách.",
+      "U kondenzačních modelů vytáhněte a opláchněte kondenzátor (zpravidla v dolní části za krytem).",
+      "Zkontrolujte, zda sušička není zabudovaná v uzavřené skříni bez odvětrání – musí stát volně nebo pod pracovní deskou s prostorem pro proudění vzduchu.",
+      "Zkontrolujte, zda je místnost dostatečně velká (alespoň 10–12 m²) a větratelná – ve stísněném prostoru se vlhkost vrací zpět.",
+      "Spusťte časový program a po 30 minutách zkontrolujte, zda je vnitřek bubnu teplý.",
+      "Odpojte sušičku od elektrické sítě na 1–2 minuty pro reset elektroniky."
+    ],
+    likelyCauses: [
+      "Ucpaný filtr na vlákna omezující průtok vzduchu.",
+      "Zanesený kondenzátor (u kondenzačních modelů).",
+      "Nedostatečné větrání místnosti nebo zabudování v uzavřené skříni.",
+      "Vadné topné těleso (heating element).",
+      "Vadný NTC teplotní senzor.",
+      "Porucha relé ohřevu na řídicí desce.",
+      "U starších modelů řady ENVo6 (do roku 2014) bývá E60 nadřazený kód, podrobněji rozdělený na E61–E67."
+    ],
+    whenToStopAndCallService: [
+      "Pokud i po vyčištění filtru a kondenzátoru zůstává buben po 30 minutách provozu studený.",
+      "Pokud sušička hřeje nepravidelně nebo se cyklus předčasně ukončuje.",
+      "Pokud se chyba opakovaně vrací během několika cyklů."
+    ],
+    relatedSymptoms: ["sušička-nesuší","prádlo-mokré"],
+    relatedCodes: ["electrolux-susicka-e61","electrolux-susicka-e62","electrolux-susicka-e63"],
+    possibleParts: ["Topné těleso","NTC teplotní senzor","Termostat","Relé ohřevu na desce"],
+    faq: [
+      { q: "Co znamená chyba E60 na sušičce Electrolux?", a: "Podle oficiální podpory Electrolux signalizuje E60 problém se zdrojem tepla – sušička nedokáže ohřát vzduch a prádlo zůstává mokré. Příčinou může být cokoli od ucpaného filtru přes špatné větrání místnosti až po vadné topné těleso." },
+      { q: "Mohu chybu E60 opravit sám?", a: "Ano – v prvním kroku ano. Vyčistěte filtr na vlákna, vytáhněte a opláchněte kondenzátor a zkontrolujte, že má sušička dost vzduchu kolem sebe. V mnoha případech to stačí. Pokud po těchto krocích zůstává buben po půl hodině provozu studený, je vadné topné těleso a je třeba zavolat servis." },
+      { q: "Proč sušička Electrolux nesuší, i když běží?", a: "Nejčastěji je to právě chyba E60 – ohřev nefunguje. Sušička sice točí bubnem a fouká vzduch, ale neohřívá ho. Druhou typickou příčinou je extrémně ucpaný filtr nebo kondenzátor, který brání průtoku vzduchu i tehdy, když topení samo o sobě funguje." },
+      { q: "Co znamená chyba E60 u starších sušiček AEG/Zanussi?", a: "Sušičky Electrolux Group (AEG, Electrolux, Zanussi) sdílejí elektroniku. U starších modelů s deskou ENVo6 (přibližně do roku 2014) je E60 obecná chyba topného okruhu, která se dále upřesňuje kódy E61 (nedostatečný ohřev) až E67 (porucha senzorů). U novějších modelů Electrolux je E60 jediný kód pro ohřev." }
+    ],
+    content: [
+      { type: "text", tag: "p", value: "Chyba E60 patří mezi nepříjemnější hlášení sušiček Electrolux – po skončení cyklu vás čeká mokré prádlo. Sušička detekovala, že se vzduch v bubnu neohřívá tak, jak má. Než zavoláte servis, projděte si tři kroky, které řeší naprostou většinu případů." },
+      { type: "text", tag: "h3", value: "Krok 1: Vyčištění filtru a kondenzátoru" },
+      { type: "text", tag: "p", value: "Vyjměte filtr na vlákna ze dvířek a vyčistěte ho – nestačí klepnout, projeďte ho rukou pod tekoucí vodou. U kondenzačních modelů otevřete dolní kryt, vytáhněte celý kondenzátor a opláchněte ho ze všech stran. Pokud byl filtr nebo kondenzátor silně zanesený, je velmi pravděpodobné, že chyba zmizí." },
+      { type: "text", tag: "h3", value: "Krok 2: Kontrola instalace a větrání" },
+      { type: "text", tag: "p", value: "Sušička potřebuje vzduch kolem sebe. Pokud je zabudovaná v uzavřené skříni nebo v malé špatně větrané místnosti (pod 10 m²), nemá kde nabírat suchý vzduch a kondenzace se vrací zpět. Zkontrolujte, že má sušička volný prostor po stranách a nad sebou, a že místnost lze větrat." },
+      { type: "text", tag: "h3", value: "Krok 3: Test ohřevu a reset" },
+      { type: "text", tag: "p", value: "Odpojte sušičku ze zásuvky na 1–2 minuty pro reset elektroniky. Pak spusťte časový program (například 30 minut) bez prádla nebo s lehkou zátěží. Po 30 minutách otevřete dvířka a sáhněte do bubnu – musí být zřetelně teplý. Pokud zůstává studený, je vadné topné těleso, NTC teplotní čidlo nebo relé ohřevu na desce. Tyto díly už vyžadují odbornou výměnu – kontaktujte autorizovaný servis Electrolux." }
+    ],
+    sourceType: "official",
+    sourceUrl: "https://support.electrolux.co.uk/support-articles/article/tumble-dryer-displays-error-message-e60",
   },
   {
     brand: "Electrolux", applianceType: "susicka", code: "E51",
@@ -4053,16 +4164,46 @@ const codes: CodeDef[] = [
   {
     brand: "Siemens", applianceType: "mycka", code: "E22",
     subtype: "iq",
-    title: "Zanesený filtr myčky Siemens",
-    shortMeaning: "Filtr myčky Siemens je ucpaný a brání správnému provozu.",
+    title: "Zanesený filtr myčky Siemens E22",
+    shortMeaning: "Myčka Siemens detekovala, že se voda nemůže správně odtékat – v 80 % případů jde o ucpaný filtr na dně mycí komory.",
     severityLevel: 1, canUserTrySafeChecks: true,
-    safeChecks: ["Vyjměte a umyjte filtr pod tekoucí vodou","Vyčistěte jemné sítko kartáčkem"],
-    likelyCauses: ["Zanedbání pravidelného čištění","Velké množství zbytků jídla"],
-    whenToStopAndCallService: [],
-    relatedSymptoms: ["špatné-mytí"],
+    safeChecks: [
+      "Vyjměte spodní koš a vyšroubujte sestavu filtru ze středu dna vany.",
+      "Filtr i jemné mikrosítko opláchněte pod tekoucí vodou a vyčistěte kartáčkem.",
+      "Vysušte zbytek vody ze dna a zkontrolujte oběžné kolo čerpadla – musí se volně točit.",
+      "Zkontrolujte odpadní hadici za myčkou – nesmí být zalomená.",
+      "Zkontrolujte, zda není ucpaný sifon pod dřezem.",
+      "Vraťte filtr zpět (otočte po směru hodin až nadoraz) a podržte tlačítko Start cca 3 s pro reset."
+    ],
+    likelyCauses: [
+      "Zanedbávání pravidelného čištění filtru.",
+      "Velké zbytky jídla (kosti, pecky, slupky) v sítu.",
+      "Cizí předměty – střepy skla, kostky pomerančové kůry, ubrousky, sáčky čaje.",
+      "Ucpané jemné sítko vápenatými usazeninami.",
+      "Vzácně vadné odčerpávací čerpadlo."
+    ],
+    whenToStopAndCallService: [
+      "Pokud chyba přetrvává i po důkladném vyčištění filtru a kontrole hadice.",
+      "Pokud čerpadlo při spuštění odtoku nevydává žádný zvuk."
+    ],
+    relatedSymptoms: ["špatné-mytí","myčka-nevypouští"],
     relatedCodes: ["siemens-mycka-e15","siemens-mycka-e09","siemens-mycka-e14"],
-    possibleParts: ["Filtr myčky"],
-    faq: [],
+    possibleParts: ["Filtr myčky","Mikrosítko","Odčerpávací čerpadlo"],
+    faq: [
+      { q: "Co znamená chyba E22 na myčce Siemens?", a: "E22 signalizuje, že myčka nedokáže správně odtékat – v naprosté většině případů kvůli zanesenému filtru ve dně mycí komory. Po vyčištění filtru chyba obvykle zmizí." },
+      { q: "Jak vyčistit filtr myčky Siemens?", a: "Vytáhněte spodní koš, otočte horním dílem filtru proti směru hodinových ručiček a vytáhněte ho. Pod ním je jemné kovové sítko – vyjměte i to. Obojí opláchněte pod tekoucí vodou, případně vyčistěte starým zubním kartáčkem. Vraťte zpět a otočte po směru až nadoraz." },
+      { q: "Jak často čistit filtr v myčce Siemens?", a: "Doporučuje se kontrola po každém mytí a důkladné vyčištění minimálně jednou za měsíc. Pravidelná údržba je nejlepší prevencí proti chybě E22." },
+      { q: "Jak resetovat myčku Siemens s chybou E22?", a: "Po vyčištění filtru zavřete dvířka a podržte tlačítko Start (případně Reset) přibližně 3 vteřiny, dokud nezhasne signalizace zbytkového programu. Pak spusťte krátký zkušební program." }
+    ],
+    content: [
+      { type: "text", tag: "p", value: "Chyba E22 je u myček Siemens jednou z nejčastějších a zároveň nejlépe řešitelných závad. Myčka prostě zjistila, že voda neodtéká tak rychle, jak má, a cyklus zastavila. Asi v 80 % případů stačí vyčistit filtr na dně vany a problém zmizí." },
+      { type: "text", tag: "h3", value: "Krok 1: Vyjmutí a vyčištění filtru" },
+      { type: "text", tag: "p", value: "Vypněte myčku a vyjměte spodní koš na nádobí. Uprostřed dna uvidíte sestavu filtru – plastový válec s rukojetí. Otočte jím proti směru hodinových ručiček a vytáhněte ven. Pod ním leží jemné kovové sítko, které také vyjmete. Obojí opláchněte pod tekoucí vodou a starým zubním kartáčkem odstraňte mastnotu a usazeniny." },
+      { type: "text", tag: "h3", value: "Krok 2: Kontrola hadice a čerpadla" },
+      { type: "text", tag: "p", value: "Houbou vysajte zbylou vodu ze dna vany. Opatrně sáhněte chráněnými prsty do prostoru po filtru – nahmatáte oběžné kolo čerpadla. Mělo by se volně točit. Pokud ne, vytáhněte případnou střepinu nebo cizí předmět. Současně zkontrolujte odpadní hadici za myčkou (nesmí být ohnutá) a sifon pod dřezem." },
+      { type: "text", tag: "h3", value: "Krok 3: Reset a zkušební program" },
+      { type: "text", tag: "p", value: "Vraťte filtr i sítko zpět ve správném pořadí a otočte horním dílem po směru hodinových ručiček, dokud nezacvakne. Zavřete dvířka a podržte tlačítko Start přibližně 3 vteřiny pro reset. Spusťte krátký program a sledujte, zda voda po skončení odtekla. Pokud chyba E22 nezmizí ani po těchto krocích, je pravděpodobně vadné samotné čerpadlo a je třeba zavolat servis." }
+    ],
     sourceType: "official",
     sourceUrl: "https://www.siemens-home.bsh-group.com/cz/zakaznicky-servis/podpora/reseni-problemu-a-chybove-kody/mycka-nadobi/chybove-kody",
   },
@@ -4433,16 +4574,47 @@ const codes: CodeDef[] = [
   },
   {
     brand: "Whirlpool", applianceType: "mycka", code: "F3",
-    title: "Chyba ohřevu vody – myčka Whirlpool",
-    shortMeaning: "Topné těleso myčky Whirlpool neohřívá vodu nebo se přehřívá.",
-    severityLevel: 3, canUserTrySafeChecks: false,
-    safeChecks: [],
-    likelyCauses: ["Vadné topné těleso","Silný vodní kámen na topném tělese","Vadný termostat","Vadná deska"],
-    whenToStopAndCallService: ["Ihned"],
-    relatedSymptoms: ["myčka-zapáchá"],
+    title: "Chyba ohřevu vody – myčka Whirlpool F3",
+    shortMeaning: "Myčka Whirlpool nedokáže ohřát vodu na požadovanou teplotu nebo dochází k přehřívání. Příčinou bývá vadné topné těleso, silný vodní kámen nebo vadný teplotní senzor.",
+    severityLevel: 3, canUserTrySafeChecks: true,
+    safeChecks: [
+      "Vyčistěte filtr ve dně vany – ucpaný filtr může způsobit nadměrnou pěnu, která zkresluje měření teploty.",
+      "Vytáhněte mycí ramena a propláchněte trysky pod tekoucí vodou.",
+      "Zkontrolujte, zda v dávkovači soli je vždy speciální sůl a v aviváži leštidlo – tvrdá voda bez změkčení vede k vrstvě vodního kamene na topném tělese.",
+      "Spusťte program odvápnění (s odvápňovačem pro myčky), pokud jste tak dlouho neudělali – silný vodní kámen na topném tělese je nejčastější příčinou jeho selhání.",
+      "Odpojte myčku ze zásuvky na 1–2 minuty pro reset elektroniky."
+    ],
+    likelyCauses: [
+      "Vadné topné těleso (přerušená topná spirála).",
+      "Silná vrstva vodního kamene na topném tělese – brání předání tepla a způsobuje přehřívání.",
+      "Vadný NTC teplotní senzor (termistor).",
+      "Vadný termostat.",
+      "Nadměrná pěna v myčce kvůli použití nesprávného mycího prostředku.",
+      "Porucha řídicí desky."
+    ],
+    whenToStopAndCallService: [
+      "Pokud chyba F3 přetrvává i po vyčištění a spuštění odvápňovacího programu.",
+      "Pokud nádobí zůstává chladné a špinavé i po dokončení programu.",
+      "Pokud cítíte zápach spáleniny z prostoru myčky."
+    ],
+    relatedSymptoms: ["myčka-neumývá","studená-voda"],
     relatedCodes: ["whirlpool-mycka-f1","whirlpool-mycka-f2","whirlpool-mycka-f4"],
-    possibleParts: ["Topné těleso","Termostat","NTC senzor"],
-    faq: [],
+    possibleParts: ["Topné těleso","NTC teplotní senzor","Termostat","Řídicí deska"],
+    faq: [
+      { q: "Co znamená chyba F3 na myčce Whirlpool?", a: "F3 je signalizace problému s ohřevem vody. Myčka buď nedosáhne požadované teploty v daném čase, nebo naopak detekuje přehřívání. Nejčastěji jde o vadné topné těleso pokryté vodním kamenem nebo vadný teplotní senzor." },
+      { q: "Mohu chybu F3 opravit sám?", a: "Sami zvládnete prevenci a první pomoc – vyčištění filtru, kontrolu soli a aviváže a spuštění odvápňovacího programu. Samotná výměna topného tělesa nebo NTC senzoru ale vyžaduje rozebrání myčky a odpojení od vody i elektřiny – to je už práce pro servis." },
+      { q: "Proč se na topném tělese tvoří vodní kámen?", a: "Když není v dávkovači soli speciální regenerační sůl nebo je tvrdost vody nastavena nesprávně, prochází myčkou tvrdá voda. Při ohřevu se z ní vápník vysráží přímo na topnou spirálu jako pevná krusta, která brání předávání tepla. Topné těleso pak musí pracovat s vyšším výkonem, dokud se nepřepálí." },
+      { q: "Jak resetovat myčku Whirlpool s chybou F3?", a: "Vypněte myčku, odpojte ji ze zásuvky na 1–2 minuty a znovu zapojte. Pak spusťte krátký program a sledujte, zda chyba znovu nepřijde. Pokud ano, je třeba zavolat servis – topné těleso nebo senzor je nutné fyzicky vyměnit." }
+    ],
+    content: [
+      { type: "text", tag: "p", value: "Chyba F3 u myček Whirlpool signalizuje, že něco není v pořádku s ohřevem vody. Buď se voda nedokáže zahřát na nastavenou teplotu, nebo se naopak přehřívá nad bezpečnou hranici. Myčka v obou případech program ukončí, aby nedošlo k poškození elektroniky nebo nádobí." },
+      { type: "text", tag: "h3", value: "Krok 1: Údržba a kontrola spotřebního materiálu" },
+      { type: "text", tag: "p", value: "Než budete řešit elektroniku, projděte si základy. Vyčistěte filtr ve dně vany a propláchněte trysky mycích ramen pod tekoucí vodou. Zkontrolujte, jestli je v dávkovači soli speciální regenerační sůl (nikoli kuchyňská) a v aviváži leštidlo. Bez nich myčka nemá jak změkčit vodu a vápník se usazuje na topném tělese." },
+      { type: "text", tag: "h3", value: "Krok 2: Spuštění odvápňovacího programu" },
+      { type: "text", tag: "p", value: "Tvrdá vrstva vodního kamene na topném tělese je nejčastější příčinou chyby F3 – brání předávání tepla, takže topení musí pracovat s vyšším výkonem a dříve nebo později se přepálí. Pořiďte v drogerii odvápňovač určený pro myčky (Calgonit, Finish nebo podobný) a spusťte podle návodu odvápňovací program. Pokud jste nikdy neodvápňovali, udělejte to teď." },
+      { type: "text", tag: "h3", value: "Krok 3: Reset a kdy volat servis" },
+      { type: "text", tag: "p", value: "Po údržbě odpojte myčku ze zásuvky na 1–2 minuty pro reset elektroniky. Spusťte krátký program. Pokud chyba F3 znovu vyskočí, je samotné topné těleso nebo NTC senzor vadné a je třeba ho fyzicky vyměnit – v tomto bodě už voláte servis. Hodí se vědět, že topné těleso je standardní opotřebitelný díl a jeho výměna patří k běžným servisním úkonům." }
+    ],
     sourceType: "official",
     sourceUrl: "https://www.servis-whirlpool.cz/co-znamenaji-signalizace-poruchy-u-mycek-whirlpool-konkretne-f2-f3-a-f4/",
   },
