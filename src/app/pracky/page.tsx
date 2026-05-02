@@ -3,15 +3,24 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import CategoryFilteredGrid from '@/components/CategoryFilteredGrid'
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Chybové kódy praček',
-  description: 'Databáze chybových kódů praček. Bosch, Siemens, AEG, Electrolux, Samsung, Beko.',
-  alternates: { canonical: 'https://www.kodyspotrebicu.cz/pracky' },
-  openGraph: {
-    title: 'Chybové kódy praček | KódySpotřebičů.cz',
+interface Props {
+  searchParams: Record<string, string | string[] | undefined>
+}
+
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+  const hasFilters = Object.keys(searchParams || {}).length > 0
+  const canonical = 'https://www.kodyspotrebicu.cz/pracky'
+  return {
+    title: 'Chybové kódy praček',
     description: 'Databáze chybových kódů praček. Bosch, Siemens, AEG, Electrolux, Samsung, Beko.',
-    url: 'https://www.kodyspotrebicu.cz/pracky',
-  },
+    alternates: { canonical },
+    robots: hasFilters ? { index: false, follow: true } : undefined,
+    openGraph: {
+      title: 'Chybové kódy praček | KódySpotřebičů.cz',
+      description: 'Databáze chybových kódů praček. Bosch, Siemens, AEG, Electrolux, Samsung, Beko.',
+      url: canonical,
+    },
+  }
 }
 
 export default async function PrackyPage() {

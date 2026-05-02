@@ -1,7 +1,7 @@
 import { prisma } from '@/lib/prisma'
 import ErrorCodeCard from '@/components/ErrorCodeCard'
 import Breadcrumbs from '@/components/Breadcrumbs'
-import { notFound } from 'next/navigation'
+import { notFound, permanentRedirect } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
@@ -83,7 +83,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function BrandPage({ params }: Props) {
-  const brandSlug = params.brand
+  // Redirect to lowercase canonical URL if path isn't already lowercase
+  const lowerBrand = params.brand.toLowerCase()
+  if (params.brand !== lowerBrand) {
+    permanentRedirect(`/znacka/${lowerBrand}`)
+  }
+  const brandSlug = lowerBrand
   let codes: {
     id: number; code: string; title: string; brand: string;
     applianceType: string; shortMeaning: string; severityLevel: number; slug: string;

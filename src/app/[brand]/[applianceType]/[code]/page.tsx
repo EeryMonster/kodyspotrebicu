@@ -1,10 +1,10 @@
 import { prisma } from '@/lib/prisma'
-import { notFound } from 'next/navigation'
+import { notFound, permanentRedirect } from 'next/navigation'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { APPLIANCE_LABELS, SUBTYPE_LABELS, normalizeListItem, normalizeBodyText, SERVICE_CTA_URL } from '@/lib/utils'
+import { APPLIANCE_LABELS, SUBTYPE_LABELS, normalizeListItem, normalizeBodyText, SERVICE_CTA_URL, slugify } from '@/lib/utils'
 import SeverityBadge from '@/components/SeverityBadge'
 import CommentsSection from '@/components/CommentsSection'
 import CopyCodeButton from '@/components/CopyCodeButton'
@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const entry = await prisma.errorCode.findUnique({
       where: { slug: params.code },
-      select: { title: true, shortMeaning: true, code: true, brand: true, applianceType: true },
+      select: { title: true, shortMeaning: true, code: true, brand: true, applianceType: true, slug: true },
     })
     if (!entry) return { title: 'Kód nenalezen' }
     const appliancePath = { pracka: 'pracky', mycka: 'mycky', susicka: 'susicky' }[entry.applianceType] || entry.applianceType
-    const canonical = `https://www.kodyspotrebicu.cz/${entry.brand.toLowerCase()}/${appliancePath}/${params.code}`
+    const canonical = `https://www.kodyspotrebicu.cz/${entry.brand.toLowerCase()}/${appliancePath}/${entry.slug}`
     return {
       title: `Chyba ${entry.code} ${entry.brand}: ${entry.title} (Jak opravit)`,
       description: entry.shortMeaning,
@@ -72,6 +72,13 @@ export default async function ErrorCodePage({ params }: Props) {
 
   const appliancePathLabel = APPLIANCE_LABELS[entry.applianceType] || entry.applianceType
   const appliancePath = { pracka: 'pracky', mycka: 'mycky', susicka: 'susicky' }[entry.applianceType] || entry.applianceType
+
+  // Redirect to canonical URL if path doesn't match (case mismatch, wrong brand path, etc.)
+  const canonicalBrand = entry.brand.toLowerCase()
+  const canonicalCode = entry.slug
+  if (params.brand !== canonicalBrand || params.applianceType !== appliancePath || params.code !== canonicalCode) {
+    permanentRedirect(`/${canonicalBrand}/${appliancePath}/${canonicalCode}`)
+  }
 
   // Related codes
   let relatedEntries: { id: number; code: string; title: string; brand: string; applianceType: string; shortMeaning: string; severityLevel: number; slug: string }[] = []
@@ -381,7 +388,7 @@ export default async function ErrorCodePage({ params }: Props) {
                 {relatedSymptomEntries.map((s) => (
                   <Link
                     key={s.slug}
-                    href={`/symptom/${s.slug}`}
+                    href={`/symptom/${slugify(s.slug)}`}
                     className="flex items-start gap-3 p-3 hover:bg-gray-50 rounded-xl transition-colors border border-transparent hover:border-gray-200 group"
                   >
                     <ChevronRight className="w-4 h-4 text-gray-400 mt-0.5 group-hover:text-blue-500 transition-colors shrink-0" />

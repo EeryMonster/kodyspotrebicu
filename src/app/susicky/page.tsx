@@ -4,15 +4,24 @@ import CategoryFilteredGrid from '@/components/CategoryFilteredGrid'
 import { SUSICKA_SUBTYPES } from '@/lib/utils'
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Chybové kódy sušiček',
-  description: 'Databáze chybových kódů sušiček – odtahová, kondenzační, tepelné čerpadlo. Bosch, Siemens, AEG, Electrolux, Samsung, Beko.',
-  alternates: { canonical: 'https://www.kodyspotrebicu.cz/susicky' },
-  openGraph: {
-    title: 'Chybové kódy sušiček | KódySpotřebičů.cz',
+interface Props {
+  searchParams: Record<string, string | string[] | undefined>
+}
+
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+  const hasFilters = Object.keys(searchParams || {}).length > 0
+  const canonical = 'https://www.kodyspotrebicu.cz/susicky'
+  return {
+    title: 'Chybové kódy sušiček',
     description: 'Databáze chybových kódů sušiček – odtahová, kondenzační, tepelné čerpadlo. Bosch, Siemens, AEG, Electrolux, Samsung, Beko.',
-    url: 'https://www.kodyspotrebicu.cz/susicky',
-  },
+    alternates: { canonical },
+    robots: hasFilters ? { index: false, follow: true } : undefined,
+    openGraph: {
+      title: 'Chybové kódy sušiček | KódySpotřebičů.cz',
+      description: 'Databáze chybových kódů sušiček – odtahová, kondenzační, tepelné čerpadlo. Bosch, Siemens, AEG, Electrolux, Samsung, Beko.',
+      url: canonical,
+    },
+  }
 }
 
 export default async function SusickyPage() {

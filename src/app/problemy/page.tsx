@@ -2,6 +2,7 @@ import { prisma } from '@/lib/prisma'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { slugify } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'Nejčastější problémy spotřebičů',
@@ -50,7 +51,7 @@ function SymptomCard({ symptom, accentClass }: { symptom: SymptomRow; accentClas
 
   return (
     <Link
-      href={`/symptom/${symptom.slug}`}
+      href={`/symptom/${slugify(symptom.slug)}`}
       className={`group relative flex min-h-[124px] flex-col rounded-xl border border-gray-200 border-l-4 ${accentClass} bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-md`}
     >
       <div className="flex items-start justify-between gap-3">

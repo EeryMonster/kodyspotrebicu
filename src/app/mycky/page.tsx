@@ -3,15 +3,24 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import CategoryFilteredGrid from '@/components/CategoryFilteredGrid'
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Chybové kódy myček nádobí',
-  description: 'Databáze chybových kódů myček nádobí. Bosch, Siemens, AEG, Electrolux, Samsung, Beko. Zjistěte příčinu chyby myčky a jak postupovat.',
-  alternates: { canonical: 'https://www.kodyspotrebicu.cz/mycky' },
-  openGraph: {
-    title: 'Chybové kódy myček nádobí | KódySpotřebičů.cz',
+interface Props {
+  searchParams: Record<string, string | string[] | undefined>
+}
+
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+  const hasFilters = Object.keys(searchParams || {}).length > 0
+  const canonical = 'https://www.kodyspotrebicu.cz/mycky'
+  return {
+    title: 'Chybové kódy myček nádobí',
     description: 'Databáze chybových kódů myček nádobí. Bosch, Siemens, AEG, Electrolux, Samsung, Beko. Zjistěte příčinu chyby myčky a jak postupovat.',
-    url: 'https://www.kodyspotrebicu.cz/mycky',
-  },
+    alternates: { canonical },
+    robots: hasFilters ? { index: false, follow: true } : undefined,
+    openGraph: {
+      title: 'Chybové kódy myček nádobí | KódySpotřebičů.cz',
+      description: 'Databáze chybových kódů myček nádobí. Bosch, Siemens, AEG, Electrolux, Samsung, Beko. Zjistěte příčinu chyby myčky a jak postupovat.',
+      url: canonical,
+    },
+  }
 }
 
 export default async function MyckyPage() {
