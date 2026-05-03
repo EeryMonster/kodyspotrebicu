@@ -52,6 +52,7 @@ export default async function ErrorCodePage({ params }: Props) {
     content: unknown[];
     helpfulYes: number;
     helpfulNo: number;
+    updatedAt: Date;
     comments?: { id: number; authorName: string; content: string; createdAt: Date }[];
   } | null = null
 
@@ -171,6 +172,14 @@ export default async function ErrorCodePage({ params }: Props) {
                 applianceLabel={appliancePathLabel}
                 url={`https://www.kodyspotrebicu.cz/${entry.brand.toLowerCase()}/${appliancePath}/${params.code}`}
               />
+              <span className="text-gray-300">•</span>
+              <time
+                dateTime={entry.updatedAt.toISOString()}
+                className="flex items-center gap-1.5 text-gray-500"
+              >
+                <Calendar className="w-4 h-4" />
+                Aktualizováno {entry.updatedAt.toLocaleDateString('cs-CZ', { day: 'numeric', month: 'long', year: 'numeric' })}
+              </time>
               {entry.sourceUrl && (
                 <>
                   <span className="text-gray-300">•</span>

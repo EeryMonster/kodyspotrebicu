@@ -21,6 +21,10 @@ export async function GET() {
     { url: `${BASE_URL}/problemy`, changefreq: 'weekly', priority: '0.8', lastmod: SITE_UPDATED },
     { url: `${BASE_URL}/hledat`, changefreq: 'monthly', priority: '0.5', lastmod: SITE_UPDATED },
     { url: `${BASE_URL}/o-nas`, changefreq: 'monthly', priority: '0.4', lastmod: SITE_UPDATED },
+    { url: `${BASE_URL}/kontakt`, changefreq: 'monthly', priority: '0.4', lastmod: SITE_UPDATED },
+    { url: `${BASE_URL}/zasady-ochrany-osobnich-udaju`, changefreq: 'yearly', priority: '0.3', lastmod: SITE_UPDATED },
+    { url: `${BASE_URL}/podminky-pouziti`, changefreq: 'yearly', priority: '0.3', lastmod: SITE_UPDATED },
+    { url: `${BASE_URL}/cookies`, changefreq: 'yearly', priority: '0.3', lastmod: SITE_UPDATED },
     ...['bosch', 'siemens', 'aeg', 'electrolux', 'samsung', 'beko', 'whirlpool', 'lg', 'miele'].map((b) => ({
       url: `${BASE_URL}/znacka/${b}`,
       changefreq: 'weekly',
