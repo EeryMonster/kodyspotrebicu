@@ -34,17 +34,23 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-800 mb-3">Nástroje</h3>
+            <h3 className="font-semibold text-gray-800 mb-3">Web</h3>
             <ul className="space-y-1 text-sm">
               <li><Link href="/hledat" className="text-gray-600 hover:text-brand-primary">Vyhledávání</Link></li>
               <li><Link href="/sitemap.xml" className="text-gray-600 hover:text-brand-primary">Sitemap</Link></li>
               <li><Link href="/o-nas" className="text-gray-600 hover:text-brand-primary">O webu</Link></li>
-              <li><Link href="/o-nas#zasady" className="text-gray-600 hover:text-brand-primary">Ochrana osobních údajů</Link></li>
+              <li><Link href="/kontakt" className="text-gray-600 hover:text-brand-primary">Kontakt</Link></li>
             </ul>
           </div>
         </div>
-        <div className="mt-8 pt-4 border-t border-brand-border text-sm text-gray-600 text-center">
-          © {new Date().getFullYear()} KódySpotřebičů.cz – Informativní databáze chybových kódů spotřebičů
+        <div className="mt-8 pt-4 border-t border-brand-border flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-gray-600">
+          <div>© {new Date().getFullYear()} KódySpotřebičů.cz – Informativní databáze chybových kódů spotřebičů</div>
+          <ul className="flex flex-wrap gap-x-4 gap-y-1">
+            <li><Link href="/zasady-ochrany-osobnich-udaju" className="text-gray-600 hover:text-brand-primary">Ochrana osobních údajů</Link></li>
+            <li><Link href="/cookies" className="text-gray-600 hover:text-brand-primary">Cookies</Link></li>
+            <li><Link href="/podminky-pouziti" className="text-gray-600 hover:text-brand-primary">Podmínky použití</Link></li>
+            <li><Link href="/kontakt" className="text-gray-600 hover:text-brand-primary">Kontakt</Link></li>
+          </ul>
         </div>
       </div>
     </footer>
