@@ -27,24 +27,44 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
 export default async function SearchPage({ searchParams }: Props) {
   const q = (searchParams.q || '').trim()
   let results: { id: number; code: string; title: string; brand: string; applianceType: string; shortMeaning: string; severityLevel: number; slug: string }[] = []
+  let symptoms: { id: number; slug: string; title: string; description: string }[] = []
 
   if (q.length >= 2) {
     const words = q.split(/\s+/).filter((w) => w.length >= 2)
-    const wordConditions = words.map((word) => ({
+    const codeConditions = words.map((word) => ({
       OR: [
         { code: { contains: word, mode: 'insensitive' as const } },
+        { altCodes: { has: word.toUpperCase() } },
         { title: { contains: word, mode: 'insensitive' as const } },
         { brand: { contains: word, mode: 'insensitive' as const } },
         { shortMeaning: { contains: word, mode: 'insensitive' as const } },
       ],
     }))
+    const symptomConditions = words.map((word) => ({
+      OR: [
+        { title: { contains: word, mode: 'insensitive' as const } },
+        { description: { contains: word, mode: 'insensitive' as const } },
+        { intro: { contains: word, mode: 'insensitive' as const } },
+        { slug: { contains: word, mode: 'insensitive' as const } },
+      ],
+    }))
     try {
-      results = await prisma.errorCode.findMany({
-        where: { AND: wordConditions },
-        select: { id: true, code: true, title: true, brand: true, applianceType: true, shortMeaning: true, severityLevel: true, slug: true },
-        take: 50,
-        orderBy: [{ brand: 'asc' }, { code: 'asc' }],
-      })
+      const [codeResults, symptomResults] = await Promise.all([
+        prisma.errorCode.findMany({
+          where: { AND: codeConditions },
+          select: { id: true, code: true, title: true, brand: true, applianceType: true, shortMeaning: true, severityLevel: true, slug: true },
+          take: 50,
+          orderBy: [{ brand: 'asc' }, { code: 'asc' }],
+        }),
+        prisma.symptom.findMany({
+          where: { AND: symptomConditions },
+          select: { id: true, slug: true, title: true, description: true },
+          take: 10,
+          orderBy: { title: 'asc' },
+        }),
+      ])
+      results = codeResults
+      symptoms = symptomResults
     } catch { /* ignore */ }
   }
 
@@ -77,14 +97,43 @@ export default async function SearchPage({ searchParams }: Props) {
 
       {q.length >= 2 ? (
         <>
-          {results.length > 0 ? (
+          {(results.length > 0 || symptoms.length > 0) ? (
             <>
-              <p className="text-gray-600 mb-6">Nalezeno <strong>{results.length}</strong> výsledků.</p>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {results.map((c) => (
-                  <ErrorCodeCard key={c.id} {...c} />
-                ))}
-              </div>
+              <p className="text-gray-600 mb-6">
+                Nalezeno <strong>{results.length}</strong> chybových kódů
+                {symptoms.length > 0 ? <> a <strong>{symptoms.length}</strong> souvisejících závad</> : null}.
+              </p>
+
+              {symptoms.length > 0 && (
+                <div className="mb-8">
+                  <h2 className="text-lg font-semibold text-gray-900 mb-3">Související závady a postupy</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {symptoms.map((s) => (
+                      <Link
+                        key={s.id}
+                        href={`/symptom/${s.slug}`}
+                        className="block p-4 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-sm transition-all"
+                      >
+                        <div className="font-semibold text-gray-900 mb-1">{s.title}</div>
+                        <div className="text-sm text-gray-600 line-clamp-2">{s.description}</div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {results.length > 0 && (
+                <div>
+                  {symptoms.length > 0 && (
+                    <h2 className="text-lg font-semibold text-gray-900 mb-3">Chybové kódy</h2>
+                  )}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {results.map((c) => (
+                      <ErrorCodeCard key={c.id} {...c} />
+                    ))}
+                  </div>
+                </div>
+              )}
             </>
           ) : (
             <div className="text-center py-16">

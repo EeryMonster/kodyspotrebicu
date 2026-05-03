@@ -56,6 +56,7 @@ export default async function ErrorCodePage({ params }: Props) {
     comments?: { id: number; authorName: string; content: string; createdAt: Date }[];
   } | null = null
 
+  let altRedirect: string | null = null
   try {
     entry = await prisma.errorCode.findUnique({
       where: { slug: params.code },
@@ -67,8 +68,24 @@ export default async function ErrorCodePage({ params }: Props) {
         }
       }
     })
+
+    // Fallback: try altCode lookup for the same brand (e.g. /samsung/pracky/5c → samsung-pracka-5e)
+    if (!entry) {
+      const altMatch = await prisma.errorCode.findFirst({
+        where: {
+          brand: { equals: params.brand, mode: 'insensitive' },
+          altCodes: { has: params.code.toUpperCase() },
+        },
+        select: { brand: true, applianceType: true, slug: true },
+      })
+      if (altMatch) {
+        const altPath = { pracka: 'pracky', mycka: 'mycky', susicka: 'susicky' }[altMatch.applianceType] || altMatch.applianceType
+        altRedirect = `/${altMatch.brand.toLowerCase()}/${altPath}/${altMatch.slug}`
+      }
+    }
   } catch { /* DB not ready */ }
 
+  if (altRedirect) permanentRedirect(altRedirect)
   if (!entry) notFound()
 
   const appliancePathLabel = APPLIANCE_LABELS[entry.applianceType] || entry.applianceType
