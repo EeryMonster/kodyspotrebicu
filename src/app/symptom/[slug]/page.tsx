@@ -55,22 +55,22 @@ export default async function SymptomPage({ params }: Props) {
     relatedCodes: string[]; applianceTypes: string[]
   } | null = null
 
-  try {
-    const decoded = decodeURIComponent(params.slug)
-    const cleanSlug = slugify(decoded)
-    if (decoded !== cleanSlug) permanentRedirect(`/symptom/${cleanSlug}`)
+  let decoded: string
+  try { decoded = decodeURIComponent(params.slug) } catch { notFound() }
+  const cleanSlug = slugify(decoded)
+  if (decoded !== cleanSlug) permanentRedirect(`/symptom/${cleanSlug}`)
 
+  try {
     const raw = await prisma.symptom.findFirst({
       where: { OR: [{ slug: decoded }, { slug: cleanSlug }] },
     })
     if (raw) {
       symptom = { ...raw, sections: (raw.sections as unknown as Section[]) ?? [] }
-      // Redirect if DB slug differs from clean slug
-      if (slugify(raw.slug) !== decoded) permanentRedirect(`/symptom/${slugify(raw.slug)}`)
     }
-  } catch { /* ignore */ }
+  } catch { /* DB not ready */ }
 
   if (!symptom) notFound()
+  if (slugify(symptom.slug) !== decoded) permanentRedirect(`/symptom/${slugify(symptom.slug)}`)
 
   let relatedEntries: {
     id: number; code: string; title: string; brand: string

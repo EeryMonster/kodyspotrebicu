@@ -110,12 +110,13 @@ export default async function ErrorCodePage({ params }: Props) {
     } catch { /* ignore */ }
   }
 
-  // Related symptoms
+  // Related symptoms — slugify both stored refs (some have legacy diacritics) and DB lookups
   let relatedSymptomEntries: { slug: string; title: string; description: string }[] = []
   if (entry.relatedSymptoms.length > 0) {
     try {
+      const cleanRefs = Array.from(new Set(entry.relatedSymptoms.map((s) => slugify(s))))
       relatedSymptomEntries = await prisma.symptom.findMany({
-        where: { slug: { in: entry.relatedSymptoms } },
+        where: { slug: { in: cleanRefs } },
         select: { slug: true, title: true, description: true },
         take: 6,
       })
