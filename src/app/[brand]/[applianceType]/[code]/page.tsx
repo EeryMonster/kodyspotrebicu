@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { APPLIANCE_LABELS, SUBTYPE_LABELS, normalizeListItem, normalizeBodyText, SERVICE_CTA_URL, slugify } from '@/lib/utils'
+import { APPLIANCE_LABELS, SUBTYPE_LABELS, normalizeListItem, normalizeBodyText, SERVICE_CTA_URL, slugify, REPAIR_PRICE_RANGES, BRAND_RESET_INSTRUCTIONS, BRAND_RESET_FALLBACK } from '@/lib/utils'
 import SeverityBadge from '@/components/SeverityBadge'
 import CommentsSection from '@/components/CommentsSection'
 import CopyCodeButton from '@/components/CopyCodeButton'
@@ -20,19 +20,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const entry = await prisma.errorCode.findUnique({
       where: { slug: params.code },
-      select: { title: true, shortMeaning: true, code: true, brand: true, applianceType: true, slug: true },
+      select: { title: true, shortMeaning: true, code: true, altCodes: true, brand: true, applianceType: true, slug: true },
     })
     if (!entry) return { title: 'Kód nenalezen' }
     const appliancePath = { pracka: 'pracky', mycka: 'mycky', susicka: 'susicky' }[entry.applianceType] || entry.applianceType
+    const applianceLabel = APPLIANCE_LABELS[entry.applianceType] || entry.applianceType
     const canonical = `https://www.kodyspotrebicu.cz/${entry.brand.toLowerCase()}/${appliancePath}/${entry.slug}`
+    const year = new Date().getFullYear()
+    // Sémantická šíře titulu: kód + případné alt-kódy zachytí víc query variant
+    const altCodesPart = entry.altCodes && entry.altCodes.length > 0
+      ? ` (${entry.altCodes.slice(0, 2).join(' / ')})`
+      : ''
+    const title = `Chyba ${entry.code}${altCodesPart} ${entry.brand} ${applianceLabel.toLowerCase()}: příčiny a oprava (${year})`
+    const description = `${entry.shortMeaning} ✓ Co zkusit nejdřív ✓ Reset spotřebiče ✓ Cena opravy ✓ Kdy volat servis. Praktický návod krok za krokem.`
     return {
-      title: `Chyba ${entry.code} ${entry.brand}: ${entry.title} (Jak opravit)`,
-      description: entry.shortMeaning,
+      title,
+      description,
       alternates: { canonical },
       openGraph: {
-        title: `Chyba ${entry.code} ${entry.brand}: ${entry.title} (Jak opravit)`,
-        description: entry.shortMeaning,
+        title,
+        description,
         url: canonical,
+        type: 'article',
       },
     }
   } catch {
@@ -127,11 +136,21 @@ export default async function ErrorCodePage({ params }: Props) {
   const HOW_TO_RE = /jak\s+(opravit|resetovat|odstranit|vyřešit|vyčistit|vypnout|zbavit|deaktivovat)/i
   const howToFaqItem = faqItems.find(f => HOW_TO_RE.test(f.q)) ?? null
 
+  const priceRange = REPAIR_PRICE_RANGES[entry.severityLevel] ?? REPAIR_PRICE_RANGES[2]
+  const resetInstruction = BRAND_RESET_INSTRUCTIONS[entry.brand.toLowerCase()] ?? BRAND_RESET_FALLBACK
+
   const howToSchema = entry.canUserTrySafeChecks && entry.safeChecks.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     name: `Jak doma zkontrolovat a opravit chybu ${entry.code} – ${entry.title}`,
     description: entry.shortMeaning,
+    totalTime: 'PT15M',
+    estimatedCost: {
+      '@type': 'MonetaryAmount',
+      currency: 'CZK',
+      minValue: priceRange.min,
+      maxValue: priceRange.max,
+    },
     step: entry.safeChecks.map((check, i) => ({
       '@type': 'HowToStep',
       position: i + 1,
@@ -150,8 +169,58 @@ export default async function ErrorCodePage({ params }: Props) {
     })),
   } : null
 
+  const canonicalUrl = `https://www.kodyspotrebicu.cz/${canonicalBrand}/${appliancePath}/${canonicalCode}`
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: `Chyba ${entry.code} ${entry.brand} ${appliancePathLabel}: ${entry.title}`,
+    description: entry.shortMeaning,
+    url: canonicalUrl,
+    datePublished: entry.updatedAt.toISOString(),
+    dateModified: entry.updatedAt.toISOString(),
+    inLanguage: 'cs-CZ',
+    author: {
+      '@type': 'Organization',
+      name: 'KódySpotřebičů.cz',
+      url: 'https://www.kodyspotrebicu.cz/o-nas',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'KódySpotřebičů.cz',
+      url: 'https://www.kodyspotrebicu.cz',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.kodyspotrebicu.cz/icon.png',
+      },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    about: {
+      '@type': 'Thing',
+      name: `${entry.brand} ${appliancePathLabel}`,
+    },
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Úvod', item: 'https://www.kodyspotrebicu.cz' },
+      { '@type': 'ListItem', position: 2, name: entry.brand, item: `https://www.kodyspotrebicu.cz/znacka/${entry.brand.toLowerCase()}` },
+      { '@type': 'ListItem', position: 3, name: appliancePathLabel, item: `https://www.kodyspotrebicu.cz/${appliancePath}` },
+      { '@type': 'ListItem', position: 4, name: entry.code, item: canonicalUrl },
+    ],
+  }
+
   return (
     <div className="w-full max-w-[1000px] mx-auto px-4 py-8 md:py-12 flex flex-col gap-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {howToSchema && (
         <script
           type="application/ld+json"
@@ -279,6 +348,50 @@ export default async function ErrorCodePage({ params }: Props) {
              <p className="text-gray-500 font-medium">Nejsou známa žádná specifická varování pro tento kód.</p>
            </div>
         )}
+      </section>
+
+      {/* Reset + Cena opravy (long-tail SEO sekce) */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Reset spotřebiče */}
+        <div className="bg-white border border-blue-700/20 rounded-xl p-6 md:p-8 shadow-sm">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="bg-blue-700 text-white p-2 rounded-lg flex items-center justify-center">
+              <Settings className="w-5 h-5" />
+            </div>
+            <h2 className="text-xl font-bold text-blue-800 tracking-tight">Jak resetovat {entry.brand} {appliancePathLabel.toLowerCase()}</h2>
+          </div>
+          <p className="text-gray-700 leading-relaxed mb-3">{resetInstruction}</p>
+          <p className="text-sm text-gray-500 leading-relaxed">
+            Reset může smazat dočasnou chybu a obnovit provoz. Pokud se chyba <strong>{entry.code}</strong> vrátí, jde o reálný problém – pokračujte krokem 1 výše.
+          </p>
+        </div>
+
+        {/* Cena opravy */}
+        <div className="bg-white border border-amber-600/20 rounded-xl p-6 md:p-8 shadow-sm">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="bg-amber-600 text-white p-2 rounded-lg flex items-center justify-center">
+              <FileText className="w-5 h-5" />
+            </div>
+            <h2 className="text-xl font-bold text-amber-800 tracking-tight">Cena opravy chyby {entry.code}</h2>
+          </div>
+          <div className="flex flex-col gap-3 text-gray-700">
+            <div className="flex items-baseline gap-2">
+              <span className="text-3xl font-bold text-amber-700">
+                {priceRange.min.toLocaleString('cs-CZ')}–{priceRange.max.toLocaleString('cs-CZ')} Kč
+              </span>
+              <span className="text-sm text-gray-500">orientačně</span>
+            </div>
+            <p className="text-sm leading-relaxed">
+              <strong>Svépomocí:</strong> {priceRange.diy}
+            </p>
+            <p className="text-sm leading-relaxed">
+              <strong>{priceRange.service}</strong>
+            </p>
+            <p className="text-xs text-gray-500 leading-relaxed mt-1">
+              Cena se může lišit podle značky, lokality a dostupnosti dílů. Vždy si vyžádejte cenovou nabídku před opravou.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Detailní postup řešení */}

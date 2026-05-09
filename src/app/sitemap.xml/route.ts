@@ -51,6 +51,20 @@ export async function GET() {
     lastmod: c.updatedAt.toISOString().split('T')[0],
   }))
 
+  // Brand+appliance pillar pages (high SEO value: "chybové kódy electrolux pračka")
+  const pillarKeys = Array.from(
+    new Set(codes.map((c) => `${c.brand.toLowerCase()}|${APPLIANCE_PATH[c.applianceType] || c.applianceType}`))
+  )
+  const pillarPages = pillarKeys.map((k) => {
+    const [brand, applPath] = k.split('|')
+    return {
+      url: `${BASE_URL}/${brand}/${applPath}`,
+      changefreq: 'weekly',
+      priority: '0.85',
+      lastmod: SITE_UPDATED,
+    }
+  })
+
   const symptomPages = symptoms.map((s) => ({
     url: `${BASE_URL}/symptom/${slugify(s.slug)}`,
     changefreq: 'monthly',
@@ -58,7 +72,7 @@ export async function GET() {
     lastmod: s.updatedAt.toISOString().split('T')[0],
   }))
 
-  const allPages = [...staticPages, ...codePages, ...symptomPages]
+  const allPages = [...staticPages, ...pillarPages, ...codePages, ...symptomPages]
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
