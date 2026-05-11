@@ -60,6 +60,13 @@ export default async function SymptomPage({ params }: Props) {
   const cleanSlug = slugify(decoded)
   if (decoded !== cleanSlug) permanentRedirect(`/symptom/${cleanSlug}`)
 
+  // 301 redirect map pro merged/přejmenované symptom slugy (zachovává SEO equity).
+  // Aktualizovat při každé deduplikaci symptomů.
+  const SLUG_REDIRECTS: Record<string, string> = {
+    'pracka-nevypousti': 'voda-zustava-v-pracce',
+  }
+  if (SLUG_REDIRECTS[cleanSlug]) permanentRedirect(`/symptom/${SLUG_REDIRECTS[cleanSlug]}`)
+
   try {
     const raw = await prisma.symptom.findFirst({
       where: { OR: [{ slug: decoded }, { slug: cleanSlug }] },

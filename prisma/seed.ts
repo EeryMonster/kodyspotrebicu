@@ -394,7 +394,7 @@ const codes: CodeDef[] = [
       "Pokud čerpadlo bzučí/bručí, ale voda neodtéká a vrtulka se točí volně.",
       "Pokud objevíte únik vody pod pračkou nebo z prostoru za servisními dvířky filtru."
     ],
-    relatedSymptoms: ["pračka-nevypouští","voda-v-bubnu","pračka-neodstředí","prádlo-zůstává-mokré"],
+    relatedSymptoms: ["voda-zustava-v-pracce","voda-v-bubnu","pračka-neodstředí","prádlo-zůstává-mokré"],
     relatedCodes: ["aeg-pracka-e10","aeg-pracka-e21","aeg-pracka-e40","aeg-pracka-e50"],
     possibleParts: ["Odpadní čerpadlo","Filtr čerpadla","Oběžné kolo čerpadla","Odpadní hadice","Sifon"],
     faq: [
@@ -451,7 +451,7 @@ const codes: CodeDef[] = [
       "Pokud chyba E21 nastává opakovaně i po důkladném vyčištění a kontrole.",
       "Pokud objevíte únik vody pod pračkou nebo v okolí čerpadla."
     ],
-    relatedSymptoms: ["pračka-pomalu-vypouští","pračka-nevypouští","pračka-neodstředí"],
+    relatedSymptoms: ["pračka-pomalu-vypouští","voda-zustava-v-pracce","pračka-neodstředí"],
     relatedCodes: ["aeg-pracka-e10","aeg-pracka-e20","aeg-pracka-e40"],
     possibleParts: ["Odpadní čerpadlo","Filtr čerpadla","Oběžné kolo čerpadla","Odpadní hadice","Sifon"],
     faq: [
@@ -772,7 +772,7 @@ const codes: CodeDef[] = [
     safeChecks: ["Vyčistěte filtr čerpadla vpravo dole"],
     likelyCauses: ["Zanedbání čištění filtru","Cizí předměty v filtru"],
     whenToStopAndCallService: [],
-    relatedSymptoms: ["pračka-nevypouští"],
+    relatedSymptoms: ["voda-zustava-v-pracce"],
     relatedCodes: ["aeg-pracka-e10","aeg-pracka-e20","aeg-pracka-e40"],
     possibleParts: ["Filtr čerpadla"],
     faq: [{"a":"Otočte dolním krytem, vyjměte filtr, vyčistěte pod tekoucí vodou a vraťte zpět.","q":"Jak vyčistit filtr pračky AEG?"}],
@@ -1623,7 +1623,7 @@ const codes: CodeDef[] = [
       "Pokud čerpadlo bzučí, ale voda neodtéká a vrtulka se točí volně.",
       "Pokud objevíte únik vody pod pračkou – Beko sám doporučuje nepokoušet se pak opravit svépomocí a kontaktovat Customer Care."
     ],
-    relatedSymptoms: ["pračka-nevypouští","voda-v-bubnu","pračka-neodstředí","prádlo-zůstává-mokré"],
+    relatedSymptoms: ["voda-zustava-v-pracce","voda-v-bubnu","pračka-neodstředí","prádlo-zůstává-mokré"],
     relatedCodes: ["beko-pracka-e10","beko-pracka-e21","beko-pracka-e3"],
     possibleParts: ["Odpadní čerpadlo","Filtr čerpadla","Oběžné kolo čerpadla","Odpadní hadice"],
     faq: [
@@ -1680,7 +1680,7 @@ const codes: CodeDef[] = [
       "Pokud chyba E21 nastává opakovaně i po důkladném vyčištění.",
       "Pokud objevíte únik vody pod pračkou."
     ],
-    relatedSymptoms: ["pračka-pomalu-vypouští","pračka-nevypouští","pračka-neodstředí"],
+    relatedSymptoms: ["pračka-pomalu-vypouští","voda-zustava-v-pracce","pračka-neodstředí"],
     relatedCodes: ["beko-pracka-e10","beko-pracka-e20"],
     possibleParts: ["Odpadní čerpadlo","Filtr čerpadla","Oběžné kolo čerpadla","Odpadní hadice","Sifon"],
     faq: [
@@ -1712,7 +1712,7 @@ const codes: CodeDef[] = [
     safeChecks: ["Vyčistěte filtr čerpadla","Zkontrolujte odpadní hadici"],
     likelyCauses: ["Ucpaný filtr čerpadla","Zalomená odpadní hadice","Vadné čerpadlo"],
     whenToStopAndCallService: ["Pokud čerpadlo nefunguje"],
-    relatedSymptoms: ["pračka-nevypouští"],
+    relatedSymptoms: ["voda-zustava-v-pracce"],
     relatedCodes: ["beko-pracka-h2","beko-pracka-h5","beko-pracka-h3"],
     possibleParts: ["Čerpadlo","Filtr čerpadla"],
     faq: [],
@@ -2126,7 +2126,7 @@ const codes: CodeDef[] = [
     safeChecks: ["Vyčistěte filtr čerpadla","Zkontrolujte odpadní hadici"],
     likelyCauses: ["Ucpaný filtr","Ucpané čerpadlo","Zalomená hadice"],
     whenToStopAndCallService: ["Pokud přetrvává"],
-    relatedSymptoms: ["pračka-nevypouští"],
+    relatedSymptoms: ["voda-zustava-v-pracce"],
     relatedCodes: ["beko-pracka-h2","beko-pracka-h3","beko-pracka-h7"],
     possibleParts: ["Čerpadlo","Filtr čerpadla"],
     faq: [{"a":"1) Vyčistěte filtr čerpadla 2) Zkontrolujte odpadní hadici","q":"Jak opravit chybu H5 na pračce Beko?"}],
@@ -2711,7 +2711,7 @@ const codes: CodeDef[] = [
       "Pokud čerpadlo bzučí, ale voda neodtéká.",
       "Pokud objevíte únik vody pod pračkou – Bosch sám doporučuje pak nepokoušet se opravit svépomocí."
     ],
-    relatedSymptoms: ["pračka-nevypouští","voda-v-bubnu","pračka-neodstředí","prádlo-zůstává-mokré"],
+    relatedSymptoms: ["voda-zustava-v-pracce","voda-v-bubnu","pračka-neodstředí","prádlo-zůstává-mokré"],
     relatedCodes: ["bosch-pracka-e17","bosch-pracka-e27","bosch-pracka-e3"],
     possibleParts: ["Odpadní čerpadlo","Filtr čerpadla","Kryt čerpadla","Odpadní hadice"],
     faq: [
@@ -3517,7 +3517,7 @@ const codes: CodeDef[] = [
       "Pokud čerpadlo bzučí, ale voda neodtéká a vrtulka se točí volně.",
       "Pokud objevíte únik vody pod pračkou."
     ],
-    relatedSymptoms: ["pračka-nevypouští","voda-v-bubnu","pračka-neodstředí","prádlo-zůstává-mokré"],
+    relatedSymptoms: ["voda-zustava-v-pracce","voda-v-bubnu","pračka-neodstředí","prádlo-zůstává-mokré"],
     relatedCodes: ["electrolux-pracka-e10","electrolux-pracka-e21","electrolux-pracka-e40"],
     possibleParts: ["Odpadní čerpadlo","Filtr čerpadla","Oběžné kolo čerpadla","Odpadní hadice","Sifon"],
     faq: [
@@ -3572,7 +3572,7 @@ const codes: CodeDef[] = [
       "Pokud chyba E21 nastává opakovaně i po důkladném vyčištění.",
       "Pokud objevíte únik vody pod pračkou."
     ],
-    relatedSymptoms: ["pračka-pomalu-vypouští","pračka-nevypouští","pračka-neodstředí"],
+    relatedSymptoms: ["pračka-pomalu-vypouští","voda-zustava-v-pracce","pračka-neodstředí"],
     relatedCodes: ["electrolux-pracka-e10","electrolux-pracka-e20","electrolux-pracka-e40"],
     possibleParts: ["Odpadní čerpadlo","Filtr čerpadla","Oběžné kolo","Odpadní hadice","Sifon"],
     faq: [
@@ -4565,7 +4565,7 @@ const codes: CodeDef[] = [
       "Pokud čerpadlo bzučí, ale voda neodtéká.",
       "Pokud objevíte únik vody pod pračkou."
     ],
-    relatedSymptoms: ["pracka-nevypousti","voda-v-bubnu","pračka-neodstředí"],
+    relatedSymptoms: ["voda-zustava-v-pracce","voda-v-bubnu","pračka-neodstředí"],
     relatedCodes: ["lg-pracka-ie","lg-pracka-ue","lg-pracka-te"],
     possibleParts: ["Odpadní čerpadlo","Filtr čerpadla","Oběžné kolo čerpadla","Odpadní hadice"],
     faq: [
@@ -5386,7 +5386,7 @@ const codes: CodeDef[] = [
       "Pokud čerpadlo bzučí, ale voda neodtéká.",
       "Pokud objevíte únik vody pod pračkou."
     ],
-    relatedSymptoms: ["pračka-nevypouští","voda-v-bubnu","pračka-neodstředí"],
+    relatedSymptoms: ["voda-zustava-v-pracce","voda-v-bubnu","pračka-neodstředí"],
     relatedCodes: ["samsung-pracka-4e","samsung-pracka-de","samsung-pracka-3e"],
     possibleParts: ["Odpadní čerpadlo","Filtr čerpadla","Oběžné kolo čerpadla","Odpadní hadice"],
     faq: [
@@ -6099,7 +6099,7 @@ const codes: CodeDef[] = [
       "Pokud čerpadlo bzučí, ale voda neodtéká.",
       "Pokud objevíte únik vody pod pračkou."
     ],
-    relatedSymptoms: ["pračka-nevypouští","voda-v-bubnu","pračka-neodstředí"],
+    relatedSymptoms: ["voda-zustava-v-pracce","voda-v-bubnu","pračka-neodstředí"],
     relatedCodes: ["siemens-pracka-f17","siemens-pracka-f21","siemens-pracka-f43"],
     possibleParts: ["Odpadní čerpadlo","Filtr čerpadla","Kryt čerpadla","Odpadní hadice"],
     faq: [
@@ -6619,7 +6619,7 @@ const codes: CodeDef[] = [
       "Pokud je odtoková hadice nepřístupná",
       "Když dojde k poškození elektrických částí čerpadla"
     ],
-    relatedSymptoms: ["pracka-nevypousti"],
+    relatedSymptoms: ["voda-zustava-v-pracce"],
     relatedCodes: ["whirlpool-pracka-f08","whirlpool-pracka-f18"],
     possibleParts: ["Odtokové čerpadlo", "Filtr čerpadla", "Odtoková hadice"],
     faq: [
@@ -6772,7 +6772,7 @@ const codes: CodeDef[] = [
     safeChecks: ["Vyčistěte filtr čerpadla (vpravo dole)","Zkontrolujte odpadní hadici, zda není zalomená","Zkontrolujte sifon nebo odpad"],
     likelyCauses: ["Ucpaný filtr čerpadla","Vadné odpadní čerpadlo","Zalomená nebo ucpaná odpadní hadice","Ucpaný sifon"],
     whenToStopAndCallService: ["Pokud čerpadlo nefunguje ani po vyčištění filtru"],
-    relatedSymptoms: ["pracka-nevypousti"],
+    relatedSymptoms: ["voda-zustava-v-pracce"],
     relatedCodes: ["whirlpool-pracka-f01","whirlpool-pracka-f06","whirlpool-pracka-f07"],
     possibleParts: ["Odpadní čerpadlo","Filtr čerpadla","Odpadní hadice"],
     faq: [{"a":"Filtr čerpadla se nachází vpravo dole za malými dvířky nebo za spodním krytem. Před otevřením připravte ručník.","q":"Kde najdu filtr čerpadla na pračce Whirlpool?"},{"a":"1) Vyčistěte filtr čerpadla (vpravo dole) 2) Zkontrolujte odpadní hadici, zda není zalomená 3) Zkontrolujte sifon nebo odpad","q":"Jak opravit chybu F18 na pračce Whirlpool?"}],
@@ -6803,7 +6803,7 @@ const codes: CodeDef[] = [
     safeChecks: ["Vyčistěte filtr čerpadla","Zkontrolujte odpadní hadici","Zkontrolujte, zda sifon není ucpaný"],
     likelyCauses: ["Ucpaný filtr čerpadla","Zalomená odpadní hadice","Vadné čerpadlo","Ucpaný sifon"],
     whenToStopAndCallService: ["Pokud voda v bubnu zůstane i po vyčištění filtru"],
-    relatedSymptoms: ["pracka-nevypousti"],
+    relatedSymptoms: ["voda-zustava-v-pracce"],
     relatedCodes: ["whirlpool-pracka-f01","whirlpool-pracka-f06","whirlpool-pracka-f07"],
     possibleParts: ["Odpadní čerpadlo","Filtr čerpadla"],
     faq: [{"a":"1) Vyčistěte filtr čerpadla 2) Zkontrolujte odpadní hadici 3) Zkontrolujte, zda sifon není ucpaný","q":"Jak opravit chybu F21 na pračce Whirlpool?"}],
@@ -8287,35 +8287,6 @@ async function main() {
       applianceTypes: ['pracka'],
     },
     {
-      slug: 'pracka-nevypousti',
-      title: 'Pračka nevypouští vodu',
-      description: 'Po skončení praní zůstane voda v bubnu.',
-      intro: 'Voda, která zůstane v bubnu po skončení programu, je jedním z nejčastějších problémů pračky. Ve většině případů jde o ucpaný filtr nebo odpadní hadici – oprava trvá jen pár minut.',
-      sections: [
-        {
-          q: 'Proč pračka nevypouští vodu?',
-          answer: 'Nejčastější příčiny jsou ucpaný odpadní filtr, ohnutá nebo ucpaná odpadní hadice, nebo závada na odpadním čerpadle.',
-          steps: [
-            'Vypněte pračku a vyčkejte – buben neotvírejte, dokud se voda nevypustí nebo dokud ji ručně nevyčerpáte.',
-            'Otevřete kryt filtru ve spodní části pračky a pomalu vyšroubujte filtr – vyteče zbylá voda.',
-            'Vyčistěte filtr a zašroubujte zpět.',
-            'Zkontrolujte odpadní hadici – nesmí být ohnutá, ucpaná ani příliš vysoko zapojena (max. 100 cm od podlahy).',
-          ],
-          tips: ['Filtr čistěte preventivně jednou za 3 měsíce.'],
-        },
-        {
-          q: 'Co dělat, když čerpadlo hučí, ale voda nejde ven?',
-          answer: 'Pokud slyšíte čerpadlo pracovat, ale voda nevychází, pravděpodobně je ucpaný filtr nebo v čerpadle uvízl cizí předmět (mince, knoflík, kůstka z podprsenky).',
-          tips: [
-            'Po vyčištění filtru spusťte krátký program a sledujte, zda voda odtéká.',
-            'Pokud problém přetrvává, může být vadné čerpadlo – zavolejte technika.',
-          ],
-        },
-      ],
-      relatedCodes: ['bosch-pracka-e18', 'siemens-pracka-f18', 'samsung-pracka-5e'],
-      applianceTypes: ['pracka'],
-    },
-    {
       slug: 'pracka-nespusti',
       title: 'Pračka nespustí program',
       description: 'Pračka nereaguje na spuštění programu.',
@@ -9125,9 +9096,9 @@ async function main() {
     },
     {
       slug: 'voda-zustava-v-pracce',
-      title: 'Voda zůstává v pračce po praní (nevypouští, vrací se)',
-      description: 'Po dokončení cyklu zůstala voda v bubnu nebo se vrací zpět – co je příčinou a jak postupovat krok za krokem.',
-      intro: 'Pokud po praní zůstane voda v bubnu nebo se vrací zpět, jde téměř vždy o problém s odčerpáním vody. Nejčastěji ucpaný filtr, vypouštěcí hadice nebo zalomené napojení do odpadu.',
+      title: 'Voda zůstává v pračce – pračka nevypouští vodu',
+      description: 'Pračka nevypouští vodu nebo zůstala voda v bubnu po praní – příčiny (filtr, hadice, čerpadlo), postup a cena opravy.',
+      intro: 'Pokud po praní zůstane voda v bubnu, pračka nevypouští, hučí naprázdno nebo se voda vrací zpět – jde téměř vždy o problém s odčerpáním vody. Nejčastěji ucpaný filtr, vypouštěcí hadice nebo zalomené napojení do odpadu. Většinu příčin vyřešíte sami za 10 minut.',
       sections: [
         {
           q: 'Krok 1: Zkontrolujte filtr – příčina v 70 % případů',
@@ -9184,8 +9155,23 @@ async function main() {
             'Pokud problém začal po nové pračce nebo přesunu pračky, je to téměř jistě špatná instalace odpadu.',
           ],
         },
+        {
+          q: 'Pračka hučí naprázdno, ale voda nejde ven',
+          answer: 'Pokud slyšíte čerpadlo pracovat (typický hučivý zvuk), ale voda nevychází, znamená to, že čerpadlo se točí, ale něco mu brání ve vyhánění vody. Téměř vždy je to ucpaný filtr nebo cizí předmět zaseknutý v čerpadle (mince, knoflík, kostice z podprsenky).',
+          steps: [
+            'Vypněte pračku okamžitě – běh čerpadla naprázdno ho rychle ničí.',
+            'Vypusťte vodu přes filtr (viz "Jak vypustit pračku") – často přitom vyteče i překážka.',
+            'Po vyšroubování filtru posviťte do otvoru baterkou – uvidíte vrtulku čerpadla. Zkuste s ní opatrně otočit prstem.',
+            'Pokud je v cestě cizí předmět, opatrně ho vytáhněte pinzetou.',
+            'Filtr vraťte zpět a spusťte krátký program "Máchání + Odstředění" pro test.',
+          ],
+          tips: [
+            'Před praním vždy kontrolujte kapsy – mince a sponky jsou zdaleka nejčastější příčinou.',
+            'Pokud čerpadlo hučí i bez cizího předmětu a vrtulka se točí volně, je vadné a je nutná výměna (1 500–3 500 Kč).',
+          ],
+        },
       ],
-      relatedCodes: ['bosch-pracka-e18', 'aeg-pracka-e20', 'electrolux-pracka-e20', 'whirlpool-pracka-f03', 'samsung-pracka-5e', 'beko-pracka-e02'],
+      relatedCodes: ['bosch-pracka-e18', 'siemens-pracka-f18', 'aeg-pracka-e20', 'electrolux-pracka-e20', 'whirlpool-pracka-f03', 'samsung-pracka-5e', 'beko-pracka-e02'],
       applianceTypes: ['pracka'],
     },
   ]
