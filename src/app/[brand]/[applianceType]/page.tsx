@@ -3,7 +3,7 @@ import { notFound, permanentRedirect } from 'next/navigation'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { APPLIANCE_LABELS, APPLIANCE_FROM_SLUG, APPLIANCE_SLUGS, BRANDS, SEVERITY_LABELS, SEVERITY_COLORS } from '@/lib/utils'
+import { APPLIANCE_LABELS, APPLIANCE_LABELS_GEN_PL, APPLIANCE_FROM_SLUG, APPLIANCE_SLUGS, BRANDS, SEVERITY_LABELS, SEVERITY_COLORS } from '@/lib/utils'
 import SeverityBadge from '@/components/SeverityBadge'
 import { ChevronRight } from 'lucide-react'
 
@@ -13,8 +13,8 @@ interface Props {
 
 const VALID_BRANDS = new Set(BRANDS.map((b) => b.toLowerCase()))
 
-function buildIntro(brand: string, applianceLabel: string, count: number): string {
-  return `Na této stránce najdete přehled ${count} chybových kódů pro ${applianceLabel.toLowerCase()} značky ${brand}. U každého kódu najdete vysvětlení, doporučené kroky a orientační cenu opravy.`
+function buildIntro(brand: string, applianceGenPl: string, count: number): string {
+  return `Na této stránce najdete přehled ${count} chybových kódů ${applianceGenPl} značky ${brand}. U každého kódu najdete vysvětlení, doporučené kroky a orientační cenu opravy.`
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!applianceType || !VALID_BRANDS.has(brandSlug)) return { title: 'Stránka nenalezena' }
 
   const brandName = brandSlug.charAt(0).toUpperCase() + brandSlug.slice(1)
-  const applianceLabel = APPLIANCE_LABELS[applianceType] || applianceType
+  const applianceGenPl = APPLIANCE_LABELS_GEN_PL[applianceType] || applianceType
   let count = 0
   try {
     count = await prisma.errorCode.count({
@@ -34,8 +34,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const year = new Date().getFullYear()
   const canonical = `https://www.kodyspotrebicu.cz/${brandSlug}/${appliancePathSlug}`
-  const title = `Chybové kódy ${applianceLabel.toLowerCase()} ${brandName}: kompletní přehled (${year})`
-  const description = `${count > 0 ? `${count} chybových kódů` : 'Přehled chybových kódů'} ${applianceLabel.toLowerCase()} ${brandName} ✓ Vysvětlení každého kódu ✓ Cena opravy ✓ Návod krok za krokem.`
+  const title = `Chybové kódy ${applianceGenPl} ${brandName}: kompletní přehled (${year})`
+  const description = `${count > 0 ? `${count} chybových kódů` : 'Přehled chybových kódů'} ${applianceGenPl} ${brandName} ✓ Vysvětlení každého kódu ✓ Cena opravy ✓ Návod krok za krokem.`
   return {
     title,
     description,
@@ -74,12 +74,13 @@ export default async function BrandAppliancePage({ params }: Props) {
 
   const brandName = (codes[0]?.brand || brandSlug).charAt(0).toUpperCase() + (codes[0]?.brand || brandSlug).slice(1)
   const applianceLabel = APPLIANCE_LABELS[applianceType] || applianceType
+  const applianceGenPl = APPLIANCE_LABELS_GEN_PL[applianceType] || applianceType
 
   const canonicalUrl = `https://www.kodyspotrebicu.cz/${brandSlug}/${appliancePathSlug}`
   const itemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: `Chybové kódy ${applianceLabel.toLowerCase()} ${brandName}`,
+    name: `Chybové kódy ${applianceGenPl} ${brandName}`,
     numberOfItems: codes.length,
     itemListElement: codes.map((c, i) => ({
       '@type': 'ListItem',
@@ -124,10 +125,10 @@ export default async function BrandAppliancePage({ params }: Props) {
       ]} />
 
       <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-        Chybové kódy {applianceLabel.toLowerCase()} {brandName}
+        Chybové kódy {applianceGenPl} {brandName}
       </h1>
       <p className="text-gray-700 leading-relaxed mb-6 max-w-3xl">
-        {buildIntro(brandName, applianceLabel, codes.length)}
+        {buildIntro(brandName, applianceGenPl, codes.length)}
       </p>
 
       {/* Quick reference table — high SEO value, captures featured snippet */}
@@ -212,7 +213,7 @@ export default async function BrandAppliancePage({ params }: Props) {
                 href={`/${brandSlug}/${APPLIANCE_SLUGS[t]}`}
                 className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm text-blue-600 hover:border-blue-400 transition-colors"
               >
-                Chybové kódy {APPLIANCE_LABELS[t].toLowerCase()} {brandName}
+                Chybové kódy {APPLIANCE_LABELS_GEN_PL[t]} {brandName}
               </Link>
           ))}
           <Link

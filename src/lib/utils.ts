@@ -39,6 +39,13 @@ export const APPLIANCE_LABELS: Record<string, string> = {
   susicka: 'Sušička',
 }
 
+// Genitiv plurál pro fráze typu "Chybové kódy praček", "Cena opravy myček"
+export const APPLIANCE_LABELS_GEN_PL: Record<string, string> = {
+  pracka: 'praček',
+  mycka: 'myček',
+  susicka: 'sušiček',
+}
+
 export const APPLIANCE_SLUGS: Record<string, string> = {
   pracka: 'pracky',
   mycka: 'mycky',
