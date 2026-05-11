@@ -194,14 +194,14 @@ export default async function HomePage() {
               aria-label={`Chybové kódy ${b.name}`}
               className="group flex min-h-[74px] flex-col items-center justify-center gap-2 rounded-xl border border-brand-border bg-white p-3 transition-all duration-200 hover:border-blue-300 hover:shadow-md hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
-              <div className="relative h-8 w-20">
-                <Image
-                  src={`/brands/${b.slug}.svg`}
-                  alt={b.name}
-                  fill
-                  className="object-contain grayscale opacity-70 transition-all duration-200 group-hover:grayscale-0 group-hover:opacity-100"
-                />
-              </div>
+              {/* Fixed height (h-7) + auto width pro konzistentní optickou výšku napříč různými poměry log.
+                  Native <img> je vědomě zvolen — SVG nemá z Next Image optimization benefit a fill mode brání w-auto. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`/brands/${b.slug}.svg`}
+                alt={b.name}
+                className="h-7 w-auto max-w-[80px] object-contain grayscale opacity-70 transition-all duration-200 group-hover:grayscale-0 group-hover:opacity-100"
+              />
               <span className="text-xs text-gray-600 font-medium">{b.name}</span>
             </Link>
           ))}
