@@ -151,8 +151,8 @@ export default async function HomePage() {
               {totalCount > 0 && (
                 <div className="pb-4 mb-4 border-b border-brand-border">
                   <p className="text-2xl font-bold text-gray-950 leading-none">
-                    {totalCount}<span className="text-brand-primary-dark">+</span>
-                    <span className="ml-1.5 text-base font-semibold text-gray-700">kódů v databázi</span>
+                    <span className="font-mono tabular-nums">{totalCount}</span><span className="text-accent-600 font-mono">+</span>
+                    <span className="ml-1.5 text-base font-semibold text-gray-700 font-sans">kódů v databázi</span>
                   </p>
                   <p className="text-sm text-gray-600 mt-2">Pračky, myčky, sušičky {brands.length} značek.</p>
                 </div>

@@ -18,6 +18,21 @@ const config: Config = {
           surface: "#f8fafc",        // slate-50 — neutrální podklad
           border: "#e2e8f0",         // slate-200 — neutrální okraje
         },
+        // Akcent: terakota — pro ceny opravy, sekundární CTA, expertise badges, highlights
+        // Použití dle 70/20/10 rule: 10 % výskytu, jen na "expertní" prvky
+        accent: {
+          50:  "#FFF7ED",  // subtle warm bg
+          100: "#FFEDD5",  // hover bg, badge bg
+          300: "#FDBA74",  // borders, illustrations
+          500: "#F97316",  // bright (sparingly)
+          600: "#EA580C",  // MAIN ACCENT (sekundární CTA, ceny)
+          700: "#C2410C",  // hover state, dark accent text
+        },
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "var(--font-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
     },
   },

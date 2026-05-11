@@ -388,17 +388,17 @@ export default async function ErrorCodePage({ params }: Props) {
           </p>
         </div>
 
-        {/* Cena opravy */}
-        <div className="bg-white border border-amber-600/20 rounded-xl p-6 md:p-8 shadow-sm">
+        {/* Cena opravy — používá akcent terakota (10 % brand color, expert/cena highlight) */}
+        <div className="bg-white border border-accent-300 rounded-xl p-6 md:p-8 shadow-sm">
           <div className="flex items-center gap-3 mb-4">
-            <div className="bg-amber-600 text-white p-2 rounded-lg flex items-center justify-center">
+            <div className="bg-accent-600 text-white p-2 rounded-lg flex items-center justify-center">
               <FileText className="w-5 h-5" />
             </div>
-            <h2 className="text-xl font-bold text-amber-800 tracking-tight">Cena opravy chyby {entry.code}</h2>
+            <h2 className="text-xl font-bold text-accent-700 tracking-tight">Cena opravy chyby {entry.code}</h2>
           </div>
           <div className="flex flex-col gap-3 text-gray-700">
             <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-bold text-amber-700">
+              <span className="text-3xl font-bold text-accent-700 font-mono tabular-nums">
                 {priceRange.min.toLocaleString('cs-CZ')}–{priceRange.max.toLocaleString('cs-CZ')} Kč
               </span>
               <span className="text-sm text-gray-500">orientačně</span>

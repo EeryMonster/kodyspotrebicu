@@ -20,6 +20,18 @@ body {
     outline: 2px solid #2563eb;
     outline-offset: 2px;
   }
+  /* Headlines automaticky používají Space Grotesk (font-display) — distinct brand vůči generic Inter blogs */
+  h1, h2, h3 {
+    font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+  h1 {
+    letter-spacing: -0.03em;
+  }
+  /* Tabulární čísla pro statistiky a ceny — nehrabou se vlevo/vpravo */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
 }
 
 @layer utilities {

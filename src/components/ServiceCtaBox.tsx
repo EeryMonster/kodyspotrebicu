@@ -44,7 +44,8 @@ const HOMEPAGE_VARIANT: Variant = {
   heading: 'Potřebujete servisního technika?',
   body: 'Pokud si s opravou nevíte rady, najděte ověřený servis ve vašem okolí.',
   cta: 'Najít servis',
-  wrapperClass: 'bg-blue-50/50 border border-blue-200/60 shadow-sm',
+  // Akcent terakota — homepage CTA je perfektní místo pro distinct akcent (10 % rule)
+  wrapperClass: 'bg-accent-50 border border-accent-300 shadow-sm',
   icon: Wrench,
 }
 
@@ -64,8 +65,8 @@ export default function ServiceCtaBox({ severity, context = 'error-detail', clas
   if (context === 'homepage') {
     return (
       <section className={`${variant.wrapperClass} rounded-2xl p-6 md:p-8 text-center transition-all duration-300 hover:shadow-md ${className}`}>
-        <div className="mx-auto w-12 h-12 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm border border-gray-100">
-          <Icon className="w-6 h-6 text-blue-600" />
+        <div className="mx-auto w-12 h-12 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm border border-accent-300">
+          <Icon className="w-6 h-6 text-accent-600" />
         </div>
         <h2 className="text-xl font-bold text-gray-900 mb-2">{variant.heading}</h2>
         <p className="text-gray-600 text-sm md:text-base mb-6 max-w-lg mx-auto">{variant.body}</p>
@@ -73,7 +74,7 @@ export default function ServiceCtaBox({ severity, context = 'error-detail', clas
           href={SERVICE_CTA_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-primary-lg shadow-sm"
+          className="inline-flex items-center justify-center gap-2 bg-accent-600 hover:bg-accent-700 text-white rounded-lg px-6 py-3.5 text-base font-medium transition-colors border border-transparent min-h-[52px] shadow-sm"
           data-cta="service"
           data-context="homepage"
         >
