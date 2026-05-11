@@ -38,12 +38,13 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-  /* Subtle dot pattern — dává hloubku hero sekcím, nepřebíjí čitelnost.
-     Použij na hero wrapperu místo flat bg-gray-50. */
+  /* Subtle dot pattern — dává hloubku, ale je sotva viditelný.
+     Větší rozteč (32px) + světlejší barva (slate-100) + menší tečka (0.5px) =
+     skutečně "subtle" texture, ne agresivní zrno. */
   .bg-dots-subtle {
-    background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
-    background-size: 24px 24px;
-    background-color: #f9fafb;
+    background-image: radial-gradient(circle, #e2e8f0 0.5px, transparent 0.5px);
+    background-size: 32px 32px;
+    background-color: #fafbfc;
   }
 }
 

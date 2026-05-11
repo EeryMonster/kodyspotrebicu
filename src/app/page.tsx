@@ -113,7 +113,9 @@ export default async function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
 
-      <section className="border-b border-brand-border bg-white">
+      {/* Hero zdědí dots pattern z parent wrapperu (bg-dots-subtle), žádný bg-white = žádný "schod"
+          mezi hero a zbytkem stránky. Border-b zachovává jemný separator. */}
+      <section className="border-b border-brand-border">
         <div className="container-app py-10 md:py-14">
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
             <div className="max-w-3xl">
