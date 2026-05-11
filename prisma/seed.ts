@@ -8220,40 +8220,75 @@ async function main() {
     },
     {
       slug: 'pracka-tece',
-      title: 'Voda vytéká z pračky',
-      description: 'Pod pračkou nebo z pračky vytéká voda.',
-      intro: 'Voda pod pračkou je vždy důvodem k okamžité akci – i malý únik může poškodit podlahu nebo způsobit zkrat. Zjistěte, kde voda teče, a většinu příčin zvládnete opravit sami.',
+      title: 'Voda teče z pračky (zezadu, zespoda, při napouštění): příčiny a oprava',
+      description: 'Voda teče z pračky – přívodní hadice, AquaStop, manžeta, zásuvka na prášek nebo nádrž. Příčiny, postup řešení a cena opravy.',
+      intro: 'Voda pod pračkou je vždy důvodem k okamžité akci – i malý únik může poškodit podlahu nebo způsobit zkrat. Většinu příčin (přívodní hadice, AquaStop, ucpaná zásuvka) zvládnete opravit sami za 15 minut, závažnější (manžeta, prasklá nádrž) vyžadují servis.',
       sections: [
         {
-          q: 'Proč voda vytéká z pračky?',
-          answer: 'Nejčastější příčiny jsou uvolněná nebo poškozená odpadní hadice, ucpaný filtr, přetékání pěny kvůli přemíře pracího prostředku nebo poškozené těsnění dvířek.',
-          tips: [
-            'Zkontrolujte odpadní hadici – zda není natržená, uvolněná nebo ohnutá.',
-            'Zkontrolujte přívodní hadici a její spojení s ventilem.',
-            'Snižte množství pracího prostředku – nadměrná pěna přetéká přes těsnění.',
-          ],
-        },
-        {
-          q: 'Co dělat, když voda teče zespodu pračky?',
-          answer: 'Voda vytékající zespodu bývá způsobena ucpaným nebo uvolněným filtrem, prasklou hadicí uvnitř pračky nebo aktivovaným protizáplavovým systémem (Aquastop).',
+          q: 'Okamžité kroky – co udělat hned',
+          answer: 'Voda pod pračkou znamená riziko zatopení sousedů a poškození elektroniky. Reagujte okamžitě.',
           steps: [
-            'Okamžitě vypněte pračku a zavřete přívod vody.',
-            'Zkontrolujte a vyčistěte filtr ve spodní části pračky.',
-            'Prohlédněte odpadní a přívodní hadici zezadu.',
-            'Pokud voda teče i po kontrole hadicí, volejte technika – může jít o vnitřní poruchu.',
+            'Uzavřete přívod vody – kohoutek u napojení pračky nebo hlavní uzávěr v bytě.',
+            'Vypněte pračku a odpojte ji ze sítě (pozor – nestoupejte do vody).',
+            'Vytřete vodu a podívejte se odkud teče (zezadu, zespoda, ze dvířek, ze zásuvky).',
+            'Připravte si fotku úniku – pomůže při komunikaci se servisem nebo pojišťovnou.',
+          ],
+          tips: [
+            'Pokud máte AquaStop hadici, mělo se napouštění samo zastavit. Pokud netece, AquaStop je vadný.',
           ],
         },
         {
-          q: 'Proč pračka přetéká pěnou?',
+          q: 'Voda teče zezadu pračky (často při napouštění) – přívodní hadice nebo AquaStop',
+          answer: 'Nejčastější příčina (cca 60 % případů) zejména při napouštění. Hadice je špatně utažená, prasklá nebo má poškozené těsnění. AquaStop ventil může být vadný.',
+          steps: [
+            'Zkontrolujte spoj mezi pračkou a kohoutkem – musí být pevně utažený rukou (ne klíčem, abyste nestrhli závit).',
+            'Zkontrolujte gumové těsnění uvnitř matice – pokud je popraskané nebo chybí, vyměňte.',
+            'Prohlédněte celou délku hadice – hledejte praskliny, vyboulené místo nebo skvrny.',
+            'Pokud má hadice AquaStop (zesílený konec s ventilem) a teče přímo z něj, AquaStop je vadný a hadici je třeba vyměnit celou.',
+          ],
+          tips: [
+            'Přívodní hadici doporučujeme měnit každých 5–7 let preventivně. Stojí 200–500 Kč.',
+            'Pokud teče z AquaStop, NEPRODLUŽUJTE jeho životnost – jeho funkce (uzavření vody při úniku) je porouchaná a hrozí zatopení.',
+          ],
+        },
+        {
+          q: 'Voda teče zespoda pračky – manžeta dvířek, filtr nebo nádrž',
+          answer: 'Pokud voda kape zespoda, příčina je obvykle uvnitř pračky: poškozená manžeta, špatně utažený filtr nebo (vzácně) prasklá nádrž.',
+          steps: [
+            'Otevřete dvířka a zkontrolujte gumovou manžetu po celém obvodu – hledejte praskliny, díry po prádle s ostrými předměty (kosticové podprsenky, mince).',
+            'Zkontrolujte, zda je filtr ve spodní části dotažený a má funkční těsnění (vyšroubujte, vyčistěte, vraťte).',
+            'Po vypuštění vody pusťte ručně malé množství vody do bubnu (např. konvicí) a sledujte, zda se objeví kapání zespoda.',
+            'Pokud manžeta i filtr vypadají v pořádku, je možná prasklá nádrž (drahá oprava).',
+          ],
+          tips: [
+            'Výměna manžety: 1 200–2 500 Kč včetně práce.',
+            'Prasklá nádrž: 4 000–8 000 Kč. U starších praček (10+ let) zvážit nový spotřebič.',
+          ],
+        },
+        {
+          q: 'Voda teče ze zásuvky na prací prostředek',
+          answer: 'Někdy se zdá, že pračka "teče", ale ve skutečnosti voda přetéká ze zásuvky na prací prášek. Příčinou bývá ucpaná zásuvka, vápenec nebo příliš mnoho prášku.',
+          steps: [
+            'Vyjměte zásuvku úplně (obvykle stiskem páčky uvnitř).',
+            'Vyčistěte ji pod tekoucí vodou – odstraňte vrstvu prachu a slizu.',
+            'Vyčistěte i otvor v pračce, kam zásuvka zapadá – vápenec a zbytky prášku ucpávají trysky.',
+            'Snižte dávku pracího prostředku o 30 % – moderní pračky potřebují mnohem méně, než říká odměrka.',
+          ],
+          tips: [
+            'Pokud přechází z práškového na tekutý prostředek, nejdřív zásuvku důkladně vyčistěte – jinak se může zaseknout dávkovač.',
+          ],
+        },
+        {
+          q: 'Pračka přetéká pěnou ze dvířek',
           answer: 'Přemíra pracího prostředku je nejčastější příčinou pěnění. Moderní pračky spotřebovávají velmi málo vody, takže stačí malé množství detergentu.',
           tips: [
             'Používejte dávkování dle pokynů na obalu – obvykle méně, než si myslíte.',
             'Pro předem plněné pračky používejte prací prostředky označené „HE" (High Efficiency).',
-            'Spusťte pračku naprázdno na 90 °C pro odstraněné zbytků pěny.',
+            'Spusťte pračku naprázdno na 90 °C pro odstranění zbytků pěny.',
           ],
         },
       ],
-      relatedCodes: ['bosch-pracka-e23', 'electrolux-pracka-ef0', 'beko-pracka-ef0'],
+      relatedCodes: ['bosch-pracka-e21', 'bosch-pracka-e23', 'aeg-pracka-e10', 'electrolux-pracka-e10', 'electrolux-pracka-ef0', 'whirlpool-pracka-f01', 'beko-pracka-ef0'],
       applianceTypes: ['pracka'],
     },
     {
@@ -9029,69 +9064,6 @@ async function main() {
         },
       ],
       relatedCodes: ['bosch-pracka-e18', 'aeg-pracka-e20', 'electrolux-pracka-e20', 'whirlpool-pracka-f03'],
-      applianceTypes: ['pracka'],
-    },
-    {
-      slug: 'voda-pri-napousteni-tece',
-      title: 'Při napouštění teče voda z pračky (zespoda nebo zezadu)',
-      description: 'Pračka při napouštění začne téct – kde hledat příčinu (přívodní hadice, AquaStop, manžeta, čerpadlo) a jak situaci rychle vyřešit.',
-      intro: 'Pokud z pračky teče voda hned na začátku cyklu (při napouštění), nejčastěji je problém v přívodní hadici, jejím spoji nebo v AquaStop ventilu. Méně často jde o vadnou manžetu nebo prasklou nádrž.',
-      sections: [
-        {
-          q: 'Okamžité kroky – co udělat hned',
-          answer: 'Voda pod pračkou znamená riziko zatopení sousedů a poškození elektroniky. Reagujte okamžitě.',
-          steps: [
-            'Uzavřete přívod vody – kohoutek u napojení pračky nebo hlavní uzávěr v bytě.',
-            'Vypněte pračku a odpojte ji ze sítě (pozor – nestoupejte do vody).',
-            'Vytřete vodu a podívejte se odkud teče (zezadu, zespoda, ze dvířek).',
-            'Připravte si fotku úniku – pomůže při komunikaci se servisem nebo pojišťovnou.',
-          ],
-          tips: [
-            'Pokud máte AquaStop hadici, mělo se napouštění samo zastavit. Pokud netece, AquaStop je vadný.',
-          ],
-        },
-        {
-          q: 'Voda teče zezadu pračky – přívodní hadice nebo její spoj',
-          answer: 'Nejčastější příčina (cca 60 % případů). Hadice je špatně utažená, prasklá nebo má poškozené těsnění.',
-          steps: [
-            'Zkontrolujte spoj mezi pračkou a kohoutkem – musí být pevně utažený rukou (ne klíčem, abyste nestrhli závit).',
-            'Zkontrolujte gumové těsnění uvnitř matice – pokud je popraskané nebo chybí, vyměňte.',
-            'Prohlédněte celou délku hadice – hledejte praskliny, vyboulené místo nebo skvrny.',
-            'Pokud má hadice AquaStop (zesílený konec s ventilem) a teče přímo z něj, AquaStop je vadný a hadici je třeba vyměnit celou.',
-          ],
-          tips: [
-            'Přívodní hadici doporučujeme měnit každých 5–7 let preventivně. Stojí 200–500 Kč.',
-            'Pokud teče z AquaStop, NEPRODLUŽUJTE jeho životnost – jeho funkce (uzavření vody při úniku) je porouchaná a hrozí zatopení.',
-          ],
-        },
-        {
-          q: 'Voda teče zespodu pračky – manžeta dvířek nebo nádrž',
-          answer: 'Při napouštění se voda dostane do bubnu a pokud je manžeta poškozená nebo nádrž prasklá, voda začne kapat zespoda.',
-          steps: [
-            'Otevřete dvířka a zkontrolujte gumovou manžetu po celém obvodu – hledejte praskliny, díry po prádle s ostrými předměty (kosticové podprsenky, mince).',
-            'Po vypuštění vody pusťte ručně malé množství vody do bubnu (např. konvicí) a sledujte zda se objeví kapání zespoda.',
-            'Pokud manžeta vypadá v pořádku, je možná prasklá nádrž (drahá oprava).',
-          ],
-          tips: [
-            'Výměna manžety: 1 200–2 500 Kč včetně práce.',
-            'Prasklá nádrž: 4 000–8 000 Kč. U starších praček (10+ let) zvážit nový spotřebič.',
-          ],
-        },
-        {
-          q: 'Voda teče ze zásuvky na prací prostředek',
-          answer: 'Někdy se zdá, že pračka "teče", ale ve skutečnosti voda přetéká ze zásuvky na prací prášek. Příčinou bývá ucpaná zásuvka, vápenec nebo příliš mnoho prášku.',
-          steps: [
-            'Vyjměte zásuvku úplně (obvykle stiskem páčky uvnitř).',
-            'Vyčistěte ji pod tekoucí vodou – odstraňte vrstvu prachu a slizu.',
-            'Vyčistěte i otvor v pračce, kam zásuvka zapadá – vápenec a zbytky prášku ucpávají trysky.',
-            'Snižte dávku pracího prostředku o 30 % – moderní pračky potřebují mnohem méně, než říká odměrka.',
-          ],
-          tips: [
-            'Pokud přechází z práškového na tekutý prostředek, nejdřív zásuvku důkladně vyčistěte – jinak se může zaseknout dávkovač.',
-          ],
-        },
-      ],
-      relatedCodes: ['bosch-pracka-e21', 'aeg-pracka-e10', 'electrolux-pracka-e10', 'whirlpool-pracka-f01'],
       applianceTypes: ['pracka'],
     },
     {

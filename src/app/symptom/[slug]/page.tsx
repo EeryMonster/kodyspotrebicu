@@ -64,6 +64,7 @@ export default async function SymptomPage({ params }: Props) {
   // Aktualizovat při každé deduplikaci symptomů.
   const SLUG_REDIRECTS: Record<string, string> = {
     'pracka-nevypousti': 'voda-zustava-v-pracce',
+    'voda-pri-napousteni-tece': 'pracka-tece',
   }
   if (SLUG_REDIRECTS[cleanSlug]) permanentRedirect(`/symptom/${SLUG_REDIRECTS[cleanSlug]}`)
 
