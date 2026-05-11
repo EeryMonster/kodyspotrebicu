@@ -10,16 +10,20 @@ interface Props {
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
   const hasFilters = Object.keys(searchParams || {}).length > 0
   const canonical = 'https://www.kodyspotrebicu.cz/mycky'
+  const year = new Date().getFullYear()
+  let count = 0
+  try {
+    count = await prisma.errorCode.count({ where: { applianceType: 'mycka' } })
+  } catch { /* DB not ready */ }
+  const countLabel = count > 0 ? `${count}+` : 'Stovky'
+  const title = `Chybové kódy myček: ${countLabel} kódů Bosch, Siemens, AEG, Whirlpool (${year})`
+  const description = `${countLabel} chybových kódů myček nádobí: E22, E25, E09, F1, i20, F6 a další. ✓ Vysvětlení každého kódu ✓ Cena opravy ✓ Návod krok za krokem.`
   return {
-    title: 'Chybové kódy myček nádobí',
-    description: 'Databáze chybových kódů myček nádobí. Bosch, Siemens, AEG, Electrolux, Samsung, Beko. Zjistěte příčinu chyby myčky a jak postupovat.',
+    title,
+    description,
     alternates: { canonical },
     robots: hasFilters ? { index: false, follow: true } : undefined,
-    openGraph: {
-      title: 'Chybové kódy myček nádobí | KódySpotřebičů.cz',
-      description: 'Databáze chybových kódů myček nádobí. Bosch, Siemens, AEG, Electrolux, Samsung, Beko. Zjistěte příčinu chyby myčky a jak postupovat.',
-      url: canonical,
-    },
+    openGraph: { title, description, url: canonical, type: 'website' },
   }
 }
 

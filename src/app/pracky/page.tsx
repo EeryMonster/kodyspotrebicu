@@ -10,16 +10,20 @@ interface Props {
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
   const hasFilters = Object.keys(searchParams || {}).length > 0
   const canonical = 'https://www.kodyspotrebicu.cz/pracky'
+  const year = new Date().getFullYear()
+  let count = 0
+  try {
+    count = await prisma.errorCode.count({ where: { applianceType: 'pracka' } })
+  } catch { /* DB not ready */ }
+  const countLabel = count > 0 ? `${count}+` : 'Stovky'
+  const title = `Chybové kódy praček: ${countLabel} kódů Bosch, AEG, Samsung, LG (${year})`
+  const description = `${countLabel} chybových kódů praček s vysvětlením, návodem a cenou opravy. ✓ Bosch ✓ Siemens ✓ AEG ✓ Electrolux ✓ Samsung ✓ Beko ✓ Whirlpool ✓ LG ✓ Miele.`
   return {
-    title: 'Chybové kódy praček',
-    description: 'Databáze chybových kódů praček. Bosch, Siemens, AEG, Electrolux, Samsung, Beko.',
+    title,
+    description,
     alternates: { canonical },
     robots: hasFilters ? { index: false, follow: true } : undefined,
-    openGraph: {
-      title: 'Chybové kódy praček | KódySpotřebičů.cz',
-      description: 'Databáze chybových kódů praček. Bosch, Siemens, AEG, Electrolux, Samsung, Beko.',
-      url: canonical,
-    },
+    openGraph: { title, description, url: canonical, type: 'website' },
   }
 }
 

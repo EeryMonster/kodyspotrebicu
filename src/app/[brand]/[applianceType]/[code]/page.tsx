@@ -20,19 +20,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const entry = await prisma.errorCode.findUnique({
       where: { slug: params.code },
-      select: { title: true, shortMeaning: true, code: true, altCodes: true, brand: true, applianceType: true, slug: true },
+      select: { title: true, shortMeaning: true, code: true, altCodes: true, brand: true, applianceType: true, slug: true, severityLevel: true },
     })
     if (!entry) return { title: 'Kód nenalezen' }
     const appliancePath = { pracka: 'pracky', mycka: 'mycky', susicka: 'susicky' }[entry.applianceType] || entry.applianceType
     const applianceLabel = APPLIANCE_LABELS[entry.applianceType] || entry.applianceType
     const canonical = `https://www.kodyspotrebicu.cz/${entry.brand.toLowerCase()}/${appliancePath}/${entry.slug}`
     const year = new Date().getFullYear()
-    // Sémantická šíře titulu: kód + případné alt-kódy zachytí víc query variant
+    // Sémantická šíře titulu: alt-kódy zachytí varianty zápisu (E24 / E 24 / E:24)
     const altCodesPart = entry.altCodes && entry.altCodes.length > 0
       ? ` (${entry.altCodes.slice(0, 2).join(' / ')})`
       : ''
-    const title = `Chyba ${entry.code}${altCodesPart} ${entry.brand} ${applianceLabel.toLowerCase()}: příčiny a oprava (${year})`
-    const description = `${entry.shortMeaning} ✓ Co zkusit nejdřív ✓ Reset spotřebiče ✓ Cena opravy ✓ Kdy volat servis. Praktický návod krok za krokem.`
+    // Title pattern obsahuje 3 query intenty: "význam" (co znamená), "oprava" (jak opravit), "cena" (kolik stojí)
+    const title = `Chyba ${entry.code}${altCodesPart} ${entry.brand} ${applianceLabel.toLowerCase()}: význam, oprava a cena (${year})`
+    const priceHint = REPAIR_PRICE_RANGES[entry.severityLevel] ?? REPAIR_PRICE_RANGES[2]
+    const priceRangeLabel = `${priceHint.min.toLocaleString('cs-CZ')}–${priceHint.max.toLocaleString('cs-CZ')} Kč`
+    const description = `${entry.shortMeaning} ✓ Cena opravy ${priceRangeLabel} ✓ Reset spotřebiče ✓ Co zkusit doma ✓ Kdy volat servis.`
     return {
       title,
       description,

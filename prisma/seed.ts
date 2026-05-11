@@ -9007,6 +9007,187 @@ async function main() {
       relatedCodes: ['bosch-susicka-e02'],
       applianceTypes: ['susicka'],
     },
+    {
+      slug: 'jak-vypustit-pracku',
+      title: 'Jak vypustit vodu z pračky (manuálně, bez programu)',
+      description: 'Návod jak nouzově vypustit vodu z pračky přes filtr nebo vypouštěcí hadici, když pračka nereaguje nebo nedokončí cyklus.',
+      intro: 'Pokud pračka stojí s vodou v bubnu (po vypadnutí proudu, chybě nebo zaseknutí), je třeba ji nouzově vypustit ručně. Nikdy neotvírejte dvířka, dokud je v pračce voda – vyteče vám do koupelny.',
+      sections: [
+        {
+          q: 'Jak vypustit pračku přes nouzový filtr (nejrychlejší způsob)',
+          answer: 'Většina předem plněných praček má v pravém dolním rohu krytku, za kterou je vypouštěcí filtr a nouzová vypouštěcí hadička. Tudy lze vodu vypustit do nádoby bez nutnosti spouštět program.',
+          steps: [
+            'Vypněte pračku a odpojte ji ze sítě.',
+            'Připravte si plochou nádobu (10–15 cm vysokou) a hadry – při plné pračce vyteče 5–15 litrů vody.',
+            'Otevřete krytku v pravém dolním rohu (často je třeba zatlačit nebo otočit).',
+            'Vytáhněte tenkou nouzovou hadičku, sundejte z ní krytku a vodu nechte stéci do nádoby. Po naplnění hadičku zacvakněte zpět a nádobu vylijte – opakujte, dokud nepřestane téct.',
+            'Až přestane téct nouzovou hadičkou, vyšroubujte hlavní filtr (proti směru hodinových ručiček). Bude z něj ještě vytékat zbytková voda.',
+            'Vyčistěte filtr od mincí, vlasů a nečistot, vraťte zpět a krytku zavřete.',
+          ],
+          tips: [
+            'Pokud pračka nemá nouzovou hadičku, můžete vodu vypustit pouze přes hlavní filtr – připravte víc hadrů.',
+            'U vrchem plněných praček je vypouštěcí filtr obvykle za panelem v dolní části – postup je podobný.',
+          ],
+        },
+        {
+          q: 'Jak vypustit pračku přes vypouštěcí hadici (když je filtr nepřístupný)',
+          answer: 'Pokud nelze otevřít krytku nebo filtr je zaseknutý, lze vodu vypustit přes hlavní vypouštěcí hadici za pračkou.',
+          steps: [
+            'Odpojte pračku ze sítě a uzavřete přívod vody.',
+            'Posuňte pračku tak, abyste se dostali k zadní straně.',
+            'Najděte vypouštěcí hadici (obvykle vede do odpadu pod dřezem nebo do stoupačky).',
+            'Vyndejte hadici z odpadu a držte ji nad podlahou (vyšší než dno pračky), aby voda nezačala téct dřív, než budete připraveni.',
+            'Spusťte konec hadice níž než je dno pračky a nechte vodu stéci do nádoby (samospádem).',
+          ],
+          tips: [
+            'Pokud hadice vede přes vyšší úroveň (nad pračkou), bude to fungovat jen do té úrovně – zbytek vody musíte vypustit přes filtr.',
+          ],
+        },
+        {
+          q: 'Co dělat když pračka nedokončí program a zůstala v ní voda',
+          answer: 'Pokud pračka nereaguje, zobrazila chybu nebo se cyklus zastavil uprostřed, zkuste nejprve restart programu. Pokud nepomůže, vypusťte vodu ručně dle postupu výše.',
+          steps: [
+            'Zkuste vypnout pračku tlačítkem a znovu zapnout.',
+            'Spusťte krátký program "Máchání + Odstředění" nebo jen "Vypustit".',
+            'Pokud pračka nereaguje na žádné tlačítko, odpojte ji na 10 minut – často to vyřeší dočasnou chybu řízení.',
+            'Pokud chyba přetrvává, vypusťte vodu ručně a pak vyhledejte konkrétní chybový kód v naší databázi.',
+          ],
+          tips: [
+            'U pračky s chybou souvisejícího odpadu vody (např. Bosch E18, AEG E20, Whirlpool F03) je vypuštění filtrem zároveň první krok diagnózy – často je filtr ucpaný.',
+          ],
+        },
+      ],
+      relatedCodes: ['bosch-pracka-e18', 'aeg-pracka-e20', 'electrolux-pracka-e20', 'whirlpool-pracka-f03'],
+      applianceTypes: ['pracka'],
+    },
+    {
+      slug: 'voda-pri-napousteni-tece',
+      title: 'Při napouštění teče voda z pračky (zespoda nebo zezadu)',
+      description: 'Pračka při napouštění začne téct – kde hledat příčinu (přívodní hadice, AquaStop, manžeta, čerpadlo) a jak situaci rychle vyřešit.',
+      intro: 'Pokud z pračky teče voda hned na začátku cyklu (při napouštění), nejčastěji je problém v přívodní hadici, jejím spoji nebo v AquaStop ventilu. Méně často jde o vadnou manžetu nebo prasklou nádrž.',
+      sections: [
+        {
+          q: 'Okamžité kroky – co udělat hned',
+          answer: 'Voda pod pračkou znamená riziko zatopení sousedů a poškození elektroniky. Reagujte okamžitě.',
+          steps: [
+            'Uzavřete přívod vody – kohoutek u napojení pračky nebo hlavní uzávěr v bytě.',
+            'Vypněte pračku a odpojte ji ze sítě (pozor – nestoupejte do vody).',
+            'Vytřete vodu a podívejte se odkud teče (zezadu, zespoda, ze dvířek).',
+            'Připravte si fotku úniku – pomůže při komunikaci se servisem nebo pojišťovnou.',
+          ],
+          tips: [
+            'Pokud máte AquaStop hadici, mělo se napouštění samo zastavit. Pokud netece, AquaStop je vadný.',
+          ],
+        },
+        {
+          q: 'Voda teče zezadu pračky – přívodní hadice nebo její spoj',
+          answer: 'Nejčastější příčina (cca 60 % případů). Hadice je špatně utažená, prasklá nebo má poškozené těsnění.',
+          steps: [
+            'Zkontrolujte spoj mezi pračkou a kohoutkem – musí být pevně utažený rukou (ne klíčem, abyste nestrhli závit).',
+            'Zkontrolujte gumové těsnění uvnitř matice – pokud je popraskané nebo chybí, vyměňte.',
+            'Prohlédněte celou délku hadice – hledejte praskliny, vyboulené místo nebo skvrny.',
+            'Pokud má hadice AquaStop (zesílený konec s ventilem) a teče přímo z něj, AquaStop je vadný a hadici je třeba vyměnit celou.',
+          ],
+          tips: [
+            'Přívodní hadici doporučujeme měnit každých 5–7 let preventivně. Stojí 200–500 Kč.',
+            'Pokud teče z AquaStop, NEPRODLUŽUJTE jeho životnost – jeho funkce (uzavření vody při úniku) je porouchaná a hrozí zatopení.',
+          ],
+        },
+        {
+          q: 'Voda teče zespodu pračky – manžeta dvířek nebo nádrž',
+          answer: 'Při napouštění se voda dostane do bubnu a pokud je manžeta poškozená nebo nádrž prasklá, voda začne kapat zespoda.',
+          steps: [
+            'Otevřete dvířka a zkontrolujte gumovou manžetu po celém obvodu – hledejte praskliny, díry po prádle s ostrými předměty (kosticové podprsenky, mince).',
+            'Po vypuštění vody pusťte ručně malé množství vody do bubnu (např. konvicí) a sledujte zda se objeví kapání zespoda.',
+            'Pokud manžeta vypadá v pořádku, je možná prasklá nádrž (drahá oprava).',
+          ],
+          tips: [
+            'Výměna manžety: 1 200–2 500 Kč včetně práce.',
+            'Prasklá nádrž: 4 000–8 000 Kč. U starších praček (10+ let) zvážit nový spotřebič.',
+          ],
+        },
+        {
+          q: 'Voda teče ze zásuvky na prací prostředek',
+          answer: 'Někdy se zdá, že pračka "teče", ale ve skutečnosti voda přetéká ze zásuvky na prací prášek. Příčinou bývá ucpaná zásuvka, vápenec nebo příliš mnoho prášku.',
+          steps: [
+            'Vyjměte zásuvku úplně (obvykle stiskem páčky uvnitř).',
+            'Vyčistěte ji pod tekoucí vodou – odstraňte vrstvu prachu a slizu.',
+            'Vyčistěte i otvor v pračce, kam zásuvka zapadá – vápenec a zbytky prášku ucpávají trysky.',
+            'Snižte dávku pracího prostředku o 30 % – moderní pračky potřebují mnohem méně, než říká odměrka.',
+          ],
+          tips: [
+            'Pokud přechází z práškového na tekutý prostředek, nejdřív zásuvku důkladně vyčistěte – jinak se může zaseknout dávkovač.',
+          ],
+        },
+      ],
+      relatedCodes: ['bosch-pracka-e21', 'aeg-pracka-e10', 'electrolux-pracka-e10', 'whirlpool-pracka-f01'],
+      applianceTypes: ['pracka'],
+    },
+    {
+      slug: 'voda-zustava-v-pracce',
+      title: 'Voda zůstává v pračce po praní (nevypouští, vrací se)',
+      description: 'Po dokončení cyklu zůstala voda v bubnu nebo se vrací zpět – co je příčinou a jak postupovat krok za krokem.',
+      intro: 'Pokud po praní zůstane voda v bubnu nebo se vrací zpět, jde téměř vždy o problém s odčerpáním vody. Nejčastěji ucpaný filtr, vypouštěcí hadice nebo zalomené napojení do odpadu.',
+      sections: [
+        {
+          q: 'Krok 1: Zkontrolujte filtr – příčina v 70 % případů',
+          answer: 'Zanesený filtr je daleko nejčastější příčina. Nashromáždí se v něm mince, sponky, vlasy a kousky tkaniny. Filtr by se měl čistit každé 3 měsíce.',
+          steps: [
+            'Vypněte pračku a vypusťte vodu (viz návod "Jak vypustit pračku").',
+            'Vyšroubujte filtr v pravém dolním rohu (proti směru hodinových ručiček).',
+            'Vyčistěte ho pod tekoucí vodou, odstraňte všechny nečistoty.',
+            'Zasuňte ruku do otvoru a zkontrolujte, jestli v něm nejsou další předměty (mince, sponky).',
+            'Filtr vraťte zpět a pevně utáhněte rukou.',
+            'Spusťte krátký program a sledujte, zda voda odtéká.',
+          ],
+          tips: [
+            'Pokud z filtru padají mince a sponky, vyplatí se kontrolovat kapsy před praním.',
+          ],
+        },
+        {
+          q: 'Krok 2: Zkontrolujte vypouštěcí hadici (zalomení, ucpání)',
+          answer: 'Vypouštěcí hadice za pračkou často bývá zalomená u stěny, ucpaná vlasy nebo mýdlovými nánosy. Také může být napojení do odpadu zaneseno mastnotou.',
+          steps: [
+            'Posuňte pračku, abyste se dostali za ni.',
+            'Prohlédněte celou hadici – hledejte ostré ohyby a zalomení.',
+            'Sundejte hadici z odpadu a podívejte se dovnitř – pokud je černá vrstva, vyčistěte ji drátem nebo proudem vody.',
+            'Zkontrolujte sifon pod dřezem (pokud je pračka napojená přes něj) – často je ucpaný mastnotou z kuchyně.',
+            'Vraťte hadici zpět – konec by měl být maximálně 80 cm nad podlahou (jinak pumpa vodu nevyžene).',
+          ],
+          tips: [
+            'Pokud je hadice napojená do umyvadlového sifonu v koupelně, vyčistěte i sifon.',
+          ],
+        },
+        {
+          q: 'Krok 3: Vadné vypouštěcí čerpadlo',
+          answer: 'Pokud je filtr i hadice čisté a voda stále nevyteče, je problém v čerpadle. Bývá zaseknuté cizím předmětem (mince, kostice z podprsenky) nebo má vadnou vrtulku.',
+          steps: [
+            'Po vyšroubování filtru posviťte do otvoru – uvidíte vrtulku čerpadla.',
+            'Zkuste s ní opatrně otočit prstem – musí jít volně, bez odporu.',
+            'Pokud je něco zaseknuté nebo vrtulka nejde otočit, čerpadlo potřebuje servis nebo výměnu.',
+            'Při spuštění vypouštění poslouchejte – pokud čerpadlo bzučí, ale netočí se, je vadné.',
+          ],
+          tips: [
+            'Výměna čerpadla: 1 500–3 500 Kč včetně práce. Originální díl od značky Bosch/Whirlpool je dražší než univerzální.',
+            'Pokud je pračka starší 10 let a čerpadlo + jiné drobné opravy, zvažte koupi nové.',
+          ],
+        },
+        {
+          q: 'Voda se vrací zpět do pračky (sifónový efekt)',
+          answer: 'Pokud je vypouštěcí hadice zapojená špatně (příliš nízko nebo do plné stoupačky), může docházet ke zpětnému natékání vody – pračka napustí, vypustí, ale voda se vrátí.',
+          steps: [
+            'Konec vypouštěcí hadice musí být ve výšce 60–100 cm nad podlahou.',
+            'Pokud je napojená do odpadu pod dřezem, ujistěte se, že odpad není ucpaný (jinak voda stoupá zpět).',
+            'Pokud máte sifón s "anti-sifónovým ventilem", zkontrolujte zda funguje (ne všechny ho mají).',
+          ],
+          tips: [
+            'Pokud problém začal po nové pračce nebo přesunu pračky, je to téměř jistě špatná instalace odpadu.',
+          ],
+        },
+      ],
+      relatedCodes: ['bosch-pracka-e18', 'aeg-pracka-e20', 'electrolux-pracka-e20', 'whirlpool-pracka-f03', 'samsung-pracka-5e', 'beko-pracka-e02'],
+      applianceTypes: ['pracka'],
+    },
   ]
 
   for (const s of symptoms) {

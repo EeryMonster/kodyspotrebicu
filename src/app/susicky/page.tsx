@@ -11,16 +11,20 @@ interface Props {
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
   const hasFilters = Object.keys(searchParams || {}).length > 0
   const canonical = 'https://www.kodyspotrebicu.cz/susicky'
+  const year = new Date().getFullYear()
+  let count = 0
+  try {
+    count = await prisma.errorCode.count({ where: { applianceType: 'susicka' } })
+  } catch { /* DB not ready */ }
+  const countLabel = count > 0 ? `${count}+` : 'Stovky'
+  const title = `Chybové kódy sušiček: ${countLabel} kódů Bosch, Siemens, AEG, Whirlpool (${year})`
+  const description = `${countLabel} chybových kódů sušiček (kondenzační, odtahová, tepelné čerpadlo). ✓ Vysvětlení kódů E60, E63, E01, F01 ✓ Cena opravy ✓ Návod krok za krokem.`
   return {
-    title: 'Chybové kódy sušiček',
-    description: 'Databáze chybových kódů sušiček – odtahová, kondenzační, tepelné čerpadlo. Bosch, Siemens, AEG, Electrolux, Samsung, Beko.',
+    title,
+    description,
     alternates: { canonical },
     robots: hasFilters ? { index: false, follow: true } : undefined,
-    openGraph: {
-      title: 'Chybové kódy sušiček | KódySpotřebičů.cz',
-      description: 'Databáze chybových kódů sušiček – odtahová, kondenzační, tepelné čerpadlo. Bosch, Siemens, AEG, Electrolux, Samsung, Beko.',
-      url: canonical,
-    },
+    openGraph: { title, description, url: canonical, type: 'website' },
   }
 }
 
