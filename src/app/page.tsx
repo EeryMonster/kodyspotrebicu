@@ -47,39 +47,30 @@ const brands = [
   { name: 'Whirlpool', slug: 'whirlpool' },
 ]
 
+// Featured 8 nejčastějších problémů zobrazených na homepage.
+// Curated výběr — kompletní seznam (28 symptomů) je na /problemy.
+// Pozn.: 'pracka-nevypousti' byl smazán + 301 redirect → používáme 'voda-zustava-v-pracce' (nový master).
 const commonProblems = [
   { slug: 'pracka-zapacha', img: '/symptoms/pracka-zapacha.png', label: 'Pračka zapáchá', desc: 'Nepříjemný zápach z pračky nebo prádla' },
-  { slug: 'pracka-nevypousti', img: '/symptoms/pracka-nevypousti.png', label: 'Pračka nevypouští vodu', desc: 'Po praní zůstane voda v bubnu' },
+  { slug: 'voda-zustava-v-pracce', img: '/symptoms/pracka-nevypousti.png', label: 'Pračka nevypouští vodu', desc: 'Po praní zůstane voda v bubnu' },
   { slug: 'pracka-se-neplni', img: '/symptoms/pracka-se-neplni.png', label: 'Pračka se neplní', desc: 'Pračka nezačne nabírat vodu' },
   { slug: 'pracka-trese', img: '/symptoms/pracka-trese.png', label: 'Pračka se třese a hlučí', desc: 'Silné vibrace nebo hluk při odstřeďování' },
   { slug: 'pracka-tece', img: '/symptoms/pracka-tece.png', label: 'Voda vytéká z pračky', desc: 'Voda pod pračkou nebo kolem ní' },
   { slug: 'buben-se-neotaci', img: '/symptoms/buben-se-neotaci.png', label: 'Buben se neotáčí', desc: 'Buben stojí nebo se otáčí nepravidelně' },
   { slug: 'mycka-neumyva', img: '/symptoms/mycka-neumyva.png', label: 'Myčka neumývá nádobí', desc: 'Nádobí vychází špinavé nebo mokré' },
   { slug: 'mycka-nevypousti', img: '/symptoms/mycka-nevypousti.png', label: 'Myčka nevypouští vodu', desc: 'Po mytí zůstane voda na dně myčky' },
-  { slug: 'mycka-zapacha', img: '/symptoms/mycka-zapacha.png', label: 'Myčka zapáchá', desc: 'Zápach z myčky nebo z nádobí' },
-  { slug: 'voda-pod-myckou', img: '/symptoms/voda-pod-myckou.png', label: 'Voda pod myčkou', desc: 'Únik vody pod nebo za myčkou' },
-  { slug: 'mycka-nenabira-vodu', img: '/symptoms/mycka-nenapousti-vodu.svg', label: 'Myčka nenapouští vodu', desc: 'Myčka se nespustí nebo nenapustí vodu' },
-  { slug: 'mycka-hluci', img: '/symptoms/mycka-bzuci.svg', label: 'Myčka hlučí', desc: 'Klepání, bzučení nebo hlasité zvuky při mytí' },
-  { slug: 'nadobi-zustava-mokre', img: '/symptoms/nadobi-zustava-mokre.png', label: 'Nádobí zůstává mokré', desc: 'Nádobí je mokré i po skončení programu' },
-  { slug: 'mycka-nedokonci-program', img: '/symptoms/mycka-nedokonci-program.png', label: 'Myčka nedokončí program', desc: 'Myčka se zastaví uprostřed mytí' },
-  { slug: 'susicka-nesusi', img: '/symptoms/susicka-nesusi.png', label: 'Sušička nesuší', desc: 'Prádlo zůstává mokré po celém cyklu' },
-  { slug: 'susicka-se-prehriva', img: '/symptoms/susicka-se-prehriva.png', label: 'Sušička se přehřívá', desc: 'Sušička se vypíná nebo vydává zápach' },
-  { slug: 'susicka-hluci', img: '/symptoms/susicka-hluci.png', label: 'Sušička hlučí', desc: 'Rány, vrzání nebo silné vibrace sušičky' },
-  { slug: 'susicka-se-nezapne', img: '/symptoms/susicka-se-nezapne.png', label: 'Sušička se nezapne', desc: 'Sušička nereaguje nebo se nespustí' },
-  { slug: 'susicka-trva-dlouho', img: '/symptoms/susicka-trva-dlouho.png', label: 'Sušení trvá příliš dlouho', desc: 'Program sušení trvá výrazně déle než obvykle' },
-  { slug: 'pracka-nouzove-otevreni', img: '/symptoms/pracka-nouzove-otevreni.svg', label: 'Nouzové otevření pračky', desc: 'Dveře se zasekly nebo nejdou otevřít po praní' },
-  { slug: 'pracka-zamek-dveri', img: '/symptoms/pracka-zamek-dveri.svg', label: 'Jak vypnout zámek pračky', desc: 'Zámek dveří nebo dětská pojistka nejde deaktivovat' },
-  { slug: 'pracka-vypusteni-pred-stehovani', img: '/symptoms/pracka-vypusteni-pred-stehovani.svg', label: 'Vypuštění pračky před stěhováním', desc: 'Jak bezpečně vypustit vodu a odpojit pračku' },
 ]
 
 export default async function HomePage() {
   let totalCount = 0
+  let symptomCount = commonProblems.length
 
   try {
     const stats = await prisma.errorCode.aggregate({ _count: { id: true } })
     totalCount = stats._count.id
+    symptomCount = await prisma.symptom.count()
   } catch {
-    // DB not connected yet
+    // DB not connected yet — fallback na hardcoded length
   }
 
   const websiteSchema = {
@@ -247,7 +238,7 @@ export default async function HomePage() {
             <p className="text-sm text-gray-600">Praktické průvodce pro závady, které se často nehlásí kódem.</p>
           </div>
           <Link href="/problemy" className="text-sm font-medium text-blue-600 hover:underline">
-            Všechny problémy ({commonProblems.length}) →
+            Všechny problémy ({symptomCount}) →
           </Link>
         </div>
         <ProblemsGrid problems={commonProblems} />
