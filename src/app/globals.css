@@ -38,17 +38,34 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  /* Subtle dot pattern — dává hloubku hero sekcím, nepřebíjí čitelnost.
+     Použij na hero wrapperu místo flat bg-gray-50. */
+  .bg-dots-subtle {
+    background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-color: #f9fafb;
+  }
 }
 
 @layer components {
-  /* Primární tlačítko — modrá CTA */
+  /* Primární tlačítko — modrá CTA s jemným gradient shiftem na hover */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 bg-brand-primary text-white rounded-lg px-4 py-2.5 text-sm font-medium hover:bg-brand-primary-dark transition-colors border border-transparent min-h-[44px];
+    @apply inline-flex items-center justify-center gap-2 text-white rounded-lg px-4 py-2.5 text-sm font-medium border border-transparent min-h-[44px] transition-all duration-200;
+    background-image: linear-gradient(135deg, #2563eb 0%, #2563eb 100%);
+  }
+  .btn-primary:hover {
+    background-image: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+    box-shadow: 0 4px 12px -2px rgba(37, 99, 235, 0.35);
   }
 
   /* Primární tlačítko — větší (hero / hlavní CTA) */
   .btn-primary-lg {
-    @apply inline-flex items-center justify-center gap-2 bg-brand-primary text-white rounded-lg px-6 py-3.5 text-base font-medium hover:bg-brand-primary-dark transition-colors border border-transparent min-h-[52px];
+    @apply inline-flex items-center justify-center gap-2 text-white rounded-lg px-6 py-3.5 text-base font-medium border border-transparent min-h-[52px] transition-all duration-200;
+    background-image: linear-gradient(135deg, #2563eb 0%, #2563eb 100%);
+  }
+  .btn-primary-lg:hover {
+    background-image: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+    box-shadow: 0 6px 20px -4px rgba(37, 99, 235, 0.4);
   }
 
   /* Sekundární tlačítko — outline */

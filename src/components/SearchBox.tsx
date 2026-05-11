@@ -93,8 +93,9 @@ export default function SearchBox({ variant = 'compact' }: SearchBoxProps) {
             }}
             placeholder={isHero ? 'Zadejte značku a kód, např. Bosch E15' : 'Hledat kód chyby, značku...'}
             className={isHero
-              ? 'w-full px-4 py-3.5 pl-12 border border-brand-border rounded-lg text-base text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-primary placeholder:text-gray-400 shadow-sm'
-              : 'w-full px-4 py-2 pl-10 border border-brand-border rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-primary placeholder:text-gray-500'
+              // Hero: shadow grow + border color shift na focus (NE scale — break by ikonu absolute)
+              ? 'w-full px-4 py-3.5 pl-12 border border-brand-border rounded-lg text-base text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-primary placeholder:text-gray-400 shadow-sm transition-all duration-200 focus:shadow-lg focus:border-brand-primary'
+              : 'w-full px-4 py-2 pl-10 border border-brand-border rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-primary placeholder:text-gray-500 transition-all duration-200 focus:shadow-sm'
             }
           />
           <svg

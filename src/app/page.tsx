@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import SearchBox from '@/components/SearchBox'
 import ProblemsGrid from '@/components/ProblemsGrid'
 import ServiceCtaBox from '@/components/ServiceCtaBox'
+import CountUp from '@/components/CountUp'
 import { WashingMachine, UtensilsCrossed, Shirt, Gauge, Wrench, PhoneCall } from 'lucide-react'
 
 type ApplianceIcon = 'pracka' | 'mycka' | 'susicka'
@@ -102,7 +103,7 @@ export default async function HomePage() {
   }
 
   return (
-    <div className="bg-gray-50">
+    <div className="bg-dots-subtle">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
@@ -154,7 +155,7 @@ export default async function HomePage() {
               {totalCount > 0 && (
                 <div className="pb-4 mb-4 border-b border-brand-border">
                   <p className="text-2xl font-bold text-gray-950 leading-none">
-                    <span className="font-mono tabular-nums">{totalCount}</span><span className="text-accent-600 font-mono">+</span>
+                    <CountUp target={totalCount} className="font-mono tabular-nums" /><span className="text-accent-600 font-mono">+</span>
                     <span className="ml-1.5 text-base font-semibold text-gray-700 font-sans">kódů v databázi</span>
                   </p>
                   <p className="text-sm text-gray-600 mt-2">Pračky, myčky, sušičky {brands.length} značek.</p>
@@ -195,7 +196,7 @@ export default async function HomePage() {
               key={b.slug}
               href={`/znacka/${b.slug}`}
               aria-label={`Chybové kódy ${b.name}`}
-              className="group flex min-h-[74px] flex-col items-center justify-center gap-2 rounded-xl border border-brand-border bg-white p-3 transition-all duration-200 hover:border-blue-300 hover:shadow-md hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+              className="group flex min-h-[74px] flex-col items-center justify-center gap-2 rounded-xl border border-brand-border bg-white p-3 transition-all duration-200 hover:border-blue-300 hover:bg-brand-soft/40 hover:shadow-md hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
               {/* Fixed height (h-7) + auto width pro konzistentní optickou výšku napříč různými poměry log.
                   Native <img> je vědomě zvolen — SVG nemá z Next Image optimization benefit a fill mode brání w-auto. */}
