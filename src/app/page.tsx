@@ -147,7 +147,10 @@ export default async function HomePage() {
               </div>
             </div>
 
-            <aside className="rounded-xl border border-brand-border bg-brand-surface p-5">
+            {/* Hero info card s "expert tier" akcentem:
+                left border-stripe v terakotě (subtle 4px) + ikony v pastel akcent (accent-50 bg + accent-600).
+                Komunikuje "expertní info / kvalitní content" bez agresivity plné oranžové. */}
+            <aside className="rounded-xl border border-brand-border border-l-4 border-l-accent-500 bg-brand-surface p-5">
               {totalCount > 0 && (
                 <div className="pb-4 mb-4 border-b border-brand-border">
                   <p className="text-2xl font-bold text-gray-950 leading-none">
@@ -164,7 +167,7 @@ export default async function HomePage() {
                   { Icon: PhoneCall, label: 'Servisní hranice', value: 'Kdy zavolat technika' },
                 ].map(({ Icon, label, value }) => (
                   <li key={label} className="flex items-start gap-3">
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand-primary-dark">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent-50 text-accent-600">
                       <Icon className="w-4 h-4" aria-hidden="true" />
                     </span>
                     <div className="min-w-0">

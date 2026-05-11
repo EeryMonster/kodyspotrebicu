@@ -44,8 +44,9 @@ const HOMEPAGE_VARIANT: Variant = {
   heading: 'Potřebujete servisního technika?',
   body: 'Pokud si s opravou nevíte rady, najděte ověřený servis ve vašem okolí.',
   cta: 'Najít servis',
-  // Akcent terakota — homepage CTA je perfektní místo pro distinct akcent (10 % rule)
-  wrapperClass: 'bg-accent-50 border border-accent-300 shadow-sm',
+  // Bílý box s neutrálním borderem — pozornost přitáhne jen ikona a tlačítko v terakotě.
+  // Méně agresivní než plný oranžový alert, expert feeling vs panic mode.
+  wrapperClass: 'bg-white border border-gray-200/60 shadow-sm',
   icon: Wrench,
 }
 
