@@ -142,11 +142,14 @@ export default async function ErrorCodePage({ params }: Props) {
   const priceRange = REPAIR_PRICE_RANGES[entry.severityLevel] ?? REPAIR_PRICE_RANGES[2]
   const resetInstruction = BRAND_RESET_INSTRUCTIONS[entry.brand.toLowerCase()] ?? BRAND_RESET_FALLBACK
 
+  const ogImageUrl = `https://www.kodyspotrebicu.cz/${entry.brand.toLowerCase()}/${appliancePath}/${entry.slug}/opengraph-image`
+
   const howToSchema = entry.canUserTrySafeChecks && entry.safeChecks.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     name: `Jak doma zkontrolovat a opravit chybu ${entry.code} – ${entry.title}`,
     description: entry.shortMeaning,
+    image: ogImageUrl,
     totalTime: 'PT15M',
     estimatedCost: {
       '@type': 'MonetaryAmount',
@@ -178,22 +181,38 @@ export default async function ErrorCodePage({ params }: Props) {
     '@type': 'TechArticle',
     headline: `Chyba ${entry.code} ${entry.brand} ${appliancePathLabel}: ${entry.title}`,
     description: entry.shortMeaning,
+    image: {
+      '@type': 'ImageObject',
+      url: ogImageUrl,
+      width: 1200,
+      height: 630,
+    },
     url: canonicalUrl,
     datePublished: entry.updatedAt.toISOString(),
     dateModified: entry.updatedAt.toISOString(),
     inLanguage: 'cs-CZ',
     author: {
       '@type': 'Organization',
+      '@id': 'https://www.kodyspotrebicu.cz/#organization',
       name: 'KódySpotřebičů.cz',
       url: 'https://www.kodyspotrebicu.cz/o-nas',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.kodyspotrebicu.cz/icon.png',
+        width: 1024,
+        height: 1024,
+      },
     },
     publisher: {
       '@type': 'Organization',
+      '@id': 'https://www.kodyspotrebicu.cz/#organization',
       name: 'KódySpotřebičů.cz',
       url: 'https://www.kodyspotrebicu.cz',
       logo: {
         '@type': 'ImageObject',
         url: 'https://www.kodyspotrebicu.cz/icon.png',
+        width: 1024,
+        height: 1024,
       },
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
