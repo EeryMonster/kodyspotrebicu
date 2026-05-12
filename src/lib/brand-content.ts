@@ -12,6 +12,59 @@ export interface BrandContent {
 }
 
 export const BRAND_CONTENT: Record<string, BrandContent> = {
+  beko: {
+    intro: [
+      'Beko je turecká značka patřící do skupiny Arçelik, která je jedním z největších evropských výrobců domácích spotřebičů. Spotřebiče Beko jsou v ČR oblíbeny pro příznivý poměr ceny a výkonu, dobrou dostupnost náhradních dílů a vlastní servisní síť (zákaznické centrum + autorizovaní partneři).',
+      'Chybové kódy Beko mají dva formáty: starší modely používají krátké kódy E1–E8 (pračky i myčky), novější modely rozšiřují formát na E10/E20/E30/E40 + sérii EA/EB/EF/EH (napájení) a H1–H8 (elektronika, topné těleso, motor). Sušičky Beko používají kódy H01–H08. V naší databázi najdete obě varianty.',
+    ],
+    modelLines: [
+      {
+        name: 'Základní pračky Beko',
+        description: 'Vstupní modely s digitálním displejem a chybovými kódy E10/E20/H1–H8. Standardní spotřeba, jednoduché ovládání. Většina modelů s ProSmart invertorovým motorem se zákonnou 2letou zárukou.',
+      },
+      {
+        name: 'SteamCure / AquaTech (střední řada)',
+        description: 'Přidává parní funkci SteamCure (odstraní až 99,9 % bakterií a alergenů, certifikace Allergy UK) a AquaTech (přímé sprchování prádla + šetrnější pohyby bubnu, rychlejší a šetrnější praní až o 50 %). Vybrané modely s 5letou prodlouženou zárukou.',
+      },
+      {
+        name: 'HygieneShield / Beyond (prémiová řada)',
+        description: 'Top modely Beko s řadou HygieneShield (odstranění více než 99 % bakterií a virů) a řadou Beyond (kombinace SteamCure + AquaTech + AddSteam + nejlepší zvuková izolace). Plná 10letá záruka na ProSmart invertorový motor po registraci.',
+      },
+    ],
+    topCodes: [
+      { code: 'E10', appliance: 'pračka', tip: 'Chyba přívodu vody – kohout otevřený, sítko v hadici čisté, tlak min. 1 bar.' },
+      { code: 'E20', appliance: 'pračka', tip: 'Pračka nevypouští – filtr u dna, čerpadlo, vypouštěcí hadice a sifon.' },
+      { code: 'E30', appliance: 'pračka', tip: 'Voda v základně – AquaStop aktivován. Vypněte přívodní kohout a vyžádejte servis.' },
+      { code: 'E40', appliance: 'pračka', tip: 'Dvířka nejsou zavřena – zkontrolujte těsnění a zámek dveří, lehce přitiskněte.' },
+      { code: 'C9', appliance: 'pračka', tip: 'Nevyvážený buben – přerozdělte prádlo, vyhněte se praní jediného těžkého kusu (deka, ručník).' },
+      { code: 'H2', appliance: 'pračka', tip: 'Topné těleso – přerušený obvod. Vyžaduje servisní výměnu.' },
+      { code: 'E1', appliance: 'myčka', tip: 'Chyba přívodu vody myčky – kohout, sítko, hadice AquaStop.' },
+      { code: 'H01', appliance: 'sušička', tip: 'Přehřátí sušičky – zkontrolujte filtr žmolků, kondenzátor a větrání kolem spotřebiče.' },
+    ],
+    longevity: 'Pračky a myčky Beko obvykle slouží 8–11 let při běžném provozu (4–5 cyklů týdně) podle CZ uživatelských zkušeností. Beko je positioned jako značka s dobrým poměrem cena/výkon – životnost je solidní, ale obvykle kratší než u prémiových BSH nebo Miele. Závažnější závady přicházejí typicky kolem 6.–8. roku – nejčastěji opotřebená ložiska bubnu, vadné čerpadlo, opotřebené motorové uhlíky nebo koroze topného tělesa. ProSmart invertor motor (klíčová komponenta) má samostatně 10letou záruku po registraci do 90 dnů od koupě. Pravidlo pro opravu vs. výměnu: pokud cena opravy přesahuje 50 % hodnoty nového spotřebiče stejné třídy, vyplatí se výměna – obzvláště u Beko modelů, kde levnější pořizovací cena snižuje hranici návratnosti.',
+    faq: [
+      {
+        q: 'Jaké záruky Beko nabízí v ČR?',
+        a: 'Beko v ČR poskytuje na vybrané modely dvě bezplatné prodloužené záruky: (1) 5letá záruka na celý spotřebič (zahrnuje díly, dopravu a práci technika, případně výměnu spotřebiče) po registraci na bekocr.cz/zaruka-5-let; (2) 10letá záruka na ProSmart invertorový motor nebo kompresor po registraci do 90 dnů od koupě. Kromě toho platí zákonná 2letá záruka na všechny spotřebiče. Záruka platí jen pro prvního majitele.',
+      },
+      {
+        q: 'Co je SteamCure, AquaTech a HygieneShield?',
+        a: 'SteamCure je parní funkce, která během cyklu uvolňuje skvrny a po skončení odstraňuje bakterie a alergeny (s certifikací Allergy UK). AquaTech kombinuje přímé sprchování prádla s šetrnějšími pohyby bubnu, což zrychluje praní o 50 % a šetří jemné tkaniny. HygieneShield je samostatná řada spotřebičů Beko zaměřená na odstranění více než 99 % bakterií a virů.',
+      },
+      {
+        q: 'Proč má moje pračka Beko jiný formát kódů (E1 vs. E10)?',
+        a: 'Starší modely Beko (zhruba do roku 2015) používají krátké kódy E1–E8. Novější modely mají rozšířený systém: E10/E20/E30/E40 pro hlavní systémy + samostatnou sérii H1–H8 pro elektroniku a topné prvky + EA/EB/EF/EH pro napájení. Význam je často podobný (např. starší E1 ~ novější E10 = chyba přívodu vody), ale ne vždy 1:1 ekvivalent. V naší databázi najdete obě varianty s rozlišením „starší / novější modely".',
+      },
+      {
+        q: 'Kde najdu autorizovaný servis Beko v ČR?',
+        a: 'Beko má v Česku vlastní zákaznické centrum a síť autorizovaných partnerů (např. ALPHA Servis, HB Servis). Objednávku opravy najdete na servis.beko.cz/objednavka-opravy-spotrebice-autorizovanym-servisem. Infolinka: 222 525 222 (Po–Pá 8:00–17:00 s pauzou 12:30–13:00, o víkendu také), email podpora.cz@beko.com. Mimozáruční opravy v ČR se obvykle pohybují do 1 500 Kč podle typu závady.',
+      },
+      {
+        q: 'Lze resetovat pračku Beko bez servisu?',
+        a: 'Ano. Otočte programátor na pozici „Vypnuto" (případně podržte tlačítko Start/Pauza po dobu 3–5 sekund podle modelu), vytáhněte zástrčku ze zásuvky na 60 sekund, zástrčku zasuňte zpět a vyberte program. Pokud se chyba vrátí, jde o reálnou závadu vyžadující diagnostiku.',
+      },
+    ],
+  },
   samsung: {
     intro: [
       'Samsung patří mezi největší světové výrobce elektroniky a domácích spotřebičů. Pračky, myčky a sušičky Samsung jsou vybaveny digitálním displejem, který zobrazuje chybové kódy přímo – bez nutnosti počítat bliknutí kontrolky.',
