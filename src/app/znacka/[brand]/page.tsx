@@ -4,6 +4,8 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import { notFound, permanentRedirect } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { BRAND_CONTENT } from '@/lib/brand-content'
+import { Layers, Lightbulb, Clock, HelpCircle } from 'lucide-react'
 
 interface Props {
   params: { brand: string }
@@ -114,9 +116,27 @@ export default async function BrandPage({ params }: Props) {
   const rawBrand = codes[0]?.brand || brandSlug
   const brandName = rawBrand.charAt(0).toUpperCase() + rawBrand.slice(1)
   const applianceTypes = Array.from(new Set(codes.map((c) => c.applianceType))).sort()
+  const richContent = BRAND_CONTENT[brandSlug.toLowerCase()]
+  const introParagraphs = richContent?.intro ?? BRAND_INTROS[brandSlug.toLowerCase()]?.paragraphs ?? []
+
+  const faqSchema = richContent?.faq && richContent.faq.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: richContent.faq.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  } : null
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <Breadcrumbs items={[{ label: brandName }]} />
       <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
         Chybové kódy {brandName}
@@ -124,12 +144,77 @@ export default async function BrandPage({ params }: Props) {
       <p className="text-gray-600 mb-3">
         Přehled {codes.length} chybových kódů spotřebičů {brandName}.
       </p>
-      {BRAND_INTROS[brandSlug.toLowerCase()] && (
+      {introParagraphs.length > 0 && (
         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-6 space-y-2 text-sm text-gray-700 leading-relaxed">
-          {BRAND_INTROS[brandSlug.toLowerCase()].paragraphs.map((p, i) => (
+          {introParagraphs.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
         </div>
+      )}
+
+      {richContent?.modelLines && richContent.modelLines.length > 0 && (
+        <section className="bg-white border border-gray-200 rounded-xl p-6 mb-6">
+          <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2 tracking-tight">
+            <Layers className="w-5 h-5 text-gray-500" />
+            Modelové řady {brandName} a jejich displej
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {richContent.modelLines.map((line, i) => (
+              <div key={i} className="bg-gray-50/60 border border-gray-200/60 rounded-lg p-4">
+                <h3 className="text-sm font-semibold text-gray-900 mb-2">{line.name}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{line.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {richContent?.topCodes && richContent.topCodes.length > 0 && (
+        <section className="bg-white border border-gray-200 rounded-xl p-6 mb-6">
+          <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2 tracking-tight">
+            <Lightbulb className="w-5 h-5 text-gray-500" />
+            Nejčastější chybové kódy {brandName} — rychlá diagnostika
+          </h2>
+          <ul className="flex flex-col gap-3">
+            {richContent.topCodes.map((tc, i) => (
+              <li key={i} className="flex items-start gap-3 text-sm">
+                <span className="font-mono font-bold text-brand-primary-dark bg-gray-100 px-2 py-0.5 rounded shrink-0 min-w-[3.5rem] text-center">
+                  {tc.code}
+                </span>
+                <span className="text-gray-700 leading-relaxed">
+                  <span className="text-gray-500">({tc.appliance})</span> {tc.tip}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {richContent?.longevity && (
+        <section className="bg-white border border-gray-200 rounded-xl p-6 mb-6">
+          <h2 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2 tracking-tight">
+            <Clock className="w-5 h-5 text-gray-500" />
+            Životnost a kdy se vyplatí opravovat
+          </h2>
+          <p className="text-sm text-gray-700 leading-relaxed">{richContent.longevity}</p>
+        </section>
+      )}
+
+      {richContent?.faq && richContent.faq.length > 0 && (
+        <section className="bg-white border border-gray-200 rounded-xl p-6 mb-6">
+          <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2 tracking-tight">
+            <HelpCircle className="w-5 h-5 text-gray-500" />
+            Časté otázky o {brandName}
+          </h2>
+          <dl className="flex flex-col gap-4">
+            {richContent.faq.map((f, i) => (
+              <div key={i}>
+                <dt className="text-sm font-semibold text-gray-900 mb-1.5">{f.q}</dt>
+                <dd className="text-sm text-gray-700 leading-relaxed">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
       )}
 
       {applianceTypes.length > 1 && (
