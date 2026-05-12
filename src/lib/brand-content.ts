@@ -12,6 +12,59 @@ export interface BrandContent {
 }
 
 export const BRAND_CONTENT: Record<string, BrandContent> = {
+  siemens: {
+    intro: [
+      'Siemens je prémiová německá značka patřící do skupiny BSH (Bosch-Siemens Hausgeräte). Spotřebiče Siemens sdílí konstrukční základ s Bosch – chybové kódy jsou proto u obou značek totožné nebo velmi podobné a oba výrobci sdílí Home Connect, motorové platformy i sušicí technologii Zeolith.',
+      'Pračky Siemens používají primárně F-kódy (F01–F91), které značí závažnější závady vyžadující obvykle servisní zásah. Myčky a sušičky Siemens používají E-kódy. Starší myčky řady SE a SF nemají displej a chyby hlásí blikáním kontrolky – odpovídající čísla najdete v naší databázi pod kódy E1–E6.',
+    ],
+    modelLines: [
+      {
+        name: 'iQ100 / iQ300 (základní řady)',
+        description: 'Cenově dostupné modely se základní výbavou. Vstupní iQ100 nabízí solidní poměr cena/výkon, iQ300 přidává u některých modelů iQdrive motor. Bez Wi-Fi a touchscreen displeje.',
+      },
+      {
+        name: 'iQ500 (střední řada)',
+        description: 'Nejprodávanější řada v ČR. Myčky 44 dB se 8 programy, pračky s Wi-Fi a Home Connect, sušičky s tepelným čerpadlem. AntiVibration design, varioSpeed pro zrychlení programů.',
+      },
+      {
+        name: 'iQ700 / iQ800 (prémiové řady)',
+        description: 'Top modely s iSensoric touchscreen, i-Dos (automatické dávkování), iQdrive motorem a u myček sušením Zeolith (42 dB). Home Connect, hlasové ovládání přes Alexa/Google Assistant. Siemens poskytuje na iQdrive motor 10letou záruku při registraci do 3 měsíců od koupě.',
+      },
+    ],
+    topCodes: [
+      { code: 'F17', appliance: 'pračka', tip: 'Chyba plnění vodou – ověřte otevřený přívodní kohout a čistotu sítka v hadici.' },
+      { code: 'F18', appliance: 'pračka', tip: 'Pračka nevypouští – zkontrolujte filtr, sifon a vypouštěcí čerpadlo.' },
+      { code: 'F21', appliance: 'pračka', tip: 'Chyba motoru – typicky opotřebené motorové uhlíky, vyžaduje servisní výměnu.' },
+      { code: 'F23', appliance: 'pračka', tip: 'AquaStop / přeplnění – ve vaně je voda. Vypněte přívodní kohout a vyžádejte servis.' },
+      { code: 'E22', appliance: 'myčka', tip: 'Zanesený filtr – vyšroubujte spodní filtr myčky a propláchněte pod tekoucí vodou.' },
+      { code: 'E15', appliance: 'myčka', tip: 'AquaStop aktivován – ve vaně myčky je voda. Vypněte přívod a vyžádejte servis.' },
+      { code: 'E:02', appliance: 'sušička', tip: 'Sušení trvá příliš dlouho – obvykle zanesený výměník nebo filtr žmolků.' },
+      { code: 'E:03', appliance: 'sušička', tip: 'Sušička se přehřála – zkontrolujte filtr žmolků a větrání kondenzátoru.' },
+    ],
+    longevity: 'Pračky a myčky Siemens obvykle slouží 10–15 let při běžném provozu (4–5 cyklů týdně). Díky sdílené konstrukci s Bosch jsou typické závady stejné – kolem 7.–9. roku přicházejí opotřebené motorové uhlíky (F21), vadná ložiska bubnu nebo zanesené čerpadlo. Pravidlo pro opravu vs. výměnu: pokud cena opravy přesahuje 50 % hodnoty nového spotřebiče stejné třídy, vyplatí se výměna – obzvláště u iQ100/iQ300 starších 8 let. U iQ700 a iQ800 má smysl opravovat i nákladnější závady díky vyšší pořizovací ceně a 10leté záruce na iQdrive motor.',
+    faq: [
+      {
+        q: 'Jsou chybové kódy Siemens a Bosch stejné?',
+        a: 'Z velké části ano. Obě značky patří do skupiny BSH a sdílí konstrukční platformy i elektronické moduly. Drobné rozdíly jsou v označení modelových řad (iQ vs. Serie) a v tom, že pračky Siemens používají primárně F-kódy, zatímco Bosch má více E-kódů.',
+      },
+      {
+        q: 'Co znamenají F-kódy na displeji pračky Siemens?',
+        a: 'F-kódy označují závažnější závady, obvykle vyžadující servisní zásah. F17 = chyba plnění, F18 = chyba vypouštění, F21 = problém s motorem (typicky uhlíky), F23 = AquaStop / přeplnění, F43 = chyba topného tělesa. Plný seznam F-kódů Siemens najdete v naší databázi.',
+      },
+      {
+        q: 'Proč moje stará myčka Siemens nemá displej a jen bliká?',
+        a: 'Jde o starší modely řady SE a SF. Místo kódu blikají kontrolky – jejich kombinace odpovídá konkrétnímu chybovému kódu (E1, E2, E3...). Návod k dekódování blikání najdete u jednotlivých kódů E1–E6 v naší databázi.',
+      },
+      {
+        q: 'Kde najdu autorizovaný servis Siemens v ČR?',
+        a: 'Siemens má v Česku oficiální servis a desítky autorizovaných partnerů. Aktuální seznam je na siemens-home.bsh-group.com/cz. Linka oprav: +420 251 095 042 (Po–Pá 9:00–17:00). Záruční oprava je u autorizovaného partnera zdarma; mimozáruční výjezd v Praze a okolí stojí orientačně 600–1 200 Kč.',
+      },
+      {
+        q: 'Lze resetovat pračku Siemens bez servisu?',
+        a: 'Ano. Otočte programátor na pozici „Vypnuto", vytáhněte zástrčku ze zásuvky na 60 sekund, zástrčku zasuňte zpět a vyberte program. U modelů iQ500+ s Home Connect lze reset spustit i přes aplikaci.',
+      },
+    ],
+  },
   bosch: {
     intro: [
       'Bosch je německá značka s dlouhou tradicí ve výrobě domácích spotřebičů. Pračky, myčky a sušičky Bosch patří v Česku k nejrozšířenějším – díky husté servisní síti a dobré dostupnosti náhradních dílů jsou oblíbeny i u techniků.',
