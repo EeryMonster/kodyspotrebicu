@@ -12,6 +12,59 @@ export interface BrandContent {
 }
 
 export const BRAND_CONTENT: Record<string, BrandContent> = {
+  aeg: {
+    intro: [
+      'AEG je prémiová značka skupiny Electrolux se silnou tradicí v Německu a Skandinávii. Pračky, myčky a sušičky AEG sdílí konstrukční platformy se značkami Electrolux a Zanussi – chybové kódy E10, E20, E30, E40 a další jsou proto u těchto značek z velké části shodné.',
+      'Chybové kódy AEG praček používají formát E + číslo a každá desítka označuje konkrétní podsystém: E1x = přívod vody, E2x = vypouštění, E3x = únik / AquaStop, E4x = dveře, E5x = motor, E6x = ohřev, E7x = teplotní čidlo, E8x = programátor, E9x = elektronika. Myčky AEG používají formát I + číslo a sušičky systém E + číslo + písmeno (např. E2E, EHC).',
+    ],
+    modelLines: [
+      {
+        name: '6000 série (základní)',
+        description: 'Vstupní řada s technologií ProSense (automatické vážení prádla a úprava cyklu). Vybrané modely mají AutoDose a Wi-Fi konektivitu. U sušiček SensiDry s tepelným čerpadlem.',
+      },
+      {
+        name: '7000 série (střední)',
+        description: 'Přidává ProSteam technologii – parní úpravu prádla, která redukuje žmolky až o 30 % a osvěží oděvy bez praní. ProSense + AutoDose dávkování. Sušičky s AbsoluteCare systémem pro šetrné sušení.',
+      },
+      {
+        name: '8000 / 9000 série (prémie)',
+        description: 'Top modely s ProSteam, ProSense, AutoDose, TimeSave (zkrácení cyklu až o polovinu) a SoftPlus pro důkladnou distribuci aviváže. Sušičky 9000 s AbsoluteCare jsou nejcitlivější ke hedvábí a vlně.',
+      },
+    ],
+    topCodes: [
+      { code: 'E10', appliance: 'pračka', tip: 'Chyba přívodu vody – ověřte otevřený kohout, čisté sítko v hadici, dostatečný tlak (min. 1 bar).' },
+      { code: 'E20', appliance: 'pračka', tip: 'Pračka nevypouští – zkontrolujte filtr u dna, vypouštěcí hadici a sifon.' },
+      { code: 'E30', appliance: 'pračka', tip: 'AquaStop / únik vody – ve vaně pračky je voda. Vypněte přívod a vyžádejte servis.' },
+      { code: 'E50', appliance: 'pračka', tip: 'Chyba motoru – typicky opotřebené motorové uhlíky. Vyžaduje servisní výměnu.' },
+      { code: 'EF1', appliance: 'pračka', tip: 'Ucpaný odpadní filtr – vyšroubujte filtr u dna, propláchněte a vraťte zpět.' },
+      { code: 'I10', appliance: 'myčka', tip: 'Chyba přívodu vody – kohout, sítko, hadice AquaStop. Stejná diagnostika jako u pračky.' },
+      { code: 'I20', appliance: 'myčka', tip: 'Myčka nevypouští vodu – filtr, sifon, vypouštěcí čerpadlo.' },
+      { code: 'E2E', appliance: 'sušička', tip: 'Vadný senzor teploty bubnu – obvykle vyžaduje výměnu NTC čidla servisem.' },
+    ],
+    longevity: 'Pračky a myčky AEG obvykle slouží 10–13 let při běžném provozu (4–5 cyklů týdně), podle vlastních AEG dat i nezávislých zdrojů. Závažnější závady přicházejí typicky kolem 7.–9. roku – nejčastěji opotřebená ložiska bubnu, vadné čerpadlo, opotřebené motorové uhlíky (E50) nebo koroze topného tělesa (E60). Standardní záruka je 2 roky, AEG ji u vybraných modelů prodlužuje na 5 let. Pravidlo pro opravu vs. výměnu: pokud cena opravy přesahuje 50 % hodnoty nového spotřebiče stejné třídy, vyplatí se výměna – obzvláště u 6000 série starší 8 let. U 8000 a 9000 série má smysl opravovat i nákladnější závady díky vyšší pořizovací ceně.',
+    faq: [
+      {
+        q: 'Jsou chybové kódy AEG a Electrolux stejné?',
+        a: 'Z velké části ano. Obě značky patří do skupiny Electrolux a sdílí konstrukční platformy i elektronické moduly. Kódy E10/E20/E30/E40 atd. mají u AEG a Electrolux praček stejný význam. Drobné rozdíly mohou být v zobrazení (AEG má často barevný displej s ikonami, Electrolux jednodušší segmentový).',
+      },
+      {
+        q: 'Co znamená písmeno I na začátku kódu myčky AEG?',
+        a: 'Myčky AEG používají formát I + číslo (I10, I20, I30, I40, I60), zatímco pračky AEG mají E + číslo a sušičky kombinaci E + číslo + písmeno (např. E2E pro chybu teplotního senzoru bubnu). Logika značení je podobná napříč Electrolux Group.',
+      },
+      {
+        q: 'Co je AEG ProSense a ProSteam?',
+        a: 'ProSense je senzor, který automaticky zváží náplň pračky a upraví délku cyklu, spotřebu vody i energie podle skutečné velikosti dávky. Najdete ji ve všech moderních pračkách AEG. ProSteam přidává parní funkci – zvlhčení prádla horkou párou, která redukuje žmolky až o 30 % a osvěží oděvy bez praní. ProSteam je dostupný v 7000 sérii a vyšších.',
+      },
+      {
+        q: 'Kde najdu autorizovaný servis AEG v ČR?',
+        a: 'AEG má v Česku přes 100 autorizovaných servisních středisek (servis je společný pro celou Electrolux Group). Objednávku opravy najdete na aeg.cz/support/repairs/. Infolinka pro objednání servisu: 261 302 261 (Po–Pá 8:00–16:30), email zakaznicke.centrum@electrolux.com. Záruční oprava je u autorizovaného partnera zdarma.',
+      },
+      {
+        q: 'Lze resetovat pračku AEG bez servisu?',
+        a: 'Ano. Otočte programátor na pozici „Vypnuto", vytáhněte zástrčku ze zásuvky na 60 sekund, zástrčku zasuňte zpět a vyberte program. Pokud se chyba vrátí, jde o reálnou závadu vyžadující diagnostiku.',
+      },
+    ],
+  },
   siemens: {
     intro: [
       'Siemens je prémiová německá značka patřící do skupiny BSH (Bosch-Siemens Hausgeräte). Spotřebiče Siemens sdílí konstrukční základ s Bosch – chybové kódy jsou proto u obou značek totožné nebo velmi podobné a oba výrobci sdílí Home Connect, motorové platformy i sušicí technologii Zeolith.',
