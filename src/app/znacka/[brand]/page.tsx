@@ -144,77 +144,126 @@ export default async function BrandPage({ params }: Props) {
       <p className="text-gray-600 mb-3">
         Přehled {codes.length} chybových kódů spotřebičů {brandName}.
       </p>
-      {introParagraphs.length > 0 && (
-        <div className="bg-white border border-gray-200 rounded-xl p-5 mb-6 space-y-2 text-sm text-gray-700 leading-relaxed">
-          {introParagraphs.map((p, i) => (
-            <p key={i}>{p}</p>
-          ))}
-        </div>
-      )}
+      {richContent ? (
+        <section className="bg-white border border-gray-200 border-l-4 border-l-accent-500 rounded-xl shadow-sm p-6 md:p-9 mb-8">
+          <div className="pb-5 mb-7 border-b border-gray-100">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-accent-700 mb-1.5">
+              Expertní přehled
+            </p>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">
+              O značce {brandName}
+            </h2>
+          </div>
 
-      {richContent?.modelLines && richContent.modelLines.length > 0 && (
-        <section className="bg-white border border-gray-200 rounded-xl p-6 mb-6">
-          <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2 tracking-tight">
-            <Layers className="w-5 h-5 text-gray-500" />
-            Modelové řady {brandName} a jejich displej
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {richContent.modelLines.map((line, i) => (
-              <div key={i} className="bg-gray-50/60 border border-gray-200/60 rounded-lg p-4">
-                <h3 className="text-sm font-semibold text-gray-900 mb-2">{line.name}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{line.description}</p>
+          {introParagraphs.length > 0 && (
+            <div className="space-y-3 text-[15px] text-gray-700 leading-relaxed mb-9">
+              {introParagraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+          )}
+
+          {richContent.modelLines && richContent.modelLines.length > 0 && (
+            <div className="pt-6 mt-2 mb-8 border-t border-gray-100">
+              <h3 className="text-base font-semibold text-gray-900 mb-5 flex items-center gap-2.5">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-accent-50 text-accent-700">
+                  <Layers className="w-4 h-4" />
+                </span>
+                Modelové řady {brandName}
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                {richContent.modelLines.map((line, i) => {
+                  const isTopTier = i === richContent.modelLines!.length - 1
+                  return (
+                    <div
+                      key={i}
+                      className={`relative rounded-lg p-4 transition-colors ${
+                        isTopTier
+                          ? 'bg-accent-50/60 border border-accent-300/60'
+                          : 'bg-gray-50/60 border border-gray-200/60'
+                      }`}
+                    >
+                      <h4 className={`text-sm font-semibold mb-2 ${isTopTier ? 'text-accent-700' : 'text-gray-900'}`}>
+                        {line.name}
+                      </h4>
+                      <p className="text-sm text-gray-600 leading-relaxed">{line.description}</p>
+                    </div>
+                  )
+                })}
               </div>
+            </div>
+          )}
+
+          {richContent.topCodes && richContent.topCodes.length > 0 && (
+            <div className="pt-6 mb-8 border-t border-gray-100">
+              <h3 className="text-base font-semibold text-gray-900 mb-5 flex items-center gap-2.5">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-accent-50 text-accent-700">
+                  <Lightbulb className="w-4 h-4" />
+                </span>
+                Nejčastější chybové kódy {brandName}
+              </h3>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
+                {richContent.topCodes.map((tc, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm">
+                    <span className="font-mono font-bold text-brand-primary-dark bg-brand-soft border border-brand-soft-border px-2 py-0.5 rounded shrink-0 min-w-[3.75rem] text-center text-xs leading-relaxed">
+                      {tc.code}
+                    </span>
+                    <span className="text-gray-700 leading-relaxed">
+                      <span className="text-gray-500 text-xs">({tc.appliance})</span> {tc.tip}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {richContent.longevity && (
+            <div className="pt-6 mb-8 border-t border-gray-100">
+              <h3 className="text-base font-semibold text-gray-900 mb-4 flex items-center gap-2.5">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-accent-50 text-accent-700">
+                  <Clock className="w-4 h-4" />
+                </span>
+                Životnost a kdy se vyplatí opravovat
+              </h3>
+              <p className="text-[15px] text-gray-700 leading-relaxed">
+                {richContent.longevity.split(/(10–15 let)/).map((part, i) =>
+                  part === '10–15 let' ? (
+                    <span key={i} className="font-bold text-accent-700 font-mono tabular-nums">{part}</span>
+                  ) : (
+                    <span key={i}>{part}</span>
+                  )
+                )}
+              </p>
+            </div>
+          )}
+
+          {richContent.faq && richContent.faq.length > 0 && (
+            <div className="pt-6 border-t border-gray-100">
+              <h3 className="text-base font-semibold text-gray-900 mb-5 flex items-center gap-2.5">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-accent-50 text-accent-700">
+                  <HelpCircle className="w-4 h-4" />
+                </span>
+                Časté otázky o {brandName}
+              </h3>
+              <dl className="flex flex-col gap-5">
+                {richContent.faq.map((f, i) => (
+                  <div key={i} className="pl-4 border-l-2 border-accent-300/50">
+                    <dt className="text-sm font-semibold text-gray-900 mb-1.5 leading-snug">{f.q}</dt>
+                    <dd className="text-sm text-gray-600 leading-relaxed">{f.a}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          )}
+        </section>
+      ) : (
+        introParagraphs.length > 0 && (
+          <div className="bg-white border border-gray-200 rounded-xl p-5 mb-6 space-y-2 text-sm text-gray-700 leading-relaxed">
+            {introParagraphs.map((p, i) => (
+              <p key={i}>{p}</p>
             ))}
           </div>
-        </section>
-      )}
-
-      {richContent?.topCodes && richContent.topCodes.length > 0 && (
-        <section className="bg-white border border-gray-200 rounded-xl p-6 mb-6">
-          <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2 tracking-tight">
-            <Lightbulb className="w-5 h-5 text-gray-500" />
-            Nejčastější chybové kódy {brandName} — rychlá diagnostika
-          </h2>
-          <ul className="flex flex-col gap-3">
-            {richContent.topCodes.map((tc, i) => (
-              <li key={i} className="flex items-start gap-3 text-sm">
-                <span className="font-mono font-bold text-brand-primary-dark bg-gray-100 px-2 py-0.5 rounded shrink-0 min-w-[3.5rem] text-center">
-                  {tc.code}
-                </span>
-                <span className="text-gray-700 leading-relaxed">
-                  <span className="text-gray-500">({tc.appliance})</span> {tc.tip}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      {richContent?.longevity && (
-        <section className="bg-white border border-gray-200 rounded-xl p-6 mb-6">
-          <h2 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2 tracking-tight">
-            <Clock className="w-5 h-5 text-gray-500" />
-            Životnost a kdy se vyplatí opravovat
-          </h2>
-          <p className="text-sm text-gray-700 leading-relaxed">{richContent.longevity}</p>
-        </section>
-      )}
-
-      {richContent?.faq && richContent.faq.length > 0 && (
-        <section className="bg-white border border-gray-200 rounded-xl p-6 mb-6">
-          <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2 tracking-tight">
-            <HelpCircle className="w-5 h-5 text-gray-500" />
-            Časté otázky o {brandName}
-          </h2>
-          <dl className="flex flex-col gap-4">
-            {richContent.faq.map((f, i) => (
-              <div key={i}>
-                <dt className="text-sm font-semibold text-gray-900 mb-1.5">{f.q}</dt>
-                <dd className="text-sm text-gray-700 leading-relaxed">{f.a}</dd>
-              </div>
-            ))}
-          </dl>
-        </section>
+        )
       )}
 
       {applianceTypes.length > 1 && (
