@@ -41,7 +41,7 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
       { code: 'I20', appliance: 'myčka', tip: 'Myčka nevypouští vodu – filtr, sifon, vypouštěcí čerpadlo.' },
       { code: 'E2E', appliance: 'sušička', tip: 'Vadný senzor teploty bubnu – obvykle vyžaduje výměnu NTC čidla servisem.' },
     ],
-    longevity: 'Pračky a myčky AEG obvykle slouží 10–13 let při běžném provozu (4–5 cyklů týdně), podle vlastních AEG dat i nezávislých zdrojů. Závažnější závady přicházejí typicky kolem 7.–9. roku – nejčastěji opotřebená ložiska bubnu, vadné čerpadlo, opotřebené motorové uhlíky (E50) nebo koroze topného tělesa (E60). Standardní záruka je 2 roky, AEG ji u vybraných modelů prodlužuje na 5 let. Pravidlo pro opravu vs. výměnu: pokud cena opravy přesahuje 50 % hodnoty nového spotřebiče stejné třídy, vyplatí se výměna – obzvláště u 6000 série starší 8 let. U 8000 a 9000 série má smysl opravovat i nákladnější závady díky vyšší pořizovací ceně.',
+    longevity: 'Pračky a myčky AEG obvykle slouží 10–13 let při běžném provozu (4–5 cyklů týdně), podle vlastních AEG dat i nezávislých zdrojů. Závažnější závady přicházejí typicky kolem 7.–9. roku – nejčastěji opotřebená ložiska bubnu, vadné čerpadlo, opotřebené motorové uhlíky (E50) nebo koroze topného tělesa (E60). V ČR má standardní záruku 2 roky; u vybraných modelů AEG nabízí po registraci na aeg.cz do 3 měsíců od koupě prodlouženou záruku 5 let na celý spotřebič, 10 let na inverter motory a doživotní záruku na motor ÖKOInverter. Pravidlo pro opravu vs. výměnu: pokud cena opravy přesahuje 50 % hodnoty nového spotřebiče stejné třídy, vyplatí se výměna – obzvláště u 6000 série starší 8 let.',
     faq: [
       {
         q: 'Jsou chybové kódy AEG a Electrolux stejné?',
@@ -81,7 +81,7 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
       },
       {
         name: 'iQ700 / iQ800 (prémiové řady)',
-        description: 'Top modely s iSensoric touchscreen, i-Dos (automatické dávkování), iQdrive motorem a u myček sušením Zeolith (42 dB). Home Connect, hlasové ovládání přes Alexa/Google Assistant. Siemens poskytuje na iQdrive motor 10letou záruku při registraci do 3 měsíců od koupě.',
+        description: 'Top modely s iSensoric touchscreen, i-Dos (automatické dávkování), iQdrive motorem a u myček sušením Zeolith (42 dB). Home Connect, hlasové ovládání přes Alexa/Google Assistant. Siemens v ČR poskytuje na motor iQdrive zdarma 10letou záruku po registraci spotřebiče.',
       },
     ],
     topCodes: [
@@ -94,7 +94,7 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
       { code: 'E:02', appliance: 'sušička', tip: 'Sušení trvá příliš dlouho – obvykle zanesený výměník nebo filtr žmolků.' },
       { code: 'E:03', appliance: 'sušička', tip: 'Sušička se přehřála – zkontrolujte filtr žmolků a větrání kondenzátoru.' },
     ],
-    longevity: 'Pračky a myčky Siemens obvykle slouží 10–15 let při běžném provozu (4–5 cyklů týdně). Díky sdílené konstrukci s Bosch jsou typické závady stejné – kolem 7.–9. roku přicházejí opotřebené motorové uhlíky (F21), vadná ložiska bubnu nebo zanesené čerpadlo. Pravidlo pro opravu vs. výměnu: pokud cena opravy přesahuje 50 % hodnoty nového spotřebiče stejné třídy, vyplatí se výměna – obzvláště u iQ100/iQ300 starších 8 let. U iQ700 a iQ800 má smysl opravovat i nákladnější závady díky vyšší pořizovací ceně a 10leté záruce na iQdrive motor.',
+    longevity: 'Pračky a myčky Siemens obvykle slouží 10–15 let při běžném provozu (4–5 cyklů týdně). Díky sdílené konstrukci s Bosch jsou typické závady stejné – kolem 7.–9. roku přicházejí opotřebené motorové uhlíky (F21), vadná ložiska bubnu nebo zanesené čerpadlo. Pravidlo pro opravu vs. výměnu: pokud cena opravy přesahuje 50 % hodnoty nového spotřebiče stejné třídy, vyplatí se výměna – obzvláště u iQ100/iQ300 starších 8 let. U iQ700 a iQ800 má smysl opravovat i nákladnější závady díky vyšší pořizovací ceně a 10leté záruce na motor iQdrive (zdarma po registraci spotřebiče v ČR).',
     faq: [
       {
         q: 'Jsou chybové kódy Siemens a Bosch stejné?',
@@ -110,7 +110,11 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
       },
       {
         q: 'Kde najdu autorizovaný servis Siemens v ČR?',
-        a: 'Siemens má v Česku oficiální servis a desítky autorizovaných partnerů. Aktuální seznam je na siemens-home.bsh-group.com/cz. Linka oprav: +420 251 095 042 (Po–Pá 9:00–17:00). Záruční oprava je u autorizovaného partnera zdarma; mimozáruční výjezd v Praze a okolí stojí orientačně 600–1 200 Kč.',
+        a: 'Siemens má v Česku oficiální servis a desítky autorizovaných partnerů. Aktuální seznam je na siemens-home.bsh-group.com/cz. Linka oprav: +420 251 095 042 (Po–Pá 9:00–17:00). Záruční oprava je u autorizovaného partnera zdarma; mimozáruční opravy v ČR se obvykle pohybují do 1 500 Kč podle typu závady (hodinová sazba techniků 350–550 Kč, diagnostika od 600 Kč).',
+      },
+      {
+        q: 'Jak získat 10letou záruku na motor iQdrive Siemens?',
+        a: 'Siemens v ČR nabízí zdarma prodlouženou 10letou záruku na motor iQdrive u vybraných modelů praček a sušiček (iQ700, iQ800). Stačí spotřebič po nákupu zaregistrovat na siemens-home.bsh-group.com/cz v sekci „Záruka iQdrive". Kromě toho Siemens v ČR nabízí 5letou prodlouženou záruku a 10letou záruku proti prorezivění vnitřních stěn myček.',
       },
       {
         q: 'Lze resetovat pračku Siemens bez servisu?',
@@ -134,7 +138,7 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
       },
       {
         name: 'Serie 8 (prémiová řada)',
-        description: 'Top modely s funkcí Home Connect (Wi-Fi), i-DOS u praček (automatické dávkování) a VarioDrawer Pro u myček. Hlučnost myček 42 dB. Bosch poskytuje na motor Serie 8 prodlouženou 10letou záruku.',
+        description: 'Top modely s funkcí Home Connect (Wi-Fi), i-DOS u praček (automatické dávkování) a VarioDrawer Pro u myček. Hlučnost myček 42 dB. U praček s EcoSilence Drive motorem (bez kartáčů) nabízí Bosch v ČR zdarma 10letou záruku po registraci v MyBosch.',
       },
     ],
     topCodes: [
@@ -147,7 +151,7 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
       { code: 'E:02', appliance: 'sušička', tip: 'Sušení trvá příliš dlouho – obvykle zanesený výměník nebo filtr žmolků.' },
       { code: 'E:03', appliance: 'sušička', tip: 'Sušička se přehřála – zkontrolujte filtr žmolků a větrání kondenzátoru.' },
     ],
-    longevity: 'Pračky a myčky Bosch obvykle slouží 10–15 let při běžném provozu (4–5 cyklů týdně). Závažnější závady přicházejí typicky kolem 7.–9. roku – nejčastěji opotřebená ložiska bubnu, vadné čerpadlo, koroze topného tělesa nebo opotřebené motorové uhlíky. Obecné pravidlo zní: pokud cena opravy přesahuje 50 % hodnoty nového spotřebiče stejné třídy, zpravidla se vyplatí výměna, obzvláště u Serie 4 starších 8 let. U Serie 8 má smysl opravovat i nákladnější závady díky vyšší pořizovací ceně a desetileté motorové záruce.',
+    longevity: 'Pračky a myčky Bosch obvykle slouží 10–15 let při běžném provozu (4–5 cyklů týdně). Závažnější závady přicházejí typicky kolem 7.–9. roku – nejčastěji opotřebená ložiska bubnu, vadné čerpadlo, koroze topného tělesa nebo opotřebené motorové uhlíky. Obecné pravidlo zní: pokud cena opravy přesahuje 50 % hodnoty nového spotřebiče stejné třídy, zpravidla se vyplatí výměna, obzvláště u Serie 4 starších 8 let. U praček s motorem EcoSilence Drive má smysl opravovat i nákladnější závady – Bosch v ČR poskytuje na tento motor zdarma 10letou záruku po registraci v MyBosch.',
     faq: [
       {
         q: 'Jsou chybové kódy Bosch a Siemens stejné?',
@@ -159,7 +163,11 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
       },
       {
         q: 'Kde najdu autorizovaný servis Bosch v ČR?',
-        a: 'Bosch má v Česku oficiální servis a desítky autorizovaných partnerů. Aktuální seznam je na bosch-home.com/cz/vyhledat-prodejce-servis. Linka oprav: +420 251 095 043 (Po–Pá 8:30–17:00). Záruční oprava je u autorizovaného partnera zdarma; mimozáruční výjezd v Praze a okolí stojí orientačně 600–1 200 Kč.',
+        a: 'Bosch má v Česku oficiální servis a desítky autorizovaných partnerů. Aktuální seznam je na bosch-home.com/cz/vyhledat-prodejce-servis. Linka oprav: +420 251 095 043 (Po–Pá 8:30–17:00). Záruční oprava je u autorizovaného partnera zdarma; mimozáruční opravy v ČR se obvykle pohybují do 1 500 Kč podle typu závady (hodinová sazba techniků 350–550 Kč, diagnostika od 600 Kč).',
+      },
+      {
+        q: 'Jak získat 10letou záruku na motor pračky Bosch?',
+        a: 'Bosch v ČR nabízí zdarma prodlouženou 10letou záruku na motor EcoSilence Drive (bezkartáčový motor) u vybraných modelů praček zakoupených od 1. října 2014. Stačí spotřebič po nákupu zaregistrovat na bosch-home.com/cz v sekci MyBosch a aktivovat prodloužení záruky. Vedle toho Bosch nabízí v ČR i 10letou ochranu proti korozi u vybraných myček.',
       },
       {
         q: 'Jakou má pračka Bosch životnost?',
