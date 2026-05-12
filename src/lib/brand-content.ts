@@ -12,6 +12,59 @@ export interface BrandContent {
 }
 
 export const BRAND_CONTENT: Record<string, BrandContent> = {
+  electrolux: {
+    intro: [
+      'Electrolux je švédský nadnárodní výrobce domácích spotřebičů s více než 100 lety tradice. Pod skupinu Electrolux patří i značky AEG a Zanussi – chybové kódy E10, E20, E30, E40 a další jsou proto u těchto značek z velké části shodné a sdílí servisní síť i platformy.',
+      'Pračky Electrolux používají kódy ve formátu E + číslo a každá desítka označuje konkrétní podsystém: E1x = přívod vody, E2x = vypouštění, E3x = únik / AquaStop, E4x = dveře, E5x = motor, E6x = ohřev, E7x = teplotní čidlo, E8x = programátor, E9x = elektronika. Myčky používají formát I + číslo (I10, I20, I50, I60, I80) a sušičky kombinaci E + číslo (např. E51, E52, E6F).',
+    ],
+    modelLines: [
+      {
+        name: 'PerfectCare 600 (základní řada)',
+        description: 'Vstupní řada s technologií SensiCare – senzor automaticky upraví délku cyklu, spotřebu vody a energie podle velikosti náplně. Solidní poměr cena/výkon, často první volba domácností.',
+      },
+      {
+        name: 'PerfectCare 700 (střední řada)',
+        description: 'Přidává SteamCare – parní úpravu na konci cyklu, která redukuje pomačkání a osvěží oblečení. Senzory SensiCare zůstávají, vyšší max. odstředění, lepší zvuková izolace.',
+      },
+      {
+        name: 'PerfectCare 800 (prémiová řada)',
+        description: 'Top řada s UltraCare – šetrné praní chránící vlákna oblečení (méně třepení a vyblednutí), nejnižší hlučnost a invertorový motor s 10letou záruční nadstavbou v ČR (po registraci).',
+      },
+    ],
+    topCodes: [
+      { code: 'E10', appliance: 'pračka', tip: 'Chyba přívodu vody – ověřte otevřený kohout, čisté sítko v hadici, dostatečný tlak (min. 1 bar).' },
+      { code: 'E20', appliance: 'pračka', tip: 'Pračka nevypouští – zkontrolujte filtr u dna, vypouštěcí hadici a sifon.' },
+      { code: 'E30', appliance: 'pračka', tip: 'Únik vody do základny / AquaStop – ve vaně je voda. Vypněte přívodní kohout a vyžádejte servis.' },
+      { code: 'E50', appliance: 'pračka', tip: 'Chyba motoru – typicky opotřebené motorové uhlíky nebo vadný tachogenerátor.' },
+      { code: 'EF0', appliance: 'pračka', tip: 'Aktivován systém proti vyplavení – stejný význam jako E30, kontrola úniku v komoře.' },
+      { code: 'I10', appliance: 'myčka', tip: 'Chyba přívodu vody myčky – kohout, sítko, hadice AquaStop.' },
+      { code: 'I50', appliance: 'myčka', tip: 'Chyba oběhového čerpadla – ucpané nebo opotřebené, vyžaduje servisní výměnu.' },
+      { code: 'E52', appliance: 'sušička', tip: 'Přehřátí sušičky – zkontrolujte filtr žmolků, kondenzátor a větrání kolem spotřebiče.' },
+    ],
+    longevity: 'Pračky a myčky Electrolux obvykle slouží 8–12 let při běžném provozu (4–5 cyklů týdně) podle dTest průzkumu spolehlivosti a CZ uživatelských zkušeností. Závažnější závady přicházejí typicky kolem 7.–9. roku – nejčastěji opotřebená ložiska bubnu, vadné čerpadlo, opotřebené motorové uhlíky (E50) nebo koroze topného tělesa (E60). V ČR má standardní záruku 2 roky; u vybraných modelů Electrolux nabízí po registraci na electrolux.cz do 3 měsíců od koupě 5letou prodlouženou záruku na celý spotřebič NEBO 10letou záruku na invertorový motor (vybrat lze jednu z variant). Pravidlo pro opravu vs. výměnu: pokud cena opravy přesahuje 50 % hodnoty nového spotřebiče stejné třídy, vyplatí se výměna.',
+    faq: [
+      {
+        q: 'Jsou chybové kódy Electrolux a AEG stejné?',
+        a: 'Z velké části ano. Obě značky patří do skupiny Electrolux a sdílí konstrukční platformy i elektronické moduly. Kódy E10/E20/E30/E40 atd. mají u Electrolux a AEG praček stejný význam. Zanussi (také Electrolux Group) používá stejné kódy s drobnými rozdíly v zobrazení.',
+      },
+      {
+        q: 'Co je PerfectCare 600, 700 a 800?',
+        a: 'Kolekce PerfectCare zahrnuje pračky a sušičky Electrolux ve třech úrovních výbavy. Řada 600 přidává SensiCare (senzor náplně), řada 700 přidává SteamCare (parní funkce na konci cyklu), řada 800 přidává UltraCare (šetrné praní chránící vlákna) a invertorový motor.',
+      },
+      {
+        q: 'Jak získat 10letou záruku na motor Electrolux?',
+        a: 'Electrolux v ČR nabízí po registraci spotřebiče (do 3 měsíců od koupě) volbu mezi 5letou prodlouženou zárukou na celý spotřebič a 10letou zárukou na invertorový motor / kompresor. Registrace probíhá na electrolux.cz/mypages/register-a-product/ a certifikát přijde e-mailem. Platí jen pro prvního majitele a u vybraných modelů.',
+      },
+      {
+        q: 'Kde najdu autorizovaný servis Electrolux v ČR?',
+        a: 'Electrolux má v Česku přes 100 autorizovaných servisních středisek (sdílí servisní síť s AEG a Zanussi). Objednávku opravy najdete na electrolux.cz/support/repairs/. Infolinka: 261 302 261 (Po–Pá 8:00–16:30), email zakaznicke.centrum@electrolux.com. Mimozáruční opravy v ČR se obvykle pohybují do 1 500 Kč podle typu závady.',
+      },
+      {
+        q: 'Lze resetovat pračku Electrolux bez servisu?',
+        a: 'Ano. Otočte programátor na pozici „Vypnuto", vytáhněte zástrčku ze zásuvky na 60 sekund, zástrčku zasuňte zpět a vyberte program. Pokud se chyba vrátí, jde o reálnou závadu vyžadující diagnostiku.',
+      },
+    ],
+  },
   aeg: {
     intro: [
       'AEG je prémiová značka skupiny Electrolux se silnou tradicí v Německu a Skandinávii. Pračky, myčky a sušičky AEG sdílí konstrukční platformy se značkami Electrolux a Zanussi – chybové kódy E10, E20, E30, E40 a další jsou proto u těchto značek z velké části shodné.',
