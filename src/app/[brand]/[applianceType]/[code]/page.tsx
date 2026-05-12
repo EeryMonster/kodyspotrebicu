@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { APPLIANCE_LABELS, SUBTYPE_LABELS, normalizeListItem, normalizeBodyText, SERVICE_CTA_URL, slugify, REPAIR_PRICE_RANGES, BRAND_RESET_INSTRUCTIONS, BRAND_RESET_FALLBACK } from '@/lib/utils'
+import { APPLIANCE_LABELS, SUBTYPE_LABELS, normalizeListItem, normalizeBodyText, buildServiceCtaUrl, slugify, REPAIR_PRICE_RANGES, BRAND_RESET_INSTRUCTIONS, BRAND_RESET_FALLBACK } from '@/lib/utils'
 import SeverityBadge from '@/components/SeverityBadge'
 import CommentsSection from '@/components/CommentsSection'
 import CopyCodeButton from '@/components/CopyCodeButton'
@@ -508,15 +508,13 @@ export default async function ErrorCodePage({ params }: Props) {
           <p className="text-blue-100 text-base md:text-lg">Pokud chyba {entry.code} přetrvává, může být nutná výměna vadného dílu. Kontaktujte autorizovaný servis.</p>
         </div>
 
-        <a
-          href={SERVICE_CTA_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href={buildServiceCtaUrl({ brand: entry.brand, applianceType: entry.applianceType, code: entry.code })}
           className="inline-flex items-center justify-center gap-2 bg-white text-brand-primary-dark font-semibold px-6 py-3.5 rounded-lg hover:bg-gray-50 transition-colors min-h-[48px] min-w-[200px] shrink-0"
         >
           <Calendar className="w-5 h-5" />
           Objednat technika
-        </a>
+        </Link>
       </section>
 
       {/* Podobné chybové kódy a problémy */}

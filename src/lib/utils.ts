@@ -101,7 +101,16 @@ export const SEVERITY_DESCRIPTIONS: Record<number, string> = {
   4: 'Kritická závažnost – okamžitě vypněte spotřebič a zavolejte servis',
 }
 
-export const SERVICE_CTA_URL = 'https://www.firmy.cz/?q=servis+dom%C3%A1c%C3%ADch+spot%C5%99ebi%C4%8D%C5%AF'
+export const SERVICE_CTA_URL = '/servis'
+
+export function buildServiceCtaUrl(opts: { brand?: string; applianceType?: string; code?: string }): string {
+  const params = new URLSearchParams()
+  if (opts.brand) params.set('znacka', opts.brand)
+  if (opts.applianceType) params.set('typ', opts.applianceType)
+  if (opts.code) params.set('kod', opts.code)
+  const qs = params.toString()
+  return qs ? `/servis?${qs}` : '/servis'
+}
 
 export const SUBTYPE_SECTION_LABELS: Record<string, string> = {
   'iq': 'Modely s displejem – iQ300 / iQ500 / iQ700 (od ~2010)',

@@ -1,4 +1,5 @@
-import { SERVICE_CTA_URL } from '@/lib/utils'
+import Link from 'next/link'
+import { buildServiceCtaUrl } from '@/lib/utils'
 import { Wrench, PhoneCall, AlertTriangle, ChevronRight } from 'lucide-react'
 
 interface Variant {
@@ -54,13 +55,17 @@ interface ServiceCtaBoxProps {
   severity?: number
   context?: 'error-detail' | 'homepage' | 'sidebar'
   className?: string
+  brand?: string
+  applianceType?: string
+  code?: string
 }
 
-export default function ServiceCtaBox({ severity, context = 'error-detail', className = '' }: ServiceCtaBoxProps) {
+export default function ServiceCtaBox({ severity, context = 'error-detail', className = '', brand, applianceType, code }: ServiceCtaBoxProps) {
   const variant = context === 'homepage'
     ? HOMEPAGE_VARIANT
     : (severity != null ? VARIANTS[severity] : null) ?? VARIANTS[2]
-  
+
+  const ctaUrl = buildServiceCtaUrl({ brand, applianceType, code })
   const Icon = variant.icon
 
   if (context === 'homepage') {
@@ -71,17 +76,15 @@ export default function ServiceCtaBox({ severity, context = 'error-detail', clas
         </div>
         <h2 className="text-xl font-bold text-gray-900 mb-2">{variant.heading}</h2>
         <p className="text-gray-600 text-sm md:text-base mb-6 max-w-lg mx-auto">{variant.body}</p>
-        <a
-          href={SERVICE_CTA_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href={ctaUrl}
           className="inline-flex items-center justify-center gap-2 bg-accent-600 hover:bg-accent-700 text-white rounded-lg px-6 py-3.5 text-base font-medium transition-colors border border-transparent min-h-[52px] shadow-sm"
           data-cta="service"
           data-context="homepage"
         >
           {variant.cta}
           <ChevronRight className="w-4 h-4" />
-        </a>
+        </Link>
       </section>
     )
   }
@@ -102,10 +105,8 @@ export default function ServiceCtaBox({ severity, context = 'error-detail', clas
           </div>
         </div>
         
-        <a
-          href={SERVICE_CTA_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href={ctaUrl}
           className="relative z-10 flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-gray-900 text-white text-sm font-medium rounded-xl hover:bg-gray-800 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
           data-cta="service"
           data-context="sidebar"
@@ -113,7 +114,7 @@ export default function ServiceCtaBox({ severity, context = 'error-detail', clas
         >
           {variant.cta}
           <ChevronRight className="w-4 h-4" />
-        </a>
+        </Link>
       </div>
     )
   }
@@ -129,17 +130,15 @@ export default function ServiceCtaBox({ severity, context = 'error-detail', clas
           <p className="text-sm text-gray-600 mt-0.5">{variant.body}</p>
         </div>
       </div>
-      <a
-        href={SERVICE_CTA_URL}
-        target="_blank"
-        rel="noopener noreferrer"
+      <Link
+        href={ctaUrl}
         className="shrink-0 flex items-center justify-center gap-2 px-5 py-2.5 bg-white border border-gray-200 text-gray-900 text-sm font-medium rounded-xl hover:bg-gray-50 hover:border-gray-300 transition-all shadow-sm"
         data-cta="service"
         data-context="error-detail"
         data-severity={severity ?? ''}
       >
         {variant.cta}
-      </a>
+      </Link>
     </div>
   )
 }

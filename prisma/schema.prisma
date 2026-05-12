@@ -64,9 +64,28 @@ model Comment {
   isApproved  Boolean  @default(true)
   errorCodeId Int
   errorCode   ErrorCode @relation(fields: [errorCodeId], references: [id], onDelete: Cascade)
-  
+
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
-  
+
   @@index([errorCodeId])
+}
+
+model ServiceLead {
+  id            Int      @id @default(autoincrement())
+  zipCode       String
+  phone         String
+  email         String?
+  brand         String?
+  applianceType String?
+  errorCode     String?
+  description   String
+  status        String   @default("new")
+  ipAddress     String?
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([createdAt])
+  @@index([status])
 }
