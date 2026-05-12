@@ -12,6 +12,169 @@ export interface BrandContent {
 }
 
 export const BRAND_CONTENT: Record<string, BrandContent> = {
+  whirlpool: {
+    intro: [
+      'Whirlpool je americký výrobce domácích spotřebičů s evropskými výrobními závody v Polsku a Itálii. Pod skupinu Whirlpool Corporation patří i značky Hotpoint (dříve Hotpoint-Ariston), Indesit a Bauknecht – kódy chyb a náhradní díly jsou proto u těchto značek z velké části sdílené a opravovat je dokáže stejný servis.',
+      'Chybové kódy Whirlpool praček mají dva formáty: starší modely používají F + dvojmístné číslo (F01–F42), novější modely se 6th Sense technologií rozšiřují formát na FxEy kombinace (F0E5, F1E4, F3E1, F5E1, F6E1, F8E1) pro detailnější diagnostiku. Myčky používají krátké kódy F1–F6, sušičky F01–F05.',
+    ],
+    modelLines: [
+      {
+        name: 'Základní pračky Whirlpool',
+        description: 'Cenově dostupné modely se základní výbavou a klasickými F-kódy (F01–F42). Solidní zpracování za příznivou cenu, často první volba pro nájemní bydlení nebo náhradu staršího spotřebiče.',
+      },
+      {
+        name: '6th Sense (střední řada)',
+        description: 'Pračky s technologií 6th Sense – senzor automaticky přizpůsobí množství vody, spotřebu energie a délku programu podle náplně. Snižuje spotřebu vody, energie i času až o 70 %. Novější FxEy formát kódů pro lepší diagnostiku.',
+      },
+      {
+        name: 'Supreme Care + FreshCare+ (prémiová řada)',
+        description: 'Top modely Whirlpool s prémiovým designem Supreme Care (kapacita do 12 kg, A+++ energetická třída), funkcí FreshCare+ (udržuje prádlo svěží po praní bez plísní), ZenTechnology (tichý chod) a možností prodloužené záruky 10 nebo 20 let na motor.',
+      },
+    ],
+    topCodes: [
+      { code: 'F02', appliance: 'pračka', tip: 'Zastavení průtoku vody – kohout zavřený, sítko v hadici ucpané, tlak nízký.' },
+      { code: 'F08', appliance: 'pračka', tip: 'Topné těleso / relé ohřevu – vadné topení nebo elektrický spínač, vyžaduje servis.' },
+      { code: 'F21', appliance: 'pračka', tip: 'Pomalé nebo žádné vypouštění – filtr, čerpadlo, vypouštěcí hadice.' },
+      { code: 'F0E5', appliance: 'pračka', tip: 'Nevyváženost náplně – přerozdělte prádlo, vyhněte se samostatnému praní velkých kusů.' },
+      { code: 'F5E1', appliance: 'pračka', tip: 'Problém se zámkem dveří – zkontrolujte zavření, čistotu těsnění a magnet zámku.' },
+      { code: 'F8E1', appliance: 'pračka', tip: 'Problém s přívodem/odtokem vody / přetečení – kontrola hadic, sifonu, čerpadla.' },
+      { code: 'F1', appliance: 'myčka', tip: 'Chyba plnění vodou myčky – kohout, sítko AquaStop, tlak.' },
+      { code: 'F01', appliance: 'sušička', tip: 'Porucha řídicí desky – vyžaduje servisní zásah, obvykle výměna elektroniky.' },
+    ],
+    longevity: 'Pračky a myčky Whirlpool obvykle slouží 8–11 let při běžném provozu (4–5 cyklů týdně) podle CZ uživatelských zkušeností. Whirlpool je positioned jako mass-market značka s dobrým poměrem cena/výkon. Závažnější závady přicházejí typicky kolem 7.–9. roku – nejčastěji opotřebená ložiska bubnu, vadné čerpadlo, koroze topného tělesa nebo elektronika. V ČR má standardní zákonnou záruku 2 roky; Whirlpool nabízí pro vybrané modely 5letou prodlouženou záruku zdarma na celý spotřebič a 10letou (případně až 20letou u některých prémiových modelů) záruku na motor/kompresor – obě po registraci na whirlpool.cz. Pravidlo pro opravu vs. výměnu: pokud cena opravy přesahuje 50 % hodnoty nového spotřebiče stejné třídy, vyplatí se výměna.',
+    faq: [
+      {
+        q: 'Jaké značky patří do Whirlpool Corporation?',
+        a: 'Do skupiny Whirlpool patří značky Whirlpool, Hotpoint (dříve Hotpoint-Ariston), Indesit a Bauknecht – a starší značky Ignis a Polar. Tyto značky sdílí konstrukční platformy, náhradní díly i servisní síť v ČR. Chybové kódy jsou u Whirlpool, Indesit a Hotpoint často shodné nebo velmi podobné.',
+      },
+      {
+        q: 'Jaké záruky Whirlpool nabízí v ČR?',
+        a: 'Whirlpool v ČR poskytuje 3 typy bezplatných prodloužených záruk po registraci na whirlpool.cz: (1) 5letá záruka na celý spotřebič po registraci do 14 dnů od koupě; (2) 10letá záruka na motor/kompresor (vybrané modely) po registraci do 60 dnů; (3) až 20letá záruka na motor u prémiových modelů nebo Infiniti záruka na vybrané náhradní díly. Aby byla záruka platná, musí opravy provádět autorizovaný servisní technik Whirlpool.',
+      },
+      {
+        q: 'Co je technologie 6th Sense?',
+        a: '6th Sense je vlastní technologie Whirlpool, která pomocí snímačů automaticky přizpůsobuje množství vody, spotřebu energie a délku programu podle skutečné velikosti a typu náplně. Podle výrobce snižuje spotřebu vody, energie i času až o 70 %. Najdete ji v drtivé většině moderních Whirlpool praček, myček i trub.',
+      },
+      {
+        q: 'Proč mají pračky Whirlpool dva formáty kódů (F08 vs. F0E5)?',
+        a: 'Starší modely Whirlpool používají krátké kódy F01–F42 (např. F08 = topné těleso, F21 = vypouštění). Novější modely s 6th Sense a vyspělejší elektronikou používají rozšířený formát FxEy (např. F0E5 = nevyváženost, F5E1 = zámek dveří, F8E1 = přívod vody) – tento systém umožňuje detailnější diagnostiku. V naší databázi najdete obě varianty s rozlišením podle generace.',
+      },
+      {
+        q: 'Kde najdu autorizovaný servis Whirlpool v ČR?',
+        a: 'Whirlpool má v ČR vlastní servisní centrum a oficiálního partnera AP Servis. Objednání opravy (záruční i pozáruční): 251 001 001 (Po–Pá 8:00–17:00, cena místního hovoru) nebo přes whirlpool.cz/sluzby/rezervujte-si-navstevu. AP Servis specializovaný na pračky/myčky: 227 191 726, mobil 607 736 769, info@servis-whirlpool.cz. Mimozáruční opravy v ČR se obvykle pohybují do 1 500 Kč podle typu závady.',
+      },
+      {
+        q: 'Lze resetovat pračku Whirlpool bez servisu?',
+        a: 'Ano. Otočte programátor (nebo zmáčkněte tlačítko On/Off) do polohy „Vypnuto", vytáhněte zástrčku ze zásuvky na 60 sekund, zástrčku zasuňte zpět a vyberte program. U některých modelů 6th Sense lze reset spustit i podržením tlačítka Start/Pauza 5 sekund. Pokud se chyba vrátí, jde o reálnou závadu vyžadující servis.',
+      },
+    ],
+  },
+  lg: {
+    intro: [
+      'LG je jihokorejský výrobce s inovativními technologiemi v oblasti domácích spotřebičů. Pračky LG jsou v ČR oblíbené hlavně díky technologii přímého pohonu Direct Drive – motor je přímo spojen s bubnem bez řemene, což snižuje hlučnost, zvyšuje životnost a snižuje počet pohyblivých částí.',
+      'Chybové kódy LG mají formát dvou písmen nebo písmeno + číslo (OE, IE, UE, LE, PE, SUD…). Sušičky LG mají jedinečnou diagnostiku ucpání výfukové hadice ve čtyřech úrovních (D75, D80, D90, D95 podle procenta ucpání) a sérii kódů tE1–tE6 pro různé termistory. Novější modely se ThinQ aplikací umí kód identifikovat a navrhnout postup automaticky.',
+    ],
+    modelLines: [
+      {
+        name: 'Slim pračky LG (kompaktní)',
+        description: 'Pračky s hloubkou 45 cm vhodné do menších bytů a koupelen. Vstupní modely často bez AI DD a Steam, ale s Direct Drive motorem a 10letou zárukou na motor. Kapacita 6,5–8,5 kg.',
+      },
+      {
+        name: 'Direct Drive + Steam (střední řada)',
+        description: 'Standardní 60cm pračky s Direct Drive motorem, parní funkcí Steam (odstranění alergenů a žmolků), TurboWash (rychlé praní za 59 min) a ThinQ + WiFi pro vzdálené ovládání. Kapacita 8–10 kg.',
+      },
+      {
+        name: 'AI DD + TurboWash 360° (prémiová řada)',
+        description: 'Top modely s AI DD (umělá inteligence detekuje typ tkaniny a váží prádlo, automaticky volí pohyby a režim) a TurboWash 360° (rychlé praní za 39 minut). Některé modely s ezDispense (automatické dávkování). Plná 10letá záruka na Direct Drive motor.',
+      },
+    ],
+    topCodes: [
+      { code: 'IE', appliance: 'pračka', tip: 'Chyba přívodu vody – kohout otevřený, čisté sítko v hadici, tlak min. 1 bar.' },
+      { code: 'OE', appliance: 'pračka', tip: 'Chyba odpadního čerpadla – ucpaný filtr, poškozené čerpadlo nebo vypouštěcí hadice.' },
+      { code: 'UE', appliance: 'pračka', tip: 'Nevyvážená náplň – přerozdělte prádlo, vyhněte se praní samostatně velkých kusů (deky, ručníky).' },
+      { code: 'LE', appliance: 'pračka', tip: 'Přetížení motoru / zablokovaný buben – snižte množství prádla, zkontrolujte volný buben rukou (při odpojení).' },
+      { code: 'DE', appliance: 'pračka', tip: 'Otevřená dvířka nebo vadný zámek – zkontrolujte zavření a čistotu těsnění.' },
+      { code: 'D80', appliance: 'sušička', tip: 'Výfuková hadice ucpaná na 80 % – pročistěte hadici a kondenzátor, snižte se ucpávání bude růst.' },
+      { code: 'dE', appliance: 'sušička', tip: 'Dveře nejsou zavřeny – zkontrolujte zámek a těsnění.' },
+      { code: 'OE', appliance: 'sušička', tip: 'Chyba odtokového čerpadla u kondenzačních sušiček – vyprázdněte zásobník vody, zkontrolujte čerpadlo.' },
+    ],
+    longevity: 'Pračky a myčky LG obvykle slouží 9–12 let při běžném provozu (4–5 cyklů týdně). Klíčová komponenta – Direct Drive motor – je positioned jako velmi spolehlivá díky absenci kartáčů a minimálnímu počtu pohyblivých částí. LG na něj v ČR poskytuje prodlouženou 10letou záruku (vztahuje se jen na funkční vady statoru a rotoru DD motoru). Závažnější závady ostatních komponent přicházejí typicky kolem 7.–9. roku – nejčastěji opotřebená ložiska bubnu, vadné čerpadlo (OE), koroze topného tělesa. Pravidlo pro opravu vs. výměnu: pokud cena opravy přesahuje 50 % hodnoty nového spotřebiče stejné třídy, vyplatí se výměna.',
+    faq: [
+      {
+        q: 'Jak získat 10letou záruku na Direct Drive motor LG?',
+        a: 'LG v ČR poskytuje na invertorový Direct Drive motor praček prodlouženou záruku 10 let. Záruka se vztahuje pouze na funkční vady DD motoru (konkrétně statoru a rotoru), ne na další díly pračky. Pro uplatnění je nutné v autorizovaném servisu LGECZ předložit originální záruční list LGECZ a originál dokladu o koupi (faktura/účtenka) s typovým označením a datem prodeje. Počet oprav v období prodloužené záruky není omezen a doba opravy se k záruce přičítá.',
+      },
+      {
+        q: 'Co je Direct Drive, AI DD, ThinQ a TurboWash?',
+        a: 'Direct Drive je vlastní technologie LG, kde je motor přímo spojen s bubnem bez řemene a převodů – znamená méně pohyblivých částí, nižší hlučnost a delší životnost. AI DD je vylepšení s umělou inteligencí, která detekuje typ tkaniny a váží prádlo, aby automaticky zvolila nejvhodnější pohyby bubnu. ThinQ je mobilní aplikace pro vzdálené ovládání, plánování a diagnostiku. TurboWash umožňuje rychlé praní za 59 minut, TurboWash 360° dokonce za 39 minut.',
+      },
+      {
+        q: 'Co znamenají kódy D75, D80, D90, D95 u sušičky LG?',
+        a: 'Sušičky LG mají jedinečnou diagnostiku průchodnosti výfukové hadice. Kódy D75/D80/D90/D95 indikují, na kolik procent je hadice nebo kondenzátor ucpaný (75 %, 80 %, 90 %, 95 %). Při D75/D80 stačí pročistit filtr žmolků a kondenzátor, při D90/D95 je třeba kontrolovat i samotnou výfukovou hadici a celý systém – jinak hrozí přehřátí a další závady.',
+      },
+      {
+        q: 'Kde najdu autorizovaný servis LG v ČR?',
+        a: 'LG má v ČR vlastní službu „Servis u Vás doma" – pro záruční opravy přijede technik LG zdarma k vám. Telefonní čísla: 228 887 050 (objednání opravy), +420 386 350 461 (zákaznická linka). Online vyhledávač servisů je na lg.com/cz/podpora/kontaktujte-nas/vyhledat-servis/. Operátor objedná opravu a SMS přijde s číslem servisu, který do 2 pracovních dnů kontaktuje pro termín. Mimozáruční opravy v ČR se obvykle pohybují do 1 500 Kč podle typu závady.',
+      },
+      {
+        q: 'Lze resetovat pračku LG bez servisu?',
+        a: 'Ano. Stiskněte tlačítko Power (Vypnuto), vytáhněte zástrčku ze zásuvky na 60 sekund, zástrčku zasuňte zpět a stiskněte Power. U modelů s ThinQ lze reset spustit i přes aplikaci nebo přes „diagnostiku Smart Diagnosis", kterou zástupce LG navede přes telefon. Pokud se chyba vrátí, jde o reálnou závadu vyžadující servis.',
+      },
+    ],
+  },
+  miele: {
+    intro: [
+      'Miele je německá prémiová značka s více než 120 lety tradice, proslulá mimořádnou životností spotřebičů. Pračky a myčky Miele jsou výrobcem testovány na 20 let provozu, což odpovídá zhruba 5 000 cyklů. Spotřebiče Miele jsou vyráběny výhradně v Německu a Rakousku a v nezávislých testech (např. dTest) pravidelně obsazují přední příčky životnosti.',
+      'V naší databázi najdete chybové kódy myček Miele. Formát kódů je F + číslo (F1, F11, F18, F594…) nebo textová indikace blikajících kontrolek („Přívod vody bliká", „Ostřikovací rameno"…). Novější modely G7000 a G5000 Discovery (od roku 2019) zobrazují kódy přímo na displeji včetně třímístných variant jako F170, F594.',
+    ],
+    modelLines: [
+      {
+        name: 'G5000 Discovery (základní/střední myčky)',
+        description: 'Cenově dostupnější myčky Miele se základní výbavou Miele kvality. Mají standardní programy, AutoOpen sušení, případně AutoDos (automatické dávkování). Displej zobrazuje kódy F + číslo.',
+      },
+      {
+        name: 'G7000 (prémiové myčky)',
+        description: 'Top řada myček s funkcemi AutoDos (automatické dávkování PowerDisk po dobu 20 cyklů), QuickPowerWash (rychlé umytí za 58 min), WiFiConn@ct pro vzdálené ovládání a hlasovou kontrolu, KnockToOpen pro ovládání klepnutím. Třímístné kódy F170+ pro detailnější diagnostiku.',
+      },
+      {
+        name: 'Pračky W1 (přídavně, ne v naší databázi)',
+        description: 'Pračky Miele řady W1 (WED, WCR, WXR prefixy) s technologií TwinDos (2 nádoby na prací prostředek), PowerWash 2.0 a bezkartáčovým motorem ProfiEco. Kódy praček Miele zatím v naší databázi nejsou – při poruše využijte oficiální servis Miele (kontakt v FAQ).',
+      },
+    ],
+    topCodes: [
+      { code: 'F12', appliance: 'myčka', tip: 'Chyba přívodu vody – kohout otevřený, hadice nepřisrznutá, sítko AquaStop čisté.' },
+      { code: 'F13', appliance: 'myčka', tip: 'Chyba přívodu vody (variant) – obdobná diagnostika jako F12.' },
+      { code: 'F11', appliance: 'myčka', tip: 'Chyba u G7xxx a G5xxx Discovery od 2019 – obvykle senzor průtoku nebo otevření přívodu.' },
+      { code: 'F70', appliance: 'myčka', tip: 'Systém Waterproof aktivován – ve vaně myčky je voda. Vypněte přívod a vyžádejte servis.' },
+      { code: 'F18', appliance: 'myčka', tip: 'Chyba vypouštění – filtr, sifon, vypouštěcí čerpadlo.' },
+      { code: 'F19', appliance: 'myčka', tip: 'Chyba ohřevu – topné těleso nebo NTC senzor. Vyžaduje servisní diagnostiku.' },
+      { code: 'F594', appliance: 'myčka', tip: 'Chyba cirkulačního čerpadla – zaseknuté nebo opotřebené ložisko.' },
+      { code: 'F600', appliance: 'myčka', tip: 'AutoDos – chyba dávkování PowerDisk. Zkontrolujte stav disku a otvor v zásobníku.' },
+    ],
+    longevity: 'Miele oficiálně testuje pračky a myčky na 20 let provozu (5 000 cyklů – 5 cyklů týdně × 50 týdnů × 20 let). V průzkumech spolehlivosti CZ (dTest) Miele dlouhodobě obsazuje přední příčky s průměrnou životností okolo 15 let a 9 měsíců. To je výrazně více než u většiny ostatních značek (BSH 10–15 let, Electrolux/AEG 10–13 let, Samsung/Beko 8–12 let). V ČR má standardní zákonnou záruku 2 roky; za jednorázový poplatek lze prodloužit záruku na 5 nebo 10 let (Care Protection). Vybrané modely mají automaticky 4,5 roku prodloužené záruky (125 týdnů navíc). Pro spotřebiče zakoupené od 1. října 2025 navíc Miele zavedl novou motorovou záruku. Pravidlo pro opravu vs. výměnu u Miele je posunuto – díky vyšší pořizovací ceně a očekávané životnosti se vyplatí opravovat i nákladnější závady i u starších modelů.',
+    faq: [
+      {
+        q: 'Jaké záruky Miele nabízí v ČR?',
+        a: 'Standardní zákonná záruka je 2 roky. Miele v ČR navíc nabízí Care Protection – prodlouženou záruku na 5 nebo 10 let za jednorázový poplatek (po skončení 2leté záruky následuje 3 nebo 8 let dodatečné záruky). U vybraných modelů praček a sušiček získáte automaticky 125 týdnů prodloužené záruky navíc (celkem cca 4,5 roku). Pro spotřebiče zakoupené od 1. října 2025 platí nová motorová záruka.',
+      },
+      {
+        q: 'Co je TwinDos, PowerWash 2.0 a WiFiConn@ct?',
+        a: 'TwinDos je systém u praček Miele W1 s dvěma nádobami na prací prostředek (UltraPhase 1 + UltraPhase 2), který automaticky dávkuje přesné množství podle programu. PowerWash 2.0 je rychlé praní (cca 49 minut) bez kompromisu na kvalitě. WiFiConn@ct umožňuje vzdálené ovládání přes aplikaci Miele@home, hlasové ovládání přes Alexa/Google Assistant a vzdálenou diagnostiku.',
+      },
+      {
+        q: 'Co znamenají blikající kontrolky bez konkrétního kódu?',
+        a: 'Některé starší myčky Miele (G4xxx a níže) místo kódů blikají kontrolkami symbolizujícími problém – „Přívod vody bliká" = chyba plnění, „Ostřikovací rameno bliká" = zablokované rameno, „Bliká kontrolka Vypouštění vody" = problém s odtokem. Pokud bliká více kontrolek najednou (ukazatele průběhu programu mytí, sušení a konec), jde o závažnější chybu vyžadující servis. V naší databázi najdete každou kombinaci samostatně.',
+      },
+      {
+        q: 'Kde najdu autorizovaný servis Miele v ČR?',
+        a: 'Miele má v Česku vlastní servisní síť. Objednávku opravy najdete na miele.cz/c/oprava-26.htm. Bezplatná infolinka: 800 643 531 (Po–Pá 7:30–17:30, pohotovostní služba o víkendu 8:00–18:00), email servis@miele.cz. Centrální servisní středisko: Škrobárenská 502/1, 617 00 Brno. Záruční oprava je u Miele technika zdarma, mimozáruční výjezd a hodinová sazba bývá vyšší než u běžných značek díky originálním dílům a expertízám.',
+      },
+      {
+        q: 'Lze resetovat myčku Miele bez servisu?',
+        a: 'Ano. U většiny modelů G5xxx/G7xxx stiskněte tlačítko „Stop" nebo „Vypnuto" na 4–5 sekund, případně otočte programátor do polohy Vypnuto a zpět. Některé starší modely vyžadují vypnutí ze sítě na 60 sekund. Po resetu zkuste program znovu – pokud se chyba vrátí, jde o reálnou závadu vyžadující servis.',
+      },
+    ],
+  },
   beko: {
     intro: [
       'Beko je turecká značka patřící do skupiny Arçelik, která je jedním z největších evropských výrobců domácích spotřebičů. Spotřebiče Beko jsou v ČR oblíbeny pro příznivý poměr ceny a výkonu, dobrou dostupnost náhradních dílů a vlastní servisní síť (zákaznické centrum + autorizovaní partneři).',
