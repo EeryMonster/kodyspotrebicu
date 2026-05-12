@@ -10,6 +10,8 @@ import CommentsSection from '@/components/CommentsSection'
 import CopyCodeButton from '@/components/CopyCodeButton'
 import ShareButtons from '@/components/ShareButtons'
 import HelpfulRating from '@/components/HelpfulRating'
+import RelatedParts from '@/components/RelatedParts'
+import NewApplianceCTA from '@/components/NewApplianceCTA'
 import { AlertCircle, AlertTriangle, CheckCircle2, ChevronRight, FileText, LayoutList, PhoneCall, Settings, Wrench, Calendar } from 'lucide-react'
 
 interface Props {
@@ -416,6 +418,13 @@ export default async function ErrorCodePage({ params }: Props) {
         </div>
       </section>
 
+      {/* Vyplatí se opravovat? (zobrazí se jen pro severityLevel=3) */}
+      <NewApplianceCTA
+        brand={entry.brand}
+        applianceType={entry.applianceType}
+        severityLevel={entry.severityLevel}
+      />
+
       {/* Detailní postup řešení */}
       {entry.content?.length > 0 && (
         <section className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
@@ -484,16 +493,7 @@ export default async function ErrorCodePage({ params }: Props) {
           )}
           
           {entry.possibleParts.length > 0 && (
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-              <h2 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2 tracking-tight">
-                <Settings className="w-5 h-5 text-gray-500" /> Možné vadné díly
-              </h2>
-              <div className="flex flex-wrap gap-2">
-                {entry.possibleParts.map((part, i) => (
-                  <span key={i} className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium border border-gray-200/60">{part}</span>
-                ))}
-              </div>
-            </div>
+            <RelatedParts brand={entry.brand} parts={entry.possibleParts} />
           )}
         </section>
       )}
