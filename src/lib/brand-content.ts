@@ -12,6 +12,59 @@ export interface BrandContent {
 }
 
 export const BRAND_CONTENT: Record<string, BrandContent> = {
+  samsung: {
+    intro: [
+      'Samsung patří mezi největší světové výrobce elektroniky a domácích spotřebičů. Pračky, myčky a sušičky Samsung jsou vybaveny digitálním displejem, který zobrazuje chybové kódy přímo – bez nutnosti počítat bliknutí kontrolky.',
+      'Kódy Samsung praček mají specifický formát kombinující písmena a číslice (4E, 5E, UE, DE, LE, SUD…), případně třípísmenné varianty u novějších modelů (4C2, 9C1, AC6, DDC). Myčky používají krátké dvojznakové kódy (4C, 5C, HE, LE, OC), sušičky obdobně (DF, HE, HC, FE, ET, TC). Novější modely se SmartThings umí chybový kód identifikovat a navrhnout řešení přes aplikaci.',
+    ],
+    modelLines: [
+      {
+        name: 'Pračky bez AI (základní výbava)',
+        description: 'Vstupní pračky Samsung s digitálním displejem a EcoBubble technologií (efektivní praní za nízkých teplot díky bublinkám pracího prostředku). Bez Wi-Fi a hlasového ovládání. Digitální invertor motor jako u vyšších řad.',
+      },
+      {
+        name: 'EcoBubble + SmartThings (střední řada)',
+        description: 'Přidává Wi-Fi konektivitu přes aplikaci SmartThings (vzdálené spuštění, plánování, diagnostika), funkci SuperSpeed (rychlé praní za 40 minut) a u některých modelů SpaceMax (větší kapacita ve standardních rozměrech).',
+      },
+      {
+        name: 'AI EcoBubble + AddWash (prémiová řada)',
+        description: 'Top modely s AI Wash (algoritmus, který si pamatuje zvyky a doporučuje cykly), AI Control displejem, AddWash (přídavná dvířka pro vhození zapomenutého kusu během praní) a parní funkcí. Hlasové ovládání přes Bixby, Alexa nebo Google Assistant.',
+      },
+    ],
+    topCodes: [
+      { code: '4E', appliance: 'pračka', tip: 'Chyba přívodu vody – kohout otevřený, sítko v hadici čisté, tlak min. 1 bar.' },
+      { code: '5E', appliance: 'pračka', tip: 'Pračka nevypouští – filtr u dna, vypouštěcí hadice a sifon.' },
+      { code: 'UE', appliance: 'pračka', tip: 'Nevyvážená náplň – přerozdělte prádlo rovnoměrně po bubnu, případně přidejte další kusy při malé dávce.' },
+      { code: 'DE', appliance: 'pračka', tip: 'Chyba dveří – nezavřená nebo poškozený zámek. Stiskněte dvířka pevně, zkontrolujte těsnění.' },
+      { code: 'LE', appliance: 'pračka', tip: 'Detekce úniku vody – ve vaně je voda. Vypněte přívodní kohout a vyžádejte servis.' },
+      { code: 'SUD', appliance: 'pračka', tip: 'Nadměrné pěnění – příliš mnoho pracího prostředku. Spusťte máchací program bez prostředku.' },
+      { code: '4C', appliance: 'myčka', tip: 'Chyba přívodu vody – kohout, hadice AquaStop, sítko.' },
+      { code: 'HE', appliance: 'sušička', tip: 'Chyba ohřevu – zkontrolujte filtr žmolků a větrání kondenzátoru, případně volejte servis.' },
+    ],
+    longevity: 'Pračky a myčky Samsung obvykle slouží 8–12 let při běžném provozu (4–5 cyklů týdně) podle CZ uživatelských zkušeností a obecných odhadů pro mass-market značky. Digitální invertor motor (klíčová komponenta) je samostatně positioned jako velmi spolehlivý – Samsung na něj nabízí v ČR 20letou záruku u modelů zakoupených od 1. července 2022. Závažnější závady ostatních komponent přicházejí typicky kolem 7.–9. roku – nejčastěji opotřebená ložiska bubnu, vadné čerpadlo, koroze topného tělesa. Pravidlo pro opravu vs. výměnu: pokud cena opravy přesahuje 50 % hodnoty nového spotřebiče stejné třídy, vyplatí se výměna.',
+    faq: [
+      {
+        q: 'Co znamená 20letá záruka Samsung na motor pračky?',
+        a: 'Samsung v ČR poskytuje 20letou záruku na digitální invertor motor u praček, sušiček a kombinovaných pračkosušiček zakoupených od 1. července 2022. Na starší modely se vztahuje 10letá záruka. Na rozdíl od BSH a Electrolux Group **není potřeba spotřebič registrovat** – záruka platí automaticky, stačí předložit doklad o koupi (faktura) v autorizovaném servisu. Záruka se vztahuje jen na motor, ne na ostatní díly pračky.',
+      },
+      {
+        q: 'Co je AI EcoBubble, AddWash a SmartThings?',
+        a: 'EcoBubble je technologie, která přemění prací prostředek na pěnu/bubliny ještě před vstupem do bubnu – pěna proniká snáz do vláken i při nízkých teplotách. AI EcoBubble je vylepšení s AI algoritmem, který si pamatuje zvyklosti uživatele a doporučuje optimální cyklus. AddWash jsou přídavná malá dvířka v hlavních dveřích, kterými lze vhodit zapomenutý kus prádla i během praní. SmartThings je mobilní aplikace pro vzdálené ovládání a diagnostiku.',
+      },
+      {
+        q: 'Co znamenají písmenné kódy Samsung jako 4E, UE nebo SUD?',
+        a: 'Samsung pračky používají kódy z dvou písmen/číslic, kde každý kód má konkrétní význam: 4E = chyba přívodu vody, 5E = chyba vypouštění, UE = nevyvážená náplň, DE = chyba dveří, LE = únik vody, SUD = nadměrné pěnění. Některé novější modely mají rozšířené třípísmenné varianty (4C2, 9C1, AC6). Plný seznam najdete v naší databázi.',
+      },
+      {
+        q: 'Kde najdu autorizovaný servis Samsung v ČR?',
+        a: 'Samsung má v Česku desítky autorizovaných servisních středisek. Vyhledávač servisu najdete na samsung.com/cz/support/service-center/. Infolinka Samsung CZ: 800 726 786 (zdarma, Po–Ne 8:00–22:00). Záruční oprava je u autorizovaného partnera zdarma; mimozáruční opravy v ČR se obvykle pohybují do 1 500 Kč podle typu závady.',
+      },
+      {
+        q: 'Lze resetovat pračku Samsung bez servisu?',
+        a: 'Ano. Otočte programátor (nebo zmáčkněte tlačítko Power) do pozice „Vypnuto", vytáhněte zástrčku ze zásuvky na 60 sekund, zástrčku zasuňte zpět a vyberte program. U modelů se SmartThings lze reset spustit i přes aplikaci. Pokud se chyba vrátí, jde o reálnou závadu vyžadující diagnostiku.',
+      },
+    ],
+  },
   electrolux: {
     intro: [
       'Electrolux je švédský nadnárodní výrobce domácích spotřebičů s více než 100 lety tradice. Pod skupinu Electrolux patří i značky AEG a Zanussi – chybové kódy E10, E20, E30, E40 a další jsou proto u těchto značek z velké části shodné a sdílí servisní síť i platformy.',
