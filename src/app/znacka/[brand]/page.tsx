@@ -5,7 +5,7 @@ import { notFound, permanentRedirect } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BRAND_CONTENT } from '@/lib/brand-content'
-import { Layers, Lightbulb, Clock, HelpCircle } from 'lucide-react'
+import { Layers, Lightbulb, Clock, HelpCircle, ChevronDown } from 'lucide-react'
 
 interface Props {
   params: { brand: string }
@@ -145,18 +145,27 @@ export default async function BrandPage({ params }: Props) {
         Přehled {codes.length} chybových kódů spotřebičů {brandName}.
       </p>
       {richContent ? (
-        <section className="bg-white border border-gray-200 border-l-4 border-l-accent-500 rounded-xl shadow-sm p-6 md:p-9 mb-8">
-          <div className="pb-5 mb-7 border-b border-gray-100">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-accent-700 mb-1.5">
-              Expertní přehled
-            </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">
-              O značce {brandName}
-            </h2>
-          </div>
+        <details className="group bg-white border border-gray-200 border-l-4 border-l-accent-500 rounded-xl shadow-sm mb-6 [&_summary::-webkit-details-marker]:hidden">
+          <summary className="cursor-pointer list-none p-5 md:p-6 flex items-center justify-between gap-4 select-none">
+            <div className="min-w-0">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-accent-700 mb-1">
+                Expertní přehled
+              </p>
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight leading-tight">
+                O značce {brandName}
+              </h2>
+              <p className="text-xs md:text-sm text-gray-500 mt-1.5">
+                Modelové řady · Nejčastější chyby · Životnost · Časté otázky
+              </p>
+            </div>
+            <span className="shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-full bg-gray-50 border border-gray-200 text-gray-500 group-open:rotate-180 transition-transform">
+              <ChevronDown className="w-4 h-4" />
+            </span>
+          </summary>
 
+          <div className="px-5 md:px-6 pb-6 md:pb-8 pt-2">
           {introParagraphs.length > 0 && (
-            <div className="space-y-3 text-[15px] text-gray-700 leading-relaxed mb-9">
+            <div className="space-y-3 text-[15px] text-gray-700 leading-relaxed mb-9 pt-4 border-t border-gray-100">
               {introParagraphs.map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
@@ -255,7 +264,8 @@ export default async function BrandPage({ params }: Props) {
               </dl>
             </div>
           )}
-        </section>
+          </div>
+        </details>
       ) : (
         introParagraphs.length > 0 && (
           <div className="bg-white border border-gray-200 rounded-xl p-5 mb-6 space-y-2 text-sm text-gray-700 leading-relaxed">
