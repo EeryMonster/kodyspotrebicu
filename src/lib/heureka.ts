@@ -1,8 +1,9 @@
-// Heureka.cz affiliate URL builder.
-// Po schválení v affiliate.heureka.cz dostaneme partner tag — doplníme do env
-// jako NEXT_PUBLIC_HEUREKA_PARTNER_ID. Dokud není, linky fungují bez trackingu.
+// Heureka.cz affiliate tracking.
+// Heureka používá class="heureka-hn-link" + data-trixam-positionid pro tracking
+// (přes JS knihovnu trixam.min.js, která je vložená globálně v layoutu).
+// Můžeme dynamicky měnit href a text, pokud zachováme class + positionid.
 
-const PARTNER_TAG = process.env.NEXT_PUBLIC_HEUREKA_PARTNER_ID ?? ''
+const POSITION_ID = process.env.NEXT_PUBLIC_HEUREKA_POSITION_ID ?? ''
 
 const APPLIANCE_SUBDOMAIN: Record<string, string> = {
   pracka: 'pracky',
@@ -10,15 +11,10 @@ const APPLIANCE_SUBDOMAIN: Record<string, string> = {
   susicka: 'susicky-pradla',
 }
 
-function withPartnerTag(url: URL): URL {
-  if (PARTNER_TAG) url.searchParams.set('a', PARTNER_TAG)
-  return url
-}
-
 export function heurekaSearchUrl(query: string): string {
   const url = new URL('https://www.heureka.cz/')
   url.searchParams.set('h[fraze]', query)
-  return withPartnerTag(url).toString()
+  return url.toString()
 }
 
 export function heurekaPartUrl(brand: string, part: string): string {
@@ -29,7 +25,17 @@ export function heurekaNewApplianceUrl(brand: string, applianceType: string): st
   const subdomain = APPLIANCE_SUBDOMAIN[applianceType] ?? 'pracky'
   const url = new URL(`https://${subdomain}.heureka.cz/`)
   url.searchParams.set('h[fraze]', brand)
-  return withPartnerTag(url).toString()
+  return url.toString()
+}
+
+// Props pro Heureka affiliate <a> element. Vrací class a data-trixam-positionid,
+// pokud je env var nastavena. Bez positionid odkaz funguje, jen netrackuje provizi.
+export function heurekaLinkProps(): Record<string, string> {
+  if (!POSITION_ID) return {}
+  return {
+    className: 'heureka-hn-link',
+    'data-trixam-positionid': POSITION_ID,
+  }
 }
 
 export const HEUREKA_DISCLOSURE =

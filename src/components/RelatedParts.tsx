@@ -1,5 +1,5 @@
 import { ShoppingCart, Settings } from 'lucide-react'
-import { heurekaPartUrl, HEUREKA_DISCLOSURE } from '@/lib/heureka'
+import { heurekaPartUrl, heurekaLinkProps, HEUREKA_DISCLOSURE } from '@/lib/heureka'
 
 interface Props {
   brand: string
@@ -10,6 +10,7 @@ export default function RelatedParts({ brand, parts }: Props) {
   if (parts.length === 0) return null
 
   const brandLabel = brand.charAt(0).toUpperCase() + brand.slice(1).toLowerCase()
+  const heurekaProps = heurekaLinkProps()
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
@@ -26,7 +27,8 @@ export default function RelatedParts({ brand, parts }: Props) {
               href={heurekaPartUrl(brand, part)}
               target="_blank"
               rel="sponsored nofollow noopener"
-              className="group flex items-center justify-between gap-3 px-4 py-3 bg-gray-50/60 hover:bg-blue-50/60 border border-gray-200/60 hover:border-blue-200 rounded-lg transition-colors"
+              {...heurekaProps}
+              className={`${heurekaProps.className ?? ''} group flex items-center justify-between gap-3 px-4 py-3 bg-gray-50/60 hover:bg-blue-50/60 border border-gray-200/60 hover:border-blue-200 rounded-lg transition-colors`.trim()}
             >
               <span className="text-sm font-medium text-gray-800 group-hover:text-blue-800 leading-tight">
                 {part}

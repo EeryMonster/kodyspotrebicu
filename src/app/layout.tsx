@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Space_Grotesk, JetBrains_Mono } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -63,6 +64,12 @@ export default function RootLayout({
         <Header />
         <main id="main-content" className="flex-1">{children}</main>
         <Footer />
+        {process.env.NEXT_PUBLIC_HEUREKA_POSITION_ID && (
+          <Script
+            src="https://serve.affiliate.heureka.cz/js/trixam.min.js"
+            strategy="afterInteractive"
+          />
+        )}
       </body>
     </html>
   )

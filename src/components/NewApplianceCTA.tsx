@@ -1,5 +1,5 @@
 import { ShoppingBag, ArrowRight } from 'lucide-react'
-import { heurekaNewApplianceUrl, HEUREKA_DISCLOSURE } from '@/lib/heureka'
+import { heurekaNewApplianceUrl, heurekaLinkProps, HEUREKA_DISCLOSURE } from '@/lib/heureka'
 import { APPLIANCE_LABELS } from '@/lib/utils'
 
 interface Props {
@@ -15,6 +15,7 @@ export default function NewApplianceCTA({ brand, applianceType, severityLevel }:
 
   const brandLabel = brand.charAt(0).toUpperCase() + brand.slice(1).toLowerCase()
   const applianceLabel = (APPLIANCE_LABELS[applianceType] ?? applianceType).toLowerCase()
+  const heurekaProps = heurekaLinkProps()
 
   return (
     <section className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-6 md:p-8 shadow-sm">
@@ -33,7 +34,8 @@ export default function NewApplianceCTA({ brand, applianceType, severityLevel }:
           href={heurekaNewApplianceUrl(brand, applianceType)}
           target="_blank"
           rel="sponsored nofollow noopener"
-          className="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white font-semibold px-5 py-3 rounded-lg transition-colors min-h-[48px] shrink-0"
+          {...heurekaProps}
+          className={`${heurekaProps.className ?? ''} inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white font-semibold px-5 py-3 rounded-lg transition-colors min-h-[48px] shrink-0`.trim()}
         >
           Porovnat nové {applianceLabel}
           <ArrowRight className="w-4 h-4" />
