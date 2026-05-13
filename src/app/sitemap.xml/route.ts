@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { slugify } from '@/lib/utils'
+import { slugify, shouldNoIndex } from '@/lib/utils'
 
 const BASE_URL = 'https://www.kodyspotrebicu.cz'
 
@@ -19,6 +19,7 @@ export async function GET() {
     { url: `${BASE_URL}/mycky`, changefreq: 'daily', priority: '0.9', lastmod: SITE_UPDATED },
     { url: `${BASE_URL}/susicky`, changefreq: 'daily', priority: '0.9', lastmod: SITE_UPDATED },
     { url: `${BASE_URL}/problemy`, changefreq: 'weekly', priority: '0.8', lastmod: SITE_UPDATED },
+    { url: `${BASE_URL}/servis`, changefreq: 'weekly', priority: '0.85', lastmod: SITE_UPDATED },
     { url: `${BASE_URL}/hledat`, changefreq: 'monthly', priority: '0.5', lastmod: SITE_UPDATED },
     { url: `${BASE_URL}/o-nas`, changefreq: 'monthly', priority: '0.4', lastmod: SITE_UPDATED },
     { url: `${BASE_URL}/kontakt`, changefreq: 'monthly', priority: '0.4', lastmod: SITE_UPDATED },
@@ -44,7 +45,10 @@ export async function GET() {
     })
   } catch { /* ignore */ }
 
-  const codePages = codes.map((c) => ({
+  // Vyloučit kódy s noindex meta (např. Miele scrape kódy ještě nepřepsané).
+  // Google bot by je stejně odindexoval po crawlu, ale lépe je do sitemap nedávat.
+  const indexableCodes = codes.filter((c) => !shouldNoIndex(c.brand, c.slug))
+  const codePages = indexableCodes.map((c) => ({
     url: `${BASE_URL}/${c.brand.toLowerCase()}/${APPLIANCE_PATH[c.applianceType] || c.applianceType}/${c.slug}`,
     changefreq: 'monthly',
     priority: '0.7',
