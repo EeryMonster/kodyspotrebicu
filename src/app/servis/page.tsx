@@ -14,11 +14,11 @@ function param(value: string | string[] | undefined): string | undefined {
 
 export const metadata: Metadata = {
   title: 'Objednat opravu domácího spotřebiče — Servis pračky, myčky, sušičky',
-  description: 'Objednejte autorizovanou opravu domácího spotřebiče v ČR. Pračky, myčky, sušičky všech značek. Ozveme se do 24 hodin s nabídkou autorizovaného servisu.',
+  description: 'Pošlete poptávku na opravu domácího spotřebiče v ČR. Pračky, myčky, sušičky všech značek. Doporučíme nejvhodnější způsob opravy do 3 pracovních dnů.',
   alternates: { canonical: 'https://www.kodyspotrebicu.cz/servis' },
   openGraph: {
     title: 'Objednat opravu domácího spotřebiče',
-    description: 'Pračky, myčky, sušičky. Ozveme se do 24 hodin s nabídkou autorizovaného servisu.',
+    description: 'Pračky, myčky, sušičky. Doporučíme nejvhodnější způsob opravy do 3 pracovních dnů.',
     url: 'https://www.kodyspotrebicu.cz/servis',
     type: 'website',
   },
@@ -35,8 +35,8 @@ export default function ServisPage({ searchParams }: Props) {
       a: 'V ČR se ceny výjezdu pohybují obvykle mezi 600–1 200 Kč. Diagnostika je často součástí ceny, hodinová sazba techniků bývá 350–550 Kč. Celková cena opravy s dílem se nejčastěji pohybuje do 1 500 Kč. U závažných závad (řídicí deska, motor, ložiska bubnu) cena přesahuje 2 000 Kč.',
     },
     {
-      q: 'Jak dlouho trvá, než přijede technik?',
-      a: 'V Praze, Brně a větších městech zpravidla 1–3 pracovní dny. V menších městech a vesnicích může trvat 3–7 dní podle dostupnosti partnera v regionu. Po odeslání poptávky vás kontaktujeme do 24 hodin s konkrétním termínem.',
+      q: 'Jak dlouho trvá, než dostanu odpověď a než přijede technik?',
+      a: 'Na vaši poptávku se ozveme do 3 pracovních dnů s doporučením postupu – obvykle s konkrétními kontakty na značkový servis nebo lokálního partnera. Termín návštěvy si pak domluvíte přímo s technikem: v Praze a větších městech zpravidla 1–3 pracovní dny, v menších městech a vesnicích 3–7 dní podle dostupnosti.',
     },
     {
       q: 'Vyplatí se opravit starší pračku, nebo koupit novou?',
@@ -88,7 +88,7 @@ export default function ServisPage({ searchParams }: Props) {
 
       <Breadcrumbs items={[{ label: 'Objednat servis' }]} />
 
-      <header className="flex flex-col gap-3 mb-10">
+      <header className="flex flex-col gap-3 mb-8">
         <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-accent-700">
           Servis spotřebičů v ČR
         </p>
@@ -96,32 +96,45 @@ export default function ServisPage({ searchParams }: Props) {
           Objednejte opravu pračky, myčky nebo sušičky
         </h1>
         <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
-          Vyplňte poptávku a my vám do 24 hodin doporučíme autorizovaný servis ve vašem okolí
-          s konkrétní nabídkou ceny. Bez závazku, bez registrace.
+          Pošlete poptávku a my vám do 3 pracovních dnů doporučíme nejvhodnější způsob opravy –
+          značkový servis nebo lokálního partnera ve vašem okolí. Bez závazku, bez registrace.
         </p>
       </header>
+
+      {/* Beta disclaimer — služba je nová, sběr leadů přes značkové servisní linky */}
+      <section className="bg-accent-50/60 border border-accent-300/60 rounded-xl p-5 mb-8 flex gap-3 items-start">
+        <AlertCircle className="w-5 h-5 text-accent-700 shrink-0 mt-0.5" />
+        <div>
+          <p className="text-sm font-semibold text-gray-900 mb-1">Služba v beta verzi</p>
+          <p className="text-sm text-gray-700 leading-relaxed">
+            Síť autorizovaných servisních partnerů aktuálně budujeme. Do té doby vám na základě
+            poptávky doporučíme nejlepší cestu – obvykle značkový servis výrobce, případně
+            ověřeného lokálního partnera, pokud jej v daném regionu známe.
+          </p>
+        </div>
+      </section>
 
       {/* Tři klíčové benefity */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
         <div className="bg-white border border-gray-200 rounded-xl p-5">
           <ShieldCheck className="w-7 h-7 text-accent-600 mb-3" />
-          <h2 className="text-sm font-bold text-gray-900 mb-1">Autorizovaný servis</h2>
+          <h2 className="text-sm font-bold text-gray-900 mb-1">Doporučení od experta</h2>
           <p className="text-sm text-gray-600 leading-relaxed">
-            Smluvní partneři výrobců s originálními díly a školenými techniky.
+            Konkrétní rada k vaší závadě – značkový servis nebo lokální partner.
           </p>
         </div>
         <div className="bg-white border border-gray-200 rounded-xl p-5">
           <Clock className="w-7 h-7 text-accent-600 mb-3" />
-          <h2 className="text-sm font-bold text-gray-900 mb-1">Odezva do 24 hodin</h2>
+          <h2 className="text-sm font-bold text-gray-900 mb-1">Odezva do 3 pracovních dnů</h2>
           <p className="text-sm text-gray-600 leading-relaxed">
-            Po odeslání poptávky vám zavoláme nebo napíšeme s nabídkou.
+            Posoudíme popis problému a doporučíme nejvhodnější cestu opravy.
           </p>
         </div>
         <div className="bg-white border border-gray-200 rounded-xl p-5">
           <MapPin className="w-7 h-7 text-accent-600 mb-3" />
           <h2 className="text-sm font-bold text-gray-900 mb-1">Po celé ČR</h2>
           <p className="text-sm text-gray-600 leading-relaxed">
-            Praha, Brno, Plzeň, Ostrava a stovky autorizovaných partnerů v regionech.
+            Praha, Brno, Plzeň, Ostrava i menší města – pomůžeme najít autorizovaný servis.
           </p>
         </div>
       </section>
@@ -160,17 +173,18 @@ export default function ServisPage({ searchParams }: Props) {
           <li className="flex gap-3">
             <span className="shrink-0 w-7 h-7 rounded-full bg-accent-50 text-accent-700 flex items-center justify-center font-bold text-sm">3</span>
             <span>
-              <strong className="block text-gray-900 mb-0.5">Ozveme se do 24 hodin</strong>
-              Telefonicky nebo e-mailem vám dáme konkrétní cenovou nabídku, dostupný termín
-              a kontakt na technika. Vy se rozhodnete, zda objednávku potvrdit.
+              <strong className="block text-gray-900 mb-0.5">Ozveme se do 3 pracovních dnů</strong>
+              E-mailem nebo telefonem vám doporučíme konkrétní postup – značkový servis se zárukou,
+              ověřený lokální partner, nebo svépomocnou opravu pokud je to bezpečné. Vy se
+              rozhodnete, kterou cestou se vydat.
             </span>
           </li>
           <li className="flex gap-3">
             <span className="shrink-0 w-7 h-7 rounded-full bg-accent-50 text-accent-700 flex items-center justify-center font-bold text-sm">4</span>
             <span>
               <strong className="block text-gray-900 mb-0.5">Technik přijede a opraví</strong>
-              Většina běžných oprav (filtr, čerpadlo, dveřní zámek, snímač) je hotová u vás
-              doma během jedné návštěvy. U závažnějších závad technik objedná díly.
+              Po volbě servisu si domluvíte termín přímo s technikem. Většina běžných oprav je
+              hotová u vás doma během jedné návštěvy. U závažnějších závad technik objedná díly.
             </span>
           </li>
         </ol>

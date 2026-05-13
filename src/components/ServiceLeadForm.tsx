@@ -62,7 +62,8 @@ export default function ServiceLeadForm({ prefillBrand, prefillApplianceType, pr
         <CheckCircle2 className="w-12 h-12 text-green-600 mx-auto mb-4" />
         <h3 className="text-xl font-bold text-green-900 mb-2">Poptávka byla odeslána</h3>
         <p className="text-green-800 leading-relaxed">
-          Děkujeme. Ozveme se vám zpravidla do 24 hodin s nabídkou autorizovaného servisu.
+          Děkujeme. Ozveme se vám do 3 pracovních dnů s doporučením, jak ve vašem případě
+          nejlépe postupovat (značkový servis, lokální partner, případně bezpečné kroky doma).
         </p>
       </div>
     )
