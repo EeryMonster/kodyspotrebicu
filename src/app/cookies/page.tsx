@@ -13,7 +13,7 @@ export default function CookiesPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-gray-900 mb-2">Zásady používání cookies</h1>
-      <p className="text-sm text-gray-500 mb-8">Poslední aktualizace: 2. května 2026</p>
+      <p className="text-sm text-gray-500 mb-8">Poslední aktualizace: 13. května 2026</p>
 
       <div className="prose prose-gray max-w-none space-y-6 text-gray-700">
         <section>

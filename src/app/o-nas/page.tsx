@@ -67,8 +67,14 @@ export default function OWasPage() {
             </ul>
             <p className="mt-4 text-sm text-gray-600">
               Web je <strong>nezávislý informační projekt</strong> – nejsme propojeni s žádným
-              výrobcem ani autorizovaným servisem a za zveřejnění obsahu nedostáváme zaplaceno.
-              Připomínky a opravy vítáme na{' '}
+              výrobcem ani autorizovaným servisem a žádný výrobce ani servis nám neplatí za
+              redakční obsah. Provoz webu pomáhají financovat zobrazovaná reklama a affiliate
+              prokliky na partnerské e-shopy s náhradními díly a spotřebiči – cena pro vás se tím
+              nemění a redakční hodnocení tím není ovlivněno. Detaily v{' '}
+              <Link href="/podminky-pouziti" className="text-blue-600 hover:underline">
+                podmínkách použití
+              </Link>
+              . Připomínky a opravy vítáme na{' '}
               <a href="mailto:info@kodyspotrebicu.cz" className="text-blue-600 hover:underline">
                 info@kodyspotrebicu.cz
               </a>

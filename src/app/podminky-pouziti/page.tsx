@@ -13,7 +13,7 @@ export default function TermsPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-gray-900 mb-2">Podmínky použití</h1>
-      <p className="text-sm text-gray-500 mb-8">Poslední aktualizace: 2. května 2026</p>
+      <p className="text-sm text-gray-500 mb-8">Poslední aktualizace: 13. května 2026</p>
 
       <div className="prose prose-gray max-w-none space-y-6 text-gray-700">
         <section>
@@ -97,20 +97,54 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-gray-900 mb-2">6. Reklama</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-2">6. Služba zprostředkování servisu</h2>
           <p>
-            Web může obsahovat reklamní sdělení třetích stran (zejména Google AdSense). Za obsah
-            zobrazovaných reklam neneseme odpovědnost. Bližší informace o cookies používaných
-            reklamními systémy naleznete v sekci{' '}
+            Web obsahuje stránku{' '}
+            <Link href="/servis" className="text-blue-600 hover:underline">
+              /servis
+            </Link>
+            , kde si můžete vyžádat doporučení na opravu domácího spotřebiče. Provozovatel sám
+            opravy neprovádí ani neručí za jejich provedení – službou je pouze zprostředkování,
+            které spočívá v posouzení vámi zaslaného popisu a v doporučení vhodného servisu (značkového
+            servisu výrobce, případně ověřeného lokálního partnera) e-mailem nebo telefonicky.
+          </p>
+          <p className="mt-3">
+            Provozovatel nenese odpovědnost za kvalitu provedené opravy, cenu sjednanou s doporučeným
+            servisem ani za škody vzniklé na základě realizace doporučené opravy. Tyto vztahy
+            vznikají výhradně mezi vámi a zvoleným servisem.
+          </p>
+          <p className="mt-3">
+            Údaje, které ve formuláři vyplníte, zpracováváme v souladu se{' '}
+            <Link href="/zasady-ochrany-osobnich-udaju" className="text-blue-600 hover:underline">
+              zásadami ochrany osobních údajů
+            </Link>
+            . Pokud byste si přáli předání kontaktu konkrétnímu servisnímu partnerovi, vyžádáme si
+            předem váš výslovný souhlas.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-gray-900 mb-2">7. Reklama a affiliate odkazy</h2>
+          <p>
+            Web může obsahovat reklamní sdělení třetích stran. Za obsah zobrazovaných reklam
+            neneseme odpovědnost. Bližší informace o cookies používaných reklamními systémy
+            naleznete v sekci{' '}
             <Link href="/cookies" className="text-blue-600 hover:underline">
               Cookies
             </Link>
             .
           </p>
+          <p className="mt-3">
+            Některé odkazy na webu jsou affiliate (provizní) – jedná se zejména o prokliky na
+            náhradní díly a nové spotřebiče u partnerských e-shopů. Pokud takovým odkazem dojde k
+            nákupu, provozovatel může získat provizi z prokliku. Cena pro vás se tím nemění a
+            obsah webu tím není ovlivněn. Affiliate odkazy jsou označeny atributem{' '}
+            <code className="text-xs bg-gray-100 px-1.5 py-0.5 rounded">rel=&quot;sponsored&quot;</code>.
+          </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-gray-900 mb-2">7. Změny podmínek</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-2">8. Změny podmínek</h2>
           <p>
             Provozovatel si vyhrazuje právo tyto podmínky kdykoli upravit. Aktuální verze je vždy
             dostupná na této stránce. Pokračováním v používání webu po zveřejnění změn vyjadřujete
@@ -119,7 +153,7 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-gray-900 mb-2">8. Závěrečná ustanovení</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-2">9. Závěrečná ustanovení</h2>
           <p>
             Vztahy neupravené těmito podmínkami se řídí právem České republiky. Případné spory budou
             řešeny příslušnými soudy ČR.

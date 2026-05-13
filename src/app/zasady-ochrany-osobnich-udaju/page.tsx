@@ -120,35 +120,34 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-gray-900 mb-2">5. Komu se data dostanou (zpracovatelé)</h2>
-          <p>Pro provoz služby využíváme následující zpracovatele, kteří mají naše údaje k dispozici výhradně za účelem dílčí funkce:</p>
+          <h2 className="text-xl font-semibold text-gray-900 mb-2">5. Komu se data dostanou</h2>
+          <p>Pro provoz webu využíváme následující kategorie zpracovatelů, kteří mají k údajům přístup výhradně za účelem dílčí technické funkce:</p>
           <ul className="list-disc pl-6 space-y-2 mt-3">
             <li>
-              <strong>Vercel Inc.</strong> (USA) – hosting webu a serverové funkce. Předání mimo EU
-              probíhá na základě standardních smluvních doložek schválených Evropskou komisí.
+              <strong>Poskytovatelé IT a hostingových služeb</strong> – provoz webu, serverové
+              funkce a uložení dat (komentáře, servisní poptávky). Databáze našeho webu fyzicky
+              leží v Evropské unii.
             </li>
             <li>
-              <strong>Neon, Inc.</strong> – provozovatel databáze, na které jsou uloženy komentáře
-              a servisní poptávky. Naše data fyzicky leží v EU (AWS Frankfurt).
-            </li>
-            <li>
-              <strong>Resend, Inc.</strong> (USA) – odesílá e-mailové notifikace o nových
-              komentářích a servisních poptávkách na náš provozní e-mail. Předání mimo EU probíhá
-              na základě standardních smluvních doložek.
+              <strong>Poskytovatelé e-mailové infrastruktury</strong> – odesílají e-mailové
+              notifikace o nových komentářích a servisních poptávkách na náš provozní e-mail.
             </li>
             <li>
               <strong>Google Ireland Limited</strong> – pouze pokud souhlasíte s analytickými nebo
-              reklamními cookies (Google Analytics, Google AdSense). Google může údaje zpracovávat
-              i mimo EU, na základě standardních smluvních doložek.
+              reklamními cookies (Google Analytics, Google AdSense).
             </li>
             <li>
-              <strong>Autorizované servisní firmy</strong> – pokud vám na základě poptávky
-              doporučíme konkrétního servisního partnera a vy s tímto výslovně souhlasíte (typicky
-              odpovědí na náš e-mail), předáme partnerovi jen údaje nezbytné pro vyřízení opravy
-              (telefon, region, popis závady). Bez vašeho výslovného souhlasu nikoliv.
+              <strong>Smluvní servisní partneři</strong> – pokud vám na základě poptávky doporučíme
+              konkrétního servisního partnera a vy s tímto výslovně souhlasíte (typicky odpovědí na
+              náš e-mail), předáme partnerovi jen údaje nezbytné pro vyřízení opravy (telefon,
+              region, popis závady). Bez vašeho výslovného souhlasu nikoliv.
             </li>
           </ul>
-          <p className="mt-3">Údaje neprodáváme. Nepředáváme je jiným třetím stranám než výše uvedeným.</p>
+          <p className="mt-3">
+            S některými poskytovateli může docházet k předávání osobních údajů mimo EU/EHS, vždy
+            však na základě standardních smluvních doložek schválených Evropskou komisí nebo
+            jiných záruk dle GDPR. Údaje neprodáváme.
+          </p>
         </section>
 
         <section>
@@ -205,11 +204,10 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-xl font-semibold text-gray-900 mb-2">7. Zabezpečení a změny</h2>
           <p>
-            Web používá HTTPS, citlivé údaje jsou uložené v zabezpečené databázi v EU. Přístupová
-            hesla a API klíče zpracovatelů jsou uloženy v zabezpečeném prostředí poskytovatele
-            hostingu (Vercel Environment Variables), nikoli ve veřejně dostupném zdrojovém kódu.
-            Tyto zásady můžeme časem aktualizovat – aktuální verze je vždy na této stránce s datem
-            v záhlaví.
+            Web používá HTTPS a citlivé údaje jsou uložené v zabezpečené databázi v EU. Přístupová
+            hesla a API klíče jsou uchovány v zabezpečeném prostředí poskytovatele hostingu, nikoli
+            ve veřejně dostupném zdrojovém kódu. Tyto zásady můžeme časem aktualizovat – aktuální
+            verze je vždy na této stránce s datem v záhlaví.
           </p>
         </section>
       </div>

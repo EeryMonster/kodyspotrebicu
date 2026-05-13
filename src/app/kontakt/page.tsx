@@ -85,11 +85,38 @@ export default function ContactPage() {
           </div>
         </section>
 
+        <section className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <div className="flex items-start gap-4">
+            <div className="bg-accent-50 text-accent-700 p-3 rounded-lg flex items-center justify-center shrink-0">
+              <AlertCircle className="w-6 h-6" />
+            </div>
+            <div className="flex-1">
+              <h2 className="text-lg font-semibold text-gray-900 mb-1">Potřebujete doporučit servis?</h2>
+              <p className="text-gray-600 mb-3">
+                Pro poptávky na opravu spotřebiče prosím použijte samostatný formulář na stránce{' '}
+                <Link href="/servis" className="text-blue-600 hover:underline font-medium">
+                  /servis
+                </Link>
+                . Posoudíme popis a doporučíme nejvhodnější způsob opravy (značkový servis,
+                ověřený lokální partner) do 3 pracovních dnů.
+              </p>
+              <Link
+                href="/servis"
+                className="inline-flex items-center gap-2 text-accent-700 font-medium hover:underline"
+              >
+                Otevřít formulář /servis →
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <section className="bg-gray-50 border border-gray-200 rounded-xl p-6">
           <h2 className="text-lg font-semibold text-gray-900 mb-3">Provozovatel webu</h2>
           <p className="text-gray-700">
-            Provozovatelem webu KódySpotřebičů.cz je soukromá osoba. Web je nekomerční informační
-            projekt. Detailní údaje provozovatele a podmínky zpracování osobních údajů najdete v{' '}
+            Provozovatelem webu KódySpotřebičů.cz a správcem osobních údajů je{' '}
+            <strong>Ondřej Tichý</strong>. Web je nezávislý informační projekt; provoz pomáhají
+            financovat zobrazovaná reklama a affiliate prokliky na partnerské e-shopy. Detailní
+            informace o zpracování osobních údajů najdete v{' '}
             <Link
               href="/zasady-ochrany-osobnich-udaju"
               className="text-blue-600 hover:underline font-medium"
@@ -99,7 +126,7 @@ export default function ContactPage() {
             .
           </p>
           <p className="text-sm text-gray-500 mt-3">
-            Pro úřední komunikaci a uplatnění práv subjektu údajů dle GDPR použijte výhradně e-mail{' '}
+            Pro úřední komunikaci a uplatnění práv subjektu údajů dle GDPR použijte e-mail{' '}
             <a href="mailto:info@kodyspotrebicu.cz" className="text-blue-600 hover:underline">
               info@kodyspotrebicu.cz
             </a>
@@ -110,10 +137,12 @@ export default function ContactPage() {
         <section className="bg-red-50 border border-red-200 rounded-xl p-6">
           <h2 className="text-lg font-semibold text-red-800 mb-2">Důležité upozornění</h2>
           <p className="text-sm text-red-900">
-            <strong>Neposkytujeme servisní podporu</strong> ani diagnostiku konkrétních spotřebičů.
-            Pokud potřebujete opravit pračku, myčku nebo sušičku, obraťte se prosím na{' '}
-            <strong>autorizovaný servis výrobce</strong> nebo certifikovaného servisního technika.
-            Web slouží pouze jako informační databáze chybových kódů.
+            <strong>Sami opravy neprovádíme</strong> ani osobně nediagnostikujeme spotřebiče. Naše
+            stránka <Link href="/servis" className="text-red-900 underline">/servis</Link> slouží
+            pouze ke zprostředkování doporučení – konkrétní opravu pak realizuje autorizovaný servis
+            nebo certifikovaný technik. V akutních případech (např. detekce úniku vody, kouř,
+            elektrický zkrat) okamžitě odpojte spotřebič od sítě a zavolejte přímo na servisní
+            linku výrobce.
           </p>
         </section>
       </div>
