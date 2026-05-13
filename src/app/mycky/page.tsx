@@ -1,6 +1,7 @@
 import { prisma } from '@/lib/prisma'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import CategoryFilteredGrid from '@/components/CategoryFilteredGrid'
+import CategoryRichContent from '@/components/CategoryRichContent'
 import type { Metadata } from 'next'
 
 interface Props {
@@ -60,6 +61,8 @@ export default async function MyckyPage() {
         <p>Nejčastější příčiny chyb myček jsou: <strong>ucpaný filtr nebo odpadní hadice</strong>, <strong>závada na průtokovém ohřívači (bojleru)</strong>, <strong>problém s dávkovačem soli nebo leštidla</strong> a <strong>porucha snímače hladiny vody</strong>. Mnoho chyb způsobuje jen zanedbaná pravidelná údržba.</p>
         <p>V databázi jsou kódy myček <strong>Bosch, Siemens, AEG, Electrolux, Samsung a Beko</strong>. Starší modely Siemens (řada SE/SF) hlásí chyby blikáním – i ty jsou v databázi popsány.</p>
       </div>
+
+      <CategoryRichContent applianceType="mycka" categoryLabel="myček" />
 
       <CategoryFilteredGrid codes={codes} />
     </div>

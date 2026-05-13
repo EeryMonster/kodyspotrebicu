@@ -1,6 +1,7 @@
 import { prisma } from '@/lib/prisma'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import CategoryFilteredGrid from '@/components/CategoryFilteredGrid'
+import CategoryRichContent from '@/components/CategoryRichContent'
 import { SUSICKA_SUBTYPES } from '@/lib/utils'
 import type { Metadata } from 'next'
 
@@ -61,6 +62,8 @@ export default async function SusickyPage() {
         <p>Mezi nejčastější příčiny chybových kódů patří: <strong>ucpaný prachový nebo kondenzační filtr</strong>, <strong>přehřátí</strong>, <strong>závada na teplotním čidle nebo termostatu</strong> a <strong>problém s odvodem kondenzátu</strong>. Pravidelné čištění filtrů předchází většině chyb.</p>
         <p>Databáze pokrývá sušičky <strong>Bosch, Siemens, AEG, Electrolux, Samsung a Beko</strong>. Ke každému kódu najdete závažnost, pravděpodobné příčiny a doporučený postup.</p>
       </div>
+
+      <CategoryRichContent applianceType="susicka" categoryLabel="sušiček" />
 
       <CategoryFilteredGrid codes={codes} subtypeOptions={SUSICKA_SUBTYPES} />
     </div>

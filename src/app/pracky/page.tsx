@@ -1,6 +1,7 @@
 import { prisma } from '@/lib/prisma'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import CategoryFilteredGrid from '@/components/CategoryFilteredGrid'
+import CategoryRichContent from '@/components/CategoryRichContent'
 import type { Metadata } from 'next'
 
 interface Props {
@@ -60,6 +61,8 @@ export default async function PrackyPage() {
         <p>Nejčastější příčiny chyb praček jsou: <strong>ucpaný filtr nebo čerpací soustava</strong>, <strong>porucha snímače teploty nebo hladiny vody</strong>, <strong>závada na dveřním zámku</strong> nebo <strong>problém s přívodem či odpadem vody</strong>. Část chyb lze bezpečně vyřešit doma, jiné vyžadují odborný servis.</p>
         <p>V databázi najdete kódy praček <strong>Bosch, Siemens, AEG, Electrolux, Samsung, Beko, Whirlpool a LG</strong>. Kliknutím na konkrétní kód zobrazíte popis závady, závažnost, doporučený postup a kdy volat servis.</p>
       </div>
+
+      <CategoryRichContent applianceType="pracka" categoryLabel="praček" />
 
       <CategoryFilteredGrid codes={codes} />
     </div>
