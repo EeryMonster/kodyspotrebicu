@@ -11,15 +11,15 @@ const APPLIANCE_SUBDOMAIN: Record<string, string> = {
   susicka: 'susicky-pradla',
 }
 
-// Heureka URL format (od cca 2024): subdoména kategorie + filter v cestě.
-// Příklad: https://cerpadla.heureka.cz/f:q:Zahradní%20čerpadlo/
-// Starý format ?h[fraze]= už nefunguje (vrací 404).
-
+// Heureka URL format: subdoména kategorie + ?h[fraze]= query parameter.
+// Hlavní www.heureka.cz tento format už nepodporuje (vrátí 404),
+// ale subdomény kategorií (pracky, mycky, susicky-pradla, ...) ano.
 const PARTS_SUBDOMAIN = 'nahradni-dily-velke-spotrebice'
 
 function heurekaSubdomainSearch(subdomain: string, query: string): string {
-  const encoded = encodeURIComponent(query.trim())
-  return `https://${subdomain}.heureka.cz/f:q:${encoded}/`
+  const url = new URL(`https://${subdomain}.heureka.cz/`)
+  url.searchParams.set('h[fraze]', query.trim())
+  return url.toString()
 }
 
 export function heurekaPartUrl(brand: string, part: string): string {
