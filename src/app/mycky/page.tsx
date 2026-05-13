@@ -1,8 +1,7 @@
 import { prisma } from '@/lib/prisma'
 import Breadcrumbs from '@/components/Breadcrumbs'
-import CategoryFilteredGrid from '@/components/CategoryFilteredGrid'
 import CategoryRichContent from '@/components/CategoryRichContent'
-import BrandsGrid from '@/components/BrandsGrid'
+import CategoryBrowsePanel from '@/components/CategoryBrowsePanel'
 import type { Metadata } from 'next'
 
 interface Props {
@@ -65,9 +64,7 @@ export default async function MyckyPage() {
 
       <CategoryRichContent applianceType="mycka" categoryLabel="myček" />
 
-      <BrandsGrid applianceType="mycka" categoryLabel="Myčky" />
-
-      <CategoryFilteredGrid codes={codes} />
+      <CategoryBrowsePanel applianceType="mycka" categoryLabel="Myčky" codes={codes} />
     </div>
   )
 }
