@@ -1,5 +1,5 @@
 import { ShoppingBag, ArrowRight } from 'lucide-react'
-import { heurekaNewApplianceUrl, heurekaLinkProps, HEUREKA_DISCLOSURE } from '@/lib/heureka'
+import { heurekaNewApplianceUrl, heurekaLinkProps } from '@/lib/heureka'
 import { APPLIANCE_LABELS } from '@/lib/utils'
 
 interface Props {
@@ -41,9 +41,6 @@ export default function NewApplianceCTA({ brand, applianceType, severityLevel }:
           <ArrowRight className="w-4 h-4" />
         </a>
       </div>
-      <p className="text-[11px] text-gray-400 leading-relaxed mt-4">
-        {HEUREKA_DISCLOSURE}
-      </p>
     </section>
   )
 }
