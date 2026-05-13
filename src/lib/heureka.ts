@@ -5,15 +5,21 @@
 
 const POSITION_ID = process.env.NEXT_PUBLIC_HEUREKA_POSITION_ID ?? ''
 
+// Heureka subdomény kategorií — ověřeno z Google-indexovaných URL.
+// Pozor: skutečné názvy se liší od běžně očekávaných ('mycky-nadobi', ne 'mycky';
+// 'susicky', ne 'susicky-pradla').
 const APPLIANCE_SUBDOMAIN: Record<string, string> = {
   pracka: 'pracky',
-  mycka: 'mycky',
-  susicka: 'susicky-pradla',
+  mycka: 'mycky-nadobi',
+  susicka: 'susicky',
 }
 
-// Heureka URL formáty (různé pro různé endpointy):
-// - Hlavní www.heureka.cz: ?h[fraze]= query parameter funguje pro full-text search
-// - Subdomény kategorií (pracky, mycky, …): f:q: filter v cestě (Google indexovaný format)
+// Heureka URL formáty:
+// - Hlavní www.heureka.cz/?h[fraze]= — full-text search napříč celou Heurekou
+// - Subdomény kategorií (pracky, mycky-nadobi, susicky) — vedou na kategorii;
+//   filtry brand by vyžadovaly per-kategorie ID, takže pro jednoduchost vedeme
+//   user jen na subdoménu (heureka tracking zachytí klik, user si vybere značku
+//   v Heuretce ručně přes filter)
 
 export function heurekaPartUrl(brand: string, part: string): string {
   const url = new URL('https://www.heureka.cz/')
@@ -21,10 +27,9 @@ export function heurekaPartUrl(brand: string, part: string): string {
   return url.toString()
 }
 
-export function heurekaNewApplianceUrl(brand: string, applianceType: string): string {
+export function heurekaNewApplianceUrl(_brand: string, applianceType: string): string {
   const subdomain = APPLIANCE_SUBDOMAIN[applianceType] ?? 'pracky'
-  const encoded = encodeURIComponent(brand.trim())
-  return `https://${subdomain}.heureka.cz/f:q:${encoded}/`
+  return `https://${subdomain}.heureka.cz/`
 }
 
 // Props pro Heureka affiliate <a> element. Vrací class a data-trixam-positionid,
