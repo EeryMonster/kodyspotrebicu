@@ -97,49 +97,28 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-gray-900 mb-2">6. Služba zprostředkování servisu</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-2">6. Doporučení servisu</h2>
           <p>
-            Web obsahuje stránku{' '}
+            Přes formulář{' '}
             <Link href="/servis" className="text-blue-600 hover:underline">
               /servis
             </Link>
-            , kde si můžete vyžádat doporučení na opravu domácího spotřebiče. Provozovatel sám
-            opravy neprovádí ani neručí za jejich provedení – službou je pouze zprostředkování,
-            které spočívá v posouzení vámi zaslaného popisu a v doporučení vhodného servisu (značkového
-            servisu výrobce, případně ověřeného lokálního partnera) e-mailem nebo telefonicky.
-          </p>
-          <p className="mt-3">
-            Provozovatel nenese odpovědnost za kvalitu provedené opravy, cenu sjednanou s doporučeným
-            servisem ani za škody vzniklé na základě realizace doporučené opravy. Tyto vztahy
-            vznikají výhradně mezi vámi a zvoleným servisem.
-          </p>
-          <p className="mt-3">
-            Údaje, které ve formuláři vyplníte, zpracováváme v souladu se{' '}
-            <Link href="/zasady-ochrany-osobnich-udaju" className="text-blue-600 hover:underline">
-              zásadami ochrany osobních údajů
-            </Link>
-            . Pokud byste si přáli předání kontaktu konkrétnímu servisnímu partnerovi, vyžádáme si
-            předem váš výslovný souhlas.
+            {' '}můžete požádat o doporučení opravy. Provozovatel sám opravy neprovádí – nabízíme
+            pouze nezávazné doporučení vhodného servisu. Smluvní vztah a odpovědnost za případnou
+            opravu vzniká výhradně mezi vámi a zvoleným servisem.
           </p>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold text-gray-900 mb-2">7. Reklama a affiliate odkazy</h2>
           <p>
-            Web může obsahovat reklamní sdělení třetích stran. Za obsah zobrazovaných reklam
-            neneseme odpovědnost. Bližší informace o cookies používaných reklamními systémy
-            naleznete v sekci{' '}
+            Web může obsahovat reklamu třetích stran a affiliate (provizní) odkazy na partnerské
+            e-shopy. Cena pro vás se tím nemění a obsah webu tím není ovlivněn. Více informací
+            o cookies najdete v sekci{' '}
             <Link href="/cookies" className="text-blue-600 hover:underline">
               Cookies
             </Link>
             .
-          </p>
-          <p className="mt-3">
-            Některé odkazy na webu jsou affiliate (provizní) – jedná se zejména o prokliky na
-            náhradní díly a nové spotřebiče u partnerských e-shopů. Pokud takovým odkazem dojde k
-            nákupu, provozovatel může získat provizi z prokliku. Cena pro vás se tím nemění a
-            obsah webu tím není ovlivněn. Affiliate odkazy jsou označeny atributem{' '}
-            <code className="text-xs bg-gray-100 px-1.5 py-0.5 rounded">rel=&quot;sponsored&quot;</code>.
           </p>
         </section>
 

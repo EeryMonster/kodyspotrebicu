@@ -114,9 +114,7 @@ export default function ContactPage() {
           <h2 className="text-lg font-semibold text-gray-900 mb-3">Provozovatel webu</h2>
           <p className="text-gray-700">
             Provozovatelem webu KódySpotřebičů.cz a správcem osobních údajů je{' '}
-            <strong>Ondřej Tichý</strong>. Web je nezávislý informační projekt; provoz pomáhají
-            financovat zobrazovaná reklama a affiliate prokliky na partnerské e-shopy. Detailní
-            informace o zpracování osobních údajů najdete v{' '}
+            <strong>Ondřej Tichý</strong>. Více informací o zpracování osobních údajů najdete v{' '}
             <Link
               href="/zasady-ochrany-osobnich-udaju"
               className="text-blue-600 hover:underline font-medium"
@@ -125,24 +123,15 @@ export default function ContactPage() {
             </Link>
             .
           </p>
-          <p className="text-sm text-gray-500 mt-3">
-            Pro úřední komunikaci a uplatnění práv subjektu údajů dle GDPR použijte e-mail{' '}
-            <a href="mailto:info@kodyspotrebicu.cz" className="text-blue-600 hover:underline">
-              info@kodyspotrebicu.cz
-            </a>
-            .
-          </p>
         </section>
 
         <section className="bg-red-50 border border-red-200 rounded-xl p-6">
           <h2 className="text-lg font-semibold text-red-800 mb-2">Důležité upozornění</h2>
           <p className="text-sm text-red-900">
-            <strong>Sami opravy neprovádíme</strong> ani osobně nediagnostikujeme spotřebiče. Naše
-            stránka <Link href="/servis" className="text-red-900 underline">/servis</Link> slouží
-            pouze ke zprostředkování doporučení – konkrétní opravu pak realizuje autorizovaný servis
-            nebo certifikovaný technik. V akutních případech (např. detekce úniku vody, kouř,
-            elektrický zkrat) okamžitě odpojte spotřebič od sítě a zavolejte přímo na servisní
-            linku výrobce.
+            Sami opravy neprovádíme – stránka{' '}
+            <Link href="/servis" className="text-red-900 underline">/servis</Link>{' '}
+            slouží pouze ke zprostředkování doporučení. V akutních situacích (únik vody, kouř,
+            elektrický zkrat) okamžitě odpojte spotřebič od sítě a zavolejte přímo servis výrobce.
           </p>
         </section>
       </div>
