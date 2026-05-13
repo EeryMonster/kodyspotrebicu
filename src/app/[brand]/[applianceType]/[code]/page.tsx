@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { APPLIANCE_LABELS, SUBTYPE_LABELS, normalizeListItem, normalizeBodyText, buildServiceCtaUrl, slugify, REPAIR_PRICE_RANGES, BRAND_RESET_INSTRUCTIONS, BRAND_RESET_FALLBACK, shouldNoIndex } from '@/lib/utils'
+import { APPLIANCE_LABELS, SUBTYPE_LABELS, normalizeListItem, normalizeBodyText, buildServiceCtaUrl, slugify, REPAIR_PRICE_RANGES, getRepairPriceInfo, BRAND_RESET_INSTRUCTIONS, BRAND_RESET_FALLBACK, shouldNoIndex } from '@/lib/utils'
 import SeverityBadge from '@/components/SeverityBadge'
 import CommentsSection from '@/components/CommentsSection'
 import CopyCodeButton from '@/components/CopyCodeButton'
@@ -144,6 +144,7 @@ export default async function ErrorCodePage({ params }: Props) {
   const howToFaqItem = faqItems.find(f => HOW_TO_RE.test(f.q)) ?? null
 
   const priceRange = REPAIR_PRICE_RANGES[entry.severityLevel] ?? REPAIR_PRICE_RANGES[2]
+  const repairPriceInfo = getRepairPriceInfo(entry.severityLevel, entry.possibleParts)
   const resetInstruction = BRAND_RESET_INSTRUCTIONS[entry.brand.toLowerCase()] ?? BRAND_RESET_FALLBACK
 
   const ogImageUrl = `https://www.kodyspotrebicu.cz/${entry.brand.toLowerCase()}/${appliancePath}/${entry.slug}/opengraph-image`
@@ -316,102 +317,103 @@ export default async function ErrorCodePage({ params }: Props) {
         </div>
       </header>
 
-      {/* Actionable Highlights (Bento Grid) */}
+      {/* Actionable Highlights (Bento Grid) — sjednocený design všech karet:
+          bílá karta, gray border, ikona v subtle pill (barva podle významu). */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Safe to try at home (Green themed) */}
+        {/* Lze zkusit doma — green theme jen v ikoně */}
         {entry.canUserTrySafeChecks && entry.safeChecks.length > 0 ? (
-          <div className="bg-white border border-green-700/20 rounded-xl p-6 md:p-8 shadow-sm">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="bg-green-800 text-white p-2 rounded-lg flex items-center justify-center">
+          <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-7 shadow-sm">
+            <div className="flex items-center gap-3 mb-5">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-green-50 text-green-700 shrink-0">
                 <Wrench className="w-5 h-5" />
-              </div>
-              <h2 className="text-xl font-bold text-green-800 tracking-tight">Lze bezpečně zkusit doma</h2>
+              </span>
+              <h2 className="text-lg font-bold text-gray-900 tracking-tight">Lze bezpečně zkusit doma</h2>
             </div>
             <ul className="flex flex-col gap-4 text-gray-700">
               {entry.safeChecks.map((check, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 text-green-800 flex items-center justify-center font-bold text-xs mt-0.5">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-green-50 text-green-700 flex items-center justify-center font-bold text-xs mt-0.5">
                     {i + 1}
                   </span>
-                  <span className="leading-relaxed">{normalizeListItem(check)}</span>
+                  <span className="leading-relaxed text-sm">{normalizeListItem(check)}</span>
                 </li>
               ))}
             </ul>
           </div>
         ) : (
-          <div className="bg-white border border-yellow-500/20 rounded-xl p-6 md:p-8 shadow-sm flex flex-col justify-center">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="bg-yellow-600 text-white p-2 rounded-lg flex items-center justify-center">
+          <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-7 shadow-sm flex flex-col justify-center">
+            <div className="flex items-center gap-3 mb-5">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-yellow-50 text-yellow-700 shrink-0">
                 <AlertTriangle className="w-5 h-5" />
-              </div>
-              <h2 className="text-xl font-bold text-yellow-800 tracking-tight">Nedoporučujeme domácí opravu</h2>
+              </span>
+              <h2 className="text-lg font-bold text-gray-900 tracking-tight">Nedoporučujeme domácí opravu</h2>
             </div>
-            <p className="text-gray-700 leading-relaxed">Tento typ závady vyžaduje zásah odborného technika. Je lepší neriskovat další poškození nebo úraz elektrickým proudem.</p>
+            <p className="text-gray-700 leading-relaxed text-sm">Tento typ závady vyžaduje zásah odborného technika. Je lepší neriskovat další poškození nebo úraz elektrickým proudem.</p>
           </div>
         )}
 
-        {/* Call service (Red themed) */}
+        {/* Kdy okamžitě volat servis — red theme jen v ikoně */}
         {entry.whenToStopAndCallService.length > 0 ? (
-          <div className="bg-white border border-red-700/20 rounded-xl p-6 md:p-8 shadow-sm">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="bg-red-600 text-white p-2 rounded-lg flex items-center justify-center">
+          <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-7 shadow-sm">
+            <div className="flex items-center gap-3 mb-5">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-red-50 text-red-700 shrink-0">
                 <AlertTriangle className="w-5 h-5" />
-              </div>
-              <h2 className="text-xl font-bold text-red-600 tracking-tight">Kdy okamžitě volat servis</h2>
+              </span>
+              <h2 className="text-lg font-bold text-gray-900 tracking-tight">Kdy okamžitě volat servis</h2>
             </div>
             <ul className="flex flex-col gap-4 text-gray-700">
               {entry.whenToStopAndCallService.map((w, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <AlertCircle className="text-red-600 flex-shrink-0 mt-0.5 w-5 h-5" />
-                  <span className="leading-relaxed">{normalizeListItem(w)}</span>
+                  <span className="leading-relaxed text-sm">{normalizeListItem(w)}</span>
                 </li>
               ))}
             </ul>
           </div>
         ) : (
-           <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-8 shadow-sm flex flex-col justify-center items-center text-center">
+           <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-7 shadow-sm flex flex-col justify-center items-center text-center">
              <CheckCircle2 className="w-10 h-10 text-gray-300 mb-3" />
-             <p className="text-gray-500 font-medium">Nejsou známa žádná specifická varování pro tento kód.</p>
+             <p className="text-gray-500 font-medium text-sm">Nejsou známa žádná specifická varování pro tento kód.</p>
            </div>
         )}
       </section>
 
-      {/* Reset + Cena opravy (long-tail SEO sekce) */}
+      {/* Reset + Cena opravy — sjednocené s ostatními kartami */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Reset spotřebiče */}
-        <div className="bg-white border border-blue-700/20 rounded-xl p-6 md:p-8 shadow-sm">
+        {/* Reset spotřebiče — blue theme jen v ikoně */}
+        <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-7 shadow-sm">
           <div className="flex items-center gap-3 mb-4">
-            <div className="bg-blue-700 text-white p-2 rounded-lg flex items-center justify-center">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-blue-50 text-blue-700 shrink-0">
               <Settings className="w-5 h-5" />
-            </div>
-            <h2 className="text-xl font-bold text-blue-800 tracking-tight">Jak resetovat {entry.brand} {appliancePathLabel.toLowerCase()}</h2>
+            </span>
+            <h2 className="text-lg font-bold text-gray-900 tracking-tight">Jak resetovat {entry.brand} {appliancePathLabel.toLowerCase()}</h2>
           </div>
-          <p className="text-gray-700 leading-relaxed mb-3">{resetInstruction}</p>
-          <p className="text-sm text-gray-500 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed text-sm mb-3">{resetInstruction}</p>
+          <p className="text-xs text-gray-500 leading-relaxed">
             Reset může smazat dočasnou chybu a obnovit provoz. Pokud se chyba <strong>{entry.code}</strong> vrátí, jde o reálný problém – pokračujte krokem 1 výše.
           </p>
         </div>
 
-        {/* Cena opravy — používá akcent terakota (10 % brand color, expert/cena highlight) */}
-        <div className="bg-white border border-accent-300 rounded-xl p-6 md:p-8 shadow-sm">
+        {/* Cena opravy — accent jen v ikoně a v highlight číslu */}
+        <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-7 shadow-sm">
           <div className="flex items-center gap-3 mb-4">
-            <div className="bg-accent-600 text-white p-2 rounded-lg flex items-center justify-center">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-accent-50 text-accent-700 shrink-0">
               <FileText className="w-5 h-5" />
-            </div>
-            <h2 className="text-xl font-bold text-accent-700 tracking-tight">Cena opravy chyby {entry.code}</h2>
+            </span>
+            <h2 className="text-lg font-bold text-gray-900 tracking-tight">Cena opravy chyby {entry.code}</h2>
           </div>
           <div className="flex flex-col gap-3 text-gray-700">
             <div className="flex items-baseline gap-2">
               <span className="text-3xl font-bold text-accent-700 font-mono tabular-nums">
-                {priceRange.min.toLocaleString('cs-CZ')}–{priceRange.max.toLocaleString('cs-CZ')} Kč
+                {repairPriceInfo.rangeLabel}
               </span>
               <span className="text-sm text-gray-500">orientačně</span>
             </div>
             <p className="text-sm leading-relaxed">
-              <strong>Svépomocí:</strong> {priceRange.diy}
+              <strong>Svépomocí:</strong> {repairPriceInfo.diyLabel}
             </p>
             <p className="text-sm leading-relaxed">
-              <strong>{priceRange.service}</strong>
+              <strong>{repairPriceInfo.serviceLabel}</strong>
             </p>
             <p className="text-xs text-gray-500 leading-relaxed mt-1">
               Cena se může lišit podle značky, lokality a dostupnosti dílů. Vždy si vyžádejte cenovou nabídku před opravou.
@@ -466,20 +468,23 @@ export default async function ErrorCodePage({ params }: Props) {
         </section>
       )}
 
-      {/* Další informace (Příčiny a Součástky) */}
+      {/* Další informace (Příčiny a Součástky) — sjednocený design */}
       {(entry.likelyCauses.length > 0 || entry.possibleParts.length > 0 || howToFaqItem) && (
         <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {(entry.likelyCauses.length > 0 || howToFaqItem) && (
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+            <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-7 shadow-sm">
               {entry.likelyCauses.length > 0 ? (
                 <>
-                  <h2 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2 tracking-tight">
-                    <LayoutList className="w-5 h-5 text-gray-500" /> Pravděpodobné příčiny
-                  </h2>
+                  <div className="flex items-center gap-3 mb-5">
+                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-gray-600 shrink-0">
+                      <LayoutList className="w-5 h-5" />
+                    </span>
+                    <h2 className="text-lg font-bold text-gray-900 tracking-tight">Pravděpodobné příčiny</h2>
+                  </div>
                   <ul className="flex flex-col gap-3">
                     {entry.likelyCauses.map((cause, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0"></span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0"></span>
                         <span className="text-gray-700 leading-relaxed text-sm">{normalizeListItem(cause)}</span>
                       </li>
                     ))}
@@ -487,13 +492,18 @@ export default async function ErrorCodePage({ params }: Props) {
                 </>
               ) : howToFaqItem && (
                 <>
-                   <h2 className="text-lg font-bold text-gray-900 mb-4 tracking-tight">Jak opravit chybu {entry.code}</h2>
-                   <p className="text-sm leading-relaxed text-gray-700 bg-gray-50 p-4 rounded-lg border border-gray-100">{howToFaqItem.a}</p>
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-gray-600 shrink-0">
+                      <LayoutList className="w-5 h-5" />
+                    </span>
+                    <h2 className="text-lg font-bold text-gray-900 tracking-tight">Jak opravit chybu {entry.code}</h2>
+                  </div>
+                  <p className="text-sm leading-relaxed text-gray-700 bg-gray-50 p-4 rounded-lg border border-gray-100">{howToFaqItem.a}</p>
                 </>
               )}
             </div>
           )}
-          
+
           {entry.possibleParts.length > 0 && (
             <RelatedParts brand={entry.brand} parts={entry.possibleParts} />
           )}

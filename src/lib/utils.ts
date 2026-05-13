@@ -152,11 +152,60 @@ export const PRACKA_SUBTYPES = [
 
 // Cenové rozpětí opravy podle závažnosti chyby (CZK).
 // Použito v UI sekci "Cena opravy" a v JSON-LD HowTo estimatedCost.
-export const REPAIR_PRICE_RANGES: Record<number, { min: number; max: number; diy: string; service: string }> = {
-  1: { min: 0, max: 200, diy: 'Většinou vyřešíte sami za pár minut', service: 'Servis: 500–800 Kč (výjezd)' },
-  2: { min: 200, max: 1500, diy: 'Často DIY – výměna hadice / čištění filtru', service: 'Servis: 800–1 800 Kč' },
-  3: { min: 1500, max: 4000, diy: 'Náročnější oprava (zámek, čerpadlo, topení)', service: 'Servis: 1 800–4 500 Kč včetně dílu' },
-  4: { min: 4000, max: 9000, diy: 'Nedoporučujeme svépomocí (řídicí deska, ložiska bubnu)', service: 'Servis: 4 000–9 000 Kč; zvážit nový spotřebič' },
+export const REPAIR_PRICE_RANGES: Record<number, { min: number; max: number; serviceRange: string }> = {
+  1: { min: 0, max: 200, serviceRange: '500–800 Kč (výjezd)' },
+  2: { min: 200, max: 1500, serviceRange: '800–1 800 Kč' },
+  3: { min: 1500, max: 4000, serviceRange: '1 800–4 500 Kč včetně dílu' },
+  4: { min: 4000, max: 9000, serviceRange: '4 000–9 000 Kč; zvážit nový spotřebič' },
+}
+
+// Heuristika: které díly bývají typicky DIY-friendly, a které vyžadují servis.
+// Slouží k automatickému doporučení v sekci 'Cena opravy' podle konkrétních dílů.
+const DIY_FRIENDLY_KEYWORDS = ['filtr', 'sítko', 'hadice', 'těsnění', 'kryt', 'manžeta', 'sifon', 'gumové']
+const SERVICE_ONLY_KEYWORDS = ['řídicí deska', 'elektronika', 'modul', 'motor', 'ložiska bubnu', 'kompresor', 'topné těleso', 'čerpadlo', 'snímač', 'senzor', 'tachogenerátor', 'magnetický ventil']
+
+function isDiyPart(part: string): boolean {
+  const lower = part.toLowerCase()
+  if (SERVICE_ONLY_KEYWORDS.some(kw => lower.includes(kw))) return false
+  if (DIY_FRIENDLY_KEYWORDS.some(kw => lower.includes(kw))) return true
+  return false
+}
+
+export interface RepairPriceInfo {
+  min: number
+  max: number
+  rangeLabel: string  // např. '200–1 500 Kč'
+  diyLabel: string    // např. 'Často DIY – výměna filtru'
+  serviceLabel: string // např. 'Servis: 800–1 800 Kč'
+}
+
+export function getRepairPriceInfo(severity: number, parts: string[] = []): RepairPriceInfo {
+  const range = REPAIR_PRICE_RANGES[severity] ?? REPAIR_PRICE_RANGES[2]
+  const rangeLabel = `${range.min.toLocaleString('cs-CZ')}–${range.max.toLocaleString('cs-CZ')} Kč`
+
+  // Inteligentní DIY heuristika podle konkrétních dílů
+  let diyLabel: string
+  if (parts.length === 0) {
+    diyLabel = severity <= 2 ? 'Často zvládnete doma' : 'Vyžaduje obvykle servis'
+  } else {
+    const diyParts = parts.filter(isDiyPart)
+    const hardParts = parts.filter(p => !isDiyPart(p))
+    if (diyParts.length > 0 && hardParts.length === 0) {
+      diyLabel = `Často DIY – výměna nebo čištění: ${diyParts.slice(0, 2).join(', ').toLowerCase()}`
+    } else if (diyParts.length === 0) {
+      diyLabel = `Vyžaduje servis – výměna: ${hardParts.slice(0, 2).join(', ').toLowerCase()}`
+    } else {
+      diyLabel = `Některé díly zvládnete sami (${diyParts[0].toLowerCase()}), jiné vyžadují servis (${hardParts[0].toLowerCase()})`
+    }
+  }
+
+  return {
+    min: range.min,
+    max: range.max,
+    rangeLabel,
+    diyLabel,
+    serviceLabel: `Servis: ${range.serviceRange}`,
+  }
 }
 
 // Návod na reset podle značky – krátký 1-řádkový postup, který lze uvést hned po hlavním řešení.
