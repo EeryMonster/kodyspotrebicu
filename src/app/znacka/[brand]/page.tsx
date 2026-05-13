@@ -119,6 +119,19 @@ export default async function BrandPage({ params }: Props) {
   const richContent = BRAND_CONTENT[brandSlug.toLowerCase()]
   const introParagraphs = richContent?.intro ?? BRAND_INTROS[brandSlug.toLowerCase()]?.paragraphs ?? []
 
+  // Lookup pro proklik z 'topCodes' (brand-content.ts) na konkrétní detail kódu.
+  // Klíč je 'CODE_APPLIANCETYPE' (např. 'F12_mycka') aby se rozlišily kódy se
+  // stejným označením napříč spotřebiči (E22 pračka × E22 myčka u některých značek).
+  const codeSlugMap = new Map<string, { slug: string; applianceType: string }>(
+    codes.map((c) => [`${c.code}_${c.applianceType}`, { slug: c.slug, applianceType: c.applianceType }])
+  )
+  function applianceTypeFromLabel(label: string): string {
+    if (label === 'pračka') return 'pracka'
+    if (label === 'myčka') return 'mycka'
+    if (label === 'sušička') return 'susicka'
+    return label
+  }
+
   const faqSchema = richContent?.faq && richContent.faq.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -212,16 +225,42 @@ export default async function BrandPage({ params }: Props) {
                 Nejčastější chybové kódy {brandName}
               </h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
-                {richContent.topCodes.map((tc, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm">
+                {richContent.topCodes.map((tc, i) => {
+                  const type = applianceTypeFromLabel(tc.appliance)
+                  const match = codeSlugMap.get(`${tc.code}_${type}`)
+                  const codeBadge = (
                     <span className="font-mono font-bold text-brand-primary-dark bg-brand-soft border border-brand-soft-border px-2 py-0.5 rounded shrink-0 min-w-[3.75rem] text-center text-xs leading-relaxed">
                       {tc.code}
                     </span>
+                  )
+                  const description = (
                     <span className="text-gray-700 leading-relaxed">
                       <span className="text-gray-500 text-xs">({tc.appliance})</span> {tc.tip}
                     </span>
-                  </li>
-                ))}
+                  )
+                  if (match) {
+                    const appliancePath = APPLIANCE_PATHS[match.applianceType] ?? match.applianceType
+                    return (
+                      <li key={i}>
+                        <Link
+                          href={`/${brandSlug}/${appliancePath}/${match.slug}`}
+                          className="flex items-start gap-3 text-sm -mx-2 px-2 py-1 rounded hover:bg-accent-50/40 transition-colors group"
+                        >
+                          {codeBadge}
+                          <span className="text-gray-700 leading-relaxed group-hover:text-gray-900">
+                            <span className="text-gray-500 text-xs">({tc.appliance})</span> {tc.tip}
+                          </span>
+                        </Link>
+                      </li>
+                    )
+                  }
+                  return (
+                    <li key={i} className="flex items-start gap-3 text-sm">
+                      {codeBadge}
+                      {description}
+                    </li>
+                  )
+                })}
               </ul>
             </div>
           )}

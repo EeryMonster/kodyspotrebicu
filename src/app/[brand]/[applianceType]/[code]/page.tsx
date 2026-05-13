@@ -418,6 +418,13 @@ export default async function ErrorCodePage({ params }: Props) {
             <p className="text-xs text-gray-500 leading-relaxed mt-1">
               Cena se může lišit podle značky, lokality a dostupnosti dílů. Vždy si vyžádejte cenovou nabídku před opravou.
             </p>
+            <Link
+              href={`/znacka/${entry.brand.toLowerCase()}`}
+              className="inline-flex items-center gap-1 text-xs font-semibold text-accent-700 hover:text-accent-600 hover:underline mt-2"
+            >
+              Více o značce {entry.brand.charAt(0).toUpperCase() + entry.brand.slice(1).toLowerCase()}
+              <ChevronRight className="w-3.5 h-3.5" />
+            </Link>
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@ import { prisma } from '@/lib/prisma'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import CategoryFilteredGrid from '@/components/CategoryFilteredGrid'
 import CategoryRichContent from '@/components/CategoryRichContent'
+import BrandsGrid from '@/components/BrandsGrid'
 import type { Metadata } from 'next'
 
 interface Props {
@@ -63,6 +64,8 @@ export default async function PrackyPage() {
       </div>
 
       <CategoryRichContent applianceType="pracka" categoryLabel="praček" />
+
+      <BrandsGrid applianceType="pracka" categoryLabel="Pračky" />
 
       <CategoryFilteredGrid codes={codes} />
     </div>

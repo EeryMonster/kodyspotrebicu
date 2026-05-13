@@ -2,6 +2,7 @@ import { prisma } from '@/lib/prisma'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import CategoryFilteredGrid from '@/components/CategoryFilteredGrid'
 import CategoryRichContent from '@/components/CategoryRichContent'
+import BrandsGrid from '@/components/BrandsGrid'
 import { SUSICKA_SUBTYPES } from '@/lib/utils'
 import type { Metadata } from 'next'
 
@@ -64,6 +65,8 @@ export default async function SusickyPage() {
       </div>
 
       <CategoryRichContent applianceType="susicka" categoryLabel="sušiček" />
+
+      <BrandsGrid applianceType="susicka" categoryLabel="Sušičky" />
 
       <CategoryFilteredGrid codes={codes} subtypeOptions={SUSICKA_SUBTYPES} />
     </div>
