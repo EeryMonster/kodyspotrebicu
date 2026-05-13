@@ -39,53 +39,29 @@ const filterButtonActive = 'border-blue-600 bg-blue-600 text-white shadow-sm'
 const filterButtonDefaultActive = 'border-brand-border bg-gray-50 text-gray-900'
 const filterButtonInactive = 'border-transparent bg-transparent text-gray-600 hover:bg-gray-100 hover:text-gray-950'
 
-const BRAND_LABELS: Record<string, string> = {
-  aeg: 'AEG',
-  beko: 'Beko',
-  bosch: 'Bosch',
-  electrolux: 'Electrolux',
-  lg: 'LG',
-  miele: 'Miele',
-  samsung: 'Samsung',
-  siemens: 'Siemens',
-  whirlpool: 'Whirlpool',
-}
-
 function filterButtonClass(isActive: boolean, isDefault = false) {
   if (!isActive) return `${filterButtonBase} ${filterButtonInactive}`
   return `${filterButtonBase} ${isDefault ? filterButtonDefaultActive : filterButtonActive}`
 }
 
-function brandLabel(brand: string) {
-  return BRAND_LABELS[brand.toLowerCase()] ?? brand
-}
-
 export default function CategoryFilteredGrid({ codes, subtypeOptions }: CategoryFilteredGridProps) {
   const [search, setSearch] = useState('')
-  const [activeBrand, setActiveBrand] = useState<string | null>(null)
   const [activeSeverity, setActiveSeverity] = useState<number | null>(null)
   const [activeSubtype, setActiveSubtype] = useState<string | null>(null)
-
-  const allBrands = useMemo(
-    () => Array.from(new Set(codes.map((c) => c.brand))).sort((a, b) => a.localeCompare(b, 'cs', { sensitivity: 'base' })),
-    [codes]
-  )
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase()
     return codes.filter((c) => {
-      if (activeBrand && c.brand.toLowerCase() !== activeBrand.toLowerCase()) return false
       if (activeSeverity !== null && c.severityLevel !== activeSeverity) return false
       if (activeSubtype && c.subtype !== activeSubtype) return false
       if (q && !c.code.toLowerCase().includes(q) && !c.title.toLowerCase().includes(q)) return false
       return true
     })
-  }, [codes, search, activeBrand, activeSeverity, activeSubtype])
+  }, [codes, search, activeSeverity, activeSubtype])
 
-  const hasActiveFilter = activeBrand !== null || activeSeverity !== null || activeSubtype !== null || search.trim().length > 0
+  const hasActiveFilter = activeSeverity !== null || activeSubtype !== null || search.trim().length > 0
 
   function reset() {
-    setActiveBrand(null)
     setActiveSeverity(null)
     setActiveSubtype(null)
     setSearch('')
@@ -153,33 +129,8 @@ export default function CategoryFilteredGrid({ codes, subtypeOptions }: Category
             </div>
           )}
 
-          {allBrands.length > 0 && (
-            <div className="grid gap-2 sm:grid-cols-[88px_minmax(0,1fr)] sm:items-center">
-              <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">Značka</p>
-              <div className="flex flex-wrap gap-1.5">
-                <button
-                  type="button"
-                  onClick={() => setActiveBrand(null)}
-                  aria-pressed={activeBrand === null}
-                  className={filterButtonClass(activeBrand === null, true)}
-                >
-                  Všechny
-                </button>
-                {allBrands.map((b) => (
-                  <button
-                    key={b}
-                    type="button"
-                    onClick={() => setActiveBrand(activeBrand === b ? null : b)}
-                    aria-pressed={activeBrand === b}
-                    className={filterButtonClass(activeBrand === b)}
-                  >
-                    {brandLabel(b)}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-
+          {/* Brand filter odstraněn — značku filtruje 'Procházet podle značky'
+              sekce výše (přesměruje na rich brand page /znacka/{brand}). */}
           <div className="grid gap-2 sm:grid-cols-[88px_minmax(0,1fr)] sm:items-center">
             <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">Závažnost</p>
             <div className="flex flex-wrap gap-1.5">
@@ -207,7 +158,6 @@ export default function CategoryFilteredGrid({ codes, subtypeOptions }: Category
                 {subtypeOptions?.find((s) => s.value === activeSubtype)?.label}
               </span>
             )}
-            {activeBrand && <span className="rounded-full bg-gray-100 px-2 py-1 text-gray-700">{brandLabel(activeBrand)}</span>}
             {activeSeverity !== null && (
               <span className="rounded-full bg-gray-100 px-2 py-1 text-gray-700">
                 {SEVERITY_OPTIONS.find((s) => s.value === activeSeverity)?.label}
