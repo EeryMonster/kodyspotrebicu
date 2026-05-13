@@ -11,24 +11,20 @@ const APPLIANCE_SUBDOMAIN: Record<string, string> = {
   susicka: 'susicky-pradla',
 }
 
-// Heureka URL format: subdoména kategorie + ?h[fraze]= query parameter.
-// Hlavní www.heureka.cz tento format už nepodporuje (vrátí 404),
-// ale subdomény kategorií (pracky, mycky, susicky-pradla, ...) ano.
-const PARTS_SUBDOMAIN = 'nahradni-dily-velke-spotrebice'
-
-function heurekaSubdomainSearch(subdomain: string, query: string): string {
-  const url = new URL(`https://${subdomain}.heureka.cz/`)
-  url.searchParams.set('h[fraze]', query.trim())
-  return url.toString()
-}
+// Heureka URL formáty (různé pro různé endpointy):
+// - Hlavní www.heureka.cz: ?h[fraze]= query parameter funguje pro full-text search
+// - Subdomény kategorií (pracky, mycky, …): f:q: filter v cestě (Google indexovaný format)
 
 export function heurekaPartUrl(brand: string, part: string): string {
-  return heurekaSubdomainSearch(PARTS_SUBDOMAIN, `${part} ${brand}`)
+  const url = new URL('https://www.heureka.cz/')
+  url.searchParams.set('h[fraze]', `${part} ${brand}`.trim())
+  return url.toString()
 }
 
 export function heurekaNewApplianceUrl(brand: string, applianceType: string): string {
   const subdomain = APPLIANCE_SUBDOMAIN[applianceType] ?? 'pracky'
-  return heurekaSubdomainSearch(subdomain, brand)
+  const encoded = encodeURIComponent(brand.trim())
+  return `https://${subdomain}.heureka.cz/f:q:${encoded}/`
 }
 
 // Props pro Heureka affiliate <a> element. Vrací class a data-trixam-positionid,
