@@ -39,3 +39,5 @@ next-env.d.ts
 scripts/*
 !scripts/enrich-content.mjs
 !scripts/audit-ui.mjs
+!scripts/miele-rewrites.json
+!scripts/apply-miele-rewrites.ts

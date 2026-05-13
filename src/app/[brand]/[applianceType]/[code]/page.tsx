@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { APPLIANCE_LABELS, SUBTYPE_LABELS, normalizeListItem, normalizeBodyText, buildServiceCtaUrl, slugify, REPAIR_PRICE_RANGES, BRAND_RESET_INSTRUCTIONS, BRAND_RESET_FALLBACK } from '@/lib/utils'
+import { APPLIANCE_LABELS, SUBTYPE_LABELS, normalizeListItem, normalizeBodyText, buildServiceCtaUrl, slugify, REPAIR_PRICE_RANGES, BRAND_RESET_INSTRUCTIONS, BRAND_RESET_FALLBACK, shouldNoIndex } from '@/lib/utils'
 import SeverityBadge from '@/components/SeverityBadge'
 import CommentsSection from '@/components/CommentsSection'
 import CopyCodeButton from '@/components/CopyCodeButton'
@@ -38,10 +38,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const priceHint = REPAIR_PRICE_RANGES[entry.severityLevel] ?? REPAIR_PRICE_RANGES[2]
     const priceRangeLabel = `${priceHint.min.toLocaleString('cs-CZ')}–${priceHint.max.toLocaleString('cs-CZ')} Kč`
     const description = `${entry.shortMeaning} ✓ Cena opravy ${priceRangeLabel} ✓ Reset spotřebiče ✓ Co zkusit doma ✓ Kdy volat servis.`
+    const noIndex = shouldNoIndex(entry.brand, entry.slug)
     return {
       title,
       description,
       alternates: { canonical },
+      robots: noIndex ? { index: false, follow: true } : undefined,
       openGraph: {
         title,
         description,

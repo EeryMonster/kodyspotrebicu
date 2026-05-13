@@ -103,6 +103,28 @@ export const SEVERITY_DESCRIPTIONS: Record<number, string> = {
 
 export const SERVICE_CTA_URL = '/servis'
 
+// Whitelist Miele kódů, které byly přepsány vlastními slovy (nejsou scraped).
+// Ostatní Miele kódy mají noindex, dokud nebudou přepsány.
+export const REWRITTEN_MIELE_SLUGS = new Set<string>([
+  'miele-mycka-f12',
+  'miele-mycka-f70',
+  'miele-mycka-f11',
+  'miele-mycka-blika-kontrolka-vypousteni-vody',
+  'miele-mycka-pritokodtok-blika-a-sviti',
+  'miele-mycka-f1',
+  'miele-mycka-f2',
+  'miele-mycka-f18',
+  'miele-mycka-f19',
+  'miele-mycka-f594',
+])
+
+export function shouldNoIndex(brand: string, slug: string): boolean {
+  if (brand.toLowerCase() === 'miele' && !REWRITTEN_MIELE_SLUGS.has(slug)) {
+    return true
+  }
+  return false
+}
+
 export function buildServiceCtaUrl(opts: { brand?: string; applianceType?: string; code?: string }): string {
   const params = new URLSearchParams()
   if (opts.brand) params.set('znacka', opts.brand)

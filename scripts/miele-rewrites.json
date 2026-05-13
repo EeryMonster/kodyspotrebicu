@@ -1,0 +1,242 @@
+{
+  "rewrittenSlugs": [
+    "miele-mycka-f12",
+    "miele-mycka-f70",
+    "miele-mycka-f11",
+    "miele-mycka-blika-kontrolka-vypousteni-vody",
+    "miele-mycka-pritokodtok-blika-a-sviti",
+    "miele-mycka-f1",
+    "miele-mycka-f2",
+    "miele-mycka-f18",
+    "miele-mycka-f19",
+    "miele-mycka-f594"
+  ],
+  "rewrites": [
+    {
+      "slug": "miele-mycka-f12",
+      "shortMeaning": "Myčka Miele nedokáže napustit dostatečné množství vody v očekávaném čase. Chyba se zobrazí, když je zavřený nebo omezený přívod, zanesené filtrační sítko v přívodní hadici nebo nízký tlak v rozvodu.",
+      "likelyCauses": [
+        "Zavřený nebo částečně otevřený přívodní ventil za myčkou",
+        "Zanesené filtrační sítko v přívodní hadici (typické u tvrdé vody)",
+        "Nízký tlak vody v rozvodu (pod 1 bar)",
+        "Zalomená nebo přimáčknutá přívodní hadice za myčkou",
+        "Aktivovaný systém AquaStop po předchozím úniku",
+        "Vadný magnetický ventil nebo snímač průtoku v myčce"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Otevřete vodovodní ventil za myčkou naplno. Pokud byl přivřený (např. po práci instalatéra), spusťte krátký program – chyba obvykle zmizí.",
+        "Pokud byl ventil otevřený, připravte se na čištění sítka: vypněte myčku tlačítkem Vypnuto, vytáhněte zástrčku ze zásuvky, zavřete přívodní ventil a pod pracovní zónu položte hadr.",
+        "Odšroubujte přívodní hadici od ventilu pomalu, aby zbytková voda vytekla do hadru.",
+        "Vyjměte filtrační sítko z plastového pouzdra přípojky – opatrně ho vytáhněte kombinačkami nebo špičatými kleštěmi za krček. Stejně vyjměte těsnění ze šroubovací objímky.",
+        "Propláchněte sítko pod tekoucí vodou, dokud nepřestane vytékat zakalená voda. Při poškození ho vyměňte za nové.",
+        "Vraťte sítko zpět – nejdřív sítko, pak těsnění. Dbejte na správné usazení, jinak hadice po spuštění teče.",
+        "Připojte hadici k ventilu, dotáhněte šroubovací objímku rukou (bez nářadí). Pomalu otevřete ventil a sledujte těsnost spojů.",
+        "Pokud uniká voda, dotáhněte objímku pevněji nebo zkontrolujte usazení těsnění.",
+        "Zapojte myčku do sítě a spusťte krátký program (Eco). Sledujte, zda chyba znovu nevyskytne."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud chyba přetrvává i po vyčištění sítka a kontrole ventilu i tlaku vody, jde pravděpodobně o vnitřní vadu – magnetický ventil přívodu nebo snímač průtoku. Tyto díly musí diagnostikovat servis. Cena výjezdu + první hodiny u nezávislých servisů orientačně 680–1 080 Kč, díl se účtuje zvlášť."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f70",
+      "shortMeaning": "Aktivoval se systém Waterproof – ochrana myčky Miele proti úniku vody do okolí. V základně spotřebiče se nahromadila voda a bezpečnostní senzor přerušil program.",
+      "likelyCauses": [
+        "Skutečný únik vody uvnitř myčky (prasklá hadice, vadné těsnění bubnu, netěsná spojka)",
+        "Přetečení vody z mycího prostoru kvůli vadnému senzoru hladiny",
+        "Vlhkost v základně po vylití na podlahu nebo zaplavení sousedním spotřebičem",
+        "Vadný plovák bezpečnostního senzoru Waterproof",
+        "Zkrat na elektronice způsobený vlhkostí"
+      ],
+      "canUserTrySafeChecks": false,
+      "safeChecks": [
+        "Neuvolňujte ochranu sami – senzor je elektrický a manipulace pod napětím je nebezpečná.",
+        "Vypněte myčku ze sítě a zavřete přívodní ventil vody.",
+        "Pokud vidíte vodu pod myčkou nebo v jejím okolí, vysušte oblast a ujistěte se, že nepřišla z jiného zdroje (např. zatékající dřez).",
+        "Nepokoušejte se myčku resetovat opakovaným zapínáním – Waterproof se aktivuje znovu a může se poškodit elektronika."
+      ],
+      "whenToStopAndCallService": [
+        "Chyba F70 zpravidla vyžaduje servisní zásah – technik musí myčku vyklopit a najít zdroj úniku. Po opravě se ochrana Waterproof manuálně resetuje. Cena výjezdu + první hodiny u nezávislých servisů orientačně 680–1 080 Kč, oprava netěsnosti zpravidla 1 500–3 000 Kč podle rozsahu."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f11",
+      "shortMeaning": "U novějších myček Miele řad G7000 a G5000 Discovery (od roku 2019) označuje F11 problém s vypouštěním vody, kdy v mycím prostoru zůstává voda. Obvykle souvisí s ucpaným filtrem, vypouštěcím čerpadlem nebo špatně usazeným krytem čerpadla.",
+      "likelyCauses": [
+        "Zanesená kombinace sítek v mycím prostoru (jemné + hrubé sítko)",
+        "Cizí předmět v lopatce vypouštěcího čerpadla (sklenice, kost, plastová mince)",
+        "Špatně usazený nebo nedotažený kryt vypouštěcího čerpadla",
+        "Zalomená nebo ucpaná vypouštěcí hadice za myčkou",
+        "Ucpaný sifon pod dřezem nebo v odpadní šachtě",
+        "Vadné vypouštěcí čerpadlo (motor, ložisko)"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Vyjměte koše z myčky a odšroubujte spodní kombinaci sítek (jemné + hrubé). Propláchněte pod tekoucí vodou, dokud nepřestanou vypadávat zbytky.",
+        "Po vyjmutí sítek se zpřístupní kryt vypouštěcího čerpadla. Pootočte krytem proti směru hodinových ručiček a vyjměte ho.",
+        "Pomocí prstu nebo plastové lžíce zkontrolujte lopatku čerpadla – nesmí být zablokovaná. Vytáhněte případné cizí předměty.",
+        "Vraťte kryt zpět a pevně dotáhněte ve směru hodinových ručiček, dokud nezapadne.",
+        "Pokud je v mycím prostoru hodně vody, ručně ji vyčerpejte (houba + kbelík), aby šlo otevřít sifon.",
+        "Vyjměte koše a vyjměte hadicí vypouštěcí trubku. Zkontrolujte, zda není zalomená nebo přimáčknutá.",
+        "Zkontrolujte sifon pod dřezem (případně odpadní šachtu) – ucpaný sifon je častá příčina.",
+        "Po všech krocích zavřete myčku a spusťte krátký program. Pokud chyba zmizí, problém byl mechanický."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud chyba přetrvává i po vyčištění sítek, čerpadla i sifonu, je vadné vypouštěcí čerpadlo (motor nebo elektronika). Výměna čerpadla u nezávislého servisu vychází orientačně na 1 500–2 800 Kč včetně práce, autorizovaný servis Miele bývá dražší."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-blika-kontrolka-vypousteni-vody",
+      "shortMeaning": "U starších myček Miele bez displeje (řady G4xxx a starší) bliká kontrolka Vypouštění vody, program se automaticky přerušuje a v mycím prostoru zůstává voda. Nejčastěji jde o zanesené sítko nebo ucpané vypouštěcí čerpadlo.",
+      "likelyCauses": [
+        "Zanesená kombinace sítek v mycím prostoru (zbytky jídla, žmolky)",
+        "Cizí předmět v lopatce vypouštěcího čerpadla",
+        "Zalomená nebo ucpaná vypouštěcí hadice",
+        "Ucpaný sifon nebo odpadní šachta",
+        "Vadné vypouštěcí čerpadlo"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Vyjměte koše a odšroubujte spodní sítka. Propláchněte je pod tekoucí vodou.",
+        "Zkontrolujte čerpadlo: po vyjmutí sítek vyjměte kryt vypouštěcího čerpadla otočením proti směru hodinových ručiček.",
+        "Prstem opatrně otočte lopatkou čerpadla – nesmí být zablokovaná. Vytáhněte případné cizí předměty (skla, kostičky).",
+        "Vraťte kryt zpět a dotáhněte. Pokud je v myčce stojící voda, ručně ji vyčerpejte (houba + kbelík).",
+        "Zkontrolujte vypouštěcí hadici za myčkou – nesmí být zalomená nebo přimáčknutá.",
+        "Zkontrolujte sifon pod dřezem nebo odpadní šachtu – často ucpané po předchozím prání.",
+        "Po krocích spusťte krátký program a sledujte, zda kontrolka přestane blikat."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud kontrolka stále bliká i po čištění sítek a čerpadla, jde o vnitřní závadu – nejčastěji motor vypouštěcího čerpadla. Cena výměny u nezávislého servisu orientačně 1 500–2 800 Kč včetně práce."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-pritokodtok-blika-a-sviti",
+      "shortMeaning": "Myčka Miele současně signalizuje problém v plnění i vypouštění vody. Buď jde o poruchu obou systémů naráz, nebo o nadřazenou závadu řídicí jednotky či senzoru tlaku. V mycím prostoru obvykle zůstává voda.",
+      "likelyCauses": [
+        "Současně ucpaný filtrační systém na přítoku (sítko v hadici) i na odtoku (kombinační sítka v myčce)",
+        "Vadný senzor hladiny vody (presostat) – posílá chybné údaje do řídicí jednotky",
+        "Aktivovaný systém AquaStop kvůli detekovanému úniku v základně",
+        "Porucha řídicí desky (méně časté, ale závažné)",
+        "Současně zalomená přívodní i vypouštěcí hadice (typické po stěhování nebo nedávné instalaci)"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Zkontrolujte přívod a odtok vody: otevřete přívodní ventil naplno, sledujte za myčkou zalomení přívodní i vypouštěcí hadice.",
+        "Vyčistěte filtrační sítka: vyjměte koše a odšroubujte spodní sítka (jemné + hrubé). Propláchněte pod tekoucí vodou – tohle řeší zhruba 40 % případů.",
+        "Před manipulací s hadicemi vypněte myčku ze sítě a zavřete přívodní ventil. Odšroubujte přívodní hadici od ventilu, vyjměte filtrační sítko a propláchněte ho.",
+        "Pokud je v myčce stojící voda, ručně ji vyčerpejte (houba + kbelík) přes spodní vanu.",
+        "Zkontrolujte sifon pod dřezem nebo v odpadní šachtě – ucpaný sifon je častá příčina chyb vypouštění.",
+        "Resetujte myčku: vypněte ze sítě na 60 sekund, zapojte zpět, spusťte krátký program. Pokud se chyba vrátí, jde o vnitřní vadu."
+      ],
+      "whenToStopAndCallService": [
+        "Kombinovaná chyba přítoku i odtoku obvykle ukazuje na poruchu senzoru hladiny vody (presostatu) nebo řídicí desky – tyto díly musí diagnostikovat servis. Cena výjezdu + první hodiny u nezávislých servisů orientačně 680–1 080 Kč, výměna komponenty se účtuje zvlášť dle vadného dílu."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f1",
+      "shortMeaning": "Chyba F1 u myčky Miele označuje poruchu teplotního čidla ohřevu vody – nejčastěji zkrat na NTC senzoru, který sleduje teplotu cirkulační vody. Myčka po této chybě nedokončí program nebo vůbec nezačne ohřívat.",
+      "likelyCauses": [
+        "Zkrat na NTC teplotním čidle (nejčastější)",
+        "Vadné kabelové spojení mezi čidlem a řídicí deskou",
+        "Vápenné usazeniny na čidle (typické u tvrdé vody bez pravidelné soli)",
+        "Vadná řídicí deska (méně časté)"
+      ],
+      "canUserTrySafeChecks": false,
+      "safeChecks": [
+        "Tuto chybu uživatel sám neopraví – jde o elektronickou diagnostiku vyžadující servisní nástroje.",
+        "Před voláním servisu zkontrolujte, zda máte ve schránce dostatek regenerační soli – chronický nedostatek soli urychluje opotřebení čidla."
+      ],
+      "whenToStopAndCallService": [
+        "F1 zpravidla vyžaduje výměnu NTC čidla. U nezávislých servisů orientačně 1 200–2 000 Kč včetně práce, autorizovaný servis Miele bývá dražší. Pokud čidlo selhalo kvůli vápníku, po opravě doporučujeme nastavit tvrdost vody správně a doplňovat sůl."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f2",
+      "shortMeaning": "Chyba F2 u Miele myčky signalizuje rozdíl mezi naměřenou a očekávanou teplotou vody – typicky vadný NTC teplotní senzor, narušená izolace topného tělesa nebo problém s ohřevem.",
+      "likelyCauses": [
+        "Vadný NTC teplotní senzor",
+        "Narušená izolace nebo částečný zkrat topného tělesa",
+        "Vápenné usazeniny snižující účinnost ohřevu",
+        "Vadná řídicí deska"
+      ],
+      "canUserTrySafeChecks": false,
+      "safeChecks": [
+        "Tuto chybu uživatel sám neopraví – vyžaduje servisní diagnostiku a výměnu elektronických komponent.",
+        "Před voláním servisu spusťte myčku jednou bez nádobí na nejvyšší teplotu se speciálním čističem myček – občas pomůže odstranění vápenných usazenin."
+      ],
+      "whenToStopAndCallService": [
+        "F2 obvykle vyžaduje výměnu NTC čidla nebo topného tělesa. Cena u nezávislých servisů orientačně 1 500–3 000 Kč podle vadné komponenty, autorizovaný servis Miele bývá dražší."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f18",
+      "shortMeaning": "Chyba F18 u Miele myčky označuje překročení časového limitu pro odčerpání vody. V mycím prostoru zůstává voda, kterou se myčka nepodařilo včas vypustit.",
+      "likelyCauses": [
+        "Zanesené sítko v mycím prostoru",
+        "Cizí předmět ve vypouštěcím čerpadle",
+        "Zalomená nebo ucpaná vypouštěcí hadice",
+        "Ucpaný sifon pod dřezem",
+        "Vadné vypouštěcí čerpadlo"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Vyjměte koše a odšroubujte spodní sítka. Propláchněte pod tekoucí vodou.",
+        "Po vyjmutí sítek vyjměte kryt vypouštěcího čerpadla (otočení proti směru hodinových ručiček).",
+        "Prstem ověřte volný pohyb lopatky čerpadla – nesmí být zablokovaná cizím předmětem.",
+        "Vraťte kryt a sítka zpět. Pokud je v myčce stojící voda, ručně ji vyčerpejte (houba + kbelík).",
+        "Zkontrolujte vypouštěcí hadici za myčkou (zalomení) a sifon pod dřezem (ucpání).",
+        "Spusťte krátký program a sledujte, zda chyba zmizí."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud chyba přetrvává, jde o vadné vypouštěcí čerpadlo. Výměna u nezávislého servisu orientačně 1 500–2 800 Kč včetně práce."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f19",
+      "shortMeaning": "Chyba F19 u Miele myčky znamená překročení časového limitu pro ohřátí vody na cílovou teplotu. Voda se neohřívá vůbec nebo příliš pomalu.",
+      "likelyCauses": [
+        "Vadné topné těleso (přerušený obvod)",
+        "Vápenné usazeniny na topném tělese – izolují a brání přenosu tepla",
+        "Vadný NTC teplotní senzor (myčka nezjistí, že už ohřívá)",
+        "Vadná řídicí deska / spínací relé topení"
+      ],
+      "canUserTrySafeChecks": false,
+      "safeChecks": [
+        "Tuto chybu uživatel sám neopraví – vyžaduje měření odporu topného tělesa a NTC senzoru servisními nástroji.",
+        "Pokud je myčka starší a v lokalitě je tvrdá voda, příčinou bývají vápenné usazeniny. Po opravě doporučujeme pravidelné odvápňování (1× za 3 měsíce)."
+      ],
+      "whenToStopAndCallService": [
+        "F19 obvykle vyžaduje výměnu topného tělesa nebo NTC senzoru. Cena u nezávislého servisu orientačně 1 500–3 000 Kč včetně práce."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f594",
+      "shortMeaning": "Chyba F594 u Miele myčky označuje poruchu cirkulačního čerpadla – motoru, který tlačí vodu do ostřikovacích ramen. Myčka voda nedotéká k tryskám, nádobí zůstává neumyté.",
+      "likelyCauses": [
+        "Zaseknuté ložisko cirkulačního čerpadla (běžné po 6–10 letech provozu)",
+        "Cizí předmět v lopatce čerpadla",
+        "Vadná řídicí deska / spínací modul motoru",
+        "Spálená vinutí motoru čerpadla (často po nedostatku vody)"
+      ],
+      "canUserTrySafeChecks": false,
+      "safeChecks": [
+        "Tuto chybu uživatel sám neopraví – cirkulační čerpadlo je integrovaně namontované ve spodní vaně myčky a vyžaduje rozebrání spotřebiče.",
+        "Před voláním servisu zkontrolujte, zda je v myčce dostatek vody (po napuštění) – občas se chyba zobrazí kvůli nedostatečnému plnění (viz chyby F12, F13)."
+      ],
+      "whenToStopAndCallService": [
+        "F594 zpravidla vyžaduje výměnu cirkulačního čerpadla. Cena u nezávislého servisu orientačně 2 500–4 500 Kč včetně práce (díl + 2 hodiny rozebrání), autorizovaný servis Miele bývá dražší."
+      ],
+      "sourceUrl": null
+    }
+  ]
+}
