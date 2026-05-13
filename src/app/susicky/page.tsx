@@ -18,7 +18,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
     count = await prisma.errorCode.count({ where: { applianceType: 'susicka' } })
   } catch { /* DB not ready */ }
   const countLabel = count > 0 ? `${count}+` : 'Stovky'
-  const title = `Chybové kódy sušiček: ${countLabel} kódů Bosch, Siemens, AEG, Whirlpool (${year})`
+  const title = `Chybové kódy sušiček: ${countLabel} kódů LG, AEG, Electrolux, Bosch (${year})`
   const description = `${countLabel} chybových kódů sušiček (kondenzační, odtahová, tepelné čerpadlo). ✓ Vysvětlení kódů E60, E63, E01, F01 ✓ Cena opravy ✓ Návod krok za krokem.`
   return {
     title,

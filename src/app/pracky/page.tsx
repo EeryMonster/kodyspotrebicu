@@ -18,7 +18,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   } catch { /* DB not ready */ }
   const countLabel = count > 0 ? `${count}+` : 'Stovky'
   const title = `Chybové kódy praček: ${countLabel} kódů Bosch, AEG, Samsung, LG (${year})`
-  const description = `${countLabel} chybových kódů praček s vysvětlením, návodem a cenou opravy. ✓ Bosch ✓ Siemens ✓ AEG ✓ Electrolux ✓ Samsung ✓ Beko ✓ Whirlpool ✓ LG ✓ Miele.`
+  const description = `${countLabel} chybových kódů praček s vysvětlením, návodem a cenou opravy. ✓ Bosch ✓ Siemens ✓ AEG ✓ Electrolux ✓ Samsung ✓ Beko ✓ Whirlpool ✓ LG.`
   return {
     title,
     description,

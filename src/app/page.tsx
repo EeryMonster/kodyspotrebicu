@@ -17,7 +17,7 @@ const APPLIANCE_ICON: Record<ApplianceIcon, React.ComponentType<{ className?: st
 
 export const metadata: Metadata = {
   title: { absolute: 'Chybové kódy spotřebičů – databáze chyb praček, myček a sušiček | KódySpotřebičů.cz' },
-  description: 'Kompletní databáze chybových kódů praček, myček nádobí a sušiček. Bosch, Siemens, AEG, Electrolux, Samsung, Beko. Zjistěte příčinu chyby a jak postupovat.',
+  description: 'Databáze chybových kódů 9 značek praček, myček a sušiček: Bosch, Siemens, Samsung, AEG, Electrolux, Beko, Whirlpool, LG, Miele. Najděte řešení.',
   alternates: { canonical: '/' },
 }
 
@@ -88,9 +88,28 @@ export default async function HomePage() {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': 'https://www.kodyspotrebicu.cz/#organization',
     name: 'KódySpotřebičů.cz',
     url: 'https://www.kodyspotrebicu.cz',
-    description: 'Databáze chybových kódů domácích spotřebičů – pračky, myčky, sušičky.',
+    description: 'Nezávislá databáze chybových kódů domácích spotřebičů – pračky, myčky, sušičky 9 značek.',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodyspotrebicu.cz/icon.png',
+      width: 1024,
+      height: 1024,
+    },
+    founder: {
+      '@type': 'Person',
+      name: 'Ondřej Tichý',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      email: 'info@kodyspotrebicu.cz',
+      availableLanguage: ['Czech'],
+      areaServed: 'CZ',
+    },
+    areaServed: { '@type': 'Country', name: 'Česká republika' },
   }
 
   return (

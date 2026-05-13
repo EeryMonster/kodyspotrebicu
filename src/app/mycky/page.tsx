@@ -17,8 +17,8 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
     count = await prisma.errorCode.count({ where: { applianceType: 'mycka' } })
   } catch { /* DB not ready */ }
   const countLabel = count > 0 ? `${count}+` : 'Stovky'
-  const title = `Chybové kódy myček: ${countLabel} kódů Bosch, Siemens, AEG, Whirlpool (${year})`
-  const description = `${countLabel} chybových kódů myček nádobí: E22, E25, E09, F1, i20, F6 a další. ✓ Vysvětlení každého kódu ✓ Cena opravy ✓ Návod krok za krokem.`
+  const title = `Chybové kódy myček: ${countLabel} kódů Miele, Bosch, Siemens, AEG (${year})`
+  const description = `${countLabel} chybových kódů myček nádobí značek Miele, Bosch, Siemens, AEG, Electrolux, Samsung, Beko, Whirlpool, LG. ✓ Vysvětlení ✓ Cena opravy ✓ Návod.`
   return {
     title,
     description,

@@ -227,26 +227,11 @@ export default async function ErrorCodePage({ params }: Props) {
     },
   }
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Úvod', item: 'https://www.kodyspotrebicu.cz' },
-      { '@type': 'ListItem', position: 2, name: entry.brand, item: `https://www.kodyspotrebicu.cz/znacka/${entry.brand.toLowerCase()}` },
-      { '@type': 'ListItem', position: 3, name: appliancePathLabel, item: `https://www.kodyspotrebicu.cz/${appliancePath}` },
-      { '@type': 'ListItem', position: 4, name: entry.code, item: canonicalUrl },
-    ],
-  }
-
   return (
     <div className="w-full max-w-[1000px] mx-auto px-4 py-8 md:py-12 flex flex-col gap-10">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {howToSchema && (
         <script
