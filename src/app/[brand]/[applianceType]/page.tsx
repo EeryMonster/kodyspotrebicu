@@ -4,8 +4,35 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { APPLIANCE_LABELS, APPLIANCE_LABELS_GEN_PL, APPLIANCE_FROM_SLUG, APPLIANCE_SLUGS, BRANDS, SEVERITY_LABELS, SEVERITY_COLORS } from '@/lib/utils'
+import { BRAND_CONTENT } from '@/lib/brand-content'
 import SeverityBadge from '@/components/SeverityBadge'
-import { ChevronRight } from 'lucide-react'
+import { ChevronRight, Lightbulb, Layers } from 'lucide-react'
+
+const APPLIANCE_LABEL_FROM_BRAND_CONTENT: Record<string, 'pracka' | 'mycka' | 'susicka'> = {
+  'pračka': 'pracka',
+  'myčka': 'mycka',
+  'sušička': 'susicka',
+}
+
+const APPLIANCE_SINGULAR: Record<string, string> = {
+  pracka: 'pračky',
+  mycka: 'myčky',
+  susicka: 'sušičky',
+}
+
+function matchesModelLineForAppliance(name: string, description: string, applianceType: string): boolean {
+  const haystack = `${name} ${description}`.toLowerCase()
+  // Match je pozitivní pouze pokud popis zmiňuje daný typ spotřebiče a NE jiný typ
+  // (např. modelLine "Pračky W1" se nesmí objevit na /miele/mycky). Kromě stem "prač/myč/suš"
+  // matchneme i typické aktivity (praní, mytí, sušení) a buben/nádobí jako kontext.
+  const hasPracka = /prač|praní|prát|buben|prádl/.test(haystack)
+  const hasMycka = /myč|mytí|mýt|nádob/.test(haystack)
+  const hasSusicka = /suš|sušen/.test(haystack)
+  if (applianceType === 'pracka') return hasPracka && !hasMycka && !hasSusicka
+  if (applianceType === 'mycka') return hasMycka && !hasPracka && !hasSusicka
+  if (applianceType === 'susicka') return hasSusicka && !hasPracka && !hasMycka
+  return false
+}
 
 interface Props {
   params: { brand: string; applianceType: string }
@@ -108,6 +135,22 @@ export default async function BrandAppliancePage({ params }: Props) {
   }
   const severityOrder = [1, 2, 3, 4] as const
 
+  // Pull rich brand-content (ručně psaný obsah) a filtrovat na aktuální spotřebič,
+  // aby byl text /[brand]/[applianceType] unikátní vůči /znacka/[brand].
+  const brandContent = BRAND_CONTENT[brandSlug]
+  const applianceTopCodes = brandContent?.topCodes?.filter(
+    (tc) => APPLIANCE_LABEL_FROM_BRAND_CONTENT[tc.appliance] === applianceType
+  ) ?? []
+  const applianceModelLines = brandContent?.modelLines?.filter(
+    (ml) => matchesModelLineForAppliance(ml.name, ml.description, applianceType)
+  ) ?? []
+  const codeBySlug = new Map(codes.map((c) => [c.code.toUpperCase(), c]))
+  const applianceTopCodesWithSlug = applianceTopCodes.map((tc) => ({
+    ...tc,
+    match: codeBySlug.get(tc.code.toUpperCase()),
+  }))
+  const applianceSingular = APPLIANCE_SINGULAR[applianceType] || applianceGenPl
+
   return (
     <div className="max-w-5xl mx-auto px-4 py-8">
       <script
@@ -130,6 +173,78 @@ export default async function BrandAppliancePage({ params }: Props) {
       <p className="text-gray-700 leading-relaxed mb-6 max-w-3xl">
         {buildIntro(brandName, applianceGenPl, codes.length)}
       </p>
+
+      {applianceTopCodesWithSlug.length > 0 && (
+        <section className="bg-white border border-gray-200 rounded-xl p-5 md:p-6 mb-8 shadow-sm">
+          <h2 className="text-base md:text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2.5">
+            <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-accent-50 text-accent-700">
+              <Lightbulb className="w-4 h-4" />
+            </span>
+            Nejčastější chybové kódy {applianceSingular} {brandName}
+          </h2>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
+            {applianceTopCodesWithSlug.map((tc, i) => {
+              const badge = (
+                <span className="font-mono font-bold text-brand-primary-dark bg-brand-soft border border-brand-soft-border px-2 py-0.5 rounded shrink-0 min-w-[3.75rem] text-center text-xs leading-relaxed">
+                  {tc.code}
+                </span>
+              )
+              if (tc.match) {
+                return (
+                  <li key={i}>
+                    <Link
+                      href={`/${brandSlug}/${appliancePathSlug}/${tc.match.slug}`}
+                      className="flex items-start gap-3 text-sm -mx-2 px-2 py-1 rounded hover:bg-accent-50/40 transition-colors group"
+                    >
+                      {badge}
+                      <span className="text-gray-700 leading-relaxed group-hover:text-gray-900">
+                        {tc.tip}
+                      </span>
+                    </Link>
+                  </li>
+                )
+              }
+              return (
+                <li key={i} className="flex items-start gap-3 text-sm">
+                  {badge}
+                  <span className="text-gray-700 leading-relaxed">{tc.tip}</span>
+                </li>
+              )
+            })}
+          </ul>
+        </section>
+      )}
+
+      {applianceModelLines.length > 0 && (
+        <section className="bg-white border border-gray-200 rounded-xl p-5 md:p-6 mb-8 shadow-sm">
+          <h2 className="text-base md:text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2.5">
+            <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-accent-50 text-accent-700">
+              <Layers className="w-4 h-4" />
+            </span>
+            Modelové řady {applianceSingular} {brandName}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {applianceModelLines.map((line, i) => {
+              const isTopTier = i === applianceModelLines.length - 1
+              return (
+                <div
+                  key={i}
+                  className={`relative rounded-lg p-4 transition-colors ${
+                    isTopTier
+                      ? 'bg-accent-50/60 border border-accent-300/60'
+                      : 'bg-gray-50/60 border border-gray-200/60'
+                  }`}
+                >
+                  <h3 className={`text-sm font-semibold mb-2 ${isTopTier ? 'text-accent-700' : 'text-gray-900'}`}>
+                    {line.name}
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{line.description}</p>
+                </div>
+              )
+            })}
+          </div>
+        </section>
+      )}
 
       {/* Quick reference table — high SEO value, captures featured snippet */}
       <section className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm mb-10">

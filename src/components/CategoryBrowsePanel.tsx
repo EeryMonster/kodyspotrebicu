@@ -2,6 +2,12 @@ import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
 import CategoryFilteredGrid from './CategoryFilteredGrid'
 
+const APPLIANCE_PATHS: Record<'pracka' | 'mycka' | 'susicka', string> = {
+  pracka: 'pracky',
+  mycka: 'mycky',
+  susicka: 'susicky',
+}
+
 interface Code {
   id: number
   code: string
@@ -52,10 +58,11 @@ export default async function CategoryBrowsePanel({ applianceType, categoryLabel
             {brands.map(({ brand, count }) => {
               const slug = brand.toLowerCase()
               const display = brand.charAt(0).toUpperCase() + brand.slice(1).toLowerCase()
+              const appliancePath = APPLIANCE_PATHS[applianceType]
               return (
                 <Link
                   key={brand}
-                  href={`/znacka/${slug}`}
+                  href={`/${slug}/${appliancePath}`}
                   className="group flex items-center justify-between gap-2 px-4 py-3 bg-gray-50/60 hover:bg-accent-50/60 border border-gray-200 hover:border-accent-300 rounded-lg transition-colors"
                 >
                   <span className="text-sm font-semibold text-gray-900 group-hover:text-accent-700">

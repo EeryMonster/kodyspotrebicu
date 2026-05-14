@@ -338,10 +338,10 @@ export default async function BrandPage({ params }: Props) {
                 {APPLIANCE_LABELS[type] || type} ({typeCodes.length})
               </h2>
               <Link
-                href={`/${APPLIANCE_PATHS[type] || type}`}
+                href={`/${brandSlug}/${APPLIANCE_PATHS[type] || type}`}
                 className="text-sm text-blue-600 hover:underline"
               >
-                Všechny {APPLIANCE_LABELS[type]?.toLowerCase() || type}
+                Všechny {APPLIANCE_LABELS[type]?.toLowerCase() || type} {brandName}
               </Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
