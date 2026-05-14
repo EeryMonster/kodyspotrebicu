@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { APPLIANCE_LABELS, SUBTYPE_LABELS, normalizeListItem, normalizeBodyText, buildServiceCtaUrl, slugify, REPAIR_PRICE_RANGES, getRepairPriceInfo, BRAND_RESET_INSTRUCTIONS, BRAND_RESET_FALLBACK, shouldNoIndex } from '@/lib/utils'
+import { BRAND_CONTENT } from '@/lib/brand-content'
 import SeverityBadge from '@/components/SeverityBadge'
 import CommentsSection from '@/components/CommentsSection'
 import CopyCodeButton from '@/components/CopyCodeButton'
@@ -142,6 +143,16 @@ export default async function ErrorCodePage({ params }: Props) {
   const faqItems = (entry.faq || []) as { q: string; a: string }[]
   const HOW_TO_RE = /jak\s+(opravit|resetovat|odstranit|vyřešit|vyčistit|vypnout|zbavit|deaktivovat)/i
   const howToFaqItem = faqItems.find(f => HOW_TO_RE.test(f.q)) ?? null
+
+  // Brand context — ručně psaný obsah pro danou značku z brand-content.ts.
+  // Cíl: každá značka má unikátní brand FAQ na detailu kódu, aby se odlišila od sister
+  // brands (např. Siemens E22 ≠ Bosch E22 v BSH group). Vybíráme 2 FAQ položky které
+  // se nepřekrývají s entry.faq (FAQ z DB) — preferujeme code-format a longevity témata.
+  const brandContent = BRAND_CONTENT[entry.brand.toLowerCase()]
+  const existingFaqQuestions = new Set(faqItems.map((f) => f.q.toLowerCase()))
+  const brandFaqItems = (brandContent?.faq ?? [])
+    .filter((bf) => !existingFaqQuestions.has(bf.q.toLowerCase()))
+    .slice(0, 2)
 
   const priceRange = REPAIR_PRICE_RANGES[entry.severityLevel] ?? REPAIR_PRICE_RANGES[2]
   const repairPriceInfo = getRepairPriceInfo(entry.severityLevel, entry.possibleParts)
@@ -562,6 +573,33 @@ export default async function ErrorCodePage({ params }: Props) {
               </div>
             </div>
           )}
+        </section>
+      )}
+
+      {/* Brand context FAQ — značkově specifický doplněk z brand-content.ts.
+          Diferencuje sister brands (BSH: Siemens vs Bosch, Electrolux group: AEG vs Electrolux). */}
+      {brandFaqItems.length > 0 && (
+        <section className="bg-white rounded-xl border border-gray-200 p-6 md:p-8 shadow-sm mt-4">
+          <h2 className="text-lg font-bold text-gray-900 mb-4 tracking-tight">
+            Co byste měli vědět o značce {entry.brand}
+          </h2>
+          <p className="text-sm text-gray-500 mb-5">
+            Doplňující kontext o značce a jejím servisu v ČR – nezávisle na kódu {entry.code}.
+          </p>
+          <dl className="flex flex-col gap-5">
+            {brandFaqItems.map((f, i) => (
+              <div key={i} className="pl-4 border-l-2 border-accent-300/50">
+                <dt className="text-sm font-semibold text-gray-900 mb-1.5 leading-snug">{f.q}</dt>
+                <dd className="text-sm text-gray-600 leading-relaxed">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
+          <Link
+            href={`/znacka/${entry.brand.toLowerCase()}`}
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:underline mt-5"
+          >
+            Více o značce {entry.brand} <ChevronRight className="w-4 h-4" />
+          </Link>
         </section>
       )}
 

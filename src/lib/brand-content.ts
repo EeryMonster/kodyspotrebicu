@@ -283,8 +283,8 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
   },
   electrolux: {
     intro: [
-      'Electrolux je švédský nadnárodní výrobce domácích spotřebičů s více než 100 lety tradice. Pod skupinu Electrolux patří i značky AEG a Zanussi – chybové kódy E10, E20, E30, E40 a další jsou proto u těchto značek z velké části shodné a sdílí servisní síť i platformy.',
-      'Pračky Electrolux používají kódy ve formátu E + číslo a každá desítka označuje konkrétní podsystém: E1x = přívod vody, E2x = vypouštění, E3x = únik / AquaStop, E4x = dveře, E5x = motor, E6x = ohřev, E7x = teplotní čidlo, E8x = programátor, E9x = elektronika. Myčky používají formát I + číslo (I10, I20, I50, I60, I80) a sušičky kombinaci E + číslo (např. E51, E52, E6F).',
+      'Electrolux je švédský nadnárodní výrobce domácích spotřebičů s více než stoletou tradicí (založen 1919 ve Stockholmu). Globálně je druhým největším výrobcem bílého zboží, v Evropě patří do skupiny Electrolux i prémiová AEG a cenově dostupná Zanussi. V ČR má Electrolux silné zastoupení ve střední třídě s důrazem na úsporu energie, ProSense senzory a SteamCare technologii.',
+      'Konkrétní kódy závisí na řadě (UltimateCare, PerfectCare, EcoCare). Číselné podsystémy: 1x = napouštění, 2x = vypouštění a čerpadlo, 3x = AquaStop / přetečení, 4x = zámek dveří, 5x = motor a tachogenerátor, 6x = topné těleso a NTC, 8x = programátor, 9x = elektronika. Myčky Electrolux (řady EEM, ESL, ComfortLift) používají systém I + číslo: I10 plnění vodou, I20 vypouštění, I50 ohřev, I60 čerpadlo a I80 elektronika. Sušičky pracují s kombinovanými kódy E51/E52 (ventilátor a senzor) a E6F (elektronika). Sériové číslo modelu na štítku za dvířky určuje přesný formát kódů.',
     ],
     modelLines: [
       {
@@ -336,8 +336,8 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
   },
   aeg: {
     intro: [
-      'AEG je prémiová značka skupiny Electrolux se silnou tradicí v Německu a Skandinávii. Pračky, myčky a sušičky AEG sdílí konstrukční platformy se značkami Electrolux a Zanussi – chybové kódy E10, E20, E30, E40 a další jsou proto u těchto značek z velké části shodné.',
-      'Chybové kódy AEG praček používají formát E + číslo a každá desítka označuje konkrétní podsystém: E1x = přívod vody, E2x = vypouštění, E3x = únik / AquaStop, E4x = dveře, E5x = motor, E6x = ohřev, E7x = teplotní čidlo, E8x = programátor, E9x = elektronika. Myčky AEG používají formát I + číslo a sušičky systém E + číslo + písmeno (např. E2E, EHC).',
+      'AEG (Allgemeine Elektricitäts-Gesellschaft) je prémiová značka založená roku 1883 v Berlíně, dnes součást švédského Electrolux Group. Výroba spotřebičů AEG probíhá primárně v Rothenburgu a italské Porcii s důrazem na zpracování a tichý chod – v ČR značka cílí na střední třídu a prémium a konkuruje přímo Bosch a Siemens.',
+      'Kódy praček AEG mají formát E + číslo s logickým rozdělením podle podsystému: E11/E13 jsou přívod vody, E21/E23 vypouštění a oběžné kolo, E31/E32 AquaStop a únik, E41–E45 zámek dveří, E51–E59 motor a tachogenerátor, E61–E69 ohřev a topné těleso, E71 NTC senzor a E91/E97 elektronika. Myčky AEG (řady FAVORIT, ProClean, ComfortLift) zobrazují kódy formátu I + číslo, sušičky kombinaci E + číslo + písmeno (E2E, EHC). AEG nabízí v ČR 10letou prodlouženou záruku na ProSteam invertorový motor po registraci a vlastní servisní centrum.',
     ],
     modelLines: [
       {
