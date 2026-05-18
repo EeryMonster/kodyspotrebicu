@@ -2,6 +2,10 @@ import { ImageResponse } from 'next/og'
 import { prisma } from '@/lib/prisma'
 
 export const runtime = 'nodejs'
+// Cache obraz na 24 h — OG image se málokdy mění a chceme minimalizovat DB volaní.
+// Cold-start Neon může první dotaz selhat / timeoutnout, což historicky generovalo 5xx
+// hlášené GSC jako "Chyba serveru" na OG image URL.
+export const revalidate = 86400
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -16,13 +20,16 @@ const APPLIANCE_LABELS: Record<string, string> = {
 }
 
 export default async function Image({ params }: Props) {
-  let entry: { code: string; title: string; brand: string; applianceType: string } | null = null
-  try {
-    entry = await prisma.errorCode.findUnique({
+  // Tvrdý timeout 2s na DB query — pokud Neon studený a nestihne odpovědět,
+  // pokračujeme s fallback obrázkem postaveným z URL params (lepší než 5xx).
+  const dbPromise = prisma.errorCode
+    .findUnique({
       where: { slug: params.code },
       select: { code: true, title: true, brand: true, applianceType: true },
     })
-  } catch { /* ignore */ }
+    .catch(() => null)
+  const timeoutPromise = new Promise<null>((resolve) => setTimeout(() => resolve(null), 2000))
+  const entry = await Promise.race([dbPromise, timeoutPromise])
 
   const code = entry?.code ?? params.code.toUpperCase()
   const title = entry?.title ?? 'Chybový kód spotřebiče'
