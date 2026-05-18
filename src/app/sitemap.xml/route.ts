@@ -20,7 +20,6 @@ export async function GET() {
     { url: `${BASE_URL}/susicky`, changefreq: 'daily', priority: '0.9', lastmod: SITE_UPDATED },
     { url: `${BASE_URL}/problemy`, changefreq: 'weekly', priority: '0.8', lastmod: SITE_UPDATED },
     { url: `${BASE_URL}/servis`, changefreq: 'weekly', priority: '0.85', lastmod: SITE_UPDATED },
-    { url: `${BASE_URL}/hledat`, changefreq: 'monthly', priority: '0.5', lastmod: SITE_UPDATED },
     { url: `${BASE_URL}/o-nas`, changefreq: 'monthly', priority: '0.4', lastmod: SITE_UPDATED },
     { url: `${BASE_URL}/kontakt`, changefreq: 'monthly', priority: '0.4', lastmod: SITE_UPDATED },
     { url: `${BASE_URL}/zasady-ochrany-osobnich-udaju`, changefreq: 'yearly', priority: '0.3', lastmod: SITE_UPDATED },
