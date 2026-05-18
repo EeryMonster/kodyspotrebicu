@@ -8220,8 +8220,8 @@ async function main() {
     },
     {
       slug: 'pracka-tece',
-      title: 'Voda teče z pračky (zezadu, zespoda, při napouštění): příčiny a oprava',
-      description: 'Voda teče z pračky – přívodní hadice, AquaStop, manžeta, zásuvka na prášek nebo nádrž. Příčiny, postup řešení a cena opravy.',
+      title: 'Pračka teče zespoda, zezadu nebo z dávkovače? Najděte únik za 5 minut (2026)',
+      description: 'Pračka teče zespoda, zezadu nebo z přihrádky na prášek? Jak najít zdroj úniku podle místa – hadice, AquaStop, manžeta, čerpadlo, nádrž. Co opravit doma a co svěřit servisu.',
       intro: 'Voda pod pračkou je vždy důvodem k okamžité akci – i malý únik může poškodit podlahu nebo způsobit zkrat. Většinu příčin (přívodní hadice, AquaStop, ucpaná zásuvka) zvládnete opravit sami za 15 minut, závažnější (manžeta, prasklá nádrž) vyžadují servis.',
       sections: [
         {
@@ -8355,8 +8355,8 @@ async function main() {
     },
     {
       slug: 'pracka-nespusti',
-      title: 'Pračka nespustí program',
-      description: 'Pračka nereaguje na spuštění programu.',
+      title: 'Pračka nespustí program: 7 příčin (dveře, modul, voda, displej) — 2026',
+      description: 'Pračka se zapne, ale nespustí program? Projděte 7 příčin – dveřní zámek, dětská pojistka, napouštění vody, modul, displej. Co zkusit doma a kdy volat servis.',
       sections: [
         {
           q: 'Proč pračka nespustí?',
@@ -8374,8 +8374,8 @@ async function main() {
     },
     {
       slug: 'buben-se-neotaci',
-      title: 'Buben pračky se neotáčí',
-      description: 'Buben pračky se neotáčí nebo se otáčí nepravidelně.',
+      title: 'Buben pračky se neotáčí: 5 příčin (řemen, motor, uhlíky, modul)',
+      description: 'Pračka napustí vodu, ale buben se netočí nebo trhá? Diagnostika 5 nejčastějších příčin – řemen, uhlíkové kartáče, motor, řídicí modul, zaseknuté ložisko. Cena opravy a kdy do servisu.',
       sections: [
         {
           q: 'Proč se buben pračky neotáčí?',
@@ -8466,8 +8466,8 @@ async function main() {
     },
     {
       slug: 'mycka-zapacha',
-      title: 'Myčka zapáchá',
-      description: 'Z myčky nebo z nádobí vychází nepříjemný zápach.',
+      title: 'Myčka zapáchá: jak se zbavit zápachu z myčky za 30 minut (návod 2026)',
+      description: 'Z myčky táhne kanál, plíseň nebo zatuchlina? Návod jak vyčistit filtr, sifón, sítka a těsnění + domácí čistič bez chemie. Funguje na Bosch, Siemens, AEG, Whirlpool, Beko.',
       sections: [
         {
           q: 'Proč myčka zapáchá?',
@@ -8743,8 +8743,8 @@ async function main() {
     },
     {
       slug: 'mycka-nedokonci-program',
-      title: 'Myčka nedokončí program',
-      description: 'Myčka se zastaví uprostřed programu, nezačne nebo opakovaně přerušuje mytí.',
+      title: 'Myčka nedokončí program: nejčastější příčiny a rychlá oprava (2026)',
+      description: 'Myčka se zastaví uprostřed mytí, nezačne nebo se vrací k začátku? Příčiny – ucpaný filtr, ohřev vody, NTC senzor, dveřní zámek. Diagnostika krok za krokem pro Bosch, Siemens, AEG, Whirlpool.',
       intro: 'Myčka, která nedokončí program, může mít různé příčiny – od nedovřených dvířek po výpadek proudu. Většinu problémů zvládnete vyřešit sami resetem nebo kontrolou základních věcí.',
       sections: [
         {
@@ -9127,8 +9127,8 @@ async function main() {
     },
     {
       slug: 'jak-vypustit-pracku',
-      title: 'Jak vypustit vodu z pračky (manuálně, bez programu)',
-      description: 'Návod jak nouzově vypustit vodu z pračky přes filtr nebo vypouštěcí hadici, když pračka nereaguje nebo nedokončí cyklus.',
+      title: 'Jak vypustit vodu z pračky za 10 minut: filtr i nouzová hadice (návod 2026)',
+      description: 'Pračka zůstala plná vody? Nouzové vypuštění přes filtr nebo vypouštěcí hadici krok za krokem – pro Bosch, AEG, Samsung, Whirlpool i LG. Bez nářadí, bez servisu.',
       intro: 'Pokud pračka stojí s vodou v bubnu (po vypadnutí proudu, chybě nebo zaseknutí), je třeba ji nouzově vypustit ručně. Nikdy neotvírejte dvířka, dokud je v pračce voda – vyteče vám do koupelny.',
       sections: [
         {
@@ -9180,8 +9180,8 @@ async function main() {
     },
     {
       slug: 'voda-zustava-v-pracce',
-      title: 'Voda zůstává v pračce – pračka nevypouští vodu',
-      description: 'Pračka nevypouští vodu nebo zůstala voda v bubnu po praní – příčiny (filtr, hadice, čerpadlo), postup a cena opravy.',
+      title: 'Pračka nevypouští vodu? 6 příčin a řešení podle značky (návod 2026)',
+      description: 'Voda zůstala v pračce a buben se netočí? Projděte 6 nejčastějších příčin (filtr, hadice, čerpadlo, čidlo) a opravte to doma. Postup pro Bosch, AEG, Samsung, Whirlpool.',
       intro: 'Pokud po praní zůstane voda v bubnu, pračka nevypouští, hučí naprázdno nebo se voda vrací zpět – jde téměř vždy o problém s odčerpáním vody. Nejčastěji ucpaný filtr, vypouštěcí hadice nebo zalomené napojení do odpadu. Většinu příčin vyřešíte sami za 10 minut.',
       sections: [
         {

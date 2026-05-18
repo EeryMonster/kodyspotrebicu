@@ -18,8 +18,8 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
     count = await prisma.errorCode.count({ where: { applianceType: 'susicka' } })
   } catch { /* DB not ready */ }
   const countLabel = count > 0 ? `${count}+` : 'Stovky'
-  const title = `Chybové kódy sušiček: ${countLabel} kódů LG, AEG, Electrolux, Bosch (${year})`
-  const description = `${countLabel} chybových kódů sušiček (kondenzační, odtahová, tepelné čerpadlo). ✓ Vysvětlení kódů E60, E63, E01, F01 ✓ Cena opravy ✓ Návod krok za krokem.`
+  const title = `Chybové kódy sušiček ${year} → E60, E63, F01: význam, oprava, cena`
+  const description = `Sušička hlásí kód E60, E63, E01 nebo F01? Najděte příčinu a cenu opravy. ${countLabel} kódů pro kondenzační, odtahové i tepelně-čerpadlové sušičky Bosch, AEG, Electrolux, Siemens, Samsung, Beko.`
   return {
     title,
     description,

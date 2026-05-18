@@ -30,15 +30,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const applianceLabel = APPLIANCE_LABELS[entry.applianceType] || entry.applianceType
     const canonical = `https://www.kodyspotrebicu.cz/${entry.brand.toLowerCase()}/${appliancePath}/${entry.slug}`
     const year = new Date().getFullYear()
-    // Sémantická šíře titulu: alt-kódy zachytí varianty zápisu (E24 / E 24 / E:24)
-    const altCodesPart = entry.altCodes && entry.altCodes.length > 0
-      ? ` (${entry.altCodes.slice(0, 2).join(' / ')})`
-      : ''
-    // Title pattern obsahuje 3 query intenty: "význam" (co znamená), "oprava" (jak opravit), "cena" (kolik stojí)
-    const title = `Chyba ${entry.code}${altCodesPart} ${entry.brand} ${applianceLabel.toLowerCase()}: význam, oprava a cena (${year})`
+    const brandLabel = entry.brand.charAt(0).toUpperCase() + entry.brand.slice(1)
+    // Title pod ~60 znaků: Google ořezává delší titulky uprostřed.
+    // Alt-codes (E 22 / E:22) přesunuté do description — title bez závorek zvedl CTR.
+    const title = `Chyba ${entry.code} ${brandLabel} ${applianceLabel.toLowerCase()} — oprava, příčina, cena ${year}`
     const priceHint = REPAIR_PRICE_RANGES[entry.severityLevel] ?? REPAIR_PRICE_RANGES[2]
     const priceRangeLabel = `${priceHint.min.toLocaleString('cs-CZ')}–${priceHint.max.toLocaleString('cs-CZ')} Kč`
-    const description = `${entry.shortMeaning} ✓ Cena opravy ${priceRangeLabel} ✓ Reset spotřebiče ✓ Co zkusit doma ✓ Kdy volat servis.`
+    const altCodesHint = entry.altCodes && entry.altCodes.length > 0
+      ? ` (varianty zápisu: ${entry.altCodes.slice(0, 2).join(', ')})`
+      : ''
+    const description = `${entry.shortMeaning}${altCodesHint} Cena opravy ${priceRangeLabel}, reset spotřebiče, co zkusit doma a kdy volat servis.`
     const noIndex = shouldNoIndex(entry.brand, entry.slug)
     return {
       title,

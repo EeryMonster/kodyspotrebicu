@@ -17,8 +17,8 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
     count = await prisma.errorCode.count({ where: { applianceType: 'pracka' } })
   } catch { /* DB not ready */ }
   const countLabel = count > 0 ? `${count}+` : 'Stovky'
-  const title = `Chybové kódy praček: ${countLabel} kódů Bosch, AEG, Samsung, LG (${year})`
-  const description = `${countLabel} chybových kódů praček s vysvětlením, návodem a cenou opravy. ✓ Bosch ✓ Siemens ✓ AEG ✓ Electrolux ✓ Samsung ✓ Beko ✓ Whirlpool ✓ LG.`
+  const title = `Chybové kódy praček ${year} → význam, oprava, cena (Bosch, AEG, Samsung, LG)`
+  const description = `Bliká na pračce kód E20, F40, OE nebo 4C? Najděte přesný význam, příčinu a cenu opravy. ${countLabel} kódů Bosch, Siemens, AEG, Electrolux, Samsung, Beko, Whirlpool, LG.`
   return {
     title,
     description,
