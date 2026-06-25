@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { APPLIANCE_LABELS, SUBTYPE_LABELS, normalizeListItem, normalizeBodyText, buildServiceCtaUrl, slugify, REPAIR_PRICE_RANGES, getRepairPriceInfo, BRAND_RESET_INSTRUCTIONS, BRAND_RESET_FALLBACK, shouldNoIndex } from '@/lib/utils'
+import { APPLIANCE_LABELS, SUBTYPE_LABELS, SEVERITY_LABELS, normalizeListItem, normalizeBodyText, buildServiceCtaUrl, slugify, REPAIR_PRICE_RANGES, getRepairPriceInfo, getRepairTimeEstimate, getTldrAdvice, BRAND_RESET_INSTRUCTIONS, BRAND_RESET_FALLBACK, shouldNoIndex } from '@/lib/utils'
 import { BRAND_CONTENT } from '@/lib/brand-content'
 import SeverityBadge from '@/components/SeverityBadge'
 import CommentsSection from '@/components/CommentsSection'
@@ -13,7 +13,7 @@ import ShareButtons from '@/components/ShareButtons'
 import HelpfulRating from '@/components/HelpfulRating'
 import RelatedParts from '@/components/RelatedParts'
 import NewApplianceCTA from '@/components/NewApplianceCTA'
-import { AlertCircle, AlertTriangle, CheckCircle2, ChevronRight, FileText, LayoutList, PhoneCall, Settings, Wrench, Calendar } from 'lucide-react'
+import { AlertCircle, AlertTriangle, CheckCircle2, ChevronRight, FileText, LayoutList, PhoneCall, Settings, Wrench, Calendar, Zap } from 'lucide-react'
 
 interface Props {
   params: { brand: string; applianceType: string; code: string }
@@ -158,6 +158,16 @@ export default async function ErrorCodePage({ params }: Props) {
   const priceRange = REPAIR_PRICE_RANGES[entry.severityLevel] ?? REPAIR_PRICE_RANGES[2]
   const repairPriceInfo = getRepairPriceInfo(entry.severityLevel, entry.possibleParts)
   const resetInstruction = BRAND_RESET_INSTRUCTIONS[entry.brand.toLowerCase()] ?? BRAND_RESET_FALLBACK
+
+  // TL;DR „Rychlý přehled" — per-page unikátní úvodní blok. Kombinace
+  // severity × DIY × cena × hlavní příčina × altCodes generuje dostatek
+  // unikátního textu, aby Google přestal tyto stránky clusterovat jako duplicity.
+  const tldrAdvice = getTldrAdvice(entry.severityLevel, entry.canUserTrySafeChecks)
+  const repairTimeEstimate = getRepairTimeEstimate(entry.severityLevel)
+  const primaryCause = entry.likelyCauses.length > 0 ? normalizeListItem(entry.likelyCauses[0]) : null
+  const diyVerdict = entry.canUserTrySafeChecks
+    ? (entry.safeChecks.length > 0 ? `Ano — ${entry.safeChecks.length} bezpečných kroků` : 'Ano, lze zkusit')
+    : 'Ne — volat servis'
 
   const ogImageUrl = `https://www.kodyspotrebicu.cz/${entry.brand.toLowerCase()}/${appliancePath}/${entry.slug}/opengraph-image`
 
@@ -313,6 +323,59 @@ export default async function ErrorCodePage({ params }: Props) {
           </div>
         </div>
       </header>
+
+      {/* Rychlý přehled (TL;DR) — per-code unikátní souhrn faktů.
+          Cíl: dodat každé code-detail stránce jedinečnou kombinaci textu
+          (severity-action advice × cena × doba × DIY × hlavní příčina × altCodes),
+          aby Google přestal templated thin pages clusterovat a deindexovat
+          jako „Alternativní stránka se správnou značkou kanonické stránky" (GSC). */}
+      <section className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-6 md:p-7 shadow-sm" aria-labelledby="tldr-heading">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-accent-50 text-accent-700 shrink-0">
+            <Zap className="w-4 h-4" />
+          </span>
+          <h2 id="tldr-heading" className="text-sm font-bold text-gray-900 uppercase tracking-wider">Rychlý přehled</h2>
+        </div>
+        <p className="text-base text-gray-800 leading-relaxed mb-5">{tldrAdvice}</p>
+        <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2.5 text-sm border-t border-gray-200 pt-4">
+          <div className="flex justify-between gap-3 py-1 border-b border-gray-100">
+            <dt className="text-gray-500 font-medium">Závažnost</dt>
+            <dd className="text-gray-900 font-semibold text-right">
+              {SEVERITY_LABELS[entry.severityLevel]} <span className="text-gray-400 font-normal">({entry.severityLevel}/4)</span>
+            </dd>
+          </div>
+          <div className="flex justify-between gap-3 py-1 border-b border-gray-100">
+            <dt className="text-gray-500 font-medium">Cena opravy</dt>
+            <dd className="text-gray-900 font-semibold text-right tabular-nums font-mono text-xs">{repairPriceInfo.rangeLabel}</dd>
+          </div>
+          <div className="flex justify-between gap-3 py-1 border-b border-gray-100">
+            <dt className="text-gray-500 font-medium">Doba opravy</dt>
+            <dd className="text-gray-900 font-semibold text-right">{repairTimeEstimate}</dd>
+          </div>
+          <div className="flex justify-between gap-3 py-1 border-b border-gray-100">
+            <dt className="text-gray-500 font-medium">Domácí oprava</dt>
+            <dd className={`font-semibold text-right ${entry.canUserTrySafeChecks ? 'text-green-700' : 'text-orange-700'}`}>
+              {diyVerdict}
+            </dd>
+          </div>
+          {primaryCause && (
+            <div className="flex flex-col gap-1 py-1 sm:col-span-2 border-b border-gray-100">
+              <dt className="text-gray-500 font-medium">Nejčastější příčina</dt>
+              <dd className="text-gray-900 leading-snug">{primaryCause}</dd>
+            </div>
+          )}
+          {entry.altCodes.length > 0 && (
+            <div className="flex flex-col gap-1 py-1 sm:col-span-2">
+              <dt className="text-gray-500 font-medium">Stejnou závadu značí také</dt>
+              <dd className="text-gray-900 font-mono text-xs flex flex-wrap gap-2">
+                {entry.altCodes.map((alt) => (
+                  <span key={alt} className="inline-flex items-center px-2 py-0.5 rounded bg-gray-100 border border-gray-200">{alt}</span>
+                ))}
+              </dd>
+            </div>
+          )}
+        </dl>
+      </section>
 
       {/* Actionable Highlights (Bento Grid) — sjednocený design všech karet:
           bílá karta, gray border, ikona v subtle pill (barva podle významu). */}

@@ -179,6 +179,39 @@ export interface RepairPriceInfo {
   serviceLabel: string // např. 'Servis: 800–1 800 Kč'
 }
 
+// Orientační doba opravy podle závažnosti — použito v TL;DR bloku „Rychlý přehled".
+export function getRepairTimeEstimate(severity: number): string {
+  return ({
+    1: '10–30 minut',
+    2: '30–90 minut',
+    3: '1–3 hodiny (potřebná diagnostika)',
+    4: '2+ hodin (specializovaný servis)',
+  } as Record<number, string>)[severity] ?? '30–90 minut'
+}
+
+// Krátká, kontextová rada „co dělat teď" pro TL;DR blok. Varianty podle severity × DIY
+// poskytují per-page unikátní úvodní text — řeší clustering thin templated pages,
+// kde Google deindexoval kódy jako „Alternativní stránka se správnou značkou kanonické stránky".
+export function getTldrAdvice(severity: number, canTryHome: boolean): string {
+  if (severity === 4) {
+    return 'Okamžitě odpojte spotřebič ze sítě a uzavřete přívod vody. Tato chyba signalizuje vážnou závadu, která se dalším používáním zhoršuje. Kontaktujte autorizovaný servis ještě dnes — pokračování v provozu může vést k poškození elektroniky nebo úniku vody.'
+  }
+  if (severity === 3) {
+    return canTryHome
+      ? 'Omezte používání a vyzkoušejte bezpečné kontroly níže. Pokud chyba přetrvá i po prvním resetu, jde pravděpodobně o opotřebený díl — objednejte technika do 1–3 dnů, ať se závada dále nerozvíjí.'
+      : 'Omezte používání. Tento typ závady prakticky vždy vyžaduje výměnu vnitřního dílu — připravte se na výjezd technika a u starších spotřebičů zvažte orientační nabídku nového kusu.'
+  }
+  if (severity === 2) {
+    return canTryHome
+      ? 'Většina případů této chyby se vyřeší doma během 30 minut. Začněte 10minutovým resetem a postupujte podle bodů níže. Pokud se chyba vrátí třikrát po sobě, kontaktujte servis — pravděpodobně jde o opotřebovaný díl.'
+      : 'Tento kód obvykle vyžaduje technika, ale nejdřív zkuste 10minutový reset a kontrolu filtrů. V přibližně 20 % případů jde o dočasnou softwarovou chybu, kterou reset odstraní; pokud nepomůže, objednejte servis.'
+  }
+  // severity 1
+  return canTryHome
+    ? 'Jde o méně závažné upozornění. Reset spotřebiče a rychlá kontrola podle bodů níže obvykle stačí. Pokud se chyba pravidelně opakuje, prověřte konkrétní příčinu z přehledu — bývá to běžný uživatelský problém (nesprávný detergent, nakloněný spotřebič, ucpaný filtr).'
+    : 'Méně závažné upozornění, které obvykle neblokuje provoz. Pokud spotřebič dokončí program v pořádku, naplánujte si servisní prohlídku při příští údržbě — není nutný okamžitý zásah.'
+}
+
 export function getRepairPriceInfo(severity: number, parts: string[] = []): RepairPriceInfo {
   const range = REPAIR_PRICE_RANGES[severity] ?? REPAIR_PRICE_RANGES[2]
   const rangeLabel = `${range.min.toLocaleString('cs-CZ')}–${range.max.toLocaleString('cs-CZ')} Kč`
