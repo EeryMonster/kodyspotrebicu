@@ -9,7 +9,9 @@
     "miele-mycka-f2",
     "miele-mycka-f18",
     "miele-mycka-f19",
-    "miele-mycka-f594"
+    "miele-mycka-f594",
+    "miele-mycka-f607",
+    "miele-mycka-f79"
   ],
   "rewrites": [
     {
@@ -235,6 +237,54 @@
       ],
       "whenToStopAndCallService": [
         "F594 zpravidla vyžaduje výměnu cirkulačního čerpadla. Cena u nezávislého servisu orientačně 2 500–4 500 Kč včetně práce (díl + 2 hodiny rozebrání), autorizovaný servis Miele bývá dražší."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f607",
+      "shortMeaning": "Chyba F607 se objeví u Miele myček s automatickým dávkovačem AutoDos (řady G7000 a novější), když se spodní ostřikovací rameno neotáčí volně nebo jsou ucpané jeho trysky. Systém preventivně deaktivuje AutoDos, protože nemůže spolehlivě vypláchnout výstup dávkovače detergentu.",
+      "likelyCauses": [
+        "Nádobí v dolním koši mechanicky blokuje otáčení spodního ostřikovacího ramene",
+        "Zbytky jídla nebo tuku ucpaly trysky spodního ostřikovacího ramene",
+        "Ostřikovací rameno není správně nasazené (šipka na objímce nesměřuje k symbolu zámku)",
+        "Kombinace sítek na dně mycího prostoru není řádně usazená, což naklání rameno",
+        "Vysoký talíř nebo hluboká mísa v dolním koši překrývá výstup dávkovače AutoDos",
+        "Vápenné usazeniny v tryskách po dlouhodobě tvrdé vodě bez pravidelného čištění"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Vypněte myčku a nechte ji vychladnout. Vytáhněte dolní koš ven a najděte objímku ve středu spodního ostřikovacího ramene.",
+        "Otočte šroubovací objímkou proti směru hodinových ručiček a ostřikovací rameno vytáhněte směrem nahoru z čepu.",
+        "V ruce otočte ramenem — musí se otáčet lehce bez zadrhávání. Zbytky jídla v tryskách vytlačte tenkou špejlí nebo párátkem (netlačte kovem, poškodíte plast).",
+        "Rameno propláchněte pod tekoucí vodou, pak nasaďte zpět a objímkou otáčejte ve směru hodinových ručiček, dokud šipka v okénku nedosáhne symbolu zámku.",
+        "Zkontrolujte kombinaci sítek na dně mycího prostoru — musí sedět zarovnaná bez naklonění, jinak rameno nesedí správně.",
+        "Přerovnejte nádobí v dolním koši tak, aby žádný talíř ani hluboká miska nezasahoval nad výstup dávkovače AutoDos (uprostřed levé strany dveří).",
+        "Zavřete dvířka, potvrďte hlášení tlačítkem OK a spusťte krátký program. V zásobníku AutoDos ověřte, jestli hladina detergentu klesla — pokud ano, systém se sám znovu aktivoval."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud chyba F607 přetrvává i po vyčištění ramene a přerovnání nádobí, může být příčinou ucpaný vnitřní kanálek k dávkovači AutoDos nebo vadný pohon spodního ramene. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna dávkovače AutoDos 2 500–4 500 Kč včetně dílu, autorizovaný servis Miele bývá dražší."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f79",
+      "shortMeaning": "Chyba F79 signalizuje závadu oběhového (mycího) čerpadla u Miele myček — motoru, který pohání vodu do horního i dolního ostřikovacího ramene. Bez funkčního oběhového čerpadla program nemůže začít mýt a jedná se prakticky vždy o technickou závadu vyžadující servisní zásah.",
+      "likelyCauses": [
+        "Vadný motor oběhového čerpadla — spálené vinutí nebo opotřebený rotor po 8+ letech provozu",
+        "Zablokovaný oběžný ok cizím předmětem (střep, drobná kost, kousek plastu)",
+        "Vadný kondenzátor motoru čerpadla (běžná závada u starších modelů)",
+        "Poškozený tachogenerátor — čidlo otáček nedokáže potvrdit řídicí desce, že motor běží",
+        "Vadný triak na řídicí desce, který nedodá napětí do motoru čerpadla",
+        "Přerušený nebo prasklý napájecí kabel čerpadla (méně časté)"
+      ],
+      "canUserTrySafeChecks": false,
+      "safeChecks": [
+        "Tuto chybu uživatel sám neopraví — oběhové čerpadlo je hluboko v základně spotřebiče a jeho demontáž vyžaduje rozebrání myčky.",
+        "Před voláním servisu ověřte, že do myčky teče voda (otevřený vodovodní ventil) a že při spuštění programu slyšíte napouštění. Vyloučíte tak záměnu s chybou F12 (přívod vody).",
+        "Zaznamenejte, kdy přesně se F79 objevila — na začátku programu, uprostřed nebo při ohřevu. Tato informace pomůže technikovi zúžit diagnostiku a přinést správný náhradní díl."
+      ],
+      "whenToStopAndCallService": [
+        "F79 vyžaduje výjezd servisního technika — výměna oběhového čerpadla trvá 60–120 minut a zahrnuje rozebrání spodní části myčky. Cena u nezávislého servisu orientačně 3 500–6 500 Kč včetně dílu, autorizovaný servis Miele bývá o 20–40 % dražší. U myček starších 8–10 let porovnejte cenu opravy s cenou nového spotřebiče."
       ],
       "sourceUrl": null
     }

@@ -116,6 +116,8 @@ export const REWRITTEN_MIELE_SLUGS = new Set<string>([
   'miele-mycka-f18',
   'miele-mycka-f19',
   'miele-mycka-f594',
+  'miele-mycka-f607',
+  'miele-mycka-f79',
 ])
 
 export function shouldNoIndex(brand: string, slug: string): boolean {
