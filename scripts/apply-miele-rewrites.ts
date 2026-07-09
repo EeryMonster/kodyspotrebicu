@@ -1,6 +1,14 @@
 // Aplikuje přepsané verze Miele kódů do Neon DB.
 // Vstup: scripts/miele-rewrites.json
-// Spuštění: npx ts-node --project tsconfig.seed.json scripts/apply-miele-rewrites.ts
+//
+// Spuštění:
+//  - Lokálně:   npx ts-node --project tsconfig.seed.json scripts/apply-miele-rewrites.ts
+//  - Vercel:    automaticky přes `postbuild` hook v package.json (build → apply)
+//
+// Skript je idempotentní — bezpečně přepisuje stejné texty na stejné hodnoty.
+// Když DATABASE_URL chybí (lokální build bez .env), skript se ukončí bez chyby,
+// aby build neselhal. Chyby při DB writu se logují, ale exit code = 0,
+// aby transient DB problémy nezablokovaly Vercel deploy.
 
 import "dotenv/config"
 import { PrismaClient } from "@prisma/client"
@@ -24,6 +32,11 @@ interface Rewrite {
 }
 
 async function main() {
+  if (!process.env.DATABASE_URL) {
+    console.log("⚠️  DATABASE_URL není nastavené — přeskakuji Miele rewrites (build pokračuje).")
+    return
+  }
+
   const filePath = path.join(__dirname, "miele-rewrites.json")
   const data = JSON.parse(fs.readFileSync(filePath, "utf8")) as {
     rewrittenSlugs: string[]
@@ -62,7 +75,9 @@ async function main() {
 }
 
 main().catch(async (e) => {
-  console.error(e)
-  await prisma.$disconnect()
-  process.exit(1)
+  console.error("❌ Miele rewrites selhaly:", e instanceof Error ? e.message : e)
+  await prisma.$disconnect().catch(() => {})
+  // Exit 0 aby transient DB chyby (cold start, síťový výpadek) nezablokovaly
+  // Vercel deploy. Chyby jsou v build logu — user si všimne.
+  process.exit(0)
 })
