@@ -1,6 +1,13 @@
 // Aplikuje "Detailní postup řešení" (pole `content`) do Neon DB.
 // Vstup: scripts/detailed-steps.json — mapa slug -> pole content bloků.
 //
+// PRÁZDNÉ POLE je záměr, ne chyba: vyprázdní `content` v DB a tím skryje blok
+// "Detailní postup řešení". Používá se u Miele slugů, kde `content` obsahoval
+// doslovný text scrapovaný z miele.cz. Rewrity přepsaly shortMeaning,
+// likelyCauses, safeChecks a whenToStopAndCallService, ale `content` ne —
+// takže se na stránkách dál zobrazoval cizí text. Než k nim vznikne vlastní
+// postup, je pole prázdné.
+//
 // Spuštění:
 //  - Lokálně:   npx ts-node --project tsconfig.seed.json scripts/apply-detailed-steps.ts
 //  - Vercel:    automaticky přes `postbuild` hook v package.json
