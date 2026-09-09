@@ -6,7 +6,7 @@
     "dev": "next dev",
     "dev:clean": "rm -rf .next && next dev",
     "build": "next build",
-    "postbuild": "ts-node --project tsconfig.seed.json scripts/apply-miele-rewrites.ts",
+    "postbuild": "ts-node --project tsconfig.seed.json scripts/apply-miele-rewrites.ts && ts-node --project tsconfig.seed.json scripts/apply-detailed-steps.ts",
     "build:check": "NEXT_DIST_DIR=.next-build next build",
     "start": "next start",
     "lint": "next lint",
@@ -15,7 +15,8 @@
     "db:reset": "prisma migrate reset --force && npm run db:seed",
     "db:apply-miele": "ts-node --project tsconfig.seed.json scripts/apply-miele-rewrites.ts",
     "postinstall": "prisma generate",
-    "audit:ui": "node scripts/audit-ui.mjs"
+    "audit:ui": "node scripts/audit-ui.mjs",
+    "db:apply-steps": "ts-node --project tsconfig.seed.json scripts/apply-detailed-steps.ts"
   },
   "prisma": {
     "seed": "ts-node --compiler-options '{\"module\":\"CommonJS\"}' prisma/seed.ts"
