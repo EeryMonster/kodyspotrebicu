@@ -617,5 +617,2402 @@
   "miele-mycka-sviti-kontrolka-lestidlo-nebo-sul": [],
   "miele-mycka-ukazatel-casu-blika-pri-zavrenych-dvirkach": [],
   "miele-mycka-vicko-nadoby-na-sulzavrete-vicko-nadoby-na-sul": [],
-  "miele-mycka-zkontrolujte-sitkonastavte-interval": []
+  "miele-mycka-zkontrolujte-sitkonastavte-interval": [],
+  "aeg-susicka-e61": [
+    {
+      "type": "text",
+      "value": "Chyba E61 znamená, že sušička AEG nedosáhla za povolený čas potřebné teploty. Elektronika hlídá, jak rychle teplota v bubnu stoupá, a když topení nestíhá, program ukončí. U starších sušiček Electrolux Group za tím stojí častěji zanesený vzduchový okruh než vadné topné těleso — a to je dobrá zpráva, protože vzduchový okruh si vyčistíte sami.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vyčistěte oba filtry",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Filtr ve dvířkách jen neoklepejte, ale propláchněte pod tekoucí vodou — na síťce se drží neviditelný povlak z aviváže, který průchod vzduchu dusí. Druhý filtr najdete za klapkou v soklu; vymáchejte ho ve vlažné vodě a nechte úplně uschnout, než ho vrátíte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zkontrolujte odvod vzduchu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "U odtahových modelů projděte hadici po celé délce — nesmí být zalomená, stlačená za sušičkou ani ucpaná chuchvalci. Zkontrolujte i mřížku na fasádě, kterou vzduch odchází. U kondenzačních modelů vytáhněte výměník ze soklu a propláchněte ho sprchou proti směru proudění.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Dejte sušičce prostor",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Sušička nesmí nasávat vlastní horký vzduch. Odsuňte ji aspoň 10 cm od zdi a při sušení nechte otevřené dveře místnosti. Ve velmi chladné místnosti pod 5 °C trvá ohřev déle, než elektronika povoluje, a E61 může naskočit i u zdravého spotřebiče.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte a otestujte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte sušičku hodinu vypnutou a odpojenou od elektřiny. Pak spusťte krátký program s poloviční náplní. Pokud E61 přetrvává i s čistým vzduchovým okruhem, je vadné topné těleso, jeho kabeláž nebo špatně usazené čidlo NTC — to už patří technikovi, orientačně 2 000–4 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "electrolux-susicka-e61": [
+    {
+      "type": "text",
+      "value": "Kód E61 u sušiček Electrolux hlásí, že se prádlo nezahřálo dost rychle na to, aby program mohl pokračovat. Sušička měří nárůst teploty a při příliš pomalém ohřevu se sama zastaví. Než začnete uvažovat o výměně topného tělesa, vyplatí se vyloučit dvě prozaické příčiny: ucpaný vzduch a přeplněný buben.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkuste poloviční náplň",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Přeplněný buben je u E61 podceňovaná příčina — prádlo se nepřevaluje, teplý vzduch jím neprojde a teplota v bubnu stoupá příliš pomalu. Spusťte program jen s polovinou obvyklé dávky. Pokud proběhne bez chyby, byla příčina v množství prádla, ne v technice.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Propláchněte filtry",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Filtr ve dvířkách vymáchejte pod tekoucí vodou, ne jen oklepejte. Houbovitý filtr za klapkou v soklu vymáchejte také a nechte ho důkladně uschnout — vlhký filtr plesniví a průchod vzduchu zhoršuje ještě víc.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte výměník",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Za spodním filtrem je hustá mřížka kovových lamel. Posviťte si na ni baterkou; ucpaná vlákny znamená, že vzduch neproudí a teplota nemůže stoupat. Lamely vysajte měkkým nástavcem ve směru lamel a netlačte — ohnuté lamely průchod trvale zhorší.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte a vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku na hodinu a spusťte krátký program. Pokud E61 zůstává i s čistým okruhem a poloviční náplní, je závada v topném okruhu nebo v čidle. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, oprava 2 000–4 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "aeg-susicka-e62": [
+    {
+      "type": "text",
+      "value": "Chyba E62 u sušiček AEG ukazuje na topný okruh — vadné topné těleso, jeho kabeláž nebo hlavní řídicí desku. Elektronika se několikrát pokusí ohřev obnovit, a teprve když se to nepodaří, vyhlásí E62. Na rozdíl od E61, kde jde o pomalý ohřev, tady topení typicky nefunguje vůbec.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Ověřte, jestli sušička vůbec hřeje",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte program a po deseti minutách krátce otevřete dvířka. Sáhněte na prádlo — musí být znatelně teplé. Studené prádlo při běžícím bubnu potvrzuje, že topení nespíná vůbec, a to je jiná diagnóza než pomalý ohřev.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vylučte přehřátí z ucpaného okruhu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyčistěte filtr ve dvířkách i filtr v soklu a u kondenzačních modelů propláchněte výměník. Opakované přehřátí kvůli ucpanému vzduchu totiž časem zničí i samotné topné těleso, takže i když E62 způsobila elektronika, čistý okruh je podmínkou, aby nová součástka vydržela.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkuste tvrdý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku od elektřiny aspoň na 15 minut, ať se vybijí kondenzátory na desce. Pak ji zapojte a spusťte krátký program. Jednorázová E62 po výpadku proudu nebo přepětí se takto vymaže.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Připravte podklady pro technika",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Poznamenejte si, jestli se buben točí, jestli je slyšet ventilátor a jestli je prádlo po programu úplně studené. Technikovi to napoví, jestli hledat vadné topné těleso, nebo poškozenou desku. Výměna topného tělesa vychází u nezávislého servisu orientačně na 2 000–4 500 Kč, oprava desky 3 000–6 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "electrolux-susicka-e62": [
+    {
+      "type": "text",
+      "value": "Kód E62 u sušiček Electrolux znamená poruchu v topném okruhu. Sušička se opakovaně pokusí ohřev nahodit, a když ani po několika pokusech neuspěje, program ukončí s touto chybou. Prádlo pak zůstává vlhké a studené i po celém cyklu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte jistič a zásuvku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Topné těleso sušičky odebírá velký proud. Zapojte sušičku přímo do zásuvky ve zdi, bez prodlužovaček a rozdvojek — propad napětí při sepnutí topení může skončit právě chybou E62. Zkontrolujte v rozvaděči, jestli není jistič té větve částečně vypadlý.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte vzduchový okruh",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Propláchněte filtr ve dvířkách i houbovitý filtr v soklu a nechte je uschnout. Za spodním filtrem vysajte lamely výměníku měkkým nástavcem ve směru lamel.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Nechte sušičku vychladnout a resetujte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte ji od elektřiny na 15 minut a nechte vychladnout s otevřenými dvířky. Tepelná pojistka bývá vratná až po vychladnutí a někdy se tím chyba vyřeší sama.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte, jestli volat servis",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E62 přetrvává i po resetu a vyčištění a prádlo zůstává studené, jde o vadné topné těleso nebo řídicí desku. Sušičku dál nepoužívejte — opakované pokusy o sepnutí vadného topení nejsou bezpečné. Oprava vychází u nezávislého servisu orientačně na 2 000–6 000 Kč včetně dílu podle toho, která součástka je poškozená.",
+      "tag": "p"
+    }
+  ],
+  "aeg-susicka-e64": [
+    {
+      "type": "text",
+      "value": "Chyba E64 se u sušiček AEG váže na kabeláž topného tělesa nebo na těleso samotné. Elektronika zjistila, že odpor topného okruhu neodpovídá očekávané hodnotě — typicky je okruh přerušený. Domácí opravu to nedovoluje, ale několika kroky odlišíte skutečnou závadu od jednorázového výpadku.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vylučte přehřátí",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte sušičku aspoň hodinu vychladnout s otevřenými dvířky. Přerušený topný okruh někdy způsobí tepelná pojistka, která vypadla kvůli přehřátí z ucpaného vzduchu — a ta se u některých modelů po vychladnutí sama vrátí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte filtry a výměník",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Filtr ve dvířkách propláchněte pod tekoucí vodou, houbovitý filtr v soklu vymáchejte a nechte uschnout. Lamely výměníku za ním vysajte měkkým nástavcem. Ucpaný okruh je nejčastější důvod, proč tepelná pojistka vypadne.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Resetujte napájení",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku od elektřiny na 15 minut a znovu zapojte. Pak spusťte krátký program s malou náplní a sledujte, jestli se prádlo po deseti minutách zahřeje.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Objednejte technika a řekněte mu, co jste zjistili",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E64 přetrvává, je přerušená kabeláž topení nebo vadné samotné těleso. Rozdíl v ceně je znatelný: opravená kabeláž nebo výměna tepelné pojistky vychází u nezávislého servisu orientačně na 1 200–2 500 Kč, výměna topného tělesa 2 000–4 500 Kč včetně dílu. Vyžádejte si proto kalkulaci až po změření.",
+      "tag": "p"
+    }
+  ],
+  "electrolux-susicka-e64": [
+    {
+      "type": "text",
+      "value": "Kód E64 u sušiček Electrolux znamená závadu v okruhu topného tělesa — přerušenou kabeláž nebo poškozené těleso. Sušička buben točí dál, ale nehřeje, takže prádlo po celém programu zůstane vlhké. Elektronika okruh průběžně měří, takže chybu vyhlásí i dřív, než si toho stihnete všimnout.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Ověřte příznak",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte krátký program a po deseti minutách sáhněte na prádlo. Studené prádlo při točícím se bubnu potvrzuje přerušený topný okruh. Pokud je prádlo naopak horké, chyba bude spíš v čidle než v topení.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte vzduchový okruh",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Propláchněte oba filtry a vysajte lamely výměníku. Zanesený okruh vede k přehřívání, přehřívání shazuje tepelnou pojistku a shozená pojistka se projeví přesně jako přerušený topný okruh.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Nechte vychladnout a resetujte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte sušičku hodinu odpojenou a s otevřenými dvířky. Pak ji zapojte a zkuste znovu — pokud šlo o vratnou tepelnou pojistku, program proběhne normálně.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Rozhodněte se o opravě",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vrací-li se E64 i po vychladnutí a vyčištění, potřebujete technika. Sušičku do té doby nepoužívejte na sušení, jen pro provětrání za studena. Oprava vychází u nezávislého servisu orientačně na 1 200–4 500 Kč včetně dílu podle toho, jestli stačí kabeláž a pojistka, nebo je potřeba nové topné těleso.",
+      "tag": "p"
+    }
+  ],
+  "aeg-susicka-e65": [
+    {
+      "type": "text",
+      "value": "Chyba E65 u sušiček AEG se týká motoru ventilátoru — konkrétně jeho kabeláže nebo spínacího prvku na desce. Ventilátor žene ohřátý vzduch bubnem, a bez něj se sušička okamžitě přehřívá, proto elektronika program raději zastaví. Někdy ale ventilátor blokuje jen chuchvalec vláken.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Poslechněte si ventilátor",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte program a poslouchejte. Zdravá sušička kromě otáčení bubnu vydává i souvislý šum proudícího vzduchu. Ticho nebo skřípání znamená, že ventilátor neběží nebo se dře.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte celý vzduchový okruh",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku od elektřiny. Propláchněte filtr ve dvířkách i houbovitý filtr v soklu. Vytáhněte výměník a lamely vysajte měkkým nástavcem — nahromaděná vlákna dokážou lopatky ventilátoru zpomalit natolik, že to elektronika vyhodnotí jako závadu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte přístupné lopatky",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "U některých modelů je za výměníkem vidět kus lopatkového kola. Posviťte si tam baterkou a odstraňte viditelná vlákna. Nesahejte hlouběji do prostoru, kam nevidíte, a rozhodně ne se zapojenou sušičkou.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte a vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte sušičku 15 minut odpojenou, pak zkuste krátký program. Pokud E65 zůstává a ventilátor je slyšet, jde o přerušenou kabeláž nebo vadný spínací prvek na desce. Oprava u nezávislého servisu vychází orientačně na 1 500–4 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "electrolux-susicka-e65": [
+    {
+      "type": "text",
+      "value": "Kód E65 u sušiček Electrolux hlásí problém v okruhu motoru ventilátoru — přerušené propojení nebo vadný spínací prvek. Bez proudícího vzduchu by se sušička rychle přehřála, takže program okamžitě končí. Než budete volat servis, stojí za to vyloučit mechanickou blokádu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Odpojte sušičku a nechte vychladnout",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Než začnete cokoli čistit, vytáhněte zástrčku a nechte spotřebič aspoň hodinu vychladnout. Vnitřek zůstává horký déle, než by člověk čekal.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Projděte filtry a výměník",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Filtr ve dvířkách propláchněte pod tekoucí vodou, houbovitý filtr v soklu vymáchejte a nechte uschnout. Výměník vytáhněte a jeho lamely vysajte ve směru lamel. Právě nános vláken je nejčastější důvod, proč ventilátor nedosáhne potřebných otáček.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Otestujte s prázdným bubnem",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapojte sušičku a spusťte krátký program naprázdno. Bez prádla je proudění vzduchu nejlépe slyšet — souvislý šum znamená, že ventilátor běží, ticho že neběží vůbec.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Objednejte technika s konkrétním popisem",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E65 přetrvává, řekněte technikovi, jestli ventilátor slyšíte, nebo ne. Neběžící ventilátor ukazuje na motor či kabeláž, běžící spíš na snímač otáček nebo desku. Oprava vychází u nezávislého servisu orientačně na 1 500–4 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "aeg-susicka-e66": [
+    {
+      "type": "text",
+      "value": "Chyba E66 znamená, že u sušičky AEG vypadla tepelná pojistka — bezpečnostní prvek, který odpojí topení, když teplota překročí bezpečnou mez. U některých modelů stejný kód ukazuje i na vadný motor ventilátoru, protože bez proudění vzduchu se sušička přehřeje během chvíle. Berte E66 vážně: přehřívající se sušička je riziko požáru.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Sušičku vypněte a nechte vychladnout",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte ji od elektřiny a nechte aspoň hodinu s otevřenými dvířky vychladnout. Nespouštějte další program, dokud nezjistíte, proč se přehřála.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Najděte příčinu přehřátí",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "V naprosté většině případů je to ucpaný vzduch. Propláchněte filtr ve dvířkách, vymáchejte houbovitý filtr v soklu a lamely výměníku za ním důkladně vysajte. U odtahových modelů projděte celou hadici a zkontrolujte i venkovní mřížku.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte umístění",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Sušička nesmí stát v těsné skříni ani nasávat vlastní teplý vzduch. Odsuňte ji aspoň 10 cm od zdi a při sušení otevřete dveře místnosti. Sušení v malé uzavřené komoře je častá příčina opakovaného přehřívání.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte, ale nespoléhejte na to",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Po vychladnutí sušičku zapojte a zkuste krátký program s malou náplní. Vratná pojistka se vrátí sama. Pokud E66 naskočí znovu, sušičku dál nepoužívejte a zavolejte servis — nevratnou pojistku je nutné vyměnit a zároveň odstranit příčinu přehřátí. Oprava vychází u nezávislého servisu orientačně na 1 500–4 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "electrolux-susicka-e66": [
+    {
+      "type": "text",
+      "value": "Kód E66 u sušiček Electrolux signalizuje, že zasáhla tepelná pojistka kvůli překročení bezpečné teploty; u části modelů stejný kód doprovází i závadu motoru ventilátoru. Je to bezpečnostní funkce, ne rozmar elektroniky — sušička se opravdu přehřála a je potřeba zjistit proč.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Nepokoušejte se program hned opakovat",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku od elektřiny a nechte ji vychladnout s otevřenými dvířky. Opakované spouštění přehřáté sušičky bez odstranění příčiny je nebezpečné.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zkontrolujte, kolik toho sušíte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Přeplněný buben brání proudění vzduchu a je běžnou příčinou přehřátí. Zkuste program s poloviční náplní a s prádlem dobře vyždímaným — mokřejší prádlo prodlužuje cyklus a tím i tepelnou zátěž.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Pročistěte vzduchovou cestu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Propláchněte oba filtry, nechte je uschnout a lamely výměníku vysajte měkkým nástavcem ve směru lamel. Zkontrolujte, jestli ve výměníku nezůstávají mokré chuchvalce — ty proudění dusí nejvíc.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Otestujte a rozhodněte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Po vychladnutí spusťte krátký program s malou náplní. Pokud E66 naskočí i s čistým okruhem a poloviční náplní, jde o nevratnou pojistku nebo vadný ventilátor a sušičku do opravy nepoužívejte. Oprava vychází u nezávislého servisu orientačně na 1 500–4 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "aeg-susicka-e67": [
+    {
+      "type": "text",
+      "value": "Chyba E67 u sušiček AEG ukazuje na vadné řízení spínacího prvku ventilátoru — takzvaného triaku na řídicí desce. Prověřuje se kabeláž motoru ventilátoru a samotná elektronika. Domácí oprava tady nepřipadá v úvahu, ale několik kroků odliší skutečnou závadu desky od banální mechanické blokády, která vypadá podobně.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zjistěte, jestli ventilátor běží",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte program a poslouchejte. Kromě otáčení bubnu má být slyšet souvislý šum proudícího vzduchu. Zapište si, co slyšíte — je to první otázka, kterou vám technik položí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vylučte mechanickou blokádu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku, propláchněte oba filtry a vysajte lamely výměníku. Nahromaděná vlákna dokážou ventilátor zatížit natolik, že elektronika hlásí chybu řízení, i když je deska v pořádku.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkuste tvrdý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte sušičku 15 minut odpojenou od elektřiny, ať se vybijí kondenzátory na desce. Chyba vyvolaná jednorázovým přepětím, například po bouřce, se takto vymaže.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Zvažte cenu opravy",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E67 přetrvává, jde o kabeláž ventilátoru nebo o řídicí desku. Výměna desky u nezávislého servisu vychází orientačně na 3 000–6 000 Kč včetně dílu, opravená kabeláž je výrazně levnější. U sušiček starších deseti let se cena opravy blíží ceně nové, proto si nechte spočítat kalkulaci předem.",
+      "tag": "p"
+    }
+  ],
+  "electrolux-susicka-e67": [
+    {
+      "type": "text",
+      "value": "Kód E67 u sušiček Electrolux znamená závadu v řízení ventilátoru — konkrétně spínacího prvku na řídicí desce. Sušička nedokáže spolehlivě ovládat otáčky ventilátoru, a protože bez proudění vzduchu hrozí přehřátí, program ukončí. Kontroluje se kabeláž motoru a elektronika.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Odpojte a vyčistěte vzduchový okruh",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vytáhněte zástrčku a nechte sušičku vychladnout. Propláchněte filtr ve dvířkách i houbovitý filtr v soklu, nechte je uschnout a lamely výměníku vysajte ve směru lamel. Přetížený ventilátor se projevuje stejně jako vadné řízení.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Otestujte naprázdno",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapojte sušičku a spusťte krátký program bez prádla. Bez náplně nejlépe uslyšíte, jestli ventilátor naběhne a jestli běží plynule, nebo se zadrhává.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vylučte přepětí",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte sušičku 15 minut bez proudu a zkuste znovu. Zapojte ji přímo do zásuvky ve zdi, bez prodlužovaček a rozdvojek — nestabilní napájení dokáže elektroniku shodit opakovaně.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Připravte se na servis",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vrací-li se E67 i po vyčištění a resetu, potřebujete technika. Řekněte mu, jestli ventilátor slyšíte naběhnout — rozhoduje to mezi levnější opravou kabeláže a dražší výměnou desky. Cena u nezávislého servisu vychází orientačně na 1 500–6 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "aeg-susicka-e67-envo6": [
+    {
+      "type": "text",
+      "value": "Chyba E67 na sušičkách AEG řady EnvoDry znamená závadu v řízení ventilátoru na řídicí desce. Význam je stejný jako u ostatních modelů Electrolux Group, ale u této řady se vyplatí věnovat zvláštní pozornost čistotě výměníku — kompaktní konstrukce se zanáší rychleji a přetížený ventilátor pak vypadá jako vadná elektronika.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vyčistěte výměník důkladněji, než je obvyklé",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku od elektřiny, otevřete klapku v soklu a vytáhněte houbovitý filtr i výměník. Lamely vysajte měkkým nástavcem ve směru lamel a výměník propláchněte sprchou proti směru proudění vzduchu, dokud voda neodtéká čistá.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Nechte díly úplně uschnout",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vlhký filtr i výměník kladou vzduchu výrazně větší odpor než suché. Nechte je schnout klidně přes noc a teprve pak je vraťte zpět.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Otestujte naprázdno a poslouchejte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte krátký program bez prádla. Ventilátor musí naskočit a vydávat souvislý šum. Zadrhávání nebo ticho jsou dvě různé diagnózy a technikovi tím ušetříte čas.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte a vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte sušičku 15 minut odpojenou a zkuste znovu. Pokud E67 zůstává i s čistým a suchým výměníkem, jde o kabeláž ventilátoru nebo řídicí desku — oprava u nezávislého servisu orientačně 1 500–6 000 Kč včetně dílu podle rozsahu.",
+      "tag": "p"
+    }
+  ],
+  "electrolux-susicka-e67-envo6": [
+    {
+      "type": "text",
+      "value": "Kód E67 u sušiček Electrolux řady Envo znamená, že elektronika nedokáže správně řídit ventilátor. Prověřuje se jeho kabeláž a řídicí deska. U této kompaktní řady bývá spouštěčem přetížený ventilátor z ucpaného vzduchového okruhu, takže začněte tam — je to jediná část, kterou zvládnete sami.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte, jak sušička stojí",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Kompaktní modely jsou citlivé na to, kolik vzduchu kolem sebe mají. Odsuňte sušičku aspoň 10 cm od zdi, nedávejte ji do uzavřené skříně a při sušení nechte otevřené dveře místnosti.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Propláchněte filtry a výměník",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku od elektřiny. Filtr ve dvířkách propláchněte pod tekoucí vodou, houbovitý filtr v soklu vymáchejte a výměník za ním propláchněte sprchou proti směru proudění. Vše nechte důkladně uschnout.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Sušte menší dávky",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zkuste program s poloviční náplní dobře vyždímaného prádla. Menší dávka klade ventilátoru menší odpor a pokud program projde, víte, že mechanika je v pořádku.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Rozhodněte se o servisu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E67 přetrvává i po vyčištění a při malé náplni, je závada v kabeláži ventilátoru nebo na desce. Oprava vychází u nezávislého servisu orientačně na 1 500–6 000 Kč včetně dílu. U starších kusů si nechte spočítat cenu předem a porovnejte ji s cenou nové sušičky.",
+      "tag": "p"
+    }
+  ],
+  "aeg-pracka-e51": [
+    {
+      "type": "text",
+      "value": "Chyba E51 znamená, že pračka AEG detekovala zkrat triaku v řídicím obvodu motoru. Triak je polovodičový spínač na výkonové desce, který motoru dodává proud; když se prorazí, může motor spínat bez ohledu na program. Projevem bývá buben, který se roztočí sám hned po zapnutí, nebo se naopak neroztočí vůbec.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Odpojte pračku od elektřiny",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Točí-li se buben sám nebo cítíte zápach spálené elektroniky, vytáhněte zástrčku okamžitě a pračku už nezapínejte. Prorazený triak nedokáže elektronika vypnout softwarově a při zavřených dvířkách se roztočený buben snadno přehlédne.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zkontrolujte, jestli není buben zablokovaný",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojenou pračku otevřete a rukou několikrát protočte buben. Musí se otáčet lehce a bez skřípání. Zablokovaný buben — třeba kosticí z podprsenky nebo mincí mezi bubnem a vanou — motor přetíží a triak tím může zničit.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkuste tvrdý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte pračku aspoň 15 minut odpojenou, ať se vybijí kondenzátory na výkonové desce. Pak ji zapojte a bez prádla spusťte krátký máchací program. Jednorázová E51 po přepětí v síti takto zmizí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Zvažte, jestli se oprava vyplatí",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vrací-li se E51, je potřeba vyměnit výkonovou desku, případně i motor. Cena u nezávislého servisu vychází orientačně na 3 500–7 000 Kč včetně dílu. U praček starších osmi let si nechte spočítat kalkulaci předem a porovnejte ji s cenou nové.",
+      "tag": "p"
+    }
+  ],
+  "aeg-pracka-e61": [
+    {
+      "type": "text",
+      "value": "Chyba E61 u praček AEG znamená, že se voda neohřála na nastavenou teplotu v očekávaném čase. Prádlo se pak vypere ve studené vodě, což poznáte hlavně u zašpiněného prádla a u programů na 60 °C. Nejčastější příčinou není spálené topné těleso, ale vrstva vodního kamene, která brání přestupu tepla.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Ověřte, jestli pračka opravdu nehřeje",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte program na 60 °C a asi po dvaceti minutách opatrně sáhněte na sklo dvířek. Musí být znatelně teplé. Studené sklo v polovině horkého programu potvrzuje, že ohřev nefunguje.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Proveďte údržbový program s odvápňovačem",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte nejdelší program na 90 °C naprázdno a přidejte odvápňovač určený pro pračky. V oblastech s tvrdou vodou řeší vápenec na tělese chybu E61 překvapivě často. Postup po týdnu zopakujte, pokud pračka nebyla odvápněná roky.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte filtr a zkontrolujte dávkování",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyčistěte vypouštěcí filtr v soklu a zkontrolujte, že nepoužíváte příliš mnoho prášku — přebytek se usazuje a spolu s vápencem tvoří izolační vrstvu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte a vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku na 10 minut a spusťte krátký horký program. Pokud E61 přetrvává i po odvápnění, je vadné topné těleso nebo teplotní čidlo. Výměna tělesa vychází u nezávislého servisu orientačně na 1 800–3 500 Kč včetně dílu, čidlo bývá levnější.",
+      "tag": "p"
+    }
+  ],
+  "aeg-pracka-e71": [
+    {
+      "type": "text",
+      "value": "Chyba E71 u praček AEG znamená, že teplotní čidlo NTC hlásí hodnotu mimo očekávaný rozsah. Pračka podle něj řídí ohřev, takže bez důvěryhodného měření program raději přeruší. Čidlo bývá vadné jen zřídka — častěji je problém v jeho kontaktech nebo ve vápenci, který ho obaluje.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkuste tvrdý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku od elektřiny na 15 minut a znovu zapojte. Chyba čidla vyvolaná jednorázovým výpadkem komunikace se takto vymaže a program pak proběhne normálně.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Odvápněte pračku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Čidlo sedí ve vodní cestě vedle topného tělesa. Vrstva vodního kamene na něm funguje jako izolace a čidlo pak hlásí nesmyslné hodnoty. Spusťte nejdelší program na 90 °C naprázdno s odvápňovačem pro pračky.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Sledujte, kdy chyba naskočí",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapište si, jestli se E71 objeví hned po startu, nebo až ve fázi ohřevu. Chyba hned na začátku ukazuje spíš na přerušený obvod, chyba až při ohřevu na čidlo, které selhává teprve za tepla. Technikovi to výrazně zúží hledání.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Objednejte servis, pokud chyba trvá",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Čidlo je levný díl, ale sedí ve vodní cestě, takže výměna vyžaduje technika. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna čidla zhruba 1 500–3 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "electrolux-pracka-e71": [
+    {
+      "type": "text",
+      "value": "Kód E71 u praček Electrolux hlásí poruchu teplotního čidla NTC. Elektronika porovnává naměřenou teplotu s očekávaným průběhem a při nesmyslné hodnotě program zastaví, aby prádlo nezničila příliš horkou vodou. Než se pustíte do servisu, vyplatí se vyloučit vápenec a jednorázový výpadek.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vylučte přehřátou pračku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud jste právě dokončili program na 90 °C a hned spustili další, může E71 naskočit kvůli zbytkovému teplu. Nechte pračku hodinu odpočinout s pootevřenými dvířky a zkuste to znovu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Resetujte napájení",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku na 15 minut od elektřiny. Zapojte ji přímo do zásuvky ve zdi, bez prodlužovaček — nestabilní napájení dokáže hlášení čidla shodit opakovaně.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Spusťte odvápňovací cyklus",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nejdelší program na 90 °C naprázdno s odvápňovačem určeným pro pračky. Vápenec na čidle je u E71 běžný spouštěč, obzvlášť v oblastech s tvrdou vodou a u praček, které se roky peraly jen na nízké teploty.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte a rozhodněte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E71 přetrvává i po odvápnění a resetu, je vadné čidlo nebo jeho kabeláž. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, oprava zhruba 1 500–3 000 Kč včetně dílu. Do opravy perte na studené programy, ty čidlo nevyužívají tak intenzivně.",
+      "tag": "p"
+    }
+  ],
+  "aeg-pracka-e80": [
+    {
+      "type": "text",
+      "value": "Chyba E80 u praček AEG znamená, že polohový přepínač programů hlásí neplatnou polohu, nebo že řídicí deska načetla nesmyslnou hodnotu. Pračka pak neví, jaký program jste zvolili, a odmítne se rozjet. U modelů s otočným voličem bývá příčinou opotřebený kontakt uvnitř voliče.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Protočte volič celým rozsahem",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otočte voličem programů několikrát dokola v obou směrech a pak ho nastavte přesně do polohy vypnuto. Zoxidovaný kontakt se tímto pohybem často pročistí a chyba zmizí. Zastavujte volič vždy v aretované poloze, ne mezi dvěma programy.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Odpojte pračku a resetujte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte ji 15 minut bez proudu, ať se vybijí kondenzátory na desce. Pak zapojte, nastavte volič na jednoduchý program, například máchání, a zkuste spustit.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyzkoušejte více programů",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Projděte několik různých poloh voliče a sledujte, jestli E80 naskočí u všech, nebo jen u některých. Chyba jen v části poloh jasně ukazuje na opotřebený volič, chyba ve všech spíš na řídicí desku.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Objednejte servis s konkrétním zjištěním",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Řekněte technikovi, u kterých poloh chyba nastává — rozhoduje to mezi levnější výměnou voliče a dražší opravou desky. Výměna voliče vychází u nezávislého servisu orientačně na 1 500–3 000 Kč včetně dílu, výměna desky 3 000–6 000 Kč.",
+      "tag": "p"
+    }
+  ],
+  "electrolux-pracka-e80": [
+    {
+      "type": "text",
+      "value": "Kód E80 u praček Electrolux se váže na volič programů — buď hlásí polohu, kterou elektronika nezná, nebo se signál z voliče na desku vůbec nedostane. Program se proto nespustí. Je to typická závada praček, které mají za sebou tisíce otočení voličem.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vraťte volič do nulové polohy",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nastavte volič přesně na vypnuto a nechte pračku minutu stát. Volič zastavený mezi dvěma programy je nejjednodušší vysvětlení této chyby a lidé ho běžně přehlédnou.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte kontakt pohybem",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otočte voličem pomalu pětkrát dokola v obou směrech. Cílem je mechanicky pročistit zoxidované kontakty uvnitř. Pokud volič někde drhne nebo přeskakuje, je opotřebený a bude potřeba ho vyměnit.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Resetujte napájení",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku na 15 minut a znovu zapojte. Pak zvolte krátký program a zkuste ho spustit.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Zdokumentujte chování pro technika",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapište si, jestli displej nebo kontrolky reagují na otáčení voličem. Žádná reakce ukazuje na přerušené propojení, chaotická reakce na opotřebený volič. Oprava vychází u nezávislého servisu orientačně na 1 500–6 000 Kč včetně dílu podle toho, jestli stačí volič, nebo je nutná deska.",
+      "tag": "p"
+    }
+  ],
+  "aeg-pracka-e90": [
+    {
+      "type": "text",
+      "value": "Chyba E90 hlásí poruchu hlavní řídicí desky pračky AEG. Deska buď neprošla vlastní kontrolou při startu, nebo nekomunikuje se zbytkem spotřebiče. Je to jedna z mála chyb, u kterých nemá smysl zkoušet cokoli mechanického — ale jednorázový výpadek po přepětí se vyresetovat dá.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Proveďte tvrdý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku od elektřiny aspoň na 20 minut. Kondenzátory na desce drží náboj déle, než by člověk čekal, a krátké vypnutí nestačí. Po zapojení zkuste spustit krátký program.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zapojte pračku přímo do zdi",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odstraňte prodlužovačky, rozdvojky, přepěťové ochrany a spínací zásuvky. Nestabilní napájení je u chyb elektroniky častým spouštěčem a zároveň důvodem, proč se chyba po opravě vrací.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte, jestli nedošlo k zaplavení",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Podívejte se pod pračku a do soklu. Vlhkost u elektroniky je vážný problém — pokud vodu vidíte, pračku nezapínejte vůbec a zavolejte servis.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Rozhodněte se podle stáří pračky",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E90 přetrvává, je potřeba vyměnit řídicí desku. Cena u nezávislého servisu vychází orientačně na 3 000–7 000 Kč včetně dílu. U praček starších deseti let se to často blíží ceně nové, proto si vyžádejte kalkulaci ještě před objednáním opravy.",
+      "tag": "p"
+    }
+  ],
+  "aeg-pracka-eh2": [
+    {
+      "type": "text",
+      "value": "Chyba EH2 znamená opak známější EH3: pračka AEG naměřila napájecí napětí NAD povolenou mezí a program zastavila. Přepětí je pro elektroniku nebezpečnější než podpětí, protože může trvale poškodit desku. Pračka se tím chrání, takže chybu neignorujte a hledejte příčinu na straně elektroinstalace.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte, jestli nešlo o bouřku nebo výpadek",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Jednorázové přepětí přichází typicky po bouřce nebo po obnovení dodávky proudu. Odpojte pračku na 15 minut a zkuste znovu — pokud program proběhne a chyba se týdny nevrátí, šlo o ojedinělou událost.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Prověřte fotovoltaiku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Máte-li na domě fotovoltaiku, může za slunečných dnů zvednout napětí v místní síti nad běžnou hodnotu. Otestujte, jestli EH2 naskakuje hlavně kolem poledne za jasného dne a mizí večer. Pokud ano, je řešení na straně nastavení měniče, ne pračky.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Odstraňte mezičlánky",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapojte pračku přímo do zásuvky ve zdi. Levné přepěťové ochrany a spínací zásuvky mohou napětí zkreslit místo aby ho hlídaly.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Kontaktujte elektrikáře, ne servis spotřebičů",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud EH2 přetrvává v různých zásuvkách, je problém v elektroinstalaci nebo v síti a měl by ho měřit elektrikář. Trvale zvýšené napětí je věc, kterou řeší distributor. Teprve když je napájení prokazatelně v pořádku, jde o vadný měřicí obvod pračky.",
+      "tag": "p"
+    }
+  ],
+  "electrolux-pracka-eh2": [
+    {
+      "type": "text",
+      "value": "Kód EH2 u praček Electrolux signalizuje, že napájecí napětí přesáhlo povolený rozsah. Řídicí jednotka měří napětí průběžně a při přepětí program okamžitě přeruší, protože vysoké napětí ohrožuje motor i elektroniku. Příčina bývá v síti, ne ve spotřebiči.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Změřte napětí v zásuvce",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Máte-li multimetr nebo zásuvkový tester, změřte napětí přímo v zásuvce pračky. Běžná hodnota je kolem 230 V; trvale naměřených 250 V a víc je za hranicí, se kterou pračka počítá. Měření zopakujte v různou denní dobu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Porovnejte denní dobu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zaznamenejte si, kdy EH2 naskakuje. Přepětí typicky nastává v době nízké spotřeby a vysoké výroby z obnovitelných zdrojů, tedy kolem poledne. Pravidelný vzorec je silná indicie, že jde o síť.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zapojte pračku napřímo",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Bez prodlužovaček, rozdvojek a spínacích zásuvek. Zkuste i zásuvku na jiném okruhu a sledujte, jestli se chování změní.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Předejte měření odborníkovi",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Naměřené hodnoty a časy si poznamenejte a předejte je elektrikáři nebo distributorovi — s konkrétními čísly se problém řeší podstatně rychleji. Servis spotřebičů volejte až tehdy, když je napájení prokazatelně v normě a EH2 přesto trvá; pak jde o měřicí obvod desky, oprava orientačně 3 000–7 000 Kč.",
+      "tag": "p"
+    }
+  ],
+  "electrolux-pracka-eh0": [
+    {
+      "type": "text",
+      "value": "Kód EH0 u praček Electrolux znamená obecný problém se síťovým napájením — na rozdíl od EH2 a EH3, které rozlišují přepětí a podpětí, tady elektronika hlásí, že s napájením prostě není něco v pořádku. Může jít o kolísání, krátké výpadky nebo nestabilní frekvenci.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Sledujte, kdy chyba přichází",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vezměte si tužku a týden zaznamenávejte, v kolik hodin EH0 naskočí. Vzorec vázaný na denní dobu ukazuje na přetížený okruh nebo kolísání v síti, náhodný výskyt spíš na vadný kontakt.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zkontrolujte zásuvku a zástrčku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Prohlédněte zástrčku i kryt zásuvky. Zahnědlý, zdeformovaný nebo zapáchající plast znamená přehřívající se spoj — takovou zásuvku dál nepoužívejte a zavolejte elektrikáře. Je to zároveň riziko požáru.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyzkoušejte jiný okruh",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Přepojte pračku do zásuvky v jiné místnosti, ideálně na jiném jističi, a to přímo bez prodlužovaček. Pokud tam programy procházejí bez chyby, máte odpověď — problém je v původní větvi.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Rozhodněte, koho volat",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud EH0 mizí v jiné zásuvce, patří to elektrikáři. Pokud se objevuje všude a pokaždé, jde o měřicí obvod na desce pračky a je na řadě servis spotřebičů — oprava orientačně 3 000–7 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "beko-pracka-eh0": [
+    {
+      "type": "text",
+      "value": "Chyba EH0 u praček Beko hlásí problém se síťovým napájením. Pračka průběžně kontroluje, jestli je napětí stabilní a v povoleném rozsahu, a při odchylce program zastaví. Většinou to není závada spotřebiče, ale reakce na to, jak je zapojený nebo jak vypadá elektroinstalace v bytě.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vyzkoušejte jinou zásuvku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nejrychlejší test vůbec: přepojte pračku do zásuvky v jiné místnosti, zapojenou přímo do zdi. Když tam program projde, je problém v původní větvi a pračka je v pořádku.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zjistěte, co ještě běží na stejném okruhu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zkuste pračku spustit v době, kdy neběží trouba, myčka, bojler ani sušička. Přetížený okruh se projeví propadem napětí přesně ve chvíli, kdy se rozbíhá motor pračky.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Prohlédněte zástrčku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vytáhněte zástrčku a podívejte se na kolíky i na kryt zásuvky. Zahnědnutí nebo stopy tepla znamenají uvolněný spoj — to řeší elektrikář, ne servis pračky, a dokud to trvá, zásuvku nepoužívejte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte výsledek",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud EH0 v jiné zásuvce mizí, máte jasno a pračka opravu nepotřebuje. Pokud se objevuje všude, je vadný napájecí obvod pračky; diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, oprava 2 500–5 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "beko-pracka-eh2": [
+    {
+      "type": "text",
+      "value": "Chyba EH2 znamená, že pračka Beko naměřila napětí nad povolenou hranicí. Je to ochranná reakce — přepětí dokáže poškodit motor i řídicí desku, takže pračka radši program zastaví. Příčina leží skoro vždy v elektroinstalaci nebo v síti, ne v samotném spotřebiči.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Odpojte a vyčkejte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte pračku 15 minut bez proudu a pak zkuste krátký program. Přepětí po bouřce nebo po obnovení dodávky elektřiny bývá jednorázové a tímto se vyřeší.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zjistěte, jestli jste na konci větve",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Domy na konci rozvodné větve a domy v oblastech s hodně fotovoltaikami mívají napětí trvale vyšší. Zeptejte se sousedů, jestli mají podobné potíže se spotřebiči — společný problém je jasná indicie, že jde o síť.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zapojte pračku bez mezičlánků",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Přímo do zásuvky ve zdi, bez prodlužovaček, rozdvojek a přepěťových ochran. Levné ochrany napětí nezlepší a někdy měření zkreslí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Obraťte se na správnou stranu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Opakované přepětí je věc pro elektrikáře a případně pro distributora elektřiny, který je povinen držet napětí v normě. Servis spotřebičů volejte až tehdy, když je napájení prokazatelně v pořádku a EH2 přesto trvá — pak jde o měřicí obvod pračky.",
+      "tag": "p"
+    }
+  ],
+  "beko-mycka-e7": [
+    {
+      "type": "text",
+      "value": "Chyba E7 znamená, že hladina vody v myčce Beko překročila povolenou mez. Myčka spustí vypouštěcí čerpadlo a program zastaví, aby nedošlo k přetečení. Nejde nutně o závadu — velmi často je příčinou pěna z nesprávného prostředku, kterou snímač vyhodnotí jako příliš vysokou hladinu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vylučte pěnu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vzpomeňte si, čím jste myčku plnili. Pokud se do zásobníku dostal saponát na ruční mytí, pění mnohonásobně víc než prostředek do myčky. Otevřete dvířka a podívejte se dovnitř — velké množství pěny problém potvrdí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vypláchněte myčku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pěnu odstraňte hadrem nebo nalijte dovnitř trochu studené vody, která ji srazí. Pak spusťte jeden až dva krátké programy naprázdno úplně bez prostředku, dokud pěna nezmizí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte dávkování leštidla",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Přemrštěné dávkování leštidla pění podobně jako saponát. Stáhněte ho v nastavení o stupeň níž; používáte-li kombinované tablety, leštidlo zvlášť dávkovat obvykle nemusíte vůbec.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyčistěte sítka a otestujte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyjměte kombinaci sítek ze dna, propláchněte ji a vraťte zarovnaně. Pak spusťte normální program. Pokud se E7 objeví i bez pěny a s čistými sítky, je vadný snímač hladiny nebo přívodní ventil, který nedovírá — oprava u nezávislého servisu orientačně 1 500–3 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "bosch-pracka-f19": [
+    {
+      "type": "text",
+      "value": "Chyba F19 u praček Bosch znamená, že se voda neohřála na zvolenou teplotu v očekávaném čase. Pračka pokračuje nebo program ukončí, ale prádlo se vypere ve studené vodě. Vápenec na topném tělese je zdaleka nejčastější příčina — spálené těleso je vzácnější, než si lidé myslí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Ověřte, že pračka nehřeje",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte program na 60 °C a po dvaceti minutách sáhněte na sklo dvířek. Studené sklo v polovině horkého programu chybu potvrzuje.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Odvápněte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nejdelší program na 90 °C naprázdno s odvápňovačem pro pračky. U tvrdé vody a u praček, které roky pral jen na 30 °C, se vápenec na tělese hromadí a tepelně ho izoluje. Postup po týdnu zopakujte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte napájení",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Topné těleso odebírá velký proud. Zapojte pračku přímo do zásuvky ve zdi bez prodlužovaček a ověřte v rozvaděči, že jistič té větve není částečně vypadlý.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Rozhodněte se o servisu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud F19 přetrvává i po odvápnění, je vadné topné těleso nebo teplotní čidlo. Výměna tělesa vychází u nezávislého servisu orientačně na 1 800–3 500 Kč včetně dílu. Do opravy můžete prát na studené programy.",
+      "tag": "p"
+    }
+  ],
+  "siemens-pracka-f19": [
+    {
+      "type": "text",
+      "value": "Kód F19 u praček Siemens hlásí, že ohřev vody neproběhl podle očekávání. Elektronika sleduje, jak rychle teplota stoupá, a při příliš pomalém nárůstu chybu vyhlásí. Prádlo pak zůstává vypráno ve vlažné vodě, což poznáte hlavně u bílého prádla a u ložního povlečení.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Změřte, jak dlouho program trvá",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zaznamenejte si, jestli se program prodlužuje. Pračka, která nehřeje, často čeká na teplotu a cyklus se protáhne o desítky minut — je to spolehlivější příznak než sahání na dvířka.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Spusťte údržbový cyklus",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Program na 90 °C naprázdno s odvápňovačem určeným pro pračky. Zároveň vyčistěte zásuvku na prášek — ztuhlé zbytky prostředku se usazují spolu s vápencem.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte vypouštěcí filtr",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Filtr v soklu vyšroubujte, propláchněte a vraťte. Nedostatečné vypouštění mezi fázemi nepřímo ovlivňuje i ohřev, protože pračka pracuje s jiným množstvím vody, než počítá.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vrací-li se F19 i po odvápnění, jde o topné těleso nebo čidlo. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna tělesa 1 800–3 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "bosch-mycka-e09": [
+    {
+      "type": "text",
+      "value": "Chyba E09 u myček Bosch znamená, že se voda neohřála na požadovanou teplotu. Nádobí pak zůstává mastné a mokré, protože bez tepla neúčinkuje mycí prostředek ani sušení. Průtokové topné těleso je u myček náchylné na vodní kámen, takže právě tam začněte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte sůl a tvrdost vody",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Ověřte, že máte v zásobníku regenerační sůl a že nastavená tvrdost vody odpovídá skutečné hodnotě ve vaší lokalitě. Špatné nastavení je nejčastější důvod, proč se vápenec usazuje rychleji, než by měl.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Odvápněte myčku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte naprázdno nejdelší horký program s odvápňovačem určeným pro myčky. U zanedbané myčky postup po týdnu zopakujte — silná vrstva nejde odstranit napoprvé.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte sítka a ramena",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyjměte kombinaci sítek, propláchněte ji a kartáčkem pročistěte trysky obou ostřikovacích ramen. Snížený průtok vody se projeví i jako nedostatečný ohřev.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Rozhodněte se o opravě",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E09 přetrvává, je vadné topné těleso nebo teplotní čidlo. U myček je těleso součástí čerpadla, takže výměna vychází dráž než u pračky — orientačně 2 500–5 000 Kč včetně dílu u nezávislého servisu.",
+      "tag": "p"
+    }
+  ],
+  "siemens-mycka-e09": [
+    {
+      "type": "text",
+      "value": "Kód E09 u myček Siemens signalizuje problém s ohřevem vody. Program doběhne, ale nádobí je mastné a po skončení mokré. Než budete volat servis, vyplatí se vyloučit dvě věci, které to způsobují nejčastěji: vápenec a nedostatečnou cirkulaci vody.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Ověřte, jestli je uvnitř horko",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte program na 60 °C a po dvaceti minutách krátce pootevřete dvířka. Chybějící pára znamená, že ohřev nefunguje. Horko uvnitř naopak ukazuje spíš na vadné čidlo než na topení.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zkontrolujte, jak je myčka naplněná",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Přeplněná myčka a nádobí, které se navzájem překrývá, brání cirkulaci horké vody. Zkuste program s poloviční náplní a talíři rozestavěnými tak, aby se nedotýkaly.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Odvápněte a vyčistěte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyjměte sítka, propláchněte je a pročistěte trysky ramen. Pak spusťte naprázdno horký program s odvápňovačem pro myčky a doplňte regenerační sůl.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vrací-li se E09 i s poloviční náplní a po odvápnění, jde o topné těleso nebo čidlo. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, oprava 2 500–5 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "siemens-mycka-e1": [
+    {
+      "type": "text",
+      "value": "Jedno bliknutí kontrolky, tedy kód E1, znamená u myček Siemens přehřátí nebo poruchu topného tělesa. Myčka program přeruší, protože nedokáže zaručit, že teplota zůstane v bezpečném rozmezí. Je to bezpečnostní reakce, takže ji neignorujte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Nechte myčku vychladnout",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vypněte ji a nechte hodinu odpojenou s pootevřenými dvířky. Voda uvnitř může být velmi horká a část ochran se vrací až po vychladnutí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zkontrolujte, na jakou vodu je napojená",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Je-li myčka připojená na horkou vodu, změřte její teplotu na kohoutku. Hodnota výrazně nad 60 °C bývá nad limitem výrobce a řešením je přepojit myčku na studenou vodu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Obnovte cirkulaci",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyjměte kombinaci sítek a propláchněte je, pročistěte trysky ostřikovacích ramen a ověřte, že se ramena volně otáčejí. Zanesený okruh způsobí lokální přehřívání u topného tělesa.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Otestujte na nižší teplotě",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Po vychladnutí spusťte krátký program na nízkou teplotu, například sklo. Pokud E1 naskočí i tam, myčku dál nepoužívejte a objednejte technika — oprava vychází u nezávislého servisu orientačně na 2 000–5 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "siemens-mycka-e4": [
+    {
+      "type": "text",
+      "value": "Čtyři bliknutí, tedy kód E4, znamenají u myček Siemens poruchu průtokového spínače pod topným tělesem. Ten hlídá, že topení spíná jen tehdy, když kolem něj skutečně proudí voda. Bez jeho potvrzení myčka ohřev nezapne, takže nádobí zůstane mokré a mastné.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vyčistěte kombinaci sítek",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyjměte sítka ze dna a propláchněte je pod tekoucí vodou včetně jemného mikrosítka. Snížený průtok je nejčastější důvod, proč spínač průtok nepotvrdí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Pročistěte ostřikovací ramena",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Sundejte spodní rameno otočením objímky, trysky pročistěte párátkem a rameno propláchněte. Zkontrolujte, že se po nasazení volně otáčí a šipka směřuje k symbolu zámku.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Odvápněte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte naprázdno horký program s odvápňovačem pro myčky. Vápenec zužuje průtokové cesty a spínač pak reaguje nespolehlivě. Zkontrolujte i zásobník soli.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E4 přetrvává i po vyčištění a odvápnění, je vadný samotný průtokový spínač nebo jeho kabeláž. Oprava vychází u nezávislého servisu orientačně na 1 500–3 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "siemens-pracka-f91": [
+    {
+      "type": "text",
+      "value": "Kód F91 u praček Siemens znamená ztrátu komunikace mezi řídicími moduly — hlavní deska si přestala rozumět s ovládacím panelem nebo s modulem motoru. Pračka pak neví, co má dělat, a program přeruší. Jednorázový výpadek se občas podaří vyresetovat.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Proveďte tvrdý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku od elektřiny aspoň na 20 minut, ať se vybijí kondenzátory na deskách. Krátké vypnutí a zapnutí nestačí. Pak zkuste spustit krátký program.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Sledujte, jak reaguje panel",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zkontrolujte, jestli displej a kontrolky reagují normálně a jestli pračka odpovídá na všechna tlačítka. Nereagující panel ukazuje spíš na modul panelu, chaotické chování na hlavní desku.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vylučte nestabilní napájení",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapojte pračku přímo do zdi bez prodlužovaček a přepěťových ochran. Opakované výpadky komunikace bývají důsledkem kolísajícího napětí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Zmiňte technikovi kontext",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Došlo-li k chybě po stěhování pračky nebo po předchozím servisním zásahu, řekněte to — může jít o uvolněný konektor, což je nesrovnatelně levnější než nová deska. Oprava vychází u nezávislého servisu orientačně na 1 500–6 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "bosch-susicka-e67": [
+    {
+      "type": "text",
+      "value": "Chyba E67 u sušiček Bosch s tepelným čerpadlem znamená, že kompresor nepracuje nebo hlásí poruchu. Bez kompresoru sušička buben točí dál, ale prádlo nesuší. U tepelných čerpadel je to jedna z dražších závad, proto se vyplatí nejdřív vyloučit banální příčiny.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Dejte sušičce vychladnout a vydýchat",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Kompresor má vlastní tepelnou ochranu a při přehřátí se sám odstaví. Nechte sušičku hodinu vypnutou, odsuňte ji aspoň 10 cm od zdi a otevřete dveře místnosti.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte oba filtry a výměník",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Filtr ve dvířkách propláchněte pod tekoucí vodou, houbovitý filtr v soklu vymáchejte a nechte uschnout. Lamely výměníku za ním vysajte měkkým nástavcem ve směru lamel.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte teplotu v místnosti",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Tepelná čerpadla potřebují rozumnou okolní teplotu. Ve velmi chladné místnosti pod 5 °C se chyba kompresoru objeví i u zdravé sušičky. Zkuste program v teplejším prostředí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Zvažte ekonomiku opravy",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E67 přetrvává, jde o kompresor nebo chladivový okruh a to je nejdražší část sušičky. Cena u nezávislého servisu vychází orientačně na 4 000–9 000 Kč. U sušiček starších osmi let se oprava často nevyplatí, proto si vyžádejte kalkulaci předem.",
+      "tag": "p"
+    }
+  ],
+  "siemens-susicka-e67": [
+    {
+      "type": "text",
+      "value": "Kód E67 u sušiček Siemens s tepelným čerpadlem hlásí, že kompresor neběží nebo hlásí závadu. Projeví se to tak, že program doběhne, ale prádlo zůstane vlhké a v bubnu není cítit teplo. Než začnete řešit chladivový okruh, ověřte podmínky, ve kterých sušička pracuje.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte, kde sušička stojí",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Kompresor odvádí teplo do okolí. V úzké skříni, spíži nebo těsně u zdi se sušička přehřívá a kompresor se ochranně odstaví. Odsuňte ji od stěny a zajistěte proudění vzduchu v místnosti.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Nechte ji dlouho vychladnout",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku od elektřiny aspoň na dvě hodiny. Tepelná ochrana kompresoru se vrací pomaleji než ostatní ochrany a krátká pauza nestačí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Pročistěte vzduchový okruh",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Propláchněte filtr ve dvířkách i houbovitý filtr v soklu a lamely výměníku vysajte. Ucpaný okruh je nejčastější důvod, proč se kompresor přehřívá opakovaně.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Rozhodněte se podle stáří",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E67 zůstává i po vychladnutí v dobře větrané místnosti, je závada v kompresoru nebo v okruhu chladiva. Oprava u nezávislého servisu vychází orientačně na 4 000–9 000 Kč a u starších sušiček se blíží ceně nové.",
+      "tag": "p"
+    }
+  ],
+  "siemens-susicka-e71": [
+    {
+      "type": "text",
+      "value": "Kód E71 u sušiček Siemens s tepelným čerpadlem znamená, že čidlo teploty na výparníku hlásí hodnotu mimo očekávaný rozsah. Sušička podle něj řídí celý cyklus, takže buď nesuší, nebo program ukončí předčasně. Vadné čidlo je přitom vzácnější než zanesený výměník, kvůli kterému teplota skutečně vybočí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Propláchněte filtry",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Filtr ve dvířkách vymáchejte pod tekoucí vodou — oklepání nestačí, jemný povlak z aviváže se drží. Houbovitý filtr v soklu vymáchejte také a nechte úplně uschnout.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte lamely výparníku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Za spodním filtrem je hustá mřížka kovových lamel. Ucpaná vlákny znamená, že vzduch neproudí a teplota na čidle vyjede mimo rozsah. Vysajte ji měkkým nástavcem ve směru lamel a netlačte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Nechte okruh vyrovnat teplotu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku na hodinu od elektřiny a nechte ji stát s otevřenými dvířky, aby se teplota v okruhu srovnala. Pak spusťte krátký program s malou náplní.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E71 přetrvává i s čistým výměníkem, je vadné čidlo nebo je v okruhu málo chladiva. U tepelných čerpadel jde o dražší opravu — orientačně 2 500–6 000 Kč u nezávislého servisu, proto si vyžádejte kalkulaci předem.",
+      "tag": "p"
+    }
+  ],
+  "aeg-mycka-i60": [
+    {
+      "type": "text",
+      "value": "Chyba i60 u myček AEG se týká ohřevu — topné těleso nebo termostat nefungují správně. Program doběhne, ale nádobí zůstane mastné a po skončení mokré, protože bez tepla neúčinkuje prostředek ani sušení. Vodní kámen je u této chyby nejčastější spolupachatel.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte sůl a nastavení tvrdosti",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Ověřte hladinu regenerační soli a v nastavení myčky porovnejte nastavenou tvrdost vody se skutečnou hodnotou ve vaší lokalitě. Zjistíte ji u vodárenského dodavatele.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Odvápněte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte naprázdno nejdelší horký program s odvápňovačem pro myčky. U myčky, která nebyla roky odvápněná, postup po týdnu zopakujte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Obnovte cirkulaci",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyjměte sítka, propláchněte je a pročistěte trysky obou ostřikovacích ramen. Ověřte, že se ramena volně otáčejí a že je nic neblokuje.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud i60 přetrvává, je vadné topné těleso nebo termostat. U myček bývá těleso součástí oběhového čerpadla, takže oprava vychází u nezávislého servisu orientačně na 2 500–5 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "electrolux-mycka-i60": [
+    {
+      "type": "text",
+      "value": "Kód i60 u myček Electrolux hlásí závadu ohřevu — topného tělesa nebo termostatu. Poznáte to podle mokrého nádobí po skončení programu a podle toho, že se z myčky po otevření nevyvalí pára. Než budete volat servis, ověřte, jestli myčce nebrání v ohřevu něco jednoduchého.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Ověřte příznak spolehlivě",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte program na 60 °C a po dvaceti minutách krátce pootevřete dvířka. Chybějící pára a vlažná voda uvnitř potvrzují, že ohřev nefunguje.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zkontrolujte naplnění",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Přeplněná myčka a překrývající se nádobí brání cirkulaci horké vody. Zkuste program s poloviční náplní a talíři rozestavěnými tak, aby se nedotýkaly — pokud pak nádobí uschne, byla příčina v plnění.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte a odvápněte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyjměte sítka, propláchněte je a pročistěte trysky ramen. Pak spusťte horký program naprázdno s odvápňovačem pro myčky a doplňte regenerační sůl.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Rozhodněte se o opravě",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vrací-li se i60 i s poloviční náplní a po odvápnění, potřebujete technika. Oprava vychází u nezávislého servisu orientačně na 2 500–5 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "aeg-susicka-e72": [
+    {
+      "type": "text",
+      "value": "Chyba E72 u sušiček AEG se váže na termistor, který měří teplotu výstupního vzduchu. Sušička podle něj pozná, jak vlhké je prádlo a kdy program ukončit. Vadné měření znamená buď předčasné ukončení s vlhkým prádlem, nebo naopak zbytečně dlouhé sušení.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vyčistěte čidlo nepřímo",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Termistor bývá obalený jemným povlakem z aviváže, který zpožďuje jeho reakci. Propláchněte filtr ve dvířkách pod tekoucí vodou a houbovitý filtr v soklu vymáchejte — právě přes ně se povlak šíří dál do okruhu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Omezte aviváž",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Používáte-li hodně aviváže nebo sušicí ubrousky, zkuste je na několik cyklů úplně vynechat. Nános na čidle je u E72 podceňovaná příčina a odstraní se sám po několika programech.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Otestujte s dobře vyždímaným prádlem",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Prádlo vyždímané na nízkých otáčkách zkresluje měření vlhkosti. Spusťte program s prádlem vyždímaným aspoň na 1200 otáček a sledujte, jestli chyba nastane.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E72 přetrvává, je vadný samotný termistor nebo jeho kabeláž. Je to relativně levný díl — oprava u nezávislého servisu vychází orientačně na 1 500–3 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "electrolux-susicka-e72": [
+    {
+      "type": "text",
+      "value": "Kód E72 u sušiček Electrolux znamená poruchu termistoru měřícího teplotu vystupujícího vzduchu. Toto čidlo rozhoduje, kdy je prádlo suché, takže jeho selhání se projeví nespolehlivým výsledkem sušení — jednou přeschlé, podruhé vlhké prádlo.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zaznamenejte, jak se chyba projevuje",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapište si, jestli program končí příliš brzy s vlhkým prádlem, nebo běží nezvykle dlouho. Je to první informace, kterou technik potřebuje, a rozliší vadné čidlo od jiných příčin.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Propláchněte filtry",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Filtr ve dvířkách propláchněte pod tekoucí vodou, houbovitý filtr v soklu vymáchejte a nechte uschnout. Povlak z aviváže na nich zpomaluje proudění a nepřímo zkresluje i měření teploty.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyzkoušejte jiný program",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte časově řízený program místo automatického, pokud ho vaše sušička nabízí. Časový program čidlo vlhkosti nevyužívá, takže když proběhne bez chyby, potvrdí to diagnózu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Rozhodněte se o servisu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E72 přetrvává, je potřeba vyměnit termistor nebo opravit jeho kabeláž. Oprava vychází u nezávislého servisu orientačně na 1 500–3 000 Kč včetně dílu — patří k levnějším závadám sušiček.",
+      "tag": "p"
+    }
+  ],
+  "lg-mycka-he": [
+    {
+      "type": "text",
+      "value": "Kód HE u myček LG znamená závadu ohřevu — topné těleso nehřeje nebo nedosáhne požadované teploty. Nádobí zůstává mastné a mokré. U myček LG bývá spouštěčem vodní kámen a snížený průtok, teprve potom skutečně vadné těleso.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte sůl a tvrdost vody",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Doplňte regenerační sůl a v nastavení ověřte, že nastavená tvrdost odpovídá skutečné hodnotě ve vaší lokalitě.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Odvápněte myčku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Naprázdno spusťte nejdelší horký program s odvápňovačem pro myčky. U zanedbané myčky opakujte po týdnu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Obnovte průtok",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyjměte sítka, propláchněte je a pročistěte trysky ostřikovacích ramen. Zkontrolujte, že se ramena volně otáčejí a nic je neblokuje.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte a vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte myčku na 10 minut od elektřiny a spusťte horký program. Pokud HE přetrvává, je vadné topné těleso nebo čidlo — oprava u nezávislého servisu orientačně 2 500–5 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "lg-mycka-te": [
+    {
+      "type": "text",
+      "value": "Kód tE u myček LG znamená, že teplotní čidlo NTC je vadné nebo odpojené. Myčka bez důvěryhodného měření teploty nemůže bezpečně řídit ohřev, a proto program přeruší. Vadné bývá spíš spojení než samotné čidlo.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Proveďte reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte myčku od elektřiny na 15 minut a znovu zapojte. Jednorázový výpadek komunikace s čidlem se takto vymaže a program pak proběhne normálně.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Odvápněte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Čidlo sedí ve vodní cestě a vrstva vodního kamene na něm zkresluje měření. Spusťte naprázdno horký program s odvápňovačem pro myčky a doplňte regenerační sůl.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zaznamenejte, kdy chyba přijde",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapište si, jestli tE naskočí hned po zapnutí, nebo až ve fázi ohřevu. Chyba hned na začátku ukazuje na přerušený obvod, chyba za tepla na čidlo selhávající při zahřátí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Objednejte servis",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud tE přetrvává, je potřeba vyměnit čidlo nebo opravit jeho kabeláž. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, oprava 1 500–3 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "lg-susicka-fe": [
+    {
+      "type": "text",
+      "value": "Kód FE u sušiček LG znamená, že motor ventilátoru je vadný nebo zablokovaný. Ventilátor žene ohřátý vzduch bubnem a bez něj se sušička rychle přehřeje, proto program okamžitě končí. Nahromaděná vlákna dokážou ventilátor zabrzdit stejně dobře jako skutečná závada.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Poslechněte si, co sušička dělá",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte program a poslouchejte. Kromě otáčení bubnu má být slyšet souvislý šum proudícího vzduchu. Ticho nebo skřípání jsou dvě různé diagnózy — zapište si, co slyšíte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte vzduchovou cestu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku od elektřiny. Propláchněte filtr ve dvířkách a u kondenzačních modelů vytáhněte i spodní filtr a výměník. Lamely vysajte měkkým nástavcem ve směru lamel.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte odvod vzduchu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "U odtahových modelů projděte hadici po celé délce a zkontrolujte venkovní mřížku. Ucpaný odvod zvyšuje odpor natolik, že ventilátor nedosáhne potřebných otáček.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud FE zůstává i po vyčištění, je vadný motor ventilátoru nebo jeho řízení. Oprava u nezávislého servisu vychází orientačně na 2 000–4 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "lg-susicka-te": [
+    {
+      "type": "text",
+      "value": "Kód tE u sušiček LG znamená, že teplotní senzor je vadný nebo nereaguje. Sušička podle něj řídí ohřev a rozhoduje, kdy program ukončit, takže bez něj se buď nespustí, nebo skončí předčasně s vlhkým prádlem.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Nechte sušičku vychladnout",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte ji od elektřiny na hodinu a nechte stát s otevřenými dvířky. Senzor přehřátý z předchozího cyklu může hlásit hodnotu mimo rozsah, i když je v pořádku.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte filtry",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Filtr ve dvířkách propláchněte pod tekoucí vodou a spodní filtr vymáchejte a nechte uschnout. Povlak z aviváže na čidle i na filtrech zpomaluje reakci senzoru.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkuste jiný program",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte časově řízený program, pokud ho sušička nabízí. Nevyužívá čidlo vlhkosti stejným způsobem, takže když proběhne, zúží to hledání závady.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Objednejte servis",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud tE přetrvává, je potřeba vyměnit senzor nebo opravit kabeláž. Oprava vychází u nezávislého servisu orientačně na 1 500–3 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "lg-susicka-ehe": [
+    {
+      "type": "text",
+      "value": "Kód EHE u sušiček LG znamená, že topné těleso odebírá nadměrný elektrický proud. Elektronika to vyhodnotí jako riziko a program okamžitě ukončí. Je to bezpečnostní funkce a je potřeba ji brát vážně — nadproud v topném okruhu je jedna z mála závad s reálným rizikem požáru.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Sušičku nepoužívejte a odpojte ji",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vytáhněte zástrčku a nezkoušejte program opakovat, dokud nezjistíte příčinu. Cítíte-li zápach spáleniny, rovnou volejte servis a sušičku už nezapínejte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zkontrolujte zásuvku a jistič",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapojte sušičku přímo do zásuvky ve zdi bez prodlužovaček a rozdvojek. V rozvaděči ověřte, že jistič té větve není poddimenzovaný nebo částečně vypadlý, a prohlédněte zástrčku — zahnědlý plast znamená přehřívající se spoj.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte vzduchový okruh",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Propláchněte oba filtry a vysajte lamely výměníku. Přehřívání z ucpaného okruhu časem poškodí topné těleso a nadproud může být jeho následkem.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Nechte to změřit",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud EHE naskočí znovu, sušičku dál nepoužívejte. Jde o topné těleso nebo jeho řízení a je nutné to změřit. Oprava u nezávislého servisu vychází orientačně na 2 000–4 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "lg-susicka-f1": [
+    {
+      "type": "text",
+      "value": "Kód F1 u sušiček LG s tepelným čerpadlem znamená, že výměník tepla nepracuje, jak má — sušička nesuší, i když buben běží. Nejčastější příčinou nebývá závada okruhu, ale výměník zanesený vlákny, přes který nemůže proudit vzduch.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vyčistěte výměník důkladně",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku, otevřete klapku v soklu a vyjměte houbovitý filtr i výměník. Lamely vysajte měkkým nástavcem ve směru lamel a výměník propláchněte sprchou proti směru proudění, dokud voda neodtéká čistá.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Nechte díly uschnout",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vlhký filtr i výměník kladou vzduchu podstatně větší odpor. Nechte je schnout klidně přes noc, teprve pak je vraťte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zajistěte prostor a teplotu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odsuňte sušičku aspoň 10 cm od zdi a při sušení otevřete dveře místnosti. Ve velmi chladné místnosti pod 5 °C tepelné čerpadlo nepracuje efektivně a chyba se objeví i u zdravého spotřebiče.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud F1 přetrvává i s čistým a suchým výměníkem v temperované místnosti, jde o okruh chladiva nebo kompresor. Oprava u nezávislého servisu vychází orientačně na 4 000–9 000 Kč, u starších sušiček se blíží ceně nové.",
+      "tag": "p"
+    }
+  ],
+  "samsung-mycka-he": [
+    {
+      "type": "text",
+      "value": "Kód HE u myček Samsung znamená, že topné těleso nebo teplotní senzor jsou vadné. Projeví se to mastným nádobím a mokrým nádobím po skončení programu. Než se pustíte do servisu, ověřte, jestli ohřevu nebrání vápenec nebo snížený průtok vody.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Ověřte, že myčka nehřeje",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte program na 60 °C a po dvaceti minutách krátce pootevřete dvířka. Chybějící pára potvrzuje, že ohřev nefunguje; horko uvnitř naopak ukazuje na vadné čidlo.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Doplňte sůl a odvápněte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Ověřte hladinu regenerační soli a nastavenou tvrdost vody. Pak spusťte naprázdno nejdelší horký program s odvápňovačem určeným pro myčky.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte sítka a ramena",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyjměte kombinaci sítek, propláchněte ji a kartáčkem pročistěte trysky ostřikovacích ramen. Ověřte, že se ramena volně otáčejí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Rozhodněte se o opravě",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud HE přetrvává i po odvápnění, je vadné topné těleso nebo senzor. Oprava u nezávislého servisu vychází orientačně na 2 500–5 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "samsung-susicka-fe": [
+    {
+      "type": "text",
+      "value": "Kód FE u sušiček Samsung znamená, že ventilátor nepracuje správně. Bez proudění vzduchu se prádlo nesuší a sušička se rychle přehřívá, proto program ukončí. Zablokování vlákny je přitom častější než skutečná závada motoru.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zjistěte, jestli ventilátor běží",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte program a poslouchejte, jestli je kromě otáčení bubnu slyšet souvislý šum proudícího vzduchu. Zapište si, co slyšíte — technik se na to zeptá jako na první.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Propláchněte filtry",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku od elektřiny. Filtr ve dvířkách propláchněte pod tekoucí vodou, spodní filtr vymáchejte a nechte úplně uschnout.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte odvod vzduchu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "U odtahových modelů projděte hadici a venkovní mřížku, u kondenzačních vysajte lamely výměníku měkkým nástavcem ve směru lamel.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud FE zůstává i po vyčištění, jde o motor ventilátoru, jeho kabeláž nebo řízení. Oprava u nezávislého servisu vychází orientačně na 2 000–4 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "samsung-pracka-ae": [
+    {
+      "type": "text",
+      "value": "Kód AE u praček Samsung znamená chybu v komunikaci mezi řídicími moduly, případně poruchu externího modulu. Jednotky si přestaly rozumět, takže pračka nedokáže program spolehlivě řídit a zastaví ho. Jednorázový výpadek se často podaří vyresetovat.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Proveďte tvrdý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku od elektřiny aspoň na 20 minut, ať se vybijí kondenzátory na deskách. Pak zapojte a zkuste spustit krátký program.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Sledujte chování panelu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zkontrolujte, jestli displej a kontrolky reagují normálně a jestli pračka odpovídá na všechna tlačítka. Nereagující panel ukazuje na modul panelu, chaotické blikání spíš na hlavní desku.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zapojte pračku napřímo",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Bez prodlužovaček, rozdvojek a přepěťových ochran. Nestabilní napájení je u chyb komunikace častým spouštěčem a zároveň důvodem, proč se chyba po opravě vrací.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Zmiňte technikovi souvislosti",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Objevila-li se AE po stěhování nebo po předchozím servisním zásahu, řekněte to — uvolněný konektor je nesrovnatelně levnější oprava než nová deska. Cena u nezávislého servisu vychází orientačně na 1 500–6 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-pracka-f11": [
+    {
+      "type": "text",
+      "value": "Chyba F11 u praček Whirlpool znamená, že řídicí deska ztratila komunikaci s modulem motoru. Pračka pak neví, jestli se buben točí, a program přeruší. Bývá to důsledek nestabilního napájení nebo uvolněného konektoru, takže reset a kontrola zapojení mají reálnou šanci uspět.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Proveďte dlouhý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku od elektřiny na 20 minut. Kondenzátory na výkonové desce drží náboj déle, než se čeká, a krátké vypnutí problém nevyřeší. Pak zkuste krátký máchací program.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zkontrolujte, jestli není buben zablokovaný",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojenou pračku otevřete a rukou protočte buben. Musí se otáčet lehce. Zadrhávající buben motor přetíží a výsledná chyba může vypadat jako ztráta komunikace.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vylučte nestabilní napájení",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapojte pračku přímo do zásuvky ve zdi, bez prodlužovaček a přepěťových ochran. Zkuste ji spustit v době, kdy na okruhu neběží jiné velké spotřebiče.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud se F11 vrací, jde o výkonovou desku, modul motoru nebo jejich propojení. Cena u nezávislého servisu vychází orientačně na 2 500–6 000 Kč včetně dílu. U praček starších osmi let si nechte spočítat kalkulaci předem.",
+      "tag": "p"
+    }
+  ]
 }
