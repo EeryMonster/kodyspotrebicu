@@ -15,7 +15,46 @@
     "miele-mycka-f600",
     "miele-mycka-f69",
     "miele-mycka-f87",
-    "miele-mycka-f36"
+    "miele-mycka-f36",
+    "miele-mycka-f13",
+    "miele-mycka-f15",
+    "miele-mycka-f173",
+    "miele-mycka-f14",
+    "miele-mycka-f78",
+    "miele-mycka-f67",
+    "miele-mycka-f68",
+    "miele-mycka-f24",
+    "miele-mycka-f25",
+    "miele-mycka-f26",
+    "miele-mycka-f33",
+    "miele-mycka-f40",
+    "miele-mycka-f42",
+    "miele-mycka-f47",
+    "miele-mycka-f91",
+    "miele-mycka-f51",
+    "miele-mycka-f52",
+    "miele-mycka-f53",
+    "miele-mycka-f63",
+    "miele-mycka-f84",
+    "miele-mycka-f85",
+    "miele-mycka-f86",
+    "miele-mycka-f88",
+    "miele-mycka-f170",
+    "miele-mycka-f171",
+    "miele-mycka-f177",
+    "miele-mycka-f601",
+    "miele-mycka-blikaji-ukazatele-prubehu-programu-myti-suseni-a-konec",
+    "miele-mycka-privodu-vodyotevrete-vodovodni-kohoutek",
+    "miele-mycka-privod-vody-blika",
+    "miele-mycka-odtok-vody",
+    "miele-mycka-ostrikovaci-rameno-dole",
+    "miele-mycka-ostrikovaci-rameno-nahore",
+    "miele-mycka-ostrikovaci-rameno-uprostred",
+    "miele-mycka-ostrikovaci-rameno-blika",
+    "miele-mycka-sviti-kontrolka-lestidlo-nebo-sul",
+    "miele-mycka-ukazatel-casu-blika-pri-zavrenych-dvirkach",
+    "miele-mycka-vicko-nadoby-na-sulzavrete-vicko-nadoby-na-sul",
+    "miele-mycka-zkontrolujte-sitkonastavte-interval"
   ],
   "rewrites": [
     {
@@ -390,6 +429,1000 @@
       ],
       "whenToStopAndCallService": [
         "Pokud se F36 vrací i po resetu, je potřeba vyměnit zámek dvířek. Patří k levnějším opravám myčky: díl stojí orientačně 800–2 000 Kč, s prací u nezávislého servisu se celková cena pohybuje zhruba 1 800–3 500 Kč, autorizovaný servis Miele bývá dražší. Oprava trvá většinou do hodiny. Do výměny myčku nepoužívejte — dvířka se nemusí spolehlivě zajistit."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f13",
+      "shortMeaning": "Chyba F13 znamená, že se myčka Miele nedokázala napustit vodou v očekávaném čase. Program se přeruší hned na začátku, ještě než se rozběhne mytí. V naprosté většině případů je příčina mimo myčku — v přívodu vody, ne v elektronice, takže máte slušnou šanci ji vyřešit sami během deseti minut.",
+      "likelyCauses": [
+        "Vodovodní kohoutek není otevřený naplno nebo zůstal po opravě přiškrcený",
+        "Znečištěné sítko v přípojce přívodní hadice — nejčastější příčina u starších rozvodů",
+        "Zalomená nebo přiskřípnutá přívodní hadice za myčkou po jejím zasunutí ke zdi",
+        "Sepnutý bezpečnostní ventil AquaStop, který propouští jen minimum vody",
+        "Dočasně nízký tlak ve vodovodním řadu, typicky po havárii nebo opravě v ulici",
+        "Vadný elektrický přívodní ventil v plastovém pouzdru přípojky (méně časté)"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Zkontrolujte, že je rohový ventil otevřený až na doraz. Po instalatérských pracích bývá schválně přiškrcený a nikdo ho už nedotočí zpět.",
+        "Myčku opatrně povysuňte a projděte přívodní hadici po celé délce. Nesmí být nikde zalomená ani stlačená mezi spotřebičem a zdí.",
+        "Zavřete vodu a odšroubujte hadici od kohoutku — připravte si hadr, kousek vody vyteče. V převlečné matici je jemné sítko.",
+        "Sítko vyjměte pinzetou a propláchněte pod tekoucí vodou. U starších rozvodů v něm bývají rezavé šupinky a vodní kámen.",
+        "Máte-li na hadici tlustší plastový blok s kabelem (AquaStop), zkontrolujte, že není zavodněný a kabel nikde přiskřípnutý. Sepnutý AquaStop se nedá opravit, mění se celá hadice.",
+        "Hadici vraťte, dotáhněte rukou plus čtvrt otáčky kleštěmi a otevřete vodu. Zkontrolujte, jestli spoj neprosakuje.",
+        "Myčku odpojte na 5 minut od elektřiny, zapojte a spusťte krátký program. Během prvních 30 sekund musíte slyšet napouštění."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud voda do myčky prokazatelně teče a F13 se přesto vrací, je vadný přívodní ventil nebo průtokový snímač. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna ventilu zhruba 1 500–3 000 Kč včetně dílu. Pozor: v pouzdru přípojky je síťové napětí, proto ventil nikdy nerozebírejte sami."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f15",
+      "shortMeaning": "Chyba F15 se u myček Miele týká napouštění vody — myčka za daný čas nenabrala potřebné množství. Od příbuzné chyby F13 ji v praxi nerozlišíte podle projevu, obě řešíte stejným postupem. Rozdíl je v tom, ve které fázi kontroly ji řídicí jednotka vyhodnotila, což je informace hlavně pro servisního technika.",
+      "likelyCauses": [
+        "Částečně uzavřený vodovodní kohoutek — stačí, aby nebyl otevřený úplně",
+        "Zanesené sítko v přípojce přívodní hadice vodním kamenem nebo rzí",
+        "Nízký tlak vody v rozvodu, zvlášť ve špičce nebo ve vyšších patrech",
+        "Zalomená hadice po přisunutí myčky ke zdi",
+        "Ucpaný perlátor nebo redukce, pokud je myčka napojená přes baterii u dřezu",
+        "Vadný přívodní ventil, který se neotevře na plný průřez"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Otevřete kohoutek naplno a nechte ho tak. U kombinovaných ventilů pod dřezem se snadno stane, že je jedna větev jen pootevřená.",
+        "Otestujte tlak: napusťte kbelík vodou z kohoutku, na který je myčka napojená. Pokud voda teče slabým pramínkem, problém není v myčce.",
+        "Zavřete vodu, odšroubujte hadici a vyjměte sítko z převlečné matice. Propláchněte ho a případné usazeniny odstraňte starým kartáčkem.",
+        "Je-li myčka napojená přes redukci u dřezové baterie, rozeberte i tu — v redukcích se usazeniny drží ještě víc než v hadici.",
+        "Zkontrolujte, jestli hadice není nikde zalomená, a myčku od zdi odsuňte aspoň o pár centimetrů.",
+        "Vše sestavte, otevřete vodu a zkontrolujte těsnost spojů.",
+        "Odpojte myčku na 5 minut od elektřiny a spusťte krátký program. Poslouchejte, jestli se ozve napouštění."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud tlak vody v kbelíkovém testu vyhoví a F15 přetrvává i s čistým sítkem, je na řadě technik — půjde o přívodní ventil nebo jeho ovládání z desky. Diagnostika vychází orientačně na 800–1 500 Kč, oprava zhruba 1 500–3 000 Kč. Přípojku sami nerozebírejte, je pod síťovým napětím."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f173",
+      "shortMeaning": "Hlášení F173 upozorňuje, že přívod vody do myčky Miele je uzavřený nebo omezený. Na rozdíl od tvrdých chyb F13 a F15 jde spíš o upozornění — myčka vám říká, že vodu sice dostává, ale pomaleji, než potřebuje. Typicky se objeví po instalatérských pracích nebo když tlak v domě klesne.",
+      "likelyCauses": [
+        "Kohoutek zůstal po opravě nebo po dovolené jen pootevřený",
+        "Přiškrcený hlavní uzávěr vody v bytě po havárii v domě",
+        "Zanesené sítko v přípojce, které průtok postupně dusí",
+        "Trvale nižší tlak v rozvodu — časté ve vyšších patrech a ve večerní špičce",
+        "Zalomená přívodní hadice nebo příliš ostrá smyčka za myčkou",
+        "Částečně sepnutý AquaStop, který propouští jen omezený průtok"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Otočte kohoutkem až na doraz a zkontrolujte i hlavní uzávěr vody v bytě — po opravách bývá zavřený jen zpola.",
+        "Změřte průtok: nechte kohoutek téct do litrové odměrky. Naplnit by se měla zhruba do deseti sekund. Delší čas znamená nedostatečný tlak.",
+        "Zkuste myčku spustit v jinou denní dobu. Pokud F173 mizí dopoledne a vrací se večer, je příčinou kolísání tlaku v domě, ne závada.",
+        "Zavřete vodu, odpojte hadici a propláchněte sítko z převlečné matice.",
+        "Projděte hadici po celé délce a narovnejte případné zalomení. Myčku od zdi mírně odsuňte.",
+        "Hadici vraťte, otevřete vodu a zkontrolujte spoje.",
+        "Potvrďte hlášení tlačítkem OK a spusťte krátký program."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud je tlak vody prokazatelně v pořádku a F173 se objevuje i po vyčištění sítka, nechte technika zkontrolovat přívodní ventil a průtokový snímač. Diagnostika vychází orientačně na 800–1 500 Kč. Jde-li o trvale nízký tlak v celém bytě, řešení je na straně vodoinstalace, ne myčky."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f14",
+      "shortMeaning": "Chyba F14 signalizuje zablokované oběhové čerpadlo — motor, který žene vodu do ostřikovacích ramen, se nedokáže roztočit. Miele stejnou příčinu hlásí i kódy F69 a F78; liší se fází, ve které ji řídicí jednotka zachytila, praktické řešení je u všech tří stejné. Dobrá zpráva: velmi často nejde o závadu, ale o čerpadlo zaschlé po delší odstávce.",
+      "likelyCauses": [
+        "Zaschlé a zalepené čerpadlo po týdnech až měsících nečinnosti — nejčastější příčina",
+        "Cizí předmět v oběžném kole: střep, drobná kost, párátko nebo kousek plastu",
+        "Zbytky tuku a jídla, které rotor zalepily",
+        "Nesprávně usazená kombinace sítek, kterou se do čerpadla dostaly nečistoty",
+        "Vápenné usazeniny po dlouhodobě tvrdé vodě bez regenerační soli",
+        "Skutečná závada motoru čerpadla, pokud níže uvedený postup nepomůže"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Vypněte myčku a vyjměte kombinaci sítek ze dna. Prostor pod nimi prohlédněte a vyberte všechny nečistoty — na střepy použijte rukavice.",
+        "Miele doporučuje přímo tento postup na rozlepení čerpadla: nalijte do prázdného mycího prostoru asi 1 litr teplé vody o teplotě nejvýše 75 °C.",
+        "Pozor na opaření — s horkou vodou zacházejte opatrně a nepoužívejte vodu teplejší než 75 °C, poškodili byste plasty.",
+        "Přidejte 3 až 5 kapek leštidla a nechte směs působit zhruba 5 minut.",
+        "Vraťte sítka, zavřete dvířka a spusťte program. U dlouho odstavené myčky se čerpadlo často rozjede až napodruhé nebo napotřetí.",
+        "Mezi pokusy myčku vždy vypněte, počkejte několik sekund a znovu zapněte.",
+        "Prevence do budoucna: pokud myčku delší dobu nepoužíváte, spusťte jednou za 2–3 týdny krátký program naprázdno."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud F14 přetrvává i po třech pokusech s teplou vodou a leštidlem, je pravděpodobná mechanická blokáda uvnitř čerpadla nebo závada motoru — to vyžaduje rozebrání spodní části myčky. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna oběhového čerpadla zhruba 3 500–6 500 Kč včetně dílu. U myček starších 8–10 let porovnejte cenu opravy s cenou nové."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f78",
+      "shortMeaning": "Kód F78 znamená, že se oběhové čerpadlo myčky Miele nerozeběhlo. Miele používá pro tuto závadu několik kódů (F14, F69, F78) podle toho, kdy ji diagnostika zachytila — postup řešení je u všech shodný. Než začnete uvažovat o servisu, vyplatí se vyloučit cizí předmět v čerpadle, protože to je po zaschnutí druhá nejčastější příčina.",
+      "likelyCauses": [
+        "Cizí předmět zaklíněný v oběžném kole — nejčastěji střep ze sklenice nebo drobná kost",
+        "Zaschlé čerpadlo po delší odstávce myčky",
+        "Zbytky tuku, které rotor zalepily",
+        "Poškozená nebo špatně nasazená kombinace sítek, přes kterou se nečistoty dostaly dál",
+        "Vápenné usazeniny v čerpadle při dlouhodobém provozu bez soli",
+        "Vadný motor čerpadla nebo jeho kondenzátor"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Odpojte myčku od elektřiny — než budete sahat do prostoru pod sítky, musí být bez proudu.",
+        "Vyjměte kombinaci sítek a posviťte si baterkou do prostoru pod nimi. Hledáte lesklé střepy, kosti, pecky a kousky plastu.",
+        "Nalezené předměty vytáhněte pinzetou a vždy v rukavicích. Nesahejte do otvoru čerpadla prsty, hrany oběžného kola jsou ostré.",
+        "Pokud nic nenajdete, zkuste čerpadlo rozlepit: 1 litr teplé vody o teplotě do 75 °C se 3 až 5 kapkami leštidla, nechte 5 minut působit.",
+        "Vraťte sítka tak, aby seděla zarovnaná ke dnu a zacvakla — špatně usazená sítka pouštějí nečistoty přímo do čerpadla.",
+        "Zapojte myčku a spusťte krátký program. Postup podle potřeby zopakujte dvakrát až třikrát.",
+        "Sledujte, jestli je z myčky slyšet rozběh čerpadla. Úplné ticho po napuštění ukazuje na skutečnou závadu motoru."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud jste v prostoru pod sítky nic nenašli a F78 se vrací i po opakovaném rozlepování, je potřeba technik — čerpadlo sedí v základně myčky a jeho demontáž vyžaduje rozebrání spotřebiče. Diagnostika vychází orientačně na 800–1 500 Kč, výměna čerpadla zhruba 3 500–6 500 Kč včetně dílu."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f67",
+      "shortMeaning": "Chyba F67 hlásí závadu oběhového čerpadla myčky Miele. Na rozdíl od kódů F14, F69 a F78, které znamenají mechanicky zablokované čerpadlo, jde tady o závadu, kterou uživatel doma neodstraní — elektroniku, motor nebo jejich propojení. Myčka program přeruší, protože bez funkčního oběhového čerpadla nemůže mýt.",
+      "likelyCauses": [
+        "Vadný motor oběhového čerpadla — spálené vinutí po dlouhodobém provozu",
+        "Vadný kondenzátor motoru, běžná závada u myček starších osmi let",
+        "Poškozený tachogenerátor, který nedokáže potvrdit řídicí desce otáčky",
+        "Vadný spínací prvek na výkonové desce, který do motoru nedodá napětí",
+        "Přerušená nebo zkorodovaná kabeláž k čerpadlu",
+        "Následek zaplavení spodní vany po jiné netěsnosti"
+      ],
+      "canUserTrySafeChecks": false,
+      "safeChecks": [
+        "Tuto chybu doma neopravíte — čerpadlo sedí v základně myčky a jeho demontáž vyžaduje rozebrání spotřebiče. Následující kroky chybu neodstraní, ale zúží technikovi diagnostiku.",
+        "Ověřte, že do myčky teče voda a že po spuštění programu slyšíte napouštění. Vyloučíte tak záměnu s chybami přívodu vody F13 a F15.",
+        "Pro jistotu vyjměte kombinaci sítek a zkontrolujte, jestli pod nimi nevězí střep nebo kost. Pokud ano, jde spíš o zablokování a stojí za to zkusit postup od chyby F78.",
+        "Zkuste tvrdý reset: odpojte myčku od elektřiny na 15 minut, pak zapojte a spusťte krátký program. Jednorázová chyba po přepětí takto zmizí.",
+        "Poznamenejte si, v jaké fázi programu se F67 objeví a jestli je vůbec slyšet pokus o rozběh motoru. Ticho versus bzučení jsou pro technika dvě různé diagnózy."
+      ],
+      "whenToStopAndCallService": [
+        "F67 vyžaduje výjezd technika. Výměna oběhového čerpadla trvá 60–120 minut a zahrnuje rozebrání spodní části myčky. Cena u nezávislého servisu vychází orientačně na 3 500–6 500 Kč včetně dílu, autorizovaný servis Miele bývá o 20–40 % dražší. U myček starších 8–10 let si nechte spočítat cenu předem a porovnejte ji s cenou nové."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f68",
+      "shortMeaning": "Kód F68 označuje závadu oběhového čerpadla myčky Miele. Miele používá pro tento uzel několik kódů — F67 a F68 znamenají závadu čerpadla nebo jeho řízení, zatímco F14, F69 a F78 mechanické zablokování. Pro vás je podstatné, že u F68 nemá smysl zkoušet domácí postupy s rozlepováním čerpadla; jde o elektrickou závadu.",
+      "likelyCauses": [
+        "Vadný tachogenerátor — čidlo otáček nedokáže řídicí desce potvrdit, že motor běží",
+        "Přerušený nebo prodřený napájecí kabel čerpadla",
+        "Zkorodované konektory na čerpadle po vlhkosti ve spodní vaně",
+        "Vadný spínací prvek na výkonové desce",
+        "Spálené vinutí motoru po dlouhodobém přetěžování",
+        "Závada řídicí desky, která signál z čerpadla vyhodnocuje chybně"
+      ],
+      "canUserTrySafeChecks": false,
+      "safeChecks": [
+        "Oprava vyžaduje rozebrání spodní části myčky a měření pod napětím — nechte ji technikovi. Následující kroky jen upřesní diagnózu.",
+        "Poslechněte si, co se děje po napuštění vody. Bzučení bez roztočení ukazuje na zablokovaný rotor nebo vadný kondenzátor, úplné ticho spíš na přerušené napájení.",
+        "Zkontrolujte, jestli není ve spodní vaně voda — vlhkost u konektorů je u F68 poměrně častá příčina. Pokud vodu vidíte, myčku dál nepoužívejte.",
+        "Odpojte myčku na 15 minut od elektřiny a zkuste krátký program. Chyba vyvolaná jednorázovým přepětím se takto vymaže.",
+        "Zapište si, jestli se F68 objeví hned po startu, nebo až v průběhu mytí. Chyba až v průběhu často ukazuje na tepelně selhávající součástku."
+      ],
+      "whenToStopAndCallService": [
+        "F68 vyžaduje servisní zásah. Podle toho, jestli je vadné samotné čerpadlo, nebo jen kabeláž a konektory, se cena u nezávislého servisu pohybuje orientačně mezi 2 000 a 6 500 Kč včetně dílu — poškozená kabeláž je výrazně levnější oprava než výměna čerpadla. Vyžádejte si proto kalkulaci až po změření, ne po telefonu."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f24",
+      "shortMeaning": "Chyba F24 znamená závadu kontaktu relé ohřevu. Relé je elektromechanický spínač na řídicí desce, který připíná topné těleso — když jeho kontakty selžou, myčka nemůže zaručit, že ohřev bezpečně vypne. Program se proto přeruší. Jde o závadu elektroniky, kterou uživatel doma neopraví, ale několika kroky ji odlišíte od jiných problémů s ohřevem.",
+      "likelyCauses": [
+        "Spečené kontakty relé ohřevu po tisících sepnutí — běžné opotřebení u myček nad osm let",
+        "Relé zůstává trvale sepnuté a myčka nedokáže ohřev vypnout",
+        "Studený spoj na desce v místě pájení relé, typicky po tepelném namáhání",
+        "Zkrat v topném tělese, který relé přetížil a poškodil jeho kontakty",
+        "Vadná řídicí elektronika, která stav relé vyhodnocuje chybně",
+        "Následek přepětí v síti, například po bouřce"
+      ],
+      "canUserTrySafeChecks": false,
+      "safeChecks": [
+        "Tuto chybu doma neopravíte — relé je pevně zapájené na desce a výměna vyžaduje demontáž elektroniky pod síťovým napětím. Kroky níže slouží jen k upřesnění diagnózy.",
+        "Myčku odpojte od elektřiny. Pokud cítíte zápach spálené elektroniky, už ji nezapínejte a rovnou volejte servis.",
+        "Nechte ji odpojenou 15 minut a pak zkuste krátký program. Jednorázová chyba po přepětí se takto vymaže.",
+        "Sledujte, jestli se voda vůbec ohřeje — po dvaceti minutách horkého programu krátce pootevřete dvířka a zkontrolujte, jestli jde pára.",
+        "Poznamenejte si, jestli F24 naskočí hned po startu nebo až ve fázi ohřevu. Technikovi to napoví, jestli je problém v relé, nebo v topném tělese."
+      ],
+      "whenToStopAndCallService": [
+        "F24 vyžaduje servisní zásah. Podle toho, jestli stačí vyměnit řídicí desku, nebo je poškozené i topné těleso, se cena u nezávislého servisu pohybuje orientačně mezi 2 500 a 6 000 Kč včetně dílu. Trvale sepnuté relé ohřevu je bezpečnostní riziko, proto myčku do opravy nepoužívejte."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f25",
+      "shortMeaning": "Chyba F25 hlásí, že myčka Miele nedosáhla požadované teploty vody, nebo že naměřená hodnota neodpovídá tomu, co program očekává. Nádobí pak zůstává mastné a mokré, protože bez správné teploty neúčinkuje ani mycí prostředek, ani sušení. Než se pustíte do elektroniky, vyplatí se vyloučit vodní kámen a zanesené filtry.",
+      "likelyCauses": [
+        "Vrstva vodního kamene na topném tělese, která brání přestupu tepla",
+        "Zanesená kombinace sítek, kvůli které voda dostatečně necirkuluje",
+        "Vadné teplotní čidlo NTC hlásící nižší hodnotu, než jaká skutečně je",
+        "Poškozené topné těleso, které hřeje jen částečně nebo vůbec",
+        "Příliš studená vstupní voda u myček napojených výhradně na studenou vodu",
+        "Vadná řídicí deska, která ohřev nespíná po dostatečnou dobu"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Vyjměte kombinaci sítek ze dna a propláchněte ji pod tekoucí vodou. Kartáčkem pročistěte i trysky obou ostřikovacích ramen a ověřte, že se ramena volně otáčejí.",
+        "Zkontrolujte, jestli máte v zásobníku regenerační sůl a jestli nastavená tvrdost vody odpovídá skutečné tvrdosti ve vaší lokalitě.",
+        "Spusťte naprázdno nejdelší horký program s odvápňovačem určeným pro myčky. Vápenec na topném tělese je u F25 velmi častá příčina a odvápnění ji často vyřeší.",
+        "Ověřte, jestli se voda vůbec ohřívá: po dvaceti minutách horkého programu krátce pootevřete dvířka. Chybějící pára znamená, že ohřev nefunguje vůbec.",
+        "Zkontrolujte, jestli není myčka přeplněná — namačkané nádobí brání cirkulaci a teplota se nerozloží rovnoměrně.",
+        "Myčku odpojte na 5 minut od elektřiny a spusťte krátký horký program."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud F25 přetrvává i po odvápnění a vyčištění filtrů, je vadné teplotní čidlo nebo topné těleso. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna čidla zhruba 1 500–3 000 Kč, výměna topného tělesa 2 500–5 000 Kč včetně dílu. Obojí sedí ve vodní cestě, proto to nechte technikovi."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f26",
+      "shortMeaning": "Chyba F26 se týká ochrany proti varu — bezpečnostní funkce, která hlídá, aby voda v myčce nepřekročila povolenou teplotu. Když tato ochrana selže nebo zaznamená nepřípustnou hodnotu, myčka program okamžitě ukončí. Je to pojistka proti poškození plastů a nádobí, takže se vyplatí ji brát vážně a myčku do opravy nepoužívat.",
+      "likelyCauses": [
+        "Vadné teplotní čidlo, které hlásí vyšší teplotu, než jaká ve skutečnosti je",
+        "Topné těleso zůstává sepnuté i po dosažení cílové teploty",
+        "Spečené kontakty relé ohřevu na řídicí desce",
+        "Nedostatečná cirkulace vody kvůli zaneseným sítkům — voda se lokálně přehřívá",
+        "Napojení myčky na horkou vodu s teplotou vyšší, než výrobce povoluje",
+        "Vadná řídicí elektronika vyhodnocující ochranu proti varu"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Myčku vypněte a nechte úplně vychladnout, než s ní budete cokoli dělat. Voda uvnitř může být opravdu horká.",
+        "Zkontrolujte, na jaký přívod je myčka napojená. Je-li připojená na horkou vodu, změřte její teplotu na kohoutku — vyšší než 60 °C je pro většinu myček nad limitem a je řešením přepojit ji na studenou.",
+        "Vyjměte kombinaci sítek a propláchněte je. Zanesená sítka omezí průtok a voda se u topného tělesa přehřívá.",
+        "Pročistěte trysky ostřikovacích ramen a ověřte, že se ramena lehce otáčejí.",
+        "Odpojte myčku na 15 minut od elektřiny a spusťte krátký program na nižší teplotu, například sklo nebo rychloprogram.",
+        "Pokud F26 naskočí i na nízkoteplotním programu, myčku dál nepoužívejte a objednejte technika."
+      ],
+      "whenToStopAndCallService": [
+        "F26 souvisí s bezpečnostní funkcí, proto myčku při opakovaném výskytu nepoužívejte — hrozí poškození plastového nádobí i samotné myčky. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, oprava podle příčiny (čidlo, topné těleso nebo deska) zhruba 1 500–5 000 Kč včetně dílu."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f33",
+      "shortMeaning": "Chyba F33 znamená, že se neotevírá zámek dvířek. Myčka dokončila program nebo ho přerušila, ale zámek zůstal zablokovaný a dvířka nejde otevřít. Je to nepříjemné hlavně proto, že uvnitř zůstane nádobí i voda. Než začnete se dvířky zápasit silou, zkuste postup níže — mechanické páčení zámek často dorazí úplně.",
+      "likelyCauses": [
+        "Vadný elektromagnet zámku, který se zasekl v uzavřené poloze",
+        "Opotřebený mechanismus zámku po letech provozu",
+        "Deformovaný nebo ohnutý plastový háček na dvířkách",
+        "Rozladěné seřízení dvířek nebo povolené panty, kvůli kterým je zámek pod tlakem",
+        "Přerušená kabeláž k zámku — namáhá se každým otevřením dvířek",
+        "Vadná řídicí deska, která povel k odemčení vůbec nevyšle"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Nezkoušejte dvířka otevřít silou ani je páčit šroubovákem. Ohnutý háček nebo prasklý zámek promění levnou opravu v drahou.",
+        "Nechte myčku doběhnout a počkejte 10–15 minut. Některé modely drží zámek zavřený, dokud teplota uvnitř neklesne — je to ochrana proti opaření párou.",
+        "Odpojte myčku od elektřiny na 15 minut a znovu zapojte. Po obnovení napájení se elektromagnet zámku často uvolní sám.",
+        "Zkuste na dvířka v místě zámku zlehka zatlačit směrem dovnitř a současně stisknout tlačítko otevření. Zámek bývá pod tlakem těsnění a mírné odlehčení mu pomůže povolit.",
+        "Zkontrolujte, jestli nádobí v horním koši netlačí zevnitř na dvířka.",
+        "Pokud se dvířka podaří otevřít, prohlédněte plastový háček — nesmí být prasklý ani ohnutý."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud dvířka zůstávají zablokovaná i po odpojení od elektřiny, zavolejte servis a nezkoušejte je otevřít násilím. Výměna zámku dvířek patří k levnějším opravám: díl stojí orientačně 800–2 000 Kč, s prací u nezávislého servisu celkem zhruba 1 800–3 500 Kč. Technikovi rovnou řekněte, že je myčka zavřená s nádobím uvnitř."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f40",
+      "shortMeaning": "Chyba F40 označuje závadu elektroniky myčky Miele. Podle servisní dokumentace jde o typ hardwarové závady, kterou nelze opravit na místě — řeší se výměnou řídicí jednotky. Myčka program přeruší a spustí vypouštěcí čerpadlo. Než smíříte s výměnou desky, má smysl vyloučit jednorázový výpadek způsobený přepětím.",
+      "likelyCauses": [
+        "Hardwarová závada řídicí desky — vadná součástka, prasklý spoj nebo studený pájený spoj",
+        "Následek přepětí v síti, typicky po bouřce nebo výpadku proudu",
+        "Poškození desky vlhkostí po netěsnosti uvnitř myčky",
+        "Zkorodované konektory na desce ve vlhkém prostředí kuchyně",
+        "Tepelné namáhání součástek u myček provozovaných denně po mnoho let",
+        "Vadný napájecí zdroj na desce"
+      ],
+      "canUserTrySafeChecks": false,
+      "safeChecks": [
+        "Opravu doma neprovedete — deska je pod síťovým napětím a závada je na úrovni součástek. Kroky níže jen ověří, jestli nejde o jednorázový výpadek.",
+        "Odpojte myčku od elektřiny na 15 minut, ať se vybijí kondenzátory na desce. Pak zapojte a spusťte krátký program.",
+        "Pokud F40 po resetu zmizí a několik dní se nevrátí, šlo pravděpodobně o následek přepětí. Zvažte zapojení myčky přes přepěťovou ochranu.",
+        "Zkontrolujte, jestli není ve spodní vaně voda. Vlhkost u elektroniky je vážný problém a myčku pak nepoužívejte vůbec.",
+        "Cítíte-li zápach spálené elektroniky, myčku nezapínejte a rovnou volejte servis.",
+        "Poznamenejte si, jestli chyba naskakuje okamžitě po zapnutí, nebo až v průběhu programu."
+      ],
+      "whenToStopAndCallService": [
+        "F40 obvykle znamená výměnu řídicí desky. U nezávislého servisu se cena pohybuje orientačně mezi 3 000 a 7 000 Kč včetně dílu, autorizovaný servis Miele bývá dražší. U myček starších deseti let si nechte spočítat cenu předem — výměna desky se u nich často blíží ceně nového spotřebiče, takže se oprava nemusí vyplatit."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f42",
+      "shortMeaning": "Chyba F42 znamená, že myčka nedokázala rozpoznat frekvenci napájecí sítě. Elektronika kontroluje, jestli se frekvence pohybuje v platném rozsahu kolem 50 Hz, a když si není jistá, program raději přeruší. Nemusí jít o závadu myčky — velmi často je příčina v tom, jak a odkud je spotřebič napájený.",
+      "likelyCauses": [
+        "Napájení z měniče, hybridní fotovoltaiky nebo záložního zdroje s nečistým průběhem napětí",
+        "Napájení z generátoru, například na chatě nebo při výpadku sítě",
+        "Kolísání frekvence v místní síti, obvykle přechodné",
+        "Zapojení přes levnou spínací zásuvku, časovač nebo měnič napětí",
+        "Vadný měřicí obvod na řídicí desce myčky",
+        "Rušení ze silného spotřebiče na stejném okruhu"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Zapojte myčku přímo do zásuvky ve zdi, bez prodlužovaček, spínacích zásuvek, časovačů a měničů. Každý mezičlánek může průběh napětí zkreslit.",
+        "Jste-li napojeni na fotovoltaiku nebo hybridní měnič, ověřte, jestli F42 nenaskakuje jen v době, kdy systém běží na baterie. Některé měniče nedodávají čistou sinusovku a elektronika myčky to nepřijme.",
+        "V takovém případě myčku přepojte na okruh napájený přímo ze sítě.",
+        "Používáte-li generátor, zkontrolujte v jeho návodu, jestli je určený pro citlivou elektroniku. Levné generátory mají frekvenci nestabilní.",
+        "Odpojte myčku na 10 minut a zkuste program znovu. Přechodné kolísání v síti takto pomine.",
+        "Zkuste myčku spustit v jinou denní dobu. Pokud chyba mizí mimo špičku, je problém na straně sítě."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud F42 přetrvává i při přímém napájení ze sítě a bez jakýchkoli mezičlánků, je vadný měřicí obvod na řídicí desce. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna desky zhruba 3 000–7 000 Kč včetně dílu. Před objednáním servisu ale opravdu vyzkoušejte jinou zásuvku — u této chyby to řeší většinu případů."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f47",
+      "shortMeaning": "Chyba F47 označuje závadu elektronického rozhraní — tedy komunikace mezi řídicí deskou a ovládacím panelem myčky. Jednotky si navzájem nerozumí, takže myčka neví, jaký program jste zvolili, nebo naopak nedokáže na displej poslat svůj stav. Program se přeruší. Jde o závadu elektroniky, ale jednorázový výpadek komunikace se občas dá vyresetovat.",
+      "likelyCauses": [
+        "Přerušený nebo prodřený propojovací kabel mezi deskou a ovládacím panelem",
+        "Zkorodované konektory na některé z desek po vlhkosti",
+        "Vadná deska ovládacího panelu",
+        "Vadná hlavní řídicí deska",
+        "Uvolněný konektor po předchozím servisním zásahu nebo po stěhování myčky",
+        "Následek přepětí, které poškodilo komunikační obvod"
+      ],
+      "canUserTrySafeChecks": false,
+      "safeChecks": [
+        "Rozhraní je uvnitř dvířek a hlavní desky, oprava vyžaduje demontáž pod síťovým napětím — nechte ji technikovi. Kroky níže jen ověří, jestli nejde o jednorázový výpadek.",
+        "Odpojte myčku od elektřiny na 15 minut a znovu zapojte. Chyba komunikace vyvolaná přepětím se takto často vymaže.",
+        "Zkontrolujte, jestli displej a kontrolky reagují normálně. Zhasnutý nebo blikající panel ukazuje spíš na desku panelu než na hlavní desku.",
+        "Vyzkoušejte, jestli myčka reaguje na všechna tlačítka. Pokud nereaguje na žádné, je pravděpodobnější problém na straně panelu.",
+        "Došlo-li k chybě krátce po stěhování myčky nebo po zásahu technika, zmiňte to při objednávce — může jít o uvolněný konektor, což je levná oprava.",
+        "Poznamenejte si, jestli F47 naskakuje hned po zapnutí, nebo až po chvíli."
+      ],
+      "whenToStopAndCallService": [
+        "F47 vyžaduje servisní zásah. Cena se hodně liší podle toho, jestli stačí zapojit či vyměnit kabel, nebo je potřeba nová deska: u nezávislého servisu orientačně 1 500–6 000 Kč včetně dílu. Vyžádejte si proto kalkulaci až po změření — uvolněný konektor je nesrovnatelně levnější než výměna elektroniky."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f91",
+      "shortMeaning": "Chyba F91 znamená, že myčka Miele má neaktivní rozpoznání naplnění — funkci, kterou pozná, kolik vody v mycím prostoru je. Bez ní nemůže bezpečně řídit napouštění, protože nedokáže vyloučit přeplnění. Program se proto přeruší. Chybu doma neopravíte, ale pár kroků pomůže odlišit skutečnou závadu od jednorázového výpadku.",
+      "likelyCauses": [
+        "Vadný snímač hladiny nebo tlakový spínač",
+        "Zanesená tlaková komůrka nebo hadička vedoucí ke snímači — usazeniny z prostředků",
+        "Přerušená kabeláž ke snímači",
+        "Voda ve spodní vaně, která snímač trvale drží v sepnuté poloze",
+        "Vadná řídicí deska, která signál ze snímače nevyhodnotí",
+        "Následek předchozí netěsnosti, po které zůstala vlhkost u konektorů"
+      ],
+      "canUserTrySafeChecks": false,
+      "safeChecks": [
+        "Snímač i jeho komůrka jsou uvnitř spotřebiče, demontáž nechte technikovi. Následující kroky diagnózu jen upřesní.",
+        "Zkontrolujte, jestli není pod myčkou nebo ve spodní vaně voda. Pokud ano, zavřete přívod vody a myčku nepoužívejte — hrozí vytopení.",
+        "Odpojte myčku od elektřiny na 15 minut a zkuste krátký program.",
+        "Sledujte, jestli se myčka vůbec začne napouštět a jestli napouštění samo neskončí příliš brzy nebo naopak nepokračuje déle než obvykle.",
+        "Vyjměte kombinaci sítek a zkontrolujte, jestli není dno mycího prostoru zanesené usazeninami — ovlivňuje to i měření hladiny.",
+        "Poznamenejte si, v jaké fázi F91 naskočí; technikovi to napoví, jestli hledat závadu ve snímači, nebo v jeho vyhodnocení."
+      ],
+      "whenToStopAndCallService": [
+        "F91 vyžaduje výjezd technika. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna snímače hladiny zhruba 1 500–3 500 Kč včetně dílu; pokud je vadná řídicí deska, cena roste na 3 000–7 000 Kč. Do opravy myčku raději nepoužívejte a zavřete k ní přívod vody."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f51",
+      "shortMeaning": "Chyba F51 hlásí závadu hladinového spínače tlaku čerpadla. Tento snímač měří tlak vody a myčka podle něj pozná, kolik vody v mycím prostoru je a jestli čerpadlo pracuje správně. Když posílá nesmyslné hodnoty, myčka program přeruší. Velmi častou příčinou přitom není samotný snímač, ale zanesená hadička nebo komůrka, která k němu tlak vede.",
+      "likelyCauses": [
+        "Zanesená tlaková komůrka usazeninami z mycích prostředků — u myček starších pěti let velmi časté",
+        "Ucpaná nebo prasklá tlaková hadička mezi komůrkou a snímačem",
+        "Sesmeknutá hadička, které stačí povolit o pár milimetrů",
+        "Voda zkondenzovaná uvnitř hadičky, která znemožní přenos tlaku",
+        "Vadný samotný tlakový spínač",
+        "Vadná řídicí deska, která signál ze snímače vyhodnocuje chybně"
+      ],
+      "canUserTrySafeChecks": false,
+      "safeChecks": [
+        "Snímač i jeho hadička jsou uvnitř pláště myčky, demontáž vyžaduje rozebrání spotřebiče pod síťovým napětím — nechte ji technikovi. Kroky níže diagnózu upřesní.",
+        "Vyjměte kombinaci sítek ze dna a propláchněte je. Zanesená sítka zkreslují průtok a tím i tlak, který snímač měří.",
+        "Zkontrolujte, jestli není ve spodní vaně voda. Pokud ano, zavřete přívod vody a myčku nepoužívejte.",
+        "Odpojte myčku od elektřiny na 15 minut a zkuste krátký program — jednorázová chyba po přepětí takto zmizí.",
+        "Sledujte, jestli se myčka napouští normálně, nebo napouštění končí nápadně brzy. Technikovi to pomůže odlišit vadný snímač od ucpané cesty k němu.",
+        "Zmiňte při objednávce servisu stáří myčky. U starších kusů bývá příčinou zanesená komůrka, což je nesrovnatelně levnější oprava než výměna elektroniky."
+      ],
+      "whenToStopAndCallService": [
+        "F51 vyžaduje servisní zásah. Pokud stačí pročistit tlakovou komůrku a hadičku, vychází oprava u nezávislého servisu orientačně na 1 200–2 500 Kč; výměna tlakového spínače zhruba 1 500–3 500 Kč včetně dílu. Vyžádejte si kalkulaci až po změření — rozdíl mezi vyčištěním a výměnou je tady zásadní."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f52",
+      "shortMeaning": "Chyba F52 znamená, že snímač zjistil v mycím prostoru příliš mnoho pěny, a program byl proto stornován. Nejde o poruchu myčky — je to ochrana. Nadměrná pěna tlumí ostřikovací ramena, zhoršuje mytí a může vytéct spodem ven. Příčina je téměř vždy v prostředku, který jste použili, takže se to obvykle vyřeší bez servisu.",
+      "likelyCauses": [
+        "Předávkování mycího prostředku nebo leštidla",
+        "Použití běžného saponátu na nádobí místo prostředku do myčky — nejčastější příčina, pění mnohonásobně víc",
+        "Zbytky jídla s vysokým obsahem bílkovin, například vejce nebo mléko, které pění při ohřevu",
+        "Nesprávně nastavené dávkování leštidla — u Miele lze stupeň měnit v nastavení",
+        "Kombinace tablety a samostatného leštidla, které se sečtou",
+        "Vadný dávkovač leštidla, který pouští víc, než má"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Chybové hlášení zrušíte tak, že u modelů s voličem nastavíte volič programů na stop nebo konec, u tlačítkových modelů podržíte start/stop asi 5 sekund.",
+        "Myčku vypněte a znovu zapněte.",
+        "Otevřete dvířka a podívejte se, kolik pěny uvnitř je. Velké množství pěny odstraňte hadrem nebo do prostoru nalijte trochu studené vody, která ji srazí.",
+        "Zkontrolujte, čím jste myčku plnili. Pokud se do zásobníku dostal saponát na ruční mytí, spusťte jeden až dva krátké programy naprázdno bez jakéhokoli prostředku, dokud pěna nezmizí úplně.",
+        "Zkontrolujte nastavení dávkování leštidla a stáhněte ho o stupeň níž. Používáte-li kombinované tablety, leštidlo obvykle není potřeba dávkovat zvlášť.",
+        "Nádobí s výraznými zbytky vajec nebo mléka příště alespoň hrubě opláchněte.",
+        "Spusťte normální program a sledujte, jestli se F52 vrátí."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud se F52 objevuje opakovaně i při správném dávkování prostředku určeného do myčky, může být vadný dávkovač leštidla nebo samotný snímač. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna dávkovače zhruba 1 500–3 000 Kč včetně dílu. Do vyřešení leštidlo nedávkujte vůbec a používejte kombinované tablety."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f53",
+      "shortMeaning": "Chyba F53 označuje závadu snímače otáček. Ten hlídá, jak rychle se točí oběhové čerpadlo, a je to pro myčku jediný způsob, jak si ověřit, že čerpadlo skutečně běží. Podle servisní dokumentace se za tímto kódem skrývá buď zablokované čerpadlo, nebo vadný samotný snímač — a to jsou dvě velmi rozdílně drahé opravy.",
+      "likelyCauses": [
+        "Zablokované oběhové čerpadlo, které se nemůže roztočit na požadované otáčky",
+        "Cizí předmět v oběžném kole: střep, kost nebo kousek plastu",
+        "Vadný tachogenerátor, tedy samotné čidlo otáček",
+        "Přerušená nebo zkorodovaná kabeláž mezi čidlem a deskou",
+        "Zaschlé čerpadlo po delší odstávce myčky",
+        "Vadná řídicí deska, která signál z čidla nevyhodnotí"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Nejdřív vyloučte mechanickou blokádu, protože to je levnější varianta. Odpojte myčku od elektřiny a vyjměte kombinaci sítek.",
+        "Posviťte si baterkou do prostoru pod sítky a v rukavicích vyberte všechny nalezené střepy, kosti a pecky. Do otvoru čerpadla nesahejte prsty.",
+        "Byla-li myčka delší dobu bez provozu, zkuste čerpadlo rozlepit: 1 litr teplé vody o teplotě do 75 °C se 3 až 5 kapkami leštidla, nechte 5 minut působit.",
+        "Vraťte sítka tak, aby seděla zarovnaná ke dnu, a spusťte krátký program.",
+        "Poslouchejte, co se děje po napuštění. Bzučení bez roztočení znamená zablokovaný rotor, úplné ticho spíš vadné čidlo nebo přerušený obvod.",
+        "Postup zopakujte dvakrát až třikrát. Pokud se čerpadlo rozjede, byla příčina mechanická."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud jste nic nenašli a F53 se vrací i po opakovaném rozlepování, je vadný snímač otáček nebo kabeláž. Výměna samotného čidla vychází u nezávislého servisu orientačně na 1 500–3 000 Kč včetně dílu, výměna celého čerpadla 3 500–6 500 Kč. Právě proto se vyplatí nechat si udělat diagnostiku a nesouhlasit rovnou s výměnou čerpadla po telefonu."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f63",
+      "shortMeaning": "Chyba F63 hlásí závadu rozdělovače vody. Rozdělovač je mechanismus, který přepíná proud vody mezi horním, spodním a případně středním ostřikovacím ramenem. Když se zasekne nebo myčka nepozná jeho polohu, program se přeruší — bez správného rozdělení vody by se nádobí neumylo. Občas jde jen o mechanickou překážku, kterou najdete sami.",
+      "likelyCauses": [
+        "Zaseknutý rozdělovač mechanickou nečistotou, například střepem nebo peckou",
+        "Vadný pohon rozdělovače",
+        "Vápenné usazeniny, které zpomalují jeho pohyb",
+        "Vadný snímač polohy, který myčce nepotvrdí, kam se rozdělovač přestavil",
+        "Přerušená kabeláž k pohonu nebo snímači",
+        "Nesprávně nasazená ostřikovací ramena, která zvyšují odpor v systému"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Odpojte myčku od elektřiny a vyjměte oba koše i kombinaci sítek.",
+        "Zkontrolujte obě ostřikovací ramena: musí se dát lehce otáčet a nesmí být nasazená natěsno. Šipka na objímce spodního ramene má směřovat k symbolu zámku.",
+        "Trysky ramen pročistěte párátkem nebo tenkou špejlí a propláchněte je pod tekoucí vodou. Nepoužívejte kovové předměty, poškodíte plast.",
+        "Prohlédněte dno mycího prostoru a prostor pod sítky. Střepy a pecky se do rozdělovače dostávají právě odtud.",
+        "Spusťte naprázdno horký program s odvápňovačem pro myčky. Vápenec je u zasekávajícího se rozdělovače častý spolupachatel.",
+        "Odpojte myčku na 15 minut a zkuste krátký program.",
+        "Poslouchejte během programu — přepínání rozdělovače je slyšet jako tiché cvaknutí zhruba každou minutu."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud F63 přetrvává i po vyčištění a odvápnění, je vadný pohon nebo snímač rozdělovače a je potřeba technik. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna rozdělovače zhruba 2 000–4 500 Kč včetně dílu. Rozdělovač sedí ve vodní cestě pod mycím prostorem, proto ho sami nerozebírejte."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f84",
+      "shortMeaning": "Chyba F84 se podle servisní dokumentace Miele váže na polohování šoupátka rozdělovače vody — mechanismu, který přepíná proud vody mezi ostřikovacími rameny. Myčka nedokázala ověřit, že se šoupátko přestavilo do požadované polohy, a program proto přerušila. Souvisí s chybami F63 a F85, které se týkají téhož uzlu.",
+      "likelyCauses": [
+        "Šoupátko rozdělovače zablokované nečistotou nebo střepem",
+        "Vápenné usazeniny, které brání volnému pohybu šoupátka",
+        "Vadný pohon, který šoupátko nepřestaví celou dráhu",
+        "Opotřebené ozubení nebo prasklý unášeč po letech provozu",
+        "Vadný snímač polohy, který dosažení koncové polohy nepotvrdí",
+        "Přerušená kabeláž mezi pohonem a řídicí deskou"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Odpojte myčku od elektřiny, vyjměte koše a kombinaci sítek a dno mycího prostoru důkladně prohlédněte.",
+        "Vyberte všechny nečistoty, které najdete — hlavně střepy, pecky a kousky plastu. Používejte rukavice.",
+        "Sundejte spodní ostřikovací rameno: otočte objímkou proti směru hodinových ručiček a rameno vytáhněte nahoru. Prohlédněte prostor pod ním.",
+        "Rameno propláchněte, trysky pročistěte párátkem a nasaďte zpět tak, aby šipka na objímce směřovala k symbolu zámku.",
+        "Spusťte naprázdno horký program s odvápňovačem určeným pro myčky — u zasekávajícího se šoupátka to pomáhá překvapivě často.",
+        "Odpojte myčku na 15 minut a zkuste krátký program.",
+        "Pokud F84 zmizí, opakujte odvápnění pravidelně, ideálně dvakrát ročně."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud F84 přetrvává i po vyčištění a odvápnění, je vadný pohon nebo snímač polohy a je potřeba technik. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, oprava rozdělovacího mechanismu zhruba 2 000–4 500 Kč včetně dílu. Mechanismus je součástí vodní cesty pod mycím prostorem, proto ho sami nerozebírejte."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f85",
+      "shortMeaning": "Chyba F85 se podle servisní dokumentace Miele týká vyhodnocení signálu ze šoupátka rozdělovače vody. Zatímco příbuzná chyba F84 znamená, že se šoupátko nedostalo do správné polohy, u F85 myčka nedokáže správně přečíst signál o jeho stavu. V praxi to posouvá podezření spíš k elektrické části než k mechanice.",
+      "likelyCauses": [
+        "Vadný snímač polohy šoupátka",
+        "Přerušená, prodřená nebo zkorodovaná kabeláž mezi snímačem a deskou",
+        "Vlhkost u konektorů po netěsnosti uvnitř myčky",
+        "Uvolněný konektor, například po předchozím servisním zásahu nebo po stěhování",
+        "Vadná řídicí deska, která signál vyhodnocuje chybně",
+        "Mechanická vůle v rozdělovači, kvůli které snímač polohu nezachytí spolehlivě"
+      ],
+      "canUserTrySafeChecks": false,
+      "safeChecks": [
+        "Snímač i kabeláž jsou uvnitř spotřebiče a měření probíhá pod síťovým napětím — opravu nechte technikovi. Kroky níže jen zúží diagnostiku.",
+        "Odpojte myčku od elektřiny na 15 minut a zkuste krátký program. Jednorázová chyba po přepětí se takto vymaže.",
+        "Zkontrolujte, jestli není ve spodní vaně nebo pod myčkou voda. Vlhkost u konektorů je u této chyby častá příčina a myčku pak nepoužívejte.",
+        "Poslouchejte během programu, jestli je slyšet přepínání rozdělovače — tiché cvaknutí zhruba každou minutu. Pokud cvaknutí slyšíte, mechanika funguje a problém je v signálu.",
+        "Došlo-li k chybě krátce po stěhování myčky nebo po zásahu technika, zmiňte to při objednávce. Uvolněný konektor je levná oprava.",
+        "Poznamenejte si, jestli F85 naskakuje hned po startu, nebo až v průběhu programu."
+      ],
+      "whenToStopAndCallService": [
+        "F85 vyžaduje servisní zásah. Cena se výrazně liší podle příčiny: opravená kabeláž nebo dotažený konektor vychází u nezávislého servisu orientačně na 1 200–2 500 Kč, výměna snímače či rozdělovače zhruba 2 000–4 500 Kč včetně dílu. Kalkulaci si proto nechte udělat až po změření."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f86",
+      "shortMeaning": "Hlášení F86 znamená, že není zavřené víčko nádoby na sůl ve dvířkách myčky. Není to porucha, ale upozornění — otevřeným víčkem by se do zásobníku dostala mycí voda, sůl by se rozpustila najednou a změkčovač by přestal fungovat. Náprava zabere pár vteřin a zvládne ji každý.",
+      "likelyCauses": [
+        "Víčko nádoby na sůl není dotažené po doplnění soli — zdaleka nejčastější příčina",
+        "Víčko je zašroubované nakřivo a nedosedá po celém obvodu",
+        "Zbytky soli v závitu, které brání dotažení",
+        "Poškozené nebo ztvrdlé těsnění víčka",
+        "Prasklé víčko, typicky po přetažení",
+        "Vadný kontakt, který zavřené víčko nerozpozná"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Otevřete dvířka a najděte v dolní části mycího prostoru kulaté víčko zásobníku na sůl.",
+        "Víčko odšroubujte a zkontrolujte závit — vysypanou sůl ze závitu a okolí otvoru smeťte nebo opláchněte, jinak víčko nedosedne.",
+        "Prohlédněte těsnění na víčku. Musí být pružné a celistvé, ne popraskané ani zploštělé.",
+        "Víčko nasaďte rovně a dotáhněte rukou až na doraz, ale nepřetahujte — plastový závit se snadno strhne.",
+        "Potvrďte hlášení tlačítkem OK a spusťte program.",
+        "Doplňujete-li sůl, dělejte to vždy těsně před spuštěním programu. Rozsypaná sůl v mycím prostoru koroduje nerez a je lepší ji hned smýt."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud je víčko prokazatelně dotažené, těsnění v pořádku a F86 se přesto objevuje, je vadný kontakt rozpoznávající zavřené víčko. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, oprava zhruba 1 200–2 500 Kč včetně dílu. Samotné víčko jako náhradní díl stojí obvykle jen několik stokorun, takže popraskané těsnění je nejlevnější varianta."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f88",
+      "shortMeaning": "Chyba F88 označuje závadu snímače zakalení vody. Tento optický senzor měří, jak je mycí voda znečištěná, a myčka podle něj rozhoduje, jestli vodu vymění a jak dlouho má program běžet. Bez něj myčka nádobí umyje, jen si nastaví nejdelší časy — nejde tedy o kritickou závadu. Nezaměňujte ji s chybou F87, která patří čidlu změkčovače vody.",
+      "likelyCauses": [
+        "Vápenný nebo mastný povlak na optickém okénku snímače — nejčastější příčina v oblastech s tvrdou vodou",
+        "Zbytky jídla usazené na snímači",
+        "Vadný samotný optický snímač",
+        "Přerušená nebo zkorodovaná kabeláž ke snímači",
+        "Dlouhodobý provoz bez regenerační soli nebo s chybně nastavenou tvrdostí vody",
+        "Vadná řídicí deska, která signál ze snímače nevyhodnotí"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Než budete volat servis, zkuste snímač zbavit povlaku — u této chyby to pomáhá často a nic to nestojí.",
+        "Vyjměte kombinaci sítek ze dna a propláchněte je pod tekoucí vodou, včetně jemného mikrosítka.",
+        "Spusťte naprázdno nejdelší horký program s odvápňovačem určeným pro myčky. Vápenná vrstva na okénku snímače je u F88 typická.",
+        "Zkontrolujte, jestli máte v zásobníku regenerační sůl a jestli nastavená tvrdost vody odpovídá skutečné tvrdosti ve vaší lokalitě — zjistíte ji u vodárenského dodavatele.",
+        "Odvápnění po týdnu zopakujte, pokud byla myčka dlouho zanedbaná. Silná vrstva nejde odstranit napoprvé.",
+        "Odpojte myčku na 5 minut od elektřiny a spusťte běžný program.",
+        "Do vyřešení můžete myčku normálně používat, jen počítejte s delšími programy a vyšší spotřebou."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud F88 přetrvává i po opakovaném odvápnění, je vadný samotný snímač. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna snímače zakalení zhruba 1 500–3 500 Kč včetně dílu. Protože myčka mezitím myje dál, jde o jednu z mála chyb, u kterých se dá s opravou počkat — jen budete platit víc za vodu a elektřinu."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f170",
+      "shortMeaning": "Hlášení F170 není porucha, ale upozornění, že v myčce Miele dochází leštidlo. Myčka ho zobrazí s předstihem, takže můžete v klidu domýt a leštidlo doplnit potom. Bez leštidla se na sklenicích a příborech tvoří kapky a vodní skvrny, protože voda nestéká a zasychá na místě.",
+      "likelyCauses": [
+        "Zásobník leštidla je téměř prázdný — běžný provozní stav",
+        "Nastavené vysoké dávkování leštidla, které zásobník rychleji vyprázdní",
+        "Kombinované tablety s leštidlem, u kterých se zvlášť dávkované leštidlo spotřebovává zbytečně",
+        "Netěsné víčko zásobníku, kterým leštidlo uniká do mycího prostoru",
+        "Vadný snímač hladiny leštidla, pokud hlášení svítí i s plným zásobníkem"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Otevřete dvířka a najděte na jejich vnitřní straně zásobník leštidla — bývá vedle komory na mycí prostředek a má víčko s trojúhelníkovým nebo hvězdicovým symbolem.",
+        "Víčko otevřete a leštidlo doplňte až po značku maxima. Nepřeplňujte ho, přebytek se vyplaví do mycího prostoru a způsobí pěnění.",
+        "Rozlité leštidlo kolem otvoru setřete vlhkým hadrem, jinak bude pěnit při dalším mytí.",
+        "Víčko pořádně zavřete, dokud nezacvakne.",
+        "Potvrďte hlášení tlačítkem OK.",
+        "Používáte-li kombinované tablety, které leštidlo obsahují, můžete jeho dávkování v nastavení myčky snížit nebo úplně vypnout. Hlášení pak přestane chodit.",
+        "Zůstávají-li na sklenicích kapky i s plným zásobníkem, zvyšte dávkování o jeden stupeň."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud hlášení F170 nezmizí ani po doplnění zásobníku a potvrzení tlačítkem OK, je pravděpodobně vadný snímač hladiny leštidla nebo dávkovač. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna dávkovače zhruba 1 500–3 000 Kč včetně dílu. Myčku můžete mezitím normálně používat, jen počítejte se skvrnami na skle."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f171",
+      "shortMeaning": "Hlášení F171 upozorňuje, že v myčce Miele dochází regenerační sůl. Není to porucha — myčka jen říká, že po skončení programu máte sůl doplnit. Sůl regeneruje změkčovač vody a bez ní se na nádobí i uvnitř myčky začne rychle usazovat vodní kámen, který postupně poškodí topné těleso i čerpadlo.",
+      "likelyCauses": [
+        "Zásobník regenerační soli je téměř prázdný — běžný provozní stav",
+        "Vysoká tvrdost vody v lokalitě, kvůli které se sůl spotřebovává rychleji",
+        "Nastavená tvrdost vody vyšší, než jaká skutečně je",
+        "Použití kombinovaných tablet v domnění, že sůl už není potřeba — při tvrdé vodě to nestačí",
+        "Netěsné víčko zásobníku, kterým se sůl vyplavuje",
+        "Vadný snímač, pokud hlášení svítí i s plným zásobníkem"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Doplňujte sůl vždy až těsně před spuštěním programu, ideálně hned po skončení toho předchozího. Rozsypaná sůl v mycím prostoru koroduje nerez a je lepší ji hned smýt.",
+        "Odšroubujte víčko zásobníku ve dně mycího prostoru. Při prvním plnění do zásobníku nalijte asi litr vody, potom už to není potřeba.",
+        "Nasypte sůl pomocí trychtýře, který bývá součástí příslušenství. Používejte výhradně regenerační sůl do myček, nikdy kuchyňskou ani tabletovou do bazénů.",
+        "Rozsypanou sůl z okolí otvoru a ze závitu smeťte nebo opláchněte, jinak víčko nedosedne.",
+        "Víčko dotáhněte rukou až na doraz, ale nepřetahujte.",
+        "Ověřte v nastavení, jestli nastavená tvrdost vody odpovídá skutečné tvrdosti — hodnotu zjistíte u svého vodárenského dodavatele. Špatné nastavení je nejčastější důvod, proč sůl mizí příliš rychle.",
+        "Spusťte program. Hlášení zmizí po rozpuštění soli, u některých modelů až po jednom až dvou cyklech."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud F171 svítí i s plným zásobníkem a správně dotaženým víčkem, je vadný snímač hladiny soli nebo změkčovací jednotka. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, oprava zhruba 2 000–4 500 Kč včetně dílu. Myčku nepoužívejte dlouhodobě bez soli — vodní kámen poškodí topné těleso, jehož výměna je výrazně dražší."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f177",
+      "shortMeaning": "Hlášení F177 je servisní připomínka, že máte vyčistit sítka. Myčka ho zobrazí po předem daném počtu programů — nesouvisí tedy s tím, jak jsou sítka skutečně znečištěná. Pokud upozornění ignorujete, bude se objevovat před každým programem i po něm, dokud ho nepotvrdíte tlačítkem OK.",
+      "likelyCauses": [
+        "Uplynul nastavený interval počtu programů — jde o pravidelnou připomínku, ne o závadu",
+        "Sítka nebyla čištěna delší dobu a jsou skutečně zanesená",
+        "Časté mytí silně znečištěného nádobí, které interval vyčerpá rychleji",
+        "Interval připomínky je nastavený příliš krátce pro váš způsob používání",
+        "Hlášení nebylo po předchozím čištění potvrzeno tlačítkem OK"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Vytáhněte spodní koš a najděte ve dně kombinaci sítek — plastový válec s rukojetí uprostřed.",
+        "Otočte rukojetí proti směru hodinových ručiček a celou sestavu vytáhněte nahoru.",
+        "Sestavu rozeberte na hrubé plastové sítko a jemné kovové mikrosítko. Obojí propláchněte pod tekoucí vodou a zbytky vytlačte kartáčkem.",
+        "Prohlédněte prostor, který zůstal ve dně odkrytý, a vyberte z něj střepy a pecky. Používejte rukavice.",
+        "Sítka vraťte zpět tak, aby dosedla zarovnaná ke dnu, a rukojetí otočte po směru hodinových ručiček až na doraz. Špatně usazená sítka pouštějí nečistoty do čerpadla.",
+        "Čištění potvrďte tlačítkem OK, jinak se hlášení bude objevovat dál.",
+        "Interval připomínky lze u většiny modelů v nastavení prodloužit nebo vypnout. Sítka ale i tak čistěte alespoň jednou měsíčně."
+      ],
+      "whenToStopAndCallService": [
+        "F177 je pravidelná připomínka údržby a servis kvůli ní volat nemusíte. Pokud hlášení nezmizí ani po vyčištění a potvrzení tlačítkem OK, jde o chybu v nastavení nebo v elektronice — zkuste nejdřív myčku odpojit na 15 minut od elektřiny. Teprve když ani to nepomůže, má smysl objednat technika; diagnostika vychází orientačně na 800–1 500 Kč."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f601",
+      "shortMeaning": "Chyba F601 hlásí poruchu v systému AutoDos — automatickém dávkovači, který u myček Miele řady G7000 a novějších dávkuje prostředek z PowerDisku. Myčka nedokáže potvrdit, že dávkování proběhlo správně. Nejčastěji nejde o závadu, ale o špatně vložený PowerDisk nebo držák, který nedosedá.",
+      "likelyCauses": [
+        "PowerDisk není zatlačený zarovnaně a celou plochou dolů",
+        "Držák PowerDisku není správně nasazený — šipky v držáku a v okénku nesměřují proti sobě",
+        "Prázdný PowerDisk, který myčka nerozpozná",
+        "Zhrudkovatělý práškový granulát ve výstupu dávkovače po vniknutí vlhkosti",
+        "Netěsné víko systému AutoDos, kterým do dávkovače proniká pára",
+        "Vadný pohon dávkovače nebo jeho snímač"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Vypněte myčku a nechte ji vychladnout. Otočte víko systému AutoDos do polohy pro otevření a vyjměte PowerDisk.",
+        "Zkontrolujte, jestli v PowerDisku ještě je prostředek. Prázdný disk vyměňte za nový.",
+        "Vyjměte držák PowerDisku a prohlédněte ho. U verze AutoDos 1.0 se vytahuje nahoru za žluté plošky, u verze 2.0 se navíc odjišťuje žlutým otvíracím ouškem.",
+        "Držák i kryt dávkovače otřete vlhkou utěrkou a potom je DŮKLADNĚ osušte. Zbylá vlhkost způsobí, že granulát zhrudkovatí a chyba se vrátí.",
+        "Držák nasaďte zpět tak, aby šipky v držáku a v okénku směřovaly proti sobě a aby dosedal celou plochou.",
+        "Vložte PowerDisk a zatlačte ho rovnoměrně dolů — musí dosednout zarovnaný, ne nakřivo.",
+        "Zavřete víko AutoDos a otáčejte jím, dokud úchyt nezapadne pod příslušný symbol. Spusťte krátký program a ověřte, jestli hladina v PowerDisku klesla."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud F601 přetrvává i po správném vložení PowerDisku a vyčištění dávkovače, je vadný pohon AutoDos nebo jeho snímač. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna dávkovacího modulu zhruba 2 500–4 500 Kč včetně dílu. Do vyřešení můžete myčku používat s klasickou tabletou v běžné komoře — AutoDos jen vypněte v nastavení."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-blikaji-ukazatele-prubehu-programu-myti-suseni-a-konec",
+      "shortMeaning": "Když na myčce Miele blikají současně ukazatele mytí, sušení a konec, hlásí spotřebič zablokované oběhové čerpadlo. Na modelech bez displeje je tohle trojité blikání ekvivalentem číselných kódů F14, F69 a F78. Dobrá zpráva: nejčastější příčinou není závada, ale čerpadlo zaschlé po delší odstávce.",
+      "likelyCauses": [
+        "Vyschlé a zalepené čerpadlo po týdnech až měsících nečinnosti",
+        "První uvedení myčky do provozu po dlouhém skladování",
+        "Cizí předmět v oběžném kole: střep, kost nebo párátko",
+        "Zbytky tuku, které rotor zalepily",
+        "Nesprávně usazená sítka, kterými se do čerpadla dostaly nečistoty",
+        "Skutečná závada motoru čerpadla, pokud postup níže nepomůže"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Vypněte myčku a vyjměte kombinaci sítek. Prostor pod nimi prohlédněte a v rukavicích vyberte všechny nečistoty.",
+        "Nalijte do prázdného mycího prostoru asi 1 litr teplé vody o teplotě nejvýše 75 °C. Pozor na opaření, s horkou vodou zacházejte opatrně.",
+        "Přidejte 3 až 5 kapek leštidla a nechte směs 5 minut působit.",
+        "Vraťte sítka, zavřete dvířka a spusťte program.",
+        "Postup zopakujte dvakrát až třikrát — u dlouho odstavené myčky se čerpadlo rozjede často až napodruhé.",
+        "Mezi pokusy myčku vždy vypněte, chvíli počkejte a znovu zapněte.",
+        "Do budoucna spouštějte při delší nepřítomnosti krátký program naprázdno jednou za 2–3 týdny."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud kontrolky blikají dál i po třech pokusech, je čerpadlo mechanicky zablokované nebo vadné a je potřeba technik. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna oběhového čerpadla zhruba 3 500–6 500 Kč včetně dílu."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-privodu-vodyotevrete-vodovodni-kohoutek",
+      "shortMeaning": "Textové hlášení Chyba přívodu vody / Otevřete vodovodní kohoutek se objevuje na myčkách Miele s displejem a znamená, že se spotřebič nedokázal napustit. Myčka vám rovnou napovídá nejpravděpodobnější příčinu — zavřený kohoutek. Na modelech bez displeje odpovídá tomuto hlášení blikající kontrolka přívodu vody.",
+      "likelyCauses": [
+        "Vodovodní kohoutek není otevřený, nebo jen částečně",
+        "Přiškrcený hlavní uzávěr vody v bytě po opravě",
+        "Znečištěné sítko v přípojce přívodní hadice",
+        "Zalomená hadice za myčkou po jejím přisunutí ke zdi",
+        "Nízký tlak vody v rozvodu",
+        "Sepnutý AquaStop na přívodní hadici"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Otočte kohoutkem až na doraz. Kombinované ventily pod dřezem mívají jednu větev jen pootevřenou.",
+        "Zkontrolujte i hlavní uzávěr vody v bytě, pokud se v domě nedávno opravovalo.",
+        "Myčku povysuňte a projděte hadici po celé délce — nesmí být zalomená ani stlačená.",
+        "Zavřete vodu, odšroubujte hadici od kohoutku a připravte si hadr. V převlečné matici je jemné sítko.",
+        "Sítko vyjměte pinzetou, propláchněte pod tekoucí vodou a usazeniny odstraňte kartáčkem.",
+        "Hadici vraťte, dotáhněte a otevřete vodu. Zkontrolujte, jestli spoj neprosakuje.",
+        "Spusťte krátký program — během prvních 30 sekund musíte slyšet napouštění."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud voda prokazatelně teče a hlášení se přesto vrací, je vadný přívodní ventil nebo průtokový snímač. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna ventilu zhruba 1 500–3 000 Kč včetně dílu. Přípojku nikdy nerozebírejte sami, je v ní síťové napětí."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-privod-vody-blika",
+      "shortMeaning": "Blikající kontrolka Přívod vody krátce po zahájení programu je způsob, jakým myčky Miele bez displeje hlásí problém s napouštěním. Myčka se pokusila nabrat vodu, nepovedlo se to a program zastavila hned v úvodu. Kromě zavřeného kohoutku bývá častou příčinou znečištěný ventil přívodu vody.",
+      "likelyCauses": [
+        "Zavřený nebo jen pootevřený vodovodní kohoutek",
+        "Znečištěný ventil přívodu vody usazeninami",
+        "Zanesené sítko v přípojce hadice",
+        "Zalomená přívodní hadice",
+        "Nedostatečný tlak vody, typicky ve vyšších patrech",
+        "Sepnutý AquaStop"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Nejprve otevřete kohoutek naplno a spusťte program znovu — u této chyby to řeší většinu případů.",
+        "Pokud kontrolka bliká dál, zavřete vodu a odšroubujte přívodní hadici. Vyjměte sítko z převlečné matice a propláchněte ho.",
+        "Otestujte tlak: napusťte kbelík vodou z téhož kohoutku. Slabý pramínek znamená, že problém není v myčce.",
+        "Zkontrolujte hadici po celé délce a myčku od zdi mírně odsuňte, aby nebyla hadice zalomená.",
+        "Máte-li AquaStop, ověřte, že blok na hadici není zavodněný a kabel nikde přiskřípnutý.",
+        "Vše sestavte, otevřete vodu a zkontrolujte těsnost.",
+        "Myčku odpojte na 5 minut od elektřiny a spusťte krátký program."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud kontrolka bliká i s otevřeným kohoutkem, dobrým tlakem a čistým sítkem, je znečištěný nebo vadný ventil přívodu vody. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna ventilu zhruba 1 500–3 000 Kč včetně dílu."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-odtok-vody",
+      "shortMeaning": "Hlášení Odtok vody znamená chybu při vypouštění — v mycím prostoru zůstává voda a myčka spustí varovný tón. Nejčastější a zároveň nejlépe opravitelnou příčinou je nesprávně zaklapnutý kryt vypouštěcího čerpadla. Když kryt nedosedne, komora čerpadla netěsní, voda se neodčerpá a výsledek mytí je špatný.",
+      "likelyCauses": [
+        "Nesprávně zaklapnutý kryt vypouštěcího čerpadla — typicky po předchozím čištění",
+        "Ucpané vypouštěcí čerpadlo cizím předmětem",
+        "Zanesená kombinace sítek",
+        "Ucpaný nebo zalomený vypouštěcí sifon pod dřezem",
+        "Zalomená vypouštěcí hadice za myčkou",
+        "Vadné vypouštěcí čerpadlo"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Odpojte myčku od elektřiny. Vyjměte kombinaci sítek a stojící vodu ze dna vyberte houbou nebo hrnkem.",
+        "Najděte ve dně kryt vypouštěcího čerpadla. Zatlačte dovnitř jeho zámek a kryt sejměte.",
+        "V rukavicích prohlédněte prostor čerpadla a vyberte střepy, pecky a kousky plastu. Oběžné kolo má ostré hrany, nesahejte tam prsty.",
+        "Kryt nasaďte zpět a pořádně zaklapněte, dokud zámek nezacvakne. Špatně usazený kryt je u tohoto hlášení nejčastější příčina.",
+        "Zkontrolujte vypouštěcí hadici za myčkou — nesmí být zalomená ani vedená ve smyčce.",
+        "Rozeberte a vyčistěte sifon pod dřezem, na který je myčka napojená. U nově zapojené myčky ověřte, že v hrdle sifonu není zaslepovací záslepka.",
+        "Zapojte myčku a spusťte krátký program. Sledujte, jestli voda ze dna odteče."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud voda neodtéká ani po vyčištění čerpadla, sítek a sifonu, je vadné vypouštěcí čerpadlo. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna čerpadla zhruba 1 800–3 500 Kč včetně dílu. Myčku do opravy nepoužívejte, stojící voda začne rychle zapáchat."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-ostrikovaci-rameno-dole",
+      "shortMeaning": "Hlášení Ostřikovací rameno (dole) znamená, že se spodní ostřikovací rameno neotáčí volně nebo má ucpané trysky. Bez otáčení se voda nedostane na nádobí v dolním koši a mytí je nedostatečné. Spodní rameno je ze všech nejsnáze přístupné a jeho vyčištění zvládnete za pár minut.",
+      "likelyCauses": [
+        "Nádobí v dolním koši mechanicky blokuje otáčení ramene — nejčastější příčina",
+        "Vysoký talíř nebo příbor prostrčený košem dolů",
+        "Zbytky jídla ucpaly trysky ramene",
+        "Vápenné usazeniny v tryskách po tvrdé vodě",
+        "Rameno není správně nasazené — šipka na objímce nesměřuje k symbolu zámku",
+        "Špatně usazená kombinace sítek, která rameno naklání"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Vypněte myčku a vytáhněte dolní koš ven. Přerovnejte nádobí tak, aby nic nevyčnívalo pod úroveň koše.",
+        "Otáčejte šroubovací objímkou ve středu spodního ramene proti směru hodinových ručiček (při pohledu shora) a rameno vytáhněte nahoru z čepu.",
+        "Zbytky jídla v tryskách vytlačte dovnitř ramene párátkem nebo tenkou špejlí. Nepoužívejte kov, poškodíte plast.",
+        "Rameno důkladně propláchněte pod tekoucí vodou z obou stran.",
+        "Zkontrolujte kombinaci sítek ve dně — musí dosedat zarovnaná, jinak rameno nesedí správně.",
+        "Rameno nasaďte zpět a objímkou otáčejte po směru hodinových ručiček, dokud šipka v okénku nedosáhne symbolu zámku.",
+        "V ruce ověřte, že se rameno otáčí lehce a bez zadrhávání, a spusťte krátký program."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud se rameno po vyčištění volně otáčí a hlášení se přesto vrací, je vadný snímač otáčení ramene nebo je ucpaný přívodní kanál pod ním. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, oprava zhruba 1 200–3 000 Kč včetně dílu."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-ostrikovaci-rameno-nahore",
+      "shortMeaning": "Hlášení Ostřikovací rameno (nahoře) upozorňuje, že se horní ostřikovací rameno netočí volně nebo má ucpané trysky. Projeví se to tím, že nádobí v horním koši zůstává neumyté, zatímco dole je čisté. Horní rameno je uchycené jinak než spodní, proto při demontáži postupujte opatrně.",
+      "likelyCauses": [
+        "Vysoké sklenice nebo hrnky v horním koši, které do ramene zasahují",
+        "Příbor vyčnívající z košíku nahoru",
+        "Ucpané trysky zbytky jídla nebo vápencem",
+        "Horní koš nastavený do vyšší polohy, kde nádobí naráží na rameno",
+        "Uvolněné nebo poškozené uchycení ramene",
+        "Zanesený přívodní kanál vedoucí k hornímu rameni"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Vypněte myčku a vysuňte horní koš. Rukou zkuste ramenem otočit — musí jít lehce a po celém obvodu.",
+        "Zkontrolujte, jestli do ramene nezasahuje vysoké nádobí. Máte-li výškově stavitelný koš, zkuste ho nastavit o stupeň níž.",
+        "Rameno sejměte podle svého modelu: buď se odšroubovává převlečnou maticí, nebo se odjišťuje pootočením a stažením dolů. Netahejte silou.",
+        "Trysky pročistěte párátkem a rameno propláchněte pod tekoucí vodou.",
+        "Prohlédněte místo uchycení — nesmí být prasklé ani uvolněné.",
+        "Rameno nasaďte zpět a ujistěte se, že pevně drží a volně se otáčí.",
+        "Spusťte krátký program a po jeho skončení zkontrolujte, jestli je nádobí v horním koši umyté."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud se horní rameno volně otáčí a nádobí přesto zůstává neumyté, bývá ucpaný přívodní kanál v zadní stěně nebo je vadný rozdělovač vody. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, oprava zhruba 1 500–3 500 Kč včetně dílu."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-ostrikovaci-rameno-uprostred",
+      "shortMeaning": "Hlášení Ostřikovací rameno (uprostřed) se týká středního ostřikovacího ramene, které mají myčky Miele se třemi úrovněmi ostřiku — obvykle modely s horní zásuvkou na příbory. Rameno je blokované nádobím nebo má ucpané trysky. Protože sedí mezi oběma koši, snadno se přehlédne.",
+      "likelyCauses": [
+        "Nádobí v horním koši zasahuje pod jeho úroveň a rameno blokuje",
+        "Příbory v horní zásuvce prostrčené dolů",
+        "Ucpané trysky středního ramene zbytky jídla",
+        "Vápenné usazeniny po dlouhodobě tvrdé vodě",
+        "Rameno není po předchozím čištění správně nasazené",
+        "Zanesený přívodní kanál ke střednímu rameni"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Vypněte myčku a vysuňte horní koš i zásuvku na příbory, ať se k prostřednímu rameni dostanete.",
+        "Rukou ramenem otočte — musí se točit lehce po celém obvodu bez zadrhávání.",
+        "Zkontrolujte, jestli z horní zásuvky nevyčnívají příbory směrem dolů. Dlouhé nože a vařečky jsou nejčastější viník.",
+        "Rameno sejměte podle svého modelu, obvykle pootočením a stažením, a trysky pročistěte párátkem.",
+        "Propláchněte ho pod tekoucí vodou z obou stran a nasaďte zpět tak, aby pevně drželo.",
+        "Nádobí v horním koši přerovnejte tak, aby nic nezasahovalo pod jeho dno.",
+        "Spusťte krátký program a zkontrolujte výsledek mytí ve střední úrovni."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud se střední rameno volně otáčí a hlášení přetrvává, je pravděpodobně ucpaný jeho přívodní kanál nebo vadný rozdělovač vody, který na něj přepíná. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, oprava rozdělovače zhruba 2 000–4 500 Kč včetně dílu."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-ostrikovaci-rameno-blika",
+      "shortMeaning": "Blikající kontrolka Ostřikovací rameno je způsob, jakým myčky Miele bez textového displeje hlásí, že se některé ostřikovací rameno netočí — podle Mieleho dokumentace se týká středního ramene. Na modelech s displejem odpovídá tomuto blikání textové hlášení Ostřikovací rameno (uprostřed). Nádobí pak zůstává v některé úrovni neumyté.",
+      "likelyCauses": [
+        "Nádobí zasahující do dráhy ramene — nejčastější příčina",
+        "Ucpané trysky ramene zbytky jídla",
+        "Vápenec v tryskách po dlouhodobě tvrdé vodě",
+        "Rameno špatně nasazené po předchozím čištění",
+        "Zanesený přívodní kanál k rameni",
+        "Vadný snímač otáčení ramene"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Vypněte myčku a otevřete dvířka. Postupně vysuňte oba koše a zkuste rukou otočit každým ramenem, které v myčce najdete.",
+        "Rameno, které se netočí volně nebo se zadrhává, sejměte a prohlédněte.",
+        "Trysky pročistěte párátkem nebo tenkou špejlí a rameno propláchněte pod tekoucí vodou.",
+        "Nasaďte ho zpět a ověřte, že pevně drží a volně se otáčí.",
+        "Přerovnejte nádobí tak, aby nic nezasahovalo do dráhy ramen — zvlášť dlouhé příbory a vysoké mísy.",
+        "Spusťte naprázdno horký program s odvápňovačem pro myčky, pokud máte tvrdou vodu.",
+        "Zapněte krátký program a sledujte, jestli kontrolka zhasne."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud se všechna ramena volně otáčejí a kontrolka bliká dál, je vadný snímač otáčení nebo rozdělovač vody. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, oprava zhruba 1 500–4 500 Kč včetně dílu podle toho, který uzel je poškozený."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-sviti-kontrolka-lestidlo-nebo-sul",
+      "shortMeaning": "Trvale svítící kontrolka leštidla nebo soli na myčce Miele většinou neznamená závadu a často ani nevyžaduje žádnou činnost. Po doplnění soli kontrolka ještě chvíli svítí, protože se sůl musí nejdřív rozpustit. Druhým běžným důvodem je používání kombinovaných tablet, u kterých myčka sůl ani leštidlo samostatně nedávkuje.",
+      "likelyCauses": [
+        "Sůl byla právě doplněna a ještě se nerozpustila — kontrolka zhasne sama",
+        "Používání kombinovaných tablet X v 1, u kterých je samostatné dávkování vypnuté",
+        "Zásobník leštidla nebo soli je skutečně prázdný",
+        "Nastavená tvrdost vody neodpovídá skutečné tvrdosti v lokalitě",
+        "Netěsné víčko zásobníku soli",
+        "Vadný snímač hladiny, pokud kontrolka svítí i s plným zásobníkem"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Pokud jste právě doplnili sůl, není potřeba dělat nic. Svícení přestane samo poté, co se sůl rozpustí, obvykle během jednoho až dvou programů.",
+        "Používáte-li kombinované tablety X v 1, můžete indikaci soli a leštidla v nastavení myčky vypnout. Kontrolka pak přestane svítit trvale.",
+        "Pozor: u velmi tvrdé vody kombinované tablety nestačí a regenerační sůl doplňovat musíte, i když tablety tvrdí opak.",
+        "Zkontrolujte oba zásobníky. Leštidlo je ve dvířkách, sůl ve dně mycího prostoru.",
+        "Ověřte v nastavení, jestli nastavená tvrdost vody odpovídá skutečné hodnotě — zjistíte ji u svého vodárenského dodavatele.",
+        "U zásobníku soli zkontrolujte, že je víčko dotažené a jeho těsnění celistvé.",
+        "Sledujte nádobí: bílý povlak znamená nedostatek soli, kapky a šmouhy nedostatek leštidla."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud kontrolka svítí i s plnými zásobníky, správně nastavenou tvrdostí vody a po několika programech, je vadný snímač hladiny. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, oprava zhruba 1 200–3 000 Kč včetně dílu. Myčku můžete mezitím normálně používat."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-ukazatel-casu-blika-pri-zavrenych-dvirkach",
+      "shortMeaning": "Když na myčce Miele bliká při zavřených dvířkách ukazatel času a program se nespustí, není úplně zajetá lišta zámku dvířek. Stává se to typicky po funkci automatického otevření dvířek na konci programu — pokud dvířka nikdo neotevřel dokořán, lišta zůstane v mezipoloze a myčka se odmítne rozjet.",
+      "likelyCauses": [
+        "Lišta zámku dvířek nezajela zpět po automatickém otevření dvířek — nejčastější příčina",
+        "Dvířka byla jen přivřená, ne úplně otevřená a zavřená",
+        "Nádobí v horním koši tlačí zevnitř na dvířka",
+        "Vysunutý koš, který brání dovření",
+        "Deformovaný nebo opotřebený plastový háček dvířek",
+        "Vadný mechanismus zámku"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Otevřete dvířka úplně dokořán, ne jen napůl. Právě tím se lišta zámku vrátí do výchozí polohy.",
+        "Dvířka pak zavřete běžným pohybem, dokud neucítíte cvaknutí.",
+        "Zkontrolujte, jestli jsou oba koše zasunuté až na doraz a jestli z nich nic nevyčnívá směrem ke dvířkům.",
+        "Prohlédněte plastový háček na horní hraně dvířek — nesmí být prasklý ani ohnutý.",
+        "Pokud ukazatel bliká dál, odpojte myčku od elektřiny na 15 minut a znovu zapojte.",
+        "Zkuste spustit krátký program a sledujte, jestli se ukazatel času ustálí.",
+        "Nezkoušejte dvířka dotlačovat silou ani do zámku páčit — ohnutý háček promění levnou opravu v drahou."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud ukazatel času bliká i po úplném otevření a zavření dvířek, obraťte se podle doporučení Miele na servis — jde o mechanismus zámku. Patří k levnějším opravám: díl stojí orientačně 800–2 000 Kč, s prací u nezávislého servisu celkem zhruba 1 800–3 500 Kč."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-vicko-nadoby-na-sulzavrete-vicko-nadoby-na-sul",
+      "shortMeaning": "Hlášení Víčko nádoby na sůl / Zavřete víčko nádoby na sůl znamená, že víčko zásobníku soli není pevně zavřené. Miele k tomuto hlášení popisuje i konkrétní situaci, kdy víčko vyskočí až během programu — pak je potřeba myčku vypnout a znovu zapnout, aby se hlášení zrušilo. Otevřeným víčkem se do zásobníku dostává mycí voda a změkčovač přestane fungovat.",
+      "likelyCauses": [
+        "Víčko nebylo po doplnění soli dotaženo až na doraz",
+        "Víčko vyskočilo tlakem během programu",
+        "Zbytky soli v závitu, kvůli kterým víčko nedosedne",
+        "Víčko nasazené nakřivo, takže nedoléhá po celém obvodu",
+        "Ztvrdlé nebo popraskané těsnění víčka",
+        "Prasklé víčko po přetažení"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Otevřete dvířka a najděte ve dně mycího prostoru kulaté víčko zásobníku soli.",
+        "Vyskočilo-li víčko během programu, myčku nejdřív vypněte a znovu zapněte senzorovým tlačítkem — jinak hlášení zůstane i po dotažení.",
+        "Víčko odšroubujte a ze závitu i okolí otvoru smeťte nebo opláchněte rozsypanou sůl.",
+        "Prohlédněte těsnění: musí být pružné a celistvé. Ztvrdlé nebo popraskané těsnění víčko neudrží.",
+        "Víčko nasaďte rovně a dotáhněte rukou až na doraz. Nepřetahujte ho, plastový závit se snadno strhne.",
+        "Ověřte, že víčko drží — zkuste s ním lehce pootočit zpět, nesmí povolit samo.",
+        "Spusťte program a po jeho skončení zkontrolujte, jestli hlášení zmizelo."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud víčko drží, těsnění je v pořádku a hlášení se přesto vrací, je vadný kontakt rozpoznávající zavřené víčko. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, oprava zhruba 1 200–2 500 Kč včetně dílu. Samotné víčko jako náhradní díl stojí obvykle jen několik stokorun."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-zkontrolujte-sitkonastavte-interval",
+      "shortMeaning": "Hlášení Zkontrolujte sítko / Nastavte interval je pravidelná připomínka údržby, ne porucha. Myčka Miele ho zobrazí po uplynutí nastaveného intervalu, protože sítka se časem zanášejí a jak rychle, to závisí na tom, jak moc znečištěné nádobí myjete. Součástí hlášení je i možnost si interval přenastavit podle vlastního provozu.",
+      "likelyCauses": [
+        "Uplynul nastavený interval kontroly sítek — běžný provozní stav",
+        "Sítka jsou skutečně zanesená nečistotami",
+        "Časté mytí silně znečištěného nádobí bez hrubého opláchnutí",
+        "Interval je nastavený kratší, než odpovídá vašemu používání",
+        "Předchozí hlášení nebylo potvrzeno tlačítkem OK"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Vytáhněte spodní koš a otočte rukojetí kombinace sítek proti směru hodinových ručiček. Celou sestavu vytáhněte nahoru.",
+        "Rozeberte ji na hrubé plastové sítko a jemné kovové mikrosítko.",
+        "Obojí propláchněte pod tekoucí vodou a usazeniny vytlačte kartáčkem. U mastného povlaku pomůže teplá voda s kapkou saponátu, sítka pak ale pořádně opláchněte.",
+        "Prohlédněte odkrytý prostor ve dně a v rukavicích z něj vyberte střepy a pecky.",
+        "Sítka vraťte tak, aby dosedla zarovnaná ke dnu, a rukojetí otočte po směru hodinových ručiček až na doraz.",
+        "Hlášení potvrďte tlačítkem OK, jinak se bude objevovat před každým programem i po něm.",
+        "V nastavení myčky si interval upravte podle svého provozu. Myjete-li převážně málo znečištěné nádobí, delší interval je v pořádku — sítka ale i tak čistěte alespoň jednou měsíčně."
+      ],
+      "whenToStopAndCallService": [
+        "Toto hlášení je připomínka údržby a servis kvůli němu volat nemusíte. Pokud nezmizí ani po vyčištění sítek a potvrzení tlačítkem OK, zkuste myčku odpojit na 15 minut od elektřiny. Teprve pokud ani to nepomůže, jde o chybu elektroniky a má smysl objednat technika; diagnostika vychází orientačně na 800–1 500 Kč."
       ],
       "sourceUrl": null
     }
