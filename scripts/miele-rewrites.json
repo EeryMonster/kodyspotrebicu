@@ -11,7 +11,11 @@
     "miele-mycka-f19",
     "miele-mycka-f594",
     "miele-mycka-f607",
-    "miele-mycka-f79"
+    "miele-mycka-f79",
+    "miele-mycka-f600",
+    "miele-mycka-f69",
+    "miele-mycka-f87",
+    "miele-mycka-f36"
   ],
   "rewrites": [
     {
@@ -285,6 +289,107 @@
       ],
       "whenToStopAndCallService": [
         "F79 vyžaduje výjezd servisního technika — výměna oběhového čerpadla trvá 60–120 minut a zahrnuje rozebrání spodní části myčky. Cena u nezávislého servisu orientačně 3 500–6 500 Kč včetně dílu, autorizovaný servis Miele bývá o 20–40 % dražší. U myček starších 8–10 let porovnejte cenu opravy s cenou nového spotřebiče."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f600",
+      "shortMeaning": "Chyba F600 se objeví u Miele myček s automatickým dávkovačem AutoDos (PowerDisk) a znamená, že se mycí prostředek nedostal z dávkovače do mycího prostoru — výstup dávkovače nebo plnicí kanál je zablokovaný. Myčka okamžitě stornuje program, spustí vypouštěcí čerpadlo a čtyřikrát pípne. Pokud chyba trvá i po vypnutí a zapnutí, myčka restart programu zablokuje.",
+      "likelyCauses": [
+        "Zhrudkovatělý práškový granulát v plnicím kanálu AutoDos — nejčastější příčina, vzniká když se do systému dostane vlhkost",
+        "PowerDisk není zatlačený celou plochou dolů nebo je prázdný a špatně dosedá",
+        "Netěsné víko AutoDos, kterým do dávkovače proniká pára z mycího prostoru",
+        "Zbytky jídla nebo tuku ucpaly trysky spodního ostřikovacího ramene, které má výstup dávkovače proplachovat",
+        "Spodní ostřikovací rameno se neotáčí volně, protože ho blokuje nádobí v dolním koši",
+        "Vápenné usazeniny v plnicím kanálu po dlouhodobě tvrdé vodě bez pravidelného čištění"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Vypněte myčku a nechte ji vychladnout. Otočte víko systému AutoDos do polohy pro otevření a vyjměte PowerDisk.",
+        "Zjistěte, jestli máte AutoDos 1.0 nebo 2.0 — u verze 1.0 se držák PowerDisku vytahuje nahoru za žluté plošky, u verze 2.0 se navíc odjišťuje žlutým otvíracím ouškem.",
+        "Vyjměte držák PowerDisku a plnicí kanál. Kanál propláchněte vodou a vyčistěte měkkým kartáčem — zhrudkovatělý granulát je většinou právě tady.",
+        "Kryt dávkovače a držák otřete vlhkou utěrkou. Všechny díly potom DŮKLADNĚ osušte — pokud zůstane vlhkost, granulát se srazí znovu a chyba se vrátí.",
+        "Zkontrolujte spodní ostřikovací rameno: otočte objímkou proti směru hodinových ručiček, rameno vytáhněte nahoru a trysky pročistěte párátkem nebo špejlí (ne kovem, poškodí plast).",
+        "Rameno nasaďte zpět a objímkou otáčejte po směru hodinových ručiček, dokud šipka v okénku nedosáhne symbolu zámku. V ruce ověřte, že se rameno otáčí lehce.",
+        "Vraťte plnicí kanál i držák PowerDisku (šipky v držáku a v okénku musí směřovat proti sobě, držák musí dosedat celou plochou), vložte PowerDisk a zavřete víko.",
+        "Spusťte krátký program a sledujte, jestli hladina v PowerDisku klesla — pokud ano, dávkování se obnovilo."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud F600 přetrvává i po vyčištění a osušení celého systému AutoDos, bývá příčinou vadný pohon dávkovače nebo jeho řídicí elektronika. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna dávkovacího modulu AutoDos zhruba 2 500–4 500 Kč včetně dílu; autorizovaný servis Miele bývá dražší. Do vyřešení můžete myčku používat s klasickou tabletou v běžné komoře na prostředek — AutoDos jen vypněte v nastavení."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f69",
+      "shortMeaning": "Chyba F69 znamená zablokované oběhové (mycí) čerpadlo — motor, který žene vodu do ostřikovacích ramen, se nedokáže roztočit. Velmi častou a řešitelnou příčinou není závada, ale zaschlé čerpadlo po delší odstávce myčky (dovolená, rekonstrukce, první uvedení do provozu), kdy se zbytky prostředku v čerpadle slepí.",
+      "likelyCauses": [
+        "Vyschlé a zalepené čerpadlo po několika týdnech až měsících nečinnosti — nejčastější příčina u jinak zdravé myčky",
+        "Cizí předmět zaklíněný v oběžném kole (střep, drobná kost, párátko, kousek plastu)",
+        "Zbytky tuku a jídla, které rotor zalepily",
+        "Vápenné usazeniny v čerpadle po dlouhodobě tvrdé vodě bez soli a bez odvápňování",
+        "Nesprávně usazená kombinace sítek, kterou se do čerpadla dostaly nečistoty",
+        "Skutečná technická závada motoru čerpadla nebo jeho kondenzátoru (pokud níže uvedený postup nepomůže)"
+      ],
+      "canUserTrySafeChecks": true,
+      "safeChecks": [
+        "Vypněte myčku a vyjměte kombinaci sítek ze dna mycího prostoru. Prohlédněte prostor pod nimi a vytáhněte všechny viditelné nečistoty a případné střepy (použijte rukavice).",
+        "Následující postup Miele doporučuje přímo na rozlepení zaschlého čerpadla: nalijte do prázdného mycího prostoru přibližně 1 litr teplé vody (max. 75 °C) a přidejte 3 až 5 kapek leštidla.",
+        "Nechte směs působit zhruba 5 minut, aby se zaschlé zbytky v čerpadle uvolnily.",
+        "Vraťte sítka, zavřete dvířka a spusťte libovolný program.",
+        "Pokud chyba trvá, celý postup zopakujte ještě 2–3krát — u dlouho odstavené myčky se čerpadlo často rozjede až na druhý nebo třetí pokus.",
+        "Mezi pokusy myčku vždy vypněte, počkejte několik sekund, znovu zapněte a program zvolte tlačítkem program.",
+        "Do budoucna: pokud myčku nepoužíváte delší dobu, spusťte jednou za 2–3 týdny krátký program naprázdno. Zabráníte tím opakování F69."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud F69 přetrvává i po třech pokusech s teplou vodou a leštidlem, je pravděpodobná mechanická blokáda uvnitř čerpadla nebo závada motoru — ta už vyžaduje rozebrání spodní části myčky. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna oběhového čerpadla zhruba 3 500–6 500 Kč včetně dílu. U myček starších 8–10 let porovnejte cenu opravy s cenou nové. Pozor na záměnu: F69 je zablokované čerpadlo, zatímco F78 a F79 značí přímo závadu oběhového čerpadla."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f87",
+      "shortMeaning": "Chyba F87 se podle servisní dokumentace Miele váže na čidlo změkčovače vody — tedy na snímač, který hlídá funkci iontoměniče a dávkování regenerační soli. Miele sám k tomuto kódu uvádí pouze to, že jde o technickou závadu, kterou uživatel neopraví sám. Nezaměňujte ji s chybou F88, která patří senzoru zákalu vody.",
+      "likelyCauses": [
+        "Vadné čidlo změkčovače vody nebo přerušení v jeho kabeláži",
+        "Vápenné usazeniny na čidle po dlouhodobém provozu bez regenerační soli",
+        "Zanesený nebo netěsný iontoměnič (změkčovací jednotka)",
+        "Netěsné víčko nádoby na sůl, kterým se do systému dostává mycí voda",
+        "Vadná řídicí elektronika, která signál z čidla nedokáže vyhodnotit",
+        "Následek zaplavení spodní vany po jiné netěsnosti"
+      ],
+      "canUserTrySafeChecks": false,
+      "safeChecks": [
+        "Tuto chybu uživatel sám neopraví — čidlo změkčovače je součástí vnitřní vodní cesty a jeho výměna vyžaduje rozebrání spotřebiče. Následující kroky chybu neodstraní, ale pomohou technikovi zúžit diagnostiku.",
+        "Zkontrolujte, jestli je v nádobě na sůl regenerační sůl a jestli je víčko dotažené. Chybějící sůl nebo netěsné víčko je běžný spouštěč problémů se změkčovačem.",
+        "Ověřte, že v nastavení myčky odpovídá tvrdost vody skutečné tvrdosti ve vaší lokalitě — hodnotu zjistíte u svého vodárenského dodavatele.",
+        "Poznamenejte si, jestli se na nádobí objevuje bílý vápenný povlak a kdy přesně se F87 zobrazí (hned po zapnutí, nebo až v průběhu programu). Tyto informace technikovi ušetří čas.",
+        "Myčku do příjezdu technika raději nepoužívejte — pokud změkčovač netěsní, hrozí zaplavení spodní vany."
+      ],
+      "whenToStopAndCallService": [
+        "F87 vyžaduje výjezd servisního technika. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, oprava změkčovací jednotky nebo výměna čidla zhruba 2 000–4 500 Kč včetně dílu; autorizovaný servis Miele bývá o 20–40 % dražší. Přesnou cenu lze určit až po změření, protože se liší podle toho, jestli stačí vyměnit samotné čidlo, nebo celý iontoměnič."
+      ],
+      "sourceUrl": null
+    },
+    {
+      "slug": "miele-mycka-f36",
+      "shortMeaning": "Chyba F36 signalizuje vadný spínač zámku dvířek. Řídicí jednotka dostává ze zámku dva protichůdné signály současně, takže nedokáže bezpečně vyhodnotit, jestli jsou dvířka zavřená. Myčka proto program přeruší a spustí vypouštěcí čerpadlo. Jde o bezpečnostní pojistku — bez spolehlivé informace o zavřených dvířkách myčka mýt nezačne.",
+      "likelyCauses": [
+        "Opálený nebo spečený mikrospínač v zámku dvířek — nejčastější příčina, kontakty postupně degradují od jiskření",
+        "Zlomený či ohnutý plastový háček na dvířkách, který do zámku nezajíždí ve správné poloze",
+        "Rozladěné seřízení dvířek nebo povolené panty, kvůli kterým dvířka nedoléhají",
+        "Vadný elektromagnet (aktuátor) zámku, který zůstává zaseknutý v mezipoloze",
+        "Poškozená nebo prodřená kabeláž vedoucí ke dvířkám — namáhá se každým otevřením",
+        "Vadná řídicí deska, která signál ze zámku vyhodnocuje chybně (méně časté)"
+      ],
+      "canUserTrySafeChecks": false,
+      "safeChecks": [
+        "Výměna zámku dvířek je zásah do bezpečnostního prvku napojeného na síťové napětí — nechte ji na technikovi. Následující kroky slouží jen k vyloučení banální příčiny.",
+        "Otevřete a zavřete dvířka a sledujte, jestli zapadnou s běžným cvaknutím a bez odporu. Zkontrolujte, jestli v cestě nebrání vysunutý koš nebo vyčnívající kus nádobí.",
+        "Prohlédněte plastový háček na horní hraně dvířek — nesmí být prasklý, ohnutý ani viditelně opotřebený.",
+        "Odpojte myčku od elektřiny na 5 minut a znovu zapojte. Pokud šlo o jednorázový výpadek komunikace, chyba po resetu zmizí; pokud se hned vrátí, jde o závadu zámku.",
+        "Zaznamenejte, jestli se F36 objevuje hned po zavření dvířek, nebo až v průběhu programu — technikovi to pomůže odlišit vadný spínač od problému s kabeláží."
+      ],
+      "whenToStopAndCallService": [
+        "Pokud se F36 vrací i po resetu, je potřeba vyměnit zámek dvířek. Patří k levnějším opravám myčky: díl stojí orientačně 800–2 000 Kč, s prací u nezávislého servisu se celková cena pohybuje zhruba 1 800–3 500 Kč, autorizovaný servis Miele bývá dražší. Oprava trvá většinou do hodiny. Do výměny myčku nepoužívejte — dvířka se nemusí spolehlivě zajistit."
       ],
       "sourceUrl": null
     }
