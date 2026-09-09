@@ -20,12 +20,20 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  // Canonical se odvozuje z route params, NE z DB odpovědi. Stránka je dynamicky
+  // renderovaná a Neon občas studeně startuje — když dotaz selhal nebo nic nevrátil,
+  // dřívější fallbacky vracely metadata úplně bez canonicalu a Google takový crawl
+  // vyhodnotil jako „Duplicitní stránka bez kanonické verze vybrané uživatelem".
+  // Params jsou už lowercase (normalizuje middleware), takže tvar odpovídá
+  // canonicalu poskládanému z DB hodnot.
+  const paramCanonical = `https://www.kodyspotrebicu.cz/${params.brand}/${params.applianceType}/${params.code}`
+
   try {
     const entry = await prisma.errorCode.findUnique({
       where: { slug: params.code },
       select: { title: true, shortMeaning: true, code: true, altCodes: true, brand: true, applianceType: true, slug: true, severityLevel: true },
     })
-    if (!entry) return { title: 'Kód nenalezen' }
+    if (!entry) return { title: 'Kód nenalezen', alternates: { canonical: paramCanonical } }
     const appliancePath = { pracka: 'pracky', mycka: 'mycky', susicka: 'susicky' }[entry.applianceType] || entry.applianceType
     const applianceLabel = APPLIANCE_LABELS[entry.applianceType] || entry.applianceType
     const canonical = `https://www.kodyspotrebicu.cz/${entry.brand.toLowerCase()}/${appliancePath}/${entry.slug}`
@@ -54,7 +62,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     }
   } catch {
-    return { title: 'Kód chyby' }
+    return { title: 'Kód chyby', alternates: { canonical: paramCanonical } }
   }
 }
 

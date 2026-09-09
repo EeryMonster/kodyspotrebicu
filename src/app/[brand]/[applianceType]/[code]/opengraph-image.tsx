@@ -52,13 +52,18 @@ export default async function Image({ params }: Props) {
         <div style={{ fontSize: 28, fontWeight: 700, color: '#bfdbfe' }}>
           KódySpotřebičů.cz
         </div>
-        <div>
+        {/* Satori vyžaduje explicitní display na každém divu s více potomky. */}
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div
             style={{
               background: 'rgba(255,255,255,0.15)',
               borderRadius: 16,
               padding: '16px 32px',
-              display: 'inline-block',
+              // Satori nepodporuje 'inline-block' (povoluje jen flex | block | none |
+              // -webkit-box) a na neznámou hodnotu shodí celý render na 500.
+              // alignSelf drží badge zúžený na obsah, jak to dělal inline-block.
+              display: 'flex',
+              alignSelf: 'flex-start',
               fontSize: 64,
               fontWeight: 900,
               color: 'white',
@@ -71,8 +76,10 @@ export default async function Image({ params }: Props) {
           <div style={{ fontSize: 40, fontWeight: 700, color: 'white', lineHeight: 1.2, marginBottom: 16 }}>
             {title}
           </div>
+          {/* Jeden text-node zamerne: {brand}{ternar} by byly dva potomky
+              a Satori pak vyzaduje explicitni display (jinak spadne na 500). */}
           <div style={{ fontSize: 24, color: '#bfdbfe' }}>
-            {brand}{applianceLabel ? ` · ${applianceLabel}` : ''}
+            {`${brand}${applianceLabel ? ` · ${applianceLabel}` : ''}`}
           </div>
         </div>
       </div>

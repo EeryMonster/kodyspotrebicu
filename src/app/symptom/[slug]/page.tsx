@@ -25,13 +25,21 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  // Canonical z route params, nezávisle na DB — viz stejný komentář
+  // v [brand]/[applianceType]/[code]/page.tsx. Bez tohoto fallbacku stránka
+  // při výpadku DB vyjde bez canonicalu a Google ji zařadí mezi duplicity.
+  let paramCanonical = 'https://www.kodyspotrebicu.cz/symptom'
+  try {
+    paramCanonical = `https://www.kodyspotrebicu.cz/symptom/${slugify(decodeURIComponent(params.slug))}`
+  } catch { /* nevalidní %-encoding: zůstane bezpečný fallback výše */ }
+
   try {
     const decoded = decodeURIComponent(params.slug)
     const symptom = await prisma.symptom.findFirst({
       where: { OR: [{ slug: decoded }, { slug: slugify(decoded) }] },
       select: { title: true, description: true, slug: true },
     })
-    if (!symptom) return { title: 'Symptom nenalezen' }
+    if (!symptom) return { title: 'Symptom nenalezen', alternates: { canonical: paramCanonical } }
     const canonical = `https://www.kodyspotrebicu.cz/symptom/${slugify(symptom.slug)}`
     return {
       title: symptom.title,
@@ -44,7 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     }
   } catch {
-    return { title: 'Symptom' }
+    return { title: 'Symptom', alternates: { canonical: paramCanonical } }
   }
 }
 
