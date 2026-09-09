@@ -23,52 +23,55 @@ const SYMPTOM_SLUG_REDIRECTS: Record<string, string> = {
 }
 
 export function middleware(request: NextRequest) {
-  const host = request.headers.get('host') || ''
+  const url = request.nextUrl.clone()
+  const originalPath = request.nextUrl.pathname
+  let redirect = false
 
   // 1) non-www → www (canonical host).
+  //    Pozn.: pokud je na Vercelu nastaven domain-level redirect pro
+  //    kodyspotrebicu.cz, middleware se sem vůbec nedostane a redirect
+  //    obslouží edge vrstva. Musí být nastaven jako 308 (Permanent),
+  //    ne 307 (Temporary) — jinak Google nekonsoliduje signály a nechá
+  //    non-www URL viset v GSC jako „Stránka s přesměrováním".
+  const host = (request.headers.get('host') || '').split(':')[0].toLowerCase()
   if (host === 'kodyspotrebicu.cz') {
-    const url = request.nextUrl.clone()
     url.host = 'www.kodyspotrebicu.cz'
-    return NextResponse.redirect(url, { status: 301 })
+    redirect = true
   }
 
-  const pathname = request.nextUrl.pathname
-
-  // 2) /symptom/<slug> normalizace: diakritika + slug-merge mapování.
-  //    Pořadí: musí být před generic lowercase (#3), aby %-encoded diakritika
-  //    (např. %C4%8D obsahuje uppercase hex) nevyvolalo dvojí redirect.
-  //    Page.tsx volá permanentRedirect, ale v dynamic rendering padá do client-side
-  //    meta refresh (HTTP 200), což GSC reportuje jako noindex (případ z 2026-05-18).
-  const symptomMatch = pathname.match(/^\/symptom\/(.+)$/i)
+  // 2) Normalizace cesty. Počítáme finální tvar v jednom průchodu a teprve
+  //    pak vydáme JEDEN redirect — dřív se řetězily až 2 hopy
+  //    (např. /symptom/pračka-nevypouští → /symptom/pracka-nevypousti
+  //     → /symptom/voda-zustava-v-pracce), což ředí SEO signály.
+  let pathname = originalPath
+  const symptomMatch = originalPath.match(/^\/symptom\/(.+)$/i)
   if (symptomMatch) {
+    // 2a) /symptom/<slug>: diakritika + slug-merge mapování naráz.
+    //     Page.tsx volá permanentRedirect, ale v dynamic rendering padá do
+    //     client-side meta refresh (HTTP 200), což GSC reportuje jako noindex
+    //     (případ z 2026-05-18) — proto to řešíme už tady v middleware.
     let rawSlug: string
     try { rawSlug = decodeURIComponent(symptomMatch[1]) } catch { return NextResponse.next() }
 
     const cleanSlug = slugify(rawSlug)
-    if (cleanSlug && rawSlug !== cleanSlug) {
-      const url = request.nextUrl.clone()
-      url.pathname = `/symptom/${cleanSlug}`
-      return NextResponse.redirect(url, { status: 308 })
-    }
-
-    const merged = SYMPTOM_SLUG_REDIRECTS[cleanSlug || rawSlug]
-    if (merged) {
-      const url = request.nextUrl.clone()
-      url.pathname = `/symptom/${merged}`
-      return NextResponse.redirect(url, { status: 308 })
-    }
+    const finalSlug = SYMPTOM_SLUG_REDIRECTS[cleanSlug] || cleanSlug
+    if (finalSlug) pathname = `/symptom/${finalSlug}`
+  } else if (/[A-Z]/.test(originalPath)) {
+    // 2b) Lowercase normalizace pro ostatní app routes (case-insensitive canonical).
+    //     Pokrývá /Bosch/Pracky/..., /znacka/Bosch, /Kod/E22 atd. Bezpečné,
+    //     protože všechny naše canonical URL jsou lowercase a /_next a /api
+    //     už vyloučené matcherem.
+    pathname = originalPath.toLowerCase()
   }
 
-  // 3) Lowercase normalizace pro všechny app routes (case-insensitive canonical).
-  //    Pokrývá /Bosch/Pracky/..., /znacka/Bosch, /Kod/E22 atd. Stejný důvod jako #2:
-  //    page.tsx permanentRedirect by skončil jako client meta refresh (200).
-  //    Bezpečné protože všechny naše canonical URL jsou lowercase a /_next a /api
-  //    už vyloučené matcherem.
-  if (/[A-Z]/.test(pathname)) {
-    const url = request.nextUrl.clone()
-    url.pathname = pathname.toLowerCase()
-    return NextResponse.redirect(url, { status: 308 })
+  if (pathname !== originalPath) {
+    url.pathname = pathname
+    redirect = true
   }
+
+  // 308 (ne 301) kvůli konzistenci se zbytkem webu; Google obě chápe
+  // jako permanent a konsoliduje stejně.
+  if (redirect) return NextResponse.redirect(url, { status: 308 })
 
   return NextResponse.next()
 }
