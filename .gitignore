@@ -41,3 +41,5 @@ scripts/*
 !scripts/audit-ui.mjs
 !scripts/miele-rewrites.json
 !scripts/apply-miele-rewrites.ts
+!scripts/detailed-steps.json
+!scripts/apply-detailed-steps.ts

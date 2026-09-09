@@ -1,0 +1,566 @@
+{
+  "siemens-mycka-e14": [
+    {
+      "type": "text",
+      "value": "Chyba E14 znamená, že průtokoměr na přívodu vody posílá řídicí jednotce hodnoty, které nedávají smysl — buď hlásí nulový průtok, i když je ventil otevřený, nebo naopak průtok, který neodpovídá skutečnosti. Myčka se kvůli tomu buď vůbec nenapustí, nebo program přeruší v půlce. Ve většině případů nejde o vadný senzor, ale o něco, co brání volnému průtoku vody před ním.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Prověřte přívod vody",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zavřete a znovu naplno otevřete rohový ventil pod dřezem — musí jít otočit až na doraz. Zkontrolujte přívodní hadici po celé délce: nesmí být nikde zalomená, přiskřípnutá za myčkou ani stočená do ostré smyčky. Myčku k tomu opatrně povysuňte, hadici při tom netahejte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte sítko na vstupu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zavřete vodu a odšroubujte přívodní hadici od rohového ventilu (připravte si hadr, kousek vody vyteče). V převlečné matici je jemné sítko — vyjměte ho pinzetou a propláchněte pod tekoucí vodou. U starších rozvodů v něm bývají rezavé šupinky a vodní kámen, což je nejčastější spouštěč E14. Sítko vraťte a hadici dotáhněte rukou plus čtvrt otáčky kleštěmi.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte AquaStop, pokud ho máte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Má-li vaše myčka na hadici tlustší plastový blok s kabelem (AquaStop), zkontrolujte, že není zavodněný a že kabel není nikde přiskřípnutý. Sepnutý AquaStop propouští jen minimum vody a průtokoměr to vyhodnotí přesně jako E14. Zavodněný blok se nedá opravit, vyměňuje se celá hadice.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte a otestujte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Myčku vypněte, odpojte na 5 minut od elektřiny a znovu zapojte. Spusťte nejkratší program a poslouchejte — během prvních 30 sekund musíte slyšet napouštění. Pokud voda teče a E14 se přesto vrátí, je vadný samotný průtokoměr nebo jeho kabeláž a to už patří technikovi.",
+      "tag": "p"
+    }
+  ],
+  "samsung-mycka-le": [
+    {
+      "type": "text",
+      "value": "Kód LE (u některých modelů LC) znamená, že plovákový senzor ve spodní vaně myčky detekoval vodu tam, kde být nemá. Myčka okamžitě spustí vypouštěcí čerpadlo a zablokuje program — je to bezpečnostní pojistka proti vytopení bytu. Dokud vodu ze dna neodstraníte a netěsnost nenajdete, myčka se znovu nerozjede.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zastavte přívod vody",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Než začnete cokoli zkoumat, zavřete rohový ventil pod dřezem a myčku odpojte od elektřiny. Pokud pod myčkou nebo kolem soklu vidíte vodu, vytřete ji a sledujte, jestli se doplňuje — rychle přibývající voda znamená aktivní únik a je čas volat servis, ne experimentovat.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vysušte spodní vanu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Myčku opatrně povysuňte a nakloňte dozadu asi o 10 cm, ať voda ze spodní vany steče dozadu k plováku. U většiny modelů se pak dá zepředu pod sokl zasunout savý hadr nebo utěrka. Nechte myčku takto vyschnout aspoň hodinu — čím sušší vana, tím spolehlivěji plovák klesne zpět.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Najděte zdroj vody",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nejčastější místa úniku v pořadí pravděpodobnosti: převlečná matice přívodní hadice, spoj vypouštěcí hadice se sifonem, těsnění dvířek (zkontrolujte, jestli v něm nevězí zbytky jídla) a spodní ostřikovací rameno. Přetékat může i přeplněný leštidlový zásobník nebo použití běžného saponátu místo mycího prostředku — ten napění tolik, že pěna vyteče spodem.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Zapojte a otestujte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Po vysušení myčku zapojte a spusťte krátký program bez nádobí. Zůstaňte u ní celou dobu a sledujte sokl. Pokud LE zmizí a voda se neobjeví, byla příčina jednorázová. Pokud se kód vrátí hned po zapnutí i se suchou vanou, je vadný plovákový senzor a je potřeba technik.",
+      "tag": "p"
+    }
+  ],
+  "beko-pracka-h7": [
+    {
+      "type": "text",
+      "value": "H7 je servisní kód, kterým pračka Beko hlásí poruchu tlakového senzoru hladiny — pressostatu. Ten měří, kolik vody je v bubnu, a řídí podle toho napouštění i vypouštění. Když posílá nesmyslné hodnoty, pračka se buď nenapustí vůbec, nebo naopak napouští bez konce. Velmi často není vadný samotný senzor, ale tenká hadička, která k němu vede tlak.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte tlakovou hadičku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku od elektřiny a zavřete vodu. Sundejte horní kryt (obvykle dva šrouby vzadu, kryt se posune dozadu). Na boku uvidíte malý kulatý senzor s tenkou průhlednou hadičkou vedoucí dolů k bubnu. Zkontrolujte, jestli hadička není nikde prasklá, zalomená nebo sesmeknutá z hrdla — stačí, aby povolila o pár milimetrů, a měření přestane fungovat.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Profoukněte hadičku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Hadičku opatrně stáhněte ze senzoru a zlehka do ní fouknete. Musíte cítit odpor a slyšet zabublání v bubnu. Pokud je ucpaná prachem z pracího prášku nebo v ní stojí voda, propláchněte ji vlažnou vodou a nechte vyschnout. Nasazujte ji zpět až suchou, jinak se problém vrátí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte tlakovou komůrku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Hadička ústí dole u vany do malé komůrky. U praček starších pěti let bývá zanesená slizem z pracích prostředků a změkčovadel. Odpojte hadičku i dole, komůrku propláchněte a zbavte usazenin. Tohle je u H7 nejčastější skutečná příčina.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte a otestujte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vraťte hadičku na obě strany tak, aby na hrdlech pevně seděla, zavřete kryt a pračku nechte 10 minut odpojenou. Pak spusťte krátký program a sledujte hladinu. Pokud H7 zůstává i s čistou a nepoškozenou hadičkou, je vadný pressostat nebo řídicí deska a je potřeba technik.",
+      "tag": "p"
+    }
+  ],
+  "samsung-pracka-be": [
+    {
+      "type": "text",
+      "value": "Kód BE (podle modelu také bE nebo EB) znamená, že řídicí jednotka vyhodnotila některé tlačítko na ovládacím panelu jako trvale stisknuté. Pračka se z bezpečnostních důvodů odmítne rozjet — nemůže vědět, jestli jde o poruchu, nebo o někoho, kdo se opírá o panel. Naprostá většina případů má banální příčinu a vyřeší se doma.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Projděte všechna tlačítka",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Postupně krátce stiskněte každé tlačítko na panelu a poslouchejte, jestli všechna stejně cvaknou a hlavně jestli se všechna vrátí zpět. Zaseknuté tlačítko poznáte tak, že zůstane o kousek níž než ostatní nebo se vrací pomalu. Nejčastěji se zasekává tlačítko zapnutí a tlačítko startu, protože se mačkají nejvíc.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte okolí tlačítek",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pod okraje tlačítek se dostává prášek, aviváž a mastnota z rukou, ztuhne tam a tlačítko drží dole. Panel otřete hadříkem navlhčeným v teplé vodě s kapkou octa a kolem zaseknutého tlačítka projeďte vatovou tyčinkou. Nikdy nestříkejte čistič přímo na panel — tekutina zateče k elektronice a uděláte si větší problém.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte dětskou pojistku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "U některých modelů se BE objeví, když je aktivní dětský zámek a někdo mezitím mačkal tlačítka. Podržte současně dvě tlačítka označená malým zámkem (obvykle Teplota a Máchání) zhruba 3 sekundy, dokud symbol zámku nezmizí z displeje.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte a otestujte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku od elektřiny na 10 minut — tím se vybijí kondenzátory na desce a hlášení se vymaže natvrdo. Po zapojení zkuste spustit krátký program. Pokud BE naskočí okamžitě, aniž byste se panelu dotkli, je vadná membrána pod tlačítky nebo samotná deska panelu a je potřeba technik.",
+      "tag": "p"
+    }
+  ],
+  "siemens-mycka-e2": [
+    {
+      "type": "text",
+      "value": "Dvě bliknutí kontrolky, respektive kód E2, znamenají poruchu teplotního čidla NTC. Myčka podle něj hlídá, jestli voda dosáhla teploty zvolené programem. Když čidlo posílá nesmyslné hodnoty, myčka buď nehřeje vůbec, nebo program ukončí předčasně a nádobí zůstane mokré a mastné. Než se pustíte do elektroniky, vyplatí se vyloučit banální příčiny.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Ověřte, že myčka opravdu nehřeje",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte program na 60 °C a asi po dvaceti minutách krátce pootevřete dvířka. Pokud se z myčky nevyvalí pára a voda uvnitř je vlažná, chyba je reálná. Pokud je uvnitř horko, čidlo měří správně a problém bude v jeho kabeláži nebo ve vyhodnocení na desce.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte filtry a ostřikovací ramena",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zanesený filtr sníží průtok vody natolik, že se ohřátá voda k čidlu nedostane a myčka vyhodnotí teplotu jako chybnou. Vyjměte kombinaci sítek ze dna, propláchněte ji pod tekoucí vodou a kartáčkem pročistěte trysky obou ostřikovacích ramen. Zkontrolujte, že se ramena volně otáčejí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Odvápněte myčku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vrstva vodního kamene na čidle funguje jako izolace a čidlo pak hlásí nižší teplotu, než jaká ve skutečnosti je. Spusťte naprázdno nejdelší horký program s odvápňovačem určeným pro myčky. V oblastech s tvrdou vodou tohle řeší E2 překvapivě často — a zároveň zkontrolujte, že máte v zásobníku regenerační sůl.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte a otestujte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte myčku od elektřiny na 5 minut, zapojte a spusťte krátký horký program. Pokud se E2 vrátí i po odvápnění a vyčištění, je potřeba vyměnit čidlo NTC — je to levný díl, ale sedí ve vodní cestě, takže výměna vyžaduje technika.",
+      "tag": "p"
+    }
+  ],
+  "beko-pracka-h6": [
+    {
+      "type": "text",
+      "value": "H6 je servisní kód, kterým pračka Beko hlásí zkrat v řídicím obvodu motoru — konkrétně v triaku, tedy polovodičovém spínači na výkonové desce, který motoru dodává proud. Pračka se kvůli tomu buď vůbec neroztočí, nebo se buben rozjede sám hned po zapnutí, ještě než začne napouštění. Tohle není závada na domácí opravu, ale několika kroky ji spolehlivě odlišíte od jiných příčin.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Odpojte pračku od elektřiny",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud se buben točí sám nebo cítíte zápach spálené elektroniky, vytáhněte zástrčku okamžitě a už pračku nezapínejte. Zkratovaný triak může spínat motor bez ohledu na program a při zavřených dvířkách se to snadno přehlédne. Zápach spáleniny je zároveň jediný příznak, u kterého nemá smysl zkoušet nic dalšího — rovnou volejte servis.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vylučte zaseknutý buben",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojenou pračku otevřete a rukou několikrát protočte buben. Musí se otáčet lehce a bez skřípání. Zadrhávající nebo zablokovaný buben (zaseknutá kostice z podprsenky, mince mezi bubnem a vanou) přetíží motor a výsledná chyba může vypadat podobně. Ozve-li se cinkání, obraťte se na servis kvůli vyjmutí předmětu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkuste tvrdý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte pračku odpojenou aspoň 15 minut, ať se vybijí kondenzátory na výkonové desce. Pak ji zapojte a bez prádla spusťte krátký máchací program. Jednorázový H6 způsobený přepětím v síti po tomhle zmizí — pokud naskočí znovu, jde o skutečnou závadu desky.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Připravte podklady pro technika",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Poznamenejte si, jestli se buben točí sám, jestli se motor vůbec pokusí rozeběhnout a v jaké fázi programu H6 naskočí. Výkonová deska nebo motor jsou u praček nejdražší díly, takže se u pračky starší osmi let vyplatí nechat si nejdřív udělat cenovou kalkulaci a porovnat ji s cenou nové.",
+      "tag": "p"
+    }
+  ],
+  "beko-pracka-eh3": [
+    {
+      "type": "text",
+      "value": "EH3 znamená, že pračka Beko naměřila na svém napájení nižší napětí, než potřebuje k bezpečnému provozu. Elektronika program raději pozastaví, protože podpětí nejvíc ohrožuje motor a čerpadlo — při rozběhu odebírají největší proud. Chyba tedy nemusí být v pračce, ale v tom, jak a kam je zapojená.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zrušte prodlužovačky a rozdvojky",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pračku zapojte přímo do zásuvky ve zdi. Prodlužovací kabely, rozdvojky a hlavně tenké kabely do 1,5 mm² způsobují při rozběhu motoru propad napětí, který elektronika vyhodnotí jako EH3. Totéž platí pro zapojení přes přepěťovou ochranu nebo časovač.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Ověřte napětí jiným spotřebičem",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Do stejné zásuvky zapojte varnou konvici nebo fén a zapněte je na plný výkon. Pokud se světla v místnosti viditelně zatmí nebo spotřebič běží slaběji než jinde, je problém v rozvodu, ne v pračce. Kolísání se často projeví jen ve špičce, kdy odebírá proud celý dům.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte jistič a svorky",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Podívejte se do rozvaděče, jestli není jistič pro tu větev poddimenzovaný nebo částečně vypadlý. Uvolněná svorka v zásuvce se pozná podle zahnědlého nebo zapáchajícího krytu — v takovém případě zásuvku dál nepoužívejte a zavolejte elektrikáře, ne servis spotřebičů.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte a otestujte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Po přepojení nechte pračku 10 minut odpojenou a pak spusťte krátký program. Pokud EH3 mizí v jiné zásuvce a vrací se v původní, máte odpověď — problém je v elektroinstalaci bytu. Pokud se objevuje všude, je vadný napájecí obvod pračky.",
+      "tag": "p"
+    }
+  ],
+  "aeg-pracka-eh3": [
+    {
+      "type": "text",
+      "value": "Kód EH3 na pračce AEG hlásí, že napájecí napětí kleslo pod hranici, kterou elektronika považuje za bezpečnou. Pračka program přeruší a počká, protože při podpětí hrozí poškození invertorového motoru. U praček AEG se s tím setkáte typicky v domech se starší instalací nebo tam, kde je na jedné větvi příliš mnoho spotřebičů.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vyzkoušejte jinou zásuvku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nejrychlejší test je pračku přepojit do zásuvky na jiném okruhu — ideálně v jiné místnosti. Pokud tam program proběhne bez chyby, je jasné, že závada není v pračce. Používejte přitom vždy přímé zapojení do zdi, ne prodlužovací kabel.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Odlehčete okruhu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zkuste pračku spustit v době, kdy neběží trouba, myčka ani bojler. AEG pračky s invertorem jsou na propady napětí citlivější než starší modely s klasickým motorem a EH3 se často objevuje jen ve večerní špičce. Když chyba v klidnějším čase zmizí, je okruh přetížený.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vylučte fotovoltaiku a zálohní zdroje",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Jste-li napojeni na fotovoltaiku, hybridní měnič nebo záložní zdroj, ověřte, jestli EH3 nenaskakuje jen při přepínání mezi sítí a bateriemi. Některé měniče dodávají napětí s průběhem, který elektronika pračky nevyhodnotí jako čistou sinusovku. Řešením je pračku přepojit na okruh napájený přímo ze sítě.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte a vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku na 10 minut a spusťte krátký program. Pokud EH3 přetrvává i v ověřeně zdravé zásuvce na jiném okruhu, je vadný napájecí filtr nebo řídicí deska pračky a je potřeba technik. Do té doby si poznamenejte, v kolik hodin se chyba objevuje — technikovi to hodně napoví.",
+      "tag": "p"
+    }
+  ],
+  "electrolux-pracka-eh3": [
+    {
+      "type": "text",
+      "value": "EH3 u pračky Electrolux znamená detekci podpětí v napájecí síti. Řídicí jednotka měří napětí průběžně a jakmile klesne pod povolenou mez, zastaví program dřív, než se stihne poškodit motor nebo čerpadlo. Je to ochranná funkce, ne porucha pračky — proto má smysl začít měřením, ne rozebíráním spotřebiče.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Změřte napětí v zásuvce",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Máte-li k dispozici multimetr nebo jednoduchý zásuvkový tester, změřte napětí přímo v zásuvce pračky. V klidovém stavu má být zhruba 230 V; hodnota trvale pod 210 V je za hranicí, se kterou pračka počítá. Měření zopakujte ve chvíli, kdy se pračka pokouší rozeběhnout — právě tehdy propad nastává.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Porovnejte s jiným okruhem",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Změřte totéž v zásuvce v jiné místnosti. Výrazný rozdíl ukazuje na problém konkrétní větve — nejčastěji poddimenzovaný průřez vodičů nebo uvolněný spoj v rozvodné krabici. To je práce pro elektrikáře, ne pro servis spotřebičů.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vylučte zapojení přes mezičlánky",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pračku zapojte přímo do zdi, bez prodlužovaček, rozdvojek, přepěťových ochran a spínacích zásuvek. Každý mezičlánek přidává odpor a při rozběhu motoru způsobí propad, který EH3 spustí. Zkontrolujte také, jestli není zástrčka nebo kryt zásuvky zahnědlý — to signalizuje přehřívající se spoj.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte a otestujte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Po úpravě zapojení nechte pračku 10 minut bez proudu, pak spusťte krátký program. Pokud EH3 zmizí, byla příčina v instalaci. Pokud přetrvává i v zásuvce s ověřenými 230 V, je vadný měřicí obvod na řídicí desce a pračku musí převzít technik.",
+      "tag": "p"
+    }
+  ],
+  "bosch-susicka-e71": [
+    {
+      "type": "text",
+      "value": "Kód E:71 znamená, že čidlo teploty na výparníku tepelného čerpadla posílá hodnotu mimo očekávaný rozsah. Sušička podle něj řídí celý sušicí cyklus, takže při chybě buď nesuší vůbec, nebo program ukončí předčasně s vlhkým prádlem. Velmi často za tím není vadné čidlo, ale zanesený výměník, kvůli kterému teplota skutečně vybočí z normálu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vyčistěte oba filtry",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyjměte filtr ve dvířkách a propláchněte ho pod tekoucí vodou — samotné oklepání nestačí, jemný povlak z aviváže se drží a snižuje průchod vzduchu. Pak otevřete klapku v soklu a vyjměte druhý, houbovitý filtr. Ten vymáchejte ve vlažné vodě a před vrácením ho nechte úplně uschnout, jinak plesniví.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zkontrolujte lamely výměníku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Za houbovitým filtrem uvidíte hustou mřížku kovových lamel — to je výparník. Posviťte si na něj baterkou. Ucpaný chomáčky vláken znamená, že vzduch neproudí a teplota na čidle vyjede mimo rozsah. Lamely opatrně vysajte vysavačem s měkkým nástavcem, veďte ho ve směru lamel a netlačte, ohnuté lamely průchod ještě zhorší.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Dejte sušičce vydýchat",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Sušička s tepelným čerpadlem potřebuje kolem sebe volný prostor a nesmí nasávat vlastní teplý vzduch. Pokud stojí v úzké skříni, spíži nebo těsně u zdi, odsuňte ji aspoň 10 cm od stěny a nechte otevřené dveře místnosti. Ve velmi chladné místnosti pod 5 °C se E:71 může objevit i u zcela zdravé sušičky.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte a otestujte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte sušičku hodinu vypnutou a odpojenou, ať se okruh teplotně vyrovná. Pak spusťte krátký program s malou náplní. Pokud E:71 přetrvává i s čistým výměníkem, je vadné čidlo nebo je v okruhu málo chladiva — obojí patří technikovi a u tepelných čerpadel jde o dražší opravu, takže si vyžádejte kalkulaci předem.",
+      "tag": "p"
+    }
+  ],
+  "bosch-pracka-e28": [
+    {
+      "type": "text",
+      "value": "Chyba E28 (na některých modelech F28) znamená, že průtokoměr na přívodu vody hlásí hodnotu, která nedává smysl — třeba nulový průtok při otevřeném ventilu nebo naopak průtok, když je ventil zavřený. Pračka se proto buď nenapustí, nebo program zastaví hned na začátku. Bosch tuto chybu označuje jako závadu vyžadující servis, ale několik věcí má smysl zkusit dřív, protože je způsobují i banální překážky v přívodu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte přívod vody",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Ověřte, že rohový ventil je otevřený naplno. Pračku opatrně povysuňte a projděte přívodní hadici po celé délce — nesmí být zalomená ani přiskřípnutá mezi pračkou a zdí. Právě zalomení za pračkou po přisunutí ke zdi je nejčastější příčina, kterou lidé přehlédnou.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte vstupní sítko",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zavřete vodu, odšroubujte hadici od pračky a připravte si hadr. V hrdle ventilu na zadní straně pračky je jemné sítko — vytáhněte ho pinzetou a propláchněte. U starších rozvodů v něm bývají rezavé šupinky a vodní kámen, které průtok sníží natolik, že ho průtokoměr vyhodnotí jako chybný. Sítko vraťte a hadici dotáhněte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Ověřte tlak vody",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Napusťte do kbelíku vodu z kohoutku, na který je pračka napojená, a sledujte, jak rychle teče. Slabý pramínek znamená nízký tlak v rozvodu — pračka potřebuje aspoň 1 bar. Nízký tlak se často objeví po opravách vodovodu, kdy zůstane hlavní uzávěr přiškrcený.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte a vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku od elektřiny na 10 minut, zapojte a spusťte máchací program. Během prvních 30 sekund musíte slyšet napouštění. Pokud voda teče normálně a E28 se přesto vrací, je vadný samotný průtokoměr nebo přívodní ventil — díl není drahý, ale sedí ve vodní cestě a vyměňuje ho technik.",
+      "tag": "p"
+    }
+  ],
+  "samsung-pracka-ce": [
+    {
+      "type": "text",
+      "value": "Kód CE znamená, že pračka Samsung naměřila v bubnu vyšší teplotu, než jaká odpovídá zvolenému programu. Nejčastější a nejbanálnější příčina je prostá: přívodní hadice teplé a studené vody jsou prohozené, takže pračka napouští horkou vodu tam, kde čeká studenou. Program se přeruší, aby se prádlo nezničilo.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte zapojení hadic",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Podívejte se na zadní stranu pračky. Má-li dva přívody, jsou označené barevně nebo písmeny — modrá či C pro studenou, červená či H pro teplou. Ověřte, že modrá hadice vede k rohovému ventilu se studenou vodou. Po stěhování nebo po výměně baterie v koupelně bývá zapojení prohozené, což je přesně scénář pro CE.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Ověřte teplotu vody na kohoutku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pusťte vodu z ventilu, na kterém je pračka, do umyvadla a sáhněte na ni. Pokud z ventilu určeného pro studenou vodu teče teplá, je problém v rozvodu bytu, ne v pračce — typicky prohozené připojení u baterie nebo cirkulace teplé vody protékající do studené větve.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Nechte pračku vychladnout",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud jste právě dokončili horký program na 90 °C a hned spustili další, může CE naskočit jen kvůli zbytkovému teplu. Nechte pračku hodinu odpočinout s pootevřenými dvířky, ať teplota v bubnu klesne, a pak zkuste program znovu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte a otestujte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku od elektřiny na 10 minut a spusťte krátký program na studenou vodu. Pokud CE naskočí i při studeném programu a správně zapojených hadicích, je vadné teplotní čidlo nebo topné těleso zůstává trvale sepnuté — druhá varianta je nebezpečná, proto pračku dál nepoužívejte a zavolejte servis.",
+      "tag": "p"
+    }
+  ]
+}
