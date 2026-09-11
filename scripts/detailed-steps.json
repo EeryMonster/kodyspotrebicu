@@ -2172,47 +2172,47 @@
   "siemens-pracka-f91": [
     {
       "type": "text",
-      "value": "Kód F91 u praček Siemens znamená ztrátu komunikace mezi řídicími moduly — hlavní deska si přestala rozumět s ovládacím panelem nebo s modulem motoru. Pračka pak neví, co má dělat, a program přeruší. Jednorázový výpadek se občas podaří vyresetovat.",
+      "value": "Kód F91 u praček Siemens znamená, že si řídicí moduly přestaly rozumět. Typický projev je pračka, která se zdánlivě chová normálně, ale program přeruší v náhodné fázi. Protože je závada nahodilá, nejvíc pomůže systematické zúžení, kdy k ní dochází.",
       "tag": "p"
     },
     {
       "type": "text",
-      "value": "Krok 1: Proveďte tvrdý reset",
+      "value": "Krok 1: Nechte pračku přes noc bez proudu",
       "tag": "h3"
     },
     {
       "type": "text",
-      "value": "Odpojte pračku od elektřiny aspoň na 20 minut, ať se vybijí kondenzátory na deskách. Krátké vypnutí a zapnutí nestačí. Pak zkuste spustit krátký program.",
+      "value": "Vytáhněte zástrčku a nechte ji odpojenou do rána. Delší odstávka vybije kondenzátory důkladněji než obvyklá čtvrthodina a u chyb komunikace to občas stačí.",
       "tag": "p"
     },
     {
       "type": "text",
-      "value": "Krok 2: Sledujte, jak reaguje panel",
+      "value": "Krok 2: Otestujte program bez ohřevu",
       "tag": "h3"
     },
     {
       "type": "text",
-      "value": "Zkontrolujte, jestli displej a kontrolky reagují normálně a jestli pračka odpovídá na všechna tlačítka. Nereagující panel ukazuje spíš na modul panelu, chaotické chování na hlavní desku.",
+      "value": "Spusťte samostatné máchání a odstřeďování. Když projde bez chyby a plný program ne, zúžili jste závadu na modul obsluhující ohřev. To je pro technika zásadní informace.",
       "tag": "p"
     },
     {
       "type": "text",
-      "value": "Krok 3: Vylučte nestabilní napájení",
+      "value": "Krok 3: Sledujte, jestli chyba souvisí s odstřeďováním",
       "tag": "h3"
     },
     {
       "type": "text",
-      "value": "Zapojte pračku přímo do zdi bez prodlužovaček a přepěťových ochran. Opakované výpadky komunikace bývají důsledkem kolísajícího napětí.",
+      "value": "Vibrace při odstřeďování namáhají konektory. Pokud F91 přichází pravidelně až ve fázi ždímání, je pravděpodobný uvolněný nebo prasklý spoj, a to je levná oprava.",
       "tag": "p"
     },
     {
       "type": "text",
-      "value": "Krok 4: Zmiňte technikovi kontext",
+      "value": "Krok 4: Řekněte technikovi, co jste zjistili",
       "tag": "h3"
     },
     {
       "type": "text",
-      "value": "Došlo-li k chybě po stěhování pračky nebo po předchozím servisním zásahu, řekněte to — může jít o uvolněný konektor, což je nesrovnatelně levnější než nová deska. Oprava vychází u nezávislého servisu orientačně na 1 500–6 000 Kč včetně dílu.",
+      "value": "S informací, ve které fázi chyba nastává, se oprava zkrátí na minimum. Cena u nezávislého servisu se pohybuje orientačně mezi 1 500 Kč za opravu kabeláže a 6 000 Kč za výměnu desky včetně dílu.",
       "tag": "p"
     }
   ],
@@ -2313,47 +2313,47 @@
   "siemens-susicka-e71": [
     {
       "type": "text",
-      "value": "Kód E71 u sušiček Siemens s tepelným čerpadlem znamená, že čidlo teploty na výparníku hlásí hodnotu mimo očekávaný rozsah. Sušička podle něj řídí celý cyklus, takže buď nesuší, nebo program ukončí předčasně. Vadné čidlo je přitom vzácnější než zanesený výměník, kvůli kterému teplota skutečně vybočí.",
+      "value": "Kód E71 u sušiček Siemens s tepelným čerpadlem znamená, že čidlo teploty výparníku hlásí hodnotu mimo očekávaný rozsah. Výparník je ta část okruhu, která odebírá vlhkost ze vzduchu, a jeho teplota vybočí nejčastěji proto, že přes něj neprochází dost vzduchu.",
       "tag": "p"
     },
     {
       "type": "text",
-      "value": "Krok 1: Propláchněte filtry",
+      "value": "Krok 1: Prosviťte výparník proti světlu",
       "tag": "h3"
     },
     {
       "type": "text",
-      "value": "Filtr ve dvířkách vymáchejte pod tekoucí vodou — oklepání nestačí, jemný povlak z aviváže se drží. Houbovitý filtr v soklu vymáchejte také a nechte úplně uschnout.",
+      "value": "Vytáhněte spodní filtr a za ním výparník. Podržte ho proti oknu nebo baterce, mezi lamelami musí být vidět světlo. Pokud není, je zanesený a to samo o sobě vysvětluje chybu.",
       "tag": "p"
     },
     {
       "type": "text",
-      "value": "Krok 2: Vyčistěte lamely výparníku",
+      "value": "Krok 2: Propláchněte ho vodou, ne jen vysajte",
       "tag": "h3"
     },
     {
       "type": "text",
-      "value": "Za spodním filtrem je hustá mřížka kovových lamel. Ucpaná vlákny znamená, že vzduch neproudí a teplota na čidle vyjede mimo rozsah. Vysajte ji měkkým nástavcem ve směru lamel a netlačte.",
+      "value": "U silně zanesených výparníků vysávání nestačí. Propláchněte ho sprchou proti směru proudění vzduchu, dokud voda neodtéká čistá, a pak ho nechte schnout klidně přes noc. Vlhký výparník klade vzduchu velký odpor.",
       "tag": "p"
     },
     {
       "type": "text",
-      "value": "Krok 3: Nechte okruh vyrovnat teplotu",
+      "value": "Krok 3: Zkontrolujte, kolik prádla sušíte",
       "tag": "h3"
     },
     {
       "type": "text",
-      "value": "Odpojte sušičku na hodinu od elektřiny a nechte ji stát s otevřenými dvířky, aby se teplota v okruhu srovnala. Pak spusťte krátký program s malou náplní.",
+      "value": "Přeplněný buben zvyšuje vlhkost vzduchu i zátěž výparníku. Zkuste program s poloviční náplní dobře vyždímaného prádla a sledujte, jestli chyba nastane.",
       "tag": "p"
     },
     {
       "type": "text",
-      "value": "Krok 4: Vyhodnoťte",
+      "value": "Krok 4: Zvažte, co dál",
       "tag": "h3"
     },
     {
       "type": "text",
-      "value": "Pokud E71 přetrvává i s čistým výměníkem, je vadné čidlo nebo je v okruhu málo chladiva. U tepelných čerpadel jde o dražší opravu — orientačně 2 500–6 000 Kč u nezávislého servisu, proto si vyžádejte kalkulaci předem.",
+      "value": "Pokud E71 zůstává s prosvítajícím a suchým výparníkem, jde o čidlo nebo o okruh chladiva. Diagnostika u nezávislého servisu vychází orientačně na 800 až 1 500 Kč a teprve podle ní se rozhodujte o opravě za 2 500 až 6 000 Kč.",
       "tag": "p"
     }
   ],
@@ -3012,6 +3012,3108 @@
     {
       "type": "text",
       "value": "Pokud se F11 vrací, jde o výkonovou desku, modul motoru nebo jejich propojení. Cena u nezávislého servisu vychází orientačně na 2 500–6 000 Kč včetně dílu. U praček starších osmi let si nechte spočítat kalkulaci předem.",
+      "tag": "p"
+    }
+  ],
+  "beko-mycka-e3": [
+    {
+      "type": "text",
+      "value": "Chyba E3 u myček Beko znamená, že se voda neohřála na nastavenou teplotu. Nádobí zůstane mastné a po skončení mokré, protože bez tepla neúčinkuje ani prostředek, ani sušení. Než budete volat servis, vyplatí se vyloučit vodní kámen — u myček je to nejčastější příčina slabého ohřevu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Ověřte, jestli myčka hřeje",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte program na 60 °C a po dvaceti minutách krátce pootevřete dvířka. Chybějící pára a vlažná voda potvrzují, že ohřev nefunguje. Horko uvnitř naopak ukazuje spíš na vadné čidlo.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Doplňte sůl a zkontrolujte tvrdost vody",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Ověřte hladinu regenerační soli a v nastavení porovnejte nastavenou tvrdost se skutečnou hodnotou ve vaší lokalitě. Špatné nastavení je nejčastější důvod, proč se vápenec usazuje rychleji, než by měl.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Odvápněte a vyčistěte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyjměte kombinaci sítek, propláchněte ji a kartáčkem pročistěte trysky obou ostřikovacích ramen. Pak spusťte naprázdno nejdelší horký program s odvápňovačem určeným pro myčky.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E3 přetrvává i po odvápnění, je vadné topné těleso nebo teplotní čidlo. U myček bývá těleso součástí čerpadla, takže oprava u nezávislého servisu vychází orientačně na 2 500–5 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "beko-mycka-e4": [
+    {
+      "type": "text",
+      "value": "Chyba E4 znamená, že hladina vody v myčce Beko neodpovídá tomu, co program očekává — může jí být málo i moc. Myčka proto program zastaví. Příčinou bývá buď omezený přívod vody, nebo snímač hladiny zavádějící kvůli pěně či usazeninám.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte přívod vody",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otevřete rohový ventil naplno a projděte přívodní hadici — nesmí být zalomená ani stlačená za myčkou. Zavřete vodu, odšroubujte hadici a propláchněte sítko v převlečné matici.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vylučte pěnu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nadměrná pěna se snímači jeví jako vysoká hladina. Pokud jste použili saponát na ruční mytí místo prostředku do myčky, spusťte jeden až dva krátké programy naprázdno bez prostředku, dokud pěna nezmizí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte sítka a vypouštění",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyjměte kombinaci sítek, propláchněte ji a vraťte zarovnaně ke dnu. Zkontrolujte i sifon pod dřezem, na který je myčka napojená — částečně ucpaný odtok způsobí, že voda ve vaně zůstává.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Otestujte a vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte myčku na 10 minut a spusťte krátký program. Pokud E4 přetrvává i s čistým přívodem, odtokem a bez pěny, je vadný snímač hladiny — oprava u nezávislého servisu orientačně 1 500–3 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "beko-mycka-e5": [
+    {
+      "type": "text",
+      "value": "Chyba E5 označuje vadný senzor teploty vody myčky Beko. Bez důvěryhodného měření myčka nemůže bezpečně řídit ohřev, takže program přeruší. Samotné čidlo bývá vadné jen zřídka — častěji ho obaluje vrstva vodního kamene, která měření zkresluje.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Proveďte reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte myčku od elektřiny na 15 minut a znovu zapojte. Jednorázový výpadek komunikace s čidlem se takto vymaže a program pak proběhne normálně.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Odvápněte myčku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Čidlo sedí ve vodní cestě vedle topného tělesa. Spusťte naprázdno nejdelší horký program s odvápňovačem pro myčky a u zanedbané myčky postup po týdnu zopakujte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Doplňte sůl a nastavte tvrdost",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zkontrolujte zásobník regenerační soli a ověřte, že nastavená tvrdost vody odpovídá skutečné hodnotě. Bez soli se vápenec vrátí během několika týdnů.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Zaznamenejte, kdy chyba přijde",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapište si, jestli E5 naskočí hned po zapnutí, nebo až ve fázi ohřevu. Chyba na začátku ukazuje na přerušený obvod, chyba za tepla na čidlo selhávající při zahřátí. Oprava vychází u nezávislého servisu orientačně na 1 500–3 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "beko-mycka-e6": [
+    {
+      "type": "text",
+      "value": "Chyba E6 znamená, že zámek dveří myčky Beko nefunguje správně. Myčka se nespustí, protože bez potvrzení zavřených dveří nemůže začít mýt — je to bezpečnostní pojistka proti úniku horké vody. Často jde jen o mechanickou překážku, ne o vadný zámek.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte, co brání dovření",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vysuňte oba koše až na doraz a ověřte, že z nich nic nevyčnívá směrem ke dveřím. Vysoký talíř nebo příbor v horním koši je nejčastější příčina, kterou lidé přehlédnou.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Prohlédněte západku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Podívejte se na plastový jazýček na horní hraně dveří a na protikus v těle myčky. Nesmí být prasklý, ohnutý ani ucpaný zbytky jídla. Okolí západky otřete vlhkým hadrem.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Otevřete a zavřete dveře naplno",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otevřete dveře úplně dokořán a zavřete je běžným pohybem, dokud neucítíte cvaknutí. Nedovírejte je jemně — zámek potřebuje určitou sílu, aby zapadl.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte a vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte myčku na 15 minut od elektřiny a zkuste znovu. Pokud E6 zůstává i při volně dovíratelných dveřích, je vadný zámek. Patří k levnějším opravám — u nezávislého servisu orientačně 1 200–2 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "beko-mycka-e8": [
+    {
+      "type": "text",
+      "value": "Chyba E8 hlásí závadu řídicí elektroniky myčky Beko. Deska buď neprošla vlastní kontrolou, nebo nekomunikuje se zbytkem spotřebiče. Domácí opravu to nedovoluje, ale jednorázový výpadek po přepětí se často podaří vyresetovat.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Proveďte dlouhý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte myčku od elektřiny aspoň na 20 minut, ať se vybijí kondenzátory na desce. Krátké vypnutí nestačí. Po zapojení zkuste spustit krátký program.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zapojte myčku napřímo",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odstraňte prodlužovačky, rozdvojky a přepěťové ochrany. Nestabilní napájení je u chyb elektroniky častým spouštěčem a zároveň důvodem, proč se chyba po opravě vrací.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte vlhkost",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Podívejte se pod myčku a do soklu. Voda u elektroniky je vážný problém — pokud ji vidíte, zavřete přívod vody, myčku nezapínejte a zavolejte servis.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Rozhodněte se podle stáří",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E8 přetrvává, je potřeba vyměnit řídicí desku. Cena u nezávislého servisu vychází orientačně na 2 500–5 500 Kč včetně dílu. U myček starších deseti let se to blíží ceně nové, proto si vyžádejte kalkulaci předem.",
+      "tag": "p"
+    }
+  ],
+  "beko-pracka-e80": [
+    {
+      "type": "text",
+      "value": "Chyba E80 znamená, že volič programů pračky Beko je v neplatné poloze, nebo že s ním někdo pootočil za běhu programu. Pračka pak neví, co má dělat, a zastaví se. Ve většině případů se to vyřeší během minuty bez jakéhokoli nářadí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vraťte volič do nulové polohy",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otočte voličem přesně na vypnuto a nechte pračku minutu stát. Volič zastavený mezi dvěma programy je nejjednodušší vysvětlení této chyby.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Protočte volič celým rozsahem",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otočte jím pomalu několikrát dokola v obou směrech. Zoxidovaný kontakt uvnitř se tím často pročistí. Pokud volič někde drhne nebo přeskakuje, je opotřebený.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Nastavte program a nesahejte na něj",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zvolte jednoduchý program, spusťte ho a během běhu voličem neotáčejte. U některých modelů Beko stačí k vyvolání E80 i lehké pootočení.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte a vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte pračku 15 minut bez proudu a zkuste znovu. Pokud E80 naskakuje jen u některých poloh voliče, je opotřebený volič — výměna u nezávislého servisu orientačně 1 500–3 000 Kč včetně dílu. Chyba ve všech polohách ukazuje spíš na řídicí desku.",
+      "tag": "p"
+    }
+  ],
+  "beko-pracka-ea0": [
+    {
+      "type": "text",
+      "value": "Chyba EA0 znamená, že senzor polohy bubnu pračky Beko nepracuje správně. Tento snímač říká elektronice, kde přesně buben stojí — potřebuje to hlavně pro zastavení dvířek v horní poloze u praček s vrchním plněním a pro řízení odstřeďování.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte, jestli se buben volně otáčí",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku a rukou několikrát protočte buben. Musí se otáčet lehce, bez zadrhávání a skřípání. Zadrhávající buben zkresluje měření polohy.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyjměte prádlo a zkuste naprázdno",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte krátký program s prázdným bubnem. Nerovnoměrně rozložené nebo namotané prádlo dokáže snímač zmást a chyba pak vypadá jako závada.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Proveďte reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte pračku 15 minut odpojenou od elektřiny. Po obnovení napájení elektronika snímač znovu zkalibruje a jednorázová chyba zmizí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud EA0 přetrvává i s prázdným a volně se otáčejícím bubnem, je vadný snímač polohy nebo jeho kabeláž. Oprava u nezávislého servisu vychází orientačně na 1 500–3 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "beko-pracka-eb0": [
+    {
+      "type": "text",
+      "value": "Chyba EB0 znamená, že napájecí napětí kleslo pod hranici, kterou pračka Beko považuje za bezpečnou, a program se proto nespustí. Podpětí ohrožuje hlavně motor při rozběhu, kdy odebírá největší proud. Příčina bývá v zapojení, ne v pračce.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zrušte všechny mezičlánky",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapojte pračku přímo do zásuvky ve zdi. Prodlužovací kabely s tenkým průřezem, rozdvojky a spínací zásuvky způsobí při rozběhu motoru propad napětí, který elektronika vyhodnotí jako EB0.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Otestujte jinou zásuvku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Přepojte pračku do zásuvky v jiné místnosti, ideálně na jiném jističi. Pokud tam program projde, je problém v původní větvi a pračka je v pořádku.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Odlehčete okruhu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zkuste pračku spustit v době, kdy neběží trouba, myčka ani bojler. Přetížený okruh se projeví propadem přesně ve chvíli rozběhu motoru.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte, koho volat",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Mizí-li EB0 v jiné zásuvce, patří to elektrikáři, ne servisu spotřebičů. Objevuje-li se všude a pokaždé, jde o měřicí obvod pračky — diagnostika orientačně 800–1 500 Kč, oprava 2 500–5 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "beko-pracka-eh1": [
+    {
+      "type": "text",
+      "value": "Chyba EH1 znamená, že pračka Beko naměřila frekvenci elektrické sítě mimo povolený rozsah. Elektronika kontroluje, jestli se frekvence drží kolem 50 Hz, a když si není jistá, program raději nespustí. Nemusí jít o závadu pračky — velmi často je příčina v tom, odkud je napájená.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vylučte měnič a generátor",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Jste-li napojeni na fotovoltaiku s hybridním měničem, na záložní zdroj nebo na generátor, ověřte, jestli EH1 nenaskakuje jen v době, kdy systém běží mimo síť. Levnější měniče nedodávají čistou sinusovku a elektronika pračky to nepřijme.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zapojte pračku napřímo",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Bez prodlužovaček, spínacích zásuvek, časovačů a měničů napětí. Každý mezičlánek může průběh napětí zkreslit natolik, že se frekvence nedá spolehlivě změřit.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkuste jinou dobu a jinou zásuvku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte program v jiném čase a v zásuvce na jiném okruhu. Přechodné kolísání v síti tímto pomine a rozdíl mezi okruhy prozradí, kde problém leží.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud EH1 přetrvává i při přímém napájení ze sítě, je vadný měřicí obvod na řídicí desce. Diagnostika u nezávislého servisu vychází orientačně na 800–1 500 Kč, výměna desky 2 500–5 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "beko-pracka-h1": [
+    {
+      "type": "text",
+      "value": "H1 je servisní kód, kterým pračka Beko hlásí přerušený nebo zkratovaný teplotní senzor NTC. Podle něj pračka řídí ohřev, takže bez důvěryhodného měření program zastaví. Vadné bývá spíš spojení a kontakty než samotné čidlo.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Proveďte reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku od elektřiny na 15 minut a znovu zapojte. Jednorázový výpadek komunikace s čidlem se takto vymaže.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Odvápněte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Čidlo sedí ve vodní cestě vedle topného tělesa a vrstva vodního kamene na něm zkresluje měření. Spusťte nejdelší program na 90 °C naprázdno s odvápňovačem pro pračky.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Sledujte, kdy chyba naskočí",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapište si, jestli se H1 objeví hned po startu, nebo až ve fázi ohřevu. Chyba na začátku ukazuje na přerušený obvod, chyba za tepla na čidlo selhávající při zahřátí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Objednejte servis",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud H1 přetrvává, je potřeba vyměnit čidlo nebo opravit kabeláž. Čidlo je levný díl, ale sedí ve vodní cestě, takže výměna vyžaduje technika — orientačně 1 500–3 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "beko-pracka-h11": [
+    {
+      "type": "text",
+      "value": "Servisní kód H11 znamená, že tachogenerátor motoru pračky Beko je přerušený nebo vadný. Tachogenerátor je čidlo otáček — bez něj elektronika neví, jak rychle se buben točí, a nemůže řídit praní ani odstřeďování. Buben se pak buď netočí vůbec, nebo se roztáčí nekontrolovaně.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Odpojte pračku a protočte buben",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Rukou několikrát otočte bubnem. Musí se otáčet lehce. Zadrhávající buben přetěžuje motor a chyba čidla otáček může být jeho následkem, ne příčinou.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Poslechněte si, co se děje",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte krátký program a poslouchejte. Bzučení bez roztočení bubnu ukazuje na mechanickou blokádu nebo vadný kondenzátor, úplné ticho spíš na přerušené napájení motoru.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkuste tvrdý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte pračku 15 minut bez proudu a spusťte máchací program bez prádla. Jednorázová chyba po přepětí takto zmizí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Zvažte cenu opravy",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vrací-li se H11, je vadný tachogenerátor nebo motor. Výměna samotného čidla vychází u nezávislého servisu orientačně na 1 500–3 000 Kč, výměna motoru 3 000–6 000 Kč včetně dílu. Vyžádejte si proto diagnostiku a nesouhlaste rovnou s výměnou motoru po telefonu.",
+      "tag": "p"
+    }
+  ],
+  "beko-pracka-h2": [
+    {
+      "type": "text",
+      "value": "Servisní kód H2 znamená, že topný okruh pračky Beko je přerušený. Praktický dopad je, že prádlo se pere ve studené vodě bez ohledu na zvolený program. Než zavoláte servis, vyplatí se vyloučit, že problém není v jističi nebo v množství prádla.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Porovnejte dva programy",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyperte jednu dávku na 30 °C a druhou na 60 °C a po každé sáhněte na prádlo hned po vytažení. Pokud je stejně vlažné po obou, ohřev nefunguje vůbec. Rozdíl mezi nimi by naopak ukazoval na čidlo, ne na přerušený okruh.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zkontrolujte jistič pod zátěží",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Topné těleso odebírá největší proud v celé pračce. Nechte pračku prát na 60 °C a v tu chvíli se podívejte do rozvaděče, jestli jistič té větve nevypadává nebo není teplý na dotek.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zvažte historii spotřebiče",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vzpomeňte si, jestli jste v pračce někdy viděli bílé usazeniny, nebo jestli se dlouhodobě pralo jen na nízké teploty. Obojí urychluje zavápnění tělesa, které vede k jeho přepálení, a je dobré to říct technikovi.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Nechte s výměnou udělat i odvápnění",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Výměna topného tělesa vychází u nezávislého servisu orientačně na 1 800 až 3 500 Kč včetně dílu. Požádejte technika, ať při té příležitosti zkontroluje stav vany; nové těleso ve zavápněné pračce vydrží podstatně kratší dobu.",
+      "tag": "p"
+    }
+  ],
+  "beko-pracka-h3": [
+    {
+      "type": "text",
+      "value": "Servisní kód H3 znamená, že topné těleso pračky Beko zůstává trvale zapnuté a ohřívá vodu nad nastavenou teplotu. Je to opak chyby H2 a je nebezpečnější — hrozí poškození prádla i pračky, proto elektronika program zastaví.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Pračku odpojte a nepoužívejte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vytáhněte zástrčku. Trvale sepnuté topení nedokáže elektronika vypnout softwarově, takže opakované spouštění není bezpečné. Cítíte-li zápach spáleniny, rovnou volejte servis.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zkontrolujte, jestli je prádlo horké",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud jste chybu zaznamenali v průběhu praní, opatrně otevřete dvířka až po vychladnutí. Velmi horké prádlo a sklo dvířek příznak potvrzují.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkuste tvrdý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte pračku aspoň 20 minut odpojenou, ať se vybijí kondenzátory na výkonové desce. Pak zkuste krátký studený program a sledujte, jestli se voda ohřívá, i když nemá.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Objednejte servis",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vrací-li se H3, jde o spečené relé ohřevu na desce nebo o zkrat v topném tělese. Obojí je potřeba vyměnit a do té doby pračku nepoužívejte. Oprava u nezávislého servisu vychází orientačně na 2 500–5 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "beko-pracka-h4": [
+    {
+      "type": "text",
+      "value": "Servisní kód H4 znamená zkrat triaku elektromagnetického přívodního ventilu na řídicí desce pračky Beko. Prakticky to znamená, že pračka nedokáže napouštění spolehlivě vypnout — hrozí přeplnění, proto se program zastaví.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zavřete přívod vody",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zavřete rohový ventil za pračkou a odpojte ji od elektřiny. Zkratovaný triak může ventil otevřít i bez povelu a při zavřených dvířkách si toho nemusíte všimnout, dokud voda nepřeteče.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zkontrolujte, jestli pračka nenapouští sama",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otevřete na chvíli vodu s odpojenou pračkou a sledujte, jestli voda do bubnu přitéká. Přitékající voda při vypnuté pračce potvrzuje závadu ventilu nebo triaku a je to zároveň riziko vytopení.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkuste tvrdý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte pračku 20 minut bez proudu a pak s otevřenou vodou spusťte krátký program. Jednorázová chyba po přepětí takto zmizí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Do opravy zavírejte vodu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vrací-li se H4, je potřeba vyměnit výkonovou desku, případně i přívodní ventil. Do zásahu technika po každém praní zavírejte rohový ventil. Oprava u nezávislého servisu vychází orientačně na 2 500–5 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "beko-pracka-h5": [
+    {
+      "type": "text",
+      "value": "Servisní kód H5 znamená, že pračka Beko nedokáže vyčerpat vodu. V bubnu zůstane stát voda a program se zastaví. Je to jedna z mála závažněji vypadajících chyb, kterou ale běžně vyřešíte sami — ucpaný filtr je zdaleka nejčastější příčina.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Připravte se na vodu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku od elektřiny, připravte si plochou misku a hadry. V bubnu je voda a při otevírání filtru část vyteče.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte vypouštěcí filtr",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otevřete klapku v soklu vpravo dole. Bývá tam nouzová vypouštěcí hadička — tou vodu nejdřív odpusťte do misky. Pak vyšroubujte filtr, vyberte z něj mince, sponky, chlupy a knoflíky a propláchněte ho.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte hadici a sifon",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Projděte vypouštěcí hadici za pračkou — nesmí být zalomená ani vedená ve smyčce. Rozeberte a vyčistěte sifon pod dřezem, na který je pračka napojená.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vraťte filtr, dotáhněte ho rukou a spusťte máchání s odstřeďováním. Pokud H5 přetrvává i s čistým filtrem a průchodným odtokem, je vadné vypouštěcí čerpadlo — oprava u nezávislého servisu orientačně 1 800–3 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "beko-pracka-h8": [
+    {
+      "type": "text",
+      "value": "Servisní kód H8 znamená, že hladina vody v pračce Beko překročila bezpečnou mez — došlo k přeplnění. Pračka spustí vypouštěcí čerpadlo a program zastaví, aby zabránila vytopení. Buď se nezavírá přívodní ventil, nebo snímač hladiny hlásí nesmysly.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zavřete vodu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zavřete rohový ventil za pračkou a odpojte ji od elektřiny. Pokud voda stále přitéká i po vypnutí, je vadný přívodní ventil a je to riziko vytopení bytu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vylučte pěnu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nadměrná pěna z předávkovaného prášku se snímači jeví jako vysoká hladina. Spusťte máchací program bez prostředku a sledujte, jestli pěna zmizí. Příště dávkujte podle tvrdosti vody, ne od oka.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte vypouštěcí filtr",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otevřete klapku v soklu, vodu odpusťte nouzovou hadičkou a filtr vyšroubujte a propláchněte. Ucpané vypouštění drží hladinu výš, než má být.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud H8 přetrvává bez pěny a s čistým filtrem, je vadný tlakový snímač nebo přívodní ventil. Do opravy po každém praní zavírejte vodu. Oprava u nezávislého servisu vychází orientačně na 1 800–4 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "beko-susicka-h03": [
+    {
+      "type": "text",
+      "value": "Servisní kód H03 znamená, že motor ventilátoru sušičky Beko je vadný nebo zablokovaný. Ventilátor žene ohřátý vzduch bubnem a bez něj se sušička okamžitě přehřívá, proto program končí. Nahromaděná vlákna dokážou ventilátor zabrzdit stejně dobře jako závada.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Poslechněte si, jestli ventilátor běží",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte program a poslouchejte. Kromě otáčení bubnu má být slyšet souvislý šum proudícího vzduchu. Ticho nebo skřípání jsou dvě různé diagnózy — zapište si, co slyšíte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte filtry",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku od elektřiny. Filtr ve dvířkách propláchněte pod tekoucí vodou, ne jen oklepejte — povlak z aviváže se drží. Spodní filtr v soklu vymáchejte a nechte úplně uschnout.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte výměník nebo odtah",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "U kondenzačních modelů vytáhněte výměník a lamely vysajte měkkým nástavcem ve směru lamel. U odtahových projděte hadici po celé délce a zkontrolujte venkovní mřížku.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud H03 zůstává i po vyčištění, je vadný motor ventilátoru nebo jeho řízení. Oprava u nezávislého servisu vychází orientačně na 2 000–4 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "beko-susicka-h04": [
+    {
+      "type": "text",
+      "value": "Servisní kód H04 znamená, že topné těleso sušičky Beko je vadné nebo přepálené. U odtahových a kondenzačních modelů Beko bývá skutečnou příčinou přehřátí z ucpaného odtahu a těleso se spálí až jako následek. Proto má smysl začít u vzduchu, ne u dílu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zjistěte, kudy vzduch odchází",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Podívejte se, jestli má sušička odtahovou hadici vedenou ven, nebo jestli je kondenzační. U odtahové varianty je nejčastějším viníkem hadice zmuchlaná za spotřebičem nebo mřížka na fasádě zarostlá vlákny.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Prosviťte hadici",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte hadici z obou stran a podívejte se skrz ni proti světlu. Pokud světlo neprojde, je uvnitř nános, který vyklepejte nebo vysajte. Hadici pak veďte co nejkratší cestou a bez ostrých ohybů.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Ověřte, jestli se tepelná ochrana vrátí",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte sušičku odpojenou přes noc. Část modelů Beko má vratnou tepelnou pojistku, která po vychladnutí sepne zpět, a chyba pak zmizí. Když se vrátí do několika cyklů, je pojistka nebo těleso opravdu vadné.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Zeptejte se na obojí",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Při objednávce si vyžádejte cenu zvlášť za pojistku a zvlášť za topné těleso, u nezávislého servisu orientačně 1 800 Kč versus 4 000 Kč včetně dílu. A upozorněte technika, že šlo o ucpaný odtah, ať to zkontroluje i on.",
+      "tag": "p"
+    }
+  ],
+  "beko-susicka-h05": [
+    {
+      "type": "text",
+      "value": "Servisní kód H05 znamená, že motor sušičky Beko je vadný nebo přetížený. Motor pohání buben a u části modelů i ventilátor, takže jeho selhání zastaví celý program. Přetížení bývá způsobené mechanickým odporem, ne vadou motoru.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Odpojte sušičku a protočte buben",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Rukou několikrát otočte bubnem. Musí se otáčet lehce a bez skřípání. Zadrhávání ukazuje na opotřebená ložiska nebo na předmět zaklíněný mezi bubnem a pláštěm.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zkuste menší náplň",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Přeplněný buben motor přetěžuje. Spusťte program jen s polovinou obvyklé dávky a s dobře vyždímaným prádlem — mokré prádlo váží podstatně víc.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte filtry a výměník",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Ucpaný vzduchový okruh zvyšuje odpor a motor se dře. Propláchněte oba filtry a vysajte lamely výměníku měkkým nástavcem.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud H05 zůstává i s poloviční náplní a volně se otáčejícím bubnem, je vadný motor nebo jeho kondenzátor. Oprava u nezávislého servisu vychází orientačně na 2 500–5 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "beko-susicka-h06": [
+    {
+      "type": "text",
+      "value": "Servisní kód H06 znamená, že kompresor tepelného čerpadla sušičky Beko hlásí poruchu. Bez kompresoru sušička buben točí, ale prádlo nesuší. U tepelných čerpadel jde o nejdražší část, proto se vyplatí nejdřív vyloučit přehřátí a špatné umístění.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Dejte sušičce vychladnout",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Kompresor má vlastní tepelnou ochranu a při přehřátí se sám odstaví. Odpojte sušičku aspoň na dvě hodiny — tato ochrana se vrací pomaleji než ostatní.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zkontrolujte umístění",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Kompresor odvádí teplo do okolí. V úzké skříni, spíži nebo těsně u zdi se sušička přehřívá. Odsuňte ji aspoň 10 cm od stěny a při sušení otevřete dveře místnosti.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte vzduchový okruh",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Propláchněte filtr ve dvířkách i spodní filtr, nechte je uschnout a lamely výměníku vysajte ve směru lamel.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Zvažte ekonomiku opravy",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud H06 přetrvává i po vychladnutí v dobře větrané místnosti, jde o kompresor nebo okruh chladiva. Cena u nezávislého servisu vychází orientačně na 4 000–9 000 Kč. U sušiček starších osmi let se oprava často nevyplatí.",
+      "tag": "p"
+    }
+  ],
+  "beko-susicka-h07": [
+    {
+      "type": "text",
+      "value": "Servisní kód H07 znamená problém v okruhu chladiva sušičky Beko s tepelným čerpadlem — typicky nízký tlak nebo únik. Sušička pak nedokáže odebírat vlhkost z prádla a program končí s vlhkou náplní. Je to závada, kterou musí řešit technik s příslušným oprávněním.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vylučte provozní podmínky",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Tepelná čerpadla potřebují rozumnou okolní teplotu. Ve velmi chladné místnosti pod 5 °C tlak v okruhu přirozeně klesá a chyba se objeví i u zdravé sušičky. Zkuste program v temperované místnosti.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Nechte sušičku dlouho odpočinout",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte ji na několik hodin, aby se tlak v okruhu vyrovnal. Pak spusťte krátký program s malou náplní a sledujte, jestli je v bubnu cítit teplo.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte výměník",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zanesené lamely zhoršují přenos tepla a tlak v okruhu se pak chová nestandardně. Vytáhněte výměník a vysajte ho měkkým nástavcem ve směru lamel.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Objednejte odborný servis",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Chladivo doplňuje pouze technik s oprávněním pro chladicí okruhy, nikdy to nezkoušejte svépomocí. Oprava u nezávislého servisu vychází orientačně na 4 000–9 000 Kč a u starších sušiček se blíží ceně nové.",
+      "tag": "p"
+    }
+  ],
+  "beko-susicka-h08": [
+    {
+      "type": "text",
+      "value": "Servisní kód H08 znamená, že senzor teploty výparníku tepelného čerpadla sušičky Beko je vadný. Podle něj sušička řídí celý cyklus, takže buď nesuší, nebo program ukončí předčasně. Vadné čidlo je přitom vzácnější než zanesený výparník, kvůli kterému teplota skutečně vybočí z rozsahu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Propláchněte filtry",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Filtr ve dvířkách vymáchejte pod tekoucí vodou — oklepání nestačí. Spodní houbovitý filtr vymáchejte také a nechte úplně uschnout, než ho vrátíte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte lamely výparníku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Za spodním filtrem je hustá mřížka kovových lamel. Ucpaná vlákny znamená, že vzduch neproudí a teplota na čidle vyjede mimo rozsah. Vysajte ji měkkým nástavcem ve směru lamel a netlačte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Nechte okruh vyrovnat teplotu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku na hodinu a nechte ji stát s otevřenými dvířky. Pak spusťte krátký program s malou náplní.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud H08 přetrvává i s čistým výparníkem, je vadné čidlo nebo je v okruhu málo chladiva. Oprava u nezávislého servisu vychází orientačně na 2 500–6 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "bosch-mycka-e01": [
+    {
+      "type": "text",
+      "value": "Chyba E01 patří u myček Bosch do skupiny E01 až E05, kterou výrobce používá pro poruchu výkonového modulu. Modul spíná topení, čerpadla i ventily, takže při jeho závadě myčka program ukončí. Pro vás je klíčové zjistit, jestli šlo o jednorázovou událost, nebo o trvalou vadu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vzpomeňte si na okolnosti",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zamyslete se, jestli chyba přišla po bouřce, po výpadku proudu, po vaření na indukci na stejném okruhu, nebo úplně bez souvislosti. Jednorázová událost má výrazně lepší vyhlídky než chyba, která se objevuje bez příčiny.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Nechte myčku dlouho bez proudu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vytáhněte zástrčku a nechte ji odpojenou přes noc. Kondenzátory na výkonovém modulu se vybíjejí pomalu a u této skupiny chyb se delší pauza vyplácí víc než obvyklých pár minut.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Prohlédněte sokl na vlhkost",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Sundejte spodní krycí lištu a posviťte si dovnitř. Vlhká nebo zkorodovaná elektronika je častá příčina těchto kódů a zároveň důvod, proč se po výměně modulu závada vrátí, pokud netěsnost nenajdete.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Rozhodněte podle výsledku noční pauzy",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Když myčka po noční pauze naběhne a několik dní běží, byla příčina přechodná a opravu neřešte. Když E01 naskočí hned, objednejte technika; výměna výkonového modulu vychází u nezávislého servisu orientačně na 2 500 až 5 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "bosch-mycka-e05": [
+    {
+      "type": "text",
+      "value": "Chyba E05 u myček Bosch označuje závadu triaku spínače přívodu vody na řídicí desce, případně poruchu plovákového spínače. Prakticky to znamená, že myčka nedokáže spolehlivě ovládat napouštění — a protože hrozí přeplnění, program se zastaví.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zavřete přívod vody",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zavřete rohový ventil pod dřezem a myčku odpojte od elektřiny. Vadný triak může ventil otevřít i bez povelu, takže dokud to trvá, nechávejte vodu po každém mytí zavřenou.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zkontrolujte spodní vanu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Podívejte se do soklu a pod myčku. Voda ve spodní vaně drží plovákový spínač trvale nahoře a chyba pak vypadá jako závada elektroniky. Vodu vytřete a nechte prostor vyschnout.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Nakloňte myčku a nechte odtéct",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Myčku opatrně povysuňte a nakloňte dozadu asi o 10 cm, ať zbytková voda ze spodní vany steče k plováku a odtud pryč. Nechte ji takto stát aspoň hodinu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Otestujte a vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Po vysušení myčku zapojte, otevřete vodu a spusťte krátký program bez nádobí. Zůstaňte u ní. Pokud E05 přetrvává se suchou vanou, je vadný triak nebo plovák — oprava u nezávislého servisu orientačně 1 500–4 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "bosch-mycka-e08": [
+    {
+      "type": "text",
+      "value": "Chyba E08 znamená, že se voda v myčce Bosch ohřívá příliš pomalu nebo nedosáhne cílové teploty. Nádobí zůstane mastné a mokré. Na rozdíl od tvrdých chyb elektroniky jde o postupné zhoršování, za kterým stojí nejčastěji vodní kámen.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Změřte, jestli se program prodlužuje",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zaznamenejte si délku programu. Myčka, která nestíhá ohřát vodu, čeká na teplotu a cyklus se protáhne o desítky minut — je to spolehlivější příznak než sahání dovnitř.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Doplňte sůl a zkontrolujte tvrdost",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Ověřte hladinu regenerační soli a v nastavení porovnejte nastavenou tvrdost vody se skutečnou hodnotou ve vaší lokalitě. Zjistíte ji u vodárenského dodavatele.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Odvápněte a obnovte cirkulaci",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyjměte sítka, propláchněte je a pročistěte trysky ostřikovacích ramen. Pak spusťte naprázdno nejdelší horký program s odvápňovačem pro myčky a po týdnu ho zopakujte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E08 přetrvává i po odvápnění, je vadné topné těleso nebo teplotní čidlo. U myček bývá těleso součástí čerpadla, takže oprava vychází u nezávislého servisu orientačně na 2 500–5 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "bosch-pracka-e20": [
+    {
+      "type": "text",
+      "value": "Chyba E20 znamená, že pračka Bosch zaznamenala ohřev vody ve chvíli, kdy topit neměla. Topné těleso se zapíná mimo program, což ohrožuje prádlo i pračku, proto elektronika program okamžitě zastaví. Je to bezpečnostní reakce a je potřeba ji brát vážně.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Pračku odpojte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vytáhněte zástrčku a nespouštějte další program. Trvale sepnuté topení nedokáže elektronika vypnout softwarově. Cítíte-li zápach spálené elektroniky, rovnou volejte servis.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Ověřte příznak",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud jste chybu zaznamenali v průběhu praní, po vychladnutí opatrně otevřete dvířka. Nezvykle horké prádlo nebo horké sklo dvířek u studeného programu příznak potvrzuje.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkuste tvrdý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte pračku aspoň 20 minut odpojenou, ať se vybijí kondenzátory na výkonové desce. Pak spusťte krátký studený program a sledujte, jestli se voda ohřívá, i když nemá.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Do opravy pračku nepoužívejte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vrací-li se E20, jde o spečené relé ohřevu na desce nebo zkrat v topném tělese. Oprava u nezávislého servisu vychází orientačně na 2 500–5 500 Kč včetně dílu a do jejího provedení pračku nespouštějte.",
+      "tag": "p"
+    }
+  ],
+  "bosch-pracka-e23": [
+    {
+      "type": "text",
+      "value": "Chyba E23 znamená, že systém Aqua Stop detekoval únik vody, nebo že je vadný jeho senzor. Pračka spustí vypouštěcí čerpadlo, zavře přívod vody a program zastaví. Je to ochrana proti vytopení bytu, takže ji rozhodně neobcházejte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zavřete vodu a zkontrolujte podlahu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zavřete rohový ventil a odpojte pračku od elektřiny. Rozhlédněte se pod pračkou i za ní — rychle přibývající voda znamená aktivní únik a je čas volat servis, ne experimentovat.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Prohlédněte přívodní hadici a AquaStop",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zkontrolujte převlečné matice na obou koncích hadice, jestli neprosakují. Blok AquaStop na hadici nesmí být zavodněný a jeho kabel nikde přiskřípnutý. Zavodněný blok se neopravuje, mění se celá hadice.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vysušte spodní vanu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pračku povysuňte a nakloňte dozadu asi o 10 cm, aby voda ze spodní vany stekla dozadu k plováku. Pod sokl zasuňte savý hadr a nechte pračku hodinu vysychat.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Otestujte a vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Po vysušení pračku zapojte a spusťte krátký program bez prádla. Zůstaňte u ní. Pokud E23 naskočí i se suchou vanou, je vadný senzor AquaStop — oprava u nezávislého servisu orientačně 1 500–3 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "bosch-pracka-e26": [
+    {
+      "type": "text",
+      "value": "Chyba E26 znamená, že analogový tlakový senzor pračky Bosch hlásí hodnoty, které nedávají smysl. Podle něj pračka měří hladinu vody, takže bez důvěryhodného údaje program zastaví. Vadný bývá zřídka samotný senzor — častěji tenká hadička, která k němu vede tlak.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vylučte pěnu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nadměrná pěna z předávkovaného prášku zkresluje tlak a senzor pak hlásí nesmysly. Spusťte máchací program bez prostředku a sledujte, jestli chyba nastane i tak.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte vypouštěcí filtr",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otevřete klapku v soklu, vodu odpusťte nouzovou hadičkou a filtr vyšroubujte a propláchněte. Ucpané vypouštění drží hladinu jinde, než pračka očekává.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Proveďte reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku od elektřiny na 15 minut. Po obnovení napájení elektronika senzor znovu načte a jednorázová odchylka zmizí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E26 přetrvává bez pěny a s čistým filtrem, je zanesená tlaková hadička nebo komůrka, případně vadný senzor. Pročištění vychází u nezávislého servisu orientačně na 1 200–2 500 Kč, výměna senzoru 1 500–3 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "bosch-pracka-e27": [
+    {
+      "type": "text",
+      "value": "Chyba E27 označuje poruchu senzoru, který měří hladinu vody v pračce Bosch. Bez správného měření pračka neví, kolik vody napustila, a program přeruší. Souvisí s chybami E26 a E37, které se týkají téhož měřicího okruhu — praktické řešení je u všech podobné.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte, jestli pračka napouští normálně",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte krátký program a sledujte hladinu v bubnu. Zjevně příliš málo nebo příliš mnoho vody pomůže technikovi odlišit vadný senzor od ucpané cesty k němu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte filtr a zkontrolujte odtok",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyšroubujte vypouštěcí filtr v soklu a propláchněte ho. Projděte vypouštěcí hadici a sifon pod dřezem — částečně ucpaný odtok mění tlakové poměry, které senzor měří.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Perte bez přebytku prostředku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Dávkujte prášek podle tvrdosti vody a náplně, ne od oka. Trvalé předávkování vytváří pěnu, která senzor dlouhodobě mate a urychluje zanášení tlakové komůrky.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Objednejte servis",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vrací-li se E27, potřebujete technika, který proměří senzor i jeho hadičku. Oprava u nezávislého servisu vychází orientačně na 1 200–3 500 Kč včetně dílu podle toho, jestli stačí pročištění, nebo je nutná výměna.",
+      "tag": "p"
+    }
+  ],
+  "bosch-pracka-e3": [
+    {
+      "type": "text",
+      "value": "Chyba E3 znamená, že pračka Bosch detekovala přehřátí — motoru nebo topného tělesa. Elektronika program zastaví, aby předešla poškození. Bývá to důsledek přetížení nebo špatných provozních podmínek, ne nutně závady.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Nechte pračku vychladnout",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte ji od elektřiny a nechte aspoň hodinu s pootevřenými dvířky. Část tepelných ochran se vrací až po vychladnutí a chyba pak zmizí sama.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Snižte náplň",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Přetížený buben motor přetěžuje, obzvlášť při odstřeďování těžkého prádla, jako jsou ručníky a povlečení. Spusťte program s poloviční dávkou a sledujte, jestli E3 nastane.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte, jestli se buben volně otáčí",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojenou pračku otevřete a rukou protočte buben. Zadrhávání ukazuje na opotřebená ložiska nebo na předmět zaklíněný mezi bubnem a vanou — obojí motor přetěžuje.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E3 naskočí i s poloviční náplní a volně se otáčejícím bubnem, jde o vadný motor, topné těleso nebo jejich řízení. Oprava u nezávislého servisu vychází orientačně na 2 000–5 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "bosch-pracka-e37": [
+    {
+      "type": "text",
+      "value": "Chyba E37 znamená, že tlakový senzor hladiny vody pračky Bosch ohlásil chybu. Patří ke stejnému měřicímu okruhu jako E26 a E27. Pro vás je podstatné, že příčinou bývá zanesená tlaková cesta, ne drahá elektronika — a část toho zvládnete ověřit sami.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Perte jednou bez prostředku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte máchací program úplně bez prášku a aviváže. Pokud E37 nenastane, je viníkem pěna z předávkování a stačí upravit dávkování podle tvrdosti vody.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte vypouštěcí filtr",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otevřete klapku v soklu, vodu odpusťte nouzovou hadičkou, filtr vyšroubujte a vyberte z něj mince, sponky a chlupy. Propláchněte ho pod tekoucí vodou a vraťte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte odtok",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Projděte vypouštěcí hadici za pračkou — nesmí být zalomená ani vedená ve smyčce. Rozeberte a vyčistěte sifon pod dřezem.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vrací-li se E37 i po vyčištění a bez pěny, je zanesená tlaková komůrka nebo vadný senzor. Oprava u nezávislého servisu vychází orientačně na 1 200–3 500 Kč včetně dílu — nechte si udělat diagnostiku, rozdíl mezi pročištěním a výměnou je tady zásadní.",
+      "tag": "p"
+    }
+  ],
+  "bosch-pracka-e4": [
+    {
+      "type": "text",
+      "value": "Chyba E4 znamená, že hladina vody v pračce Bosch je příliš vysoká — pračka se přeplnila. Spustí vypouštěcí čerpadlo a program zastaví, aby zabránila vytopení. Buď se nezavírá přívodní ventil, nebo hladinu zkresluje pěna.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zavřete vodu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zavřete rohový ventil za pračkou a odpojte ji od elektřiny. Pokud voda přitéká i po vypnutí pračky, je vadný přívodní ventil a hrozí vytopení bytu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vylučte pěnu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Předávkovaný prášek nebo saponát vytvoří pěnu, kterou senzor vyhodnotí jako vysokou hladinu. Spusťte jeden až dva máchací programy bez prostředku, dokud pěna nezmizí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte vypouštěcí filtr",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otevřete klapku v soklu, vodu odpusťte nouzovou hadičkou a filtr propláchněte. Ucpané vypouštění drží hladinu výš, než má být.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E4 přetrvává bez pěny a s čistým filtrem, je vadný přívodní ventil nebo tlakový senzor. Do opravy po každém praní zavírejte vodu. Oprava u nezávislého servisu vychází orientačně na 1 500–3 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "bosch-pracka-e91": [
+    {
+      "type": "text",
+      "value": "Chyba E91 znamená přerušenou komunikaci mezi moduly řídicí elektroniky pračky Bosch. Hlavní deska si přestala rozumět s ovládacím panelem nebo s modulem motoru, takže program nelze spolehlivě řídit. Jednorázový výpadek se často podaří vyresetovat.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Proveďte dlouhý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku od elektřiny aspoň na 20 minut, ať se vybijí kondenzátory na deskách. Krátké vypnutí a zapnutí nestačí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Sledujte, jak reaguje panel",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zkontrolujte, jestli displej a kontrolky fungují normálně a jestli pračka odpovídá na všechna tlačítka. Nereagující panel ukazuje spíš na modul panelu, chaotické chování na hlavní desku.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zapojte pračku napřímo",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Bez prodlužovaček, rozdvojek a přepěťových ochran. Opakované výpadky komunikace bývají důsledkem kolísajícího napětí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Zmiňte technikovi kontext",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Objevila-li se E91 po stěhování pračky nebo po předchozím servisním zásahu, řekněte to — uvolněný konektor je nesrovnatelně levnější oprava než nová deska. Cena u nezávislého servisu orientačně 1 500–6 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "bosch-pracka-f25": [
+    {
+      "type": "text",
+      "value": "Chyba F25 znamená, že senzor zákalnosti vody pračky Bosch hlásí poruchu. Tento optický snímač měří, jak je voda znečištěná, a pračka podle něj rozhoduje o délce máchání. Bez něj se dá prát dál, jen s pevně nastavenými časy.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vyčistěte vypouštěcí filtr",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Senzor bývá umístěný v okruhu vypouštění. Otevřete klapku v soklu, vodu odpusťte nouzovou hadičkou a filtr vyšroubujte, vyberte nečistoty a propláchněte ho.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Spusťte údržbový program",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nejdelší program na 90 °C naprázdno s odvápňovačem pro pračky. Mastný a vápenatý povlak na optice senzoru je u F25 nejčastější příčina a tímto se často odstraní.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Omezte přebytek prostředku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Trvalé předávkování prášku a aviváže zanáší senzor rychleji. Dávkujte podle tvrdosti vody a náplně a jednou za čas vynechte aviváž úplně.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud F25 přetrvává i po odvápnění, je vadný samotný senzor. Do opravy můžete pračku normálně používat — jen počítejte s delším nebo méně přesným mácháním. Oprava u nezávislého servisu vychází orientačně na 1 500–3 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "bosch-susicka-e06": [
+    {
+      "type": "text",
+      "value": "Chyba E06 znamená, že topné těleso sušičky Bosch je vadné nebo nefunguje. Buben se točí dál, ale prádlo zůstává po celém programu vlhké a studené. Než budete objednávat nový díl, ověřte, jestli chybu nezpůsobila vypadlá tepelná pojistka.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Ověřte příznak",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte krátký program a po deseti minutách sáhněte na prádlo. Studené prádlo při točícím se bubnu potvrzuje, že topení nefunguje vůbec.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Nechte sušičku vychladnout",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte ji od elektřiny a nechte aspoň hodinu s otevřenými dvířky. Tepelná pojistka vypadlá kvůli přehřátí se u části modelů po vychladnutí sama vrátí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte vzduchový okruh",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Propláchněte filtr ve dvířkách i spodní filtr a nechte je uschnout. Lamely výměníku vysajte měkkým nástavcem ve směru lamel. Bez tohoto kroku by nové topné těleso dopadlo stejně.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E06 přetrvává, je potřeba technik. Oprava vychází u nezávislého servisu orientačně na 1 800–4 000 Kč včetně dílu podle toho, jestli stačí pojistka, nebo je nutné celé těleso.",
+      "tag": "p"
+    }
+  ],
+  "bosch-susicka-e08": [
+    {
+      "type": "text",
+      "value": "Chyba E08 patří u sušiček Bosch do skupiny kódů E08, E09, E24, E25, E28 a E90, které výrobce označuje jako závadu elektroniky vyžadující zásah technika. Konkrétní součástku z kódu vyčíst nelze. Než budete volat servis, má smysl vyloučit jednorázový výpadek napájení.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Proveďte dlouhý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku od elektřiny aspoň na 20 minut, ať se vybijí kondenzátory na desce. Krátké vypnutí nestačí. Po zapojení spusťte krátký program s malou náplní.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zapojte sušičku napřímo",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odstraňte prodlužovačky, rozdvojky a přepěťové ochrany. Sušička odebírá při ohřevu velký proud a propad napětí je u chyb elektroniky běžný spouštěč.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte jistič",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "V rozvaděči ověřte, že jistič té větve není poddimenzovaný ani částečně vypadlý. Prohlédněte i zástrčku — zahnědlý plast znamená přehřívající se spoj a to řeší elektrikář.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E08 po resetu zmizí a několik dní se nevrátí, šlo o následek přepětí. Vrací-li se, je potřeba technik; výměna řídicí desky vychází u nezávislého servisu orientačně na 3 000–6 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "bosch-susicka-e09": [
+    {
+      "type": "text",
+      "value": "Chyba E09 patří u sušiček Bosch do skupiny kódů elektroniky (E08, E09, E24, E25, E28, E90), které výrobce označuje jako závadu vyžadující technika. U kondenzačních modelů se ale vyplatí nejdřív zkontrolovat plnou nádržku na kondenzát — je to zdarma a trvá to minutu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte nádržku na vodu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vytáhněte zásobník kondenzátu a vylijte ho, i když se nezdá plný. Zkontrolujte, jestli po zasunutí dosedá až na doraz. Zaseknutý nebo špatně zasunutý zásobník sušička vyhodnotí jako plný.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Prověřte odčerpávání",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Je-li sušička napojená přímo do odpadu, projděte hadičku po celé délce — nesmí být zalomená ani vedená výš, než výrobce povoluje. Ucpaná hadička se projeví stejně jako plná nádržka.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte filtry a výměník",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Propláchněte filtr ve dvířkách i spodní filtr a nechte je uschnout. Lamely výměníku vysajte měkkým nástavcem ve směru lamel — zanesený výměník zhoršuje kondenzaci a zvyšuje zátěž elektroniky.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Resetujte a vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku na 20 minut a zkuste krátký program. Pokud E09 přetrvává s prázdnou nádržkou a čistým okruhem, jde o elektroniku — oprava u nezávislého servisu orientačně 3 000–6 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "bosch-susicka-e24": [
+    {
+      "type": "text",
+      "value": "Chyba E24 označuje u sušiček Bosch vnitřní závadu elektroniky. Patří do stejné skupiny jako E08, E09, E25, E28 a E90, kterou výrobce neřeší po jednotlivých součástkách — diagnostiku dělá technik měřením. Tady je hlavní otázkou ekonomika opravy.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkuste reset, ať vyloučíte přepětí",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku od elektřiny na 20 minut a zkuste krátký program. Pokud E24 zmizí a několik dní se nevrátí, šlo o jednorázový následek přepětí a oprava není potřeba.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zjistěte stáří spotřebiče",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Najděte na výrobním štítku uvnitř dvířek datum výroby. U sušiček starších osmi let se výměna řídicí desky často blíží ceně nové sušičky a je rozumné to spočítat dřív, než objednáte technika.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyžádejte si kalkulaci předem",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Při objednávce se zeptejte zvlášť na cenu diagnostiky a zvlášť na odhad opravy. Diagnostika vychází orientačně na 800–1 500 Kč a měla by se odečíst, pokud opravu necháte udělat.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Porovnejte s cenou nové",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Výměna desky vychází u nezávislého servisu orientačně na 3 000–6 000 Kč včetně dílu. U kondenzační sušičky střední třídy to je zhruba třetina ceny nové, u starší sušičky s tepelným čerpadlem klidně polovina.",
+      "tag": "p"
+    }
+  ],
+  "bosch-susicka-e25": [
+    {
+      "type": "text",
+      "value": "Chyba E25 hlásí u sušiček Bosch závadu v elektronickém řídicím systému. Spadá do skupiny E08, E09, E24, E25, E28 a E90, kterou výrobce označuje jednotně jako závadu elektroniky. Opakovaný výskyt často souvisí s tím, jak je sušička napájená.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte zapojení",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapojte sušičku přímo do zásuvky ve zdi. Prodlužovačky, rozdvojky a spínací zásuvky způsobí při sepnutí topení propad napětí, který elektroniku shodí. Sušička odebírá velký proud a nepatří na sdílený okruh.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Odlehčete okruhu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zkuste sušičku spustit v době, kdy neběží trouba, pračka ani bojler. Pokud chyba mimo špičku nenastane, je problém v přetíženém okruhu, ne v sušičce.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Prohlédněte zástrčku a zásuvku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zahnědlý, zdeformovaný nebo zapáchající plast znamená přehřívající se spoj. Takovou zásuvku dál nepoužívejte a zavolejte elektrikáře — je to zároveň riziko požáru.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E25 přetrvává i při přímém napájení ze zdravé zásuvky, je vadná řídicí elektronika. Oprava u nezávislého servisu vychází orientačně na 3 000–6 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "bosch-susicka-e28": [
+    {
+      "type": "text",
+      "value": "Chyba E28 patří u sušiček Bosch mezi kódy elektroniky (E08, E09, E24, E25, E28, E90), které výrobce označuje jako závadu vyžadující zásah technika. Protože z kódu nejde vyčíst konkrétní součástku, nejvíc pomůžete tím, že technikovi připravíte přesný popis chování.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Proveďte reset a zaznamenejte výsledek",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku na 20 minut a spusťte krátký program s malou náplní. Zapište si, jestli chyba naskočila hned, po chvíli, nebo vůbec.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Popište, v jaké fázi se chyba objeví",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Rozlište, jestli E28 přijde ihned po zapnutí, při rozběhu bubnu, nebo až po zahřátí. Chyba až za tepla ukazuje na součástku selhávající tepelně, což je pro technika zcela jiná stopa.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zjistěte model a datum výroby",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Opište si z výrobního štítku uvnitř dvířek typové označení a datum výroby. Technik podle toho dopředu zjistí, jestli je deska pro váš model ještě dostupná.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte ekonomiku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Výměna elektroniky vychází u nezávislého servisu orientačně na 3 000–6 000 Kč včetně dílu. U sušiček starších deseti let bývá díl hůř dostupný a cena se blíží ceně nové — vyžádejte si kalkulaci předem.",
+      "tag": "p"
+    }
+  ],
+  "bosch-susicka-e68": [
+    {
+      "type": "text",
+      "value": "Chyba E68 znamená, že tlak v okruhu chladiva sušičky Bosch překročil bezpečnou mez. Tepelné čerpadlo se ochranně odstaví, aby se okruh nepoškodil. Nejčastější příčinou není závada, ale to, že sušička nestíhá odvádět teplo do okolí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Dejte sušičce vydýchat",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odsuňte ji aspoň 10 cm od zdi, nenechávejte ji v úzké skříni ani ve spíži a při sušení otevřete dveře místnosti. Sušička nesmí nasávat vlastní teplý vzduch.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zkontrolujte teplotu v místnosti",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Ve velmi teplé místnosti nad 30 °C tlak v okruhu přirozeně roste a ochrana zasáhne i u zdravé sušičky. Zkuste sušit v chladnější části dne nebo v jiné místnosti.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte výměník",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zanesené lamely brání odvodu tepla a tlak stoupá. Vytáhněte spodní filtr i výměník a lamely vysajte měkkým nástavcem ve směru lamel.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E68 přetrvává i v temperované místnosti s čistým výměníkem, jde o závadu okruhu a musí ji řešit technik s oprávněním pro chladicí okruhy. Oprava u nezávislého servisu vychází orientačně na 4 000–9 000 Kč.",
+      "tag": "p"
+    }
+  ],
+  "bosch-susicka-e69": [
+    {
+      "type": "text",
+      "value": "Chyba E69 znamená, že tlak chladiva v sušičce Bosch je příliš nízký — okruh je nedostatečně naplněný nebo z něj chladivo uniká. Sušička pak buben točí, ale prádlo nesuší. Na rozdíl od E68, kde jde o přetlak, tady je řešení skoro vždy na straně technika.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vylučte chladné prostředí",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "V místnosti pod 5 °C tlak v okruhu přirozeně klesá a chyba se objeví i u zdravé sušičky. Přesuňte ji do temperované místnosti nebo počkejte, až se prostor ohřeje, a zkuste znovu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Nechte sušičku dlouho stát",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte ji na několik hodin, aby se tlak v okruhu vyrovnal. Pak spusťte krátký program s malou náplní a sáhněte po deseti minutách na prádlo — teplo znamená, že okruh alespoň částečně pracuje.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte výměník",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zanesené lamely zhoršují přenos tepla a tlak se pak chová nestandardně. Vysajte je měkkým nástavcem ve směru lamel.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Objednejte odborný servis",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Chladivo smí doplňovat pouze technik s oprávněním pro chladicí okruhy — nikdy to nezkoušejte svépomocí. Oprava vychází u nezávislého servisu orientačně na 4 000–9 000 Kč a u starších sušiček se blíží ceně nové.",
+      "tag": "p"
+    }
+  ],
+  "bosch-susicka-e72": [
+    {
+      "type": "text",
+      "value": "Chyba E72 znamená, že čidlo teploty kondenzátoru tepelného čerpadla sušičky Bosch hlásí hodnotu mimo rozsah. Kondenzátor je ta část okruhu, kde chladivo předává teplo vzduchu, a jeho teplota vybočí nejčastěji tehdy, když sušička nemá kam teplo odvádět.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Změřte teplotu v místnosti",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Sušičky s tepelným čerpadlem pracují spolehlivě zhruba mezi 10 a 30 °C. V nevytápěné komoře v zimě nebo v rozpálené prádelně v létě vyjede teplota kondenzátoru mimo rozsah i u zcela zdravého spotřebiče. Zkuste sušit v jinou dobu nebo jinde.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Uvolněte okolí spotřebiče",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Změřte, kolik místa má sušička za zády a po stranách. Deset centimetrů od stěny je minimum a zavřená skříň bez větrání je pro tepelné čerpadlo nejhorší možné umístění. Během sušení nechávejte otevřené dveře místnosti.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zprůchodněte lamely",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vytáhněte spodní filtr a za ním výměník. Lamely musí být průhledné proti světlu; pokud nejsou, vysajte je ve směru lamel. Zanesený výměník teplo nepředá a čidlo pak hlásí nesmysly.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Zvažte, jak dlouho chybu odkládat",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E72 zůstává i v temperované místnosti s volným okolím a čistým výměníkem, jde o čidlo nebo o množství chladiva v okruhu. Diagnostika u nezávislého servisu vychází orientačně na 800 až 1 500 Kč a teprve po ní má smysl rozhodovat o opravě za 2 500 až 6 000 Kč.",
+      "tag": "p"
+    }
+  ],
+  "bosch-susicka-e90": [
+    {
+      "type": "text",
+      "value": "Chyba E90 hlásí u sušiček Bosch závadu řídicí elektroniky. Patří do stejné skupiny jako E08, E09, E24, E25 a E28. Domácí opravu to nedovoluje, ale než zavoláte servis, vyplatí se ověřit, jestli nejde o následek vlhkosti nebo přepětí — obojí se dá zjistit zdarma.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte vlhkost",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Podívejte se pod sušičku a do soklu. Voda z prosakující nádržky na kondenzát nebo z netěsného výměníku se dostane k elektronice a chyby pak přicházejí nahodile. Pokud vodu vidíte, sušičku nezapínejte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Proveďte dlouhý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku od elektřiny aspoň na 20 minut, ať se vybijí kondenzátory na desce. Pak zkuste krátký program s malou náplní.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vylučte nestabilní napájení",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapojte sušičku přímo do zásuvky ve zdi, bez prodlužovaček a přepěťových ochran. Zvažte, jestli chyba nezačala po bouřce nebo po výpadku proudu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud E90 přetrvává, je potřeba vyměnit řídicí desku. Cena u nezávislého servisu vychází orientačně na 3 000–6 000 Kč včetně dílu. U sušiček starších deseti let si nechte spočítat kalkulaci a porovnejte ji s cenou nové.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-mycka-f4": [
+    {
+      "type": "text",
+      "value": "Chyba F4 znamená, že teplotní termistor myčky Whirlpool je vadný nebo odpojený. V praxi to poznáte tak, že nádobí zůstává mastné a program se chová nepředvídatelně. Než budete objednávat technika, zkuste posoudit, jestli je problém v měření, nebo v samotném ohřevu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Porovnejte krátký a dlouhý program",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte nejkratší program a pak nejdelší intenzivní. Pokud nádobí vyjde mastné z obou stejně, ohřev nefunguje. Pokud dlouhý program umyje a krátký ne, spíš to ukazuje na zpožděnou reakci čidla.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Otevřete myčku v polovině cyklu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zhruba dvacet minut po startu intenzivního programu dvířka na chvíli pootevřete. Oblak páry znamená, že myčka hřeje a chyba je v měření. Vlažný vnitřek naopak ukazuje na topení.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zaútočte na vodní kámen",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte proběhnout dva horké programy naprázdno s odvápňovačem, mezi nimi den pauzu. Silný nános na čidle se nepodaří odstranit napoprvé a právě u Whirlpoolu bývá tenhle krok tím, co chybu vyřeší.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Řekněte technikovi výsledek testu s párou",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Informace, jestli myčka hřeje nebo ne, rozhoduje mezi výměnou čidla a opravou topného okruhu. Cena u nezávislého servisu se liší zhruba mezi 1 500 a 5 000 Kč včetně dílu, takže tenhle jeden test má reálnou hodnotu.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-mycka-f6": [
+    {
+      "type": "text",
+      "value": "Chyba F6 znamená, že průtokoměr na přívodu vody myčky Whirlpool hlásí poruchu nebo nesmyslné hodnoty. Myčka se pak buď nenapustí, nebo program přeruší v půlce. Ve většině případů není vadný senzor, ale něco brání volnému průtoku vody před ním.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Prověřte přívod vody",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otevřete rohový ventil pod dřezem naplno a projděte přívodní hadici po celé délce — nesmí být zalomená ani přiskřípnutá za myčkou.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte vstupní sítko",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zavřete vodu a odšroubujte hadici od ventilu, připravte si hadr. V převlečné matici je jemné sítko — vyjměte ho pinzetou a propláchněte. U starších rozvodů v něm bývají rezavé šupinky a vodní kámen.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Otestujte tlak",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Napusťte kbelík vodou z téhož kohoutku. Slabý pramínek znamená nízký tlak v rozvodu a problém pak není v myčce. Nízký tlak se často objeví po opravách vodovodu, kdy zůstane uzávěr přiškrcený.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud voda teče normálně a F6 se přesto vrací, je vadný průtokoměr nebo přívodní ventil. Oprava u nezávislého servisu vychází orientačně na 1 500–3 000 Kč včetně dílu. Přípojku sami nerozebírejte, je v ní síťové napětí.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-pracka-f01": [
+    {
+      "type": "text",
+      "value": "Chyba F01 znamená, že řídicí elektronika pračky Whirlpool hlásí poruchu nebo nereaguje. Pračka program přeruší, protože nemůže spolehlivě ovládat motor ani ventily. Domácí opravu to nedovoluje, ale jednorázový výpadek po přepětí se často podaří vyresetovat.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Proveďte dlouhý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku od elektřiny aspoň na 20 minut, ať se vybijí kondenzátory na desce. Krátké vypnutí nestačí. Po zapojení zkuste krátký máchací program.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zapojte pračku napřímo",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odstraňte prodlužovačky, rozdvojky a přepěťové ochrany. Nestabilní napájení je u chyb elektroniky častým spouštěčem a zároveň důvodem, proč se závada po opravě vrací.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte vlhkost",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Podívejte se pod pračku a do soklu. Voda u elektroniky je vážný problém — pokud ji vidíte, pračku nezapínejte a zavolejte servis.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Rozhodněte se podle stáří",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud F01 přetrvává, je potřeba vyměnit řídicí desku. Cena u nezávislého servisu vychází orientačně na 2 500–6 000 Kč včetně dílu. U praček starších deseti let se to blíží ceně nové.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-pracka-f06": [
+    {
+      "type": "text",
+      "value": "Chyba F06 znamená, že pračka Whirlpool nedokáže odečíst otáčky motoru. Typicky se projeví tím, že buben se buď vůbec nerozjede, nebo naopak nezastaví včas při ždímání. U praček Whirlpool s uhlíkovým motorem bývá častou příčinou opotřebení uhlíků, ne samotné čidlo.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Sledujte, v jaké fázi to selže",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zaznamenejte, jestli se buben netočí od začátku, nebo jestli pere normálně a problém přijde až při ždímání. Chyba až při vysokých otáčkách je typická pro opotřebené uhlíky motoru.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Poslechněte si zvuk při rozběhu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Škrábavý nebo praskavý zvuk od motoru při rozjezdu je další příznak dojíždějících uhlíků. Rovnoměrné bzučení bez pohybu ukazuje spíš na blokádu nebo elektroniku.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vylučte přetížení",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyperte poloviční dávku bez těžkého prádla. Přetížený buben brání motoru dosáhnout otáček a elektronika to vyhodnotí jako chybu čidla, i když je vše v pořádku.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Zeptejte se na uhlíky dřív než na motor",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Výměna uhlíků je jedna z nejlevnějších oprav pračky, u nezávislého servisu orientačně 1 200 až 2 500 Kč. Výměna celého motoru stojí 3 000 až 6 000 Kč, proto trvejte na tom, ať technik nejdřív zkontroluje uhlíky.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-pracka-f07": [
+    {
+      "type": "text",
+      "value": "Chyba F07 znamená, že v obvodu řízení motoru pračky Whirlpool byl detekován zkrat triaku na řídicí desce. Triak je polovodičový spínač, který motoru dodává proud; když se prorazí, může motor spínat bez povelu. Projevem bývá buben točící se sám hned po zapnutí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Odpojte pračku od elektřiny",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Točí-li se buben sám nebo cítíte zápach spálené elektroniky, vytáhněte zástrčku okamžitě a pračku už nezapínejte. Prorazený triak nedokáže elektronika vypnout softwarově.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vylučte zablokovaný buben",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojenou pračku otevřete a rukou protočte buben. Zablokovaný buben — kosticí z podprsenky nebo mincí mezi bubnem a vanou — motor přetíží a triak tím může zničit.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkuste tvrdý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte pračku aspoň 20 minut odpojenou. Pak zapojte a bez prádla spusťte krátký máchací program. Jednorázová F07 po přepětí v síti takto zmizí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Zvažte, jestli se oprava vyplatí",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vrací-li se F07, je potřeba vyměnit výkonovou desku, případně i motor. Cena u nezávislého servisu vychází orientačně na 3 000–7 000 Kč včetně dílu. U praček starších osmi let porovnejte s cenou nové.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-pracka-f0e4": [
+    {
+      "type": "text",
+      "value": "Chyba F0E4 znamená, že teplota vody v bubnu pračky Whirlpool je mimo očekávaný rozsah — příliš vysoká nebo příliš nízká. Pračka program zastaví, protože nedokáže zaručit správný průběh praní. Příčinou bývá teplotní čidlo nebo topný okruh.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zjistěte, kterým směrem chyba vybočuje",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte program na 60 °C a po dvaceti minutách sáhněte na sklo dvířek. Studené sklo znamená, že pračka nehřeje; nezvykle horké naopak, že topení nevypíná. Jsou to dvě různé diagnózy.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zkontrolujte připojení vody",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Má-li pračka dva přívody, ověřte, že modrá hadice vede na studenou vodu. Po stěhování nebo výměně baterie bývá zapojení prohozené a pračka pak napouští horkou vodu tam, kde čeká studenou.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Odvápněte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vrstva vodního kamene na čidle i na topném tělese zkresluje měření. Spusťte nejdelší program na 90 °C naprázdno s odvápňovačem pro pračky.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud F0E4 přetrvává, je vadné teplotní čidlo nebo topné těleso. Do opravy perte na studené programy. Oprava u nezávislého servisu vychází orientačně na 1 500–3 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-pracka-f12": [
+    {
+      "type": "text",
+      "value": "Chyba F12 znamená, že řídicí deska pračky Whirlpool má poškozenou nebo nedostupnou paměť EEPROM. V té jsou uložená nastavení a kalibrační data spotřebiče. Bez nich pračka neví, jak má pracovat, a program nespustí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Proveďte dlouhý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku od elektřiny aspoň na 20 minut. Po obnovení napájení se elektronika pokusí paměť znovu načíst a jednorázová chyba po výpadku proudu tím zmizí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vylučte nestabilní napájení",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapojte pračku přímo do zásuvky ve zdi, bez prodlužovaček a přepěťových ochran. Poškození paměti bývá následkem přepětí nebo opakovaných výpadků v průběhu zápisu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zaznamenejte, kdy chyba začala",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapište si, jestli se F12 objevila po bouřce, po výpadku proudu nebo po servisním zásahu. Technikovi to napoví, jestli stačí desku přeprogramovat, nebo ji vyměnit.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Zeptejte se na přeprogramování",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "U části modelů lze paměť znovu naprogramovat, což je výrazně levnější než nová deska. Zeptejte se na to výslovně při objednávce. Výměna desky vychází u nezávislého servisu orientačně na 2 500–6 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-pracka-f1e4": [
+    {
+      "type": "text",
+      "value": "Chyba F1E4 označuje závadu hlavního spínacího relé v řídicí elektronice pračky Whirlpool. Relé je elektromechanický spínač, který připíná napájení hlavních okruhů — bez něj pračka program nespustí nebo ho přeruší hned na začátku.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Proveďte dlouhý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku aspoň na 20 minut, ať se vybijí kondenzátory na desce. Pak zkuste krátký máchací program bez prádla.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Poslechněte si relé",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Při zapnutí pračky bývá slyšet tiché cvaknutí relé. Úplné ticho nebo naopak opakované cvakání za sebou jsou informace, které technikovi zúží diagnostiku — zapište si, co slyšíte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zapojte pračku napřímo",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Bez prodlužovaček a přepěťových ochran. Spečené kontakty relé vznikají opakovaným spínáním pod nestabilním napětím, takže bez nápravy napájení se závada po opravě vrátí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vrací-li se F1E4, je potřeba vyměnit řídicí desku. Cena u nezávislého servisu vychází orientačně na 2 500–6 000 Kč včetně dílu. U praček starších osmi let si nechte spočítat kalkulaci předem.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-pracka-f24": [
+    {
+      "type": "text",
+      "value": "Chyba F24 znamená, že pračka Whirlpool detekovala nadměrné množství vody v bubnu nebo přetížení prádlem. Program se zastaví, aby nedošlo k vytopení nebo k poškození pohonu. Nejčastější příčinou je pěna nebo prostě příliš plný buben.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte náplň",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyndejte část prádla a nechte v bubnu maximálně tři čtvrtiny doporučené dávky. Nasáklé ručníky a povlečení váží podstatně víc, než vypadají.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vylučte pěnu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Předávkovaný prášek vytvoří pěnu, kterou senzor vyhodnotí jako vysokou hladinu. Spusťte máchací program bez prostředku a sledujte, jestli pěna zmizí. Příště dávkujte podle tvrdosti vody.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte vypouštěcí filtr",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otevřete klapku v soklu, vodu odpusťte nouzovou hadičkou a filtr vyšroubujte a propláchněte. Ucpané vypouštění drží hladinu výš, než má být.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud F24 přetrvává s malou náplní, bez pěny a s čistým filtrem, je vadný tlakový snímač nebo přívodní ventil. Oprava u nezávislého servisu vychází orientačně na 1 500–3 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-pracka-f27": [
+    {
+      "type": "text",
+      "value": "Chyba F27 znamená, že tlakový senzor hladiny vody pračky Whirlpool hlásí nesprávné hodnoty. Podle něj pračka měří, kolik vody napustila, takže bez důvěryhodného údaje program zastaví. Vadný bývá zřídka senzor sám — častěji tenká hadička, která k němu vede tlak.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Perte jednou bez prostředku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte máchací program úplně bez prášku a aviváže. Pokud F27 nenastane, je viníkem pěna z předávkování a stačí upravit dávkování.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte vypouštěcí filtr",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otevřete klapku v soklu, vodu odpusťte nouzovou hadičkou, filtr vyšroubujte a vyberte z něj mince, sponky a chlupy. Propláchněte ho a vraťte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte odtok",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Projděte vypouštěcí hadici — nesmí být zalomená ani vedená ve smyčce. Rozeberte a vyčistěte sifon pod dřezem, na který je pračka napojená.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyžádejte si diagnostiku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vrací-li se F27 bez pěny a s čistým filtrem, je zanesená tlaková komůrka nebo vadný senzor. Pročištění vychází u nezávislého servisu orientačně na 1 200–2 500 Kč, výměna senzoru 1 500–3 500 Kč — rozdíl je zásadní, tak si nechte změřit, o co jde.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-pracka-f3e1": [
+    {
+      "type": "text",
+      "value": "Chyba F3E1 znamená, že tlakový snímač hladiny vody pračky Whirlpool vykazuje neočekávané hodnoty nebo nereaguje. Patří ke stejnému měřicímu okruhu jako F27. Pro vás je podstatné, že příčinou bývá zanesená tlaková cesta, ne drahá elektronika.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte, jak pračka napouští",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte krátký program a sledujte hladinu v bubnu. Zjevně příliš málo nebo příliš mnoho vody je informace, která technikovi zúží hledání.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte filtr a odtok",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyšroubujte vypouštěcí filtr v soklu, propláchněte ho a zkontrolujte vypouštěcí hadici i sifon. Částečně ucpaný odtok mění tlakové poměry, které snímač měří.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Omezte dávkování prostředku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Trvalé předávkování vytváří pěnu, která snímač mate a urychluje zanášení tlakové komůrky. Dávkujte podle tvrdosti vody a náplně, ne od oka.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud F3E1 přetrvává, potřebujete technika, který proměří snímač i jeho hadičku. Oprava u nezávislého servisu vychází orientačně na 1 200–3 500 Kč včetně dílu podle toho, jestli stačí pročištění, nebo je nutná výměna.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-pracka-f3e4": [
+    {
+      "type": "text",
+      "value": "Chyba F3E4 označuje závadu snímače ADS pračky Whirlpool — systému, který automaticky dávkuje prostředek nebo odhaduje množství prádla. Praní jako takové tím není ohroženo, ale automatické dávkování nefunguje a pračka program raději zastaví.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte zásobníky prostředku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otevřete zásuvku na prací prostředek a zkontrolujte, jestli nejsou nádobky prázdné nebo naopak přeplněné. U modelů s automatickým dávkováním se ztuhlý prášek v kanálcích projeví právě jako závada snímače.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte zásuvku a kanálky",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zásuvku vyjměte a celou ji propláchněte teplou vodou. Kartáčkem pročistěte i prostor, do kterého zasouvá — tam se usazuje ztuhlá aviváž nejvíc.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vypněte automatické dávkování",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Většina modelů umožňuje přepnout na ruční dávkování. Pokud pak program proběhne bez chyby, je potvrzeno, že problém je v systému ADS, a můžete pračku dál používat, než přijde technik.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud F3E4 přetrvává i po vyčištění a při ručním dávkování, je vadný snímač ADS. Oprava u nezávislého servisu vychází orientačně na 1 500–3 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-pracka-f40": [
+    {
+      "type": "text",
+      "value": "Chyba F40 znamená, že pračka Whirlpool detekovala závadu na elektrické součástce nebo v řídicí elektronice. Patří do skupiny s F41 a F42, které výrobce nerozlišuje po jednotlivých dílech — diagnostiku dělá technik měřením. Než ho zavoláte, vyloučte jednorázový výpadek.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Proveďte dlouhý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku od elektřiny aspoň na 20 minut, ať se vybijí kondenzátory na desce. Pak zkuste krátký máchací program bez prádla.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zapojte pračku napřímo",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odstraňte prodlužovačky, rozdvojky a přepěťové ochrany. Nestabilní napájení je u těchto chyb častým spouštěčem.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zjistěte, jestli chyba přišla po události",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapište si, jestli se F40 objevila po bouřce, výpadku proudu nebo stěhování. Chyba po stěhování často znamená jen uvolněný konektor, což je levná oprava.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyžádejte si kalkulaci",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zeptejte se zvlášť na cenu diagnostiky a zvlášť na odhad opravy. Diagnostika vychází orientačně na 800–1 500 Kč, oprava elektroniky 2 500–6 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-pracka-f41": [
+    {
+      "type": "text",
+      "value": "Chyba F41 hlásí u praček Whirlpool závadu na elektrické součástce nebo na pohonné jednotce. Spadá do stejné skupiny jako F40 a F42. Protože se týká pohonu, vyplatí se nejdřív vyloučit mechanickou příčinu — ta je levnější a poznáte ji sami.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Odpojte pračku a protočte buben",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Rukou několikrát otočte bubnem. Musí se otáčet lehce a bez skřípání. Zadrhávání ukazuje na opotřebená ložiska nebo na předmět zaklíněný mezi bubnem a vanou.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Poslechněte si rozběh",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte krátký program bez prádla a poslouchejte. Bzučení bez roztočení znamená zablokovaný rotor nebo vadný kondenzátor, úplné ticho spíš přerušené napájení motoru.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkuste tvrdý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nechte pračku 20 minut bez proudu a zkuste znovu. Jednorázová chyba po přepětí takto zmizí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vrací-li se F41, jde o motor, jeho řízení nebo výkonovou desku. Oprava u nezávislého servisu vychází orientačně na 3 000–6 500 Kč včetně dílu. U praček starších osmi let porovnejte s cenou nové.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-pracka-f42": [
+    {
+      "type": "text",
+      "value": "Chyba F42 označuje u praček Whirlpool závadu na elektrické součástce nebo ve výkonové elektronice. Patří do skupiny s F40 a F41. Výkonová část spíná největší proudy v pračce, takže tady hraje kvalita napájení obzvlášť velkou roli.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte zásuvku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapojte pračku přímo do zásuvky ve zdi. Prohlédněte zástrčku i kryt zásuvky — zahnědlý, zdeformovaný nebo zapáchající plast znamená přehřívající se spoj. Takovou zásuvku dál nepoužívejte a zavolejte elektrikáře.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Odlehčete okruhu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zkuste pračku spustit v době, kdy neběží trouba, myčka ani bojler. Pokud chyba mimo špičku nenastane, je problém v přetíženém okruhu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Proveďte dlouhý reset",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku aspoň na 20 minut a zkuste krátký máchací program bez prádla.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud F42 přetrvává i při přímém napájení ze zdravé zásuvky, je vadná výkonová elektronika. Oprava u nezávislého servisu vychází orientačně na 2 500–6 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-pracka-f6e1": [
+    {
+      "type": "text",
+      "value": "Kód F6E1 u praček Whirlpool znamená, že hlavní deska ztratila spojení s některým z modulů. Praktický důsledek je, že pračka reaguje nepředvídatelně: někdy program spustí, jindy ne. Právě tahle nahodilost je vodítko, které stojí za to sledovat.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Veďte si dva dny záznam",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapisujte si každý pokus: čas, zvolený program a jestli chyba naskočila. Chyba vázaná na určitou denní dobu ukazuje na napájení, chyba vázaná na konkrétní program spíš na modul, který ten program používá.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyzkoušejte nejjednodušší program",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte samotné odstřeďování nebo máchání bez ohřevu. Když projde, zatímco plný program ne, je závada v modulu, který obsluhuje ohřev nebo dávkování, a ne v hlavní desce.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vylučte kolísání napětí",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vytáhněte pračku ze zásuvky, zapojte ji přímo do zdi a spusťte program v době, kdy v bytě neběží žádný jiný velký spotřebič. Ztráta komunikace je klasický důsledek propadu napětí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Předejte technikovi svůj záznam",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Ten dvoudenní zápis je konkrétní podklad, se kterým technik nemusí hádat. Rozsah opravy je od dotažení konektoru po výměnu desky, tedy u nezávislého servisu orientačně 1 500 až 6 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-pracka-f8e1": [
+    {
+      "type": "text",
+      "value": "Chyba F8E1 znamená, že pračka Whirlpool detekovala problém s napouštěním, odčerpáváním vody nebo přetečení. Je to sběrný kód pro vodní cestu, takže začněte tím, co je nejsnáz dostupné — filtrem a přívodem.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte přívod vody",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otevřete rohový ventil naplno a projděte přívodní hadici — nesmí být zalomená. Zavřete vodu, odšroubujte hadici a propláchněte sítko v převlečné matici.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyčistěte vypouštěcí filtr",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte pračku, otevřete klapku v soklu a vodu odpusťte nouzovou hadičkou do misky. Filtr vyšroubujte, vyberte z něj mince, sponky a chlupy a propláchněte ho.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte odtok",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Projděte vypouštěcí hadici za pračkou — nesmí být zalomená ani vedená ve smyčce. Rozeberte a vyčistěte sifon pod dřezem. U nově zapojené pračky ověřte, že v hrdle sifonu není zaslepovací záslepka.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud F8E1 přetrvává s průchodným přívodem i odtokem, je vadný přívodní ventil, vypouštěcí čerpadlo nebo tlakový snímač. Oprava u nezávislého servisu vychází orientačně na 1 500–3 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-susicka-f01": [
+    {
+      "type": "text",
+      "value": "Chyba F01 hlásí u sušiček Whirlpool poruchu řídicí elektroniky. Sušička se buď nespustí, nebo program ukončí bez zjevného důvodu. Než se smíříte s výměnou desky, stojí za to vyloučit dvě věci, které elektroniku ničí nejčastěji: vlhkost a nestabilní napájení.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Hledejte stopy vlhkosti",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vytáhněte nádržku na kondenzát a posviťte si do prostoru, ze kterého jste ji vyndali. Vodní kámen, bílé mapy nebo vlhký prach znamenají, že kondenzát někudy uniká a dostává se k elektronice. To je nutné vyřešit dřív než samotnou desku.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zvažte, kde sušička stojí",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Sušička v koupelně nebo ve sklepě pracuje v trvale vysoké vlhkosti, která elektronice zkracuje život. Pokud tam stojí, počítejte s tím, že se závada může opakovat, a zvažte přemístění.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Nechte ji přes noc odpojenou",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vytáhněte zástrčku a nechte sušičku odpojenou do rána. Delší pauza dá kondenzátorům čas se vybít a zároveň nechá případnou vlhkost odpařit.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte ráno",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud sušička ráno naběhne a několik dní funguje, byla příčina vlhkost nebo přechodný výpadek. Pokud F01 naskočí hned, je potřeba nová deska, u nezávislého servisu orientačně 2 500 až 6 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-susicka-f02": [
+    {
+      "type": "text",
+      "value": "Chyba F02 znamená, že topné těleso nebo relé ohřevu sušičky Whirlpool je vadné. Zajímavé je právě to slovo nebo: relé je levná součástka na desce, těleso je dražší díl, a rozdíl v ceně opravy je zhruba dvojnásobný. Několika pozorováními zúžíte, o co jde, ještě než přijde technik.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Rozlište, jestli sušička hřeje aspoň chvíli",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte program a sáhněte na prádlo po pěti a po patnácti minutách. Prádlo, které se nejdřív zahřeje a pak vychladne, ukazuje spíš na relé nebo tepelnou ochranu. Prádlo studené od začátku ukazuje na přerušený topný okruh.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Poslechněte si cvaknutí",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Na začátku ohřevu bývá slyšet tiché cvaknutí relé. Opakované cvakání za sebou je typický projev relé, které nedrží sepnuté. Zapište si, co slyšíte, technikovi to ušetří půl hodiny měření.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zprůchodněte vzduch",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zanesený filtr a odtah vedou k přehřívání, které relé i topné těleso ničí. Filtr ve dvířkách vyperte v teplé vodě, u odtahových modelů projděte celou hadici až k venkovní mřížce. Bez toho by nový díl dopadl stejně.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Ptejte se na cenu obou variant",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Při objednávce si nechte říct cenu zvlášť za výměnu relé a zvlášť za topné těleso. Rozdíl je u nezávislého servisu orientačně 1 800 Kč versus 4 000 Kč včetně dílu, takže se vyplatí trvat na diagnostice před objednáním dílu.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-susicka-f03": [
+    {
+      "type": "text",
+      "value": "Chyba F03 znamená, že teplotní senzor vstupního vzduchu sušičky Whirlpool je vadný. Podle něj sušička hlídá, jak horký vzduch do bubnu vstupuje. Bez důvěryhodného měření program přeruší, protože nemůže zaručit, že prádlo nepoškodí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Nechte sušičku vychladnout",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte ji na hodinu a nechte stát s otevřenými dvířky. Senzor přehřátý z předchozího cyklu může hlásit hodnotu mimo rozsah, i když je v pořádku.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Propláchněte filtry",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Filtr ve dvířkách vymáchejte pod tekoucí vodou — oklepání nestačí, povlak z aviváže se drží a zkresluje proudění kolem čidla. Spodní filtr vymáchejte také a nechte uschnout.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte odvod vzduchu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "U odtahových modelů projděte hadici po celé délce a venkovní mřížku, u kondenzačních vysajte lamely výměníku měkkým nástavcem ve směru lamel.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud F03 přetrvává i s čistým okruhem, je vadný senzor nebo jeho kabeláž. Oprava u nezávislého servisu vychází orientačně na 1 500–3 000 Kč včetně dílu — patří k levnějším závadám sušiček.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-susicka-f04": [
+    {
+      "type": "text",
+      "value": "Chyba F04 znamená, že teplotní senzor výstupního vzduchu sušičky Whirlpool je vadný. Tento senzor měří, jak horký vzduch z bubnu odchází, a sušička podle něj pozná, jak vlhké je prádlo. Vadné měření se projeví nespolehlivým výsledkem sušení.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zaznamenejte, jak se chyba projevuje",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zapište si, jestli program končí příliš brzy s vlhkým prádlem, nebo běží nezvykle dlouho. Je to první informace, kterou technik potřebuje.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Omezte aviváž",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Senzor bývá obalený jemným povlakem z aviváže, který zpožďuje jeho reakci. Zkuste ji na několik cyklů úplně vynechat — nános se často odstraní sám.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Propláchněte filtry a výměník",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Filtr ve dvířkách propláchněte pod tekoucí vodou, spodní filtr vymáchejte a nechte uschnout. Lamely výměníku vysajte měkkým nástavcem ve směru lamel.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud F04 přetrvává, je potřeba vyměnit senzor nebo opravit kabeláž. Oprava u nezávislého servisu vychází orientačně na 1 500–3 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "whirlpool-susicka-f05": [
+    {
+      "type": "text",
+      "value": "Chyba F05 znamená, že senzor vlhkosti prádla sušičky Whirlpool hlásí poruchu. Jsou to obvykle dva kovové pásky uvnitř bubnu, které měří vodivost procházejícího prádla. Na rozdíl od teplotních čidel jsou přístupné, takže tady má domácí čištění reálnou šanci uspět.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Najděte a otřete snímací pásky",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odpojte sušičku a podívejte se dovnitř bubnu — obvykle na přední hraně nebo kolem filtru najdete dva úzké kovové pásky. Otřete je hadříkem navlhčeným v octu a pak do sucha.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vynechejte aviváž",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Aviváž a sušicí ubrousky na páscích vytvářejí izolační film, kvůli kterému senzor přestane měřit správně. Na několik cyklů je úplně vynechte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkuste dobře vyždímané prádlo",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Prádlo vyždímané na nízkých otáčkách zkresluje měření vlhkosti. Spusťte program s prádlem vyždímaným aspoň na 1200 otáček a se střední náplní.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud F05 přetrvává i po vyčištění pásků, je vadný senzor nebo jeho kabeláž. Do opravy můžete používat časově řízený program, který čidlo vlhkosti nevyužívá. Oprava u nezávislého servisu vychází orientačně na 1 500–3 000 Kč včetně dílu.",
       "tag": "p"
     }
   ]
