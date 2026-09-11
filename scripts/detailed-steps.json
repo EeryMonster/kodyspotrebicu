@@ -9124,5 +9124,428 @@
       "value": "Když po vyčištění E6T zmizí, byl problém v průchodnosti a stačí výměník čistit dvakrát ročně. Když zůstane, je potřeba proměřit čidlo i množství chladiva; diagnostika u nezávislého servisu vychází orientačně na 800 až 1 500 Kč.",
       "tag": "p"
     }
+  ],
+  "lg-mycka-ie": [
+    {
+      "type": "text",
+      "value": "Kód IE zkracuje Input Error a znamená, že myčka LG za vyhrazený čas nenabrala dost vody. Program se zastaví ještě dřív, než se rozběhne mytí. Zajímavé je, že myčka neměří, kolik vody přiteklo, ale jak dlouho jí to trvalo, takže chybu spustí i pomalý přítok.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Změřte si přítok do odměrky",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Nastavte pod kohoutek, ze kterého je myčka napojená, litrovou odměrku a stopněte, za jak dlouho se naplní. Déle než deset vteřin znamená, že tlak nebo průtok jsou pod tím, s čím myčka počítá, a hledat závadu uvnitř spotřebiče nemá smysl.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zkontrolujte kulový ventil, ne jen páčku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "U rohových ventilů se stává, že páčka jde otočit naplno, ale samotný kulový uzávěr uvnitř je zanesený vodním kamenem. Zavřete a otevřete ventil několikrát za sebou, občas se tím průchod uvolní.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Vyčistěte sítko v převlečné matici",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zavřete vodu, odšroubujte hadici od ventilu a připravte si hadr. Sítko vytáhněte pinzetou a podržte proti světlu. Zanesené sítko poznáte podle toho, že jím světlo neprochází rovnoměrně.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Rozlište pomalý přítok od vadného ventilu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud odměrka ukázala dobrý průtok a sítko je čisté, je vadný přívodní elektroventil myčky. Výměna vychází u nezávislého servisu orientačně na 1 500 až 3 000 Kč včetně dílu. Pouzdro přípojky sami nerozebírejte, je v něm síťové napětí.",
+      "tag": "p"
+    }
+  ],
+  "samsung-mycka-4c": [
+    {
+      "type": "text",
+      "value": "Kód 4C u myček Samsung znamená, že se spotřebič nenapustil na požadovanou hladinu. Nejde o poruchu myčky, ale skoro vždy o něco, co brání vodě volně přitéct. Dobrá zpráva je, že všechny nejpravděpodobnější příčiny jsou dostupné zvenčí a zvládnete je za deset minut.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Odtáhněte myčku a prohlédněte hadici",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Myčku opatrně vysuňte a projděte přívodní hadici od ventilu až ke spotřebiči. Hledáte ostré zlomy a místa, kde hadici tiskne zadní hrana skříňky. Po každém zasunutí myčky zpět zkontrolujte, že se hadice nezalomila znovu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Otevřete ventil až na doraz",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Rohový ventil pod dřezem musí jít otočit úplně. Po instalatérských pracích ho technici často nechají jen pootevřený a nikdo si toho roky nevšimne, dokud se neobjeví právě tahle chyba.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte, jestli není myčka za redukcí",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Je-li myčka napojená přes redukci nebo trojcestný ventil u dřezové baterie, rozeberte i tento díl. V redukcích se usazeniny drží víc než v samotné hadici a průtok tím klesá nenápadně.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte podle zvuku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Po sestavení spusťte program a poslouchejte prvních třicet vteřin. Naprosté ticho znamená, že se ventil vůbec neotevírá, a to už patří technikovi; oprava vychází u nezávislého servisu orientačně na 1 500 až 3 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "lg-mycka-oe": [
+    {
+      "type": "text",
+      "value": "Kód OE zkracuje Output Error a znamená, že myčka LG nestihla odčerpat vodu z vany. Na dně zůstane stát voda, což je nepříjemné hlavně proto, že začne rychle zapáchat. Vyřešit to ale ve většině případů zvládnete sami a bez nářadí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vyberte stojící vodu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Než cokoli rozeberete, vyjměte vodu ze dna houbou nebo malým hrnkem do kbelíku. Bez toho se vám při manipulaci se sítky rozlije po kuchyni a nebudete vidět, co děláte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Rozeberte kombinaci sítek celou",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otočte válcem uprostřed dna proti směru hodinových ručiček a vytáhněte ho. Sestavu rozdělte na hrubé plastové sítko a jemné mikrosítko a obojí propláchněte pod tekoucí vodou proti směru, kterým se zanesla.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Prověřte sifon, ne jen myčku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Rozeberte sifon pod dřezem, na který je myčka napojená. U nově zapojených myček bývá viníkem zaslepovací záslepka v hrdle sifonu, kterou instalatér zapomněl vyrazit. U starších je to nános tuku.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Sledujte, jestli voda odteče",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Sestavte vše zpět, spusťte krátký program a po jeho skončení se podívejte na dno. Pokud tam voda zůstává i s čistými sítky a průchodným sifonem, je vadné vypouštěcí čerpadlo; oprava u nezávislého servisu orientačně 1 800 až 3 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "samsung-mycka-5c": [
+    {
+      "type": "text",
+      "value": "Kód 5C u myček Samsung hlásí, že se nepodařilo vypustit vodu. Myčka to pozná podle toho, že hladina po zapnutí čerpadla neklesá. Příčina bývá v cestě, kterou voda odchází, a začíná pár centimetrů od místa, kam běžně vidíte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zjistěte, jestli čerpadlo vůbec běží",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte program a přiložte ucho k soklu myčky. Vypouštěcí čerpadlo se ozve jako vyšší bzučení trvající pár desítek vteřin. Ticho znamená vadné čerpadlo, bzučení bez poklesu hladiny naopak ucpanou cestu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zvedněte vypouštěcí hadici do správné výšky",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Zkontrolujte, kudy hadice za myčkou vede. Musí mít někde smyčku vyvedenou do výšky předepsané výrobcem, jinak se voda vrací zpět. Hadice položená po zemi až k sifonu je klasická chyba při instalaci.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Prohlédněte prostor pod sítky baterkou",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vyndejte kombinaci sítek a posviťte si dolů. V rukavicích vyberte střepy, pecky a papírové etikety z lahví, které se nalepí přímo na vstup čerpadla a nejsou na první pohled vidět.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Rozhodněte podle výsledku poslechu",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Slyšitelné čerpadlo s průchodnou cestou obvykle znamená vadný snímač hladiny, ticho pak vadné čerpadlo. Oprava vychází u nezávislého servisu orientačně na 1 800 až 3 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "electrolux-pracka-e70": [
+    {
+      "type": "text",
+      "value": "Chyba E70 znamená, že pračka Electrolux nedostává použitelný údaj z teplotního čidla NTC. Praktický dopad si nemusíte hned všimnout: pračka pere dál, ale ve studené vodě. Poznáte to spíš na prádle než na displeji, a právě proto se vyplatí udělat jeden konkrétní test.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Vyperte bílou utěrku na devadesátce",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vložte do prázdné pračky jednu bílou bavlněnou utěrku a pusťte program na 90 °C. Po dvaceti minutách sáhněte na sklo dvířek. Studené sklo v půlce nejteplejšího programu je nejjednodušší důkaz, že ohřev nepracuje.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Zjistěte, jak dlouho program trvá",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Porovnejte skutečnou délku programu s tím, co pračka ukazovala na začátku. Když čeká na teplotu, které nedosáhne, protáhne se cyklus klidně o hodinu. Prodloužení je spolehlivější příznak než odhad podle prádla.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Přejděte dočasně na nižší teploty",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Než přijde technik, perte na 30 a 40 °C a použijte prostředek určený pro nízké teploty. Prádlo bude čisté a ušetříte si zklamání z povlečení, které se vypralo studenou vodou na programu pro 60 °C.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud test s utěrkou potvrdil, že pračka nehřeje, jde o čidlo nebo topné těleso a obojí sedí ve vodní cestě. Diagnostika u nezávislého servisu vychází orientačně na 800 až 1 500 Kč, výměna čidla 1 500 až 3 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "aeg-pracka-e70": [
+    {
+      "type": "text",
+      "value": "Chyba E70 u praček AEG ukazuje na teplotní čidlo NTC. Zvláštní na téhle závadě je, že se často neprojeví hlášením, ale tím, že prádlo přestane vonět a bílé prádlo zešedne. Elektronika teplotu jen odhaduje a pračka může prát chladněji, než si myslíte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zkontrolujte, jestli prádlo nezačalo zapáchat",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Dlouhodobé praní ve studené vodě vede k mazlavému povlaku v bubnu a k zápachu z pračky. Pokud jste si toho v posledních týdnech všimli, je to nepřímé potvrzení, že ohřev nepracuje už delší dobu.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Prohlédněte gumové těsnění dvířek",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Odhrňte manžetu a podívejte se pod ni. Černé skvrny a sliz jsou typickým doprovodem praček, které přestaly hřát. Vyčistěte je roztokem octa, jinak se zápach přenese i po opravě.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Spusťte údržbový cyklus na 90 stupňů",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pusťte nejdelší program na 90 °C naprázdno s odvápňovačem. Pokud pračka hřát dokáže aspoň částečně, cyklus zároveň odstraní vápenec z čidla, který bývá příčinou chybného měření.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Vyhodnoťte podle výsledku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Když se po odvápnění chyba přestane objevovat, byla příčinou usazenina na čidle. Když ne, je čidlo nebo jeho kabeláž vadná; oprava u nezávislého servisu vychází orientačně na 1 500 až 3 000 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "bosch-pracka-f22": [
+    {
+      "type": "text",
+      "value": "Chyba F22 znamená, že senzor teploty vody u pračky Bosch je vadný nebo odpojený. Klíčové je odlišit ji od závady topného tělesa, protože jde o dvě různě drahé opravy. Rozdíl poznáte podle toho, kdy přesně se chyba objeví.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zaznamenejte, v jaké minutě chyba přijde",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte program na 60 °C a sledujte, kdy se F22 objeví. Chyba hned v prvních minutách ukazuje na přerušený obvod čidla. Chyba až po dvaceti minutách naopak na čidlo, které selhává teprve při zahřátí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Vyzkoušejte studený program",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pusťte máchání nebo program na studenou vodu. Pokud proběhne bez chyby a teplý program ne, potvrzuje to, že problém je v měřicím okruhu a ne v napájení nebo elektronice.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Zkontrolujte, jak je pračka zavápněná",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otevřete zásuvku na prášek a podívejte se do otvoru, kterým voda přitéká do bubnu. Bílé krusty tam znamenají, že stejný nános je i na čidle a zkresluje měření. Spusťte odvápňovací cyklus a po týdnu jej zopakujte.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Řekněte servisu, co jste zjistili",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Informace, jestli chyba přichází hned nebo až za tepla, technikovi výrazně zúží hledání. Výměna čidla vychází u nezávislého servisu orientačně na 1 500 až 3 000 Kč, výměna topného tělesa 1 800 až 3 500 Kč včetně dílu.",
+      "tag": "p"
+    }
+  ],
+  "siemens-pracka-f22": [
+    {
+      "type": "text",
+      "value": "Kód F22 u praček Siemens znamená vadný nebo odpojený NTC senzor teploty vody. U praček BSH je tahle závada častější v oblastech s tvrdou vodou, protože čidlo sedí přímo ve vodní cestě a obaluje se vápencem. Prevence tu hraje větší roli než samotná oprava.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Zjistěte tvrdost vody ve své lokalitě",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Podívejte se na web svého vodárenského dodavatele, tvrdost vody bývá uvedená pro každou obec. Hodnota nad 2,5 mmol na litr znamená tvrdou vodu a vysvětluje, proč se čidlo zaneslo.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Projeďte odvápňovací cyklus dvakrát",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte nejdelší program na 90 °C naprázdno s odvápňovačem pro pračky, počkejte týden a zopakujte. Silný nános se nepodaří odstranit napoprvé a právě druhý cyklus bývá ten, po kterém chyba zmizí.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Upravte dávkování prášku podle tvrdosti",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "V tvrdé vodě je potřeba vyšší dávka prostředku, ale přebytek se usazuje stejně jako vápenec. Řiďte se tabulkou na obalu podle skutečné tvrdosti, ne odhadem, a jednou za měsíc perte na 60 °C.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Zvažte, jestli řešit i změkčování",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Pokud F22 přetrvává, je čidlo vadné a je potřeba technik, orientačně 1 500 až 3 000 Kč včetně dílu. Při velmi tvrdé vodě se ale vyplatí řešit i příčinu, tedy změkčovací filtr na přívodu, jinak se závada bude vracet.",
+      "tag": "p"
+    }
+  ],
+  "lg-pracka-te": [
+    {
+      "type": "text",
+      "value": "Kód tE znamená, že teplotní termistor pračky LG je vadný nebo odpojený. U praček LG s přímým pohonem stojí za to vědět jednu věc navíc: motor má prodlouženou záruku, ale čidlo do ní nespadá, takže délka záruky rozhoduje o tom, komu opravu zadat.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 1: Najděte datum výroby na štítku",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Otevřete dvířka a na hraně otvoru najděte výrobní štítek. Zjistěte si datum výroby a porovnejte ho s dokladem o koupi. U praček v záruce má smysl jít rovnou do autorizovaného servisu LG, ne k nezávislému opraváři.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 2: Ověřte, jestli se voda ohřívá",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Spusťte program na 60 °C a po dvaceti minutách sáhněte na sklo dvířek. Studené sklo potvrzuje, že ohřev nepracuje. Teplé sklo naopak znamená, že topení funguje a chyba je jen v měření.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 3: Proveďte reset podle postupu LG",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Vypněte pračku tlačítkem Power, odpojte ji na deset minut od elektřiny a znovu zapněte. U modelů s displejem někdy pomůže sekvence Power, Spin, Power. Jednorázový výpadek komunikace s čidlem se tím vymaže.",
+      "tag": "p"
+    },
+    {
+      "type": "text",
+      "value": "Krok 4: Rozhodněte podle záruky",
+      "tag": "h3"
+    },
+    {
+      "type": "text",
+      "value": "Mimo záruku vychází výměna termistoru u nezávislého servisu orientačně na 1 500 až 3 000 Kč včetně dílu. V záruce nechte opravu na autorizovaném servisu, jinak byste o ni u motoru mohli přijít.",
+      "tag": "p"
+    }
   ]
 }
