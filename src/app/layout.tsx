@@ -47,6 +47,11 @@ export const metadata: Metadata = {
   },
 }
 
+// Publisher ID pro AdSense. Veřejný údaj, shodný s /ads.txt.
+// Lze přebít proměnnou NEXT_PUBLIC_ADSENSE_CLIENT (prázdná hodnota = vypnuto).
+const ADSENSE_CLIENT =
+  process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? 'ca-pub-1027768572288829'
+
 export default function RootLayout({
   children,
 }: {
@@ -70,16 +75,16 @@ export default function RootLayout({
             strategy="afterInteractive"
           />
         )}
-        {/* AdSense. Načte se jen když je ve Vercel env nastavené
-            NEXT_PUBLIC_ADSENSE_CLIENT (tvar "ca-pub-XXXXXXXXXXXXXXXX").
-            Stejný vzor jako Heureka výš — deploy je tím pádem bezpečný
-            i před schválením, protože bez proměnné se nevloží nic.
+        {/* AdSense. Publisher ID není tajné — je veřejně v /ads.txt — takže
+            je tu natvrdo jako výchozí hodnota a web ho načte bez jakéhokoli
+            nastavování ve Vercelu. NEXT_PUBLIC_ADSENSE_CLIENT ho umí přebít,
+            kdyby se ID někdy měnilo; prázdný řetězec skript vypne úplně.
             Souhlas s personalizovanou reklamou řeší Google CMP
             (AdSense → Ochrana soukromí a zprávy), která se stahuje
             z fundingchoicesmessages.google.com — povoleno v CSP. */}
-        {process.env.NEXT_PUBLIC_ADSENSE_CLIENT && (
+        {ADSENSE_CLIENT && (
           <Script
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT}`}
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
             strategy="afterInteractive"
             crossOrigin="anonymous"
           />
