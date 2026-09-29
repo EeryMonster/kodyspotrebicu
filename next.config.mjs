@@ -34,12 +34,14 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://serve.affiliate.heureka.cz",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://serve.affiliate.heureka.cz https://*.googlesyndication.com https://*.googleadservices.com https://*.google.com https://*.gstatic.com",
               "style-src 'self' 'unsafe-inline'",
-              "img-src 'self' data: blob: https://serve.affiliate.heureka.cz",
-              "font-src 'self'",
-              "connect-src 'self' https://serve.affiliate.heureka.cz",
+              "img-src 'self' data: blob: https://serve.affiliate.heureka.cz https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.gstatic.com",
+              "font-src 'self' https://*.gstatic.com",
+              "connect-src 'self' https://serve.affiliate.heureka.cz https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.gstatic.com",
               "frame-ancestors 'none'",
+              // Reklamy se renderují v iframe; bez frame-src by je default-src 'self' zablokoval.
+              "frame-src https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com",
             ].join('; '),
           },
         ],

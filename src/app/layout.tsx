@@ -70,6 +70,20 @@ export default function RootLayout({
             strategy="afterInteractive"
           />
         )}
+        {/* AdSense. Načte se jen když je ve Vercel env nastavené
+            NEXT_PUBLIC_ADSENSE_CLIENT (tvar "ca-pub-XXXXXXXXXXXXXXXX").
+            Stejný vzor jako Heureka výš — deploy je tím pádem bezpečný
+            i před schválením, protože bez proměnné se nevloží nic.
+            Souhlas s personalizovanou reklamou řeší Google CMP
+            (AdSense → Ochrana soukromí a zprávy), která se stahuje
+            z fundingchoicesmessages.google.com — povoleno v CSP. */}
+        {process.env.NEXT_PUBLIC_ADSENSE_CLIENT && (
+          <Script
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT}`}
+            strategy="afterInteractive"
+            crossOrigin="anonymous"
+          />
+        )}
       </body>
     </html>
   )
