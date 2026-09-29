@@ -6,7 +6,7 @@
     "dev": "next dev",
     "dev:clean": "rm -rf .next && next dev",
     "build": "next build",
-    "postbuild": "ts-node --project tsconfig.seed.json scripts/apply-miele-rewrites.ts && ts-node --project tsconfig.seed.json scripts/apply-detailed-steps.ts",
+    "postbuild": "ts-node --project tsconfig.seed.json scripts/apply-miele-rewrites.ts && ts-node --project tsconfig.seed.json scripts/apply-detailed-steps.ts && ts-node --project tsconfig.seed.json scripts/apply-shortmeaning.ts",
     "build:check": "NEXT_DIST_DIR=.next-build next build",
     "start": "next start",
     "lint": "next lint",
@@ -16,7 +16,8 @@
     "db:apply-miele": "ts-node --project tsconfig.seed.json scripts/apply-miele-rewrites.ts",
     "postinstall": "prisma generate",
     "audit:ui": "node scripts/audit-ui.mjs",
-    "db:apply-steps": "ts-node --project tsconfig.seed.json scripts/apply-detailed-steps.ts"
+    "db:apply-steps": "ts-node --project tsconfig.seed.json scripts/apply-detailed-steps.ts",
+    "db:apply-shortmeaning": "ts-node --project tsconfig.seed.json scripts/apply-shortmeaning.ts"
   },
   "prisma": {
     "seed": "ts-node --compiler-options '{\"module\":\"CommonJS\"}' prisma/seed.ts"

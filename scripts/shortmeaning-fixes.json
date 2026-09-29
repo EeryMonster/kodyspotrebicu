@@ -1,0 +1,17 @@
+{
+  "aeg-susicka-e61": "Sušička AEG nestihla v nastaveném čase ohřát vzduch na požadovanou teplotu.",
+  "electrolux-susicka-e61": "Teplota v bubnu nestoupla za povolenou dobu na hodnotu, kterou program potřebuje.",
+  "aeg-susicka-e62": "Relé napájení topného tělesa je vadné a sušička přešla do nuceného chlazení.",
+  "electrolux-susicka-e62": "Sušička přešla do nuceného chlazení kvůli vadnému relé v napájení topení.",
+  "electrolux-susicka-e63": "Auto-reset termostat na topném tělesu zareagoval na přehřátí. Při opakování sušička vygeneruje E62.",
+  "aeg-susicka-e64": "Termostat topného tělesa je vadný nebo hlásí hodnotu mimo povolený rozsah.",
+  "electrolux-susicka-e64": "Hodnota z termostatu topného tělesa leží mimo očekávaný rozsah.",
+  "aeg-susicka-e65": "Triak řídící motor ventilátoru je vadný nebo je jeho obvod přerušený.",
+  "electrolux-susicka-e65": "Obvod triaku ovládajícího ventilátor je přerušený, případně je triak vadný.",
+  "aeg-susicka-e66": "Motor ventilátoru se přehřál a zasáhla jeho tepelná ochrana.",
+  "electrolux-susicka-e66": "Tepelná ochrana motoru ventilátoru zareagovala na přehřátí.",
+  "aeg-susicka-e67": "Řídicí obvod triaku je vadný, nejčastěji jde o závadu desky CRM.",
+  "electrolux-susicka-e67": "Vadný řídicí obvod triaku, typicky závada na desce CRM.",
+  "aeg-susicka-e67-envo6": "Závada řídicího obvodu triaku u sušiček AEG řady EnvoDry s deskou ENVo6.",
+  "electrolux-susicka-e67-envo6": "Řídicí obvod triaku hlásí závadu u sušiček Electrolux řady Envo s deskou ENVo6."
+}

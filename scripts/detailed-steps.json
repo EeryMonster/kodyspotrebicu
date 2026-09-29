@@ -621,7 +621,7 @@
   "aeg-susicka-e61": [
     {
       "type": "text",
-      "value": "Chyba E61 znamená, že sušička AEG nedosáhla za povolený čas potřebné teploty. Elektronika hlídá, jak rychle teplota v bubnu stoupá, a když topení nestíhá, program ukončí. U starších sušiček Electrolux Group za tím stojí častěji zanesený vzduchový okruh než vadné topné těleso — a to je dobrá zpráva, protože vzduchový okruh si vyčistíte sami.",
+      "value": "Chyba E61 znamená, že sušička AEG nedosáhla za povolený čas potřebné teploty. Elektronika hlídá, jak rychle teplota v bubnu stoupá, a když topení nestíhá, program ukončí. U starších sušiček Electrolux Group za tím stojí častěji zanesený vzduchový okruh než vadné topné těleso — a to je dobrá zpráva, protože vzduchový okruh si vyčistíte sami. Týká se modelů vyrobených zhruba do roku 2014, které mají řídicí desku ENVo6.",
       "tag": "p"
     },
     {
@@ -668,7 +668,7 @@
   "electrolux-susicka-e61": [
     {
       "type": "text",
-      "value": "Kód E61 u sušiček Electrolux hlásí, že se prádlo nezahřálo dost rychle na to, aby program mohl pokračovat. Sušička měří nárůst teploty a při příliš pomalém ohřevu se sama zastaví. Než začnete uvažovat o výměně topného tělesa, vyplatí se vyloučit dvě prozaické příčiny: ucpaný vzduch a přeplněný buben.",
+      "value": "Kód E61 u sušiček Electrolux hlásí, že se prádlo nezahřálo dost rychle na to, aby program mohl pokračovat. Sušička měří nárůst teploty a při příliš pomalém ohřevu se sama zastaví. Než začnete uvažovat o výměně topného tělesa, vyplatí se vyloučit dvě prozaické příčiny: ucpaný vzduch a přeplněný buben. Kód patří generaci s deskou ENVo6, tedy sušičkám z výroby přibližně do roku 2014.",
       "tag": "p"
     },
     {
@@ -715,7 +715,7 @@
   "aeg-susicka-e62": [
     {
       "type": "text",
-      "value": "Chyba E62 u sušiček AEG ukazuje na topný okruh — vadné topné těleso, jeho kabeláž nebo hlavní řídicí desku. Elektronika se několikrát pokusí ohřev obnovit, a teprve když se to nepodaří, vyhlásí E62. Na rozdíl od E61, kde jde o pomalý ohřev, tady topení typicky nefunguje vůbec.",
+      "value": "Chyba E62 u sušiček AEG ukazuje na topný okruh — vadné topné těleso, jeho kabeláž nebo hlavní řídicí desku. Elektronika se několikrát pokusí ohřev obnovit, a teprve když se to nepodaří, vyhlásí E62. Na rozdíl od E61, kde jde o pomalý ohřev, tady topení typicky nefunguje vůbec. Toto hlášení se objevuje na starší platformě ENVo6, kterou Electrolux Group používal do roku 2014.",
       "tag": "p"
     },
     {
@@ -762,7 +762,7 @@
   "electrolux-susicka-e62": [
     {
       "type": "text",
-      "value": "Kód E62 u sušiček Electrolux znamená poruchu v topném okruhu. Sušička se opakovaně pokusí ohřev nahodit, a když ani po několika pokusech neuspěje, program ukončí s touto chybou. Prádlo pak zůstává vlhké a studené i po celém cyklu.",
+      "value": "Kód E62 u sušiček Electrolux znamená poruchu v topném okruhu. Sušička se opakovaně pokusí ohřev nahodit, a když ani po několika pokusech neuspěje, program ukončí s touto chybou. Prádlo pak zůstává vlhké a studené i po celém cyklu. Najdete ho na sušičkách s řídicí jednotkou ENVo6, tedy přibližně do roku výroby 2014.",
       "tag": "p"
     },
     {
@@ -809,7 +809,7 @@
   "aeg-susicka-e64": [
     {
       "type": "text",
-      "value": "Chyba E64 se u sušiček AEG váže na kabeláž topného tělesa nebo na těleso samotné. Elektronika zjistila, že odpor topného okruhu neodpovídá očekávané hodnotě — typicky je okruh přerušený. Domácí opravu to nedovoluje, ale několika kroky odlišíte skutečnou závadu od jednorázového výpadku.",
+      "value": "Chyba E64 se u sušiček AEG váže na kabeláž topného tělesa nebo na těleso samotné. Elektronika zjistila, že odpor topného okruhu neodpovídá očekávané hodnotě — typicky je okruh přerušený. Domácí opravu to nedovoluje, ale několika kroky odlišíte skutečnou závadu od jednorázového výpadku. Kód se týká sušiček s elektronikou ENVo6, což jsou zhruba modely do roku 2014.",
       "tag": "p"
     },
     {
@@ -856,7 +856,7 @@
   "electrolux-susicka-e64": [
     {
       "type": "text",
-      "value": "Kód E64 u sušiček Electrolux znamená závadu v okruhu topného tělesa — přerušenou kabeláž nebo poškozené těleso. Sušička buben točí dál, ale nehřeje, takže prádlo po celém programu zůstane vlhké. Elektronika okruh průběžně měří, takže chybu vyhlásí i dřív, než si toho stihnete všimnout.",
+      "value": "Kód E64 u sušiček Electrolux znamená závadu v okruhu topného tělesa — přerušenou kabeláž nebo poškozené těleso. Sušička buben točí dál, ale nehřeje, takže prádlo po celém programu zůstane vlhké. Elektronika okruh průběžně měří, takže chybu vyhlásí i dřív, než si toho stihnete všimnout. Objevuje se na generaci ENVo6, kterou koncern nasazoval do AEG, Electroluxu i Zanussi.",
       "tag": "p"
     },
     {
@@ -903,7 +903,7 @@
   "aeg-susicka-e65": [
     {
       "type": "text",
-      "value": "Chyba E65 u sušiček AEG se týká motoru ventilátoru — konkrétně jeho kabeláže nebo spínacího prvku na desce. Ventilátor žene ohřátý vzduch bubnem, a bez něj se sušička okamžitě přehřívá, proto elektronika program raději zastaví. Někdy ale ventilátor blokuje jen chuchvalec vláken.",
+      "value": "Chyba E65 u sušiček AEG se týká motoru ventilátoru — konkrétně jeho kabeláže nebo spínacího prvku na desce. Ventilátor žene ohřátý vzduch bubnem, a bez něj se sušička okamžitě přehřívá, proto elektronika program raději zastaví. Někdy ale ventilátor blokuje jen chuchvalec vláken. Platforma ENVo6, na které se kód používá, se montovala přibližně do roku 2014.",
       "tag": "p"
     },
     {
@@ -950,7 +950,7 @@
   "electrolux-susicka-e65": [
     {
       "type": "text",
-      "value": "Kód E65 u sušiček Electrolux hlásí problém v okruhu motoru ventilátoru — přerušené propojení nebo vadný spínací prvek. Bez proudícího vzduchu by se sušička rychle přehřála, takže program okamžitě končí. Než budete volat servis, stojí za to vyloučit mechanickou blokádu.",
+      "value": "Kód E65 u sušiček Electrolux hlásí problém v okruhu motoru ventilátoru — přerušené propojení nebo vadný spínací prvek. Bez proudícího vzduchu by se sušička rychle přehřála, takže program okamžitě končí. Než budete volat servis, stojí za to vyloučit mechanickou blokádu. Kód najdete u starších sušiček s deskou ENVo6, tedy před generační obměnou v roce 2014.",
       "tag": "p"
     },
     {
@@ -997,7 +997,7 @@
   "aeg-susicka-e66": [
     {
       "type": "text",
-      "value": "Chyba E66 znamená, že u sušičky AEG vypadla tepelná pojistka — bezpečnostní prvek, který odpojí topení, když teplota překročí bezpečnou mez. U některých modelů stejný kód ukazuje i na vadný motor ventilátoru, protože bez proudění vzduchu se sušička přehřeje během chvíle. Berte E66 vážně: přehřívající se sušička je riziko požáru.",
+      "value": "Chyba E66 znamená, že u sušičky AEG vypadla tepelná pojistka — bezpečnostní prvek, který odpojí topení, když teplota překročí bezpečnou mez. U některých modelů stejný kód ukazuje i na vadný motor ventilátoru, protože bez proudění vzduchu se sušička přehřeje během chvíle. Berte E66 vážně: přehřívající se sušička je riziko požáru. Hlášení patří sušičkám s deskou ENVo6, které koncern vyráběl zhruba do roku 2014.",
       "tag": "p"
     },
     {
@@ -1044,7 +1044,7 @@
   "electrolux-susicka-e66": [
     {
       "type": "text",
-      "value": "Kód E66 u sušiček Electrolux signalizuje, že zasáhla tepelná pojistka kvůli překročení bezpečné teploty; u části modelů stejný kód doprovází i závadu motoru ventilátoru. Je to bezpečnostní funkce, ne rozmar elektroniky — sušička se opravdu přehřála a je potřeba zjistit proč.",
+      "value": "Kód E66 u sušiček Electrolux signalizuje, že zasáhla tepelná pojistka kvůli překročení bezpečné teploty; u části modelů stejný kód doprovází i závadu motoru ventilátoru. Je to bezpečnostní funkce, ne rozmar elektroniky — sušička se opravdu přehřála a je potřeba zjistit proč. Týká se starší řady s elektronikou ENVo6, společné pro Electrolux, AEG i Zanussi.",
       "tag": "p"
     },
     {
@@ -1091,7 +1091,7 @@
   "aeg-susicka-e67": [
     {
       "type": "text",
-      "value": "Chyba E67 u sušiček AEG ukazuje na vadné řízení spínacího prvku ventilátoru — takzvaného triaku na řídicí desce. Prověřuje se kabeláž motoru ventilátoru a samotná elektronika. Domácí oprava tady nepřipadá v úvahu, ale několik kroků odliší skutečnou závadu desky od banální mechanické blokády, která vypadá podobně.",
+      "value": "Chyba E67 u sušiček AEG ukazuje na vadné řízení spínacího prvku ventilátoru — takzvaného triaku na řídicí desce. Prověřuje se kabeláž motoru ventilátoru a samotná elektronika. Domácí oprava tady nepřipadá v úvahu, ale několik kroků odliší skutečnou závadu desky od banální mechanické blokády, která vypadá podobně. Kód se vyskytuje na platformě ENVo6, tedy u modelů přibližně do roku výroby 2014.",
       "tag": "p"
     },
     {
@@ -1138,7 +1138,7 @@
   "electrolux-susicka-e67": [
     {
       "type": "text",
-      "value": "Kód E67 u sušiček Electrolux znamená závadu v řízení ventilátoru — konkrétně spínacího prvku na řídicí desce. Sušička nedokáže spolehlivě ovládat otáčky ventilátoru, a protože bez proudění vzduchu hrozí přehřátí, program ukončí. Kontroluje se kabeláž motoru a elektronika.",
+      "value": "Kód E67 u sušiček Electrolux znamená závadu v řízení ventilátoru — konkrétně spínacího prvku na řídicí desce. Sušička nedokáže spolehlivě ovládat otáčky ventilátoru, a protože bez proudění vzduchu hrozí přehřátí, program ukončí. Kontroluje se kabeláž motoru a elektronika. Patří starší generaci s řídicí deskou ENVo6, kterou koncern používal do roku 2014.",
       "tag": "p"
     },
     {
@@ -1185,7 +1185,7 @@
   "aeg-susicka-e67-envo6": [
     {
       "type": "text",
-      "value": "Chyba E67 na sušičkách AEG řady EnvoDry znamená závadu v řízení ventilátoru na řídicí desce. Význam je stejný jako u ostatních modelů Electrolux Group, ale u této řady se vyplatí věnovat zvláštní pozornost čistotě výměníku — kompaktní konstrukce se zanáší rychleji a přetížený ventilátor pak vypadá jako vadná elektronika.",
+      "value": "Chyba E67 na sušičkách AEG řady EnvoDry znamená závadu v řízení ventilátoru na řídicí desce. Význam je stejný jako u ostatních modelů Electrolux Group, ale u této řady se vyplatí věnovat zvláštní pozornost čistotě výměníku — kompaktní konstrukce se zanáší rychleji a přetížený ventilátor pak vypadá jako vadná elektronika. Deska ENVo6 se v této řadě montovala do modelů zhruba do roku 2014.",
       "tag": "p"
     },
     {
@@ -1232,7 +1232,7 @@
   "electrolux-susicka-e67-envo6": [
     {
       "type": "text",
-      "value": "Kód E67 u sušiček Electrolux řady Envo znamená, že elektronika nedokáže správně řídit ventilátor. Prověřuje se jeho kabeláž a řídicí deska. U této kompaktní řady bývá spouštěčem přetížený ventilátor z ucpaného vzduchového okruhu, takže začněte tam — je to jediná část, kterou zvládnete sami.",
+      "value": "Kód E67 u sušiček Electrolux řady Envo znamená, že elektronika nedokáže správně řídit ventilátor. Prověřuje se jeho kabeláž a řídicí deska. U této kompaktní řady bývá spouštěčem přetížený ventilátor z ucpaného vzduchového okruhu, takže začněte tam — je to jediná část, kterou zvládnete sami. Řada Envo používala desku ENVo6 přibližně do generační obměny v roce 2014.",
       "tag": "p"
     },
     {
@@ -8940,7 +8940,7 @@
   "electrolux-susicka-e63": [
     {
       "type": "text",
-      "value": "Kód E63 znamená, že auto-reset termostat na topném tělesu sušičky Electrolux zareagoval na přehřátí. Na rozdíl od nevratné pojistky se tento termostat po vychladnutí sám vrátí, takže chyba často zmizí. Podstatné je zjistit, proč se sušička přehřála.",
+      "value": "Kód E63 znamená, že auto-reset termostat na topném tělesu sušičky Electrolux zareagoval na přehřátí. Na rozdíl od nevratné pojistky se tento termostat po vychladnutí sám vrátí, takže chyba často zmizí. Podstatné je zjistit, proč se sušička přehřála. Platí pro starší modely s deskou ENVo6, sdílené v rámci Electrolux Group s AEG a Zanussi.",
       "tag": "p"
     },
     {

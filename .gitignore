@@ -43,3 +43,5 @@ scripts/*
 !scripts/apply-miele-rewrites.ts
 !scripts/detailed-steps.json
 !scripts/apply-detailed-steps.ts
+!scripts/shortmeaning-fixes.json
+!scripts/apply-shortmeaning.ts
